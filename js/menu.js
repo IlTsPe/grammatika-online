@@ -103,8 +103,9 @@ function renderToc() {
       (!q || (t.title + ' ' + t.sub + ' ' + ch.title).toLowerCase().includes(q)));
     if (filtering && !match.length) return;
     const open = q ? true : ch.id === openChap;
-    /* раздел, открытый кликом или переходом, раскрывается анимацией, когда весь список нарисован */
-    const animateIn = open && justToggled === ch.id && !reducedMotion();
+    /* раздел, открытый кликом или переходом, раскрывается анимацией, когда весь список нарисован; при свернутом списке
+       разделов — без нее: раздела не видно, а сдвиг дергал бы все, что ниже в меню («Поддержать автора») */
+    const animateIn = open && justToggled === ch.id && !reducedMotion() && tocOpen();
     /* раздел открытой страницы (сам раздел или одна из его тем); тема, открытая из «Избранного», отмечается только в том списке */
     const current = !viaBookmarks && (route === 'ch-' + ch.id || (topicById[route] && topicById[route].ch === ch));
     const box = el('div', current ? 'chap chap--current' : 'chap');

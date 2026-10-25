@@ -96,6 +96,24 @@ button { font: inherit; transition: linear 0.15s; }
 @media (hover: hover) { :where(:root:not(.pointer-still)) .btn--primary:hover { opacity: 1; } }
 .btn--primary:disabled { opacity: .35; cursor: default; }
 @media (hover: hover) { :where(:root:not(.pointer-still)) .btn--primary:disabled:hover { opacity: .35; cursor: default; } }
+/* ---------- Согласие на cookie (metrika.js): плашка внизу экрана, пока нет выбора; над прилипшей шапкой, под меню телефона.
+   «Принять» и «Отклонить» оформлены одинаково: ни одна не выделена, чтобы не подталкивать к выбору ---------- */
+.cookie-note { position: fixed; z-index: 22; left: 50%; bottom: calc(16px + env(safe-area-inset-bottom, 0px)); transform: translateX(-50%);
+  display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: end; gap: 6px 20px; width: min(600px, calc(100vw - 32px)); padding: 12px 14px 14px 18px;
+  border: 1.5px solid rgb(var(--accent-rgb) / 55%); border-left: 4px solid var(--accent); border-radius: 10px; background: var(--sheet); box-shadow: var(--lift);
+  color: var(--ink); font-size: 14px; line-height: 1.45; } /* как карточка упражнения: лист с акцентной полосой слева */
+.cookie-note__label { grid-column: 1 / -1; font-family: var(--f-mono); font-size: 11px; letter-spacing: .1em; text-transform: uppercase; color: var(--accent); }
+.cookie-note__text { margin: 0; }
+.cookie-note__btns, .cookie-consent__btns { display: flex; column-gap: 8px; }
+@media (max-width: 560px) {
+  .cookie-note { grid-template-columns: minmax(0, 1fr); row-gap: 8px; }
+  .cookie-note__btn { flex: 1; }
+}
+.cookie-consent { margin: 12px 0; }
+.cookie-consent__state { margin: 0 0 8px; }
+.cookie-consent .btn[aria-pressed="true"] { border-color: var(--accent); background: var(--accent-soft); }
+/* кнопка, которая выглядит как ссылка внутри текста: переход на страницу сайта (data-go) */
+.link-btn { padding: 0; border: 0; background: none; color: var(--accent); font: inherit; text-decoration: underline; text-underline-offset: 2px; cursor: pointer; }
 /* кнопка с подписью для действий меню: тема, скрыть / показать меню, открыть разделы на мобильном;
    заливки берутся из --control-fill / --control-hover, которые задает светлое меню (см. .overall) */
 .action-btn { display: flex; align-items: center; justify-content: center; column-gap: 7px; min-height: 40px; padding: 6px 10px; border: 1.5px solid rgb(var(--accent-rgb) / 55%); border-radius: 10px;

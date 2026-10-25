@@ -2,7 +2,6 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://iltspe.github.io/grammatika-online/</loc></url>
   <url><loc>https://iltspe.github.io/grammatika-online/about/</loc></url>
-  <url><loc>https://iltspe.github.io/grammatika-online/about/numbers</loc></url>
   <url><loc>https://iltspe.github.io/grammatika-online/about/menu</loc></url>
   <url><loc>https://iltspe.github.io/grammatika-online/about/data</loc></url>
   <url><loc>https://iltspe.github.io/grammatika-online/about/offline</loc></url>
@@ -11,6 +10,8 @@
   <url><loc>https://iltspe.github.io/grammatika-online/about/exercises</loc></url>
   <url><loc>https://iltspe.github.io/grammatika-online/about/mistakes</loc></url>
   <url><loc>https://iltspe.github.io/grammatika-online/about/bookmarks</loc></url>
+  <url><loc>https://iltspe.github.io/grammatika-online/about/numbers</loc></url>
+  <url><loc>https://iltspe.github.io/grammatika-online/about/cookies</loc></url>
   <url><loc>https://iltspe.github.io/grammatika-online/articles/</loc></url>
   <url><loc>https://iltspe.github.io/grammatika-online/nouns/</loc></url>
   <url><loc>https://iltspe.github.io/grammatika-online/pronouns/</loc></url>
