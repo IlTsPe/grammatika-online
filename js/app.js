@@ -66,12 +66,14 @@ function go(id, scroll = true, syncToc = true, fromBookmarks = false) {
   /* цветной фон-зарево — у «Информации» и «Моих заметок» */
   document.documentElement.classList.toggle('page--glow', isAbout(id) || id === 'notes');
   /* переход на другую страницу добавляет запись в историю, поэтому работают «Назад» / «Вперед» браузера; первая отрисовка и перерисовки той же страницы только заменяют ее */
+  const from = location.href;
   try {
     const url = id === NOT_FOUND ? location.href : new URL(PATH_URLS ? pathOf(id) : '#' + id, PATH_URLS ? ROOT : location.href).href;
     if (booted && location.href !== url) history.pushState(null, '', url); else history.replaceState(null, '', url);
   } catch (e) {}
   const meta = pageMeta(id);
   document.title = meta.title;
+  if (booted && location.href !== from) countVisit(from); /* посещаемость, см. metrika.js */
   $('meta[name=description]')?.setAttribute('content', meta.description);
   if (id !== NOT_FOUND) store.set('gk2-last', id);
   renderToc();
@@ -88,6 +90,7 @@ $('#brandLink').addEventListener('click', e => { e.preventDefault(); go('content
 /* Скрыть / показать меню на десктопе; выбор запоминается. */
 function setSide(collapsed, focus) {
   $('#app').classList.toggle('app--side-collapsed', collapsed);
+  document.documentElement.classList.toggle('page--side-collapsed', collapsed); /* для body: без :has(), его нет в старых браузерах */
   $('#floatTools').hidden = !collapsed;
   $('#sideShow').setAttribute('aria-expanded', String(!collapsed));
   $('#sideHide').setAttribute('aria-expanded', String(!collapsed));

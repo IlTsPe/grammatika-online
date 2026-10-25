@@ -83,7 +83,7 @@ function renderEx(t, ex, ei) {
         Object.assign(row, { q, blank, opts });
         li.append(q, opts);
       } else if (ex.type === 'translate') {
-        const q = el('div', 'ex__q ex__q--ru', it[0]);
+        const q = el('div', 'ex__q ex__q--ru', it[0]); li.classList.add('ex__item--ru');
         const inp = el('textarea', 'ex__field ex__tr');
         inp.rows = 1; inp.id = `${idBase}-${ii}`; inp.autocomplete = 'off'; inp.spellcheck = false;
         inp.setAttribute('autocapitalize', 'off'); inp.setAttribute('aria-label', `Перевод предложения ${ii + 1}`);

@@ -33,6 +33,9 @@
   --scroll-thumb-hover: #2547D0;
   --raise: 0 1px 1px rgb(20 27 58 / 6%), 0 2px 5px rgb(20 27 58 / 11%);
   --raise-down: 0 6px 8px -4px rgb(20 27 58 / 26%); /* та же тень, только под нижним краем: мобильная шапка */ /* небольшая тень под блоками меню: они приподняты над бумагой */
+  /* те же цвета каналами — для полупрозрачных оттенков: rgb(var(--accent-rgb) / 55%). Это то же, что color-mix() с transparent,
+     но работает и в старых браузерах. Меняя цвет выше, поменяйте и его каналы здесь */
+  --sheet-rgb: 235 235 235; --muted-rgb: 16 25 60; --accent-rgb: 37 71 208; --accent-soft-rgb: 223 228 248; --on-accent-rgb: 255 255 255; --ok-rgb: 10 122 36; --bad-rgb: 190 58 47; --mid-rgb: 224 168 0; --gold-rgb: 240 192 72; --gold-ink-rgb: 179 139 39;
   --f-display: 'Unbounded', 'Arial Black', system-ui, sans-serif;
   --f-body: 'Golos Text', system-ui, -apple-system, 'Segoe UI', sans-serif;
   --f-en: 'Literata', Georgia, 'Times New Roman', serif;
@@ -43,6 +46,7 @@
   --grid: rgba(169, 156, 255, .07); --accent: #ADA2FF; --accent-soft: #29254A; --on-accent: #16132E;
   --ok: #5CD192; --ok-ink: #5CD192; --ok-soft: #16301F; --bad: #FF7F73; --bad-ink: #FF7F73; --bad-soft: #3A1E1D; --mid: #F0C048;
   --gold-soft: #352B12; --gold-ink: #F0C048;
+  --sheet-rgb: 25 28 41; --muted-rgb: 154 161 184; --accent-rgb: 173 162 255; --accent-soft-rgb: 41 37 74; --on-accent-rgb: 22 19 46; --ok-rgb: 92 209 146; --bad-rgb: 255 127 115; --mid-rgb: 240 192 72; --gold-ink-rgb: 240 192 72;
   --lift: 0 2px 8px rgb(0 0 0 / 35%); /* на темном листе тени нужно больше, чтобы ее было видно */
   --raise: 0 1px 1px rgb(52 49 79 / 40%), 0 2px 5px rgb(52 49 79 / 45%);
   --raise-down: 0 6px 8px -4px rgb(52 49 79 / 95%); /* тень светлой темы — темно-фиолетовая: черная не видна на почти черной бумаге */
@@ -51,8 +55,15 @@
 }
 /* светлая — «only»: браузеры с ночным режимом (Xiaomi, «темные сайты» в Chrome) иначе принудительно затемняли ее сами */
 :root[data-theme="light"] { color-scheme: only light; }
+/* старые браузеры без color-mix() (Chrome до 111, Safari до 16.2, Firefox до 113): смеси двух цветов посчитаны заранее.
+   Такое правило стоит сразу после правила со смесью и повторяет его селектор; меняя цвета темы, пересчитайте и их */
+@supports not (color: color-mix(in srgb, red, red)) {
+  :root { --mx-donate-ink: #075221; --mx-coin-face: #AAD5B6; --mx-coin-edge: #044312; --mx-toc-count: #1E3594; --mx-sheet-donate: #094428; --mx-level-count: #BBC4E5; --mx-note-frame: #7E91DC; --mx-item-focus: #607BD8; }
+  :root[data-theme="dark"] { --mx-donate-ink: #75BEA1; --mx-coin-face: #2D5248; --mx-coin-edge: #409266; --mx-toc-count: #C4BEFA; --mx-sheet-donate: #75BEA1; --mx-level-count: #3D3C5C; --mx-note-frame: #6A669F; --mx-item-focus: #7875B9; }
+}
 
 * { box-sizing: border-box; }
+.no-inert [inert] { visibility: hidden; } /* см. head.js */
 /* спрайт иконок (<symbol> в начале страницы) не занимает места; не display: none — иначе в некоторых браузерах не рисуются его градиенты и фильтры */
 .sprite { position: absolute; width: 0; height: 0; overflow: hidden; }
 /* полосы прокрутки в цветах темы: webkit-псевдоэлементы для Chrome и Safari (скругленный ползунок, подсвечивается при наведении);
@@ -87,7 +98,7 @@ button { font: inherit; transition: linear 0.15s; }
 @media (hover: hover) { :where(:root:not(.pointer-still)) .btn--primary:disabled:hover { opacity: .35; cursor: default; } }
 /* кнопка с подписью для действий меню: тема, скрыть / показать меню, открыть разделы на мобильном;
    заливки берутся из --control-fill / --control-hover, которые задает светлое меню (см. .overall) */
-.action-btn { display: flex; align-items: center; justify-content: center; column-gap: 7px; min-height: 40px; padding: 6px 10px; border: 1.5px solid color-mix(in srgb, var(--accent) 55%, transparent); border-radius: 10px;
+.action-btn { display: flex; align-items: center; justify-content: center; column-gap: 7px; min-height: 40px; padding: 6px 10px; border: 1.5px solid rgb(var(--accent-rgb) / 55%); border-radius: 10px;
   background: var(--control-fill, var(--sheet)); color: var(--accent); font-size: 13px; font-weight: 600; line-height: 1.2; white-space: nowrap; cursor: pointer; }
 @media (hover: hover) { :where(:root:not(.pointer-still)) .action-btn:hover { border-color: var(--accent); background: var(--control-hover, var(--accent-soft)); } }
 .action-btn__icon { flex: none; width: 18px; height: 18px; }
@@ -195,7 +206,7 @@ button { font: inherit; transition: linear 0.15s; }
   /* у листа обычный верхний отступ и нет верхних углов под шапкой; 60px — шапка */
   .float-tools::before { content: ""; position: absolute; z-index: -1; inset: 0 0 auto; height: 10px; } /* см. «углы шапок» */
   /* шапка начинается от края окна, без отступа body 8px над ней; 60px — шапка */
-  body:has(.app--side-collapsed) { margin-top: 0; }
+  .page--side-collapsed body { margin-top: 0; }
   .app--side-collapsed .app__sheet { padding-top: 36px; border-radius: 0; min-height: calc(100vh - 60px); }
   .app--side-collapsed :is(.ex, .notes-tools) { scroll-margin-top: 76px; } /* отступ под прилипшую шапку */
 }
@@ -243,7 +254,7 @@ button { font: inherit; transition: linear 0.15s; }
 /* подзаголовок с квадратной кнопкой «Инфо» справа (значок над подписью); кнопка открывает страницу информации */
 .brand__row { display: flex; align-items: center; column-gap: 6px; margin-top: 6px; }
 .brand__row .brand__sub { flex: 1; min-width: 0; margin-top: 0; }
-.brand__info { flex: none; display: flex; flex-direction: column; align-items: center; justify-content: center; row-gap: 2px; width: 37px; height: 37px; padding: 0; border: 1.5px solid color-mix(in srgb, var(--accent) 55%, transparent); border-radius: 8px; background: none; color: var(--accent); font: 600 10px/1 var(--f-body); white-space: nowrap; cursor: pointer; }
+.brand__info { flex: none; display: flex; flex-direction: column; align-items: center; justify-content: center; row-gap: 2px; width: 37px; height: 37px; padding: 0; border: 1.5px solid rgb(var(--accent-rgb) / 55%); border-radius: 8px; background: none; color: var(--accent); font: 600 10px/1 var(--f-body); white-space: nowrap; cursor: pointer; }
 .brand__info:focus-visible { border-color: var(--accent); background: var(--accent-soft); }
 @media (hover: hover) { :where(:root:not(.pointer-still)) .brand__info:hover { border-color: var(--accent); background: var(--accent-soft); } }
 .brand__info[aria-current] { border-color: var(--accent); background: var(--accent); color: var(--on-accent); }
@@ -275,16 +286,17 @@ button { font: inherit; transition: linear 0.15s; }
 /* наведение / фокус с клавиатуры: кнопка становится зеленой, монета превращается в толстую объемную монету, вращающуюся вокруг вертикальной оси,
    а за названием, как на ветру, падают банкноты (обрезаются кнопкой) */
 /* в покое — тихий зеленый вместо акцента: полутоновая рамка и название, приглушенное к второстепенному тексту */
-.side__donate { --donate-frame: 35%; --donate-ink: 60%; border-color: color-mix(in srgb, var(--ok) var(--donate-frame), transparent); background: color-mix(in srgb, var(--ok) 4%, transparent); color: color-mix(in srgb, var(--ok-ink) var(--donate-ink), var(--muted)); }
+.side__donate { --donate-frame: 35%; --donate-ink: 60%; border-color: rgb(var(--ok-rgb) / var(--donate-frame)); background: rgb(var(--ok-rgb) / 4%); color: color-mix(in srgb, var(--ok-ink) var(--donate-ink), var(--muted)); }
+@supports not (color: color-mix(in srgb, red, red)) { .side__donate { color: var(--mx-donate-ink); } }
 /* светлая тема: зеленый ярче для рамки, заливки, монеты и банкнот (название остается --ok-ink, 5:1), рамка и название
    насыщеннее: полутоновая зеленая рамка терялась на бледном меню */
-:root[data-theme="light"] .side__donate { --ok: #12A33A; --donate-fill: 16%; --donate-frame: 55%; --donate-ink: 80%; }
+:root[data-theme="light"] .side__donate { --ok: #12A33A; --ok-rgb: 18 163 58; --donate-fill: 16%; --donate-frame: 55%; --donate-ink: 80%; }
 .side__donate .side__fold-arrow { color: inherit; }
 /* ее тень — зеленая: те же смещения, что у --raise, темно-зеленый вместо фиолетового / темно-синего */
 .side .side__donate { box-shadow: 0 1px 1px rgb(14 64 30 / 30%), 0 2px 5px rgb(14 64 30 / 35%); }
 :root[data-theme="light"] .side .side__donate { box-shadow: 0 1px 1px rgb(5 96 26 / 7%), 0 2px 5px rgb(5 96 26 / 12%); }
-.side__donate:is(:focus-visible) { border-color: var(--ok); background: color-mix(in srgb, var(--ok) var(--donate-fill, 13%), transparent); color: var(--ok-ink); }
-@media (hover: hover) { :where(:root:not(.pointer-still)) .side__donate:hover { border-color: var(--ok); background: color-mix(in srgb, var(--ok) var(--donate-fill, 13%), transparent); color: var(--ok-ink); } }
+.side__donate:is(:focus-visible) { border-color: var(--ok); background: rgb(var(--ok-rgb) / var(--donate-fill, 13%)); color: var(--ok-ink); }
+@media (hover: hover) { :where(:root:not(.pointer-still)) .side__donate:hover { border-color: var(--ok); background: rgb(var(--ok-rgb) / var(--donate-fill, 13%)); color: var(--ok-ink); } }
 /* монета: две стороны в 3px друг от друга и пять дисков между ними для ребра; в покое виден только плоский контур лицевой стороны */
 .coin { --coin-face: transparent; transform-style: preserve-3d; }
 .coin__face, .coin__edge { position: absolute; inset: 0; }
@@ -293,8 +305,10 @@ button { font: inherit; transition: linear 0.15s; }
 .coin__face--front { transform: translateZ(1.5px); }
 .coin__face--back { transform: rotateY(180deg) translateZ(1.5px); }
 .coin__edge { border-radius: 50%; background: color-mix(in srgb, currentColor 70%, #000); opacity: 0; transform: translateZ(var(--z)); }
+@supports not (color: color-mix(in srgb, red, red)) { .coin__edge { background: var(--mx-coin-edge); } }
 .side__donate:is(:focus-visible) .coin { --coin-face: color-mix(in srgb, var(--ok) 30%, var(--sheet)); animation: coin-spin 1.4s linear infinite; }
 @media (hover: hover) { :where(:root:not(.pointer-still)) .side__donate:hover .coin { --coin-face: color-mix(in srgb, var(--ok) 30%, var(--sheet)); animation: coin-spin 1.4s linear infinite; } }
+@supports not (color: color-mix(in srgb, red, red)) { .side__donate:is(:focus-visible) .coin { --coin-face: var(--mx-coin-face); } @media (hover: hover) { :where(:root:not(.pointer-still)) .side__donate:hover .coin { --coin-face: var(--mx-coin-face); } } }
 .side__donate:is(:focus-visible) .coin__edge { opacity: 1; }
 @media (hover: hover) { :where(:root:not(.pointer-still)) .side__donate:hover .coin__edge { opacity: 1; } }
 @keyframes coin-spin { from { transform: perspective(60px) rotateY(0); } to { transform: perspective(60px) rotateY(360deg); } }
@@ -308,8 +322,8 @@ button { font: inherit; transition: linear 0.15s; }
 /* на каждой стороне посередине маленький знак рубля, как на банкноте */
 .side__donate-bills b::before, .side__donate-bills b::after { content: "₽"; position: absolute; inset: 0; display: grid; place-items: center; border: 1px solid var(--ok); border-radius: 1.5px; backface-visibility: hidden;
   color: var(--ok); font: 700 7.5px/1 var(--f-body); }
-.side__donate-bills b::before { background: linear-gradient(120deg, color-mix(in srgb, var(--ok) 45%, transparent), color-mix(in srgb, var(--ok) 20%, transparent)); }
-.side__donate-bills b::after { transform: rotateY(180deg); background: linear-gradient(120deg, color-mix(in srgb, var(--ok) 60%, transparent), color-mix(in srgb, var(--ok) 35%, transparent)); } /* зеленый плотнее, без примеси черного: на светлой кнопке черный читался темным пятном */
+.side__donate-bills b::before { background: linear-gradient(120deg, rgb(var(--ok-rgb) / 45%), rgb(var(--ok-rgb) / 20%)); }
+.side__donate-bills b::after { transform: rotateY(180deg); background: linear-gradient(120deg, rgb(var(--ok-rgb) / 60%), rgb(var(--ok-rgb) / 35%)); } /* зеленый плотнее, без примеси черного: на светлой кнопке черный читался темным пятном */
 .side__donate:is(:focus-visible) .side__donate-bills i { animation: bill-fall var(--t) linear var(--d) infinite; }
 @media (hover: hover) { :where(:root:not(.pointer-still)) .side__donate:hover .side__donate-bills i { animation: bill-fall var(--t) linear var(--d) infinite; } }
 .side__donate:is(:focus-visible) .side__donate-bills b { animation: bill-sway var(--s) ease-in-out var(--sd) infinite alternate; }
@@ -326,9 +340,9 @@ button { font: inherit; transition: linear 0.15s; }
 /* полоса прогресса книги заполняет строку между названием и процентом, по центру по вертикали */
 .side__stat-bar { flex: 1; min-width: 40px; }
 .side__stat-pct { font-family: var(--f-mono); font-size: 12px; font-weight: 500; color: var(--ink); font-variant-numeric: tabular-nums; }
-.side__badge { min-width: 20px; padding: 1px 6px; border-radius: 99px; background: color-mix(in srgb, var(--bad) 18%, transparent); color: var(--bad); font-family: var(--f-mono); font-size: 11px; text-align: center; }
+.side__badge { min-width: 20px; padding: 1px 6px; border-radius: 99px; background: rgb(var(--bad-rgb) / 18%); color: var(--bad); font-family: var(--f-mono); font-size: 11px; text-align: center; }
 /* на светлом меню простая красная плашка читалась слабо (3.4:1): плотнее подложка и глубже, жирнее красный (~4.6:1) */
-:root[data-theme="light"] .side__badge { background: color-mix(in srgb, var(--bad) 24%, transparent); color: #A3001A; font-weight: 600; }
+:root[data-theme="light"] .side__badge { background: rgb(var(--bad-rgb) / 24%); color: #A3001A; font-weight: 600; }
 .side__count { margin-left: auto; font-family: var(--f-mono); font-weight: 500; font-variant-numeric: tabular-nums; }
 .side__count:empty { display: none; }
 .side__bm .bm-icon { margin: 0; color: currentColor; }
@@ -338,7 +352,7 @@ button { font: inherit; transition: linear 0.15s; }
 @media (hover: hover) { :where(:root:not(.pointer-still)) .side__bm:hover { border-color: var(--gold-ink); color: var(--gold-ink); } }
 /* рамка открытого «Прогресса»: полный акцент в светлой теме; в темной акцент почти белый, поэтому приглушен, как остальные рамки */
 .side__summary { --fold-bc: var(--accent); }
-:root:not([data-theme="light"]) .side__summary { --fold-bc: color-mix(in srgb, var(--accent) 55%, transparent); }
+:root:not([data-theme="light"]) .side__summary { --fold-bc: rgb(var(--accent-rgb) / 55%); }
 .side__stat[aria-expanded="true"]:not(.side__bm) { border-color: var(--fold-bc); border-bottom-color: transparent; }
 @media (hover: hover) { :where(:root:not(.pointer-still)) .side__stat[aria-expanded="true"]:not(.side__bm):hover { border-color: var(--fold-bc); border-bottom-color: transparent; } }
 /* блок под своей кнопкой; открыт — строка сетки во всю высоту содержимого */
@@ -357,8 +371,9 @@ button { font: inherit; transition: linear 0.15s; }
 /* у «Избранного» свое золото: мягче общего в темной теме, глубже и насыщеннее в светлой
    (общий #b38b27 дает только 2.5:1 на светлом меню); пока открыто, кнопка и ее список делят легкий оттенок чистого
    золота ленточки (темные чернила поверх синего светлого меню давали серый) */
-.side__bm-group { --gold-ink: #D9AC45; --bm-tint: color-mix(in srgb, var(--gold) 5%, var(--sheet)); --bm-tint-hover: color-mix(in srgb, var(--gold) 10%, var(--sheet)); }
-:root[data-theme="light"] .side__bm-group { --gold-ink: #855E00; --bm-tint: color-mix(in srgb, var(--gold) 16%, transparent); --bm-tint-hover: color-mix(in srgb, var(--gold) 28%, transparent); }
+.side__bm-group { --gold-ink: #D9AC45; --gold-ink-rgb: 217 172 69; --bm-tint: color-mix(in srgb, var(--gold) 5%, var(--sheet)); --bm-tint-hover: color-mix(in srgb, var(--gold) 10%, var(--sheet)); }
+@supports not (color: color-mix(in srgb, red, red)) { .side__bm-group { --bm-tint: #24242B; --bm-tint-hover: #2E2C2C; } }
+:root[data-theme="light"] .side__bm-group { --gold-ink: #855E00; --gold-ink-rgb: 133 94 0; --bm-tint: rgb(var(--gold-rgb) / 16%); --bm-tint-hover: rgb(var(--gold-rgb) / 28%); }
 .side__bm[aria-expanded="true"], .side__bm-group .side__fold .bookmarks { background: var(--bm-tint); }
 @media (hover: hover) { :where(:root:not(.pointer-still)) .side__bm[aria-expanded="true"]:hover { background: var(--bm-tint-hover); } }
 /* пока открыто, блок показывает полосу прогресса, процент и ошибки, поэтому на кнопке остается только название */
@@ -377,10 +392,10 @@ button { font: inherit; transition: linear 0.15s; }
 @media (hover: hover) { :root[data-theme="light"]:where(:root:not(.pointer-still)) .brand__info:not([aria-current]):hover { background: var(--hover); } }
 /* переключатели темы показывают палитру, на которую переключают: в светлой теме темная кнопка с фиолетовыми луной и звездами,
    в темной — белая кнопка с синими солнцем и лучами */
-:root[data-theme="light"] .theme-toggle:is(:focus-visible) { border-color: color-mix(in srgb, #ADA2FF 55%, transparent); background: #191C29; color: #ADA2FF; }
-@media (hover: hover) { :root[data-theme="light"]:where(:root:not(.pointer-still)) .theme-toggle:hover { border-color: color-mix(in srgb, #ADA2FF 55%, transparent); background: #191C29; color: #ADA2FF; } }
-:root:not([data-theme="light"]) .theme-toggle:is(:focus-visible) { border-color: color-mix(in srgb, #2547D0 55%, transparent); background: #FFFFFF; color: #2547D0; }
-@media (hover: hover) { :root:not([data-theme="light"]):where(:root:not(.pointer-still)) .theme-toggle:hover { border-color: color-mix(in srgb, #2547D0 55%, transparent); background: #FFFFFF; color: #2547D0; } }
+:root[data-theme="light"] .theme-toggle:is(:focus-visible) { border-color: rgb(173 162 255 / 55%); background: #191C29; color: #ADA2FF; }
+@media (hover: hover) { :root[data-theme="light"]:where(:root:not(.pointer-still)) .theme-toggle:hover { border-color: rgb(173 162 255 / 55%); background: #191C29; color: #ADA2FF; } }
+:root:not([data-theme="light"]) .theme-toggle:is(:focus-visible) { border-color: rgb(37 71 208 / 55%); background: #FFFFFF; color: #2547D0; }
+@media (hover: hover) { :root:not([data-theme="light"]):where(:root:not(.pointer-still)) .theme-toggle:hover { border-color: rgb(37 71 208 / 55%); background: #FFFFFF; color: #2547D0; } }
 :root[data-theme="light"] .side .level-chip:not([aria-pressed="true"]) { --face: var(--paper); }
 .overall__row { display: flex; justify-content: space-between; align-items: center; column-gap: 8px; font-size: 13px; color: var(--muted); }
 .overall__value { color: var(--ink); font-variant-numeric: tabular-nums; font-weight: 600; white-space: nowrap; } /* «0 из 299» не разрывается: переносится подпись */
@@ -392,14 +407,14 @@ button { font: inherit; transition: linear 0.15s; }
    (шрифт оставляет место под хвосты букв внизу строки); со сдвигом строчные по центру, а заглавные ниже середины всего на 0,5px */
 .overall__file { display: grid; grid-template-columns: minmax(0, 1fr); row-gap: 6px; margin-top: 4px; padding-top: 10px; border-top: 1px dashed var(--border); }
 .overall__file-btns { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 6px; } /* две кнопки в один ряд */
-.overall__file-btn { padding: 5px 8px 7px; border: 1.5px solid color-mix(in srgb, var(--accent) 55%, transparent); border-radius: 8px;
+.overall__file-btn { padding: 5px 8px 7px; border: 1.5px solid rgb(var(--accent-rgb) / 55%); border-radius: 8px;
   background: none; color: var(--accent); font: inherit; font-size: 12px; font-weight: 600; cursor: pointer; transition: border-color .15s, background-color .15s; }
 .overall__file-btn:is(:focus-visible) { border-color: var(--accent); background: var(--accent-soft); }
 @media (hover: hover) {
   :where(:root:not(.pointer-still)) .overall__file-btn:hover { border-color: var(--accent); background: var(--control-hover, var(--accent-soft)); }
 }
-.overall__file-btn:disabled { border-color: color-mix(in srgb, var(--accent) 55%, transparent); background: none; opacity: .4; cursor: default; }
-@media (hover: hover) { :where(:root:not(.pointer-still)) .overall__file-btn:disabled:hover { border-color: color-mix(in srgb, var(--accent) 55%, transparent); background: none; opacity: .4; cursor: default; } }
+.overall__file-btn:disabled { border-color: rgb(var(--accent-rgb) / 55%); background: none; opacity: .4; cursor: default; }
+@media (hover: hover) { :where(:root:not(.pointer-still)) .overall__file-btn:disabled:hover { border-color: rgb(var(--accent-rgb) / 55%); background: none; opacity: .4; cursor: default; } }
 .overall__note--ok { color: var(--ok-ink); }
 /* свернутая подсказка: ее последние слова угасают в «Показать еще»; они остаются на одной строке, чтобы угасание не разрывалось */
 .overall__fade-row { white-space: nowrap; }
@@ -415,7 +430,7 @@ button { font: inherit; transition: linear 0.15s; }
 .overall__note--bad { color: var(--bad-ink); }
 
 /* ---------- Модальное окно: свое подтверждение вместо браузерного confirm() ---------- */
-.modal { width: min(460px, calc(100vw - 32px)); max-height: calc(100dvh - 32px); padding: 0; border: 1.5px solid color-mix(in srgb, var(--accent) 55%, transparent); border-radius: 14px;
+.modal { width: min(460px, calc(100vw - 32px)); max-height: calc(100vh - 32px); max-height: calc(100dvh - 32px); padding: 0; border: 1.5px solid rgb(var(--accent-rgb) / 55%); border-radius: 14px;
   background: var(--sheet); color: var(--ink); box-shadow: 0 24px 60px -12px rgb(10 14 40 / 45%); }
 .modal::backdrop { background: rgb(20 27 58 / 40%); backdrop-filter: blur(3px); }
 :root[data-theme="dark"] .modal::backdrop { background: rgb(4 5 12 / 70%); }
@@ -426,7 +441,7 @@ button { font: inherit; transition: linear 0.15s; }
 .modal__body { display: grid; row-gap: 14px; padding: 20px 22px 22px; }
 .modal__title { margin: 0; font-family: var(--f-display); font-size: 17px; font-weight: 600; line-height: 1.3; }
 /* блок файла: пунктирная зона для перетаскивания с кнопкой выбора; когда файл прочитан — его имя, время сохранения и содержимое */
-.modal__drop { display: grid; justify-items: center; row-gap: 8px; padding: 14px; border: 1.5px dashed color-mix(in srgb, var(--accent) 55%, transparent); border-radius: 10px;
+.modal__drop { display: grid; justify-items: center; row-gap: 8px; padding: 14px; border: 1.5px dashed rgb(var(--accent-rgb) / 55%); border-radius: 10px;
   background: var(--well); text-align: center; transition: border-color .15s, background-color .15s; }
 .modal__drop--over { border-color: var(--accent); background: var(--accent-soft); }
 .modal__file { display: grid; row-gap: 10px; width: 100%; }
@@ -435,7 +450,7 @@ button { font: inherit; transition: linear 0.15s; }
 .modal__name span { color: var(--muted); }
 .modal__stats { display: grid; row-gap: 8px; padding: 10px 12px; border: 1px solid var(--border); border-radius: 8px; background: var(--sheet); text-align: left; }
 .modal__error { margin: 0; color: var(--bad-ink); font-size: 13px; font-weight: 600; overflow-wrap: anywhere; }
-.modal__pick { padding: 7px 16px; border: 1.5px solid color-mix(in srgb, var(--accent) 55%, transparent); border-radius: 8px; background: var(--sheet); color: var(--accent);
+.modal__pick { padding: 7px 16px; border: 1.5px solid rgb(var(--accent-rgb) / 55%); border-radius: 8px; background: var(--sheet); color: var(--accent);
   font-size: 13px; font-weight: 600; cursor: pointer; }
 @media (hover: hover) { :where(:root:not(.pointer-still)) .modal__pick:hover { border-color: var(--accent); background: var(--accent-soft); } }
 .modal__hint { margin: 0; font-size: 12px; color: var(--muted); }
@@ -445,7 +460,7 @@ button { font: inherit; transition: linear 0.15s; }
 .modal__close:is(:focus-visible) { border-color: var(--bad); background: var(--bad-soft); color: var(--bad); }
 @media (hover: hover) { :where(:root:not(.pointer-still)) .modal__close:hover { border-color: var(--bad); background: var(--bad-soft); color: var(--bad); } }
 /* предупреждение о перезаписи: самое заметное в блоке */
-.modal__warn { display: grid; row-gap: 4px; padding: 12px 14px; border: 1.5px solid color-mix(in srgb, var(--bad) 60%, transparent); border-radius: 10px;
+.modal__warn { display: grid; row-gap: 4px; padding: 12px 14px; border: 1.5px solid rgb(var(--bad-rgb) / 60%); border-radius: 10px;
   background: var(--bad-soft); font-size: 13px; line-height: 1.45; }
 .modal__warn-title { color: var(--bad); font-size: 14px; font-weight: 700; }
 .modal__warn p { margin: 0; }
@@ -464,23 +479,25 @@ button { font: inherit; transition: linear 0.15s; }
   border: 1px solid transparent; border-radius: 6px;
   /* плавное угасание: красный редеет по кривой и пропадает до верхнего края, поэтому видимой линии нет */
   background: linear-gradient(to top,
-    color-mix(in srgb, var(--bad) var(--tint), transparent) 0%,
-    color-mix(in srgb, var(--bad) var(--tint), transparent) var(--solid),
-    color-mix(in srgb, var(--bad) calc(var(--tint) * .6), transparent) calc(var(--solid) + 30%),
-    color-mix(in srgb, var(--bad) calc(var(--tint) * .25), transparent) calc(var(--solid) + 55%),
-    color-mix(in srgb, var(--bad) calc(var(--tint) * .07), transparent) calc(var(--solid) + 75%),
+    rgb(var(--bad-rgb) / var(--tint)) 0%,
+    rgb(var(--bad-rgb) / var(--tint)) var(--solid),
+    rgb(var(--bad-rgb) / calc(var(--tint) * .6)) calc(var(--solid) + 30%),
+    rgb(var(--bad-rgb) / calc(var(--tint) * .25)) calc(var(--solid) + 55%),
+    rgb(var(--bad-rgb) / calc(var(--tint) * .07)) calc(var(--solid) + 75%),
     transparent calc(var(--solid) + 92%));
   /* градиент занимает и border box: по размеру padding box он повторялся бы под прозрачной рамкой,
      и его самый плотный нижний край был бы виден красной линией сверху */
   background-origin: border-box;
   color: color-mix(in srgb, var(--bad) 70%, var(--muted)); font: inherit; font-size: 13px; text-align: left; cursor: pointer;
   transition: --solid .3s ease-out, border-color .3s ease-out; }
+@supports not (color: color-mix(in srgb, red, red)) { .overall__mistakes { color: #E18988; } }
 /* обводка видна только при наведении (и фокусе с клавиатуры) и пока открыта «Работа над ошибками» */
-.overall__mistakes:is(:focus-visible, [aria-current="page"]) { --solid: 100%; border-color: color-mix(in srgb, var(--bad) 35%, transparent); }
-@media (hover: hover) { :where(:root:not(.pointer-still)) .overall__mistakes:hover { --solid: 100%; border-color: color-mix(in srgb, var(--bad) 35%, transparent); } }
+.overall__mistakes:is(:focus-visible, [aria-current="page"]) { --solid: 100%; border-color: rgb(var(--bad-rgb) / 35%); }
+@media (hover: hover) { :where(:root:not(.pointer-still)) .overall__mistakes:hover { --solid: 100%; border-color: rgb(var(--bad-rgb) / 35%); } }
 .overall__mistakes .overall__value { color: inherit; }
 /* бледной светлой теме нужно чуть больше красного, чтобы его заметили */
 :root[data-theme="light"] .overall__mistakes { --tint: 16%; color: color-mix(in srgb, var(--bad) 88%, var(--muted)); }
+@supports not (color: color-mix(in srgb, red, red)) { :root[data-theme="light"] .overall__mistakes { color: #A93631; } }
 .overall__mistakes-end { display: flex; align-items: center; column-gap: 6px; }
 .bar { height: 6px; border-radius: 3px; background: var(--line); overflow: hidden; }
 .bar--thin { height: 4px; border-radius: 2px; }
@@ -506,26 +523,26 @@ button { font: inherit; transition: linear 0.15s; }
 /* Чипы уровней: прогресс уровня поднимается снизу зеленой «жидкостью» (--lvl задает скрипт), и обводка зеленеет
    до той же линии. Обводка нарисована градиентом border-box за заливкой padding-box, так как border-image не учитывает скругления.
    --lvl зарегистрирована, чтобы анимироваться; у «Все» жидкости нет. */
-@property --lvl { syntax: '<percentage>'; inherits: true; initial-value: 0%; }
+@property --lvl { syntax: '<percentage>'; inherits: true; initial-value: 0%; } /* без @property (Firefox до 128, Safari до 16.4) 0% дает запасное значение в var() */
 .level-chip {
-  --bc: color-mix(in srgb, var(--accent) 55%, transparent); /* обводка выше жидкости */
+  --bc: rgb(var(--accent-rgb) / 55%); /* обводка выше жидкости */
   --face: var(--sheet); /* фон чипа */
   position: relative; isolation: isolate; overflow: hidden; padding: 2px 6px; border: 1px solid transparent; border-radius: 99px;
-  background: linear-gradient(var(--face), var(--face)) padding-box, linear-gradient(to top, var(--ok) var(--lvl), var(--bc) var(--lvl)) border-box;
+  background: linear-gradient(var(--face), var(--face)) padding-box, linear-gradient(to top, var(--ok) var(--lvl, 0%), var(--bc) var(--lvl, 0%)) border-box;
   color: var(--muted); font-family: var(--f-mono); font-size: 12px; cursor: pointer; transition: --lvl .6s ease, color .15s linear;
 }
-.level-chip::before { content: ""; position: absolute; z-index: -1; left: 0; right: 0; bottom: 0; height: var(--lvl);
-  background: color-mix(in srgb, var(--ok) 32%, transparent); box-shadow: inset 0 1px 0 color-mix(in srgb, var(--ok) 70%, transparent); }
+.level-chip::before { content: ""; position: absolute; z-index: -1; left: 0; right: 0; bottom: 0; height: var(--lvl, 0%);
+  background: rgb(var(--ok-rgb) / 32%); box-shadow: inset 0 1px 0 rgb(var(--ok-rgb) / 70%); }
 .level-chip[data-level=""]::before { display: none; }
-.level-chip[aria-pressed="true"]::before { background: color-mix(in srgb, var(--ok) 70%, transparent); }
+.level-chip[aria-pressed="true"]::before { background: rgb(var(--ok-rgb) / 70%); }
 /* светлая тема: темный --ok на 32% становился серо-шалфейным на синей бумаге, поэтому жидкость — ярче зеленая */
-:root[data-theme="light"] .level-chip::before { background: color-mix(in srgb, #2ECC55 40%, transparent); }
+:root[data-theme="light"] .level-chip::before { background: rgb(46 204 85 / 40%); }
 /* под синим нажатого чипа темный --ok той же светлоты, и жидкость пропадает:
    зеленый светлее и жирный белый текст */
 :root[data-theme="light"] .level-chip[aria-pressed="true"]:not(.level-chip--done)::before { background: #25A84A; box-shadow: none; }
 :root[data-theme="light"] .level-chip[aria-pressed="true"]:not(.level-chip--done) {
   /* обводка следует за заливкой: тот же зеленый до линии жидкости, синий чипа выше нее */
-  background: linear-gradient(var(--face), var(--face)) padding-box, linear-gradient(to top, #25A84A var(--lvl), var(--bc) var(--lvl)) border-box; }
+  background: linear-gradient(var(--face), var(--face)) padding-box, linear-gradient(to top, #25A84A var(--lvl, 0%), var(--bc) var(--lvl, 0%)) border-box; }
 @media (hover: hover) { :where(:root:not(.pointer-still)) .level-chip:hover { --bc: var(--accent); color: var(--ink); } }
 .level-chip[aria-pressed="true"] { --bc: var(--accent); --face: var(--accent); color: var(--on-accent); font-weight: 700; }
 /* уровень, у которого все темы пройдены на 100% (для «Все» — вся книга), становится зеленым */
@@ -537,7 +554,7 @@ button { font: inherit; transition: linear 0.15s; }
 /* список содержания: сверху прогресс выбранного уровня, затем разделы аккордеоном */
 /* отступ сверху — у nav: у первого ребенка он уходил бы сквозь родителя */
 .side__nav { margin-top: 12px; }
-.toc { padding: 4px; border: 1.5px solid color-mix(in srgb, var(--accent) 55%, transparent); border-radius: 10px; }
+.toc { padding: 4px; border: 1.5px solid rgb(var(--accent-rgb) / 55%); border-radius: 10px; }
 .toc__empty { margin: 16px 10px; font-size: 14px; color: var(--muted); }
 /* одна рамка: «Содержание тренажера» с фильтром уровней, прогресс уровня, поиск и разделы, разделенные тонкими линиями */
 .toc__section { display: grid; row-gap: 6px; padding: 0 10px 10px; border-bottom: 1px solid var(--border); }
@@ -565,12 +582,14 @@ button { font: inherit; transition: linear 0.15s; }
 .toc__toggle[aria-expanded="true"] :is(.toc__label, .toc__count, .side__fold-arrow) { color: var(--muted); }
 .toc__toggle:is([aria-expanded="false"]) :is(.toc__label, .toc__count, .side__fold-arrow) { color: var(--accent); }
 /* свернутый список: число разделов — мягкой акцентной плашкой; цифры — акцент с цветом текста (чистый акцент на акценте не читается) */
-.toc__toggle[aria-expanded="false"] .toc__count { background: color-mix(in srgb, var(--accent) 20%, transparent); color: color-mix(in srgb, var(--accent) 60%, var(--ink)); }
+.toc__toggle[aria-expanded="false"] .toc__count { background: rgb(var(--accent-rgb) / 20%); color: color-mix(in srgb, var(--accent) 60%, var(--ink)); }
+@supports not (color: color-mix(in srgb, red, red)) { .toc__toggle[aria-expanded="false"] .toc__count { color: var(--mx-toc-count); } }
 @media (hover: hover) { :where(:root:not(.pointer-still)) .toc__toggle[aria-expanded="false"]:hover { background: var(--hover); } }
 @media (hover: hover) {
   :where(:root:not(.pointer-still)) .toc__toggle:hover :is(.toc__label, .toc__count, .side__fold-arrow) { color: var(--accent); }
   :where(:root:not(.pointer-still)) .toc__toggle[aria-expanded="false"]:hover .toc__count { color: color-mix(in srgb, var(--accent) 60%, var(--ink)); }
 }
+@supports not (color: color-mix(in srgb, red, red)) { @media (hover: hover) { :where(:root:not(.pointer-still)) .toc__toggle[aria-expanded="false"]:hover .toc__count { color: var(--mx-toc-count); } } }
 /* отступы и жирность — в обоих состояниях: при сворачивании плавно меняются только фон и цвет, цифра не прыгает */
 .toc__count { margin-left: auto; padding: 1px 7px; border-radius: 10px; font-family: var(--f-mono); font-size: 12px; font-weight: 600; font-variant-numeric: tabular-nums;
   transition: background-color .15s linear, color .15s linear; }
@@ -583,16 +602,16 @@ button { font: inherit; transition: linear 0.15s; }
 .chap + .chap { border-top: 1px solid var(--border); }
 /* открытый раздел и раздел открытой страницы — подкрашенные карточки, чтобы их темы не сливались со следующим заголовком раздела.
    Разделители остаются; подкраска рисуется в 4px внутри них, как заливка заголовка при наведении (::before, отступ 4px сверху и снизу) */
-:is(.chap--open, .chap--current)::before { content: ""; position: absolute; z-index: -1; inset: 4px 0; border-radius: 8px; background: color-mix(in srgb, var(--accent) 19%, transparent); transition: background-color .15s linear; }
+:is(.chap--open, .chap--current)::before { content: ""; position: absolute; z-index: -1; inset: 4px 0; border-radius: 8px; background: rgb(var(--accent-rgb) / 19%); transition: background-color .15s linear; }
 /* светлая тема: чистый барвинковый; акцент на 13% поверх серо-синей бумаги выглядел грязным */
 :root[data-theme="light"] :is(.chap--open, .chap--current)::before { background: #C8D3FA; }
 /* --hover примерно такой же темный, как подкрашенная карточка, поэтому внутри нее наведение — дополнительный слой акцента */
-@media (hover: hover) { :where(:root:not(.pointer-still)) :is(.chap--open, .chap--current) .topic-btn:not([aria-current]):hover { background: color-mix(in srgb, var(--accent) 20%, transparent); } }
+@media (hover: hover) { :where(:root:not(.pointer-still)) :is(.chap--open, .chap--current) .topic-btn:not([aria-current]):hover { background: rgb(var(--accent-rgb) / 20%); } }
 /* у заголовка карточки нет своей заливки при наведении: наведение на него углубляет всю карточку, поэтому тонов только два */
 @media (hover: hover) { :where(:root:not(.pointer-still)) :is(.chap--open, .chap--current) .chap__btn:hover { background: transparent; } }
 /* …только пока карточка свернута (раздел открытой страницы); на открытой карточке наведение на заголовок ничего не добавляет */
 @media (hover: hover) {
-  :where(:root:not(.pointer-still)) .chap--current:not(.chap--open):has(> .chap__btn:hover)::before { background: color-mix(in srgb, var(--accent) 27%, transparent); }
+  :where(:root:not(.pointer-still)) .chap--current:not(.chap--open):has(> .chap__btn:hover)::before { background: rgb(var(--accent-rgb) / 27%); }
   :root[data-theme="light"]:where(:root:not(.pointer-still)) .chap--current:not(.chap--open):has(> .chap__btn:hover)::before { background: #B9C7F8; }
 }
 /* внутри карточки заливки при наведении отступают еще на 4px со всех сторон (8px от разделителей);
@@ -620,7 +639,7 @@ button { font: inherit; transition: linear 0.15s; }
 .chap__topics { display: grid; row-gap: 6px; margin: 2px 0 6px 22px; padding-left: 8px; border-left: 1px solid var(--border); }
 /* тонкая линия с оттенком акцента посередине промежутка между темами, в разделе и в «Избранном» */
 .chap__topic, .bookmarks__topic { position: relative; }
-.chap__topic + .chap__topic::before, .bookmarks__topic + .bookmarks__topic::before { content: ""; position: absolute; left: 10px; right: 10px; top: -3.5px; height: 1px; background: color-mix(in srgb, var(--accent) 30%, transparent); }
+.chap__topic + .chap__topic::before, .bookmarks__topic + .bookmarks__topic::before { content: ""; position: absolute; left: 10px; right: 10px; top: -3.5px; height: 1px; background: rgb(var(--accent-rgb) / 30%); }
 
 .topic-btn { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: center; column-gap: 8px; width: 100%; padding: 6px 10px; border: 0; border-radius: 8px; background: transparent; color: var(--ink); font-size: 14px; line-height: 1.3; text-align: left; cursor: pointer; }
 @media (hover: hover) { :where(:root:not(.pointer-still)) .topic-btn:hover { background: var(--hover); } }
@@ -648,17 +667,20 @@ button { font: inherit; transition: linear 0.15s; }
 
 .pill { font-family: var(--f-mono); font-size: 11px; padding: 1px 7px; border-radius: 99px; border: 1px solid var(--border); color: var(--muted); font-variant-numeric: tabular-nums; white-space: nowrap; }
 /* ниже 100% плашка залита до своего значения: красным до 30%, желтым до 60%, зеленым до 99%; заливка слегка угасает к краю */
-.pill--low { --pc: var(--bad); }
-.pill--mid { --pc: var(--mid); }
-.pill--high { --pc: var(--ok); }
-.pill--low, .pill--mid, .pill--high { color: color-mix(in srgb, var(--pc) 65%, var(--muted)); border-color: color-mix(in srgb, var(--pc) 35%, transparent);
-  background: linear-gradient(90deg, color-mix(in srgb, var(--pc) 20%, transparent), color-mix(in srgb, var(--pc) 9%, transparent) var(--p), transparent var(--p)); }
+.pill--low { --pc: var(--bad); --pc-rgb: var(--bad-rgb); }
+.pill--mid { --pc: var(--mid); --pc-rgb: var(--mid-rgb); }
+.pill--high { --pc: var(--ok); --pc-rgb: var(--ok-rgb); }
+.pill--low, .pill--mid, .pill--high { color: color-mix(in srgb, var(--pc) 65%, var(--muted)); border-color: rgb(var(--pc-rgb) / 35%);
+  background: linear-gradient(90deg, rgb(var(--pc-rgb) / 20%), rgb(var(--pc-rgb) / 9%) var(--p), transparent var(--p)); }
+@supports not (color: color-mix(in srgb, red, red)) { .pill--low { color: #DC8B8B; } .pill--mid { color: #D2B56F; } .pill--high { color: #72C09F; } }
 /* цвета приглушены к серому тексту, чтобы плашки не перетягивали внимание; на бледной светлой теме цвета еще чуть меньше */
 :root[data-theme="light"] :is(.pill--low, .pill--mid, .pill--high) { color: color-mix(in srgb, var(--pc) 60%, var(--muted)); }
+@supports not (color: color-mix(in srgb, red, red)) { :root[data-theme="light"] .pill--low { color: #782D34; } :root[data-theme="light"] .pill--mid { color: #8D6F18; } :root[data-theme="light"] .pill--high { color: #0C532E; } }
 /* красная плашка в темной теме: заливка сильнее, чтобы читалась красной, и текст светлее, чтобы держать на ней 4.5:1 */
 :root:not([data-theme="light"]) .pill--low { color: color-mix(in srgb, var(--bad) 80%, var(--ink));
-  background: linear-gradient(90deg, color-mix(in srgb, var(--bad) 26%, transparent), color-mix(in srgb, var(--bad) 12%, transparent) var(--p), transparent var(--p)); }
-.pill--good { color: var(--ok); border-color: var(--ok); background: color-mix(in srgb, var(--ok) 18%, transparent); }
+  background: linear-gradient(90deg, rgb(var(--bad-rgb) / 26%), rgb(var(--bad-rgb) / 12%) var(--p), transparent var(--p)); }
+@supports not (color: color-mix(in srgb, red, red)) { :root:not([data-theme="light"]) .pill--low { color: #FA948C; } }
+.pill--good { color: var(--ok); border-color: var(--ok); background: rgb(var(--ok-rgb) / 18%); }
 :root[data-theme="light"] .pill--good { background: var(--ok-soft); }
 .topic-btn[aria-current="page"] .topic-btn__pill { color: inherit; border-color: currentColor; background: none; }
 
@@ -670,11 +692,11 @@ button { font: inherit; transition: linear 0.15s; }
 .topic-btn:focus-visible .topic-btn__bm { color: var(--gold-ink); }
 @media (hover: hover) { :where(:root:not(.pointer-still)) .topic-btn:hover .topic-btn__bm { color: var(--gold-ink); } }
 .topic-btn[aria-current="page"] .topic-btn__bm { color: var(--gold); }
-.bookmarks { margin-top: 12px; padding: 4px; border: 1.5px solid color-mix(in srgb, var(--accent) 55%, transparent); border-radius: 10px; transition: border-color .2s linear; }
+.bookmarks { margin-top: 12px; padding: 4px; border: 1.5px solid rgb(var(--accent-rgb) / 55%); border-radius: 10px; transition: border-color .2s linear; }
 .bookmarks__list { display: grid; row-gap: 6px; }
 /* чипы уровней «Избранного»: такие же маленькие плашки, как фильтр меню, но золотые, как блок */
 .bookmarks__levels { display: flex; flex-wrap: wrap; gap: 4px; padding: 8px 10px 6px; }
-.bookmarks__level { padding: 2px 7px; border: 1px solid color-mix(in srgb, var(--gold-ink) 55%, transparent); border-radius: 99px; background: transparent;
+.bookmarks__level { padding: 2px 7px; border: 1px solid rgb(var(--gold-ink-rgb) / 55%); border-radius: 99px; background: transparent;
   color: var(--muted); font-family: var(--f-mono); font-size: 12px; cursor: pointer; transition: color .15s linear, border-color .15s linear, background-color .15s linear; }
 .bookmarks__level:is(:focus-visible) { border-color: var(--gold-ink); color: var(--gold-ink); }
 @media (hover: hover) { :where(:root:not(.pointer-still)) .bookmarks__level:hover { border-color: var(--gold-ink); color: var(--gold-ink); } }
@@ -706,7 +728,7 @@ button { font: inherit; transition: linear 0.15s; }
    Темная (наш акцент вместо синего из референса): бледная лаванда у верхнего края, под ней конус акцента,
    слабое пятно акцента у низа и более темные бока; свет складывается (screen). Мягче референса,
    чтобы заголовок под ним оставался читаемым */
-.page--glow .pager__btn { background-color: color-mix(in srgb, var(--sheet) 50%, transparent); } /* непрозрачная карточка цвета листа выделялась на зареве */
+.page--glow .pager__btn { background-color: rgb(var(--sheet-rgb) / 50%); } /* непрозрачная карточка цвета листа выделялась на зареве */
 /* Свет — переменная --glow; рисуют ее неподвижные слои размером с окно: у страницы (body::before) и у листа (.sheet::before,
    обрезан по листу его clip-path). Раньше это был фон с background-attachment: fixed — он перерисовывался на каждом кадре
    прокрутки (с SVG-зерном на телефоне — сильные тормоза); слой position: fixed рисуется один раз и только сдвигается.
@@ -757,6 +779,7 @@ button { font: inherit; transition: linear 0.15s; }
 .sheet__intro--contact { margin-block: 20px; }
 /* «Поддержать автора» в тексте: цвет этой кнопки в меню */
 .sheet__donate { color: color-mix(in srgb, var(--ok-ink) 60%, var(--muted)); }
+@supports not (color: color-mix(in srgb, red, red)) { .sheet__donate { color: var(--mx-sheet-donate); } }
 :root[data-theme="light"] .sheet__donate { color: #0d8929; }
 /* три угасающих слова и кнопка могут быть шире строки телефона: слова переносятся, кнопка остается после последнего */
 .info-intro .overall__fade-row { white-space: normal; }
@@ -783,7 +806,7 @@ button { font: inherit; transition: linear 0.15s; }
 
 /* Содержание */
 /* в рамке, как список содержания в меню */
-.contents { list-style: none; margin: 24px 0 0; padding: 4px; border: 1.5px solid color-mix(in srgb, var(--accent) 55%, transparent); border-radius: 10px; }
+.contents { list-style: none; margin: 24px 0 0; padding: 4px; border: 1.5px solid rgb(var(--accent-rgb) / 55%); border-radius: 10px; }
 .contents__item { padding-block: 4px; }
 .contents__item + .contents__item { border-top: 1px solid var(--border); }
 .contents__row { display: grid; grid-template-columns: 30px minmax(0, 1fr); gap: 4px 14px; align-items: baseline; width: 100%; padding: 10px 12px; border: 0; border-radius: 8px; background: none; color: var(--ink); text-align: left; cursor: pointer; }
@@ -793,9 +816,11 @@ button { font: inherit; transition: linear 0.15s; }
 }
 .contents__num { grid-row: 1 / span 2; align-self: center; justify-self: center; display: grid; place-items: center; width: 30px; height: 30px; border-radius: 8px;
   padding-top: 2px; /* цифры моноширинного шрифта сидят на 1px выше середины строки — опускаем к центру плашки */
-  background: color-mix(in srgb, var(--accent) 9%, transparent); font-family: var(--f-mono); font-size: 13px; color: color-mix(in srgb, var(--accent) 60%, var(--muted)); } /* номер на легкой плашке с оттенком акцента, по центру под заголовком и строкой под ним */
-:root[data-theme="light"] .contents__num { background: color-mix(in srgb, var(--accent) 4%, color-mix(in srgb, var(--muted) 5%, transparent));
+  background: rgb(var(--accent-rgb) / 9%); font-family: var(--f-mono); font-size: 13px; color: color-mix(in srgb, var(--accent) 60%, var(--muted)); } /* номер на легкой плашке с оттенком акцента, по центру под заголовком и строкой под ним */
+@supports not (color: color-mix(in srgb, red, red)) { .contents__num { color: #A5A2E3; } }
+:root[data-theme="light"] .contents__num { background: color-mix(in srgb, var(--accent) 4%, rgb(var(--muted-rgb) / 5%));
   color: color-mix(in srgb, var(--accent) 30%, var(--muted)); } /* светлая: синий акцент на сером листе слишком яркий — ближе к серому */
+@supports not (color: color-mix(in srgb, red, red)) { :root[data-theme="light"] .contents__num { background: rgb(26 46 127 / 8.8%); color: #162768; } }
 .contents--about { margin-top: 0; } /* промежуток задает заголовок выше */
 .contents__title { min-width: 0; font-size: 17px; font-weight: 600; }
 @media (max-width: 458px) { .contents__title { font-size: 16px; } }
@@ -803,7 +828,7 @@ button { font: inherit; transition: linear 0.15s; }
 .contents__levels { display: inline-flex; column-gap: 3px; }
 /* прогресс раздела: второй строкой, под названием; номер — по центру всех трех строк */
 .contents__prog { grid-column: 2; display: flex; align-items: center; column-gap: 6px; font-size: 12px; color: var(--muted); }
-.contents__row:has(.contents__prog) .contents__num { grid-row: 1 / span 3; }
+.contents__row--prog .contents__num { grid-row: 1 / span 3; }
 .contents__bar { width: 80px; }
 /* страницы «Информации»: текст в типографике правила, списки, цифры карточками */
 .info { margin-top: 14px; }
@@ -815,7 +840,7 @@ button { font: inherit; transition: linear 0.15s; }
 .info > p:first-child + h3 { margin-top: 12px; } /* вводный абзац стоит ближе к первому заголовку */
 .info > h3:first-child { margin-top: 0; } /* страница без вводного абзаца: от заголовка те же 14px, что и у остальных */
 .info .info__stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 10px; margin: 0; padding: 0; list-style: none; }
-.info__stat { display: grid; row-gap: 2px; padding: 12px 14px; text-align: center; border: 1.5px solid color-mix(in srgb, var(--accent) 55%, transparent); border-radius: 10px; }
+.info__stat { display: grid; row-gap: 2px; padding: 12px 14px; text-align: center; border: 1.5px solid rgb(var(--accent-rgb) / 55%); border-radius: 10px; }
 .info__stat b { font-family: var(--f-display); font-size: 30px; font-weight: 700; line-height: 1.1; color: var(--accent); }
 .info__stat span { font-size: 14px; color: var(--muted); }
 @media (max-width: 568px) { /* не 560: при 561–568 подпись «уровней сложности» в крупной карточке переносится */
@@ -824,7 +849,7 @@ button { font: inherit; transition: linear 0.15s; }
   .info__stat b { font-size: 25px; }
   .info__stat span { font-size: 12px; }
 }
-.info .info__levels { display: grid; row-gap: 8px; margin: 0 0 14px; padding: 12px 14px; border: 1.5px solid color-mix(in srgb, var(--accent) 55%, transparent); border-radius: 10px; list-style: none; }
+.info .info__levels { display: grid; row-gap: 8px; margin: 0 0 14px; padding: 12px 14px; border: 1.5px solid rgb(var(--accent-rgb) / 55%); border-radius: 10px; list-style: none; }
 .info__levels li { display: flex; align-items: baseline; column-gap: 10px; margin: 0; }
 .info :is(.info__stats, .info__levels) li + li { margin-top: 0; }
 /* отточие от названия уровня до числа тем, как было в старом содержании */
@@ -838,7 +863,7 @@ button { font: inherit; transition: linear 0.15s; }
 }
 .info__count { font-size: 14px; color: var(--ink); white-space: nowrap; }
 /* «Работа без интернета»: состояние основы сайта и записей «На слух» с кнопками (js/offline.js) — рамка как у .info__levels */
-.offline { display: grid; row-gap: 10px; margin: 0 0 14px; padding: 12px 14px; border: 1.5px solid color-mix(in srgb, var(--accent) 55%, transparent); border-radius: 10px; }
+.offline { display: grid; row-gap: 10px; margin: 0 0 14px; padding: 12px 14px; border: 1.5px solid rgb(var(--accent-rgb) / 55%); border-radius: 10px; }
 .offline:empty { display: none; }
 .info .offline p { margin: 0; }
 .offline__row { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; column-gap: 12px; }
@@ -851,7 +876,7 @@ button { font: inherit; transition: linear 0.15s; }
 .offline__error { font-size: 14px; color: var(--bad-ink); }
 
 /* «Работа над ошибками»: та же рамка, что у содержания, по строке на тему с кнопкой на каждое упражнение */
-.mistakes { list-style: none; margin: 24px 0 0; padding: 4px; border: 1.5px solid color-mix(in srgb, var(--accent) 55%, transparent); border-radius: 10px; }
+.mistakes { list-style: none; margin: 24px 0 0; padding: 4px; border: 1.5px solid rgb(var(--accent-rgb) / 55%); border-radius: 10px; }
 .mistakes__item { display: grid; row-gap: 8px; padding: 12px; }
 .mistakes__item + .mistakes__item { border-top: 1px solid var(--border); }
 /* номер, затем название с переносом по словам и меткой уровня после последнего слова; раздел на своей строке */
@@ -862,7 +887,7 @@ button { font: inherit; transition: linear 0.15s; }
 .mistakes__title .lvl-tag { margin-left: 8px; font-weight: 400; vertical-align: 2px; }
 .mistakes__chapter { grid-column: 1 / -1; font-size: 12.5px; color: var(--muted); }
 .mistakes__exs { display: flex; flex-wrap: wrap; gap: 6px; }
-.mistakes__ex { padding: 3px 12px; border: 1.5px solid color-mix(in srgb, var(--accent) 55%, transparent); border-radius: 99px; background: var(--sheet); color: var(--accent); font-family: var(--f-mono); font-size: 12px; cursor: pointer; }
+.mistakes__ex { padding: 3px 12px; border: 1.5px solid rgb(var(--accent-rgb) / 55%); border-radius: 99px; background: var(--sheet); color: var(--accent); font-family: var(--f-mono); font-size: 12px; cursor: pointer; }
 @media (hover: hover) { :where(:root:not(.pointer-still)) .mistakes__ex:hover { border-color: var(--accent); background: var(--accent-soft); } }
 .mistakes__score { color: var(--bad); }
 .mistakes__note { color: var(--muted); }
@@ -870,7 +895,7 @@ button { font: inherit; transition: linear 0.15s; }
 .mistakes__tools + .mistakes { margin-top: 12px; }
 .mistakes__levels { display: flex; flex-wrap: wrap; gap: 6px; }
 /* спокойная, в цветах кнопок меню (как «Сохранить» в «Резервной копии») */
-.mistakes__start { display: inline-flex; align-items: center; column-gap: 8px; margin-left: auto; padding: 8px 16px; border: 1.5px solid color-mix(in srgb, var(--accent) 55%, transparent); border-radius: 10px;
+.mistakes__start { display: inline-flex; align-items: center; column-gap: 8px; margin-left: auto; padding: 8px 16px; border: 1.5px solid rgb(var(--accent-rgb) / 55%); border-radius: 10px;
   background: none; color: var(--accent); font-size: 14px; font-weight: 600; cursor: pointer; transition: border-color .15s, background-color .15s; }
 .mistakes__start:is(:focus-visible):not(:disabled) { border-color: var(--accent); background: var(--accent-soft); }
 @media (hover: hover) {
@@ -882,13 +907,14 @@ button { font: inherit; transition: linear 0.15s; }
 .mistakes__tools--stacked .mistakes__start { flex: 1 1 100%; justify-content: center; margin-left: 0; }
 .not-found__go { margin-left: 0; } /* «Страница не найдена»: кнопка под текстом слева, а не у правого края */
 .mistakes__start:disabled .arrow--next { transform: none; }
-.mistakes__level { display: inline-flex; align-items: center; column-gap: 8px; padding: 4px 4px 4px 10px; border: 1.5px solid color-mix(in srgb, var(--accent) 55%, transparent); border-radius: 99px;
+.mistakes__level { display: inline-flex; align-items: center; column-gap: 8px; padding: 4px 4px 4px 10px; border: 1.5px solid rgb(var(--accent-rgb) / 55%); border-radius: 99px;
   background: var(--sheet); color: var(--accent); font-family: var(--f-mono); font-size: 13px; font-weight: 600; cursor: pointer; }
 @media (hover: hover) { :where(:root:not(.pointer-still)) .mistakes__level:hover { border-color: var(--accent); background: var(--accent-soft); } }
 .mistakes__level[aria-pressed="true"] { border-color: var(--accent); background: var(--accent); color: var(--on-accent); }
 /* число в своем пузырьке, чтобы «A1 1» не читалось одной подписью */
 .mistakes__level-count { min-width: 20px; padding: 1px 6px; border-radius: 99px; background: color-mix(in srgb, var(--accent) 24%, var(--sheet)); font-size: 12px; font-weight: 600; text-align: center; }
-.mistakes__level[aria-pressed="true"] .mistakes__level-count { background: color-mix(in srgb, var(--on-accent) 22%, transparent); }
+@supports not (color: color-mix(in srgb, red, red)) { .mistakes__level-count { background: var(--mx-level-count); } }
+.mistakes__level[aria-pressed="true"] .mistakes__level-count { background: rgb(var(--on-accent-rgb) / 22%); }
 /* «Мои заметки»: свободные заметки, не привязанные к темам, — каждая карточкой: текст (при редактировании — поле, растет вместе с текстом),
    затем дата и кнопки; «Удалить» превращает нижнюю строку в вопрос */
 .notes-tools { position: relative; display: flex; align-items: center; column-gap: 12px; margin-top: 20px; scroll-margin-top: 16px; }
@@ -896,7 +922,7 @@ button { font: inherit; transition: linear 0.15s; }
 /* поиск: кнопка-лупа справа; открытое поле выезжает влево поверх ряда (на узком экране — на всю ширину, поверх «Новой заметки») */
 .notes-search { flex: none; margin-left: auto; }
 .notes-search[hidden] { display: none; }
-.notes-search__open { display: grid; place-items: center; width: 42px; height: 42px; padding: 0; border: 1.5px solid color-mix(in srgb, var(--accent) 55%, transparent); border-radius: 10px;
+.notes-search__open { display: grid; place-items: center; width: 42px; height: 42px; padding: 0; border: 1.5px solid rgb(var(--accent-rgb) / 55%); border-radius: 10px;
   background: none; color: var(--accent); cursor: pointer; transition: border-color .15s, background-color .15s; }
 .notes-search__open .search-icon { width: 18px; height: 18px; }
 .notes-search__open:is(:focus-visible) { border-color: var(--accent); background: var(--accent-soft); }
@@ -912,16 +938,16 @@ button { font: inherit; transition: linear 0.15s; }
 .notes-search__close svg { width: 15px; height: 15px; }
 .notes-search__close:is(:focus-visible) { outline: none; background: var(--accent-soft); color: var(--accent); }
 @media (hover: hover) { :where(:root:not(.pointer-still)) .notes-search__close:hover { background: var(--accent-soft); color: var(--accent); } }
-.notes-tools__search { width: 100%; height: 100%; padding: 9px 40px 9px 12px; border: 1.5px solid color-mix(in srgb, var(--accent) 55%, transparent); border-radius: 10px;
+.notes-tools__search { width: 100%; height: 100%; padding: 9px 40px 9px 12px; border: 1.5px solid rgb(var(--accent-rgb) / 55%); border-radius: 10px;
   background: var(--paper); color: var(--ink); font: inherit; font-size: 14px; } /* темная тема — фон меню: на листе поле не сливается; светлая — #EDEDED, как в меню */
 .notes-tools__search::placeholder { color: var(--muted); opacity: .4; }
 .notes-tools__search::-webkit-search-cancel-button { display: none; } /* свой крестик — «Закрыть поиск» */
 /* фокус полей поиска (меню и «Мои заметки») — акцентная рамка с мягким ободком вместо общей обводки */
 :is(.search__input, .notes-tools__search):focus { outline: none; border-color: var(--accent); box-shadow: 0 0 0 3px var(--accent-soft); }
-.notes-list__none { margin: 16px 0 0; padding: 16px; border: 1.5px dashed color-mix(in srgb, var(--accent) 55%, transparent); border-radius: 10px; color: var(--muted); }
+.notes-list__none { margin: 16px 0 0; padding: 16px; border: 1.5px dashed rgb(var(--accent-rgb) / 55%); border-radius: 10px; color: var(--muted); }
 .notes-list__none[hidden], .notes-list__item[hidden], .paging[hidden] { display: none; }
 .paging { display: flex; flex-wrap: wrap; justify-content: center; gap: 6px; margin-top: 20px; }
-.paging__btn { display: inline-grid; place-items: center; min-width: 38px; height: 38px; padding: 0 10px; border: 1.5px solid color-mix(in srgb, var(--accent) 55%, transparent); border-radius: 10px;
+.paging__btn { display: inline-grid; place-items: center; min-width: 38px; height: 38px; padding: 0 10px; border: 1.5px solid rgb(var(--accent-rgb) / 55%); border-radius: 10px;
   background: var(--sheet); color: var(--accent); font-size: 14px; font-weight: 600; cursor: pointer; }
 .paging__btn:is(:focus-visible) { border-color: var(--accent); background: var(--accent-soft); }
 @media (hover: hover) { :where(:root:not(.pointer-still)) .paging__btn:hover { border-color: var(--accent); background: var(--accent-soft); } }
@@ -931,36 +957,40 @@ button { font: inherit; transition: linear 0.15s; }
 /* рамка — отдельным слоем поверх содержимого: иначе на изгибе углов между рамкой и светлым текстом просвечивает фон карточки */
 .notes-list__item { position: relative; overflow: hidden; border-radius: 12px; background: var(--sheet); }
 .notes-list__item::after { content: ""; position: absolute; inset: 0; border: 1.5px solid color-mix(in srgb, var(--accent) 55%, var(--sheet)); border-radius: inherit; pointer-events: none; transition: border-color .15s linear; }
+@supports not (color: color-mix(in srgb, red, red)) { .notes-list__item::after { border: 1.5px solid var(--mx-note-frame); } }
 .notes-list__item--edit::after { border-color: var(--accent); }
 /* текст заметки — светлая «бумага» над нижней строкой цвета листа */
 .notes-list__text { margin: 0; padding: 13.5px 15.5px 12px; background: color-mix(in srgb, #FFFFFF 55%, var(--sheet)); font-size: 15px; line-height: 1.5; white-space: pre-wrap; overflow-wrap: anywhere; }
+@supports not (color: color-mix(in srgb, red, red)) { .notes-list__text { background: #F6F6F6; } }
 /* длинные слова в угасающем хвосте не должны раздвигать карточку: хвост переносится, «Показать еще» не рвется */
 .notes-list__text .overall__fade-row { white-space: normal; }
 .notes-list__text .overall__more-btn { white-space: nowrap; }
 :root[data-theme="dark"] .notes-list__text { background: color-mix(in srgb, #FFFFFF 5%, var(--sheet)); }
+@supports not (color: color-mix(in srgb, red, red)) { :root[data-theme="dark"] .notes-list__text { background: #242734; } }
 .notes-list__field { display: block; width: 100%; min-height: 50px; padding: 13.5px 15.5px 12px; border: 0; background: var(--accent-soft); color: var(--ink); font: 15px/1.5 var(--f-body);
   resize: none; field-sizing: content; outline: none; }
 .notes-list__field::placeholder { color: var(--muted); }
-.notes-list__foot { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 6px; min-height: 41.5px; padding: 5px 7.5px 6.5px 15.5px; border-top: 1px dashed color-mix(in srgb, var(--accent) 45%, transparent); font-size: 12.5px; color: var(--muted); }
+.notes-list__foot { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 6px; min-height: 41.5px; padding: 5px 7.5px 6.5px 15.5px; border-top: 1px dashed rgb(var(--accent-rgb) / 45%); font-size: 12.5px; color: var(--muted); }
 .notes-list__date { margin-right: auto; }
 .notes-list__ask { margin-right: auto; color: var(--bad-ink); font-weight: 600; }
 .notes-list__count { font-variant-numeric: tabular-nums; } /* счетчик символов в редактируемой заметке */
-.notes-list__btn { padding: 4px 10px; border: 1px solid color-mix(in srgb, var(--accent) 55%, transparent); border-radius: 8px; background: none; color: var(--accent); font-size: 12.5px; font-weight: 600; cursor: pointer; }
+.notes-list__btn { padding: 4px 10px; border: 1px solid rgb(var(--accent-rgb) / 55%); border-radius: 8px; background: none; color: var(--accent); font-size: 12.5px; font-weight: 600; cursor: pointer; }
 .notes-list__btn:is(:focus-visible) { border-color: var(--accent); background: var(--accent-soft); }
 @media (hover: hover) { :where(:root:not(.pointer-still)) .notes-list__btn:hover { border-color: var(--accent); background: var(--accent-soft); } }
 /* «Удалить»: красный текст без рамки; рамка и заливка появляются при наведении */
 .notes-list__btn--del { border-color: transparent; color: var(--bad-ink); }
 /* красный темной темы яркий: в покое смешан с приглушенным серым, при наведении — полный */
 :root[data-theme="dark"] .notes-list__btn--del:not(:where(:root:not(.pointer-still)) :hover, :focus-visible) { color: color-mix(in srgb, var(--bad) 85%, var(--muted)); }
+@supports not (color: color-mix(in srgb, red, red)) { :root[data-theme="dark"] .notes-list__btn--del:not(:where(:root:not(.pointer-still)) :hover, :focus-visible) { color: #F0847D; } }
 .notes-list__btn--del:is(:focus-visible) { border-color: var(--bad); background: var(--bad-soft); color: var(--bad-ink); }
 @media (hover: hover) { :where(:root:not(.pointer-still)) .notes-list__btn--del:hover { border-color: var(--bad); background: var(--bad-soft); color: var(--bad-ink); } }
 .notes-list__btn--confirm { border-color: var(--bad); background: var(--bad); color: var(--sheet); }
 .notes-list__btn--confirm:is(:focus-visible) { border-color: var(--bad-ink); background: var(--bad-ink); color: var(--sheet); }
 @media (hover: hover) { :where(:root:not(.pointer-still)) .notes-list__btn--confirm:hover { border-color: var(--bad-ink); background: var(--bad-ink); color: var(--sheet); } }
-.mistakes__empty { margin: 12px 0 0; padding: 16px; border: 1.5px dashed color-mix(in srgb, var(--accent) 55%, transparent); border-radius: 10px; color: var(--muted); }
+.mistakes__empty { margin: 12px 0 0; padding: 16px; border: 1.5px dashed rgb(var(--accent-rgb) / 55%); border-radius: 10px; color: var(--muted); }
 
 .topic-cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 12px; margin-top: 24px; }
-.topic-card { display: grid; row-gap: 6px; align-content: start; padding: 14px 16px; border: 1.5px solid color-mix(in srgb, var(--accent) 55%, transparent); border-radius: 10px; background: var(--sheet); color: var(--ink); text-align: left; cursor: pointer;
+.topic-card { display: grid; row-gap: 6px; align-content: start; padding: 14px 16px; border: 1.5px solid rgb(var(--accent-rgb) / 55%); border-radius: 10px; background: var(--sheet); color: var(--ink); text-align: left; cursor: pointer;
   transition: border-color .15s, background-color .15s; }
 .topic-card:is(:focus-visible) { border-color: var(--accent); background: var(--accent-soft); }
 .topic-card:is(:focus-visible) .topic-card__title { color: var(--accent); }
@@ -988,9 +1018,9 @@ button { font: inherit; transition: linear 0.15s; }
 .rule i b, .examples__en b { font-weight: 600; background: linear-gradient(transparent -10%, var(--hl) 160%); }
 .formula { margin: 0 0 14px; padding: 10px 14px; border-radius: 8px; background: var(--accent-soft); font-family: var(--f-en); font-size: 17px; }
 .formula b { color: var(--accent); font-weight: 600; }
-.rule-table { --head-bg: color-mix(in srgb, var(--accent-soft) 40%, transparent); /* фон шапки, на телефоне — первой ячейки карточки */
+.rule-table { --head-bg: rgb(var(--accent-soft-rgb) / 40%); /* фон шапки, на телефоне — первой ячейки карточки */
   overflow-x: auto; margin: 0 0 16px; border: 1px solid var(--accent); border-top-width: 4px; border-radius: 10px; background: var(--sheet); }
-:root[data-theme="light"] .rule-table { --head-bg: color-mix(in srgb, #D6DEFF 62%, transparent); } /* в светлой теме — свой оттенок синего */
+:root[data-theme="light"] .rule-table { --head-bg: rgb(214 222 255 / 62%); } /* в светлой теме — свой оттенок синего */
 .rule :is(p, ul:not(.examples), ol) + .rule-table { margin-top: 10px; } /* текст правила не наезжает на таблицу примеров */
 .rule-table__table { width: 100%; border-collapse: collapse; font-size: 15px; }
 /* акцентная полоса сверху у рамки (как у карточек на телефоне), шапка под ней спокойная: мягкий акцентный фон, текст цветом текста */
@@ -1005,7 +1035,9 @@ button { font: inherit; transition: linear 0.15s; }
 .examples__en { font-family: var(--f-en); font-size: 17px; }
 .examples__ru { font-size: 14.5px; color: var(--muted); padding-top: 2px; }
 .note { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 12px; margin: 0 0 16px; padding: 12px 14px; border: 1px dashed var(--bad); border-radius: 6px; background: color-mix(in srgb, var(--bad-soft) 45%, var(--sheet)); font-size: 15px; }
+@supports not (color: color-mix(in srgb, red, red)) { .note { background: #EFE6E3; } }
 :root[data-theme="dark"] .note { background: color-mix(in srgb, var(--bad-soft) 25%, var(--sheet)); }
+@supports not (color: color-mix(in srgb, red, red)) { :root[data-theme="dark"] .note { background: #211C26; } }
 .note::before { content: "Важно"; font-family: var(--f-mono); font-size: 11px; letter-spacing: .08em; text-transform: uppercase; color: var(--bad); align-self: center; }
 .markers { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; margin: 0 0 16px; }
 .markers__label { margin-right: 4px; font-size: 13.5px; color: var(--muted); }
@@ -1017,7 +1049,7 @@ button { font: inherit; transition: linear 0.15s; }
    с ним и не работал */
 .rule > :last-child { margin-bottom: 0; }
 .study__btn { display: block; width: 100%; }
-.study__btn[aria-pressed="false"] { border: 1.5px solid color-mix(in srgb, var(--accent) 55%, transparent); color: var(--accent); }
+.study__btn[aria-pressed="false"] { border: 1.5px solid rgb(var(--accent-rgb) / 55%); color: var(--accent); }
 @media (hover: hover) { :where(:root:not(.pointer-still)) .study__btn[aria-pressed="false"]:hover { border-color: var(--accent); background: var(--accent-soft); } }
 .study__btn[aria-pressed="true"] { border-color: var(--ok); background: var(--ok-soft); color: var(--ok); }
 .study__btn + .study__btn { margin-top: 12px; }
@@ -1065,8 +1097,9 @@ button { font: inherit; transition: linear 0.15s; }
   transition: border-color .15s linear, box-shadow .15s linear; }
 :root[data-theme="light"] .ex__item:not(:focus-within) { box-shadow: 0 2px 4px rgb(10 14 30 / 12%); } /* у карточки тень короче, чем --lift у кнопок */
 .ex__item:focus-within { border-color: color-mix(in srgb, var(--accent) 55%, var(--border)); border-left-color: var(--accent);
-  box-shadow: 0 2px 8px color-mix(in srgb, var(--accent) 12%, transparent); }
-:root[data-theme="dark"] .ex__item:focus-within { box-shadow: 0 1px 4px color-mix(in srgb, var(--accent) 3%, transparent); } /* светлый акцент на темном листе светится сильнее */
+  box-shadow: 0 2px 8px rgb(var(--accent-rgb) / 12%); }
+@supports not (color: color-mix(in srgb, red, red)) { .ex__item:focus-within { border-color: var(--mx-item-focus); } }
+:root[data-theme="dark"] .ex__item:focus-within { box-shadow: 0 1px 4px rgb(var(--accent-rgb) / 3%); } /* светлый акцент на темном листе светится сильнее */
 /* после проверки полоса слева — цвет результата строки; у строки без ответа (ex__item--miss) остается акцентной */
 .ex__item.ex__item--ok { border-left-color: var(--ok); }
 :root[data-theme="light"] .ex__item.ex__item--ok { border-left-color: #139D33; } /* --ok и --bad в светлой теме темные для полосы */
@@ -1074,7 +1107,7 @@ button { font: inherit; transition: linear 0.15s; }
 .ex__item.ex__item--bad { border-left-color: var(--bad); }
 .ex__item:focus-within::before { color: var(--accent); }
 .ex__item::before { content: counter(it, decimal-leading-zero); grid-row: 1; align-self: start; padding-top: 9px; font-family: var(--f-mono); font-size: 12px;
-  color: color-mix(in srgb, var(--muted) 75%, transparent); font-variant-numeric: tabular-nums; transition: color .15s linear; }
+  color: rgb(var(--muted-rgb) / 75%); font-variant-numeric: tabular-nums; transition: color .15s linear; }
 .ex__item--ok::before { color: var(--ok-ink); }
 :is(.ex__item--bad, .ex__item--miss)::before { color: var(--bad-ink); }
 .ex__q { grid-column: 2; font-family: var(--f-en); font-size: 18px; line-height: 1.9; overflow-wrap: anywhere; }
@@ -1136,11 +1169,11 @@ button { font: inherit; transition: linear 0.15s; }
   .ex-tabs__bar { display: flex; column-gap: 6px; margin: 0 0 12px; overflow-x: auto; scrollbar-width: none; scroll-margin-top: 76px; } /* отступ под прилипшую шапку */
   .ex-tabs__bar::-webkit-scrollbar { display: none; }
   .ex-tabs__tab { flex: 1 0 auto; min-width: 68px; display: flex; flex-direction: column; align-items: center; row-gap: 1px; padding: 7px 8px;
-    border: 1.5px solid color-mix(in srgb, var(--accent) 55%, transparent); border-radius: 10px; background: var(--sheet); color: var(--accent); font: inherit; font-size: 13.5px; font-weight: 600;
+    border: 1.5px solid rgb(var(--accent-rgb) / 55%); border-radius: 10px; background: var(--sheet); color: var(--accent); font: inherit; font-size: 13.5px; font-weight: 600;
     box-shadow: var(--lift); cursor: pointer; transition: background-color .15s linear, border-color .15s linear, color .15s linear; }
   /* открытая вкладка залита акцентом, счет на ней — цветом текста заливки */
   .ex-tabs__tab[aria-selected="true"] { border-color: var(--accent); background: var(--accent); color: var(--on-accent); }
-  .ex-tabs__tab[aria-selected="true"] .ex-tabs__score { color: color-mix(in srgb, var(--on-accent) 85%, transparent); }
+  .ex-tabs__tab[aria-selected="true"] .ex-tabs__score { color: rgb(var(--on-accent-rgb) / 85%); }
   .ex-tabs__score { font-size: 12px; font-weight: 500; font-variant-numeric: tabular-nums; color: var(--muted); }
   .ex-tabs__tab--done .ex-tabs__score { color: var(--ok); font-weight: 600; }
   .ex-tabs__tab--part .ex-tabs__score { color: var(--bad); font-weight: 600; }
@@ -1148,7 +1181,7 @@ button { font: inherit; transition: linear 0.15s; }
   .ex-tabs > .ex { margin-bottom: 0; }
   /* «Упр. N» к соседним: назад слева, дальше справа (и справа, когда кнопка одна) */
   .ex-tabs__steps { display: flex; column-gap: 8px; margin-top: 12px; }
-  .ex-tabs__step { display: inline-flex; align-items: center; column-gap: 8px; border: 1.5px solid color-mix(in srgb, var(--accent) 55%, transparent); border-radius: 10px;
+  .ex-tabs__step { display: inline-flex; align-items: center; column-gap: 8px; border: 1.5px solid rgb(var(--accent-rgb) / 55%); border-radius: 10px;
     color: var(--accent); box-shadow: var(--lift); } /* как кнопки шапки: акцентная рамка и текст */
   .ex-tabs__step--next { margin-left: auto; }
 }
@@ -1156,7 +1189,7 @@ button { font: inherit; transition: linear 0.15s; }
 /* «На слух»: плеер (кнопка и полоса прогресса), под ним строка ответа и набор слов */
 .ex--listen .ex__item::before { padding-top: 11px; } /* по центру кнопки плеера */
 .listen__player { grid-column: 2; display: flex; align-items: center; column-gap: 10px; min-width: 0; }
-.listen__play { flex: none; display: grid; place-items: center; width: 36px; height: 36px; padding: 0; border: 1.5px solid color-mix(in srgb, var(--accent) 55%, transparent);
+.listen__play { flex: none; display: grid; place-items: center; width: 36px; height: 36px; padding: 0; border: 1.5px solid rgb(var(--accent-rgb) / 55%);
   border-radius: 50%; background: var(--sheet); color: var(--accent); cursor: pointer; transition: background-color .15s linear, border-color .15s linear, color .15s linear; }
 .listen__play svg { width: 16px; height: 16px; }
 @media (hover: hover) { :where(:root:not(.pointer-still)) .listen__play:hover { border-color: var(--accent); background: var(--accent-soft); } }
@@ -1165,7 +1198,7 @@ button { font: inherit; transition: linear 0.15s; }
 .listen__track { flex: 1 1 auto; max-width: 260px; min-width: 60px; }
 /* полоса обновляется каждый кадр, поэтому без перехода; scaleX вместо ширины — без пересчета раскладки */
 .listen__fill { display: block; height: 100%; background: var(--accent); transform: scaleX(var(--p, 0)); transform-origin: left; }
-.listen__line { grid-column: 2; display: flex; align-items: center; min-height: 44px; padding-block: 6px; border-bottom: 1.5px dashed color-mix(in srgb, var(--accent) 45%, transparent); }
+.listen__line { grid-column: 2; display: flex; align-items: center; min-height: 44px; padding-block: 6px; border-bottom: 1.5px dashed rgb(var(--accent-rgb) / 45%); }
 .listen__picked { display: flex; flex-wrap: wrap; gap: 6px; min-width: 0; } /* отметка ✓/✗ остается справа от слов, а не уходит на новую строку */
 .listen__line--empty .listen__picked::before { content: 'Нажимайте на слова по порядку'; font-size: 14px; color: var(--muted); opacity: .7; }
 .listen__line--ok { border-bottom: 1.5px solid var(--ok); }
@@ -1176,11 +1209,11 @@ button { font: inherit; transition: linear 0.15s; }
 .listen__ru { display: block; margin-top: 2px; font-family: var(--f-body); font-style: normal; font-size: 15px; font-weight: 400; color: var(--muted); }
 .listen__note { font-size: 13px; color: var(--muted); }
 .ex__redo { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px; margin-top: 14px; padding: 10px 12px; border: 1px dashed var(--border); border-radius: 10px;
-  background: color-mix(in srgb, var(--accent) 4%, transparent); transition: border-color .3s, background-color .3s; }
+  background: rgb(var(--accent-rgb) / 4%); transition: border-color .3s, background-color .3s; }
 .ex__redo[hidden] { display: none; }
-.ex__redo--done { border-style: solid; border-color: color-mix(in srgb, var(--ok) 55%, transparent); background: color-mix(in srgb, var(--ok) 8%, transparent); }
+.ex__redo--done { border-style: solid; border-color: rgb(var(--ok-rgb) / 55%); background: rgb(var(--ok-rgb) / 8%); }
 .ex__redo-status { flex-basis: 100%; margin: 0; color: var(--ok); font-size: 14px; font-weight: 600; }
-.ex__redo-link { display: inline-flex; align-items: center; column-gap: 6px; padding: 6px 12px; border: 1.5px solid color-mix(in srgb, var(--accent) 55%, transparent); border-radius: 8px;
+.ex__redo-link { display: inline-flex; align-items: center; column-gap: 6px; padding: 6px 12px; border: 1.5px solid rgb(var(--accent-rgb) / 55%); border-radius: 8px;
   background: var(--sheet); color: var(--accent); font-size: 13px; font-weight: 600; cursor: pointer; }
 @media (hover: hover) { :where(:root:not(.pointer-still)) .ex__redo-link:hover { border-color: var(--accent); background: var(--accent-soft); } }
 .ex__redo-link--next { margin-left: auto; }
@@ -1196,7 +1229,7 @@ button { font: inherit; transition: linear 0.15s; }
 .pager-current__levels .lvl-tag { font-size: 10px; }
 .pager-current__title { font-family: var(--f-body); font-size: 14px; font-weight: 600; letter-spacing: 0; text-transform: none; color: var(--ink); }
 .pager { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; margin-top: 20px; }
-.pager__btn { display: grid; row-gap: 2px; padding: 12px 16px; border: 1.5px solid color-mix(in srgb, var(--accent) 55%, transparent); border-radius: 10px; background: var(--sheet); color: var(--accent); font-weight: 600; text-align: center; cursor: pointer; }
+.pager__btn { display: grid; row-gap: 2px; padding: 12px 16px; border: 1.5px solid rgb(var(--accent-rgb) / 55%); border-radius: 10px; background: var(--sheet); color: var(--accent); font-weight: 600; text-align: center; cursor: pointer; }
 :is(.pager__btn, .pager-level__link, .paging__btn, .ex__btn, .study__btn) { box-shadow: var(--lift); } /* тень как у вкладок упражнений; .ex__btn — кнопки под упражнением, .study__btn — «изучено» и «в избранное» */
 @media (hover: hover) { :where(:root:not(.pointer-still)) .pager__btn:hover { border-color: var(--accent); background: var(--accent-soft); } }
 /* «Предыдущая» слева, «Следующая» справа; на узком экране «Следующая» сверху (см. @media 560) */
@@ -1211,15 +1244,15 @@ button { font: inherit; transition: linear 0.15s; }
 :root[data-theme="light"] .pager__levels .lvl-tag--filled { border-color: rgb(105 105 105 / 82%); background: rgb(105 105 105 / 82%); color: rgb(235 235 235); }
 /* стрелки направления во всех навигациях — крупнее и толще подписи, цветом подписи */
 /* подпись со стрелкой — inline-flex: крупная стрелка по центру высоты строки, а не на базовой линии */
-.pager__label > span:has(.arrow), .pager-level__dir { display: inline-flex; align-items: center; justify-content: center; column-gap: .45em; }
+.pager__dir, .pager-level__dir { display: inline-flex; align-items: center; justify-content: center; column-gap: .45em; }
 :is(.pager__label, .pager-level__dir) .arrow { font-size: 1.5em; --arrow-w: 2.1; }
 :root[data-theme="light"] :is(.pager__label, .pager-level__dir) .arrow { color: rgb(105 105 105); }
 /* «Перейти к теме того же уровня»: тихий ряд из двух ссылок под навигацией */
 /* отделен от основной навигации более широким промежутком и легким оттенком акцента */
-.pager-level { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px 12px; margin-top: 24px; padding: 10px 12px 12px; border: 1px dashed var(--border); border-radius: 10px; background: color-mix(in srgb, var(--accent) 4%, transparent); }
+.pager-level { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px 12px; margin-top: 24px; padding: 10px 12px 12px; border: 1px dashed var(--border); border-radius: 10px; background: rgb(var(--accent-rgb) / 4%); }
 .pager-level__label { grid-column: 1 / -1; display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 6px; font-family: var(--f-mono); font-size: 11.5px; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); }
 /* маленькие карточки в стиле кнопок основной навигации: подпись направления над названием темы */
-.pager-level__link { display: grid; row-gap: 1px; padding: 8px 12px; border: 1.5px solid color-mix(in srgb, var(--accent) 55%, transparent); border-radius: 8px;
+.pager-level__link { display: grid; row-gap: 1px; padding: 8px 12px; border: 1.5px solid rgb(var(--accent-rgb) / 55%); border-radius: 8px;
   background: var(--sheet); color: var(--accent); font-size: 14px; font-weight: 600; line-height: 1.35; text-align: center; cursor: pointer; }
 @media (hover: hover) { :where(:root:not(.pointer-still)) .pager-level__link:hover { border-color: var(--accent); background: var(--accent-soft); } }
 .pager-level__dir { font-family: var(--f-mono); font-size: 11px; font-weight: 500; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); }
@@ -1286,13 +1319,13 @@ button { font: inherit; transition: linear 0.15s; }
 /* «Содержание тренажера» и «Мои заметки» здесь в шапке, поэтому в drawer своих нет; подпись уровней
    тогда открывает блок содержания, без линии, отделявшей ее от «Содержания» */
 @media (max-width: 959px) {
-  .toc__contents, .side__summary > div:has(> .side__notes) { display: none; }
+  .toc__contents, .side__notes-group { display: none; }
   .toc__contents + .toc__label { border-top: 0; }
 }
 /* 449–599px: «Заметки» и «Инфо» не помещаются в шапку — они в drawer: «Заметки» под «Избранным», «Инфо» значком у крестика */
 @media (min-width: 449px) and (max-width: 599px) {
   .side__bar .page-link:is([data-go="notes"], [data-go="about"]) { display: none; }
-  .side__summary > div:has(> .side__notes) { display: block; }
+  .side__notes-group { display: block; }
   .drawer__tools { column-gap: 15px; }
   .drawer__info { display: flex; }
 }
@@ -1308,7 +1341,7 @@ button { font: inherit; transition: linear 0.15s; }
   .side__theme .action-btn__icon { width: 16px; height: 16px; }
   .toc__contents { display: grid; }
   .toc__contents + .toc__label { border-top: 1px solid var(--border); }
-  .side__summary > div:has(> .side__notes) { display: block; }
+  .side__notes-group { display: block; }
   .drawer__tools { column-gap: 20px; }
   .drawer__info { display: flex; }
 }
@@ -1353,7 +1386,7 @@ button { font: inherit; transition: linear 0.15s; }
   /* номер по центру первой строки: его строка той же высоты, что строка предложения (17px × 1.9), у перевода — русского
      текста (отступ 3px + 16.5px × 1.6), у «На слух» — кнопки плеера 36px */
   .ex__item::before { padding-top: 2px; font-size: 10px; line-height: calc(17px * 1.9); } /* +2px: Literata сидит в строке ниже центра */
-  .ex__item:has(> .ex__q--ru)::before { padding-top: 3px; line-height: calc(16.5px * 1.6); }
+  .ex__item--ru::before { padding-top: 3px; line-height: calc(16.5px * 1.6); }
   .ex--listen .ex__item::before { padding-top: 0; line-height: 36px; }
   .ex__btn { padding: 9px 8px; font-size: 13.5px; }
   .ex__redo-link, .mistakes__start { flex: 1 1 100%; justify-content: center; margin-left: 0; }

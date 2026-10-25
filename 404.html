@@ -4,14 +4,24 @@
 <meta charset="utf-8">
 <!-- корень тренажера: относительные адреса (стили, скрипты, данные, mp3) считаются от него. В копиях страниц, которые
      создает make_pages.py (папка tools рядом с сайтом), здесь путь к этой папке (../) — поэтому копии лежат в подпапках, а файлы общие -->
-<base href="/english-grammar/">
-<script>/* не на сайте (например, с диска): корень — папка этого файла */ if (!location.pathname.startsWith('/english-grammar/')) document.querySelector('base').href = './';</script>
+<base href="/grammatika-online/">
+<script>/* не на сайте (например, с диска): корень — папка этого файла */ if (!location.pathname.startsWith('/grammatika-online/')) document.querySelector('base').href = './';</script>
 <meta name="route" content="not-found">
 <!-- interactive-widget: экранная клавиатура сжимает страницу, а не сдвигает видимую область — прилипшая шапка не съезжает при фокусе в поле (Chromium на Android) -->
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, interactive-widget=resizes-content">
 <meta name="color-scheme" content="dark light"> <!-- у сайта свои темная и светлая темы: браузер не должен затемнять страницу сам -->
 <title>Страница не найдена — Грамматика онлайн</title>
 <meta name="description" content="Тренажер грамматики английского языка A1–C2 по разделам сборника Ю. Голицынского: правила и упражнения с проверкой.">
+<meta name="robots" content="noindex">
+<!-- для поисковиков и превью ссылок в мессенджерах; в копиях страниц адрес, заголовок и описание свои (make_pages.py) -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Грамматика онлайн">
+<meta property="og:locale" content="ru_RU">
+<meta property="og:url" content="https://iltspe.github.io/grammatika-online/">
+<meta property="og:title" content="Страница не найдена — Грамматика онлайн">
+<meta property="og:description" content="Тренажер грамматики английского языка A1–C2 по разделам сборника Ю. Голицынского: правила и упражнения с проверкой.">
+<meta property="og:image" content="https://iltspe.github.io/grammatika-online/favicon/favicon-maskable-512.png">
+<meta name="yandex-verification" content="85cf58f9b58cd9fc"> <!-- подтверждение прав в Яндекс Вебмастере -->
 <link rel="icon" href="favicon/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="favicon/apple-touch-icon.png">
 <script charset="utf-8" src="js/head.js"></script>
@@ -61,7 +71,7 @@
         <button class="action-btn side__stat side__bm" id="bmBtn" type="button" aria-controls="bmFold" aria-expanded="false"></button>
         <div class="side__fold" id="bmFold"><div class="side__fold-clip" id="bmBody"></div></div>
       </div>
-      <div>
+      <div class="side__notes-group">
         <button class="action-btn side__stat side__notes" id="notesBtn" type="button"></button>
       </div>
     </div>
@@ -114,4 +124,5 @@
 <script charset="utf-8" src="js/listen.js"></script>
 <script charset="utf-8" src="js/offline.js"></script>
 <script charset="utf-8" src="js/exercises.js"></script>
+<script charset="utf-8" src="js/metrika.js"></script>
 <script charset="utf-8" src="js/app.js"></script>

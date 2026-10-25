@@ -11,6 +11,16 @@
 <meta name="color-scheme" content="dark light"> <!-- у сайта свои темная и светлая темы: браузер не должен затемнять страницу сам -->
 <title>Работа без интернета — Грамматика онлайн</title>
 <meta name="description" content="Работа без интернета: Офлайн-режим и записи «На слух».">
+<!-- для поисковиков и превью ссылок в мессенджерах; в копиях страниц адрес, заголовок и описание свои (make_pages.py) -->
+<link rel="canonical" href="https://iltspe.github.io/grammatika-online/about/offline">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Грамматика онлайн">
+<meta property="og:locale" content="ru_RU">
+<meta property="og:url" content="https://iltspe.github.io/grammatika-online/about/offline">
+<meta property="og:title" content="Работа без интернета — Грамматика онлайн">
+<meta property="og:description" content="Работа без интернета: Офлайн-режим и записи «На слух».">
+<meta property="og:image" content="https://iltspe.github.io/grammatika-online/favicon/favicon-maskable-512.png">
+<meta name="yandex-verification" content="85cf58f9b58cd9fc"> <!-- подтверждение прав в Яндекс Вебмастере -->
 <link rel="icon" href="favicon/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="favicon/apple-touch-icon.png">
 <script charset="utf-8" src="js/head.js"></script>
@@ -60,7 +70,7 @@
         <button class="action-btn side__stat side__bm" id="bmBtn" type="button" aria-controls="bmFold" aria-expanded="false"></button>
         <div class="side__fold" id="bmFold"><div class="side__fold-clip" id="bmBody"></div></div>
       </div>
-      <div>
+      <div class="side__notes-group">
         <button class="action-btn side__stat side__notes" id="notesBtn" type="button"></button>
       </div>
     </div>
@@ -98,7 +108,7 @@
       </ul>
       <div class="note"><div>
         <p>При очистке данных сайта вместе с файлами удаляются прогресс, «Избранное» и заметки. Перед этим сделайте резервную копию: «Прогресс» → «Резервная копия» → «Сохранить».</p>
-      </div></div></div><nav class="pager" aria-label="Соседние страницы"><button class="pager__btn pager__btn--prev" type="button"><small class="pager__label"><span><span class="arrow arrow--prev" aria-hidden="true"><svg class="arrow__icon" aria-hidden="true"><use href="#i-arrow"></use></svg></span> Предыдущая страница</span></small><span>Где хранятся данные</span></button><button class="pager__btn pager__btn--next" type="button"><small class="pager__label"><span>Следующая страница <span class="arrow arrow--next" aria-hidden="true"><svg class="arrow__icon" aria-hidden="true"><use href="#i-arrow"></use></svg></span></span></small><span>Разделы и темы</span></button></nav></div></main>
+      </div></div></div><nav class="pager" aria-label="Соседние страницы"><button class="pager__btn pager__btn--prev" type="button"><small class="pager__label"><span class="pager__dir"><span class="arrow arrow--prev" aria-hidden="true"><svg class="arrow__icon" aria-hidden="true"><use href="#i-arrow"></use></svg></span> Предыдущая страница</span></small><span>Где хранятся данные</span></button><button class="pager__btn pager__btn--next" type="button"><small class="pager__label"><span class="pager__dir">Следующая страница <span class="arrow arrow--next" aria-hidden="true"><svg class="arrow__icon" aria-hidden="true"><use href="#i-arrow"></use></svg></span></span></small><span>Разделы и темы</span></button></nav></div></main>
 </div>
 
 <script charset="utf-8" src="js/helpers.js"></script>
@@ -130,4 +140,5 @@
 <script charset="utf-8" src="js/listen.js"></script>
 <script charset="utf-8" src="js/offline.js"></script>
 <script charset="utf-8" src="js/exercises.js"></script>
+<script charset="utf-8" src="js/metrika.js"></script>
 <script charset="utf-8" src="js/app.js"></script>

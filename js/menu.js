@@ -62,7 +62,7 @@ const pctLabel = (pct, cls = '', tag = 'b') => `<${tag} class="pct${pct >= 100 ?
 function setChapOpen(box, open) {
   box.classList.toggle('chap--open', open);
   box.querySelector('.chap__btn').setAttribute('aria-expanded', String(open));
-  box.querySelector('.chap__body').inert = !open;
+  box.querySelector('.chap__body').toggleAttribute('inert', !open);
 }
 /* раскрытие и закрытие раздела сдвигом (slide): раздел уже открыт, темы выезжают из-под заголовка, разделы ниже съезжают;
    подкраска карточки (::before) растет вместе с ними. Закрывается раздел (done) в конце, стрелка поворачивается сразу */

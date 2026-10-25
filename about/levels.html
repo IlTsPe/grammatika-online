@@ -11,6 +11,16 @@
 <meta name="color-scheme" content="dark light"> <!-- у сайта свои темная и светлая темы: браузер не должен затемнять страницу сам -->
 <title>Уровни сложности — Грамматика онлайн</title>
 <meta name="description" content="Уровни сложности: Шкала уровней и фильтр в меню.">
+<!-- для поисковиков и превью ссылок в мессенджерах; в копиях страниц адрес, заголовок и описание свои (make_pages.py) -->
+<link rel="canonical" href="https://iltspe.github.io/grammatika-online/about/levels">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Грамматика онлайн">
+<meta property="og:locale" content="ru_RU">
+<meta property="og:url" content="https://iltspe.github.io/grammatika-online/about/levels">
+<meta property="og:title" content="Уровни сложности — Грамматика онлайн">
+<meta property="og:description" content="Уровни сложности: Шкала уровней и фильтр в меню.">
+<meta property="og:image" content="https://iltspe.github.io/grammatika-online/favicon/favicon-maskable-512.png">
+<meta name="yandex-verification" content="85cf58f9b58cd9fc"> <!-- подтверждение прав в Яндекс Вебмастере -->
 <link rel="icon" href="favicon/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="favicon/apple-touch-icon.png">
 <script charset="utf-8" src="js/head.js"></script>
@@ -60,7 +70,7 @@
         <button class="action-btn side__stat side__bm" id="bmBtn" type="button" aria-controls="bmFold" aria-expanded="false"></button>
         <div class="side__fold" id="bmFold"><div class="side__fold-clip" id="bmBody"></div></div>
       </div>
-      <div>
+      <div class="side__notes-group">
         <button class="action-btn side__stat side__notes" id="notesBtn" type="button"></button>
       </div>
     </div>
@@ -84,7 +94,7 @@
   <main class="sheet app__sheet" id="main"><div class="sheet__inner"><div class="crumbs"><button class="crumbs__link" type="button">Информация</button><span class="crumbs__sep" aria-hidden="true"><svg class="arrow__icon" aria-hidden="true"><use href="#i-arrow"></use></svg></span><span>Уровни сложности</span></div><h1 class="sheet__title">Уровни сложности</h1><div class="rule info">
       <ul class="info__levels"><li><span class="lvl-tag">A1</span><span class="info__level-name">Начальный</span><span class="info__count">9 тем</span></li><li><span class="lvl-tag">A2</span><span class="info__level-name">Элементарный</span><span class="info__count">18 тем</span></li><li><span class="lvl-tag">B1</span><span class="info__level-name">Средний</span><span class="info__count">25 тем</span></li><li><span class="lvl-tag">B2</span><span class="info__level-name">Выше среднего</span><span class="info__count">16 тем</span></li><li><span class="lvl-tag">C1</span><span class="info__level-name">Продвинутый</span><span class="info__count">5 тем</span></li><li><span class="lvl-tag">C2</span><span class="info__level-name">Свободное владение</span><span class="info__count">3 темы</span></li></ul>
       <h3>Фильтр в меню</h3>
-      <p>В блоке меню «Уровни сложности» выберите «Все» или конкретный уровень. После этого в списке разделов, а также при поиске останутся темы выбранного уровня. Процент прохождения раздела будет рассчитываться только по нему.</p></div><nav class="pager" aria-label="Соседние страницы"><button class="pager__btn pager__btn--prev" type="button"><small class="pager__label"><span><span class="arrow arrow--prev" aria-hidden="true"><svg class="arrow__icon" aria-hidden="true"><use href="#i-arrow"></use></svg></span> Предыдущая страница</span></small><span>Разделы и темы</span></button><button class="pager__btn pager__btn--next" type="button"><small class="pager__label"><span>Следующая страница <span class="arrow arrow--next" aria-hidden="true"><svg class="arrow__icon" aria-hidden="true"><use href="#i-arrow"></use></svg></span></span></small><span>Упражнения и проверка</span></button></nav></div></main>
+      <p>В блоке меню «Уровни сложности» выберите «Все» или конкретный уровень. После этого в списке разделов, а также при поиске останутся темы выбранного уровня. Процент прохождения раздела будет рассчитываться только по нему.</p></div><nav class="pager" aria-label="Соседние страницы"><button class="pager__btn pager__btn--prev" type="button"><small class="pager__label"><span class="pager__dir"><span class="arrow arrow--prev" aria-hidden="true"><svg class="arrow__icon" aria-hidden="true"><use href="#i-arrow"></use></svg></span> Предыдущая страница</span></small><span>Разделы и темы</span></button><button class="pager__btn pager__btn--next" type="button"><small class="pager__label"><span class="pager__dir">Следующая страница <span class="arrow arrow--next" aria-hidden="true"><svg class="arrow__icon" aria-hidden="true"><use href="#i-arrow"></use></svg></span></span></small><span>Упражнения и проверка</span></button></nav></div></main>
 </div>
 
 <script charset="utf-8" src="js/helpers.js"></script>
@@ -116,4 +126,5 @@
 <script charset="utf-8" src="js/listen.js"></script>
 <script charset="utf-8" src="js/offline.js"></script>
 <script charset="utf-8" src="js/exercises.js"></script>
+<script charset="utf-8" src="js/metrika.js"></script>
 <script charset="utf-8" src="js/app.js"></script>

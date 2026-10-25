@@ -11,7 +11,7 @@ function renderFold(kind) {
 function setFold(kind, open, animate = false) {
   folds[kind] = open; store.set('gk2-folds', folds);
   const [btn, box] = FOLD[kind];
-  const apply = () => { $(box).classList.toggle('side__fold--open', open); $(box).inert = !open; };
+  const apply = () => { $(box).classList.toggle('side__fold--open', open); $(box).toggleAttribute('inert', !open); };
   finishSlide(kind);
   if (open) renderFold(kind);
   /* кнопка (рамка, углы, стрелка) переходит в новое состояние сразу и меняется вместе со сдвигом,
@@ -53,7 +53,7 @@ function syncTocFold() {
   if (slides.toc) return; /* список закрывается — закроет slide в конце */
   const open = tocOpen();
   $('#tocFold').classList.toggle('side__fold--open', open);
-  $('#tocFold').inert = !open;
+  $('#tocFold').toggleAttribute('inert', !open);
   $('#tocToggle').setAttribute('aria-expanded', String(open));
 }
 /* «Разделы тренажера»: весь список выезжает и уезжает сдвигом (slide); рамка .toc растет и сжимается вместе с ним —

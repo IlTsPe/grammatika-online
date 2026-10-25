@@ -46,6 +46,7 @@ const CORE = [
   'js/helpers.js',
   'js/listen.js',
   'js/menu.js',
+  'js/metrika.js',
   'js/offline.js',
   'js/pages.js',
   'data/01-articles.js',

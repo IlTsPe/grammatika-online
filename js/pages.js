@@ -112,7 +112,9 @@ const ABOUT = [
         <li><b>Сохранить</b> — скачивает файл с прогрессом в папку загрузок.</li>
         <li><b>Загрузить</b> — восстанавливает прогресс из сохраненного файла. Перед загрузкой показывается сводка по файлу. Текущий прогресс при этом полностью перезаписывается, а не объединяется с загруженным.</li>
       </ul>
-      <p>Чтобы перенести прогресс в другой браузер или на другое устройство, сохраните файл, передайте его туда любым удобным способом и нажмите там «Загрузить».</p>` },
+      <p>Чтобы перенести прогресс в другой браузер или на другое устройство, сохраните файл, передайте его туда любым удобным способом и нажмите там «Загрузить».</p>
+      <h3>Статистика посещений</h3>
+      <p>Чтобы понимать, сколько людей занимается на тренажере и какие темы открывают чаще, на сайте работает Яндекс Метрика. Она обезличенно учитывает просмотры страниц, переходы по ссылкам, прокрутку и нажатия, тип устройства и для этого сохраняет в браузере свои файлы cookie. Прогресс, ответы и заметки в Метрику не передаются.</p>` },
   { id: 'offline', title: 'Работа без интернета', sub: 'Офлайн-режим и записи «На слух»', body: () => `
       <p>Тренажер можно использовать без подключения к интернету: в метро или самолете. Данные автоматически сохраняются на устройстве, благодаря чему контент остается доступным в офлайн-режиме.</p>
       <h3>Что сохраняется</h3>
@@ -226,7 +228,7 @@ function renderAboutPage(wrap) {
     more.setAttribute('aria-expanded', String(aboutOpen));
     more.addEventListener('click', () => { aboutOpen = !aboutOpen; fill(); $('.overall__more-btn', intro).focus({ preventScroll: aboutOpen }); });
     if (!aboutNarrow.matches) { intro.replaceChildren(...ps); return; }
-    if (aboutOpen) { ps.at(-1).append(' ', more); intro.replaceChildren(...ps); return; }
+    if (aboutOpen) { ps[ps.length - 1].append(' ', more); intro.replaceChildren(...ps); return; }
     let left = ABOUT_FOLD;
     const shown = [];
     for (const p of ps) {
@@ -300,7 +302,7 @@ function renderAboutTopic(page, wrap) {
   const nav = el('nav', 'pager'); nav.setAttribute('aria-label', 'Соседние страницы');
   const mk = (p, dir, label) => {
     const b = el('button', 'pager__btn pager__btn--' + dir); b.type = 'button';
-    b.innerHTML = `<small class="pager__label"><span>${label}</span></small><span>${esc(p.title)}</span>`;
+    b.innerHTML = `<small class="pager__label"><span class="pager__dir">${label}</span></small><span>${esc(p.title)}</span>`;
     b.addEventListener('click', () => go('about-' + p.id));
     nav.append(b);
   };
@@ -522,7 +524,7 @@ function renderContents(wrap) {
   const ol = el('ol', 'contents');
   CHAPTERS.forEach(ch => {
     const li = el('li', 'contents__item'); const b = el('button', 'contents__row'); b.type = 'button';
-    const cs = chapterStats(ch);
+    const cs = chapterStats(ch); if (cs.tried) b.classList.add('contents__row--prog');
     /* прогресс раздела (полоска + процент одним блоком) — второй строкой, под названием. span, а не div: внутри button допустимы только строчные элементы */
     b.innerHTML = `<span class="contents__num">${ch.n}</span><span class="contents__title">${esc(ch.title)}</span>
       ${cs.tried ? `<span class="contents__prog"><span class="bar bar--thin contents__bar">${barFill(cs.pct)}</span>${pctLabel(cs.pct, '', 'span')}</span>` : ''}
@@ -677,7 +679,7 @@ function pager(idx, arr, idOf, titleOf, noun) {
     const b = el('button', 'pager__btn pager__btn--' + dir); b.type = 'button';
     const tags = levelsOf(item).map(l => `<span class="lvl-tag lvl-tag--sm${curLv.includes(l) ? '' : ' lvl-tag--filled'}" title="${LEVELS[l]}">${l}</span>`).join('');
     /* уровни — с внешней стороны подписи: у «Предыдущей» справа, у «Следующей» слева, стрелки остаются по краям */
-    const lbl = `<span>${label}</span>`, lv = `<span class="pager__levels">${tags}</span>`;
+    const lbl = `<span class="pager__dir">${label}</span>`, lv = `<span class="pager__levels">${tags}</span>`;
     b.innerHTML = `<small class="pager__label">${dir === 'next' ? lv + lbl : lbl + lv}</small><span>${esc(titleOf(item))}</span>`;
     b.addEventListener('click', () => go(idOf(item)));
     nav.append(b);

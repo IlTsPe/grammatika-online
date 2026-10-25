@@ -46,7 +46,7 @@ function saveWarning(n) {
   return (saveTotal > SAVE_LOCKS[0]
       ? `Вы снова нажимаете «Сохранить» слишком часто, поэтому кнопка выключена на ${seconds(saveTotal)}.`
       : 'Пожалуйста, не нажимайте «Сохранить» так часто: каждое нажатие скачивает еще один файл.'
-        + (saveStrikes === SAVE_LOCKS.length - 1 ? ` Если это повторится, кнопка выключится на ${seconds(SAVE_LOCKS.at(-1))}.` : ''))
+        + (saveStrikes === SAVE_LOCKS.length - 1 ? ` Если это повторится, кнопка выключится на ${seconds(SAVE_LOCKS[SAVE_LOCKS.length - 1])}.` : ''))
     + ` Кнопка снова заработает через ${seconds(n)}.`;
 }
 function saveClicked() {

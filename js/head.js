@@ -7,3 +7,5 @@ if (location.protocol !== 'file:') document.head.insertAdjacentHTML('beforeend',
   if (t !== 'light') t = 'dark';
   document.documentElement.dataset.theme = t;
 })();
+/* старые браузеры без inert (Chrome до 102, Safari до 15.5, Firefox до 112): свернутые блоки меню прячет CSS, иначе Tab заходил бы в них */
+if (!('inert' in HTMLElement.prototype)) document.documentElement.classList.add('no-inert');
