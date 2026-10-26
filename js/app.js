@@ -35,7 +35,7 @@ function pageMeta(id) {
   const description = t ? `${plainText(t.title)} (${plainText(t.sub)}): правило и упражнения с проверкой. Уровень ${t.level}.`
     : ch ? plainText(ch.intro) : p ? `${p.title}: ${p.sub}.`
     : { mistakes: 'Упражнения, в которых были ошибки, — чтобы к ним вернуться.', notes: 'Личные заметки по грамматике.', about: 'Как устроен тренажер: разделы, упражнения, прогресс, данные.' }[id]
-    || 'Тренажер грамматики английского языка A1–C2 по разделам сборника Ю. Голицынского: правила и упражнения с проверкой.';
+    || 'Тренажер грамматики английского языка A1–C2: правила простым языком и упражнения с проверкой.';
   return { title: title ? `${plainText(title)} — ${SITE_TITLE}` : SITE_TITLE, description };
 }
 function go(id, scroll = true, syncToc = true, fromBookmarks = false) {
