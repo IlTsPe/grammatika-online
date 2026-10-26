@@ -47,6 +47,8 @@ function go(id, scroll = true, syncToc = true, fromBookmarks = false) {
   const curCh = topicById[id] ? topicById[id].ch : chapById[id];
   /* «Избранное» и список содержания независимы: тема, открытая из избранного, не трогает список содержания (открытый раздел, фильтр уровня) */
   if (syncToc && !fromBookmarks && curCh && curCh.id !== openChap) { justToggled = curCh.id; setOpenChap(curCh.id); }
+  /* «Содержание» открывается со свернутыми разделами меню, каким бы путем на него ни перешли; «Прогресс» и «Избранное» не трогаются */
+  if (id === 'contents') setOpenChap(null);
   const main = $('#main'); main.innerHTML = '';
   const wrap = el('div', 'sheet__inner');
   if (topicById[id]) {

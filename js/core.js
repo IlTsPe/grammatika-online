@@ -20,7 +20,7 @@ function shuffled(arr, seed) { return arr.map((v, i) => ({ v, k: hash(seed + '|'
 
 /* Сравнение ответов без учета регистра, пунктуации, фигурных кавычек и сокращений. */
 function norm(s) {
-  s = s.toLowerCase().replace(/[’‘`´]/g, "'").replace(/[—–]/g, '-').replace(/[.!?,;:"“”«»]/g, ' ').replace(/\s+-\s+/g, ' ').replace(/\s+/g, ' ').trim();
+  s = s.toLowerCase().replace(/[’‘`´]/g, "'").replace(/[—–]/g, '-').replace(/[.!?,;:"“”«»]/g, ' ').trim().replace(/\s+-\s+/g, ' ').replace(/\s+/g, ' ').trim();
   s = s.replace(/\bwon't\b/g, 'will not').replace(/\bcan't\b/g, 'cannot').replace(/\bshan't\b/g, 'shall not')
        .replace(/n't\b/g, ' not').replace(/'m\b/g, ' am').replace(/'re\b/g, ' are').replace(/'ll\b/g, ' will').replace(/'ve\b/g, ' have')
        .replace(/\bcan not\b/g, 'cannot');

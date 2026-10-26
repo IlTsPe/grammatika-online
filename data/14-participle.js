@@ -1,14 +1,13 @@
-BOOK.push({ n: 11, id: 'participle', title: 'Причастие',
+BOOK.push({ n: 14, id: 'participle', title: 'Причастие',
 intro: 'Причастие настоящего времени (<i>-ing</i>, Participle I) и прошедшего (<i>V3</i>, Participle II): как определение, в причастных оборотах и в паре <i>boring / bored</i>.',
 topics: [
 
 { id: 'part-forms', level: 'B1', title: 'Participle I и Participle II', sub: 'a running boy · a broken cup',
   rule: `
-<p>У английского глагола две основные формы причастия.</p>
+<p>У английского глагола две основные формы причастия. Participle I оканчивается на <i>-ing</i> и описывает того, кто сам совершает действие: <i>a boring film</i> — скучный фильм, он вызывает скуку. Participle II — это третья форма глагола, и она описывает того, с кем действие произошло: <i>a bored student</i> — студент, которому скучно.</p>
 ${T(["Форма", "Значение", "Пример", "Перевод"], [
   ["Participle I: <i>V-ing</i>", "активное, процесс", "<i>a <b>sleeping</b> child, the man <b>standing</b> at the door</i>", "спящий ребенок, человек, стоящий у двери"],
   ["Participle II: <i>V3</i>", "пассивное, результат", "<i>a <b>broken</b> cup, a letter <b>written</b> in pencil</i>", "разбитая чашка, письмо, написанное карандашом"],
-  ["Perfect Participle: <i>having V3</i>", "действие раньше другого", "<i><b>Having finished</b> the work, he left.</i>", "закончив работу"]
 ])}
 <h3>-ing или -ed: чувства</h3>
 ${T(["-ing: что вызывает чувство", "-ed: что чувствует человек"], [
@@ -17,7 +16,7 @@ ${T(["-ing: что вызывает чувство", "-ed: что чувству
   ["<i>an <b>interesting</b> book</i>", "<i>I'm <b>interested</b> in books.</i>"],
   ["<i>a <b>tiring</b> day</i>", "<i>a <b>tired</b> man</i>"]
 ])}
-${N("Одиночное причастие обычно стоит перед существительным, а причастие с зависимыми словами — после: <i>a <b>crying</b> baby</i>, но <i>the baby <b>crying</b> in the next room</i>.")}`,
+${N("Место причастия зависит от того, есть ли при нем другие слова. Одно причастие стоит перед существительным: <i>a <b>crying</b> baby</i>. А если у него есть пояснения, оно идет после: <i>the baby <b>crying</b> in the next room</i>. Подробнее о таких оборотах — в теме 14.2.")}`,
   ex: [
     { type: 'choice', task: 'Выберите -ing или -ed.', items: [
       ["The film was very ___.", ["boring", "bored"]], ["I was ___ during the lecture.", ["bored", "boring"]],
@@ -29,9 +28,9 @@ ${N("Одиночное причастие обычно стоит перед с
     { type: 'gap', task: 'Образуйте Participle I или Participle II от глагола в скобках.', items: [
       ["Look at the ___ (dance) girls!", "dancing"], ["I found a ___ (break) cup in the kitchen.", "broken"],
       ["The man ___ (sit) by the window is my teacher.", "sitting"], ["The book ___ (write) by him became famous.", "written"],
-      ["We saw a ___ (burn) house.", "burning"], ["She bought a ___ (use) car.", "used"],
+      ["We saw a ___ (burn) house. Firemen were trying to put out the fire.", "burning"], ["She bought a ___ (use) car.", "used"],
       ["The language ___ (speak) in Brazil is Portuguese.", "spoken"], ["Who is the girl ___ (talk) to Tom?", "talking"],
-      ["I don't like ___ (boil) eggs.", "boiled"], ["The ___ (fall) leaves covered the path.", "fallen|falling"]
+      ["I'd like two ___ (boil) eggs for breakfast.", "boiled"], ["The ___ (fall) leaves covered the path.", "fallen|falling"]
     ]},
     { type: 'translate', task: 'Переведите на английский.', items: [
       ["Фильм был скучный.", "The film was boring.|The movie was boring."],
@@ -48,7 +47,7 @@ ${N("Одиночное причастие обычно стоит перед с
 
 { id: 'part-clauses', level: 'C1', title: 'Причастные обороты', sub: 'Having finished… · Built in 1890…',
   rule: `
-<p>Причастный оборот заменяет придаточное предложение и делает текст компактнее.</p>
+<p>Причастный оборот позволяет заменить целое придаточное предложение и сделать текст короче. Например, вместо <i>When she had read the letter, she cried</i> можно сказать <i>Having read the letter, she cried</i> — «Прочитав письмо, она заплакала». Это похоже на русский деепричастный оборот.</p>
 ${T(["Форма", "Значение", "Пример"], [
   ["<i>V-ing</i>", "активное, одновременное действие", "<i><b>Walking</b> along the street, I met a friend.</i>"],
   ["<i>Having + V3</i>", "активное, предшествующее действие", "<i><b>Having finished</b> the work, they went home.</i>"],
@@ -57,13 +56,14 @@ ${T(["Форма", "Значение", "Пример"], [
   ["<i>When / while + V-ing</i>", "уточнение времени", "<i><b>While crossing</b> the street, be careful.</i>"]
 ])}
 <h3>Вместо относительного придаточного</h3>
+<p>Такие обороты вы уже встречали в теме 14.1: <i>the man standing at the window</i>. Здесь важно другое: оборот заменяет целое придаточное со словами <i>who</i> или <i>which</i>, и предложение становится короче. Подробнее о <i>who / which</i> — в теме 19.1.</p>
 ${E([
   ["The children <b>playing</b> in the garden are my nephews.", "= who are playing"],
   ["Most goods <b>made</b> in this factory are exported.", "= which are made"]
 ])}
-${N("У оборота и главного предложения должно быть <b>одно подлежащее</b>. <i>Walking home, the rain started</i> — ошибка: получается, что домой шел дождь. Правильно: <i>Walking home, <b>I</b> got caught in the rain.</i>")}
+${N("Следите, чтобы у оборота и главного предложения было <b>одно подлежащее</b>. Фраза <i>Walking home, the rain started</i> — ошибка: по-английски получается, что домой шел дождь. Правильно: <i>Walking home, <b>I</b> got caught in the rain</i> — по дороге домой я попал под дождь.")}
 <h3>Независимый причастный оборот</h3>
-<p>Иногда у оборота есть свое подлежащее — существительное или местоимение перед причастием. Такой оборот называют независимым. Он характерен для книжной и официальной речи и отделяется запятой. На русский его обычно переводят придаточным с «так как», «когда», «после того как» или деепричастием.</p>
+<p>Иногда у причастного оборота есть свое подлежащее — оно стоит прямо перед причастием: <i><b>The weather</b> being fine, we went out</i>. Такой оборот называют независимым. Он встречается в книжной и официальной речи и отделяется запятой. На русский его обычно переводят придаточным с «так как», «когда» или «после того как»: «Так как погода была хорошая, мы вышли на улицу».</p>
 ${E([
   ["<b>The weather being</b> fine, we went for a walk.", "Так как погода была хорошая, мы пошли гулять."],
   ["<b>The work having been done</b>, they went home.", "Когда работа была сделана, они пошли домой."],
@@ -71,13 +71,13 @@ ${E([
   ["She sat by the fire, <b>her eyes closed</b>.", "Она сидела у огня, закрыв глаза."],
   ["<b>Weather permitting</b>, we'll start tomorrow.", "Если погода позволит, мы отправимся завтра."]
 ])}
-${N("Это не та ошибка, о которой сказано выше: в независимом обороте подлежащее названо прямо (<i><b>The weather</b> being fine</i>), поэтому у главного предложения может быть свое подлежащее.")}`,
+${N("Не путайте это с ошибкой, о которой сказано выше. Здесь подлежащее оборота названо прямо (<i><b>The weather</b> being fine</i>), поэтому у главного предложения вполне может быть другое подлежащее.")}`,
   ex: [
     { type: 'choice', task: 'Выберите правильную форму причастия.', items: [
       ["___ the letter, she burst into tears.", ["Having read", "Read", "Being read"]], ["___ in 1890, the building is now a museum.", ["Built", "Building", "Having built"]],
       ["___ what to say, I kept silent.", ["Not knowing", "Not known", "Knowing not"]], ["___ along the street, I met an old friend.", ["Walking", "Walked", "Having been walked"]],
       ["The man ___ to the manager is my uncle.", ["talking", "talked", "having talk"]], ["___ by the news, he couldn't sleep.", ["Shocked", "Shocking", "Having shocking"]],
-      ["___ all his money, he had to borrow from friends.", ["Having spent", "Spent", "Being spent"]], ["___ the door, she went out.", ["Having locked", "Locked", "Being locked"]]
+      ["___ all his money, he had to borrow from friends.", ["Having spent", "Spent", "Being spent"]], ["___ the door, she went to bed.", ["Having locked", "Locked", "Being locked"]]
     ]},
     { type: 'gap', task: 'Поставьте глагол в форму причастия.', items: [
       ["The children ___ (play) in the garden are my nephews.", "playing"], ["Most of the goods ___ (make) in this factory are exported.", "made"],
@@ -86,8 +86,8 @@ ${N("Это не та ошибка, о которой сказано выше: �
       ["While ___ (cross) the road, look both ways.", "crossing"], ["The people ___ (invite) to the party were all students.", "invited"]
     ]},
     { type: 'translate', task: 'Переведите на английский, используя причастный оборот.', items: [
-      ["Закончив работу, они пошли домой.", "Having finished the work, they went home.|Having finished work, they went home.|Having finished their work, they went home."],
-      ["Не зная, что сказать, я молчал.", "Not knowing what to say, I kept silent.|Not knowing what to say, I was silent.|Not knowing what to say, I said nothing."],
+      ["Закончив работу, они пошли домой.", "Having finished the work, they went home.|Having finished work, they went home.|Having finished their work, they went home.|Having finished the job, they went home."],
+      ["Не зная, что сказать, я молчал.", "Not knowing what to say, I kept silent.|Not knowing what to say, I was silent.|Not knowing what to say, I said nothing.|Not knowing what to say, I remained silent.|Not knowing what to say, I stayed silent.|Not knowing what to say, I kept quiet."],
       ["Построенный в 1890 году, этот дом теперь музей.", "Built in 1890, the house is now a museum.|Built in 1890, this house is now a museum."],
       ["Дети, играющие в саду, — мои племянники.", "The children playing in the garden are my nephews."]
     ]},

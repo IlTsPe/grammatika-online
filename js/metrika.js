@@ -50,7 +50,9 @@ function setConsent(ok) {
 /* плашка внизу экрана на любой странице, пока нет выбора; «Принять» и «Отклонить» одинаковые — ни одна не навязывается */
 function showCookieNote() {
   const box = el('div', 'cookie-note'); box.setAttribute('role', 'region'); box.setAttribute('aria-label', 'Файлы cookie');
-  const label = el('span', 'cookie-note__label', 'Файлы cookie');
+  box.innerHTML = '<svg class="cookie-note__icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">'
+    + '<path d="M21 12.5A9 9 0 1 1 11.5 3a3 3 0 0 0 3.5 3.5 3 3 0 0 0 3.5 3.5 3 3 0 0 0 2.5 2.5Z"/><g fill="currentColor">'
+    + '<circle cx="8.5" cy="10.5" r=".8"/><circle cx="12" cy="15.5" r=".8"/><circle cx="16" cy="13" r=".8"/><circle cx="8" cy="15" r=".6"/></g></svg>';
   const text = el('p', 'cookie-note__text');
   text.innerHTML = 'Сайт использует файлы cookie Яндекс Метрики для анализа посещаемости. Сбор статистики осуществляется только при вашем согласии. '
     + 'Подробнее — на странице <button class="link-btn" type="button" data-go="about-cookies">«Файлы cookie»</button>.';
@@ -60,7 +62,7 @@ function showCookieNote() {
     b.addEventListener('click', () => setConsent(ok));
     btns.append(b);
   });
-  box.append(label, text, btns); document.body.append(box);
+  box.append(text, btns); document.body.append(box);
 }
 
 /* живой блок на странице «Файлы cookie»: текущий выбор и кнопки, чтобы его изменить или отозвать согласие */

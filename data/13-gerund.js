@@ -1,10 +1,10 @@
-BOOK.push({ n: 12, id: 'gerund', title: 'Герундий',
+BOOK.push({ n: 13, id: 'gerund', title: 'Герундий',
 intro: 'Герундий — форма на <i>-ing</i>, которая работает как существительное. Сначала разберите, после каких глаголов и предлогов он нужен, затем — чем он отличается от инфинитива.',
 topics: [
 
 { id: 'ger-use', level: 'B1', title: 'Герундий после глаголов и предлогов', sub: 'enjoy reading, good at drawing',
   rule: `
-<p>Герундий называет действие как предмет: <i><b>Swimming</b> is good for health</i> — «Плавание полезно». В русском его переводят существительным, инфинитивом или деепричастием.</p>
+<p>Герундий — это форма глагола на <i>-ing</i>, которая называет действие как предмет. С ним можно обращаться как с существительным: <i><b>Swimming</b> is good for your health</i> — «Плавание полезно для здоровья». Точного аналога в русском нет, поэтому герундий переводят по-разному: существительным, инфинитивом или деепричастием.</p>
 ${T(["Где", "Слова", "Пример"], [
   ["после глаголов", "<i>enjoy, finish, mind, avoid, suggest, keep, miss, practise, deny, imagine, consider, give up, put off, can't stand, can't help</i>", "<i>I enjoy <b>walking</b>. Would you mind <b>opening</b> the window?</i>"],
   ["после предлогов", "<i>in, at, of, for, about, without, before, after, instead of, by</i>", "<i>Thank you for <b>coming</b>. He left without <b>saying</b> goodbye.</i>"],
@@ -12,9 +12,9 @@ ${T(["Где", "Слова", "Пример"], [
   ["после выражений", "<i>it's no use, it's worth, there's no point in, look forward to, be used to</i>", "<i>It's worth <b>seeing</b>. I look forward to <b>hearing</b> from you.</i>"],
   ["как подлежащее", "—", "<i><b>Smoking</b> is bad for you.</i>"]
 ])}
-${N("В <i>look forward to</i>, <i>be used to</i>, <i>object to</i> слово <i>to</i> — предлог, поэтому дальше идет <i>-ing</i>: <i>I look forward to <b>seeing</b> you</i>, а не <i>to see</i>.")}
+${N("В выражениях <i>look forward to</i>, <i>be used to</i>, <i>object to</i> слово <i>to</i> — это предлог, а не частица инфинитива. После предлога глагол ставится в форму на <i>-ing</i>: <i>I look forward to <b>seeing</b> you</i>, а не <i>to see you</i>.")}
 <h3>Кто выполняет действие</h3>
-<p>Если действие герундия выполняет не подлежащее, а кто-то другой, перед герундием ставят притяжательное местоимение или существительное в притяжательном падеже. В разговорной речи чаще говорят проще — объектное местоимение или существительное без <i>'s</i>.</p>
+<p>Бывает, что действие герундия выполняет не тот, о ком предложение, а кто-то другой. Тогда этого человека называют перед герундием — притяжательным местоимением или существительным с <i>'s</i>: <i>I don't mind <b>his</b> smoking</i>. В разговорной речи говорят проще: <i>I don't mind <b>him</b> smoking</i> — это тоже правильно.</p>
 ${E([
   ["I don't mind <b>his coming</b> late. = I don't mind <b>him coming</b> late.", "Я не против того, что он приходит поздно."],
   ["I insist on <b>your going</b> there.", "Я настаиваю, чтобы ты пошел туда."],
@@ -23,26 +23,26 @@ ${E([
 ])}`,
   ex: [
     { type: 'gap', task: 'Поставьте глагол в форму герундия.', items: [
-      ["I enjoy ___ (read) detective stories.", "reading"], ["Would you mind ___ (close) the door?", "closing"],
-      ["She is good at ___ (draw).", "drawing"], ["Thank you for ___ (help) me.", "helping"],
+      ["When I was a child, I enjoyed ___ (read) detective stories.", "reading"], ["Would you mind ___ (close) the door?", "closing"],
+      ["She has always been good at ___ (draw).", "drawing"], ["Thank you for ___ (help) me.", "helping"],
       ["He left without ___ (say) goodbye.", "saying"], ["I'm looking forward to ___ (see) you.", "seeing"],
-      ["Have you finished ___ (write) the essay?", "writing"], ["___ (swim) is my favourite sport.", "swimming"],
+      ["Have you finished ___ (write) the essay?", "writing"], ["___ (swim) in the sea is much more pleasant than swimming in a pool.", "swimming"],
       ["She gave up ___ (smoke) last year.", "smoking"], ["It's no use ___ (cry).", "crying"],
-      ["This film is worth ___ (watch).", "watching"], ["I'm tired of ___ (wait).", "waiting"]
+      ["The film we saw yesterday is worth ___ (watch).", "watching"], ["I'm tired of ___ (wait).", "waiting"]
     ]},
     { type: 'choice', task: 'Выберите правильный вариант.', items: [
       ["He suggested ___ to the cinema.", ["going", "to go", "go"]], ["I can't stand ___ in queues.", ["waiting", "to wait", "wait"]],
-      ["She is afraid of ___ alone.", ["being", "to be", "be"]], ["After ___ dinner, we went for a walk.", ["having", "to have", "have"]],
-      ["Keep ___! You're doing well.", ["trying", "to try", "try"]], ["Instead of ___, help me!", ["complaining", "to complain", "complain"]]
+      ["As a child, she was afraid of ___ alone at night.", ["being", "to be", "be"]], ["After ___ dinner, we went for a walk.", ["having", "to have", "have"]],
+      ["Keep ___! You're doing well.", ["trying", "to try", "try"]], ["Instead of ___, you should help me!", ["complaining", "to complain", "complain"]]
     ]},
     { type: 'translate', task: 'Переведите на английский.', items: [
-      ["Я люблю читать.", "I enjoy reading.|I like reading.|I love reading.|I like to read.|I love to read."],
+      ["В детстве я любил читать.", "As a child I enjoyed reading.|As a child I liked reading.|As a child I loved reading.|When I was a child, I enjoyed reading.|When I was a child, I liked reading.|When I was a child, I loved reading.|I enjoyed reading as a child.|I liked reading as a child.|I loved reading as a child.|When I was a child, I liked to read.|When I was a child, I loved to read.|As a child I liked to read.|As a child I loved to read.|I liked to read as a child.|I loved to read as a child.|I enjoyed reading when I was a child.|I liked reading when I was a child.|I loved reading when I was a child."],
       ["Спасибо, что пришли.", "Thank you for coming.|Thanks for coming."],
       ["Он ушел, не сказав ни слова.", "He left without saying a word.|He went away without saying a word."],
-      ["Этот музей стоит посетить.", "This museum is worth visiting.|The museum is worth visiting."],
-      ["Я с нетерпением жду встречи с тобой.", "I am looking forward to seeing you.|I'm looking forward to seeing you.|I look forward to seeing you."]
+      ["Этот музей точно стоит посетить, если будешь в Лондоне.", "This museum is definitely worth visiting if you are in London.|This museum is really worth visiting if you are in London.|If you are in London, this museum is definitely worth visiting.|This museum is definitely worth visiting if you go to London.|This museum is definitely worth visiting if you visit London.|If you are in London, this museum is really worth visiting.|This museum is definitely worth a visit if you are in London.|This museum is really worth visiting if you go to London.|This museum is definitely worth visiting if you are ever in London."],
+      ["Я с нетерпением жду встречи с тобой.", "I am looking forward to seeing you.|I look forward to seeing you."]
     ]},
-    { type: 'gap', task: 'Впишите притяжательное местоимение или существительное перед герундием.', items: [
+    { type: 'gap', task: 'Впишите местоимение (притяжательное или объектное) или существительное перед герундием.', items: [
       ["I don't mind ___ (he) smoking here.", "his|him"],
       ["She insisted on ___ (I) staying for dinner.", "my|me"],
       ["Excuse ___ (I) interrupting you.", "my|me"],
@@ -50,18 +50,18 @@ ${E([
       ["We were surprised at ___ (Tom) coming so early.", "Tom's|Tom"],
       ["Mother was against ___ (they) going out so late.", "their|them"],
       ["I'm sure of ___ (you) passing the exam.", "your|you"],
-      ["I remember ___ (my sister) crying when she was little.", "my sister's|my sister"]
+      ["I can't imagine ___ (my sister) living abroad.", "my sister's|my sister"]
     ]},
     { type: 'listen', at: 2, task: 'Прослушайте предложение и соберите его из слов.', items: [
-      ["My little sister is very good at drawing animals.", "Моя младшая сестра очень хорошо рисует животных."],
-      ["Would you mind opening the window? It's too hot in here.", "Ты не против открыть окно? Здесь слишком жарко."],
+      ["My little sister has always been good at drawing animals.", "У моей младшей сестры всегда хорошо получалось рисовать животных."],
+      ["Would you mind opening the window? It's too hot in here.", "Ты не мог бы открыть окно? Здесь слишком жарко."],
       ["Thank you for helping me with my homework.", "Спасибо, что помог мне с домашним заданием."]
     ]}
   ]},
 
 { id: 'ger-vs-inf', level: 'B2', title: 'Герундий или инфинитив', sub: 'stop smoking / stop to smoke',
   rule: `
-<p>После одних глаголов нужен герундий, после других — инфинитив, после третьих возможны оба, иногда с разным смыслом.</p>
+<p>Одни глаголы требуют после себя герундий (<i>enjoy reading</i>), другие — инфинитив (<i>decide to go</i>), а после третьих возможны оба варианта. Причем у некоторых из них смысл меняется: <i>stop smoking</i> — бросить курить, а <i>stop to smoke</i> — остановиться, чтобы покурить. Такие глаголы лучше запоминать вместе с формой, которая после них идет.</p>
 ${T(["Только -ing", "Только to V", "Оба, смысл тот же"], [
   ["<i>enjoy, finish, mind, avoid, suggest, keep, miss, practise</i>", "<i>want, decide, hope, plan, agree, refuse, promise, manage, afford</i>", "<i>begin, start, continue, like, love, hate, prefer</i>"]
 ])}
@@ -73,25 +73,25 @@ ${T(["Глагол", "+ -ing", "+ to V"], [
   ["<i>try</i>", "<i>try <b>opening</b> the window</i> — попробовать (как способ)", "<i>try <b>to open</b> it</i> — пытаться (с усилием)"],
   ["<i>regret</i>", "<i>regret <b>saying</b></i> — жалеть, что сказал", "<i>regret <b>to tell</b> you</i> — с сожалением сообщить"]
 ])}
-${N("После <i>would like / would love / would prefer</i> — только инфинитив: <i>I'd like <b>to go</b></i>. После <i>like</i> без would — оба варианта.")}`,
+${N("После <i>would like</i>, <i>would love</i> и <i>would prefer</i> нужен только инфинитив: <i>I'd like <b>to go</b></i>. А после простого <i>like</i>, без <i>would</i>, можно и так и так: <i>I like reading</i> и <i>I like to read</i>.")}`,
   ex: [
     { type: 'choice', task: 'Выберите правильную форму.', items: [
       ["I enjoy ___ in the rain.", ["walking", "to walk"]], ["She decided ___ a new job.", ["to find", "finding"]],
       ["Would you mind ___ the window?", ["opening", "to open"]], ["He promised ___ me.", ["to help", "helping"]],
       ["He stopped ___ last year, and now he feels much better.", ["smoking", "to smoke"]], ["Don't forget ___ the door when you leave.", ["to lock", "locking"]],
       ["I remember ___ him at a party years ago.", ["meeting", "to meet"]], ["I'd like ___ to Italy.", ["to go", "going"]],
-      ["We stopped ___ some photos of the lake.", ["to take", "taking"]], ["I regret ___ you that your application was rejected.", ["to tell", "telling"]],
+      ["We stopped the car ___ some photos of the lake.", ["to take", "taking"]], ["We regret ___ you that your application has been rejected. (официальное письмо)", ["to inform", "informing"]],
       ["They can't afford ___ a new car.", ["to buy", "buying"]], ["She avoided ___ at me.", ["looking", "to look"]]
     ]},
     { type: 'gap', task: 'Поставьте глагол в форму герундия или инфинитива.', items: [
       ["I hope ___ (see) you soon.", "to see"], ["He keeps ___ (ask) the same question.", "asking"],
       ["She refused ___ (answer).", "to answer"], ["We finished ___ (eat) and went out.", "eating"],
-      ["They agreed ___ (meet) at six.", "to meet"], ["I suggest ___ (take) a taxi.", "taking"],
+      ["They agreed ___ (meet) at six.", "to meet"], ["I suggest ___ (take) a taxi.", "taking|we take|that we take|we should take|that we should take"],
       ["Please remember ___ (buy) some milk.", "to buy"], ["I'll never forget ___ (see) the ocean for the first time.", "seeing"],
-      ["He managed ___ (open) the box.", "to open"], ["I regret ___ (shout) at you yesterday.", "shouting"]
+      ["He managed ___ (open) the box.", "to open"], ["I regret ___ (shout) at you yesterday.", "shouting|having shouted"]
     ]},
     { type: 'translate', task: 'Переведите на английский.', items: [
-      ["Он бросил курить.", "He stopped smoking.|He gave up smoking.|He has stopped smoking.|He has given up smoking."],
+      ["Он бросил курить.", "He stopped smoking.|He gave up smoking.|He has stopped smoking.|He has given up smoking.|He quit smoking.|He has quit smoking."],
       ["Не забудь запереть дверь.", "Don't forget to lock the door.|Remember to lock the door."],
       ["Я помню, как встретил ее в Париже.", "I remember meeting her in Paris."],
       ["Мы остановились, чтобы отдохнуть.", "We stopped to rest.|We stopped to have a rest.|We stopped to take a rest."]

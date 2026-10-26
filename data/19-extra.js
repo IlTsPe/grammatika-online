@@ -1,10 +1,10 @@
 BOOK.push({ n: 19, id: 'extra', title: 'Дополнительно: темы сверх сборника',
-intro: 'Этих тем нет в сборнике Голицынского: он рассчитан на школьников. Здесь собраны конструкции уровней B2–C2, которые встречаются в экзаменах и книжной речи.',
+intro: 'Этих тем нет в сборнике Голицынского: он рассчитан на школьников. Здесь собраны конструкции уровней B1–C2, которые встречаются в экзаменах и книжной речи.',
 topics: [
 
-{ id: 'x-relative', level: 'B2', title: 'Относительные придаточные', sub: 'who, which, that, whose, where',
+{ id: 'x-relative', level: 'B1', title: 'Относительные придаточные', sub: 'who, which, that, whose, where',
   rule: `
-<p>Относительное придаточное уточняет существительное. Местоимение выбирается по тому, о чем идет речь.</p>
+<p>Относительное придаточное — это часть предложения, которая уточняет, о ком или о чем речь, как русское «который»: <i>the woman <b>who</b> lives next door</i> — женщина, которая живет по соседству. Слово, которое его вводит, зависит от того, о чем говорим: о человеке — <i>who</i>, о предмете — <i>which</i>, о месте — <i>where</i>.</p>
 ${T(["Слово", "О чем", "Пример"], [
   ["<i>who</i>", "люди", "<i>The woman <b>who</b> lives next door…</i>"],
   ["<i>which</i>", "предметы, животные", "<i>The book <b>which</b> I bought…</i>"],
@@ -18,7 +18,7 @@ ${E([
   ["My brother, <b>who lives in Kazan</b>, is a teacher.", "Описательное: дополнительная информация. С запятыми, that нельзя."],
   ["The book (<b>that</b>) you gave me was great.", "Если местоимение — дополнение, его можно опустить."]
 ])}
-${N("В описательных придаточных (с запятыми) <i>that</i> не используется: <i>Moscow, <b>which</b> is the capital…</i>")}`,
+${N("Если придаточное просто добавляет сведения и выделяется запятыми, <i>that</i> в нем не используют: <i>Moscow, <b>which</b> is the capital of Russia, is huge</i>.")}`,
   ex: [
     { type: 'gap', task: 'Впишите who, which, that, whose, where или when. Если слово можно опустить, допустим и «-».', items: [
       ["The woman ___ lives next door is a doctor.", "who|that"], ["This is the house ___ I was born.", "where"],
@@ -29,7 +29,7 @@ ${N("В описательных придаточных (с запятыми) <i
     ]},
     { type: 'translate', task: 'Переведите на английский.', items: [
       ["Женщина, которая живет по соседству, — врач.", "The woman who lives next door is a doctor.|The woman that lives next door is a doctor."],
-      ["Это дом, где я родился.", "This is the house where I was born.|This is the house in which I was born."],
+      ["Это дом, где я родился.", "This is the house where I was born.|This is the house in which I was born.|This is the house I was born in.|This is the house that I was born in.|This is the house which I was born in."],
       ["Это человек, у которого украли машину.", "This is the man whose car was stolen.|That is the man whose car was stolen."],
       ["Книга, которую ты мне дал, очень интересная.", "The book you gave me is very interesting.|The book that you gave me is very interesting.|The book which you gave me is very interesting."]
     ]},
@@ -42,7 +42,7 @@ ${N("В описательных придаточных (с запятыми) <i
 
 { id: 'x-inversion', level: 'C1', title: 'Инверсия', sub: 'Never have I seen…',
   rule: `
-<p>Если предложение начинается с отрицательного или ограничительного наречия, порядок слов меняется как в вопросе: <b>вспомогательный глагол + подлежащее</b>. Это книжный, эмфатический стиль.</p>
+<p>Если предложение начинается с отрицательного или ограничивающего слова — <i>never, rarely, hardly, not only</i>, — порядок слов меняется, как в вопросе: сначала идет <b>вспомогательный глагол</b>, потом <b>подлежащее</b>: <i>Never <b>have I</b> seen such a sunset</i>. Так говорят, чтобы подчеркнуть мысль, и это звучит книжно.</p>
 ${T(["Начало", "Пример", "Перевод"], [
   ["<i>Never / Rarely / Seldom</i>", "<i>Never <b>have I</b> seen such a sunset.</i>", "Никогда я не видел…"],
   ["<i>Hardly / Scarcely … when</i>", "<i>Hardly <b>had she</b> sat down when the phone rang.</i>", "Едва она села, как…"],
@@ -53,7 +53,7 @@ ${T(["Начало", "Пример", "Перевод"], [
   ["<i>Little</i>", "<i>Little <b>did they</b> know…</i>", "Они и не подозревали…"],
   ["<i>Under no circumstances</i>", "<i>Under no circumstances <b>should you</b> open it.</i>", "Ни в коем случае…"]
 ])}
-${N("Если глагол в Present или Past Simple, появляется <i>do / does / did</i>: <i>Rarely <b>do</b> we go out.</i> В конструкциях <i>Only when…, Not until…</i> инверсия ставится в <b>главной</b> части.")}`,
+${N("Если в предложении Present или Past Simple, для инверсии нужен вспомогательный <i>do / does / did</i>: <i>Rarely <b>do</b> we go out</i>. А в конструкциях <i>Only when…</i> и <i>Not until…</i> порядок слов меняется не сразу, а во <b>второй, главной</b> части: <i>Only when I got home <b>did I</b> realise…</i>")}`,
   ex: [
     { type: 'gap', task: 'Впишите пропущенное слово.', items: [
       ["Never ___ I seen such a beautiful sunset.", "have"], ["No sooner had we arrived ___ it started to rain.", "than"],
@@ -74,7 +74,7 @@ ${N("Если глагол в Present или Past Simple, появляется <
 
 { id: 'x-unreal-past', level: 'C1', title: 'Нереальное прошедшее', sub: "it's time · would rather · as if",
   rule: `
-<p>После ряда выражений прошедшее время обозначает не прошлое, а <b>нереальность</b> или желаемое положение дел в настоящем.</p>
+<p>После некоторых выражений прошедшее время говорит вовсе не о прошлом, а о том, чего на самом деле нет, или о том, чего хотелось бы. Например, <i>It's time we <b>went</b> home</i> — нам пора домой (сейчас, а не в прошлом).</p>
 ${T(["Выражение", "Форма", "Пример"], [
   ["<i>It's (high) time</i>", "<i>+ Past Simple</i>", "<i>It's high time you <b>found</b> a job.</i>"],
   ["<i>would rather</i> (о себе)", "<i>+ V</i>", "<i>I'd rather <b>stay</b> at home.</i>"],
@@ -83,7 +83,7 @@ ${T(["Выражение", "Форма", "Пример"], [
   ["<i>as if / as though</i>", "<i>+ Past (нереально)</i>", "<i>He talks as if he <b>knew</b> everything.</i>"]
 ])}
 <h3>Сослагательное после глаголов требования</h3>
-<p>После <i>suggest, insist, recommend, demand</i> и выражений <i>it is essential / vital that</i> используется глагол в начальной форме без <i>-s</i> (в британском варианте также <i>should + V</i>).</p>
+<p>После глаголов <i>suggest, insist, recommend, demand</i> и выражений <i>it is essential that</i>, <i>it is vital that</i> глагол стоит в начальной форме — без <i>-s</i>, даже с <i>he</i> и <i>she</i>: <i>The doctor insisted that he <b>stay</b> in bed</i>. В британском английском так же часто говорят с <i>should</i>: <i>that he <b>should stay</b></i>.</p>
 ${E([
   ["The doctor insisted that he <b>stay</b> in bed.", "Врач настоял, чтобы он лежал."],
   ["It is essential that every student <b>attend</b>.", "Важно, чтобы присутствовал каждый."]
@@ -96,12 +96,12 @@ ${E([
       ["It is essential that every student ___ (attend) the meeting.", "attend|should attend"], ["It's time we ___ (go) home.", "went"]
     ]},
     { type: 'translate', task: 'Переведите на английский.', items: [
-      ["Тебе давно пора найти работу.", "It is high time you found a job.|It is time you found a job."],
-      ["Я бы предпочел, чтобы ты здесь не курил.", "I would rather you didn't smoke here.|I would rather you did not smoke here."],
+      ["Тебе давно пора найти работу.", "It is high time you found a job.|It is time you found a job.|It is about time you found a job.|It is high time you got a job.|It is about time you got a job."],
+      ["Я бы предпочел, чтобы ты здесь не курил.", "I would rather you didn't smoke here.|I would rather you didn't smoke in here."],
       ["Он говорит так, будто все знает.", "He talks as if he knew everything.|He speaks as if he knew everything.|He talks as though he knew everything.|He speaks as though he knew everything."]
     ]},
     { type: 'listen', at: 2, task: 'Прослушайте предложение и соберите его из слов.', items: [
-      ["It's time we went home, it's getting dark.", "Нам пора домой: темнеет."],
+      ["It's time we went home. It's getting dark.", "Нам пора домой: темнеет."],
       ["I'd rather you didn't tell anyone about it.", "Я бы предпочел, чтобы ты никому об этом не рассказывал."],
       ["He talks as if he knew everything about everything.", "Он говорит так, будто знает обо всем на свете."]
     ]}
@@ -109,7 +109,7 @@ ${E([
 
 { id: 'x-cleft', level: 'C1', title: 'Расщепленные предложения', sub: 'It was Tom who… · What I need is…',
   rule: `
-<p>Чтобы выделить часть предложения, его «расщепляют» на две части. В русском для этого хватает интонации или слова «именно».</p>
+<p>Чтобы выделить какую-то часть предложения, в английском его «расщепляют» на две части: <i><b>It was Tom who</b> broke the window</i> — это Том разбил окно. В русском для такого выделения обычно хватает интонации или слова «именно».</p>
 ${T(["Конструкция", "Пример", "Что выделяем"], [
   ["<i>It is / was … that / who …</i>", "<i><b>It was Tom who</b> broke the window.</i>", "именно Том"],
   ["", "<i><b>It was in 2010 that</b> we met.</i>", "именно в 2010-м"],
@@ -117,12 +117,12 @@ ${T(["Конструкция", "Пример", "Что выделяем"], [
   ["<i>What … did was (to) V</i>", "<i><b>What he did was</b> (to) call the police.</i>", "его действие"],
   ["<i>All … is …</i>", "<i><b>All I want is</b> a cup of tea.</i>", "единственное, что"]
 ])}
-${N("Глагол после <i>What…</i> обычно в единственном числе: <i>What we need <b>is</b> more people.</i>")}`,
+${N("В конструкции с <i>What…</i> глагол обычно стоит в единственном числе, даже если дальше идет множественное: <i>What we need <b>is</b> more people</i>.")}`,
   ex: [
-    { type: 'gap', task: 'Впишите пропущенное слово.', items: [
+    { type: 'gap', task: 'Впишите пропущенное слово или «-», если оно не нужно.', items: [
       ["It was Tom ___ broke the window, not me.", "who|that"], ["___ I need is a long holiday.", "what"],
       ["It was in 2010 ___ we first met.", "that"], ["All I want ___ a cup of tea.", "is"],
-      ["What he did ___ to call the police.", "was"], ["The reason ___ I called is to apologise.", "why|that"],
+      ["What he did ___ to call the police.", "was"], ["The reason ___ I called is to apologise.", "why|that|-|0"],
       ["It ___ not until midnight that she came home.", "was"], ["What surprised me ___ his reaction.", "was"]
     ]},
     { type: 'translate', task: 'Переведите на английский.', items: [
@@ -140,7 +140,7 @@ ${N("Глагол после <i>What…</i> обычно в единственн
 
 { id: 'x-inverted-conditionals', level: 'C2', title: 'Условия без if', sub: 'Had I known… · Should you need…',
   rule: `
-<p>В формальной речи <i>if</i> опускают и ставят вспомогательный глагол в начало. Кроме того, условие можно выразить другими союзами.</p>
+<p>В формальной речи условие можно выразить без <i>if</i>: его убирают, а вспомогательный глагол ставят в самое начало. Например, вместо <i>If I had known</i> говорят <i>Had I known</i>. Кроме того, условие можно ввести и другими словами — <i>provided</i>, <i>as long as</i>, <i>but for</i>.</p>
 ${T(["Обычная форма", "С инверсией"], [
   ["<i>If I had known…</i>", "<i><b>Had I known</b>, I would have helped.</i>"],
   ["<i>If you should need help…</i>", "<i><b>Should you need</b> any help, call me.</i>"],
@@ -153,7 +153,7 @@ ${E([
   ["You can borrow it <b>as long as</b> / <b>provided</b> you're careful.", "При условии, что…"],
   ["<b>Supposing</b> you won, what would you do?", "Предположим, ты выиграл…"]
 ])}
-${N("При инверсии отрицание не сокращается: <i>Had it <b>not</b> been for…</i>, а не <i>Hadn't it been for…</i>")}`,
+${N("В таких предложениях отрицание не сокращают: правильно <i>Had it <b>not</b> been for…</i>, а не <i>Hadn't it been for…</i>")}`,
   ex: [
     { type: 'gap', task: 'Впишите пропущенное слово.', items: [
       ["___ I known about the problem, I would have helped.", "had"], ["___ you need any help, call me.", "should"],
@@ -174,7 +174,7 @@ ${N("При инверсии отрицание не сокращается: <i>
 
 { id: 'x-ellipsis', level: 'C2', title: 'Эллипсис и замещение', sub: 'I hope not · so can I · the red one',
   rule: `
-<p>В живой речи англичане избегают повторов: слова заменяют короткими заместителями или опускают.</p>
+<p>В живой речи англичане не любят повторяться. Вместо уже названных слов они используют короткие заменители (<i>one, so, do</i>) или просто опускают лишнее: <i>— Is she coming? — I think <b>so</b></i> — думаю, да.</p>
 ${T(["Заместитель", "Пример", "Значение"], [
   ["<i>so / not</i>", "<i>I think <b>so</b>. I hope <b>not</b>. I'm afraid <b>not</b>.</i>", "заменяет целое предложение"],
   ["<i>one / ones</i>", "<i>Can I see the red <b>one</b>? Bigger <b>ones</b>?</i>", "заменяет исчисляемое существительное"],
@@ -182,7 +182,7 @@ ${T(["Заместитель", "Пример", "Значение"], [
   ["<i>so / neither + aux + подлежащее</i>", "<i>He can swim, and <b>so can I</b>. — I'm not tired. — <b>Neither am I</b>.</i>", "«я тоже», «я тоже не»"],
   ["<i>to</i>", "<i>You don't have to if you don't want <b>to</b>.</i>", "заменяет инфинитив"]
 ])}
-${N("После <i>hope, think, expect, suppose</i> отрицательный ответ строится по-разному: <i>I hope <b>not</b></i>, но <i>I <b>don't think so</b></i>.")}`,
+${N("Отрицательный короткий ответ строят по-разному. После <i>hope</i> говорят <i>I hope <b>not</b></i> — надеюсь, что нет. А после <i>think</i> — <i>I <b>don't think so</b></i> — думаю, что нет.")}`,
   ex: [
     { type: 'gap', task: 'Впишите одно слово.', items: [
       ["— Will it rain tomorrow? — I hope ___.", "not"], ["— Is she coming? — I think ___.", "so"],
@@ -193,9 +193,9 @@ ${N("После <i>hope, think, expect, suppose</i> отрицательный �
     ]},
     { type: 'translate', task: 'Переведите на английский.', items: [
       ["Надеюсь, что нет.", "I hope not."],
-      ["— Я устал. — Я тоже.", "I am tired. — So am I."],
-      ["Мне не нравится эта сумка. Покажите красную.", "I don't like this bag. Show me the red one.|I don't like this bag. Can I see the red one?"],
-      ["Она обещала позвонить, но не позвонила.", "She promised to call, but she didn't.|She promised to phone, but she didn't."]
+      ["— Я устал. — Я тоже.", "I am tired. — So am I.|I am tired. — Me too."],
+      ["Мне не нравится эта сумка. Покажите красную.", "I don't like this bag. Show me the red one.|I don't like this bag. Can I see the red one?|I don't like this bag. Could you show me the red one?|I don't like this bag. Can you show me the red one?"],
+      ["Она обещала позвонить, но не позвонила.", "She promised to call, but she didn't.|She promised to phone, but she didn't.|She promised to ring, but she didn't."]
     ]},
     { type: 'listen', at: 2, task: 'Прослушайте предложение и соберите его из слов.', items: [
       ["Is the shop still open? I'm afraid not.", "Магазин еще открыт? Боюсь, что нет."],

@@ -98,16 +98,18 @@ button { font: inherit; transition: linear 0.15s; }
 @media (hover: hover) { :where(:root:not(.pointer-still)) .btn--primary:disabled:hover { opacity: .35; cursor: default; } }
 /* ---------- Согласие на cookie (metrika.js): плашка внизу экрана, пока нет выбора; над прилипшей шапкой, под меню телефона.
    «Принять» и «Отклонить» оформлены одинаково: ни одна не выделена, чтобы не подталкивать к выбору ---------- */
-.cookie-note { position: fixed; z-index: 22; left: 50%; bottom: calc(16px + env(safe-area-inset-bottom, 0px)); transform: translateX(-50%);
-  display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: end; gap: 6px 20px; width: min(600px, calc(100vw - 32px)); padding: 12px 14px 14px 18px;
-  border: 1.5px solid rgb(var(--accent-rgb) / 55%); border-left: 4px solid var(--accent); border-radius: 10px; background: var(--sheet); box-shadow: var(--lift);
-  color: var(--ink); font-size: 14px; line-height: 1.45; } /* как карточка упражнения: лист с акцентной полосой слева */
-.cookie-note__label { grid-column: 1 / -1; font-family: var(--f-mono); font-size: 11px; letter-spacing: .1em; text-transform: uppercase; color: var(--accent); }
-.cookie-note__text { margin: 0; }
+.cookie-note { position: fixed; z-index: 22; left: 0; right: 0; bottom: 0;
+  display: grid; grid-template-columns: auto minmax(0, 1fr) auto; align-items: center; gap: 10px 14px; padding: 12px 20px calc(12px + env(safe-area-inset-bottom, 0px));
+  border-top: 2px solid var(--accent); background: var(--paper); box-shadow: 0 -2px 10px rgb(0 0 0 / 15%);
+  color: var(--ink); font-size: 14px; line-height: 1.45; } /* полоса во всю ширину низа экрана: значок печенья, текст в строку, кнопки справа */
+.cookie-note__icon { width: 26px; height: 26px; color: var(--gold-ink); }
+.cookie-note__text { margin: 0 6px 0 0; }
 .cookie-note__btns, .cookie-consent__btns { display: flex; column-gap: 8px; }
 @media (max-width: 560px) {
-  .cookie-note { grid-template-columns: minmax(0, 1fr); row-gap: 8px; }
-  .cookie-note__btn { flex: 1; }
+  .cookie-note { grid-template-columns: auto minmax(0, 1fr); font-size: 12px; }
+  .cookie-note__text { margin: 0; }
+  .cookie-note__btns { grid-column: 1 / -1; }
+  .cookie-note__btn { flex: 1; padding: 6px 14px; font-size: 13px; }
 }
 .cookie-consent { margin: 12px 0; }
 .cookie-consent__state { margin: 0 0 8px; }
@@ -1059,7 +1061,7 @@ button { font: inherit; transition: linear 0.15s; }
 .note::before { content: "Важно"; font-family: var(--f-mono); font-size: 11px; letter-spacing: .08em; text-transform: uppercase; color: var(--bad); align-self: center; }
 .markers { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; margin: 0 0 16px; }
 .markers__label { margin-right: 4px; font-size: 13.5px; color: var(--muted); }
-.markers__word { padding: 1px 10px; border: 1px solid var(--border); border-radius: 99px; background: var(--sheet); font-family: var(--f-en); font-size: 14.5px; }
+.markers__word { padding: 0 10px 2px; border: 1px solid var(--border); border-radius: 99px; background: var(--sheet); font-family: var(--f-en); font-size: 14.5px; }
 
 /* «Правило изучено» и «Добавить в избранное» под правилом */
 .study { margin-top: 20px; }

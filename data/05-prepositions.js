@@ -1,10 +1,10 @@
-BOOK.push({ n: 6, id: 'prepositions', title: 'Предлоги',
+BOOK.push({ n: 5, id: 'prepositions', title: 'Предлоги',
 intro: 'Предлоги места, времени и направления, а также глаголы и прилагательные, после которых требуется определенный предлог.',
 topics: [
 
 { id: 'prep-place', level: 'A1', title: 'Предлоги места', sub: 'in, on, at, under, between',
   rule: `
-<p>Основные предлоги места отвечают на вопрос <i>где?</i></p>
+<p>Предлоги места отвечают на вопрос <i>где?</i> и показывают, как один предмет расположен относительно другого: внутри, на поверхности, под, над, рядом. Главные из них — <i>in, on, at</i>, но есть и много других, которые собраны в таблице ниже.</p>
 ${T(["Предлог", "Значение", "Пример"], [
   ["<i>in</i>", "в, внутри (объем, пространство)", "<i><b>in</b> the box, <b>in</b> the room, <b>in</b> Moscow</i>"],
   ["<i>on</i>", "на (поверхности)", "<i><b>on</b> the table, <b>on</b> the wall, <b>on</b> the floor</i>"],
@@ -22,31 +22,31 @@ ${E([
   ["<b>in</b> the picture, <b>in</b> the sky, <b>in</b> a car", "на картине, в небе, в машине"],
   ["<b>at</b> home, <b>at</b> work, <b>at</b> the cinema, <b>at</b> a party", "дома, на работе, в кино, на вечеринке"]
 ])}
-${N("Русское «на» не всегда <i>on</i>: «на картине» — <i>in the picture</i>, «на улице» — <i>in the street</i>, «на концерте» — <i>at the concert</i>. Этажи британцы считают иначе: наш первый этаж — <i>the ground floor</i>, второй — <i>the first floor</i>; в американском английском счет как у нас.")}`,
+${N("Русское «на» не всегда переводится как <i>on</i>. Например, «на картине» — <i>in the picture</i>, «на улице» — <i>in the street</i>, «на концерте» — <i>at the concert</i>. И осторожнее с этажами: британцы считают их иначе. Наш первый этаж у них — <i>the ground floor</i>, а второй — <i>the first floor</i>. В американском английском счет такой же, как у нас.")}`,
   ex: [
     { type: 'gap', task: 'Впишите in, on или at.', items: [
-      ["The cat is ___ the box.", "in"], ["There is a picture ___ the wall.", "on"],
-      ["Somebody is ___ the door.", "at"], ["My parents are ___ work now.", "at"],
+      ["The cat slept ___ the box all day.", "in"], ["There were two old pictures ___ the wall.", "on"],
+      ["There was a man ___ the door yesterday evening.", "at"], ["My parents were ___ work all day.", "at"],
       ["We live ___ the third floor.", "on"], ["Look at the birds ___ the sky!", "in"],
-      ["I'll wait for you ___ the bus stop.", "at"], ["She lives ___ London.", "in"],
-      ["Who is the man ___ the picture?", "in"], ["The keys are ___ the table.", "on"],
-      ["We met ___ a party.", "at"], ["He is sitting ___ the bus.", "on"]
+      ["Every morning I wait for my friend ___ the bus stop.", "at"], ["Her children lived ___ London for five years.", "in"],
+      ["Who is the man ___ the picture?", "in"], ["I left my keys ___ the kitchen table.", "on"],
+      ["We met ___ a party.", "at"], ["He slept ___ the bus all the way home.", "on"]
     ]},
     { type: 'choice', task: 'Выберите предлог.', items: [
-      ["The ball is ___ the chair.", ["under", "between", "among"]], ["The bank is ___ the post office and the café.", ["between", "among", "opposite of"]],
-      ["There's a garden ___ the house.", ["behind", "behind of", "back"]], ["Our school is ___ the park.", ["opposite", "opposite of", "in front"]],
-      ["The car is parked ___ the shop.", ["in front of", "in front", "before of"]], ["I found my letter ___ the old papers.", ["among", "between", "at"]],
-      ["The lamp is hanging ___ the table.", ["above", "on", "at"]], ["Sit ___ me, please.", ["next to", "next", "near of"]]
+      ["The children's ball was ___ the chair.", ["under", "between", "among"]], ["The bank is ___ the post office and the café.", ["between", "among", "opposite of"]],
+      ["There was a big garden ___ my grandmother's house.", ["behind", "behind of", "back"]], ["Our school is ___ the park.", ["opposite", "opposite of", "in front"]],
+      ["There were some cars ___ the shop.", ["in front of", "in front", "before of"]], ["I found my letter ___ the old papers.", ["among", "between", "at"]],
+      ["There is a lamp ___ the table. It hangs from the ceiling.", ["above", "on", "at"]], ["Sit ___ me, please.", ["next to", "next", "near of"]]
     ]},
     { type: 'translate', task: 'Переведите на английский.', items: [
-      ["Книга на столе.", "The book is on the table."],
-      ["Кошка под кроватью.", "The cat is under the bed."],
+      ["Мои книги были на столе.", "My books were on the table."],
+      ["Вчера кошка спала под кроватью.", "Yesterday the cat slept under the bed.|The cat slept under the bed yesterday."],
       ["Мы живем на втором этаже.", "We live on the first floor.|We live on the second floor."],
-      ["Он ждет тебя на остановке.", "He is waiting for you at the bus stop.|He's waiting for you at the bus stop."],
+      ["Я видел его на остановке.", "I saw him at the bus stop."],
       ["Магазин находится напротив школы.", "The shop is opposite the school.|The shop is across from the school."]
     ]},
     { type: 'listen', at: 2, task: 'Прослушайте предложение и соберите его из слов.', items: [
-      ["The cat is sleeping under the table in the kitchen.", "Кошка спит под столом на кухне."],
+      ["The cat slept under the table in the kitchen.", "Кошка спала под столом на кухне."],
       ["We met at the bus stop between the bank and the post office.", "Мы встретились на остановке между банком и почтой."],
       ["There is a picture on the wall above my bed.", "На стене над моей кроватью висит картина."]
     ]}
@@ -54,9 +54,9 @@ ${N("Русское «на» не всегда <i>on</i>: «на картине�
 
 { id: 'prep-time', level: 'A2', title: 'Предлоги времени', sub: 'at 5, on Monday, in May, for, since',
   rule: `
-<p>Три главных предлога времени: <i>at</i> — точный момент, <i>on</i> — день, <i>in</i> — более длинный период.</p>
+<p>Три главных предлога времени легко различать по длине отрезка. <i>At</i> ставят перед точным моментом (<i>at 7 o'clock</i>), <i>on</i> — перед конкретным днем или датой (<i>on Monday, on 15 March</i>), а <i>in</i> — перед более длинным периодом: месяцем, годом, временем года (<i>in May, in 2005, in winter</i>).</p>
 ${T(["Предлог", "С чем", "Пример"], [
-  ["<i>at</i>", "время по часам, праздники, выражения", "<i><b>at</b> 5 o'clock, <b>at</b> noon, <b>at</b> night, <b>at</b> Christmas, <b>at</b> the weekend</i>"],
+  ["<i>at</i>", "время по часам, праздники, выражения", "<i><b>at</b> 5 o'clock, <b>at</b> noon, <b>at</b> night, <b>at</b> Christmas, <b>at</b> the weekend</i> (брит.; амер. <i><b>on</b> the weekend</i>)"],
   ["<i>on</i>", "дни и даты", "<i><b>on</b> Monday, <b>on</b> 9 May, <b>on</b> my birthday, <b>on</b> Friday morning</i>"],
   ["<i>in</i>", "месяцы, годы, сезоны, части дня", "<i><b>in</b> May, <b>in</b> 2010, <b>in</b> winter, <b>in</b> the morning</i>"],
   ["<i>in</i>", "через (о будущем)", "<i>I'll be back <b>in</b> ten minutes.</i>"],
@@ -66,31 +66,31 @@ ${T(["Предлог", "С чем", "Пример"], [
   ["<i>till / until, by</i>", "до (продолжается) / к (не позже)", "<i>wait <b>till</b> 6; finish <b>by</b> 6</i>"],
   ["<i>from … to</i>", "с … до", "<i><b>from</b> 9 <b>to</b> 5</i>"]
 ])}
-${N("Перед <i>this, next, last, every</i> предлог не ставится: <i>next week, last Monday, every day</i>, а не <i>on next Monday</i>.")}`,
+${N("Если перед словом времени стоит <i>this, next, last</i> или <i>every</i>, предлог не нужен: говорят <i>next week, last Monday, every day</i>. Вариант <i>on next Monday</i> будет ошибкой.")}`,
   ex: [
     { type: 'gap', task: 'Впишите at, on, in или «-», если предлог не нужен.', items: [
-      ["The film starts ___ 7 o'clock.", "at"], ["I was born ___ 2005.", "in"],
-      ["We have English ___ Monday.", "on"], ["It's very cold here ___ winter.", "in"],
-      ["What do you do ___ the weekend?", "at|on"], ["My birthday is ___ 15 March.", "on"],
-      ["I usually read ___ the evening.", "in"], ["I'll see you ___ next week.", "-|0"],
+      ["Yesterday the film started ___ 7 o'clock.", "at"], ["I was born ___ 2005.", "in"],
+      ["We had a test ___ Monday.", "on"], ["We went skiing ___ winter.", "in"],
+      ["What did you do ___ the weekend?", "at|on"], ["My sister's birthday is ___ 15 March.", "on"],
+      ["I'm going to read ___ the evening.", "in"], ["I'll see you ___ next week.", "-|0"],
       ["The shops are closed ___ Christmas Day.", "on"], ["Owls hunt ___ night.", "at"],
       ["I'll be ready ___ five minutes.", "in"], ["We met ___ last Friday.", "-|0"]
     ]},
     { type: 'choice', task: 'Выберите предлог.', items: [
       ["I've lived here ___ 2015.", ["since", "for", "from"]], ["We waited ___ two hours.", ["for", "since", "during"]],
-      ["Don't talk ___ the lesson.", ["during", "for", "while"]], ["Please finish the report ___ Friday.", ["by", "till", "since"]],
-      ["The shop is open ___ 9 to 6.", ["from", "since", "at"]], ["He slept ___ midday.", ["until", "by", "since"]],
+      ["Nobody talked ___ the lesson.", ["during", "for", "while"]], ["I will finish the report ___ Friday.", ["by", "till", "since"]],
+      ["Yesterday the shop was open ___ 9 to 6.", ["from", "since", "at"]], ["He slept ___ midday.", ["until", "by", "since"]],
       ["I haven't seen her ___ a long time.", ["for", "since", "during"]], ["See you ___ Saturday morning!", ["on", "in", "at"]]
     ]},
     { type: 'translate', task: 'Переведите на английский.', items: [
-      ["Урок начинается в девять часов.", "The lesson starts at nine o'clock.|The lesson begins at nine o'clock.|The lesson starts at nine.|The lesson begins at nine."],
+      ["Вчера урок начался в девять часов.", "Yesterday the lesson started at nine o'clock.|The lesson started at nine o'clock yesterday.|Yesterday the lesson began at nine o'clock.|The lesson began at nine o'clock yesterday.|Yesterday the lesson started at nine.|The lesson started at nine yesterday."],
       ["Я родился в мае.", "I was born in May."],
-      ["Увидимся в понедельник.", "See you on Monday."],
-      ["Я живу здесь с 2010 года.", "I have lived here since 2010.|I've lived here since 2010.|I have been living here since 2010.|I've been living here since 2010."],
-      ["Я вернусь через час.", "I will be back in an hour.|I'll be back in an hour.|I will come back in an hour.|I'll come back in an hour."]
+      ["Увидимся в понедельник.", "See you on Monday.|I will see you on Monday."],
+      ["Я живу здесь с 2010 года.", "I have lived here since 2010.|I have been living here since 2010."],
+      ["Я вернусь через час.", "I will be back in an hour.|I will come back in an hour.|I will return in an hour."]
     ]},
     { type: 'listen', at: 2, task: 'Прослушайте предложение и соберите его из слов.', items: [
-      ["The lesson starts at nine o'clock on Monday.", "Урок начинается в девять часов в понедельник."],
+      ["On Monday the lesson started at nine o'clock.", "В понедельник урок начался в девять часов."],
       ["I have lived here since 2015.", "Я живу здесь с 2015 года."],
       ["We are going to the sea in July for two weeks.", "В июле мы едем на море на две недели."]
     ]}
@@ -98,7 +98,7 @@ ${N("Перед <i>this, next, last, every</i> предлог не ставит�
 
 { id: 'prep-movement', level: 'A2', title: 'Предлоги направления', sub: 'to, into, out of, across, through',
   rule: `
-<p>Предлоги направления отвечают на вопрос <i>куда? откуда?</i> и обычно стоят после глаголов движения.</p>
+<p>Предлоги направления отвечают на вопросы <i>куда?</i> и <i>откуда?</i>. Они показывают, как движется человек или предмет: внутрь, наружу, через, вдоль, мимо. Поэтому обычно они стоят после глаголов движения — <i>go, come, walk, run, jump</i>.</p>
 ${T(["Предлог", "Значение", "Пример"], [
   ["<i>to</i>", "к, в (направление)", "<i>go <b>to</b> school, come <b>to</b> me</i>"],
   ["<i>from</i>", "от, из", "<i>a letter <b>from</b> Ann, come <b>from</b> Spain</i>"],
@@ -111,14 +111,14 @@ ${T(["Предлог", "Значение", "Пример"], [
   ["<i>up / down</i>", "вверх / вниз", "<i>climb <b>up</b> the hill</i>"],
   ["<i>round / around</i>", "вокруг", "<i>travel <b>around</b> the world</i>"]
 ])}
-${N("С <i>home</i> предлог <i>to</i> не ставится: <i>go <b>home</b>, come home</i>. С <i>arrive</i> — <i>in</i> или <i>at</i>, а не <i>to</i>: <i>arrive <b>in</b> Moscow, arrive <b>at</b> the station</i>.")}`,
+${N("Два частых исключения. Со словом <i>home</i> предлог <i>to</i> не ставят: <i>go <b>home</b>, come home</i>. А после <i>arrive</i> («прибывать») используют не <i>to</i>, а <i>in</i> — для городов и стран (<i>arrive <b>in</b> Moscow</i>) или <i>at</i> — для зданий и мест (<i>arrive <b>at</b> the station</i>).")}`,
   ex: [
     { type: 'gap', task: 'Впишите предлог: to, into, out of, across, through, along, past, off или from.', items: [
       ["She took a pen ___ her bag.", "out of|from"], ["We walked ___ the forest.", "through"],
       ["He fell ___ his bike and hurt his knee.", "off"], ["They swam ___ the river.", "across"],
       ["Let's go ___ the cinema tonight.", "to"], ["The cat jumped ___ the box and fell asleep in it.", "into"],
       ["We walked ___ the river bank.", "along"], ["I got a letter ___ my grandmother.", "from"],
-      ["The bus drove ___ our house without stopping.", "past"], ["Come ___ the window and look!", "to"]
+      ["The bus drove ___ our house. It didn't stop.", "past"], ["Come ___ the window and look!", "to"]
     ]},
     { type: 'choice', task: 'Выберите правильный вариант.', items: [
       ["We arrived ___ London at midnight.", ["in", "to", "at"]], ["Let's go ___.", ["home", "to home", "at home"]],
@@ -141,7 +141,7 @@ ${N("С <i>home</i> предлог <i>to</i> не ставится: <i>go <b>hom
 
 { id: 'prep-dependent', level: 'B1', title: 'Глаголы и прилагательные с предлогами', sub: 'depend on, afraid of, good at',
   rule: `
-<p>После многих глаголов и прилагательных нужен определенный предлог. Часто он не совпадает с русским — такие сочетания учат вместе.</p>
+<p>После многих глаголов и прилагательных в английском нужен определенный предлог. Часто он не совпадает с русским: например, «зависеть <b>от</b>» — <i>depend <b>on</b></i>, а «хорош <b>в</b>» — <i>good <b>at</b></i>. Поэтому такие сочетания лучше учить сразу парой — слово вместе с его предлогом.</p>
 ${T(["Глагол + предлог", "Прилагательное + предлог"], [
   ["<i>depend <b>on</b></i> — зависеть от", "<i>afraid <b>of</b></i> — бояться"],
   ["<i>listen <b>to</b></i> — слушать", "<i>good / bad <b>at</b></i> — хорош / плох в"],
@@ -154,47 +154,47 @@ ${T(["Глагол + предлог", "Прилагательное + предл
   ["<i>laugh <b>at</b></i> — смеяться над", "<i>tired <b>of</b></i> — уставший от"],
   ["<i>belong <b>to</b></i> — принадлежать", "<i>married <b>to</b></i> — женат на, замужем за"]
 ])}
-${N("Некоторые глаголы в английском не требуют предлога, хотя в русском он есть: <i>enter the room</i> (войти <b>в</b> комнату), <i>answer the question</i> (ответить <b>на</b> вопрос), <i>discuss the plan</i> (обсудить план, без about!).")}
+${N("Бывает и наоборот: в русском предлог есть, а в английском его нет. Например, <i>enter the room</i> — войти <b>в</b> комнату, <i>answer the question</i> — ответить <b>на</b> вопрос. А «обсудить план» — это просто <i>discuss the plan</i>, без <i>about</i>.")}
 <h3>with / by, to / of</h3>
-<p>Русский творительный и дательный падежи переводятся разными предлогами — смотря по смыслу.</p>
+<p>В английском нет падежей, как в русском, и их роль выполняют предлоги. Например, русский творительный падеж («написал карандашом», «написан Толстым») переводится то через <i>with</i>, то через <i>by</i> — в зависимости от смысла. А дательный падеж («дай сестре») — обычно через <i>to</i>.</p>
 ${T(["Предлог", "Значение", "Пример"], [
   ["<i>with</i>", "инструмент: чем", "<i>write <b>with</b> a pen, cut <b>with</b> a knife</i>"],
-  ["<i>by</i>", "исполнитель, способ, транспорт", "<i>written <b>by</b> Tolstoy, <b>by</b> bus, <b>by</b> post, <b>by</b> hand</i>"],
+  ["<i>by</i>", "исполнитель, способ, транспорт", "<i>a novel <b>by</b> Tolstoy, <b>by</b> bus, <b>by</b> post, <b>by</b> hand</i>"],
   ["<i>to</i>", "кому, куда", "<i>give it <b>to</b> him, explain <b>to</b> us, a letter <b>to</b> my friend</i>"],
   ["<i>of</i>", "чей, чего, часть целого", "<i>the leg <b>of</b> the table, a cup <b>of</b> tea, the capital <b>of</b> France</i>"]
 ])}`,
   ex: [
     { type: 'gap', task: 'Впишите предлог.', items: [
-      ["It depends ___ the weather.", "on"], ["Listen ___ me carefully.", "to"],
-      ["I'm looking ___ my keys. Have you seen them?", "for"], ["She is afraid ___ dogs.", "of"],
-      ["He is very good ___ maths.", "at"], ["Are you interested ___ history?", "in"],
-      ["We are proud ___ our son.", "of"], ["I agree ___ you.", "with"],
-      ["Who will pay ___ the tickets?", "for"], ["This town is famous ___ its old churches.", "for"],
-      ["Don't laugh ___ him!", "at"], ["She is married ___ a doctor.", "to"],
-      ["Wait ___ me here.", "for"], ["I'm tired ___ this noise.", "of"]
+      ["It depends ___ the weather.", "on"], ["Nobody was listening ___ the teacher.", "to"],
+      ["I'm looking ___ my keys. Have you seen them?", "for"], ["When she was a child, she was afraid ___ dogs.", "of"],
+      ["My son has always been good ___ maths.", "at"], ["Are you interested ___ history?", "in"],
+      ["We were proud ___ our son when he won the race.", "of"], ["I have never agreed ___ him.", "with"],
+      ["Who will pay ___ the tickets?", "for"], ["This town has been famous ___ its churches for centuries.", "for"],
+      ["Everybody laughed ___ his joke.", "at"], ["She is married ___ a doctor.", "to"],
+      ["We waited ___ the bus for twenty minutes.", "for"], ["I'm tired ___ this noise.", "of"]
     ]},
     { type: 'choice', task: 'Нужен ли предлог? Выберите вариант.', items: [
-      ["Please answer ___ my question.", ["—", "on", "to"]], ["We discussed ___ the plan.", ["—", "about", "on"]],
-      ["She entered ___ the room.", ["—", "into", "in"]], ["This bag belongs ___ Mary.", ["to", "—", "with"]],
-      ["I'm angry ___ you.", ["with", "on", "to"]], ["Look ___ this picture!", ["at", "on", "—"]]
+      ["He didn't answer ___ my question.", ["—", "on", "to"]], ["We discussed ___ the plan.", ["—", "about", "on"]],
+      ["She entered ___ the room.", ["—", "into", "in"]], ["This bag belonged ___ my grandmother.", ["to", "—", "with"]],
+      ["Why were you angry ___ me yesterday?", ["with", "on", "to"]], ["Look ___ this picture! What is the man doing?", ["at", "on", "—"]]
     ]},
     { type: 'translate', task: 'Переведите на английский.', items: [
-      ["Я ищу свой телефон.", "I am looking for my phone.|I'm looking for my phone."],
+      ["Я ищу свой телефон.", "I am looking for my phone."],
       ["Она боится темноты.", "She is afraid of the dark.|She's afraid of the dark.|She is afraid of darkness."],
       ["Все зависит от тебя.", "Everything depends on you.|It all depends on you."],
-      ["Он хорошо играет в шахматы.", "He is good at chess.|He plays chess well."],
-      ["Ответь на вопрос.", "Answer the question."]
+      ["Он хорошо играет в шахматы.", "He is good at chess.|He plays chess well.|He is good at playing chess.|He plays chess very well."],
+      ["Он не ответил на мой вопрос.", "He didn't answer my question.|He hasn't answered my question."]
     ]},
     { type: 'gap', task: 'Впишите with, by, to или of.', items: [
-      ["He wrote the letter ___ a pencil.", "with"], ["The novel was written ___ Tolstoy.", "by"],
-      ["We went to the seaside ___ train.", "by"], ["Cut the bread ___ this knife.", "with"],
-      ["Give the book ___ your sister.", "to"], ["Moscow is the capital ___ Russia.", "of"],
-      ["I'd like a cup ___ coffee.", "of"], ["Explain the rule ___ me, please.", "to"],
-      ["The town was destroyed ___ an earthquake.", "by"], ["The top ___ the mountain was covered ___ snow.", ["of", "with"]]
+      ["He wrote the letter ___ a pencil.", "with"], ["War and Peace is a novel ___ Tolstoy.", "by"],
+      ["We went to the seaside ___ train.", "by"], ["She cut the cake ___ a big knife.", "with"],
+      ["I gave my old books ___ my cousins.", "to"], ["Moscow is the capital ___ Russia.", "of"],
+      ["Bring me a cup ___ coffee, please.", "of"], ["The teacher explained the rule ___ us again.", "to"],
+      ["We sent the documents ___ post.", "by"], ["The top ___ the mountain is white ___ snow.", ["of", "with"]]
     ]},
     { type: 'listen', at: 2, task: 'Прослушайте предложение и соберите его из слов.', items: [
-      ["My sister is afraid of dogs, but she is good at swimming.", "Моя сестра боится собак, но хорошо плавает."],
-      ["It depends on the weather tomorrow.", "Это зависит от завтрашней погоды."],
+      ["My sister was afraid of dogs, but she was fond of cats.", "Моя сестра боялась собак, но любила кошек."],
+      ["It depends on tomorrow's weather.", "Это зависит от завтрашней погоды."],
       ["Are you interested in music or art?", "Тебе интересна музыка или искусство?"]
     ]}
   ]}

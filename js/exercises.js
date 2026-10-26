@@ -45,7 +45,7 @@ function renderEx(t, ex, ei) {
   const rows = [];
   const idBase = `x-${t.id}-${ei}`;
 
-  /* показанные ответы остаются до «Скрыть ответы» (или перезагрузки страницы): ввод, проверка и сброс их сохраняют */
+  /* показанные ответы остаются до «Скрыть ответы», «Заново» или перезагрузки страницы: ввод и проверка их сохраняют */
   let keysShown = false;
   const clearRow = row => {
     row.li.querySelectorAll('.ex__verdict').forEach(v => v.remove());
@@ -324,8 +324,9 @@ function renderEx(t, ex, ei) {
         row.opts.querySelectorAll('.ex__opt').forEach(b => { b.setAttribute('aria-pressed', 'false'); b.classList.remove(...OPT_MARKS); });
       }
       if (row.line) { row.pick = []; row.line.classList.remove(...LINE_MARKS); row.draw(); }
-      if (keysShown) showKey(row);
     });
+    /* упражнение начинается с чистого листа: от прошлой попытки не остается ни счета, ни отметок, ни показанных ответов */
+    if (keysShown) hideKeys();
     score.textContent = ''; score.className = 'ex__score';
     unlock();
     checked = false; marks = null; save();
