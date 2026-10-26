@@ -1,4 +1,4 @@
-BOOK.push({ n: 17, id: 'complex-subject', title: 'Сложное подлежащее (Complex Subject)',
+BOOK.push({ n: 18, id: 'complex-subject', title: 'Сложное подлежащее (Complex Subject)',
 intro: 'Конструкция «подлежащее + глагол + инфинитив»: <i>He <b>seems to know</b></i>, <i>She <b>is said to be</b> rich</i>. В русском она переводится вводными словами «кажется», «говорят», «вероятно».',
 topics: [
 
@@ -7,18 +7,25 @@ topics: [
 <p>В русском мы часто вставляем в предложение слова «кажется», «оказывается», «случайно», «вероятно». В английском их роль играет глагол-сказуемое, после которого идет инфинитив: «Он, кажется, знает ответ» — <i>He <b>seems to know</b> the answer</i>; «Я случайно встретил его» — <i>I <b>happened to meet</b> him</i>.</p>
 ${T(["Конструкция", "Значение", "Пример"], [
   ["<i>seem to V</i>", "кажется", "<i>He <b>seems to know</b> everything.</i> — Он, кажется, все знает."],
-  ["<i>appear to V</i>", "по-видимому, оказывается", "<i>She <b>appears to be</b> ill.</i>"],
+  ["<i>appear to V</i>", "по-видимому, оказывается", "<i>She <b>appears to be</b> ill.</i> — Она, по-видимому, больна."],
   ["<i>happen to V</i>", "случайно", "<i>I <b>happened to meet</b> him.</i> — Я случайно встретил его."],
-  ["<i>turn out to V</i>", "оказаться", "<i>The film <b>turned out to be</b> boring.</i>"],
+  ["<i>turn out to V</i>", "оказаться", "<i>The film <b>turned out to be</b> boring.</i> — Фильм оказался скучным."],
   ["<i>be likely to V</i>", "вероятно", "<i>It <b>is likely to rain</b>.</i> — Вероятно, пойдет дождь."],
   ["<i>be sure / certain to V</i>", "обязательно, наверняка", "<i>He <b>is sure to come</b>.</i> — Он обязательно придет."],
-  ["<i>be unlikely to V</i>", "вряд ли", "<i>She <b>is unlikely to win</b>.</i>"]
+  ["<i>be unlikely to V</i>", "вряд ли", "<i>She <b>is unlikely to win</b>.</i> — Она вряд ли победит."]
+])}
+<h3>Be likely, be sure, be unlikely</h3>
+<p>В последних трех строках таблицы роль «вводного слова» играет не глагол, а сочетание <i>be</i> с прилагательным: <i>likely</i> — «вероятный», <i>unlikely</i> — «маловероятный», <i>sure</i> и <i>certain</i> — «верный, несомненный». Поэтому глагол <i>be</i> здесь меняется по временам и согласуется с подлежащим, как обычно: <i>I am, she is, they were</i>. Чаще всего эти обороты говорят о будущем: насколько вероятно, что что-то случится. Обратите внимание: <i>He is sure to come</i> значит «он обязательно придет» — уверен говорящий, а не сам он. А «он уверен, что придет» будет <i>He is sure (that) he will come</i>.</p>
+${E([
+  ["Prices <b>are likely to go</b> up next year.", "Цены, вероятно, вырастут в следующем году."],
+  ["The new bridge <b>is certain to be</b> ready by May.", "Новый мост наверняка будет готов к маю."],
+  ["They <b>are unlikely to agree</b>.", "Они вряд ли согласятся."]
 ])}
 ${E([
   ["He seems <b>to be reading</b>.", "Кажется, он читает (сейчас)."],
   ["He seems <b>to have read</b> it.", "Кажется, он это прочитал (уже)."]
 ])}
-${N("Форма инфинитива показывает, когда происходит действие. Простой инфинитив — сейчас или в будущем (<i>seems to know</i>), Continuous — действие в процессе (<i>seems to be sleeping</i>), Perfect — раньше (<i>seems to have forgotten</i>). Подробнее о формах инфинитива — в теме 12.3.")}`,
+${N("Форма инфинитива показывает, когда происходит действие. Простой инфинитив — сейчас или в будущем (<i>seems to know</i>), Continuous — действие в процессе (<i>seems to be sleeping</i>), Perfect — раньше (<i>seems to have forgotten</i>). Подробнее о формах инфинитива — в теме 13.3.")}`,
   ex: [
     { type: 'gap', task: 'Перепишите предложение с Complex Subject (впишите недостающую часть).', items: [
       ["It seems that he knows the answer. → He seems ___ the answer.", "to know"],
@@ -48,11 +55,14 @@ ${N("Форма инфинитива показывает, когда проис
   rule: `
 <p>В новостях и официальных текстах часто передают чье-то мнение, не называя источник: «говорят», «считается», «сообщается». В английском для этого используют безличный пассив: <i>He <b>is said to be</b> a genius</i> — говорят, что он гений.</p>
 ${T(["Конструкция", "Пример"], [
-  ["<i>It is said / believed / reported / thought that + предложение</i>", "<i><b>It is thought that</b> the painting is a fake.</i>"],
-  ["<i>Подлежащее + is said + to V</i> (одновременно)", "<i>He <b>is said to be</b> a genius.</i>"],
-  ["<i>… + to be V-ing</i> (происходит сейчас)", "<i>He <b>is said to be working</b> on a new novel.</i>"],
-  ["<i>… + to have V3</i> (было раньше)", "<i>The thief <b>is believed to have left</b> the city.</i>"]
+  ["<i>It is said / believed / reported / thought that + предложение</i>", "<i><b>It is thought that</b> the painting is a fake.</i> — Считается, что картина — подделка."],
+  ["<i>Подлежащее + is said + to V</i> (одновременно)", "<i>He <b>is said to be</b> a genius.</i> — Говорят, что он гений."],
+  ["<i>… + to be V-ing</i> (происходит сейчас)", "<i>He <b>is said to be working</b> on a new novel.</i> — Говорят, что он сейчас работает над новым романом."],
+  ["<i>… + to have V3</i> (было раньше)", "<i>The thief <b>is believed to have left</b> the city.</i> — Считается, что вор уже уехал из города."]
 ])}
+<h3>Как построить такое предложение</h3>
+<p>Одну и ту же мысль можно выразить двумя способами. Первый проще: начать с <i>It is said that…</i> («говорят, что…»), а дальше поставить обычное предложение без изменений. Второй короче и чаще встречается в новостях: того, о ком идет речь, ставят на место подлежащего, затем идет <i>is said</i> (или <i>is believed, is reported</i>), а действие передают инфинитивом. Так, из <i>It is said that he is a genius</i> получается <i>He is said to be a genius</i>. По форме <i>is said, is believed</i> — это пассив, о нем подробно рассказано в разделе 10.</p>
+<p>Если говорили или думали раньше, в прошлом, <i>be</i> ставят в прошедшее время: <i>He <b>was said to be</b> rich</i> — говорили, что он богат. Форма инфинитива при этом выбирается так же, как в теме 18.1: простой — то же время, Continuous — процесс, Perfect — действие случилось раньше.</p>
 ${E([
   ["People believe the ship sank in 1912. → The ship <b>is believed to have sunk</b> in 1912.", "Считается, что корабль затонул в 1912 году."],
   ["<b>It is expected that</b> prices will rise.", "Ожидается, что цены вырастут."]

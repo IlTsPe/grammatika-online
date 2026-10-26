@@ -1,4 +1,4 @@
-BOOK.push({ n: 13, id: 'gerund', title: 'Герундий',
+BOOK.push({ n: 14, id: 'gerund', title: 'Герундий',
 intro: 'Герундий — форма на <i>-ing</i>, которая работает как существительное. Сначала разберите, после каких глаголов и предлогов он нужен, затем — чем он отличается от инфинитива.',
 topics: [
 
@@ -6,15 +6,24 @@ topics: [
   rule: `
 <p>Герундий — это форма глагола на <i>-ing</i>, которая называет действие как предмет. С ним можно обращаться как с существительным: <i><b>Swimming</b> is good for your health</i> — «Плавание полезно для здоровья». Точного аналога в русском нет, поэтому герундий переводят по-разному: существительным, инфинитивом или деепричастием.</p>
 ${T(["Где", "Слова", "Пример"], [
-  ["после глаголов", "<i>enjoy, finish, mind, avoid, suggest, keep, miss, practise, deny, imagine, consider, give up, put off, can't stand, can't help</i>", "<i>I enjoy <b>walking</b>. Would you mind <b>opening</b> the window?</i>"],
-  ["после предлогов", "<i>in, at, of, for, about, without, before, after, instead of, by</i>", "<i>Thank you for <b>coming</b>. He left without <b>saying</b> goodbye.</i>"],
-  ["после сочетания «прилагательное + предлог»", "<i>good at, interested in, afraid of, fond of, tired of, proud of</i>", "<i>She is good at <b>drawing</b>.</i>"],
-  ["после выражений", "<i>it's no use, it's worth, there's no point in, look forward to, be used to</i>", "<i>It's worth <b>seeing</b>. I look forward to <b>hearing</b> from you.</i>"],
-  ["как подлежащее", "—", "<i><b>Smoking</b> is bad for you.</i>"]
+  ["после глаголов", "<i>enjoy, finish, mind, avoid, suggest, keep, miss, practise, deny, imagine, consider, give up, put off, can't stand, can't help</i>", "<i>I enjoy <b>walking</b>. Would you mind <b>opening</b> the window?</i> — Я люблю гулять. Не могли бы вы открыть окно?"],
+  ["после предлогов", "<i>in, at, of, for, about, without, before, after, instead of, by</i>", "<i>Thank you for <b>coming</b>. He left without <b>saying</b> goodbye.</i> — Спасибо, что пришли. Он ушел, не попрощавшись."],
+  ["после сочетания «прилагательное + предлог»", "<i>good at, interested in, afraid of, fond of, tired of, proud of</i>", "<i>She is good at <b>drawing</b>.</i> — Она хорошо рисует."],
+  ["после выражений", "<i>it's no use, it's worth, there's no point in, look forward to, be used to</i>", "<i>It's worth <b>seeing</b>. I look forward to <b>hearing</b> from you.</i> — Это стоит посмотреть. Жду вашего ответа."],
+  ["как подлежащее", "—", "<i><b>Smoking</b> is bad for you.</i> — Курить вредно."]
 ])}
+<h3>Устойчивые выражения с герундием</h3>
+<p>Некоторые выражения из таблицы нельзя перевести слово в слово, поэтому их лучше запомнить целиком вместе со значением. Так, <i>can't help doing</i> значит «не могу не делать», то есть человек делает что-то невольно, не может удержаться. <i>Can't stand doing</i> — «терпеть не могу что-то делать». <i>It's no use doing</i> и <i>there's no point in doing</i> значат «бесполезно, нет смысла что-то делать». <i>It's worth doing</i> — «это стоит сделать», то есть дело того стоит. Во всех этих выражениях действие называется как предмет, поэтому нужен именно герундий.</p>
+${E([
+  ["I <b>can't help laughing</b> when I see him.", "Не могу не смеяться, когда вижу его."],
+  ["She <b>can't stand waiting</b> in queues.", "Она терпеть не может стоять в очередях."],
+  ["<b>It's no use crying</b> — it won't help.", "Бесполезно плакать: это не поможет."],
+  ["<b>There's no point in arguing</b> with him.", "Нет смысла спорить с ним."]
+])}
+<p>Выражение <i>be used to doing</i> значит «быть привычным к чему-то, привыкнуть»: <i>I <b>am used to getting up</b> early</i> — я привык рано вставать. Его легко спутать с <i>used to do</i> — «раньше делал, а теперь нет»: <i>I <b>used to get up</b> early</i> — раньше я вставал рано. В первом случае <i>to</i> — предлог, и после него идет герундий, а во втором — частица инфинитива. Подробно обе конструкции разобраны в теме 2.11.</p>
 ${N("В выражениях <i>look forward to</i>, <i>be used to</i>, <i>object to</i> слово <i>to</i> — это предлог, а не частица инфинитива. После предлога глагол ставится в форму на <i>-ing</i>: <i>I look forward to <b>seeing</b> you</i>, а не <i>to see you</i>.")}
 <h3>Кто выполняет действие</h3>
-<p>Бывает, что действие герундия выполняет не тот, о ком предложение, а кто-то другой. Тогда этого человека называют перед герундием — притяжательным местоимением или существительным с <i>'s</i>: <i>I don't mind <b>his</b> smoking</i>. В разговорной речи говорят проще: <i>I don't mind <b>him</b> smoking</i> — это тоже правильно.</p>
+<p>Бывает, что действие герундия выполняет не тот, о ком предложение, а кто-то другой. Тогда этого человека называют перед герундием — притяжательным местоимением или существительным с <i>'s</i>: <i>I don't mind <b>his</b> smoking</i> — я не против того, что он курит. В разговорной речи говорят проще: <i>I don't mind <b>him</b> smoking</i> — это тоже правильно.</p>
 ${E([
   ["I don't mind <b>his coming</b> late. = I don't mind <b>him coming</b> late.", "Я не против того, что он приходит поздно."],
   ["I insist on <b>your going</b> there.", "Я настаиваю, чтобы ты пошел туда."],
@@ -72,6 +81,16 @@ ${T(["Глагол", "+ -ing", "+ to V"], [
   ["<i>forget</i>", "<i>forget <b>meeting</b> her</i> — забыть, что встречал", "<i>forget <b>to meet</b> her</i> — забыть встретить"],
   ["<i>try</i>", "<i>try <b>opening</b> the window</i> — попробовать (как способ)", "<i>try <b>to open</b> it</i> — пытаться (с усилием)"],
   ["<i>regret</i>", "<i>regret <b>saying</b></i> — жалеть, что сказал", "<i>regret <b>to tell</b> you</i> — с сожалением сообщить"]
+])}
+<p>В этих парах есть общая логика. Герундий обычно указывает на действие, которое уже было или уже идет: помню то, что сделал; жалею о том, что сказал; бросаю то, чем занимался. А инфинитив с <i>to</i> (в таблице он обозначен как <i>to V</i>) смотрит вперед, на действие, которое только предстоит сделать: не забыть сделать, остановиться, чтобы сделать. Так проще запомнить, какой смысл у какой формы.</p>
+<p>Отдельно стоит глагол <i>try</i>. С герундием он значит «попробовать сделать что-то в виде опыта, чтобы посмотреть, поможет ли это». С инфинитивом — «пытаться, стараться сделать что-то трудное», причем часто неудачно.</p>
+${E([
+  ["He <b>stopped smoking</b> last year.", "Он бросил курить в прошлом году."],
+  ["He <b>stopped to smoke</b> a cigarette.", "Он остановился, чтобы выкурить сигарету."],
+  ["I <b>remember locking</b> the door.", "Я помню, что запер дверь. (это уже было)"],
+  ["<b>Remember to lock</b> the door!", "Не забудь запереть дверь! (это еще предстоит)"],
+  ["It's hot. <b>Try opening</b> the window.", "Жарко. Попробуй открыть окно. (может, станет легче)"],
+  ["I <b>tried to open</b> the window, but it was stuck.", "Я пытался открыть окно, но его заклинило."]
 ])}
 ${N("После <i>would like</i>, <i>would love</i> и <i>would prefer</i> нужен только инфинитив: <i>I'd like <b>to go</b></i>. А после простого <i>like</i>, без <i>would</i>, можно и так и так: <i>I like reading</i> и <i>I like to read</i>.")}`,
   ex: [

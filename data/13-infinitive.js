@@ -1,4 +1,4 @@
-BOOK.push({ n: 12, id: 'infinitive', title: 'Инфинитив',
+BOOK.push({ n: 13, id: 'infinitive', title: 'Инфинитив',
 intro: 'Когда инфинитив употребляется с частицей <i>to</i>, а когда без нее; инфинитив цели и конструкции с <i>too / enough</i>; формы инфинитива.',
 topics: [
 
@@ -6,18 +6,21 @@ topics: [
   rule: `
 <p>Инфинитив — это начальная форма глагола, и обычно перед ней стоит частица <i>to</i>: <i>I want <b>to go</b></i>. Но есть несколько случаев, когда <i>to</i> не нужна — например, после модальных глаголов (<i>can go</i>) и после <i>let</i> и <i>make</i>. Эти случаи немногочисленны, и их стоит запомнить.</p>
 ${T(["Без to", "Пример"], [
-  ["после модальных глаголов (кроме ought to, have to, be to)", "<i>I can <b>swim</b>. You must <b>go</b>.</i>"],
-  ["после <i>make</i> и <i>let</i> (заставить, позволить)", "<i>She made me <b>cry</b>. Let him <b>go</b>.</i>"],
-  ["после <i>had better</i> и <i>would rather</i>", "<i>You'd better <b>stay</b>. I'd rather <b>walk</b>.</i>"],
-  ["после <i>see, hear, watch, feel</i> + дополнение", "<i>I saw him <b>leave</b>.</i>"],
-  ["после <i>help</i> — можно и так, и так", "<i>Help me (<b>to</b>) <b>carry</b> it.</i>"]
+  ["после модальных глаголов (кроме ought to, have to, be to)", "<i>I can <b>swim</b>. You must <b>go</b>.</i> — Я умею плавать. Ты должен идти."],
+  ["после <i>make</i> и <i>let</i> (заставить, позволить)", "<i>She made me <b>cry</b>. Let him <b>go</b>.</i> — Она довела меня до слез. Отпусти его."],
+  ["после <i>had better</i> и <i>would rather</i>", "<i>You'd better <b>stay</b>. I'd rather <b>walk</b>.</i> — Тебе лучше остаться. Я лучше пройдусь пешком."],
+  ["после <i>see, hear, watch, feel</i> + дополнение", "<i>I saw him <b>leave</b>.</i> — Я видел, как он ушел."],
+  ["после <i>help</i> — можно и так, и так", "<i>Help me (<b>to</b>) <b>carry</b> it.</i> — Помоги мне это донести."]
 ])}
+<p>Обороты <i>had better</i> и <i>would rather</i> в речи сокращаются одинаково — до <i>'d</i>: <i>You'd better</i> = <i>You had better</i>, <i>I'd rather</i> = <i>I would rather</i>. <i>Had better</i> («лучше бы») дает настойчивый совет, о нем рассказано в теме про <i>should</i> в разделе 9. А <i>would rather</i> («я бы предпочел», «лучше я…») говорит о собственном выборе: <i>I'd rather stay at home</i> — я лучше останусь дома. Отрицание у обоих — с <i>not</i> перед глаголом: <i>You'd better not go</i>, <i>I'd rather not say</i>.</p>
+<p>После глаголов восприятия <i>see, hear, watch, feel</i> сначала называют человека, а потом то, что он делал: <i>I saw <b>him</b> <b>leave</b></i> — я видел, как он ушел. Частица <i>to</i> здесь не нужна. Такое сочетание «глагол + кто-то + действие» называется сложным дополнением; подробно оно разобрано в разделе 17 «Complex Object».</p>
 ${T(["С to (самые частые глаголы)", "Пример"], [
-  ["<i>want, would like, decide, hope, plan, agree, refuse, promise, learn, manage, forget, try, offer, need</i>", "<i>She decided <b>to leave</b>.</i>"],
-  ["после прилагательных", "<i>It's easy <b>to understand</b>. I'm glad <b>to see</b> you.</i>"],
-  ["после вопросительных слов", "<i>I don't know what <b>to do</b>. Show me how <b>to use</b> it.</i>"],
-  ["после <i>the first, the last, the only</i>", "<i>He was the first <b>to come</b>.</i>"]
+  ["<i>want, would like, decide, hope, plan, agree, refuse, promise, learn, manage, forget, try, offer, need</i>", "<i>She decided <b>to leave</b>.</i> — Она решила уйти."],
+  ["после прилагательных", "<i>It's easy <b>to understand</b>. I'm glad <b>to see</b> you.</i> — Это легко понять. Рад тебя видеть."],
+  ["после вопросительных слов", "<i>I don't know what <b>to do</b>. Show me how <b>to use</b> it.</i> — Я не знаю, что делать. Покажи мне, как этим пользоваться."],
+  ["после <i>the first, the last, the only</i>", "<i>He was the first <b>to come</b>.</i> — Он пришел первым."]
 ])}
+<p>Инфинитив после <i>the first, the last, the only</i> показывает, кто первым, последним или единственным сделал что-то. По-русски его обычно переводят глаголом в прошедшем или настоящем времени: <i>She was the last to leave</i> — она ушла последней, <i>He is the only one to know</i> — только он один знает.</p>
 ${N("После <i>make</i> («заставить») частица <i>to</i> не нужна: <i>They made him <b>work</b></i>. Но если это предложение перевести в пассив, <i>to</i> возвращается: <i>He was made <b>to work</b></i> — его заставили работать.")}
 <h3>Устойчивые обороты с инфинитивом</h3>
 <p>Некоторые обороты с инфинитивом превратились в устойчивые вводные выражения, как русские «по правде говоря» или «мягко говоря». Они показывают отношение говорящего к тому, что он говорит, и обычно отделяются запятой.</p>
@@ -72,15 +75,17 @@ ${T(["Оборот", "Перевод"], [
 <p>Инфинитив часто отвечает на вопрос «зачем?» и переводится словом «чтобы»: <i>I went to the shop <b>to buy</b> bread</i> — я пошел в магазин, чтобы купить хлеба. Он же стоит после <i>too</i> («слишком») и <i>enough</i> («достаточно»): <i>too young <b>to drive</b></i> — слишком молод, чтобы водить.</p>
 ${E([
   ["I went to the shop <b>to buy</b> bread.", "Я пошел в магазин, чтобы купить хлеб."],
-  ["She works hard <b>in order to</b> pass the exam.", "in order to — книжнее, «для того чтобы»."],
-  ["He left early <b>so as not to</b> be late.", "Отрицательная цель: so as not to / in order not to."]
+  ["She works hard <b>in order to</b> pass the exam.", "Она много занимается, чтобы сдать экзамен. (in order to — книжнее, «для того чтобы»)"],
+  ["He left early <b>so as not to</b> be late.", "Он вышел пораньше, чтобы не опоздать. (отрицательная цель: so as not to / in order not to)"]
 ])}
+<p>Обычный инфинитив цели с <i>to</i> подходит для большинства случаев. Обороты <i>in order to</i> и <i>so as to</i> значат то же самое, но звучат книжнее и подчеркивают, что речь именно о цели. Они особенно нужны, когда цель отрицательная — «чтобы не»: одно <i>not to</i> в значении цели звучит неестественно, поэтому говорят <i>so as not to</i> или <i>in order not to</i>. Например, <i>I wrote it down so as not to forget</i> — я записал это, чтобы не забыть.</p>
 ${T(["Конструкция", "Значение", "Пример"], [
-  ["<i>too + прил. + to V</i>", "слишком …, чтобы", "<i>He is <b>too young to drive</b>.</i>"],
-  ["<i>прил. + enough + to V</i>", "достаточно …, чтобы", "<i>She is <b>old enough to drive</b>.</i>"],
-  ["<i>enough + сущ. + to V</i>", "достаточно чего-то", "<i>We have <b>enough money to buy</b> it.</i>"],
-  ["<i>too … for someone to V</i>", "для кого-то", "<i>The box is <b>too heavy for me to carry</b>.</i>"]
+  ["<i>too + прил. + to V</i>", "слишком …, чтобы", "<i>He is <b>too young to drive</b>.</i> — Он слишком молод, чтобы водить машину."],
+  ["<i>прил. + enough + to V</i>", "достаточно …, чтобы", "<i>She is <b>old enough to drive</b>.</i> — Она достаточно взрослая, чтобы водить машину."],
+  ["<i>enough + сущ. + to V</i>", "достаточно чего-то", "<i>We have <b>enough money to buy</b> it.</i> — У нас достаточно денег, чтобы это купить."],
+  ["<i>too … for someone to V</i>", "для кого-то", "<i>The box is <b>too heavy for me to carry</b>.</i> — Коробка слишком тяжелая, мне ее не унести."]
 ])}
+<p>Конструкция с <i>for</i> нужна, когда действие инфинитива выполняет не подлежащее, а кто-то другой. В предложении <i>The box is too heavy for me to carry</i> тяжелая — коробка, а нести ее должен «я». Этого человека называют после <i>for</i>, а уже потом ставят инфинитив: <i>for me to carry</i> — «чтобы я мог нести». Так же говорят и с <i>enough</i>: <i>The text is easy enough for children to read</i> — текст достаточно простой, чтобы его могли прочитать дети.</p>
 ${N("Место <i>enough</i> зависит от соседнего слова: оно стоит <b>после</b> прилагательного (<i>big enough</i>), но <b>перед</b> существительным (<i>enough time</i>). И помните: «чтобы» не переводится как <i>for</i> с глаголом — правильно <i>I came <b>to see</b> you</i>, а не <i>for see you</i>.")}`,
   ex: [
     { type: 'gap', task: 'Закончите предложение инфинитивом цели (глагол в скобках).', items: [
@@ -116,12 +121,15 @@ ${T(["Форма", "Актив", "Пассив"], [
   ["Perfect Continuous — длилось до", "<i>to <b>have been writing</b></i>", "—"]
 ])}
 ${E([
-  ["I'm glad <b>to see</b> you.", "Рад видеть (сейчас)."],
-  ["I'm glad <b>to have seen</b> you.", "Рад, что повидал (уже)."],
-  ["This letter must <b>be answered</b> today.", "На письмо нужно ответить (пассив)."],
-  ["She seems <b>to be sleeping</b>.", "Кажется, она спит (сейчас, процесс)."],
-  ["He seems <b>to have forgotten</b> about it.", "Кажется, он забыл (раньше)."]
+  ["I'm glad <b>to see</b> you.", "Рад тебя видеть. (сейчас)"],
+  ["I'm glad <b>to have seen</b> you.", "Рад, что повидал тебя. (уже)"],
+  ["This letter must <b>be answered</b> today.", "На это письмо нужно ответить сегодня. (пассив)"],
+  ["She seems <b>to be sleeping</b>.", "Кажется, она спит. (сейчас, процесс)"],
+  ["He seems <b>to have forgotten</b> about it.", "Кажется, он об этом забыл. (раньше)"],
+  ["They seem <b>to have been waiting</b> for hours.", "Похоже, они ждут уже несколько часов. (длилось до момента речи)"]
 ])}
+<p>Пассивный инфинитив (<i>to be done</i>) нужен, когда подлежащее не выполняет действие, а действие совершается над ним: <i>I want to be invited</i> — я хочу, чтобы меня пригласили. После модальных глаголов он стоит без <i>to</i>: <i>must be answered</i>, <i>can be solved</i> (о пассиве с модальными — раздел 10 «Passive Voice»). Отрицательная частица <i>not</i> ставится перед любой формой инфинитива: <i>I'm sorry <b>not to have sent</b> it</i> — простите, что не отправил.</p>
+<p>Оборот <i>seem to</i> («кажется, похоже») — самый частый спутник разных форм инфинитива, потому что по форме инфинитива видно, о каком времени догадка: <i>seems to be</i> — сейчас, <i>seems to have been</i> — раньше. Такие предложения называются сложным подлежащим; подробно они разобраны в разделе 18 «Complex Subject».</p>
 ${N("Перфектный инфинитив после <i>seem, be lucky, be sorry, be glad</i> показывает, что действие произошло раньше: <i>I'm sorry <b>to have disturbed</b> you</i> — простите, что побеспокоил.")}`,
   ex: [
     { type: 'choice', task: 'Выберите нужную форму инфинитива.', items: [

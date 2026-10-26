@@ -1,4 +1,4 @@
-BOOK.push({ n: 7, id: 'adjectives', title: 'Степени сравнения прилагательных',
+BOOK.push({ n: 8, id: 'adjectives', title: 'Степени сравнения прилагательных',
 intro: 'Как образуются сравнительная и превосходная степени, какие есть исключения и устойчивые конструкции сравнения. В конце — разница между прилагательным и наречием.',
 topics: [
 
@@ -22,7 +22,11 @@ ${T(["", "Сравнительная", "Превосходная"], [
   ["<i>little</i>", "<i>less</i>", "<i>the least</i>"],
   ["<i>old</i>", "<i>older / elder</i>", "<i>the oldest / eldest</i>"]
 ])}
-${N("Некоторые двусложные прилагательные могут образовывать формы и через <i>-er</i>: <i>clever — cleverer, quiet — quieter, simple — simpler, narrow — narrower</i>. Выбирайте один способ: либо окончание <i>-er / -est</i>, либо <i>more / most</i>. Вместе их не используют, поэтому <i>more bigger</i> и <i>the most best</i> — ошибки. А формы <i>elder</i> и <i>eldest</i> говорят только о членах семьи: <i>my <b>elder</b> brother</i> — мой старший брат.")}`,
+${N("Некоторые двусложные прилагательные могут образовывать формы и через <i>-er</i>: <i>clever — cleverer, quiet — quieter, simple — simpler, narrow — narrower</i>. Выбирайте один способ: либо окончание <i>-er / -est</i>, либо <i>more / most</i>. Вместе их не используют, поэтому <i>more bigger</i> и <i>the most best</i> — ошибки. А формы <i>elder</i> и <i>eldest</i> говорят только о членах семьи: <i>my <b>elder</b> brother</i> — мой старший брат.")}
+<h3>Farther и further</h3>
+<p>У <i>far</i> («далеко, далекий») две пары форм. Когда речь идет о расстоянии, подходят обе: <i>farther</i> и <i>further</i> — «дальше». Например, <i>My house is <b>farther / further</b> from the school than yours</i> — мой дом дальше от школы, чем твой. Но у <i>further</i> есть еще значение «дальнейший, дополнительный», и тогда <i>farther</i> не годится: <i>for <b>further</b> information</i> — для получения дополнительной информации.</p>
+<h3>Good и well, bad и badly</h3>
+<p>В таблице исключений рядом стоят прилагательное и наречие: <i>good</i> («хороший») и <i>well</i> («хорошо»), <i>bad</i> («плохой») и <i>badly</i> («плохо»). Степени сравнения у них общие: <i>She sings <b>better</b> than me</i> — она поет лучше меня. Чем прилагательное отличается от наречия, рассказано в следующей теме этого раздела.</p>`,
   ex: [
     { type: 'gap', task: 'Поставьте прилагательное в сравнительную степень.', items: [
       ["Moscow is ___ (big) than Tver.", "bigger"], ["Yesterday was ___ (hot) than today.", "hotter"],
@@ -57,18 +61,21 @@ ${N("Некоторые двусложные прилагательные мог
   rule: `
 <p>Прилагательное описывает предмет и отвечает на вопрос <i>какой?</i>: <i>a careful driver</i> — осторожный водитель. Наречие описывает действие и отвечает на вопрос <i>как?</i>: <i>he drives carefully</i> — он водит осторожно. Большинство наречий получается из прилагательного, если добавить окончание <i>-ly</i>.</p>
 ${T(["Прилагательное", "Наречие", "Пример"], [
-  ["<i>quick</i>", "<i>quick<b>ly</b></i>", "<i>He is a quick runner. He runs <b>quickly</b>.</i>"],
-  ["<i>careful</i>", "<i>careful<b>ly</b></i>", "<i>Drive <b>carefully</b>!</i>"],
-  ["<i>happy</i>", "<i>happ<b>ily</b></i>", "<i>They lived <b>happily</b>.</i>"],
-  ["<i>good</i>", "<i><b>well</b></i>", "<i>She is a good singer. She sings <b>well</b>.</i>"],
-  ["<i>fast, hard, late, early</i>", "те же: <i>fast, hard, late, early</i>", "<i>He works <b>hard</b>. Don't come <b>late</b>.</i>"]
+  ["<i>quick</i>", "<i>quick<b>ly</b></i>", "<i>He is a quick runner. He runs <b>quickly</b>.</i> — Он быстрый бегун. Он быстро бегает."],
+  ["<i>careful</i>", "<i>careful<b>ly</b></i>", "<i>Drive <b>carefully</b>!</i> — Веди машину осторожно!"],
+  ["<i>happy</i>", "<i>happ<b>ily</b></i>", "<i>They lived <b>happily</b>.</i> — Они жили счастливо."],
+  ["<i>good</i>", "<i><b>well</b></i>", "<i>She is a good singer. She sings <b>well</b>.</i> — Она хорошая певица. Она хорошо поет."],
+  ["<i>fast, hard, late, early</i>", "те же: <i>fast, hard, late, early</i>", "<i>He works <b>hard</b>. Don't come <b>late</b>.</i> — Он много и усердно работает. Не приходи поздно."]
 ])}
+<p>Обратите внимание на написание: если прилагательное оканчивается на согласную + <i>y</i>, то <i>y</i> меняется на <i>i</i>: <i>happy → happily</i>, <i>easy → easily</i>. А у слов <i>fast, hard, late, early</i> наречие совпадает с прилагательным: <i>a <b>fast</b> car</i> — быстрая машина, <i>drive <b>fast</b></i> — быстро ехать. Формы <i>fastly</i> не существует, а <i>hardly</i> и <i>lately</i> — это отдельные слова с другим значением, о них ниже.</p>
 <h3>Ловушки</h3>
 ${E([
   ["He works <b>hard</b>. — He <b>hardly</b> works.", "Работает усердно. — Почти не работает."],
   ["I came <b>late</b>. — I haven't seen him <b>lately</b>.", "Пришел поздно. — Не видел его в последнее время."],
-  ["She looks <b>happy</b>. The soup smells <b>good</b>.", "После look, feel, smell, taste, sound, seem, be — прилагательное."]
+  ["She looks <b>happy</b>. The soup smells <b>good</b>.", "Она выглядит счастливой. Суп вкусно пахнет. (после look, feel, smell, taste, sound, seem, be — прилагательное)"]
 ])}
+<h3>Прилагательное после look, feel, smell</h3>
+<p>Глаголы <i>look</i> («выглядеть»), <i>feel</i> («чувствовать себя»), <i>smell</i> («пахнуть»), <i>taste</i> («быть на вкус»), <i>sound</i> («звучать»), <i>seem</i> («казаться») и <i>be</i> («быть») здесь не описывают действие, а связывают подлежащее с его признаком. Иначе говоря, они отвечают на вопрос «какой?», а не «как?», поэтому после них ставят прилагательное, а не наречие. Так, <i>She looks happy</i> значит, что она счастливая на вид, а <i>I feel bad</i> — мне плохо (а не «я плохо умею чувствовать»). Сравните: <i>She looked <b>carefully</b> at the map</i> — она внимательно посмотрела на карту. Здесь <i>look</i> значит «смотреть», то есть это обычное действие, и после него нужно наречие.</p>
 ${N("Не каждое слово на <i>-ly</i> — наречие. <i>Friendly, lovely, lonely, silly</i> — это прилагательные. Если нужно сказать «как?», используют оборот: <i>in a friendly way</i> — по-дружески.")}`,
   ex: [
     { type: 'choice', task: 'Выберите прилагательное или наречие.', items: [
@@ -102,15 +109,19 @@ ${N("Не каждое слово на <i>-ly</i> — наречие. <i>Friendl
   rule: `
 <p>Кроме простого сравнения с <i>than</i>, есть еще несколько полезных конструкций. С ними можно сказать «такой же, как», «чем больше, тем лучше» или «все темнее и темнее». Они часто встречаются и в речи, и в упражнениях, поэтому их стоит выучить как готовые схемы.</p>
 ${T(["Конструкция", "Значение", "Пример"], [
-  ["<i>as + прил. + as</i>", "такой же, как", "<i>She is <b>as tall as</b> her mother.</i>"],
-  ["<i>not as / not so + прил. + as</i>", "не такой, как", "<i>It is<b>n't as cold as</b> yesterday.</i>"],
-  ["<i>the + сравн., the + сравн.</i>", "чем…, тем…", "<i><b>The more</b> you read, <b>the more</b> you know.</i>"],
-  ["<i>сравн. + and + сравн.</i>", "все более и более", "<i>It's getting <b>colder and colder</b>.</i>"],
-  ["<i>much / far / a lot + сравн.</i>", "гораздо, намного", "<i>This car is <b>much faster</b>.</i>"],
-  ["<i>a bit / a little / slightly + сравн.</i>", "чуть-чуть", "<i>I feel <b>a bit better</b>.</i>"],
-  ["<i>twice / three times as … as</i>", "в два / три раза", "<i>It's <b>twice as big as</b> mine.</i>"],
-  ["<i>the same as / different from</i> (брит. также <i>different to</i>)", "такой же / другой", "<i>My bag is <b>the same as</b> yours.</i>"]
+  ["<i>as + прил. + as</i>", "такой же, как", "<i>She is <b>as tall as</b> her mother.</i> — Она такого же роста, как ее мама."],
+  ["<i>not as / not so + прил. + as</i>", "не такой, как", "<i>It is<b>n't as cold as</b> yesterday.</i> — Сегодня не так холодно, как вчера."],
+  ["<i>the + сравн., the + сравн.</i>", "чем…, тем…", "<i><b>The more</b> you read, <b>the more</b> you know.</i> — Чем больше читаешь, тем больше знаешь."],
+  ["<i>сравн. + and + сравн.</i>", "все более и более", "<i>It's getting <b>colder and colder</b>.</i> — Становится все холоднее и холоднее."],
+  ["<i>much / far / a lot + сравн.</i>", "гораздо, намного", "<i>This car is <b>much faster</b>.</i> — Эта машина гораздо быстрее."],
+  ["<i>a bit / a little / slightly + сравн.</i>", "чуть-чуть", "<i>I feel <b>a bit better</b>.</i> — Мне чуть-чуть лучше."],
+  ["<i>twice / three times as … as</i>", "в два / три раза", "<i>It's <b>twice as big as</b> mine.</i> — Он в два раза больше моего."],
+  ["<i>the same as / different from</i> (брит. также <i>different to</i>)", "такой же / другой", "<i>My bag is <b>the same as</b> yours.</i> — У меня такая же сумка, как у тебя."]
 ])}
+<h3>Как устроены эти конструкции</h3>
+<p>В конструкции <i>as … as</i> прилагательное стоит в обычной форме, без <i>-er</i> и <i>more</i>, потому что предметы равны: <i>as big as</i>, а не <i>as bigger as</i>. В отрицании она значит, что первый предмет «уступает» второму: <i>It isn't as cold as yesterday</i> — то есть вчера было холоднее. Чтобы сказать «в два, в три раза больше», перед ней ставят <i>twice</i> («вдвое») или <i>three times</i> («втрое»).</p>
+<p>В конструкции «чем…, тем…» перед каждой сравнительной степенью стоит <i>the</i>, хотя по-русски никакого артикля не слышно: <i>The sooner, the better</i> — чем раньше, тем лучше. А повтор сравнительной степени через <i>and</i> показывает, что признак постепенно нарастает; обычно его используют с глаголами <i>get</i> и <i>become</i> («становиться»). У длинных прилагательных повторяют только <i>more</i>: <i>more and more interesting</i> — все интереснее и интереснее.</p>
+<p>Наконец, <i>the same as</i> значит «такой же, как», а <i>different from</i> — «не такой, как, отличается от»: <i>Your bag is <b>different from</b> mine</i> — твоя сумка не такая, как моя. Предлог здесь именно <i>from</i>, а не <i>than</i>, потому что это не сравнительная степень.</p>
 ${N("Чтобы усилить сравнение («намного лучше»), используют <i>much</i>, <i>far</i> или <i>a lot</i>: <i>much better</i>. Слово <i>very</i> перед сравнительной степенью не ставят, поэтому <i>very better</i> — ошибка.")}`,
   ex: [
     { type: 'choice', task: 'Выберите правильный вариант.', items: [

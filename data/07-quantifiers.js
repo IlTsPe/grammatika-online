@@ -1,20 +1,24 @@
-BOOK.push({ n: 6, id: 'quantifiers', title: 'Much, many, (a) little, (a) few',
-intro: 'Слова количества выбираются по тому, исчисляемое ли существительное. Повторите тему 3.3, если сомневаетесь, к какой группе относится слово.',
+BOOK.push({ n: 7, id: 'quantifiers', title: 'Much, many, (a) little, (a) few',
+intro: 'Слова количества выбираются по тому, исчисляемое ли существительное. Повторите тему 4.3, если сомневаетесь, к какой группе относится слово.',
 topics: [
 
 { id: 'q-much-many', level: 'A2', title: 'Much, many, a lot of', sub: 'How much money? How many people?',
   rule: `
 <p>И <i>many</i>, и <i>much</i> значат «много», а различаются тем, с какими существительными сочетаются. <i>Many</i> ставят перед исчисляемыми во множественном числе — тем, что можно посчитать: <i>many books, many people</i>. <i>Much</i> — перед неисчисляемыми: <i>much time, much money</i>.</p>
 ${T(["Слово", "С чем", "Где чаще", "Пример"], [
-  ["<i>many</i>", "исчисляемые", "вопросы, отрицания", "<i>How <b>many</b> books? I don't have <b>many</b> friends.</i>"],
-  ["<i>much</i>", "неисчисляемые", "вопросы, отрицания", "<i>How <b>much</b> money? There isn't <b>much</b> time.</i>"],
-  ["<i>a lot of / lots of</i>", "любые", "утверждения", "<i>She has <b>a lot of</b> friends. We have <b>lots of</b> time.</i>"],
+  ["<i>many</i>", "исчисляемые", "вопросы, отрицания", "<i>How <b>many</b> books? I don't have <b>many</b> friends.</i> — Сколько книг? У меня не так много друзей."],
+  ["<i>much</i>", "неисчисляемые", "вопросы, отрицания", "<i>How <b>much</b> money? There isn't <b>much</b> time.</i> — Сколько денег? Времени не так много."],
+  ["<i>a lot of / lots of</i>", "любые", "утверждения", "<i>She has <b>a lot of</b> friends. We have <b>lots of</b> time.</i> — У нее много друзей. У нас полно времени."],
 ])}
 ${E([
-  ["<b>How many</b> apples do you need?", "Сколько яблок? (штук)"],
+  ["<b>How many</b> apples do you need?", "Сколько яблок тебе нужно? (считаем штуки)"],
   ["<b>How much</b> is this bag?", "Сколько стоит эта сумка?"],
-  ["Thank you very <b>much</b>! I like it very <b>much</b>.", "much как наречие: «очень»"]
+  ["Thank you very <b>much</b>! I like it very <b>much</b>.", "Большое спасибо! Мне это очень нравится. (much как наречие: «очень»)"]
 ])}
+<h3>How many и how much</h3>
+<p>Вопрос «сколько?» строится по тому же правилу: <i>how many</i> — перед исчисляемым существительным во множественном числе, <i>how much</i> — перед неисчисляемым. Например, <i>How many brothers have you got?</i> — сколько у тебя братьев? А <i>How much water do you drink?</i> — сколько воды ты пьешь? Если же после <i>how much</i> нет существительного, это вопрос о цене: <i>How much is it?</i> — Сколько это стоит?</p>
+<h3>Much как наречие</h3>
+<p>Слово <i>much</i> может относиться не к существительному, а к глаголу. Тогда оно значит «очень, сильно» и обычно стоит в выражении <i>very much</i> в конце предложения: <i>I like it very much</i> — мне это очень нравится. Поставить <i>very much</i> между глаголом и дополнением нельзя: <i>I like very much it</i> — ошибка. Кроме того, <i>much</i> усиливает сравнительную степень: <i>much better</i> — гораздо лучше. Это разобрано в разделе 8.</p>
 ${N("В обычных утвердительных предложениях <i>much</i> звучит слишком книжно. Вместо <i>I have much time</i> лучше сказать <i>I have <b>a lot of</b> time</i> — это подходит к любым существительным. А если существительного после нет, говорят просто <i>a lot</i>: <i>She reads <b>a lot</b></i> (она много читает).")}`,
   ex: [
     { type: 'gap', task: 'Впишите much или many.', items: [
@@ -53,11 +57,12 @@ ${T(["", "Исчисляемые", "Неисчисляемые"], [
   ["мало (недостаточно)", "<i><b>few</b> friends</i>", "<i><b>little</b> money</i>"]
 ])}
 ${E([
-  ["I have <b>a few</b> friends here, so I'm not lonely.", "Есть несколько друзей — хорошо."],
-  ["I have <b>few</b> friends here, and I feel lonely.", "Мало друзей — плохо."],
-  ["There's <b>a little</b> time left. Let's have coffee.", "Немного времени есть."],
-  ["There's <b>little</b> time left. Hurry up!", "Времени мало."]
+  ["I have <b>a few</b> friends here, so I'm not lonely.", "У меня здесь есть несколько друзей, так что мне не одиноко. (есть несколько — хорошо)"],
+  ["I have <b>few</b> friends here, and I feel lonely.", "У меня здесь мало друзей, и мне одиноко. (мало — плохо)"],
+  ["There's <b>a little</b> time left. Let's have coffee.", "Еще осталось немного времени. Давай выпьем кофе. (немного есть)"],
+  ["There's <b>little</b> time left. Hurry up!", "Времени осталось мало. Поторопись! (почти нет)"]
 ])}
+<p>В последних двух примерах встречается оборот <i>there's … left</i> — «осталось»: <i>There's some milk left</i> — молока еще немного осталось. Сочетания ниже тоже стоит запомнить: <i>very few</i> и <i>very little</i> — «очень мало», <i>only a few</i> и <i>only a little</i> — «всего несколько, совсем немного». А <i>quite a few</i>, хотя в нем есть <i>a few</i>, значит «довольно много»: <i>quite a few people</i> — довольно много людей.</p>
 ${M("Удобно запомнить:", ["very few", "very little", "quite a few (довольно много)", "only a few", "only a little"])}
 ${N("Не путайте два разных <i>little</i>. Перед исчисляемым существительным это прилагательное «маленький»: <i>a little girl</i> — маленькая девочка. А перед неисчисляемым — «немного»: <i>a little sugar</i> — немного сахара.")}`,
   ex: [

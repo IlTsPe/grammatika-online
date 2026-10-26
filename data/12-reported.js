@@ -1,4 +1,4 @@
-BOOK.push({ n: 11, id: 'reported', title: 'Согласование времен. Косвенная речь',
+BOOK.push({ n: 12, id: 'reported', title: 'Согласование времен. Косвенная речь',
 intro: 'Если главное предложение стоит в прошедшем времени, время придаточного сдвигается «на шаг назад». На этом правиле строится вся косвенная речь: утверждения, вопросы, просьбы и приказы.',
 topics: [
 
@@ -6,13 +6,14 @@ topics: [
   rule: `
 <p>В русском языке время во второй части предложения не зависит от первой: мы говорим «Я знал, что он болен» — «болен» в настоящем, хотя «знал» в прошедшем. В английском так нельзя: если главный глагол стоит в прошедшем времени, глагол во второй части тоже «сдвигается» в прошлое: <i>I knew that he <b>was</b> ill</i>.</p>
 ${T(["Действие придаточного", "Форма", "Пример"], [
-  ["одновременно", "Past Simple / Past Continuous", "<i>I knew that he <b>was</b> ill. I thought she <b>was sleeping</b>.</i>"],
-  ["раньше", "Past Perfect", "<i>I knew that he <b>had been</b> ill.</i>"],
-  ["позже", "would + V (будущее в прошедшем)", "<i>I knew that he <b>would come</b>.</i>"]
+  ["одновременно", "Past Simple / Past Continuous", "<i>I knew that he <b>was</b> ill. I thought she <b>was sleeping</b>.</i> — Я знал, что он болен. Я думал, что она спит."],
+  ["раньше", "Past Perfect", "<i>I knew that he <b>had been</b> ill.</i> — Я знал, что он болел."],
+  ["позже", "would + V (будущее в прошедшем)", "<i>I knew that he <b>would come</b>.</i> — Я знал, что он придет."]
 ])}
+<p>Форма <i>would + V</i> в последней строке называется «будущее в прошедшем». Это то же самое <i>will</i>, только «сдвинутое» в прошлое: когда мы смотрим на будущее событие из прошлого момента, <i>will</i> превращается в <i>would</i>. По-русски при этом остается обычное будущее время: «я знал, что он <b>придет</b>». Подробнее о таких формах — в теме «Будущее в прошедшем» этого раздела.</p>
 ${E([
-  ["He says he <b>is</b> busy. → He said he <b>was</b> busy.", "Главное в настоящем — сдвига нет; в прошедшем — сдвиг."],
-  ["She hoped she <b>would pass</b> the exam.", "Будущее в прошедшем."]
+  ["He says he <b>is</b> busy. → He said he <b>was</b> busy.", "Он говорит, что занят. → Он сказал, что занят. (если главный глагол в настоящем, сдвига нет; если в прошедшем — время сдвигается)"],
+  ["She hoped she <b>would pass</b> the exam.", "Она надеялась, что сдаст экзамен. (будущее в прошедшем)"]
 ])}
 ${N("Сдвигать время не нужно, если во второй части — общеизвестный факт, который верен всегда: <i>The teacher said that the Earth <b>goes</b> round the Sun.</i>")}`,
   ex: [
@@ -45,12 +46,13 @@ ${N("Сдвигать время не нужно, если во второй ч�
   rule: `
 <p>Когда мы пересказываем чужие слова, в предложении меняются три вещи. Время глагола сдвигается в прошлое. Местоимения меняются по смыслу: «я» говорящего становится «он» или «она». Слова времени и места тоже меняются: <i>today</i> становится <i>that day</i>, а <i>here</i> — <i>there</i>.</p>
 ${T(["Прямая речь", "Косвенная речь"], [
-  ["<i>Present Simple: “I <b>am</b> tired”</i>", "<i>Past Simple: she said she <b>was</b> tired</i>"],
-  ["<i>Present Continuous: “I <b>am working</b>”</i>", "<i>Past Continuous: he said he <b>was working</b></i>"],
-  ["<i>Present Perfect: “I <b>have lost</b> it”</i>", "<i>Past Perfect: he said he <b>had lost</b> it</i>"],
-  ["<i>Past Simple: “I <b>saw</b> him”</i>", "<i>Past Perfect: she said she <b>had seen</b> him</i>"],
+  ["<i>Present Simple: “I <b>am</b> tired”</i> — «Я устала».", "<i>Past Simple: she said she <b>was</b> tired</i> — она сказала, что устала."],
+  ["<i>Present Continuous: “I <b>am working</b>”</i> — «Я работаю».", "<i>Past Continuous: he said he <b>was working</b></i> — он сказал, что работает."],
+  ["<i>Present Perfect: “I <b>have lost</b> it”</i> — «Я это потерял».", "<i>Past Perfect: he said he <b>had lost</b> it</i> — он сказал, что потерял это."],
+  ["<i>Past Simple: “I <b>saw</b> him”</i> — «Я его видела».", "<i>Past Perfect: she said she <b>had seen</b> him</i> — она сказала, что видела его."],
   ["<i>will / can / may / must</i>", "<i>would / could / might / had to</i>"]
 ])}
+<p>Модальные глаголы в последней строке тоже сдвигаются в прошлое. <i>Will</i> превращается в <i>would</i>, <i>can</i> — в <i>could</i>, <i>may</i> — в <i>might</i>. У <i>must</i> собственной формы прошедшего времени нет, поэтому вместо него обычно берут <i>had to</i> («пришлось, нужно было»), хотя <i>must</i> можно и оставить без изменений. Например, <i>“I must go,” Ann said</i> → <i>Ann said she had to go</i> — Анна сказала, что ей нужно идти. Союз <i>that</i> («что») после <i>said</i> и <i>told</i> часто опускают: <i>She said (that) she was tired</i>.</p>
 <h3>Слова времени и места</h3>
 ${T(["Было", "Стало"], [
   ["<i>now, today, tonight</i>", "<i>then, that day, that night</i>"],
@@ -93,16 +95,18 @@ ${N("После <i>tell</i> обязательно нужно сказать, к
 
 { id: 'rep-commands', level: 'B1', title: 'Просьбы и приказы', sub: 'She told us not to be late',
   rule: `
-<p>Просьбы и приказы в косвенной речи передают с помощью инфинитива с <i>to</i>: «Закрой дверь» → <i>She asked me <b>to close</b> the door</i>. Глагол, который вводит такую фразу, выбирают по смыслу: <i>ask</i> — для просьбы, <i>tell</i> — для приказа, <i>advise</i> — для совета.</p>
+<p>Просьбы и приказы в косвенной речи передают с помощью инфинитива с <i>to</i>: «Закрой дверь» → <i>She asked me <b>to close</b> the door</i>. Глагол, который вводит такую фразу, выбирают по смыслу: <i>ask</i> — для просьбы, <i>tell</i> — для приказа или указания («велел»), <i>order</i> — для строгого, официального приказа («приказал»), <i>advise</i> — для совета.</p>
 ${F("told / asked / ordered / advised + <b>кого-то</b> + <b>(not) to V</b>")}
 ${T(["Прямая речь", "Косвенная речь"], [
-  ["<i>“Close the window, please.”</i>", "<i>She <b>asked</b> me <b>to close</b> the window.</i>"],
-  ["<i>“Don't be late!”</i>", "<i>She <b>told</b> us <b>not to be</b> late.</i>"],
-  ["<i>“Sit down!”</i>", "<i>The teacher <b>told</b> him <b>to sit</b> down.</i>"],
-  ["<i>“You should rest.”</i>", "<i>The doctor <b>advised</b> me <b>to rest</b>.</i>"],
-  ["<i>“Let's go to the cinema.”</i>", "<i>He <b>suggested going</b> to the cinema.</i>"]
+  ["<i>“Close the window, please.”</i> — «Закрой, пожалуйста, окно».", "<i>She <b>asked</b> me <b>to close</b> the window.</i> — Она попросила меня закрыть окно."],
+  ["<i>“Don't be late!”</i> — «Не опаздывайте!»", "<i>She <b>told</b> us <b>not to be</b> late.</i> — Она велела нам не опаздывать."],
+  ["<i>“Sit down!”</i> — «Садись!»", "<i>The teacher <b>told</b> him <b>to sit</b> down.</i> — Учитель велел ему сесть."],
+  ["<i>“You should rest.”</i> — «Вам следует отдохнуть».", "<i>The doctor <b>advised</b> me <b>to rest</b>.</i> — Врач посоветовал мне отдохнуть."],
+  ["<i>“Let's go to the cinema.”</i> — «Давай сходим в кино».", "<i>He <b>suggested going</b> to the cinema.</i> — Он предложил сходить в кино."]
 ])}
-${N("Если просьба с отрицанием («не опаздывайте»), <i>not</i> ставится перед <i>to</i>: <i>told us <b>not to</b> be late</i>, а не <i>to not be</i>. Отдельно запомните <i>suggest</i> («предложить»): после него не бывает инфинитива — говорят <i>He suggested going home</i>.")}`,
+${N("Если просьба с отрицанием («не опаздывайте»), <i>not</i> ставится перед <i>to</i>: <i>told us <b>not to</b> be late</i>, а не <i>to not be</i>.")}
+<h3>Suggest — «предложить сделать вместе»</h3>
+<p>Фразу с <i>Let's…</i> («давай…») обычно пересказывают глаголом <i>suggest</i>. После него идет не инфинитив, а форма на <i>-ing</i> — герундий: <i>He suggested going to the cinema</i>. Подробно герундий разобран в разделе 14 «Герундий». Есть и второй способ: после <i>suggest</i> поставить целое придаточное с <i>that</i>, а в нем — подлежащее и глагол в начальной форме или с <i>should</i>. Например, <i>Tom suggested (that) we go home</i> или <i>Tom suggested that we should go home</i> — Том предложил пойти домой. А вот сказать <i>suggested us to go</i> нельзя.</p>`,
   ex: [
     { type: 'gap', task: 'Передайте просьбу или приказ в косвенной речи.', items: [
       ["“Don't be late!” the teacher said. → The teacher told us ___ late.", "not to be"],
@@ -133,14 +137,22 @@ ${N("Если просьба с отрицанием («не опаздывай�
 
 { id: 'rep-questions', level: 'B2', title: 'Вопросы в косвенной речи', sub: 'She asked me where I lived',
   rule: `
-<p>Когда мы пересказываем чужой вопрос, он превращается в обычное утверждение. Поэтому порядок слов становится прямым — сначала подлежащее, потом сказуемое; вспомогательные <i>do / does / did</i> исчезают; а в конце ставится точка, а не вопросительный знак: <i>Where do you live?</i> → <i>She asked me where I lived.</i></p>
+<p>Когда мы пересказываем чужой вопрос, он превращается в обычное утверждение. Поэтому порядок слов становится прямым — сначала подлежащее, потом сказуемое; вспомогательные <i>do / does / did</i> исчезают; а в конце ставится точка, а не вопросительный знак: <i>Where do you live?</i> → <i>She asked me where I lived.</i> (она спросила, где я живу)</p>
 ${T(["Тип", "Прямая речь", "Косвенная речь"], [
-  ["специальный", "<i>“Where <b>do you live</b>?”</i>", "<i>She asked me where <b>I lived</b>.</i>"],
-  ["специальный", "<i>“What <b>are you doing</b>?”</i>", "<i>He asked what <b>I was doing</b>.</i>"],
-  ["общий", "<i>“<b>Are</b> you hungry?”</i>", "<i>He asked <b>if / whether</b> I was hungry.</i>"],
-  ["общий", "<i>“<b>Did</b> you see the film?”</i>", "<i>She asked <b>if</b> I had seen the film.</i>"]
+  ["специальный", "<i>“Where <b>do you live</b>?”</i> — «Где ты живешь?»", "<i>She asked me where <b>I lived</b>.</i> — Она спросила меня, где я живу."],
+  ["специальный", "<i>“What <b>are you doing</b>?”</i> — «Что ты делаешь?»", "<i>He asked what <b>I was doing</b>.</i> — Он спросил, что я делаю."],
+  ["общий", "<i>“<b>Are</b> you hungry?”</i> — «Ты голоден?»", "<i>He asked <b>if / whether</b> I was hungry.</i> — Он спросил, не голоден ли я."],
+  ["общий", "<i>“<b>Did</b> you see the film?”</i> — «Ты видел этот фильм?»", "<i>She asked <b>if</b> I had seen the film.</i> — Она спросила, видел ли я этот фильм."]
 ])}
-${N("Самая частая ошибка — оставить вопросительный порядок слов: <i>She asked me where <s>did I live</s></i>. Правильно: <i>where <b>I lived</b></i>. Так же строятся вежливые вопросы: <i>Do you know where the station <b>is</b>?</i>, а не <i>where is the station</i>.")}`,
+<h3>Специальные и общие вопросы</h3>
+<p>Специальный вопрос начинается с вопросительного слова (<i>where, what, why, how</i> и других), и в косвенной речи это слово остается на своем месте, а за ним идет прямой порядок слов. Общий вопрос — это вопрос, на который отвечают «да» или «нет»; в нем вопросительного слова нет (подробно типы вопросов разобраны в разделе 3 «Вопросы»). Чтобы пересказать общий вопрос, нужен союз <i>if</i> или <i>whether</i>, который соответствует русской частице «ли»: <i>He asked if I was hungry</i> — он спросил, голоден ли я. Между <i>if</i> и <i>whether</i> почти нет разницы: <i>whether</i> чуть книжнее, и его обычно выбирают, когда в вопросе есть выбор «или… или нет»: <i>She asked whether I was coming or not</i> — она спросила, приду я или нет.</p>
+${N("Самая частая ошибка — оставить вопросительный порядок слов: <i>She asked me where <s>did I live</s></i>. Правильно: <i>where <b>I lived</b></i>. Так же строятся вежливые вопросы: <i>Do you know where the station <b>is</b>?</i>, а не <i>where is the station</i>.")}
+<h3>Вежливые косвенные вопросы</h3>
+<p>Косвенный вопрос встречается не только при пересказе. Чтобы спросить что-то вежливо, особенно у незнакомого человека, вопрос «прячут» внутрь вступительной фразы: <i>Do you know…?</i>, <i>Can you tell me…?</i>, <i>Could you tell me…?</i> Порядок слов во второй части тогда прямой, как в любом косвенном вопросе. Но время здесь не сдвигается, потому что вступительная фраза стоит в настоящем времени.</p>
+${E([
+  ["Can you tell me what time the train <b>leaves</b>?", "Не подскажете, во сколько отправляется поезд?"],
+  ["Do you know if the shop <b>is</b> open?", "Вы не знаете, открыт ли магазин?"]
+])}`,
   ex: [
     { type: 'gap', task: 'Закончите косвенный вопрос.', items: [
       ["“Where do you live?” she asked. → She asked me where I ___.", "lived"],
@@ -176,13 +188,15 @@ ${N("Самая частая ошибка — оставить вопросит�
   rule: `
 <p>Иногда о будущем рассказывают, глядя из прошлого: «Я знал, что ты придешь», «Я собирался позвонить». В таких случаях обычное будущее время не подходит — используются особые формы: <i>would</i>, <i>was going to</i>, <i>was about to</i>.</p>
 ${T(["Форма", "Значение", "Пример"], [
-  ["<i>would + V</i>", "будущее относительно прошлого", "<i>I knew you <b>would</b> like it.</i>"],
-  ["<i>was / were going to + V</i>", "намерение, часто не осуществленное", "<i>I <b>was going to</b> call you, but I forgot.</i>"],
-  ["<i>was / were about to + V</i>", "вот-вот, собирался в ту минуту", "<i>We <b>were about to</b> leave when the phone rang.</i>"],
-  ["<i>was on the point of + -ing</i>", "был на грани того, чтобы", "<i>He <b>was on the point of giving</b> up.</i>"],
-  ["<i>was / were to + V</i>", "судьба, то, что произошло потом", "<i>They <b>were</b> never <b>to</b> meet again.</i>"],
-  ["<i>Past Continuous</i>", "договоренность в прошлом", "<i>They <b>were leaving</b> the next morning.</i>"]
+  ["<i>would + V</i>", "будущее относительно прошлого", "<i>I knew you <b>would</b> like it.</i> — Я знал, что тебе понравится."],
+  ["<i>was / were going to + V</i>", "намерение, часто не осуществленное", "<i>I <b>was going to</b> call you, but I forgot.</i> — Я собирался тебе позвонить, но забыл."],
+  ["<i>was / were about to + V</i>", "вот-вот, собирался в ту минуту", "<i>We <b>were about to</b> leave when the phone rang.</i> — Мы уже собирались уходить, когда зазвонил телефон."],
+  ["<i>was on the point of + -ing</i>", "был на грани того, чтобы", "<i>He <b>was on the point of giving</b> up.</i> — Он был готов вот-вот сдаться."],
+  ["<i>was / were to + V</i>", "судьба, то, что произошло потом", "<i>They <b>were</b> never <b>to</b> meet again.</i> — Им больше не суждено было встретиться."],
+  ["<i>Past Continuous</i>", "договоренность в прошлом", "<i>They <b>were leaving</b> the next morning.</i> — На следующее утро они уезжали."]
 ])}
+<h3>Откуда берутся эти формы</h3>
+<p>Каждая из этих форм — это знакомая форма будущего, перенесенная в прошлое. <i>Was going to</i> — это прошедшее время от <i>am going to</i> («собираюсь»), поэтому оно говорит о намерении, которое было тогда; часто оно так и не осуществилось. <i>Was about to</i> — прошедшее от <i>be about to</i> («вот-вот сделаю»): действие должно было случиться через мгновение. Оборот <i>be on the point of</i> значит почти то же самое, но после него, как после любого предлога, ставится форма на <i>-ing</i> (герундий, раздел 14), а не инфинитив. <i>Was / were to</i> — прошедшее от <i>be to</i> из раздела 9 «Модальные глаголы»: в рассказе оно сообщает о том, что случилось позже и было как бы предрешено. Наконец, Past Continuous для договоренности — это прошедшее от Present Continuous в значении будущего (<i>I'm leaving tomorrow</i> — я завтра уезжаю), которое разобрано в разделе 2 «Времена».</p>
 ${N("Когда пересказываем чьи-то слова о будущем, <i>will</i> превращается в <i>would</i>: <i>She said she <b>would</b> come later</i>, а не <i>will come</i>.")}`,
   ex: [
     { type: 'choice', task: 'Выберите правильный вариант.', items: [

@@ -144,6 +144,12 @@ window.AUDIO = {
  "How many people came to the party last night?": "q-much-many-1",
  "We haven't got much time. Let's hurry.": "q-much-many-2",
  "We met a lot of interesting people on our trip.": "q-much-many-3",
+ "You haven't forgotten about the party, have you?": "qs-tags-1",
+ "Your brother works in a bank, doesn't he?": "qs-tags-2",
+ "It was a great day, wasn't it?": "qs-tags-3",
+ "Where did you buy this beautiful scarf?": "qs-wh-1",
+ "Who lives in that big house?": "qs-wh-2",
+ "What time does the last train leave?": "qs-wh-3",
  "The doctor told me not to eat too much sugar.": "rep-commands-1",
  "Mum asked us to take off our shoes in the hall.": "rep-commands-2",
  "Our coach told us to run across the field twice.": "rep-commands-3",
@@ -229,4 +235,4 @@ window.AUDIO = {
  "I'd rather you didn't tell anyone about it.": "x-unreal-past-2",
  "He talks as if he knew everything about everything.": "x-unreal-past-3"
 };
-window.AUDIO_BYTES = 3897072;
+window.AUDIO_BYTES = 3977712;
