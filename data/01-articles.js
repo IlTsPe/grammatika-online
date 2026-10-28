@@ -111,7 +111,7 @@ ${N("Сравните два предложения: <i>I want <b>an</b> apple</
 
 { id: 'art-there-is', level: 'A1', title: 'Оборот there is / there are', sub: 'There is a book on the table',
   rule: `
-<p>Оборот <i>there is / there are</i> нужен, чтобы сообщить, что где-то что-то <b>есть</b> или <b>находится</b>. Русское предложение с таким смыслом удобно переводить с конца: «На столе лежит книга» → <i>There is a book on the table</i>. То есть сначала ставим <i>there is</i>, потом — что именно есть, и в конце — где.</p>
+<p>Оборот <i>there is / there are</i> нужен, чтобы сообщить, что где-то что-то <b>есть</b> или <b>находится</b>. Русское предложение с таким смыслом удобно переводить с конца: «В саду растет яблоня» → <i>There is an apple tree in the garden</i>. То есть сначала ставим <i>there is</i>, потом — что именно есть, и в конце — где.</p>
 ${T(["", "Единственное / неисчисляемое", "Множественное"], [
   ["Утверждение", "<i>There <b>is</b> a cat.</i> — Есть кошка.", "<i>There <b>are</b> two cats.</i> — Есть две кошки."],
   ["Отрицание", "<i>There <b>isn't</b> a cat. / There is <b>no</b> milk.</i> — Кошки нет. / Молока нет совсем.", "<i>There <b>aren't any</b> cats. / There are <b>no</b> cats.</i> — Кошек нет. / Никаких кошек нет."],
@@ -168,12 +168,11 @@ ${T(["Без артикля", "С артиклем"], [
   ["<i>at night, at noon, at midnight</i>", "<i>in <b>the</b> country, in <b>the</b> street</i>"],
   ["<i>by bus, by car, by train, on foot</i>", "<i>on <b>the</b> left / right, in <b>the</b> middle</i>"],
   ["<i>have breakfast / lunch / dinner</i>", "<i>at <b>the</b> weekend</i> (брит.; в американском английском — <i>on the weekend</i>)"],
-  ["<i>go to hospital / prison / church</i> (по назначению)", "<i>tell <b>the</b> truth, play <b>the</b> piano</i>"],
+  ["<i>go to hospital / prison / church</i> (по назначению)", "<i>tell <b>the</b> truth</i>"],
   ["<i>from morning till night, day and night</i>", "<i>What's <b>the</b> time?</i> — Который час?"]
 ])}
 ${E([
-  ["She goes to <b>school</b> by <b>bus</b>.", "Она ездит в школу на автобусе."],
-  ["Her mother often goes to <b>the school</b> to talk to the teacher.", "Ее мама часто ходит в школу поговорить с учителем."]
+  ["She goes to <b>school</b> by <b>bus</b>.", "Она ездит в школу на автобусе."]
 ])}
 ${N("Со словами <i>school, hospital, church</i> артикль зависит от цели. Если человек идет туда по прямому назначению — учиться, лечиться, молиться, — артикля нет: <i>go to school</i>. Если же он просто приходит в здание, например навестить кого-то, нужен <i>the</i>: <i>go to the school to see the teacher</i>.")}`,
   ex: [
@@ -219,7 +218,7 @@ ${E([
   ["<b>the</b> Hermitage, <b>the</b> Bolshoi Theatre, <b>the</b> Ritz", "Эрмитаж, Большой театр, отель «Ритц» (музеи, театры, отели — с the)"],
   ["<b>the</b> Times, <b>the</b> BBC", "газета «Таймс», Би-би-си (газеты и многие организации — с the)"]
 ])}
-${N("С озерами артикль зависит от того, есть ли в названии слово <i>lake</i>. Если есть, артикль не нужен: <i>Lake Baikal</i>. Если его нет, встречается и <i>the Baikal</i>, и просто <i>Baikal</i>; надежнее всего сказать <i>Lake Baikal</i>.")}`,
+${N("Если слова <i>lake</i> в названии озера нет, встречается и <i>the Baikal</i>, и просто <i>Baikal</i>; надежнее всего сказать <i>Lake Baikal</i>.")}`,
   ex: [
     { type: 'gap', task: 'Впишите the или «-».', items: [
       ["___ Volga is a very long river.", "the"], ["She lives in ___ France.", "-|0"],
@@ -251,13 +250,11 @@ ${N("С озерами артикль зависит от того, есть л�
 
 { id: 'art-zero', level: 'B2', title: 'Нулевой артикль', sub: 'I like music. Cats are clever.',
   rule: `
-<p>Артикль не нужен, когда существительное употреблено в <b>общем смысле</b> — то есть речь не о конкретных предметах, а обо всех сразу: <i>I like tea</i> (чай вообще), <i>Dogs are clever</i> (собаки в целом). Его также не ставят, если место уже занято другим словом-определителем: <i>my</i>, <i>this</i>, <i>some</i>.</p>
+<p>Артикль не нужен, когда существительное употреблено в <b>общем смысле</b> — то есть речь не о конкретных предметах, а обо всех сразу: <i>I like tea</i> (чай вообще), <i>Dogs are clever</i> (собаки в целом).</p>
 ${T(["Когда артикля нет", "Пример"], [
   ["множественное число в общем смысле", "<i><b>Cats</b> are clever. I like <b>apples</b>.</i> — Кошки умные. Я люблю яблоки."],
   ["неисчисляемые в общем смысле", "<i><b>Water</b> is important. I love <b>music</b>.</i> — Вода важна. Я люблю музыку."],
   ["имена и фамилии", "<i><b>Anna</b>, <b>Mr Smith</b></i>"],
-  ["большинство стран, городов, улиц", "<i><b>Russia</b>, <b>Moscow</b>, <b>Oxford Street</b></i>"],
-  ["приемы пищи", "<i>have <b>breakfast</b> / <b>lunch</b> / <b>dinner</b></i>"],
   ["языки, виды спорта, учебные предметы", "<i>speak <b>English</b>, play <b>football</b>, study <b>maths</b></i>"],
   ["дни недели, месяцы", "<i>on <b>Monday</b>, in <b>May</b></i>"],
   ["есть местоимение, <i>'s</i> или числительное", "<i>my book, this pen, Tom's bag, two cats, page 10</i>"]
@@ -269,7 +266,7 @@ ${E([
   ["<b>Dogs</b> are friendly.", "Собаки дружелюбные. (собаки вообще)"],
   ["<b>The dogs</b> next door bark all night.", "Соседские собаки лают всю ночь. (конкретные собаки соседей)"]
 ])}
-${N("Перед неисчисляемым существительным обычно не ставят <i>a / an</i>: говорят <i>some water</i> или <i>a glass of water</i>, но не <i>a water</i>. Исключение — разговорная просьба о порции напитка: <i>Can I have <b>a</b> coffee?</i> Здесь <i>a coffee</i> значит «одну чашку кофе».")}`,
+${N("Перед неисчисляемым существительным <i>a / an</i> обычно не ставят, но есть исключение — разговорная просьба о порции напитка: <i>Can I have <b>a</b> coffee?</i> Здесь <i>a coffee</i> значит «одну чашку кофе».")}`,
   ex: [
     { type: 'gap', task: 'Впишите артикль a, an, the или «-», если он не нужен.', items: [
       ["I like ___ tea with lemon.", "-|0"], ["___ tea in this cup is cold.", "the"],

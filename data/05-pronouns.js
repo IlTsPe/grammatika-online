@@ -1,5 +1,5 @@
 BOOK.push({ n: 5, id: 'pronouns', title: 'Местоимения some, any, no, every и их производные',
-intro: 'Главное в разделе — неопределенные местоимения <i>some, any, no, every</i> и их производные. Начинается он с опорной темы о личных, притяжательных и возвратных местоимениях: без нее упражнения раздела даются тяжелее.',
+intro: 'Раздел начинается с двух опорных тем — о личных, притяжательных и возвратных местоимениях и об указательных <i>this, that, these, those</i>: без них упражнения раздела даются тяжелее.',
 topics: [
 
 { id: 'pron-personal', level: 'A1', title: 'Личные, притяжательные и возвратные', sub: 'I – me – my – mine – myself',
@@ -16,9 +16,7 @@ ${T(["Подлежащее", "Дополнение", "Перед сущ.", "Бе
 ])}
 ${E([
   ["<b>She</b> loves <b>him</b>, and <b>he</b> loves <b>her</b>.", "Она любит его, а он любит ее. (подлежащее и дополнение)"],
-  ["This is <b>my</b> bag. The bag is <b>mine</b>.", "Это моя сумка. Эта сумка моя. (перед существительным и без него)"],
-  ["He cut <b>himself</b>. Help <b>yourself</b>!", "Он порезался. Угощайся! (возвратное — действие на себя)"],
-  ["I did it <b>myself</b>.", "Я сделал это сам. (усилительное — «сам»)"]
+  ["This is <b>my</b> bag. The bag is <b>mine</b>.", "Это моя сумка. Эта сумка моя. (перед существительным и без него)"]
 ])}
 <h3>Две формы притяжательных: my и mine</h3>
 <p>Форму из столбца «Перед сущ.» (<i>my, your, her</i>) ставят только перед существительным: <i>my bag</i>. Форму из столбца «Без сущ.» (<i>mine, yours, hers</i>) используют, когда существительного после нее нет, — например, в конце предложения, чтобы не повторять уже названный предмет: <i>Is this pen yours? — Yes, it's mine</i> — «Это твоя ручка? — Да, моя». У <i>it</i> такой отдельной формы на практике нет, поэтому в таблице стоит прочерк. И не путайте <i>its</i> («его, ее» — о предмете или животном) с <i>it's</i> — это сокращение от <i>it is</i>: <i>The dog wagged <b>its</b> tail</i> — собака виляла хвостом.</p>
@@ -55,6 +53,61 @@ ${N("Отдельного слова «свой» в английском нет
     ]}
   ]},
 
+{ id: 'pron-demonstrative', level: 'A1', title: 'This, that, these, those', sub: 'this book, those houses',
+  rule: `
+<p>Эти слова указывают на предмет, как русские «этот» и «тот». Выбор зависит от двух вещей: близко предмет или далеко и один он или их несколько.</p>
+${T(["", "Рядом", "Далеко"], [
+  ["Один предмет", "<i><b>this</b> book</i> — эта книга", "<i><b>that</b> house</i> — тот дом"],
+  ["Несколько", "<i><b>these</b> books</i> — эти книги", "<i><b>those</b> houses</i> — те дома"]
+])}
+<p>Эти слова могут стоять перед существительным, а могут заменять его целиком. Например, <i><b>This</b> bag is new</i> — эта сумка новая, и <i><b>This</b> is my bag</i> — это моя сумка.</p>
+${E([
+  ["<b>This</b> is my phone.", "Это мой телефон."],
+  ["<b>These</b> are my friends.", "Это мои друзья."],
+  ["What is <b>that</b> on the roof?", "Что это там, на крыше?"],
+  ["<b>Those</b> shoes are very expensive.", "Те туфли очень дорогие."]
+])}
+<h3>Близко и далеко во времени</h3>
+<p>«Близко» и «далеко» бывает не только в пространстве, но и во времени. То, что происходит сейчас, — это <i>this</i> и <i>these</i>: <i>this week</i> — на этой неделе, <i>these days</i> — в наши дни. То, что уже прошло, — <i>that</i> и <i>those</i>: <i>that day</i> — в тот день, <i>in those days</i> — в те времена. Поэтому о только что закончившемся фильме говорят <i><b>That</b> was a great film!</i> — это был отличный фильм!</p>
+<p>Когда кого-то представляют, говорят <i>this</i>: <i>Mum, <b>this</b> is Anna</i> — мама, это Анна.</p>
+${N("Русское «это» не меняется, а по-английски его нужно согласовать с тем, о чем идет речь. Если предметов несколько, вместо <i>this is</i> нужно <i>these are</i>: «Это мои книги» — <i><b>These are</b> my books</i>, а не <i>This is my books</i>. В кратком ответе <i>this</i> и <i>that</i> заменяют на <i>it</i>, а <i>these</i> и <i>those</i> — на <i>they</i>: <i>Is this your bag? — Yes, <b>it</b> is.</i> <i>Are these your keys? — Yes, <b>they</b> are.</i>")}`,
+  ex: [
+    { type: 'gap', task: 'Впишите this, that, these или those. В скобках подсказка: рядом или далеко (в пространстве или во времени).', items: [
+      ["___ (рядом) is my new phone.", "this"],
+      ["___ (далеко) houses on the hill are very old.", "those"],
+      ["Look at ___ (далеко) bird on the roof!", "that"],
+      ["___ (рядом) oranges are sweet.", "these"],
+      ["Are ___ (рядом) your keys?", "these"],
+      ["Who is ___ (далеко) man at the door?", "that"],
+      ["I love ___ (сейчас звучит) song.", "this"],
+      ["___ (далеко) children over there are my nephews.", "those"],
+      ["___ (сейчас) week I am very busy.", "this"],
+      ["Life was hard in ___ (давно) days.", "those"]
+    ]},
+    { type: 'choice', task: 'Выберите правильный вариант.', items: [
+      ["___ my new shoes.", ["These are", "This is", "These is"]],
+      ["Is ___ your bag over there?", ["that", "those", "these"]],
+      ["___ shoes are very nice. (у вас в руках)", ["These", "This", "That"]],
+      ["What is ___ on the table over there?", ["that", "those", "these"]],
+      ["Mum, ___ is Anna, my new friend. (она стоит рядом)", ["this", "these", "those"]],
+      ["I don't like ___ jeans. (у вас в руках)", ["these", "this", "that"]],
+      ["We saw a film yesterday. ___ was great!", ["That", "Those", "These"]],
+      ["___ days people often work from home. (в наше время)", ["These", "Those", "This"]]
+    ]},
+    { type: 'translate', task: 'Переведите на английский.', items: [
+      ["Это наш новый учитель.", "This is our new teacher.|That is our new teacher."],
+      ["Эти цветы красивые.", "These flowers are beautiful.|These flowers are pretty.|These flowers are lovely.|These flowers are nice."],
+      ["Чьи это ботинки?", "Whose shoes are these?|Whose shoes are those?|Whose are these shoes?|Whose are those shoes?|Whose boots are these?|Whose boots are those?"],
+      ["Тот дом на холме очень старый.", "That house on the hill is very old."],
+      ["Это мои ключи.", "These are my keys.|Those are my keys."]
+    ]},
+    { type: 'listen', at: 2, task: 'Прослушайте предложение и соберите его из слов.', items: [
+      ["This bag is mine, and that bag is my sister's.", "Эта сумка моя, а та — моей сестры."],
+      ["These apples are sweet, but those are sour.", "Эти яблоки сладкие, а те кислые."],
+      ["Who are those people at the bus stop?", "Кто те люди на остановке?"]
+    ]}
+  ]},
+
 { id: 'pron-some-any', level: 'A1', title: 'Some, any, no', sub: 'some milk, any questions, no time',
   rule: `
 <p>Слова <i>some</i>, <i>any</i> и <i>no</i> говорят о количестве, когда точное число неважно или неизвестно: «немного», «сколько-нибудь», «нисколько». Их ставят перед неисчисляемыми существительными (<i>some milk</i>) и перед исчисляемыми во множественном числе (<i>some apples</i>). Главное различие — в типе предложения: утверждение, вопрос или отрицание.</p>
@@ -70,7 +123,7 @@ ${T(["Слово", "Где", "Пример"], [
 <p>Обычно в вопросе ставят <i>any</i>, потому что спрашивающий не знает ответа: <i>Have you got any brothers?</i> Но когда мы что-то предлагаем или просим, мы ждем ответа «да», и тогда в вопросе остается <i>some</i>. Так, <i>Would you like some tea?</i> — это не вопрос о том, есть ли чай, а вежливое предложение: «Хотите чаю?». Оборот <i>Would you like…?</i> («Не хотите ли…?») вежливее, чем <i>Do you want…?</i>, и его удобно запомнить целиком.</p>
 <h3>Have got — «иметь»</h3>
 <p>В примерах таблицы встречается <i>have got</i>. Это разговорный, особенно британский, вариант глагола <i>have</i> в значении «иметь, у меня есть»: <i>I've got a sister = I have a sister</i> — у меня есть сестра. Главное отличие в том, как строятся вопрос и отрицание. С <i>have got</i> вспомогательный глагол <i>do</i> не нужен: в вопросе <i>have</i> выходит вперед (<i>Have you got a car?</i> — У тебя есть машина?), а в отрицании к нему добавляется <i>not</i> (<i>I haven't got a car</i> — У меня нет машины). С обычным <i>have</i> то же самое звучит так: <i>Do you have a car? I don't have a car.</i> Оба варианта правильные. Используют <i>have got</i> только в настоящем времени и только в значении «иметь» — сказать <i>I've got breakfast</i> вместо <i>I have breakfast</i> (я завтракаю) нельзя.</p>
-${N("В русском можно сказать «У меня нет никакого времени» — с двумя отрицаниями. В английском отрицание в предложении бывает только одно. Поэтому если уже есть <i>no</i>, частица <i>not</i> не нужна: <i>I have <b>no</b> time</i> или <i>I don't have <b>any</b> time</i>, но не <i>I don't have no time</i>.")}`,
+${N("В русском можно сказать «У меня нет никакого времени» с двумя отрицаниями, а в английском отрицание одно: <i>I don't have no time</i> — ошибка.")}`,
   ex: [
     { type: 'gap', task: 'Впишите some, any или no.', items: [
       ["Yesterday there was ___ bread on the table, so I made sandwiches.", "some"], ["Were there ___ apples in the shop?", "any"],
@@ -145,9 +198,9 @@ ${N("Хотя <i>everyone</i> значит «все», глагол после �
     ]}
   ]},
 
-{ id: 'pron-every-each', level: 'B2', title: 'Every, each, all, both, either, neither', sub: 'each of them, both of us',
+{ id: 'pron-every-each', level: 'B2', title: 'Every, each, all, both, either, neither', sub: 'each of them, both of us, neither do I',
   rule: `
-<p>Эти слова помогают сказать о целой группе или о каждом ее участнике по отдельности. Например, <i>all</i> — «все вместе», <i>every</i> и <i>each</i> — «каждый», <i>both</i> — «оба», а <i>either</i> и <i>neither</i> — «любой из двух» и «ни один из двух».</p>
+<p>Эти слова говорят о целой группе или о каждом ее участнике по отдельности.</p>
 ${T(["Слово", "Значение", "Пример"], [
   ["<i>every</i>", "каждый (все вместе, 3 и больше), + ед. ч.", "<i><b>Every</b> student has a book.</i> — У каждого студента есть книга."],
   ["<i>each</i>", "каждый в отдельности, в том числе из двух", "<i>She had a bag in <b>each</b> hand. <b>Each</b> student got a mark.</i> — В каждой руке у нее было по сумке. Каждый студент получил оценку."],
@@ -160,7 +213,7 @@ ${E([
   ["<b>Both</b> Tom <b>and</b> Ann came.", "И Том, и Анна пришли."],
   ["<b>Either</b> Tom <b>or</b> Ann will help you.", "Тебе поможет или Том, или Анна."],
   ["<b>Neither</b> Tom <b>nor</b> Ann came.", "Ни Том, ни Анна не пришли."],
-  ["<b>Each of</b> them has a car. <b>All of</b> us agree.", "У каждого из них есть машина. Мы все согласны. (после of нужен артикль или местоимение: each of the / of them)"]
+  ["<b>Each of</b> them has a car. <b>All of</b> us agree.", "У каждого из них есть машина. Мы все согласны."]
 ])}
 <h3>Every и each: в чем разница</h3>
 <p>Оба слова переводятся как «каждый» и требуют существительного в единственном числе. Но <i>every</i> смотрит на группу целиком и близко по смыслу к «все»: <i>Every student has a book</i> — книги есть у всех. А <i>each</i> выделяет каждого по отдельности, одного за другим. Поэтому, когда предметов только два, годится только <i>each</i>: <i>in each hand</i> — в каждой руке, а <i>every hand</i> сказать нельзя.</p>
@@ -170,7 +223,18 @@ ${E([
 <p>Обычно <i>either</i> значит «любой из двух», то есть неважно какой. Но в отрицательном предложении он приобретает значение «ни тот, ни другой» и становится синонимом <i>neither</i>. Например, <i>I don't like <b>either</b> of them</i> — мне не нравится ни один из них. Разница в том, что <i>either</i> ставят в предложение, где уже есть <i>not</i>, а <i>neither</i> само несет отрицание и с <i>not</i> не используется: <i>I like <b>neither</b> of them</i> — то же самое, но звучит книжнее.</p>
 <h3>Слова с of</h3>
 <p>Все эти слова, кроме <i>every</i>, можно соединить с <i>of</i>: <i>each of, all of, both of, either of, neither of</i>. После <i>of</i> обязательно стоит артикль, указательное или притяжательное слово (<i>the, these, my</i>) или местоимение в форме дополнения (<i>us, you, them</i>): <i>each of <b>the</b> students</i> — каждый из студентов, <i>both of <b>us</b></i> — мы оба, <i>all of <b>my</b> friends</i> — все мои друзья. Сказать <i>each of students</i> нельзя. Исчисляемое существительное после <i>of</i> стоит во множественном числе, а после <i>each, every, either, neither</i> без <i>of</i> — в единственном: <i>each student</i>, но <i>each of the students</i>.</p>
-${N("После <i>every</i> не может стоять <i>of</i>: правильно <i><b>each</b> of the students</i>, а <i>every of the students</i> — ошибка. И еще: в <i>neither</i> отрицание уже есть, поэтому глагол после него стоит в утвердительной форме: <i>Neither of them <b>knows</b></i>, а не <i>doesn't know</i>. Глагол обычно в единственном числе, хотя в разговорной речи встречается и <i>Neither of them know</i>.")}`,
+<h3>So do I и Neither do I — «я тоже»</h3>
+<p>Когда мы соглашаемся с собеседником и хотим сказать «я тоже», по-английски не повторяют всю фразу. Если собеседник сказал что-то утвердительное, отвечают так: <i>so</i> + вспомогательный глагол + подлежащее. Например, <i>— I like coffee. — <b>So do I</b>.</i> (— Я люблю кофе. — Я тоже.) Если же фраза отрицательная, вместо <i>so</i> ставят <i>neither</i>: <i>— I don't like coffee. — <b>Neither do I</b>.</i> (— Я не люблю кофе. — Я тоже.) Частицы <i>not</i> после <i>neither</i> нет — отрицание уже есть в самом слове, так же как в <i>neither of them</i>.</p>
+<p>Порядок слов здесь как в вопросе: сначала глагол, потом подлежащее. А сам глагол берется из фразы собеседника — точно так же, как в разделительных вопросах (тема 3.2).</p>
+${E([
+  ["— I'm tired. — <b>So am I</b>.", "— Я устал. — Я тоже."],
+  ["— She lives in Kazan. — <b>So does</b> my sister.", "— Она живет в Казани. — Моя сестра тоже."],
+  ["— We went to the concert. — <b>So did</b> we.", "— Мы ходили на концерт. — Мы тоже."],
+  ["— I haven't seen this film. — <b>Neither have I</b>.", "— Я не видел этот фильм. — Я тоже."],
+  ["— Tom won't come. — <b>Neither will</b> Ann.", "— Том не придет. — Анна тоже."]
+])}
+<p>В разговоре вместо этих оборотов часто отвечают совсем коротко: <i>Me too</i> («я тоже») на утверждение и <i>Me neither</i> («я тоже нет») на отрицание. А вместо <i>neither</i> можно сказать <i>nor</i> с тем же порядком слов: <i>Nor do I</i>.</p>
+${N("После <i>neither of</i> глагол обычно стоит в единственном числе: <i>Neither of them <b>knows</b></i>, хотя в разговорной речи встречается и <i>Neither of them know</i>.")}`,
   ex: [
     { type: 'choice', task: 'Выберите правильный вариант.', items: [
       ["___ of the twins got a red bicycle for their birthday.", ["Each", "Every", "All"]], ["I've read ___ his books.", ["all", "every", "every of"]],
@@ -196,6 +260,21 @@ ${N("После <i>every</i> не может стоять <i>of</i>: прави�
       ["Both of my brothers live in London.", "Оба моих брата живут в Лондоне."],
       ["Each student got a book, and all of them were happy.", "Каждый ученик получил книгу, и все они были довольны."],
       ["Neither of the answers was correct.", "Ни один из ответов не был верным."]
+    ]},
+    { type: 'gap', task: 'Ответьте «я тоже»: впишите so или neither, вспомогательный глагол и I.', items: [
+      ["— I like jazz. — ___.", "So do I"], ["— I don't eat meat. — ___.", "Neither do I|Nor do I"],
+      ["— I'm hungry. — ___.", "So am I"], ["— I wasn't at the party. — ___.", "Neither was I|Nor was I"],
+      ["— I have finished my homework. — ___.", "So have I"], ["— I didn't understand the question. — ___.", "Neither did I|Nor did I"],
+      ["— I will be late tonight. — ___.", "So will I"], ["— I haven't been to Paris. — ___.", "Neither have I|Nor have I"],
+      ["— I went to bed early yesterday. — ___.", "So did I"]
+    ]},
+    { type: 'choice', task: 'Выберите правильное начало ответа.', items: [
+      ["— My brother plays the guitar. — ___ my sister.", ["So does", "So is", "Neither does"]],
+      ["— Kate wasn't at school yesterday. — ___ Tom.", ["Neither was", "So was", "Neither did"]],
+      ["— Our parents have bought a new car. — ___ our neighbours.", ["So have", "So did", "So are"]],
+      ["— Anna doesn't like horror films. — ___ I.", ["Neither do", "Neither does", "So do"]],
+      ["— We are going to the cinema tonight. — ___ Mike and Sue.", ["So are", "So do", "So is"]],
+      ["— I won't forget this trip. — ___ I.", ["Neither will", "Neither do", "So will"]]
     ]}
   ]}
 ]});

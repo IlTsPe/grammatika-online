@@ -95,7 +95,7 @@ ${E([
   ["I need to go to <b>the hairdresser's</b>.", "Мне нужно сходить в парикмахерскую."],
   ["We spent the weekend at <b>my grandmother's</b>.", "Мы провели выходные у бабушки."]
 ])}
-${N("Обратите внимание на место апострофа — от него зависит смысл. <i>The boy's toys</i> — это игрушки одного мальчика, а <i>the boys' toys</i> — игрушки нескольких мальчиков: к слову во множественном числе на <i>-s</i> добавляется только апостроф.")}`,
+${N("Обратите внимание на место апострофа — от него зависит смысл. <i>The boy's toys</i> — это игрушки одного мальчика, а <i>the boys' toys</i> — игрушки нескольких мальчиков.")}`,
   ex: [
     { type: 'gap', task: 'Образуйте притяжательный падеж слова в скобках.', items: [
       ["I rode ___ (Tom) bike yesterday.", "Tom's"], ["The ___ (girls) bedroom is upstairs.", "girls'"],
@@ -136,9 +136,9 @@ ${T(["Неисчисляемые", "Как посчитать"], [
 ])}
 <h3>Согласование с глаголом</h3>
 ${E([
-  ["The news <b>is</b> good.", "Новости хорошие. (news — неисчисляемое, поэтому глагол в единственном числе)"],
-  ["Your money <b>is</b> on the table.", "Твои деньги на столе. (money — неисчисляемое, поэтому is)"],
-  ["My trousers <b>are</b> new.", "Мои брюки новые. (парные предметы — всегда множественное число: trousers, jeans, glasses, scissors)"]
+  ["The news <b>is</b> good.", "Новости хорошие. (неисчисляемое)"],
+  ["Your money <b>is</b> on the table.", "Твои деньги на столе. (неисчисляемое)"],
+  ["My trousers <b>are</b> new.", "Мои брюки новые. (парный предмет)"]
 ])}
 <p>Неисчисляемое существительное, даже если по-русски оно стоит во множественном числе («деньги», «новости»), в английском согласуется с глаголом в единственном числе: <i>is, was, has</i>. С парными предметами все наоборот: <i>trousers</i> (брюки), <i>jeans</i> (джинсы), <i>glasses</i> (очки), <i>scissors</i> (ножницы) состоят из двух одинаковых частей, поэтому всегда стоят во множественном числе, и глагол после них тоже во множественном. Чтобы посчитать такие предметы, говорят <i>a pair of</i> — «пара»: <i>a pair of jeans</i> — одни джинсы, <i>two pairs of scissors</i> — двое ножниц.</p>
 <h3>Что ставить перед неисчисляемыми</h3>
@@ -169,6 +169,52 @@ ${N("Некоторые слова бывают и исчисляемыми, и 
       ["The news is good, but the weather was terrible.", "Новости хорошие, а погода была ужасная."],
       ["Please give me a piece of advice about the course.", "Пожалуйста, дайте мне совет насчет курса."],
       ["I bought a loaf of bread and two bottles of milk.", "Я купил буханку хлеба и две бутылки молока."]
+    ]}
+  ]},
+
+{ id: 'noun-collective', level: 'B2', title: 'Собирательные существительные', sub: 'the police are, my family is / are',
+  rule: `
+<p>Слова вроде <i>family</i> — семья, <i>team</i> — команда, <i>class</i> — класс, <i>staff</i> — сотрудники, <i>crew</i> — экипаж, <i>audience</i> — зрители, <i>government</i> — правительство, <i>police</i> — полиция — называют группу людей как одно целое. Сложность с ними одна: какой глагол ставить после такого слова — в единственном числе или во множественном. По-русски мы всегда говорим «семья пришла», а в английском возможны оба варианта, и выбор зависит от смысла.</p>
+${T(["Слова", "Глагол", "Пример"], [
+  ["<i>family, team, class, staff, crew, audience, government, company</i>", "ед. ч. — группа как целое; мн. ч. — ее отдельные члены", "<i>My family <b>is</b> very large.</i> — Моя семья очень большая. <i>My family <b>are</b> all doctors.</i> — В моей семье все врачи."],
+  ["<i>police, people, cattle</i>", "всегда мн. ч.", "<i>The police <b>are</b> looking for him.</i> — Полиция его ищет."]
+])}
+<h3>Группа как целое или ее члены</h3>
+<p>Если мы думаем о группе как об одном целом — одной семье, одной команде, одной компании, — глагол стоит в единственном числе: <i>The team <b>has</b> won its first match</i> — команда выиграла свой первый матч. Если же важны отдельные люди внутри группы, каждый со своими действиями и мнением, в британском английском глагол ставят во множественном числе: <i>The team <b>are</b> arguing about the plan</i> — члены команды спорят о плане. В американском английском в обоих случаях глагол обычно ставят в единственном числе.</p>
+<p>Местоимение после такого слова согласуется с глаголом. С единственным числом говорят <i>it</i> и <i>its</i>, со множественным — <i>they</i> и <i>their</i>: <i>The company <b>has</b> opened <b>its</b> new office</i>, но <i>My family <b>are</b> packing <b>their</b> bags</i>. Смешивать их в одном предложении не стоит.</p>
+<h3>Police и people</h3>
+<p>Слово <i>police</i> всегда требует глагола во множественном числе: <i>The police <b>have</b> arrived</i> — полиция приехала. Одного полицейского так назвать нельзя: говорят <i>a police officer</i>. Слово <i>people</i> («люди») — это множественное число от <i>person</i>, поэтому и с ним глагол всегда во множественном числе: <i>People <b>say</b> that…</i> — люди говорят, что… Так же ведет себя <i>cattle</i> — «крупный рогатый скот»; одно животное — <i>a cow</i>. Об одном человеке из группы говорят <i>a member of staff</i> или <i>a member of the team</i>. А сами слова <i>team, family, class</i> — обычные исчисляемые существительные со множественным числом: <i>two teams, three families</i>.</p>
+${N("Главная ловушка для русскоязычных — фразы вроде «Полиция задержала вора»: по-русски тут единственное число, а по-английски только множественное: <i>The police <b>have</b> caught the thief</i>.")}`,
+  ex: [
+    { type: 'choice', task: 'Выберите правильную форму глагола.', items: [
+      ["The police ___ looking for the thief.", ["are", "is"]],
+      ["People ___ that this restaurant is very good.", ["say", "says"]],
+      ["The club ___ opened its new stadium.", ["has", "have"]],
+      ["The family ___ all coming to dinner, and they are bringing their children.", ["are", "is"]],
+      ["My family ___ very large: there are twelve of us.", ["is", "are"]],
+      ["The cattle ___ in the field near the river.", ["are", "is"]],
+      ["The government ___ announced its new plan.", ["has", "have"]],
+      ["The staff ___ arguing about their holidays again.", ["are", "is"]]
+    ]},
+    { type: 'gap', task: 'Впишите it, its, they или their.', items: [
+      ["The committee has made ___ final decision.", "its"],
+      ["The team are proud of ___ new coach.", "their"],
+      ["The company is growing. ___ has opened three new shops this year.", "it"],
+      ["The police have closed the road. ___ are looking for a lost child.", "they"],
+      ["The class has finished ___ project on time.", "its"],
+      ["My family are going on holiday. ___ are leaving tomorrow morning.", "they"]
+    ]},
+    { type: 'translate', task: 'Переведите на английский.', items: [
+      ["Полиция уже приехала.", "The police have already arrived.|The police have arrived already.|The police have arrived.|The police have already come.|The police have come."],
+      ["Полиция ищет пропавшую собаку.", "The police are looking for the missing dog.|The police are looking for the lost dog.|The police are searching for the missing dog."],
+      ["Наша команда выиграла матч.", "Our team won the match.|Our team has won the match.|Our team have won the match.|Our team won the game.|Our team has won the game.|Our team have won the game."],
+      ["Вся семья сидела за столом.", "The whole family was sitting at the table.|The whole family were sitting at the table.|All the family were sitting at the table.|All the family was sitting at the table.|The whole family sat at the table.|All the family sat at the table.|The entire family was sitting at the table.|The entire family were sitting at the table.|The entire family sat at the table."],
+      ["Правительство приняло новый закон.", "The government has passed a new law.|The government passed a new law.|The government have passed a new law.|The government has adopted a new law.|The government adopted a new law.|The government have adopted a new law."]
+    ]},
+    { type: 'listen', at: 2, task: 'Прослушайте предложение и соберите его из слов.', items: [
+      ["The police are still looking for the stolen car.", "Полиция все еще ищет украденную машину."],
+      ["Our class has its own website with photos and news.", "У нашего класса есть свой сайт с фотографиями и новостями."],
+      ["The audience were clapping and cheering for ten minutes.", "Зрители хлопали и кричали «браво» десять минут."]
     ]}
   ]}
 ]});

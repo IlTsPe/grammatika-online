@@ -20,8 +20,7 @@ ${E([
   ["The man <b>who called</b> you is my boss.", "Человек, который тебе звонил, — мой начальник. (определительное: без него непонятно, о ком речь; без запятых)"],
   ["My brother, <b>who lives in Kazan</b>, is a teacher.", "Мой брат, который живет в Казани, — учитель. (описательное: дополнительная информация; с запятыми, that нельзя)"],
   ["The book (<b>that</b>) you gave me was great.", "Книга, которую ты мне подарил, была отличная. (that — дополнение, его можно опустить)"]
-])}
-${N("Если придаточное просто добавляет сведения и выделяется запятыми, <i>that</i> в нем не используют: <i>Moscow, <b>which</b> is the capital of Russia, is huge</i>.")}`,
+])}`,
   ex: [
     { type: 'gap', task: 'Впишите who, which, that, whose, where или when. Если слово можно опустить, допустим и «-».', items: [
       ["The woman ___ lives next door is a doctor.", "who|that"], ["This is the house ___ I was born.", "where"],
@@ -40,6 +39,52 @@ ${N("Если придаточное просто добавляет сведе�
       ["The woman who lives next door is a famous singer.", "Женщина, которая живет по соседству, известная певица."],
       ["This is the town where my grandparents were born.", "Это город, где родились мои бабушка и дедушка."],
       ["I have a friend whose father works at the zoo.", "У меня есть друг, чей отец работает в зоопарке."]
+    ]}
+  ]},
+
+{ id: 'x-emphatic', level: 'B2', title: 'Эмфатические конструкции', sub: 'I do like it · He did come',
+  rule: `
+<p>В обычное утвердительное предложение можно добавить вспомогательный глагол <i>do / does / did</i>, чтобы усилить сказанное: <i>I like it</i> — мне нравится, а <i>I <b>do</b> like it</i> — мне правда нравится. По-русски такое усиление передают словами «правда», «действительно», «все-таки», «же», «обязательно».</p>
+${F("<b>do / does / did</b> + V")}
+<p>После <i>do / does / did</i> глагол стоит в начальной форме, как в вопросе: <i>She <b>does</b> know</i>, а не <i>does knows</i>; <i>He <b>did</b> come</i>, а не <i>did came</i>. В устной речи на вспомогательный глагол всегда падает ударение — именно оно и создает усиление.</p>
+${T(["Когда говорят", "Пример"], [
+  ["возражают собеседнику", "<i>— You don't like jazz. — I <b>do</b> like jazz!</i> — Ты не любишь джаз. — Да люблю я джаз!"],
+  ["говорят, что вышло вопреки ожиданию", "<i>I thought he wouldn't come, but he <b>did</b> come.</i> — Я думал, он не придет, но он все-таки пришел."],
+  ["противопоставляют", "<i>I don't eat meat, but I <b>do</b> eat fish.</i> — Мясо я не ем, а вот рыбу ем."],
+  ["настойчиво и тепло приглашают", "<i><b>Do</b> sit down!</i> — Садитесь же! <i><b>Do</b> come again!</i> — Обязательно приходите еще!"]
+])}
+<p>Так усиливают только Present Simple и Past Simple. Если в предложении уже есть <i>be</i>, <i>have</i> в перфектном времени или модальный глагол, <i>do</i> не добавляют, а усиливают голосом — ударением на этом глаголе: <i>I <b>am</b> ready!</i> — я правда готов! На письме такое ударение обычно выделяют курсивом. Если же <i>have</i> — смысловой глагол или часть <i>have to</i>, <i>do</i> нужен: <i>I <b>do</b> have time</i>, <i>I <b>do</b> have to go</i>. Исключение — повелительное наклонение: в нем <i>do</i> можно поставить и перед <i>be</i>: <i><b>Do</b> be careful!</i> — Будь же осторожен!</p>
+${N("Вспомогательный глагол в таком предложении не переводят отдельным словом: смысл «правда, все-таки» передает ударение на нем.")}`,
+  ex: [
+    { type: 'gap', task: 'Усильте утверждение: впишите do, does или did и глагол из скобок в нужной форме.', items: [
+      ["— You don't like my soup. — I ___ (like) it! It's delicious.", "do like"],
+      ["I didn't think she would remember my birthday, but she ___ (remember) it.", "did remember"],
+      ["She doesn't speak French, but she ___ (speak) Spanish.", "does speak"],
+      ["— Why didn't you call me? — I ___ (call) you! Twice!", "did call"],
+      ["I know you don't believe me, but I ___ (want) to help you.", "do want"],
+      ["He says he's busy, but he ___ (find) time for football every weekend.", "does find"],
+      ["We didn't win the cup, but we ___ (win) two matches.", "did win"],
+      ["___ (sit) down and have some tea!", "do sit"]
+    ]},
+    { type: 'choice', task: 'Выберите правильный вариант.', items: [
+      ["She ___ the answer, but she is too shy to say it.", ["does know", "does knows", "do knows"]],
+      ["I didn't see the film, but I ___ the book.", ["did read", "did readed", "do read"]],
+      ["— Tom never helps at home. — That's not true! He ___ the dishes every day.", ["does wash", "does washes", "is wash"]],
+      ["___ come to our party next week! (тепло приглашаем)", ["Do", "Does", "Did"]],
+      ["— You aren't ready! — I ___ ready! Let's go.", ["am", "do be", "did be"]],
+      ["I don't like coffee, but I ___ like tea.", ["do", "does", "did"]]
+    ]},
+    { type: 'translate', task: 'Переведите на английский, усилив утверждение с помощью do, does или did.', items: [
+      ["Мне правда нравится твоя новая прическа.", "I do like your new haircut.|I do like your new hairstyle.|I really do like your new haircut.|I really do like your new hairstyle.|I do like your new hair.|I really do like your new hair."],
+      ["Он все-таки пришел на вечеринку.", "He did come to the party.|He did come to the party after all.|He did come to the party in the end."],
+      ["Она действительно много работает.", "She does work hard.|She does work a lot.|She really does work hard.|She really does work a lot."],
+      ["Обязательно приходите к нам еще!", "Do come again!|Do come and see us again!|Do visit us again!|Do come and visit us again!|Do come to see us again!|Do come and see us again soon!"],
+      ["Я не пью кофе, но чай я пью.", "I don't drink coffee, but I do drink tea."]
+    ]},
+    { type: 'listen', at: 2, task: 'Прослушайте предложение и соберите его из слов.', items: [
+      ["I do like your idea, but we need more time.", "Мне правда нравится твоя идея, но нам нужно больше времени."],
+      ["He did promise to call, but he forgot.", "Он ведь обещал позвонить, но забыл."],
+      ["Do sit down and tell me about your trip.", "Садись же и расскажи мне о своей поездке."]
     ]}
   ]},
 
@@ -84,17 +129,17 @@ ${N("Если в предложении Present или Past Simple, для ин�
 <p>После некоторых выражений прошедшее время говорит вовсе не о прошлом, а о том, чего на самом деле нет, или о том, чего хотелось бы. Например, <i>It's time we <b>went</b> home</i> — нам пора домой (сейчас, а не в прошлом).</p>
 ${T(["Выражение", "Форма", "Пример"], [
   ["<i>It's (high) time</i>", "<i>+ Past Simple</i>", "<i>It's high time you <b>found</b> a job.</i> — Тебе давно пора найти работу."],
-  ["<i>would rather</i> (о себе)", "<i>+ V</i>", "<i>I'd rather <b>stay</b> at home.</i> — Я бы лучше остался дома."],
+  ["<i>would rather</i> (о себе)", "<i>+ V</i>", "<i>I'd rather <b>take</b> a taxi.</i> — Я бы лучше поехал на такси."],
   ["<i>would rather</i> (о другом)", "<i>+ Past Simple</i>", "<i>I'd rather you <b>didn't smoke</b> here.</i> — Я бы предпочел, чтобы вы здесь не курили."],
   ["<i>would rather</i> (о прошлом)", "<i>+ Past Perfect</i>", "<i>I'd rather you <b>had told</b> me.</i> — Лучше бы ты мне сказал."],
   ["<i>as if / as though</i>", "<i>+ Past (нереально)</i>", "<i>He talks as if he <b>knew</b> everything.</i> — Он говорит так, как будто все знает."]
 ])}
 <h3>Как понимать эти выражения</h3>
 <p><i>It's time</i> значит «пора», а со словом <i>high</i> — «давно пора», то есть с упреком: это уже надо было сделать. Если речь идет о самом себе или вообще, без указания лица, проще сказать <i>It's time to go</i>; если же назван тот, кто должен действовать, после него идет Past Simple: <i>It's time <b>we went</b></i>.</p>
-<p><i>Would rather</i> (сокращенно <i>'d rather</i>) значит «лучше бы, предпочел бы». Если человек говорит о своем собственном желании, после <i>would rather</i> идет начальная форма глагола без <i>to</i>. Если он хочет, чтобы что-то сделал другой человек, этого человека называют, а глагол ставят в Past Simple, хотя речь о настоящем. А если жалеют о прошлом, о том, что уже не изменить, нужен Past Perfect. Это та же логика, что в предложениях с <i>I wish</i> (тема 11.4).</p>
+<p><i>Would rather</i> (сокращенно <i>'d rather</i>) значит «лучше бы, предпочел бы». Если человек говорит о своем собственном желании, после <i>would rather</i> идет глагол без <i>to</i>, как в теме 13.1. Если он хочет, чтобы что-то сделал другой человек, этого человека называют, а глагол ставят в Past Simple, хотя речь о настоящем. А если жалеют о прошлом, о том, что уже не изменить, нужен Past Perfect. Это та же логика, что в предложениях с <i>I wish</i> (тема 11.5).</p>
 <p><i>As if</i> и <i>as though</i> значат «как будто». Past после них показывает, что сравнение не соответствует действительности: на самом деле он знает не все. В книжной речи после <i>as if</i> часто говорят <i>were</i> для всех лиц: <i>She behaves as if she <b>were</b> the boss</i> — она ведет себя так, будто она здесь начальник.</p>
 <h3>Сослагательное после глаголов требования</h3>
-<p>После глаголов <i>suggest, insist, recommend, demand</i> и выражений <i>it is essential that</i>, <i>it is vital that</i> глагол стоит в начальной форме — без <i>-s</i>, даже с <i>he</i> и <i>she</i>: <i>The doctor insisted that he <b>stay</b> in bed</i>. В британском английском так же часто говорят с <i>should</i>: <i>that he <b>should stay</b></i>. Такую форму называют сослагательным наклонением: она показывает, что речь идет не о факте, а о том, что кто-то требует, советует или считает нужным. Это похоже на русское «чтобы»: «настоял, чтобы он лежал», а не «настоял, что он лежит». Отрицание ставят прямо перед глаголом, без <i>do</i>: <i>He suggested that we <b>not go</b></i> — он предложил, чтобы мы не ходили.</p>
+<p>После глаголов <i>suggest, insist, recommend, demand</i> и выражений <i>it is essential that</i>, <i>it is vital that</i> глагол стоит в начальной форме — без <i>-s</i>, даже с <i>he</i> и <i>she</i>. В британском английском так же часто говорят с <i>should</i>: <i>insisted that he <b>should stay</b></i>. Такую форму называют сослагательным наклонением: она показывает, что речь идет не о факте, а о том, что кто-то требует, советует или считает нужным. Это похоже на русское «чтобы»: «настоял, чтобы он лежал», а не «настоял, что он лежит». Отрицание ставят прямо перед глаголом, без <i>do</i>: <i>He suggested that we <b>not go</b></i> — он предложил, чтобы мы не ходили.</p>
 ${E([
   ["The doctor insisted that he <b>stay</b> in bed.", "Врач настоял, чтобы он лежал."],
   ["It is essential that every student <b>attend</b>.", "Важно, чтобы присутствовал каждый."]
@@ -120,7 +165,7 @@ ${E([
 
 { id: 'x-cleft', level: 'C1', title: 'Расщепленные предложения', sub: 'It was Tom who… · What I need is…',
   rule: `
-<p>Чтобы выделить какую-то часть предложения, в английском его «расщепляют» на две части: <i><b>It was Tom who</b> broke the window</i> — это Том разбил окно. В русском для такого выделения обычно хватает интонации или слова «именно».</p>
+<p>Чтобы выделить какую-то часть предложения, в английском его «расщепляют» на две части. В русском для такого выделения обычно хватает интонации или слова «именно».</p>
 ${T(["Конструкция", "Пример", "Что выделяем"], [
   ["<i>It is / was … that / who …</i>", "<i><b>It was Tom who</b> broke the window.</i> — Это Том разбил окно.", "именно Том"],
   ["", "<i><b>It was in 2010 that</b> we met.</i> — Мы познакомились именно в 2010 году.", "именно в 2010-м"],
@@ -154,7 +199,7 @@ ${N("В конструкции с <i>What…</i> глагол обычно ст�
 
 { id: 'x-inverted-conditionals', level: 'C2', title: 'Условия без if', sub: 'Had I known… · Should you need…',
   rule: `
-<p>В формальной речи условие можно выразить без <i>if</i>: его убирают, а вспомогательный глагол ставят в самое начало. Например, вместо <i>If I had known</i> говорят <i>Had I known</i>. Кроме того, условие можно ввести и другими словами — <i>provided</i>, <i>as long as</i>, <i>but for</i>.</p>
+<p>В формальной речи условие можно выразить без <i>if</i>: его убирают, а вспомогательный глагол ставят в самое начало.</p>
 ${T(["Обычная форма", "С инверсией"], [
   ["<i>If I had known…</i>", "<i><b>Had I known</b>, I would have helped.</i> — Если бы я знал, я бы помог."],
   ["<i>If you should need help…</i>", "<i><b>Should you need</b> any help, call me.</i> — Если вдруг понадобится помощь, звоните мне."],
@@ -163,7 +208,7 @@ ${T(["Обычная форма", "С инверсией"], [
   ["<i>If it had not been for…</i>", "<i><b>Had it not been for</b> your support, I would have given up.</i> — Если бы не твоя поддержка, я бы сдался."]
 ])}
 <h3>Что значат should, were to и were it not for</h3>
-<p>Вариант с <i>had</i> — это обычное условное предложение 3 типа, только без <i>if</i> (условные предложения подробно разобраны в разделе 11). А вот три других оборота стоит разобрать отдельно. <i>If you should…</i> («если вдруг…») говорит о том, что событие возможно, но маловероятно; его часто используют в вежливых предложениях помощи и в официальных письмах. <i>If … were to…</i> описывает воображаемую ситуацию в будущем, обычно маловероятную: «если бы вдруг правительство решило…». <i>If it were not for…</i> и <i>if it had not been for…</i> значат «если бы не…»: первый говорит о настоящем, второй — о прошлом. Во всех случаях инверсия делает фразу более официальной, а смысл не меняется.</p>
+<p>Вариант с <i>had</i> — это обычное условное предложение 3 типа, только без <i>if</i>. А вот три других оборота стоит разобрать отдельно. <i>If you should…</i> («если вдруг…») говорит о том, что событие возможно, но маловероятно; его часто используют в вежливых предложениях помощи и в официальных письмах. <i>If … were to…</i> описывает воображаемую ситуацию в будущем, обычно маловероятную: «если бы вдруг правительство решило…». <i>If it were not for…</i> и <i>if it had not been for…</i> значат «если бы не…»: первый говорит о настоящем, второй — о прошлом. Во всех случаях инверсия делает фразу более официальной, а смысл не меняется.</p>
 <h3>Другие слова для условия</h3>
 <p>Условие можно ввести и без <i>if</i> и без инверсии. <i>But for</i> — это короткая замена <i>if it were not for</i> и <i>if it had not been for</i>, то есть тоже «если бы не», и после него идет существительное. <i>As long as</i> и <i>provided (that)</i> значат «при условии, что», то есть ставят обязательное условие. <i>Supposing</i> значит «предположим, что; а что если» и вводит воображаемую ситуацию.</p>
 ${E([
@@ -197,14 +242,12 @@ ${T(["Заместитель", "Пример", "Значение"], [
   ["<i>so / not</i>", "<i>I think <b>so</b>. I hope <b>not</b>. I'm afraid <b>not</b>.</i> — Думаю, да. Надеюсь, что нет. Боюсь, что нет.", "заменяет целое предложение"],
   ["<i>one / ones</i>", "<i>Can I see the red <b>one</b>? Bigger <b>ones</b>?</i> — Можно посмотреть красный? А побольше есть?", "заменяет исчисляемое существительное"],
   ["вспомогательный глагол", "<i>She said she'd call, but she <b>didn't</b>.</i> — Она сказала, что позвонит, но не позвонила.", "заменяет глагольную группу"],
-  ["<i>so / neither + aux + подлежащее</i>", "<i>He can swim, and <b>so can I</b>.</i> — Он умеет плавать, и я тоже. <i>— I'm not tired. — <b>Neither am I</b>.</i> — Я не устал. — Я тоже.", "«я тоже», «я тоже не»"],
+  ["<i>so / neither + aux + подлежащее</i>", "<i>He can swim, and <b>so can I</b>.</i> — Он умеет плавать, и я тоже.", "«я тоже» (с <i>neither</i> — «я тоже не»)"],
   ["<i>to</i>", "<i>You don't have to if you don't want <b>to</b>.</i> — Не обязательно, если не хочешь.", "заменяет инфинитив"]
 ])}
 <h3>Как работают заместители</h3>
 <p>Слова <i>so</i> и <i>not</i> заменяют целое предложение после глаголов мнения и чувства: <i>think, hope, suppose, expect, be afraid</i>. Например, на вопрос <i>Will it rain?</i> (будет дождь?) отвечают <i>I'm afraid so</i> — боюсь, что да, или <i>I hope not</i> — надеюсь, что нет, и не повторяют <i>it will rain</i>.</p>
-<p><i>One</i> заменяет исчисляемое существительное в единственном числе, а <i>ones</i> — во множественном, чтобы не повторять его: <i>this cup or <b>that one</b></i> — эта чашка или та. С неисчисляемыми существительными (<i>water, money</i>) так не делают.</p>
-<p>Оборот <i>so / neither + вспомогательный глагол + подлежащее</i> значит «я тоже» или «я тоже не». <i>So</i> отвечает на утверждение, <i>neither</i> (или <i>nor</i>) — на отрицание. Порядок слов здесь обратный, как в вопросе. Вспомогательный глагол берут тот же, что был в первой фразе: <i>can — so can I</i>, <i>am not — neither am I</i>. Если там было Present или Past Simple без вспомогательного глагола, нужен <i>do, does</i> или <i>did</i>: <i>— I liked the film. — <b>So did I</b></i> — Мне понравился фильм. — Мне тоже.</p>
-<p>Вспомогательный глагол может заменить и всю глагольную группу: <i>but she didn't</i> значит <i>but she didn't call</i>. Похоже работает и частица <i>to</i>: вместо того чтобы повторять весь инфинитив, оставляют только <i>to</i> (<i>if you don't want <b>to</b></i> = <i>if you don't want to do it</i>).</p>
+<p>Во множественном числе вместо <i>one</i> говорят <i>ones</i>. С неисчисляемыми существительными (<i>water, money</i>) так не делают.</p>
 ${N("Отрицательный короткий ответ строят по-разному. После <i>hope</i> говорят <i>I hope <b>not</b></i> — надеюсь, что нет. А после <i>think</i> — <i>I <b>don't think so</b></i> — думаю, что нет.")}`,
   ex: [
     { type: 'gap', task: 'Впишите одно слово.', items: [

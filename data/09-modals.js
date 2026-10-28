@@ -21,8 +21,8 @@ ${E([
   ["The test was hard, but I <b>was able to</b> answer all the questions.", "Тест был трудный, но я сумел ответить на все вопросы. (один конкретный случай)"],
   ["I <b>couldn't</b> find my keys this morning.", "Сегодня утром я не мог найти ключи. (в отрицании подходит could)"]
 ])}
-<p>Форма <i>have been able to</i> — это тот же оборот <i>be able to</i> во времени Present Perfect (о нем — в разделе 2 «Времена»). Ее используют, когда говорят о периоде, который еще не закончился: «в последнее время», «на этой неделе», «до сих пор». Например, <i>I haven't been able to call you this week</i> — на этой неделе я не смог тебе позвонить.</p>
-${N("Поставить <i>can</i> в будущее время нельзя: вместо <i>will can</i> говорят <i>will be able to</i> («смогу»). Но если договоренность или возможность есть уже сейчас, <i>can</i> можно сказать и о будущем: <i>I <b>can</b> come tomorrow</i> — завтра я могу прийти. И обратите внимание на написание отрицания: оно пишется слитно — <i>cannot</i> или коротко <i>can't</i>.")}`,
+<p>Форма <i>have been able to</i> — это тот же оборот <i>be able to</i> во времени Present Perfect. Ее используют, когда говорят о периоде, который еще не закончился: «в последнее время», «на этой неделе», «до сих пор». Например, <i>I haven't been able to call you this week</i> — на этой неделе я не смог тебе позвонить.</p>
+${N("Но если договоренность или возможность есть уже сейчас, <i>can</i> можно сказать и о будущем: <i>I <b>can</b> come tomorrow</i> — завтра я могу прийти. И обратите внимание на написание отрицания: оно пишется слитно — <i>cannot</i> или коротко <i>can't</i>.")}`,
   ex: [
     { type: 'gap', task: 'Впишите can, can\'t, could, couldn\'t или нужную форму be able to.', items: [
       ["I ___ swim when I was five.", "could|was able to"], ["___ you help me with these heavy boxes, please?", "could|can"],
@@ -49,6 +49,56 @@ ${N("Поставить <i>can</i> в будущее время нельзя: в
     ]}
   ]},
 
+{ id: 'mod-would-like', level: 'A2', title: 'Would like', sub: "I'd like a coffee · Would you like…?",
+  rule: `
+<p>Оборот <i>would like</i> значит «хотел бы». Он звучит мягче и вежливее, чем <i>want</i>, поэтому с ним просят и предлагают: в кафе, в магазине, в гостях. Например, <i>I'd like a cup of tea</i> — я бы хотел чашку чая.</p>
+${T(["Форма", "Пример"], [
+  ["<i>would like</i> + существительное", "<i>I'd like <b>a glass of water</b>.</i> — Я бы хотел стакан воды."],
+  ["<i>would like</i> + <i>to</i> + глагол", "<i>She'd like <b>to see</b> the menu.</i> — Она хотела бы посмотреть меню."],
+  ["вопрос: <i>Would … like…?</i>", "<i><b>Would</b> you <b>like</b> some cake?</i> — Хотите торта?"],
+  ["отрицание: <i>wouldn't like</i>", "<i>I <b>wouldn't like</b> to live there.</i> — Я бы не хотел там жить."]
+])}
+<p>Слово <i>would</i> одно для всех лиц: <i>I would like, she would like, they would like</i> — окончание <i>-s</i> к <i>like</i> здесь не добавляют. В разговоре <i>would</i> почти всегда сокращают до <i>'d</i>: <i>I'd like, we'd like</i>. Частицу <i>to</i> перед глаголом не пропускают: <i>I'd like <b>to</b> go</i>, а не <i>I'd like go</i>.</p>
+<h3>Like или would like</h3>
+<p>Эти два оборота легко спутать, хотя смысл у них разный. <i>Like</i> говорит о том, что нравится вообще, всегда: <i>I <b>like</b> coffee</i> — я люблю кофе. А <i>would like</i> — о желании прямо сейчас, в конкретной ситуации: <i>I'd <b>like</b> a coffee</i> — я бы выпил кофе. Так же различаются вопросы: <i>Do you like tea?</i> — ты любишь чай? и <i>Would you like some tea?</i> — хочешь чаю?</p>
+<h3>Как отвечать на Would you like…?</h3>
+<p>На предложение что-то взять отвечают коротко: <i>Yes, please</i> — да, пожалуйста, или <i>No, thank you</i> — нет, спасибо. А на приглашение что-то сделать вместе с радостью соглашаются так: <i>— Would you like to come to my party? — I'd love to!</i> (— Хочешь прийти ко мне на вечеринку? — С удовольствием!)</p>
+${N("Фраза <i>I want a coffee</i> в кафе звучит резко, почти как «Дайте мне кофе», поэтому вежливее сказать <i>I'd like a coffee, please</i>.")}`,
+  ex: [
+    { type: 'choice', task: 'Выберите правильный вариант.', items: [
+      ["— What would you like? — ___ a cup of coffee, please.", ["I'd like", "I like", "I like to"]],
+      ["I ___ coffee: I drink it every morning.", ["like", "would like", "would like to"]],
+      ["Would you like ___ for a walk with us?", ["to go", "go", "going"]],
+      ["— Would you like some cake? — ___", ["Yes, please.", "Yes, I like.", "Yes, I'd like."]],
+      ["___ you like to see the photos from our trip?", ["Would", "Will", "Are"]],
+      ["My parents would like ___ a new car.", ["to buy", "buy", "buying"]],
+      ["— Do you like jazz? — ___", ["Yes, I do.", "Yes, please.", "Yes, I would."]],
+      ["— Would you like to come to my party on Saturday? — ___", ["I'd love to!", "I'd love!", "I love to!"]]
+    ]},
+    { type: 'gap', task: 'Впишите недостающие слова: would, would like или to + глагол из скобок.', items: [
+      ["I ___ a glass of water, please. (хотел бы)", "would like"],
+      ["___ you like some tea? (хочешь)", "would"],
+      ["She would like ___ (visit) Paris one day.", "to visit"],
+      ["We ___ like to live in a big city. (не хотели бы)", "would not"],
+      ["What ___ you like for dessert? (хочешь)", "would"],
+      ["I'd like ___ (book) a table for two.", "to book"],
+      ["They ___ to stay at a hotel near the sea. (хотели бы)", "would like"],
+      ["Would you like ___ (come) with us to the cinema?", "to come"]
+    ]},
+    { type: 'translate', task: 'Переведите на английский.', items: [
+      ["Я бы хотел чашку кофе.", "I would like a cup of coffee.|I would like a coffee."],
+      ["Хотите чаю?", "Would you like some tea?|Would you like tea?|Would you like a cup of tea?|Do you want some tea?|Do you want tea?|Do you want a cup of tea?"],
+      ["Она хотела бы стать врачом.", "She would like to become a doctor.|She would like to be a doctor."],
+      ["Я люблю чай, но сейчас я бы выпил кофе.", "I like tea, but now I would like a coffee.|I like tea, but now I would like coffee.|I like tea, but now I would like some coffee.|I like tea, but right now I would like a coffee.|I like tea, but I would like a coffee now.|I like tea, but I would like some coffee now.|I like tea, but right now I would like some coffee.|I like tea, but right now I would like coffee.|I like tea, but I would like coffee now.|I like tea, but I would like a coffee right now.|I like tea, but now I would like to have a coffee.|I like tea, but now I would like to drink some coffee.|I like tea, but now I would like to have some coffee.|I like tea, but right now I would like to have a coffee."],
+      ["Вы не хотели бы пойти с нами?", "Would you like to come with us?|Would you like to go with us?|Would you like to join us?|Wouldn't you like to come with us?|Would you like to come along with us?"]
+    ]},
+    { type: 'listen', at: 2, task: 'Прослушайте предложение и соберите его из слов.', items: [
+      ["Would you like a piece of cake with your tea?", "Хотите кусочек торта к чаю?"],
+      ["I would like to book a room for two nights.", "Я бы хотел забронировать номер на две ночи."],
+      ["My sister likes dogs, but she would like a cat.", "Моя сестра любит собак, но хотела бы кошку."]
+    ]}
+  ]},
+
 { id: 'mod-may', level: 'B1', title: 'May и might', sub: 'May I come in? · It might rain',
   rule: `
 <p>Глагол <i>may</i> используют в двух случаях. Во-первых, чтобы вежливо попросить или дать разрешение: <i>May I come in?</i> Во-вторых, чтобы высказать предположение: <i>It may rain</i> — возможно, пойдет дождь. <i>Might</i> тоже выражает предположение, но с меньшей уверенностью.</p>
@@ -57,7 +107,7 @@ ${T(["Форма", "Значение", "Пример"], [
   ["<i>You may…</i>", "разрешение", "<i>You <b>may</b> go now.</i> — Теперь можете идти."],
   ["<i>may not</i>", "запрет (мягкий, формальный)", "<i>You <b>may not</b> use phones during the exam.</i> — Во время экзамена пользоваться телефонами нельзя."],
   ["<i>may / might</i>", "возможно (предположение)", "<i>It <b>may</b> rain. She <b>might</b> be at home.</i> — Возможно, пойдет дождь. Может быть, она дома."],
-  ["<i>be allowed to</i>", "разрешение в прошлом и будущем, правила", "<i>We <b>were allowed to</b> stay up late.</i> — Нам разрешили лечь спать попозже."]
+  ["<i>be allowed to</i>", "разрешение в прошлом и будущем, правила", "<i>She <b>was allowed to</b> leave early.</i> — Ей разрешили уйти пораньше."]
 ])}
 ${E([
   ["— <b>May</b> I take your pen? — Yes, you <b>may</b>. / Yes, of course.", "— Можно взять твою ручку? — Да, можно. / Да, конечно. (так отвечают на просьбу)"],
@@ -93,16 +143,16 @@ ${N("Если хочется спросить, возможно ли что-то
 
 { id: 'mod-must', level: 'B1', title: 'Must, have to, mustn\'t, don\'t have to', sub: 'I must go · You don\'t have to come',
   rule: `
-<p>И <i>must</i>, и <i>have to</i> переводятся как «должен», но оттенок у них разный. <i>Must</i> — когда говорящий сам считает что-то необходимым, а <i>have to</i> — когда так требуют обстоятельства или правила. Еще важнее, что их отрицания значат совсем разное — об этом в заметке ниже.</p>
+<p>И <i>must</i>, и <i>have to</i> переводятся как «должен», но оттенок у них разный. <i>Must</i> — когда говорящий сам считает что-то необходимым, а <i>have to</i> — когда так требуют обстоятельства или правила. Еще важнее, что их отрицания значат совсем разное.</p>
 ${T(["Форма", "Значение", "Пример"], [
   ["<i>must</i>", "необходимость по личному убеждению, сильный совет", "<i>I <b>must</b> call Mum. You <b>must</b> see this film!</i> — Я должен позвонить маме. Ты обязательно должен посмотреть этот фильм!"],
   ["<i>have to</i>", "необходимость из-за правил, обстоятельств", "<i>I <b>have to</b> wear a uniform at school.</i> — В школе мне приходится носить форму."],
   ["<i>had to / will have to</i>", "прошедшее и будущее (у must их нет)", "<i>I <b>had to</b> wait an hour.</i> — Мне пришлось ждать час."],
   ["<i>mustn't</i>", "<b>нельзя</b>, запрет", "<i>You <b>mustn't</b> smoke here.</i> — Здесь нельзя курить."],
   ["<i>don't have to</i>", "<b>не обязательно</b>, нет необходимости", "<i>You <b>don't have to</b> come if you're busy.</i> — Если ты занят, можешь не приходить."],
-  ["<i>be to</i>", "необходимость по плану, договоренности", "<i>We <b>are to</b> meet at six.</i> — Мы должны встретиться в шесть."]
+  ["<i>be to</i>", "необходимость по плану, договоренности", "<i>The train <b>is to</b> arrive at noon.</i> — Поезд должен прибыть в полдень."]
 ])}
-${N("Запомните главную разницу: <i>mustn't</i> — это запрет, а <i>don't have to</i> — отсутствие необходимости. «Тебе нельзя идти» — <i>You mustn't go</i>. «Тебе не обязательно идти» (можешь, если хочешь) — <i>You don't have to go</i>.")}
+${N("Сравните: «Тебе нельзя идти» — <i>You mustn't go</i>, а «Тебе не обязательно идти» (можешь, если хочешь) — <i>You don't have to go</i>.")}
 <h3>Be to — «должен» по плану</h3>
 <p>Оборот <i>be to</i> тоже переводится как «должен», но означает особый вид необходимости: что-то нужно сделать потому, что так заранее договорились, запланировали или распорядились. То есть это не личное убеждение, как у <i>must</i>, и не давление обстоятельств, как у <i>have to</i>, а расписание или чей-то план. Строится оборот так: глагол <i>be</i> в нужной форме (<i>am, is, are, was, were</i>), затем <i>to</i> и начальная форма глагола. В прошедшем времени <i>was / were to</i> часто значит, что план был, но мы не знаем, выполнился ли он. Этот оборот звучит довольно официально, его часто встречают в новостях и инструкциях.</p>
 ${E([
@@ -138,7 +188,7 @@ ${E([
 
 { id: 'mod-should', level: 'B1', title: 'Should, ought to, need', sub: 'You should see a doctor · You needn\'t worry',
   rule: `
-<p><i>Should</i> и <i>ought to</i> нужны, чтобы дать совет или сказать, как правильно поступить: <i>You should see a doctor</i> — тебе стоит сходить к врачу. Глагол <i>need</i> ведет себя двояко: он может быть обычным глаголом (<i>I need to go</i>), а в отрицании бывает модальным (<i>You needn't worry</i> — можешь не волноваться).</p>
+<p><i>Should</i> и <i>ought to</i> нужны, чтобы дать совет или сказать, как правильно поступить: <i>You should see a doctor</i> — тебе стоит сходить к врачу.</p>
 ${T(["Форма", "Значение", "Пример"], [
   ["<i>should / shouldn't</i>", "совет, следует", "<i>You <b>should</b> see a doctor. You <b>shouldn't</b> eat so much.</i> — Тебе стоит сходить к врачу. Тебе не следует столько есть."],
   ["<i>ought to</i>", "следует (долг, чуть сильнее)", "<i>You <b>ought to</b> respect your parents.</i> — Ты должен уважать родителей."],
@@ -148,14 +198,14 @@ ${T(["Форма", "Значение", "Пример"], [
   ["<i>had better</i>", "лучше (а то хуже будет)", "<i>You'<b>d better</b> hurry.</i> — Тебе лучше поторопиться."]
 ])}
 <h3>Need: модальный и обычный глагол</h3>
-<p>Глагол <i>need</i> («нужно») может вести себя двумя способами. Чаще всего это обычный глагол: после него стоит <i>to</i>, вопрос и отрицание строятся с <i>do / does / did</i>, а в третьем лице появляется окончание <i>-s</i>. Например, <i>She <b>needs to</b> rest</i> — ей нужно отдохнуть, <i>You <b>don't need to</b> worry</i> — тебе не нужно волноваться. Но в отрицании и иногда в вопросе <i>need</i> может стать модальным: тогда частица <i>to</i> не нужна, <i>do</i> не используется, и окончания <i>-s</i> нет. Так, <i>You <b>needn't</b> worry</i> значит то же самое, что <i>You don't need to worry</i>, только звучит чуть книжнее. В утвердительных предложениях модального <i>need</i> не бывает, поэтому «мне нужно идти» — это только <i>I need to go</i>.</p>
+<p>Глагол <i>need</i> («нужно») может вести себя двумя способами. Чаще всего это обычный глагол: после него стоит <i>to</i>, вопрос и отрицание строятся с <i>do / does / did</i>, а в третьем лице появляется окончание <i>-s</i>. Например, <i>She <b>needs to</b> rest</i> — ей нужно отдохнуть, <i>You <b>don't need to</b> come early</i> — тебе не нужно приходить рано. Но в отрицании и иногда в вопросе <i>need</i> может стать модальным: тогда частица <i>to</i> не нужна, <i>do</i> не используется, и окончания <i>-s</i> нет. Так, <i>You <b>needn't</b> come early</i> значит то же самое, что <i>You don't need to come early</i>, только звучит чуть книжнее. В утвердительных предложениях модального <i>need</i> не бывает, поэтому «мне нужно идти» — это только <i>I need to go</i>.</p>
 <h3>Had better — «лучше бы»</h3>
 <p>Оборот <i>had better</i> дает настойчивый совет, за которым слышится предупреждение: «лучше сделай так, а то будет плохо». Хотя в нем есть <i>had</i>, речь идет о настоящем или будущем, а не о прошлом. В речи его почти всегда сокращают до <i>'d better</i>. После него ставится глагол без <i>to</i>, а отрицание образуют с помощью <i>not</i> после <i>better</i>: <i>had better not</i>. Совет с <i>had better</i> сильнее и конкретнее, чем с <i>should</i>, поэтому его дают для определенной ситуации, а не как общее правило.</p>
 ${E([
   ["You'<b>d better</b> take an umbrella.", "Возьми-ка лучше зонт. (а то промокнешь)"],
   ["We <b>had better not</b> be late.", "Нам лучше не опаздывать. (иначе будут неприятности)"]
 ])}
-${N("Следите за частицей <i>to</i>. После <i>ought</i> она нужна всегда: <i>You ought <b>to</b> go</i>. А после модального <i>needn't</i> ее нет: <i>You needn't <b>go</b></i>. Вариант <i>You needn't to go</i> — ошибка.")}`,
+${N("В отличие от <i>should</i> и других модальных глаголов, после <i>ought</i> частица <i>to</i> нужна всегда: <i>You ought <b>to</b> go</i>, а не <i>You ought go</i>.")}`,
   ex: [
     { type: 'choice', task: 'Выберите правильный вариант.', items: [
       ["You look tired. You ___ go to bed.", ["should", "can", "have"]], ["You ___ eat so many sweets. It's bad for your teeth.", ["shouldn't", "needn't", "don't have"]],
@@ -227,7 +277,6 @@ ${N("Если нужно сказать «не может быть, чтобы�
 
 { id: 'mod-nuances', level: 'C2', title: 'Тонкости модальных глаголов', sub: "needn't have · was to · won't",
   rule: `
-<p>Здесь собраны пары и обороты с модальными глаголами, в которых путаются даже те, кто хорошо знает язык. Разница между ними часто тонкая, поэтому внимательно смотрите на примеры и их перевод.</p>
 ${T(["Форма", "Значение", "Пример"], [
   ["<i>needn't have + V3</i>", "сделал, но это было не нужно", "<i>I <b>needn't have cooked</b> so much.</i> — Зря я столько наготовил."],
   ["<i>didn't need to + V</i>", "не было нужно (обычно и не делал)", "<i>We <b>didn't need to</b> take a taxi.</i> — Нам не нужно было брать такси."],
