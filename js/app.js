@@ -52,10 +52,9 @@ function go(id, scroll = true, syncToc = true, fromBookmarks = false) {
   const main = $('#main'); main.innerHTML = '';
   const wrap = el('div', 'sheet__inner');
   if (topicById[id]) {
-    const t = topicById[id];
-    /* чипы уровней следуют за открытым уроком, кроме открытого из «Избранного» */
-    if (!fromBookmarks && levelFilter !== t.level) { levelFilter = t.level; store.set('gk2-level', levelFilter); renderLevels(); }
-    renderTopic(t, wrap);
+    /* фильтр уровня в меню меняют только его кнопки: открытая тема его не переключает — при «Все» список остается полным,
+       при выбранном уровне остается этот уровень */
+    renderTopic(topicById[id], wrap);
   }
   else if (chapById[id]) renderChapter(chapById[id], wrap);
   else if (id === 'mistakes') renderMistakesPage(wrap);
