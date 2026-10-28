@@ -73,8 +73,7 @@ const CORE = [
   'favicon/favicon-192.png',
   'favicon/favicon-512.png',
   'favicon/favicon-maskable-512.png',
-  'favicon/favicon.svg',
-  'favicon/og-image.png'
+  'favicon/favicon.svg'
 ];
 // CORE-END
 
