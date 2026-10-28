@@ -99,16 +99,17 @@ button { font: inherit; transition: linear 0.15s; }
 /* ---------- Согласие на cookie (metrika.js): плашка внизу экрана, пока нет выбора; над прилипшей шапкой, под меню телефона.
    «Принять» и «Отклонить» оформлены одинаково: ни одна не выделена, чтобы не подталкивать к выбору ---------- */
 .cookie-note { position: fixed; z-index: 22; left: 0; right: 0; bottom: 0;
-  display: grid; grid-template-columns: auto minmax(0, 1fr) auto; align-items: center; gap: 10px 14px; padding: 12px 20px calc(12px + env(safe-area-inset-bottom, 0px));
+  display: flex; justify-content: center; align-items: center; gap: 10px 14px; padding: 12px 20px calc(12px + env(safe-area-inset-bottom, 0px));
   border-top: 2px solid var(--accent); background: var(--paper); box-shadow: 0 -2px 10px rgb(0 0 0 / 15%);
-  color: var(--ink); font-size: 14px; line-height: 1.45; } /* полоса во всю ширину низа экрана: значок печенья, текст в строку, кнопки справа */
-.cookie-note__icon { width: 26px; height: 26px; color: var(--gold-ink); }
-.cookie-note__text { margin: 0 6px 0 0; }
+  color: var(--ink); font-size: 14px; line-height: 1.45; } /* полоса во всю ширину низа экрана: значок печенья, текст и кнопки в одну линию по центру */
+.cookie-note__icon { flex: none; width: 26px; height: 26px; color: var(--gold-ink); } /* flex: none — в строке с длинным текстом значок не сжимается */
+.cookie-note__text { flex: 0 1 auto; min-width: 0; max-width: 700px; margin: 0 6px 0 0; } /* на широком экране вся группа стоит по центру с полями по бокам */
+.cookie-note__btns { flex: none; }
 .cookie-note__btns, .cookie-consent__btns { display: flex; column-gap: 8px; }
 @media (max-width: 560px) {
-  .cookie-note { grid-template-columns: auto minmax(0, 1fr); font-size: 12px; }
-  .cookie-note__text { margin: 0; }
-  .cookie-note__btns { grid-column: 1 / -1; }
+  .cookie-note { flex-wrap: wrap; font-size: 12px; } /* значок и текст в строку, под ними кнопки поровну на всю ширину */
+  .cookie-note__text { flex: 1 1 0; max-width: none; margin: 0; }
+  .cookie-note__btns { flex: 1 1 100%; }
   .cookie-note__btn { flex: 1; padding: 6px 14px; font-size: 13px; }
 }
 .cookie-consent { margin: 12px 0; }
@@ -1109,25 +1110,30 @@ button { font: inherit; transition: linear 0.15s; }
 .ex__head { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 12px; margin-bottom: 8px; }
 .ex__num { font-family: var(--f-display); font-weight: 700; font-size: 14px; color: var(--accent); }
 .ex__task { margin: 0; font-weight: 600; }
-/* каждое предложение — своя карточка с акцентной полосой слева (как полоса сверху у карточек таблиц на телефоне); номер — мелкий моноширинный «01», после проверки он окрашивается результатом
-   строки (ex__item--ok / --bad из check в exercises.js). Карточка, в которой сейчас идет ответ (фокус внутри), подсвечивается рамкой и номером */
-.ex__items { display: grid; row-gap: 15px; list-style: none; margin: 0; padding: 0; counter-reset: it; }
-.ex__item { counter-increment: it; display: grid; grid-template-columns: 22px minmax(0, 1fr); gap: 4px 8px; padding: 10px 14px 12px 10px;
-  border: 1px solid var(--border); border-left: 3px solid var(--accent); border-radius: 10px; box-shadow: var(--lift);
-  transition: border-color .15s linear, box-shadow .15s linear; }
+/* каждое предложение — своя карточка: у левого края внутри — скругленная полоса-акцент (::after), рядом мелкий моноширинный номер «01» (::before).
+   После проверки полоса и номер окрашиваются результатом строки (ex__item--ok / --bad из check в exercises.js), у строки без ответа (ex__item--miss)
+   полоса остается акцентной. Карточка, в которой сейчас идет ответ (фокус внутри), подсвечивается рамкой и номером */
+.ex__items { display: grid; row-gap: 12px; list-style: none; margin: 0; padding: 0; counter-reset: it; }
+/* номер стоит посередине между полосой (left 10px + 3px) и текстом: колонка 36px сразу за полосой, номер в ней по центру */
+.ex__item { position: relative; counter-increment: it; display: grid; grid-template-columns: 36px minmax(0, 1fr); gap: 4px 0; padding: 12px 16px 13px 13px;
+  border: 1px solid var(--border); border-radius: 16px; box-shadow: var(--lift); transition: border-color .15s linear, box-shadow .15s linear; }
+:root[data-theme="dark"] .ex__item { border-color: rgb(var(--accent-rgb) / 16%); } /* на темном листе рамка — светлая дымка, как у стекла */
 :root[data-theme="light"] .ex__item:not(:focus-within) { box-shadow: 0 2px 4px rgb(10 14 30 / 12%); } /* у карточки тень короче, чем --lift у кнопок */
-.ex__item:focus-within { border-color: color-mix(in srgb, var(--accent) 55%, var(--border)); border-left-color: var(--accent);
-  box-shadow: 0 2px 8px rgb(var(--accent-rgb) / 12%); }
+.ex__item:focus-within { border-color: color-mix(in srgb, var(--accent) 55%, var(--border)); box-shadow: 0 2px 10px rgb(var(--accent-rgb) / 14%); }
 @supports not (color: color-mix(in srgb, red, red)) { .ex__item:focus-within { border-color: var(--mx-item-focus); } }
-:root[data-theme="dark"] .ex__item:focus-within { box-shadow: 0 1px 4px rgb(var(--accent-rgb) / 3%); } /* светлый акцент на темном листе светится сильнее */
-/* после проверки полоса слева — цвет результата строки; у строки без ответа (ex__item--miss) остается акцентной */
-.ex__item.ex__item--ok { border-left-color: var(--ok); }
-:root[data-theme="light"] .ex__item.ex__item--ok { border-left-color: #139D33; } /* --ok и --bad в светлой теме темные для полосы */
-:root[data-theme="light"] .ex__item.ex__item--bad { border-left-color: #D8554A; }
-.ex__item.ex__item--bad { border-left-color: var(--bad); }
+:root[data-theme="dark"] .ex__item:focus-within { border-color: rgb(var(--accent-rgb) / 45%); box-shadow: 0 2px 12px rgb(var(--accent-rgb) / 8%); } /* светлый акцент на темном листе светится сильнее */
+.ex__item::after { content: ''; position: absolute; top: 12px; bottom: 12px; left: 10px; width: 3px; border-radius: 3px; background: var(--accent);
+  transition: background-color .15s linear; }
+.ex__item--ok::after { background: var(--ok); }
+.ex__item--bad::after { background: var(--bad); }
+:root[data-theme="light"] .ex__item--ok::after { background: #139D33; } /* --ok и --bad в светлой теме темные для полосы */
+:root[data-theme="light"] .ex__item--bad::after { background: #D8554A; }
 .ex__item:focus-within::before { color: var(--accent); }
-.ex__item::before { content: counter(it, decimal-leading-zero); grid-row: 1; align-self: start; padding-top: 9px; font-family: var(--f-mono); font-size: 12px;
-  color: rgb(var(--muted-rgb) / 75%); font-variant-numeric: tabular-nums; transition: color .15s linear; }
+/* номер по центру первой строки: его строка той же высоты, что строка предложения (18px × 1.9), у перевода — русского текста (отступ 3px + 16.5px × 1.6),
+   у «На слух» — кнопки плеера 36px */
+.ex__item::before { content: counter(it, decimal-leading-zero); grid-row: 1; align-self: start; padding-top: 2px; font-family: var(--f-mono); font-size: 12px;
+  line-height: calc(18px * 1.9); text-align: center; color: rgb(var(--muted-rgb) / 75%); font-variant-numeric: tabular-nums; transition: color .15s linear; } /* +2px: Literata сидит в строке ниже центра */
+.ex__item--ru::before { padding-top: 3px; line-height: calc(16.5px * 1.6); }
 .ex__item--ok::before { color: var(--ok-ink); }
 :is(.ex__item--bad, .ex__item--miss)::before { color: var(--bad-ink); }
 .ex__q { grid-column: 2; font-family: var(--f-en); font-size: 18px; line-height: 1.9; overflow-wrap: anywhere; }
@@ -1207,7 +1213,7 @@ button { font: inherit; transition: linear 0.15s; }
 }
 @media (hover: hover) { :where(:root:not(.pointer-still)) :is(.ex-tabs__tab:not([aria-selected="true"]), .ex-tabs__step):hover { border-color: var(--accent); background: var(--accent-soft); color: var(--accent); } }
 /* «На слух»: плеер (кнопка и полоса прогресса), под ним строка ответа и набор слов */
-.ex--listen .ex__item::before { padding-top: 11px; } /* по центру кнопки плеера */
+.ex--listen .ex__item::before { padding-top: 0; line-height: 36px; } /* по центру кнопки плеера */
 .listen__player { grid-column: 2; display: flex; align-items: center; column-gap: 10px; min-width: 0; }
 .listen__play { flex: none; display: grid; place-items: center; width: 36px; height: 36px; padding: 0; border: 1.5px solid rgb(var(--accent-rgb) / 55%);
   border-radius: 50%; background: var(--sheet); color: var(--accent); cursor: pointer; transition: background-color .15s linear, border-color .15s linear, color .15s linear; }
@@ -1402,7 +1408,8 @@ button { font: inherit; transition: linear 0.15s; }
   .note::before { align-self: start; text-align: center; }
   .ex { padding: 16px 14px; }
   .ex__q:not(.ex__q--ru), .ex__text { font-size: 17px; }
-  .ex__item { column-gap: 4px; padding: 12px 7px; }
+  .ex__item { grid-template-columns: 33px minmax(0, 1fr); padding: 12px 8px 12px 10px; border-radius: 14px; } /* полоса 7px + 3px, номер посередине колонки 33px */
+  .ex__item::after { top: 10px; bottom: 10px; left: 7px; }
   /* номер по центру первой строки: его строка той же высоты, что строка предложения (17px × 1.9), у перевода — русского
      текста (отступ 3px + 16.5px × 1.6), у «На слух» — кнопки плеера 36px */
   .ex__item::before { padding-top: 2px; font-size: 10px; line-height: calc(17px * 1.9); } /* +2px: Literata сидит в строке ниже центра */
