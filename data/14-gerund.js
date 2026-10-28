@@ -4,7 +4,7 @@ topics: [
 
 { id: 'ger-use', level: 'B1', title: 'Герундий после глаголов и предлогов', sub: 'enjoy reading, good at drawing',
   rule: `
-<p>Герундий — это форма глагола на <i>-ing</i>, которая называет действие как предмет. С ним можно обращаться как с существительным: <i><b>Swimming</b> is good for your health</i> — «Плавание полезно для здоровья». Точного аналога в русском нет, поэтому герундий переводят по-разному: существительным, инфинитивом или деепричастием.</p>
+<p>Герундий — это форма глагола на <i>-ing</i>, которая называет действие как предмет. С ним можно обращаться как с существительным: <i><b>Swimming</b> is good for your health</i> — плавание полезно для здоровья. Точного аналога в русском нет, поэтому герундий переводят по-разному: существительным, инфинитивом или деепричастием.</p>
 ${T(["Где", "Слова", "Пример"], [
   ["после глаголов", "<i>enjoy, finish, mind, avoid, suggest, keep, miss, practise, deny, imagine, consider, give up, put off, can't stand, can't help</i>", "<i>I enjoy <b>walking</b>. Would you mind <b>opening</b> the window?</i> — Я люблю гулять. Не могли бы вы открыть окно?"],
   ["после предлогов", "<i>in, at, of, for, about, without, before, after, instead of, by</i>", "<i>Thank you for <b>coming</b>. He left without <b>saying</b> goodbye.</i> — Спасибо, что пришли. Он ушел, не попрощавшись."],
