@@ -18,11 +18,11 @@ ${E([
 ${N("Сдвигать время не нужно, если во второй части — общеизвестный факт, который верен всегда: <i>The teacher said that the Earth <b>goes</b> round the Sun.</i>")}`,
   ex: [
     { type: 'gap', task: 'Поставьте глагол в скобках в нужную форму по правилу согласования времен.', items: [
-      ["I knew that he ___ (be) ill.", "was"], ["She said that she ___ (live) in Kazan.", "lived"],
-      ["We didn't know that they ___ (already / leave).", "had already left"], ["He hoped that he ___ (win) the race.", "would win"],
+      ["I knew that she ___ (be) at home.", "was"], ["She said that she ___ (live) in Kazan.", "lived"],
+      ["We didn't know that they ___ (already / leave).", "had already left"], ["He hoped that he ___ (win) the race.", "would win|had won"],
       ["I thought you ___ (sleep). Why are you up?", "were sleeping"], ["She told me that she ___ (lose) her key the day before.", "had lost"],
       ["They were sure that it ___ (rain) in the evening.", "would rain"], ["He said that he ___ (not / like) coffee.", "did not like"],
-      ["I was afraid that I ___ (miss) the train.", "would miss"], ["Our teacher said that water ___ (boil) at 100 °C.", "boils|boiled"]
+      ["I was afraid that I ___ (miss) the train.", "would miss|had missed"], ["Our teacher said that water ___ (boil) at 100 °C.", "boils|boiled"]
     ]},
     { type: 'choice', task: 'Выберите правильный вариант.', items: [
       ["I knew she ___ in Moscow.", ["lived", "lives", "will live"]], ["He said he ___ me the next day.", ["would call", "will call", "calls"]],
@@ -33,7 +33,7 @@ ${N("Сдвигать время не нужно, если во второй ч�
       ["Я знал, что он болен.", "I knew that he was ill.|I knew he was ill.|I knew that he was sick.|I knew he was sick."],
       ["Я думал, что ты спишь.", "I thought that you were sleeping.|I thought you were sleeping.|I thought you were asleep.|I thought that you were asleep."],
       ["Она надеялась, что сдаст экзамен.", "She hoped that she would pass the exam.|She hoped she would pass the exam."],
-      ["Мы не знали, что они уже уехали.", "We didn't know that they had already left.|We didn't know they had already left."]
+      ["Мы не знали, что поезд уже ушел.", "We didn't know that the train had already left.|We didn't know the train had already left."]
     ]},
     { type: 'listen', at: 2, task: 'Прослушайте предложение и соберите его из слов.', items: [
       ["I knew that my sister was living in the north of England.", "Я знал, что сестра живет на севере Англии."],
@@ -52,7 +52,7 @@ ${T(["Прямая речь", "Косвенная речь"], [
   ["<i>Past Simple: “I <b>saw</b> him”</i> — «Я его видела».", "<i>Past Perfect: she said she <b>had seen</b> him</i> — она сказала, что видела его."],
   ["<i>will / can / may / must</i>", "<i>would / could / might / had to</i>"]
 ])}
-<p>Модальные глаголы в последней строке тоже сдвигаются в прошлое. У <i>must</i> собственной формы прошедшего времени нет, поэтому вместо него обычно берут <i>had to</i> — пришлось, нужно было, хотя <i>must</i> можно и оставить без изменений. Например, <i>“I must go,” Ann said</i> → <i>Ann said she had to go</i> — Анна сказала, что ей нужно идти. Союз <i>that</i> («что») после <i>said</i> и <i>told</i> часто опускают: <i>She said (that) she was tired</i>.</p>
+<p>Модальные глаголы в последней строке тоже сдвигаются в прошлое. У <i>must</i> собственной формы прошедшего времени нет, поэтому вместо него обычно берут <i>had to</i> («пришлось, нужно было»), хотя <i>must</i> можно оставить и без изменений. Например, <i>“I must go,” Ann said</i> → <i>Ann said she had to go</i> — Анна сказала, что ей нужно идти. Союз <i>that</i> («что») после <i>said</i> и <i>told</i> часто опускают: <i>She said (that) she was tired</i>.</p>
 <h3>Слова времени и места</h3>
 ${T(["Было", "Стало"], [
   ["<i>now, today, tonight</i>", "<i>then, that day, that night</i>"],
@@ -61,7 +61,7 @@ ${T(["Было", "Стало"], [
   ["<i>next week, last week</i>", "<i>the following week, the week before</i>"],
   ["<i>ago, here, this, these</i>", "<i>before, there, that, those</i>"]
 ])}
-${N("После <i>tell</i> обязательно нужно сказать, кому: <i>He <b>told me</b> that…</i>. А после <i>say</i> этого не нужно, или «кому» вводят через <i>to</i>: <i>He <b>said</b> that…</i> или <i>He said to me that…</i>")}`,
+${N("После <i>tell</i> обязательно нужно сказать, кому: <i>He <b>told me</b> that…</i> После <i>say</i> этого не нужно: <i>He <b>said</b> that…</i> А если «кому» все же называют, его вводят через <i>to</i>: <i>He said <b>to me</b> that…</i>")}`,
   ex: [
     { type: 'gap', task: 'Передайте слова в косвенной речи.', items: [
       ["“I am tired,” she said. → She said that she ___ tired.", "was"],
@@ -81,7 +81,7 @@ ${N("После <i>tell</i> обязательно нужно сказать, к
       ["They told us they ___ moving.", ["were", "will", "have"]], ["He said, “I ___ it.” → He said he had done it.", ["did", "had", "would do"]]
     ]},
     { type: 'translate', task: 'Переведите на английский.', items: [
-      ["Она сказала, что устала.", "She said that she was tired.|She said she was tired."],
+      ["Он сказал, что очень занят.", "He said that he was very busy.|He said he was very busy."],
       ["Он сказал мне, что живет в Москве.", "He told me that he lived in Moscow.|He told me he lived in Moscow."],
       ["Они сказали, что придут завтра. (Пересказываете через несколько дней.)", "They said that they would come the next day.|They said they would come the next day.|They said they would come the following day.|They said that they would come the following day."],
       ["Я знал, что она потеряла ключи.", "I knew that she had lost her keys.|I knew she had lost her keys."]
@@ -106,7 +106,7 @@ ${T(["Прямая речь", "Косвенная речь"], [
 ])}
 ${N("Если просьба с отрицанием («не опаздывайте»), <i>not</i> ставится перед <i>to</i>: <i>told us <b>not to</b> be late</i>, а не <i>to not be</i>.")}
 <h3>Suggest — «предложить сделать вместе»</h3>
-<p>Фразу с <i>Let's…</i> — давай… — обычно пересказывают глаголом <i>suggest</i>. После него идет не инфинитив, а форма на <i>-ing</i> — герундий: <i>She suggested having a break</i> — она предложила сделать перерыв. Подробно герундий разобран в разделе 14 «Герундий». Есть и второй способ: после <i>suggest</i> поставить целое придаточное с <i>that</i>, а в нем — подлежащее и глагол в начальной форме или с <i>should</i>. Например, <i>Tom suggested (that) we go home</i> или <i>Tom suggested that we should go home</i> — Том предложил пойти домой. А вот сказать <i>suggested us to go</i> нельзя.</p>`,
+<p>Фразу с <i>Let's…</i> («давай…») обычно пересказывают глаголом <i>suggest</i>. После него идет не инфинитив, а форма на <i>-ing</i> — герундий: <i>She suggested having a break</i> — она предложила сделать перерыв. Подробно герундий разобран в разделе 14 «Герундий». Есть и второй способ: после <i>suggest</i> поставить целое придаточное с <i>that</i>, а в нем — подлежащее и глагол в начальной форме или с <i>should</i>. Например, <i>Tom suggested (that) we go home</i> или <i>Tom suggested that we should go home</i> — Том предложил пойти домой. А вот сказать <i>suggested us to go</i> нельзя.</p>`,
   ex: [
     { type: 'gap', task: 'Передайте просьбу или приказ в косвенной речи.', items: [
       ["“Don't be late!” the teacher said. → The teacher told us ___ late.", "not to be"],
@@ -123,7 +123,7 @@ ${N("Если просьба с отрицанием («не опаздывай�
       ["He suggested ___ a taxi.", ["taking", "to take", "take"]], ["The doctor ___ me to go to bed earlier.", ["advised", "said", "suggested"]]
     ]},
     { type: 'translate', task: 'Переведите на английский.', items: [
-      ["Учитель велел нам открыть книги.", "The teacher told us to open our books.|The teacher told us to open the books."],
+      ["Тренер велел нам не разговаривать.", "The coach told us not to talk.|The coach told us not to speak."],
       ["Мама попросила меня не опаздывать.", "Mum asked me not to be late.|Mother asked me not to be late.|My mother asked me not to be late.|My mum asked me not to be late."],
       ["Врач посоветовал мне остаться в постели.", "The doctor advised me to stay in bed."],
       ["Он велел мне не трогать его вещи.", "He told me not to touch his things."]
@@ -167,15 +167,15 @@ ${E([
       ["“Will you come?” he asked. → He asked ___ I would come.", "if|whether"]
     ]},
     { type: 'choice', task: 'Выберите правильный вариант.', items: [
-      ["She asked me where ___.", ["I lived", "did I live", "do I live"]], ["She asked me ___ I liked jazz.", ["if", "that", "do"]],
+      ["She asked me what ___.", ["I wanted", "did I want", "do I want"]], ["She asked me ___ I liked jazz.", ["if", "that", "do"]],
       ["Can you tell me what time ___?", ["the train leaves", "does the train leave", "leaves the train"]], ["He asked me why ___ late.", ["I was", "was I", "I am"]],
       ["I wonder ___ she will come.", ["whether", "that", "what"]], ["They asked us how long ___ there.", ["we had been", "had we been", "we have been"]]
     ]},
     { type: 'translate', task: 'Переведите на английский.', items: [
-      ["Он спросил, где я живу.", "He asked where I lived.|He asked me where I lived."],
+      ["Он спросил, где я работаю.", "He asked where I worked.|He asked me where I worked."],
       ["Она спросила, люблю ли я кофе.", "She asked if I liked coffee.|She asked me if I liked coffee.|She asked whether I liked coffee.|She asked me whether I liked coffee."],
-      ["Она спросила меня, сколько мне лет.", "She asked me how old I was.|She asked how old I was."],
-      ["Учитель спросил, закончили ли мы.", "The teacher asked if we had finished.|The teacher asked whether we had finished.|The teacher asked us if we had finished.|The teacher asked us whether we had finished."]
+      ["Она спросила, сколько стоит билет.", "She asked how much the ticket cost.|She asked me how much the ticket cost.|She asked how much the ticket was.|She asked me how much the ticket was."],
+      ["Он спросил, видела ли я его брата.", "He asked if I had seen his brother.|He asked whether I had seen his brother.|He asked me if I had seen his brother.|He asked me whether I had seen his brother."]
     ]},
     { type: 'listen', at: 2, task: 'Прослушайте предложение и соберите его из слов.', items: [
       ["She asked me where I had bought such a nice umbrella.", "Она спросила, где я купил такой хороший зонт."],
@@ -192,10 +192,10 @@ ${T(["Форма", "Значение", "Пример"], [
   ["<i>was / were going to + V</i>", "намерение, часто не осуществленное", "<i>I <b>was going to</b> call you, but I forgot.</i> — Я собирался тебе позвонить, но забыл."],
   ["<i>was / were about to + V</i>", "вот-вот, собирался в ту минуту", "<i>We <b>were about to</b> leave when the phone rang.</i> — Мы уже собирались уходить, когда зазвонил телефон."],
   ["<i>was on the point of + -ing</i>", "был на грани того, чтобы", "<i>He <b>was on the point of giving</b> up.</i> — Он был готов вот-вот сдаться."],
-  ["<i>was / were to + V</i>", "судьба, то, что произошло потом", "<i>They <b>were</b> never <b>to</b> meet again.</i> — Им больше не суждено было встретиться."],
+  ["<i>was / were to + V</i>", "судьба, то, что произошло потом (как в теме 9.7)", "<i>They <b>were</b> never <b>to</b> meet again.</i> — Им больше не суждено было встретиться."],
   ["<i>Past Continuous</i>", "договоренность в прошлом", "<i>They <b>were leaving</b> the next morning.</i> — На следующее утро они уезжали."]
 ])}
-<p>Каждая из этих форм — знакомая форма будущего, перенесенная в прошлое. Оборот <i>be on the point of</i> значит почти то же, что <i>was about to</i>, но после него, как после любого предлога, ставится форма на <i>-ing</i>, а не инфинитив.</p>`,
+<p>Почти все эти формы — знакомые формы будущего, перенесенные в прошлое. Оборот <i>be on the point of</i> значит почти то же, что <i>was about to</i>, но после него, как после любого предлога, ставится форма на <i>-ing</i>, а не инфинитив.</p>`,
   ex: [
     { type: 'choice', task: 'Выберите правильный вариант.', items: [
       ["I ___ call you, but I forgot.", ["was going to", "will", "am going to"]], ["She said she ___ come later.", ["would", "will", "is going to"]],
@@ -204,10 +204,10 @@ ${T(["Форма", "Значение", "Пример"], [
       ["They ___ leaving the next morning, so they packed in the evening.", ["were", "would", "are"]]
     ]},
     { type: 'translate', task: 'Переведите на английский.', items: [
-      ["Я собирался тебе позвонить, но забыл.", "I was going to call you, but I forgot.|I was going to phone you, but I forgot."],
-      ["Мы уже собирались уходить, когда зазвонил телефон.", "We were about to leave when the phone rang.|We were going to leave when the phone rang.|We were just about to leave when the phone rang."],
-      ["Я знал, что тебе понравится.", "I knew you would like it.|I knew that you would like it."],
-      ["Она сказала, что придет позже.", "She said she would come later.|She said that she would come later."]
+      ["Я собирался купить хлеба, но забыл.", "I was going to buy some bread, but I forgot.|I was going to buy bread, but I forgot."],
+      ["Я уже собирался лечь спать, когда ты позвонил.", "I was about to go to bed when you called.|I was about to go to bed when you phoned.|I was just about to go to bed when you called.|I was just about to go to bed when you phoned."],
+      ["Я был уверен, что он опоздает.", "I was sure he would be late.|I was sure that he would be late."],
+      ["Он обещал, что поможет нам.", "He promised that he would help us.|He promised he would help us.|He promised to help us."]
     ]},
     { type: 'listen', at: 2, task: 'Прослушайте предложение и соберите его из слов.', items: [
       ["I was sure that the weather would be better than the day before.", "Я был уверен, что погода будет лучше, чем накануне."],

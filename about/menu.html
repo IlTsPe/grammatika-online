@@ -10,7 +10,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, interactive-widget=resizes-content">
 <meta name="color-scheme" content="dark light"> <!-- у сайта свои темная и светлая темы: браузер не должен затемнять страницу сам -->
 <title>Меню — Грамматика онлайн</title>
-<meta name="description" content="Меню: Описание всех блоков бокового меню.">
+<meta name="description" content="Меню: описание всех блоков бокового меню.">
 <!-- для поисковиков и превью ссылок в мессенджерах; в копиях страниц адрес, заголовок и описание свои (make_pages.py) -->
 <link rel="canonical" href="https://iltspe.github.io/grammatika-online/about/menu">
 <meta property="og:type" content="website">
@@ -18,7 +18,7 @@
 <meta property="og:locale" content="ru_RU">
 <meta property="og:url" content="https://iltspe.github.io/grammatika-online/about/menu">
 <meta property="og:title" content="Меню — Грамматика онлайн">
-<meta property="og:description" content="Меню: Описание всех блоков бокового меню.">
+<meta property="og:description" content="Меню: описание всех блоков бокового меню.">
 <meta property="og:image" content="https://iltspe.github.io/grammatika-online/favicon/og-image.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -82,7 +82,7 @@
       <div class="toc">
         <div class="toc__section">
           <button class="topic-btn topic-btn--overview toc__contents" id="tocContents" type="button"><span>Содержание тренажера</span><span class="arrow arrow--next topic-btn__arrow" aria-hidden="true"><svg class="arrow__icon" aria-hidden="true"><use href="#i-arrow"/></svg></span></button>
-          <span class="toc__label" id="levelsLabel">Уровни сложности <span class="toc__note">Выберите любой — от легкого A1 до тяжелого C2</span></span>
+          <span class="toc__label" id="levelsLabel">Уровни сложности <span class="toc__note">Выберите любой — от простого A1 до сложного C2</span></span>
           <div class="level-chips" id="levelChips" role="group" aria-labelledby="levelsLabel"></div></div>
         <div class="lvl-prog" id="lvlProg" aria-live="polite"></div>
         <label class="search" for="search"><span class="search__label">Поиск темы</span>
@@ -95,19 +95,19 @@
     </div>
     <div class="drawer-backdrop" id="drawerBackdrop"></div>
   </aside>
-  <main class="sheet app__sheet" id="main"><div class="sheet__inner"><div class="crumbs"><button class="crumbs__link" type="button">Информация</button><span class="crumbs__sep" aria-hidden="true"><svg class="arrow__icon" aria-hidden="true"><use href="#i-arrow"></use></svg></span><span>Меню</span></div><h1 class="sheet__title">Меню</h1><div class="rule info">
+  <main class="sheet app__sheet" id="main"><div class="sheet__inner"><div class="crumbs"><button class="crumbs__link" type="button">Информация</button><span class="crumbs__sep" aria-hidden="true"><svg class="arrow__icon" aria-hidden="true"><use href="#i-arrow"></use></svg></span><span aria-current="page">Меню</span></div><h1 class="sheet__title">Меню</h1><div class="rule info">
       <p>Меню помогает быстро перейти к любому разделу или теме, а также следить за прогрессом. Ниже описаны все его блоки по порядку, сверху вниз.</p>
       <h3>«Инфо»</h3>
       <p>Открывает страницу «Информация» с описанием тренажера.</p>
       <h3>Тема и скрытие меню</h3>
       <ul>
         <li><b>Темная тема / Светлая тема</b> — переключает оформление интерфейса.</li>
-        <li><b>Скрыть меню</b> — убирает боковую панель, странице становится больше места для контента. Чтобы вернуть меню, нажмите появившуюся кнопку «Показать меню».</li>
+        <li><b>Скрыть меню</b> (на широком экране) — убирает боковую панель, странице становится больше места для контента. Чтобы вернуть меню, нажмите появившуюся кнопку «Показать меню».</li>
       </ul>
       <h3>Прогресс</h3>
-      <p>На кнопке отображается общий процент прохождения тренажера, а рядом — красный значок с количеством упражнений, в которых были допущены ошибки. Если ошибок нет — значка не будет. По нажатию раскрывается блок:</p>
+      <p>На кнопке отображается общий процент прохождения тренажера, а рядом — красный значок с количеством упражнений, в которых при последней проверке были ошибки или незаполненные ответы. Если таких упражнений нет — значка не будет. По нажатию раскрывается блок:</p>
       <ul>
-        <li><b>Изучено правил</b> — сколько правил отмечено как изученные.</li>
+        <li><b>Изучено правил</b> — сколько правил отмечено как изученные. Контрольные раздела 19 сюда не входят: своего правила у них нет.</li>
         <li><b>Выполнено упражнений</b> — показывает общее количество проверенных упражнений. Ниже они разделены на две категории: «Без ошибок» и «С ошибками».</li>
         <li><b>С ошибками</b> — ведет на страницу «Работа над ошибками».</li>
         <li><b>Прохождение тренажера</b> — полоса с общим процентом.</li>
@@ -124,9 +124,9 @@
       </ul>
       <h3>Поиск и список разделов</h3>
       <ul>
-        <li><b>Поиск темы</b> — поиск по названию темы или раздела. Учитывает выбранный уровень сложности.</li>
+        <li><b>Поиск темы</b> — поиск по названию и описанию темы или по названию раздела. Учитывает выбранный уровень сложности.</li>
         <li>
-          <p><b>Разделы тренажера</b> — заголовок списка показывает количество разделов. Если выбран определенный уровень, заголовок меняется на «Разделы уровня …». При нажатии список сворачивается/разворачивается целиком.</p>
+          <p><b>Разделы тренажера</b> — заголовок списка показывает количество разделов. Если выбран определенный уровень, заголовок меняется на «Разделы уровня …». При нажатии список сворачивается или разворачивается целиком.</p>
           <p>В каждом разделе отображаются: номер, название, количество тем, уровни их сложности, а также процент прохождения — как всего раздела, так и каждой отдельной темы. Внутри раздела вы найдете строку «Обзор всего раздела» и список тем.</p>
         </li>
       </ul>

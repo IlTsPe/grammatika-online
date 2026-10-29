@@ -1,5 +1,5 @@
 BOOK.push({ n: 7, id: 'quantifiers', title: 'Much, many, (a) little, (a) few',
-intro: 'Слова количества выбираются по тому, исчисляемое ли существительное.',
+intro: 'Выбор слов, обозначающих количество, зависит от того, является ли существительное исчисляемым или неисчисляемым.',
 topics: [
 
 { id: 'q-much-many', level: 'A2', title: 'Much, many, a lot of', sub: 'How much money? How many people?',
@@ -16,7 +16,7 @@ ${E([
 ])}
 <h3>Much как наречие</h3>
 <p>Слово <i>much</i> может относиться не к существительному, а к глаголу. Тогда оно значит «очень, сильно» и обычно стоит в выражении <i>very much</i> в конце предложения: <i>I like it very much</i> — мне это очень нравится. Поставить <i>very much</i> между глаголом и дополнением нельзя: <i>I like very much it</i> — ошибка. Кроме того, <i>much</i> усиливает сравнительную степень: <i>much better</i> — гораздо лучше. Это разобрано в разделе 8.</p>
-${N("В обычных утвердительных предложениях <i>much</i> звучит слишком книжно. Вместо <i>I have much time</i> лучше сказать <i>I have <b>a lot of</b> time</i> — это подходит к любым существительным. А если существительного после нет, говорят просто <i>a lot</i>: <i>She reads <b>a lot</b></i> — она много читает.")}`,
+${N("В обычных утвердительных предложениях <i>much</i> звучит слишком книжно. Вместо <i>I have much time</i> лучше сказать <i>I have <b>a lot of</b> time</i> — это подходит к любым существительным. А если после <i>a lot of</i> нет существительного, говорят просто <i>a lot</i>: <i>She reads <b>a lot</b></i> — она много читает.")}`,
   ex: [
     { type: 'gap', task: 'Впишите much или many.', items: [
       ["How ___ money did you spend at the market?", "much"], ["How ___ people were there at the station?", "many"],
@@ -46,7 +46,7 @@ ${N("В обычных утвердительных предложениях <i>
     ]}
   ]},
 
-{ id: 'q-few-little', level: 'B2', title: 'A few, few, a little, little', sub: 'a few friends, little time',
+{ id: 'q-few-little', level: 'A2', title: 'A few, few, a little, little', sub: 'a few friends, little time',
   rule: `
 <p>Эти четыре слова переводятся как «немного» или «мало». Выбор между ними зависит от двух вещей: исчисляемое ли существительное и хватает ли количества.</p>
 ${T(["", "Исчисляемые", "Неисчисляемые"], [
@@ -60,21 +60,21 @@ ${E([
   ["There's <b>little</b> time left. Hurry up!", "Времени осталось мало. Поторопись! (почти нет)"]
 ])}
 <p>В последних двух примерах встречается оборот <i>there's … left</i> — осталось: <i>There's some milk left</i> — молока еще немного осталось. А <i>quite a few</i>, хотя в нем есть <i>a few</i>, значит «довольно много»: <i>quite a few people</i> — довольно много людей.</p>
-${M("Удобно запомнить:", ["very few", "very little", "quite a few (довольно много)", "only a few", "only a little"])}
-${N("Не путайте два разных <i>little</i>. Перед исчисляемым существительным это прилагательное «маленький»: <i>a little girl</i> — маленькая девочка. А перед неисчисляемым — «немного»: <i>a little sugar</i> — немного сахара.")}`,
+${M("Удобно запомнить:", ["very few", "very little", "quite a few", "only a few", "only a little"])}
+${N("Не путайте два разных <i>little</i>. Перед исчисляемым существительным это прилагательное «маленький», перед неисчисляемым — «немного»: <i>a little girl</i> — маленькая девочка, <i>a little sugar</i> — немного сахара.")}`,
   ex: [
     { type: 'gap', task: 'Впишите a few, few, a little или little.', items: [
       ["I've got ___ apples. Do you want one?", "a few"], ["Hurry up! We have very ___ time.", "little"],
-      ["I added ___ salt to the soup, and now it tastes good.", "a little"], ["He has moved to a new city, and he has ___ friends there.", "few"],
+      ["I added ___ salt to the soup, and now it tastes good.", "a little"], ["He has moved to a new city, and he has ___ friends there, so he often feels lonely.", "few"],
       ["My brother lent me ___ money last week.", "a little"], ["There were ___ people at the concert; the hall was almost empty.", "few"],
       ["I learnt ___ French at school — enough to order food.", "a little"], ["We waited ___ minutes, and then the bus came.", "a few"],
       ["She drinks very ___ water. It's bad for her.", "little"], ["Only ___ students passed the exam. Most failed.", "a few"],
-      ["Let's rest ___. We've been walking for hours.", "a little"], ["I have ___ questions about yesterday's lesson.", "a few"]
+      ["Let's drink ___ water. We are very tired after the long walk.", "a little"], ["I have ___ questions about yesterday's lesson.", "a few"]
     ]},
     { type: 'choice', task: 'Выберите правильный вариант.', items: [
       ["There is ___ milk left, enough for one cup.", ["a little", "a few", "few"]], ["The town has ___ hotels, so book early.", ["few", "little", "a little"]],
       ["I'm going to need ___ eggs for the cake.", ["a few", "a little", "little"]], ["He made very ___ mistakes. Well done!", ["few", "little", "a little"]],
-      ["We have ___ hope of winning. It's almost impossible.", ["little", "a little", "few"]], ["Quite ___ people came — almost a hundred!", ["a few", "few", "a little"]]
+      ["We have ___ hope now. It's almost impossible.", ["little", "a little", "few"]], ["Quite ___ people came — almost a hundred!", ["a few", "few", "a little"]]
     ]},
     { type: 'translate', task: 'Переведите на английский.', items: [
       ["У меня осталось немного денег.", "I have a little money left.|I have got a little money left."],

@@ -10,10 +10,10 @@ ${T(["Когда", "Пример"], [
   ["один из многих, любой", "<i>Give me <b>a</b> pen, please.</i> — Дай мне ручку, пожалуйста (какую-нибудь)."],
   ["профессия, характеристика (кто это? что это?)", "<i>She is <b>a</b> doctor. It is <b>a</b> cat.</i> — Она врач. Это кошка."],
   ["после <i>what</i> в восклицании", "<i>What <b>a</b> nice day!</i> — Какой хороший день!"],
-  ["в значении «один» или «в» (раз в неделю)", "<i>twice <b>a</b> week, <b>an</b> hour a day</i> — дважды в неделю, час в день"]
+  ["в выражениях «раз в неделю», «час в день» (a = «один»)", "<i>twice <b>a</b> week, <b>an</b> hour <b>a</b> day</i> — дважды в неделю, час в день"]
 ])}
 <h3>Восклицания с what и выражения «раз в неделю»</h3>
-<p>Восклицание «Какой…!» по-английски начинается со слова <i>what</i>. Если за ним идет исчисляемое существительное в единственном числе, артикль <i>a / an</i> обязателен, даже если перед существительным стоит прилагательное: <i>What <b>a</b> nice day!</i> — какой хороший день! А вот перед множественным числом и неисчисляемыми словами артикля нет, как и везде: <i>What nice flowers!</i> — какие красивые цветы!, <i>What nice weather!</i> — какая хорошая погода!</p>
+<p>Восклицание «Какой…!» по-английски начинается со слова <i>what</i>. Если за ним идет исчисляемое существительное в единственном числе, артикль <i>a / an</i> обязателен, даже если перед существительным стоит прилагательное: <i>What <b>a</b> big house!</i> — какой большой дом! А вот перед множественным числом и неисчисляемыми словами артикля нет, как и везде: <i>What nice flowers!</i> — какие красивые цветы!, <i>What nice weather!</i> — какая хорошая погода!</p>
 <p>В выражениях вроде <i>twice a week</i> артикль сохраняет старое значение «один»: «дважды за одну неделю». По-русски здесь говорят «в» или «за»: <i>three times <b>a</b> day</i> — три раза в день, <i>100 km <b>an</b> hour</i> — 100 км в час.</p>
 <h3>a или an</h3>
 <p>Какую форму выбрать — <i>a</i> или <i>an</i> — зависит от того, с какого <b>звука</b> начинается следующее слово, а не от того, какая там буква. Перед согласным звуком пишут <i>a</i>, перед гласным — <i>an</i>. Поэтому <i>a university</i> (слово начинается со звука [ju]), но <i>an hour</i> (буква <i>h</i> не читается).</p>
@@ -22,13 +22,13 @@ ${E([
   ["<b>an</b> apple, <b>an</b> egg, <b>an</b> hour [aʊə], <b>an</b> honest man", "яблоко, яйцо, час, честный человек (перед гласным звуком)"],
   ["<b>a</b> big apple, <b>an</b> old house", "большое яблоко, старый дом (важен звук слова, которое идет сразу за артиклем)"]
 ])}
-${N("Если перед существительным уже есть слово, которое показывает, чей это предмет или какой именно (<i>my, his, this, that</i>, или <i>'s</i>), артикль не нужен — его место занято: <i>my book</i>, <i>this cat</i>, <i>Tom's car</i>.")}`,
+${N("Если перед существительным уже есть слово, которое показывает, чей это предмет или какой именно (<i>my, his, this, that</i> или <i>'s</i>), артикль не нужен — его место занято: <i>my book</i>, <i>this cat</i>, <i>Tom's car</i>.")}`,
   ex: [
     { type: 'gap', task: 'Впишите a или an.', items: [
       ["This is ___ apple.", "an"], ["I have ___ brother.", "a"], ["It is ___ old house.", "an"],
       ["She is ___ engineer.", "an"], ["He is ___ good pupil.", "a"], ["The lesson lasts ___ hour.", "an"],
       ["My sister studies at ___ university.", "a"], ["What ___ interesting film!", "an"],
-      ["We go swimming twice ___ week.", "a"], ["He is ___ honest man.", "an"], ["There is ___ umbrella on my chair.", "an"],
+      ["We go swimming twice ___ week.", "a"], ["He is ___ honest man.", "an"], ["I have ___ umbrella in my bag.", "an"],
       ["It's ___ useful book.", "a"]
     ]},
     { type: 'choice', task: 'Нужен ли артикль a / an? Выберите вариант.', items: [
@@ -55,12 +55,12 @@ ${N("Если перед существительным уже есть слов
 
 { id: 'art-the', level: 'A1', title: 'Определенный артикль the', sub: 'the sun, the book on the table',
   rule: `
-<p>Определенный артикль <i>the</i> произошел от указательного местоимения <i>that</i> («тот»). Он показывает, что речь идет о конкретном предмете — «том самом», про который собеседнику понятно, о чем говорят. В отличие от <i>a / an</i>, артикль <i>the</i> можно ставить перед любыми существительными: в единственном и во множественном числе, а также перед неисчисляемыми.</p>
+<p>Определенный артикль <i>the</i> произошел от указательного местоимения <i>that</i> («тот»). Он показывает, что речь идет о конкретном предмете — «том самом», который собеседник уже знает или легко поймет из ситуации. В отличие от <i>a / an</i>, артикль <i>the</i> можно ставить перед любыми существительными: в единственном и во множественном числе, а также перед неисчисляемыми.</p>
 <p>Пишется <i>the</i> всегда одинаково, а вот произносится по-разному — в зависимости от первого звука следующего слова. Перед согласным звуком говорят [ðə]: <i><b>the</b> sun, <b>the</b> book</i>. Перед гласным — [ði]: <i><b>the</b> apple, <b>the</b> evening</i>. Как и с <i>a / an</i>, важен звук, а не буква: <i><b>the</b> university</i> [ðə], но <i><b>the</b> hour</i> [ði].</p>
 ${T(["Когда", "Пример"], [
   ["предмет уже упоминался", "<i>I have a cat. <b>The</b> cat is black.</i> — У меня есть кошка. Кошка черная."],
   ["из ситуации ясно, о чем речь", "<i>Close <b>the</b> door, please. Where is <b>the</b> teacher?</i> — Закрой дверь, пожалуйста. Где учитель?"],
-  ["есть уточняющее определение", "<i><b>The</b> book on the table is mine. <b>The</b> man who lives next door…</i> — Книга на столе — моя. Мужчина, который живет по соседству…"],
+  ["есть уточняющее определение", "<i><b>The</b> girl in the red dress is my sister.</i> — Девочка в красном платье — моя сестра."],
   ["единственный в своем роде", "<i><b>the</b> sun, <b>the</b> moon, <b>the</b> sky, <b>the</b> world</i> — солнце, луна, небо, мир"],
   ["превосходная степень, порядковые числительные", "<i><b>the</b> best, <b>the</b> first, <b>the</b> last</i> — лучший, первый, последний"],
   ["<i>the same, the only, the next, the following</i>", "<i>We live in <b>the</b> same house.</i> — Мы живем в одном и том же доме."],
@@ -71,24 +71,24 @@ ${T(["Когда", "Пример"], [
 <p>Уточняющее определение — это слова после существительного, которые отвечают на вопрос «какой именно?» и выделяют один предмет из всех похожих. Например, в <i><b>the</b> book on the table</i> слова <i>on the table</i> показывают, о какой книге речь: не о любой, а о той, что лежит на столе. Так же работает целое придаточное предложение: <i><b>the</b> man who lives next door</i> — тот мужчина, который живет по соседству. Раз предмет назван точно, нужен <i>the</i>.</p>
 <h3>Превосходная степень, порядковые числительные, same и only</h3>
 <p>Все эти слова сами указывают на один-единственный предмет, поэтому перед ними ставят <i>the</i>. Превосходная степень прилагательного — это форма со значением «самый»: <i>the best</i> — самый лучший, <i>the tallest</i> — самый высокий. Самый лучший бывает только один, отсюда и <i>the</i>; подробно эти формы разобраны в разделе 8 «Степени сравнения». Порядковые числительные отвечают на вопрос «который по счету?»: <i>the first</i> — первый, <i>the second</i> — второй. Первый в ряду тоже только один. По той же логике <i>the</i> нужен со словами <i>same</i> («тот же самый»), <i>only</i> («единственный»), <i>next</i> («следующий») и <i>following</i> («следующий, нижеприведенный»).</p>
-<p>С музыкальными инструментами артикль ставится по традиции, когда говорят об игре на них: <i>She plays <b>the</b> violin</i> — она играет на скрипке. Это правило проще просто запомнить.</p>
+<p>С музыкальными инструментами артикль ставится по традиции, когда говорят об игре на них: <i>She plays <b>the</b> violin</i> — она играет на скрипке. Объяснять тут нечего, это нужно просто запомнить.</p>
 ${E([
-  ["There is a book on the table. <b>The</b> book is new.", "На столе книга. Книга новая."],
+  ["Where are <b>the</b> keys?", "Где ключи? (понятно, о каких ключах речь)"],
   ["Pass me <b>the</b> salt, please.", "Передай соль, пожалуйста."],
   ["It's <b>the</b> best day of my life.", "Это лучший день в моей жизни."]
 ])}
-${N("Сравните два предложения: <i>I want <b>an</b> apple</i> — хочу какое-нибудь яблоко, любое; <i>I want <b>the</b> apple</i> — хочу вот это яблоко, о котором мы говорим. По-русски оба звучат одинаково: «Я хочу яблоко», поэтому артикль подсказывает контекст.")}`,
+${N("Сравните два предложения: <i>I want <b>an</b> apple</i> — хочу какое-нибудь яблоко, любое; <i>I want <b>the</b> apple</i> — хочу вот это яблоко, о котором мы говорим. По-русски оба звучат одинаково: «Я хочу яблоко», поэтому то, что по-русски понятно только из контекста, по-английски показывает артикль.")}`,
   ex: [
     { type: 'gap', task: 'Впишите a, an или the.', items: [
       ["I have a dog. ___ dog is very clever.", "the"], ["___ sun is very bright today.", "the"],
       ["She has ___ new dress. ___ dress is red.", ["a", "the"]],
       ["Open ___ window, please. It's hot.", "the"], ["My brother plays ___ violin.", "the"],
-      ["___ cakes in this shop are very good.", "the"], ["Is there ___ post office near here?", "a"],
+      ["___ cakes in this shop are very good.", "the"], ["My aunt has ___ small flat in Moscow.", "a"],
       ["___ book on the shelf is my father's.", "the"], ["Monday is ___ first day of the week.", "the"],
       ["We have ___ new teacher. ___ teacher is very kind.", ["a", "the"]], ["Look at ___ moon!", "the"]
     ]},
     { type: 'choice', task: 'Выберите артикль.', items: [
-      ["Pass me ___ sugar, please.", ["the", "a", "—"]], ["There is ___ girl at the door.", ["a", "the", "—"]],
+      ["Pass me ___ sugar, please.", ["the", "a", "—"]], ["Kate has ___ cousin in Moscow.", ["a", "the", "—"]],
       ["___ girl at the door is my cousin.", ["The", "A", "—"]], ["We live on ___ third floor.", ["the", "a", "—"]],
       ["Who is ___ boy at the window?", ["the", "a", "—"]], ["They have ___ son and two daughters.", ["a", "the", "—"]],
       ["___ Petrovs live in this house.", ["The", "A", "—"]], ["He is ___ only child in the family.", ["the", "a", "—"]]
@@ -135,7 +135,7 @@ ${N("Если вы перечисляете несколько предмето�
       ["There ___ a park near my house.", "is"], ["There ___ two windows in the room.", "are"],
       ["There ___ some milk in the fridge.", "is"], ["___ there any eggs?", "are"],
       ["There ___ a sofa and two armchairs in the living room.", "is"], ["___ there a bank near here?", "is"],
-      ["There ___ twenty students in the class.", "are"], ["There ___ no bread left.", "is"],
+      ["There ___ twenty students in the class.", "are"], ["There ___ no bread in the kitchen.", "is"],
       ["There ___ two chairs and a table in the kitchen.", "are"], ["Why ___ there no chairs in the classroom?", "are"]
     ]},
     { type: 'choice', task: 'There is / there are / there was / there were или it is?', items: [
@@ -161,7 +161,7 @@ ${N("Если вы перечисляете несколько предмето�
 
 { id: 'art-phrases', level: 'A2', title: 'Устойчивые выражения с артиклями', sub: 'at home, go to bed, in the morning',
   rule: `
-<p>Многие частые выражения с артиклями не подчиняются общим правилам, и их проще запомнить целиком. В одних артикля нет совсем (<i>at home, by bus</i>), в других он обязателен (<i>in the morning, go to the cinema</i>).</p>
+<p>Во многих частых выражениях артикль ставится не по общим правилам, и их проще запомнить целиком. В одних артикля нет совсем (<i>at home, by bus</i>), в других он обязателен (<i>in the morning, go to the cinema</i>).</p>
 ${T(["Без артикля", "С артиклем"], [
   ["<i>at home, at work, at school</i>", "<i>in <b>the</b> morning / afternoon / evening</i>"],
   ["<i>go to school, go to work, go to bed</i>", "<i>go to <b>the</b> cinema / theatre / shop</i>"],
@@ -189,7 +189,7 @@ ${N("Со словами <i>school, hospital, church</i> артикль зави
       ["Вечером мы ходим в кино.", "In the evening we go to the cinema.|We go to the cinema in the evening.|In the evening we go to the movies.|We go to the movies in the evening."],
       ["Мой папа сейчас на работе.", "My father is at work now.|My dad is at work now."],
       ["Я ложусь спать в одиннадцать.", "I go to bed at eleven.|I go to bed at 11.|I go to bed at eleven o'clock."],
-      ["Она ездит на работу на автобусе.", "She goes to work by bus.|She takes the bus to work."]
+      ["Она ездит на работу на автобусе.", "She goes to work by bus.|She takes the bus to work.|She goes to work on the bus."]
     ]},
     { type: 'listen', at: 2, task: 'Прослушайте предложение и соберите его из слов.', items: [
       ["In the morning I go to work by bus.", "Утром я езжу на работу на автобусе."],
@@ -248,9 +248,9 @@ ${N("Если слова <i>lake</i> в названии озера нет, вс
     ]}
   ]},
 
-{ id: 'art-zero', level: 'B2', title: 'Нулевой артикль', sub: 'I like music. Cats are clever.',
+{ id: 'art-zero', level: 'A2', title: 'Нулевой артикль', sub: 'I like music. Cats are clever.',
   rule: `
-<p>Артикль не нужен, когда существительное употреблено в <b>общем смысле</b> — то есть речь не о конкретных предметах, а обо всех сразу: <i>I like tea</i> (чай вообще), <i>Dogs are clever</i> (собаки в целом).</p>
+<p>Артикль не нужен, когда существительное употреблено в <b>общем смысле</b> — то есть речь не о конкретных предметах, а о предмете или веществе вообще: <i>I like tea</i> (чай вообще), <i>Dogs are clever</i> (собаки в целом).</p>
 ${T(["Когда артикля нет", "Пример"], [
   ["множественное число в общем смысле", "<i><b>Cats</b> are clever. I like <b>apples</b>.</i> — Кошки умные. Я люблю яблоки."],
   ["неисчисляемые в общем смысле", "<i><b>Water</b> is important. I love <b>music</b>.</i> — Вода важна. Я люблю музыку."],
@@ -277,7 +277,7 @@ ${N("Перед неисчисляемым существительным <i>a /
       ["We have a test on ___ Friday.", "-|0"], ["Open your books at ___ page 25.", "-|0"]
     ]},
     { type: 'choice', task: 'Выберите правильный вариант.', items: [
-      ["___ is good for your health.", ["Sport", "A sport", "The sports"]], ["I need ___ for my essay.", ["some paper", "a paper", "the papers"]],
+      ["___ is good for your health.", ["Sport", "A sport", "The sports"]], ["I want to draw a picture. I need ___ and a pencil.", ["some paper", "a paper", "the papers"]],
       ["___ on the table is yours.", ["The money", "Money", "A money"]], ["___ are my favourite flowers.", ["Roses", "The rose", "A roses"]],
       ["We study ___ at school.", ["history", "the history", "a history"]], ["He has ___ for breakfast.", ["eggs and toast", "an eggs and toast", "the eggs and a toast"]],
       ["In winter ___ covers the fields.", ["snow", "a snow", "snows"]], ["Give me ___ bread, please.", ["some", "a", "an"]]

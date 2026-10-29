@@ -33,7 +33,7 @@ function pageMeta(id) {
   const title = t ? `${t.num} ${t.title}` : ch ? `${ch.n}. ${ch.title}` : p ? p.title
     : { mistakes: 'Работа над ошибками', notes: 'Мои заметки', about: 'Информация', [NOT_FOUND]: 'Страница не найдена' }[id];
   const description = t ? `${plainText(t.title)} (${plainText(t.sub)}): правило и упражнения с проверкой. Уровень ${t.level}.`
-    : ch ? plainText(ch.intro) : p ? `${p.title}: ${p.sub}.`
+    : ch ? plainText(ch.intro) : p ? `${p.title}: ${p.sub[0].toLowerCase()}${p.sub.slice(1)}.`
     : { mistakes: 'Упражнения, в которых были ошибки, — чтобы к ним вернуться.', notes: 'Личные заметки по грамматике.', about: 'Как устроен тренажер: разделы, упражнения, прогресс, данные.' }[id]
     || 'Тренажер грамматики английского языка A1–C2: правила простым языком и упражнения с проверкой.';
   return { title: title ? `${plainText(title)} — ${SITE_TITLE}` : SITE_TITLE, description };
@@ -183,6 +183,20 @@ const startId = urlId() || $('meta[name=route]')?.content || '';
 go(startId && (PAGES.includes(startId) || topicById[startId] || chapById[startId] || startId === NOT_FOUND) ? startId : store.get('gk2-last', 'contents'), false, false);
 booted = true;
 renderOverall();
+/* меню после перезагрузки остается на той же прокрутке: позиция хранится в sessionStorage этой вкладки.
+   Шрифты догружаются позже и меняют высоту меню — тогда позиция ставится еще раз, если человек сам не успел прокрутить */
+(function () {
+  const side = $('#side'), KEY = 'gk2-side-scroll';
+  try {
+    const y = +sessionStorage.getItem(KEY);
+    if (y > 0) {
+      side.scrollTop = y;
+      const first = side.scrollTop;
+      document.fonts?.ready.then(() => { if (side.scrollTop === first) side.scrollTop = y; });
+    }
+  } catch (e) { /* хранилище недоступно — меню просто откроется сверху */ }
+  addEventListener('pagehide', () => { try { sessionStorage.setItem(KEY, String(Math.round(side.scrollTop))); } catch (e) {} });
+})();
 $('#tocToggle').insertAdjacentHTML('beforeend', FOLD_ARROW);
 
 /* «Поддержать автора»: банкноты для дождя при наведении, у каждой своя скорость, начало и качание; каждая держится своей полосы

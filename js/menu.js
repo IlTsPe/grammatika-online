@@ -172,7 +172,7 @@ function topicButton(t, fromBookmarks = false) {
   /* открытая тема подсвечивается только в том списке, из которого ее открыли: «Избранное» или список содержания */
   if (t.id === route && fromBookmarks === viaBookmarks) b.setAttribute('aria-current', 'page');
   const st = topicStats(t);
-  b.innerHTML = `<span>${esc(t.title)}${bookmarks[t.id] ? bmIcon('topic-btn__bm') : ''}<small class="topic-btn__meta">${t.num} · ${t.level}${studied[t.id] ? ' · <span class="topic-btn__studied">правило ✓</span>' : ''}</small></span>` +
+  b.innerHTML = `<span>${esc(t.title)}${bookmarks[t.id] ? bmIcon('topic-btn__bm') : ''}<small class="topic-btn__meta">${t.num} · ${t.level}${isStudied(t) ? ' · <span class="topic-btn__studied">правило ✓</span>' : ''}</small></span>` +
     (st.tried ? pill(st.pct, 'topic-btn__pill') : '');
   if (bookmarks[t.id]) b.title = 'В избранном';
   b.addEventListener('click', () => go(t.id, true, true, fromBookmarks));

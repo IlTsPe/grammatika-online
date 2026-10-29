@@ -59,7 +59,7 @@ ${E([
   ["We'll go out <b>if</b> the rain stops.", "Мы выйдем на улицу, если дождь прекратится."]
 ])}
 <h3>Придаточные времени</h3>
-<p>По той же схеме строятся предложения со словами времени: <i>when</i>, <i>as soon as</i>, <i>before</i>, <i>after</i>, <i>until</i>, <i>by the time</i>. Если речь об одном случае в будущем, в части с этими словами стоит Present Simple, а <i>will</i> (или повелительное наклонение) — только в главной части. Разница между <i>if</i> и <i>when</i> в том, что <i>if</i> говорит о событии, которое может и не случиться, а <i>when</i> — о том, что точно произойдет: <i>If I see Tom, I'll tell him</i> — если увижу Тома, <i>When I see Tom, I'll tell him</i> — когда увижу Тома. В нулевом типе эта разница почти не видна, потому что речь о том, что бывает всегда.</p>
+<p>По той же схеме строятся предложения со словами времени: <i>when</i>, <i>as soon as</i>, <i>before</i>, <i>after</i>, <i>until</i>, <i>by the time</i>. Если речь об одном случае в будущем, в части с этими словами стоит Present Simple, а <i>will</i> (или повелительное наклонение) — только в главной части. Разница между <i>if</i> и <i>when</i> в том, что <i>if</i> говорит о событии, которое может и не случиться, а <i>when</i> — о том, что точно произойдет: <i>If I see Tom, I'll tell him</i> — если увижу Тома, скажу ему; <i>When I see Tom, I'll tell him</i> — когда увижу Тома, скажу ему. В нулевом типе эта разница почти не видна, потому что речь о том, что бывает всегда.</p>
 ${T(["Союз", "Перевод", "Пример"], [
   ["<i>when</i>", "когда", "<i>I'll call you when I <b>arrive</b>.</i> — Я позвоню тебе, когда приеду."],
   ["<i>as soon as</i>", "как только", "<i>We'll start as soon as everyone <b>comes</b>.</i> — Мы начнем, как только все придут."],
@@ -68,11 +68,11 @@ ${T(["Союз", "Перевод", "Пример"], [
   ["<i>until / till</i>", "пока не, до тех пор пока", "<i>Wait here until I <b>come</b> back.</i> — Жди здесь, пока я не вернусь."],
   ["<i>by the time</i>", "к тому времени как", "<i>By the time you <b>get</b> home, dinner will be ready.</i> — К тому времени как ты придешь домой, ужин будет готов."]
 ])}
-<p>Русскому «пока не» в <i>until</i> соответствует утвердительный глагол, как и после <i>unless</i>: <i>until the rain <b>stops</b></i>, а не <i>until the rain doesn't stop</i>.</p>
+<p>После <i>until</i> глагол стоит в утвердительной форме, хотя по-русски говорят «пока не», — так же, как после <i>unless</i>: <i>until the rain <b>stops</b></i>, а не <i>until the rain doesn't stop</i>.</p>
 ${N("По-русски «если пойдет дождь» и «когда приеду» — будущее время, поэтому так и хочется сказать <i>If it will rain</i> или <i>when I will arrive</i>. По-английски — <i>If it <b>rains</b></i>, <i>when I <b>arrive</b></i>.")}`,
   ex: [
     { type: 'gap', task: 'Поставьте глагол в нужную форму.', items: [
-      ["If you leave now, you ___ (catch) the bus.", "will catch"], ["If it ___ (rain) tomorrow, we will stay at home.", "rains"],
+      ["If you leave now, you ___ (catch) the bus.", "will catch"], ["If it ___ (snow) tonight, the roads will be dangerous.", "snows"],
       ["She will be angry if you ___ (be) late.", "are"], ["Unless you hurry, you ___ (miss) the train.", "will miss"],
       ["If you ___ (study) hard, you will pass the exam.", "study"], ["I ___ (buy) some bread if I go to the shop.", "will buy"],
       ["If he ___ (not / come), we'll start without him.", "does not come"], ["If you ___ (see) Tom, say hello to him.", "see"],
@@ -85,8 +85,8 @@ ${N("По-русски «если пойдет дождь» и «когда пр
     ]},
     { type: 'translate', task: 'Переведите на английский.', items: [
       ["Если завтра будет дождь, мы останемся дома.", "If it rains tomorrow, we will stay at home.|If it rains tomorrow, we will stay home.|We will stay at home if it rains tomorrow.|We will stay home if it rains tomorrow.|If it rains tomorrow, we will stay in.|We will stay in if it rains tomorrow."],
-      ["Если ты устал, иди спать.", "If you are tired, go to bed.|Go to bed if you are tired.|If you are tired, go to sleep.|Go to sleep if you are tired."],
-      ["Если я увижу Тома, я ему скажу.", "If I see Tom, I will tell him.|I will tell Tom if I see him."],
+      ["Если будешь в Москве, позвони мне.", "If you are in Moscow, call me.|Call me if you are in Moscow.|If you are in Moscow, phone me.|Phone me if you are in Moscow.|If you come to Moscow, call me.|Call me if you come to Moscow."],
+      ["Если я найду твои ключи, я тебе позвоню.", "If I find your keys, I will call you.|I will call you if I find your keys.|If I find your keys, I will phone you.|I will phone you if I find your keys."],
       ["Если не поторопишься, опоздаешь.", "If you don't hurry, you will be late.|Unless you hurry, you will be late.|If you don't hurry up, you will be late.|Unless you hurry up, you will be late."]
     ]},
     { type: 'listen', at: 2, task: 'Прослушайте предложение и соберите его из слов.', items: [
@@ -99,12 +99,12 @@ ${N("По-русски «если пойдет дождь» и «когда пр
       ["As soon as she ___ (get) her results, she'll tell us.", "gets"],
       ["Turn off the TV before you ___ (go) to bed.", "go"],
       ["We'll wait until the rain ___ (stop).", "stops"],
-      ["After I ___ (finish) my homework, I'll call you.", "finish"],
-      ["When she ___ (finish) school, she will go to university.", "finishes"],
-      ["By the time we ___ (get) to the cinema, the film will have started.", "get"],
+      ["After I ___ (finish) my homework, I'll call you.", "finish|have finished"],
+      ["When she ___ (finish) school, she will go to university.", "finishes|has finished"],
+      ["By the time we ___ (get) to the shop, it will be closed.", "get"],
       ["I won't leave until you ___ (tell) me the truth.", "tell"]
     ]},
-    { type: 'translate', task: 'Переведите на английский.', items: [
+    { type: 'translate', task: 'Придаточные времени: переведите на английский.', items: [
       ["Я напишу тебе, когда закончу работу.", "I will text you when I finish work.|I will write to you when I finish work.|When I finish work, I will text you.|When I finish work, I will write to you.|I will message you when I finish work.|I will text you when I finish my work.|I will write to you when I finish my work."],
       ["Как только он придет, мы начнем.", "As soon as he comes, we will start.|As soon as he arrives, we will start.|We will start as soon as he comes.|We will start as soon as he arrives.|As soon as he comes, we will begin.|We will begin as soon as he comes.|As soon as he arrives, we will begin.|We will begin as soon as he arrives.|As soon as he gets here, we will start.|We will start as soon as he gets here."],
       ["Подожди, пока я не вернусь.", "Wait until I come back.|Wait till I come back.|Wait until I get back.|Wait till I get back.|Wait until I return.|Wait till I return.|Wait until I am back.|Wait till I am back."],
@@ -117,7 +117,7 @@ ${N("По-русски «если пойдет дождь» и «когда пр
 <p>Условные предложения второго типа описывают <b>нереальное</b> или маловероятное условие — то, чего сейчас нет, но о чем можно помечтать. По-русски такие предложения строятся с «если бы…, то…».</p>
 ${F("If + <b>Past Simple</b>, would + <b>V</b>")}
 ${E([
-  ["If I <b>had</b> money, I <b>would buy</b> a house.", "Если бы у меня были деньги, я бы купил дом (но их нет)."],
+  ["If I <b>had</b> money, I <b>would buy</b> a house.", "Если бы у меня были деньги, я бы купил дом. (но их нет)"],
   ["If I <b>were</b> you, I <b>wouldn't do</b> that.", "На твоем месте я бы этого не делал."],
   ["What <b>would</b> you <b>do</b> if you <b>won</b> the lottery?", "Что бы ты сделал, если бы выиграл в лотерею?"],
   ["If he <b>knew</b> her number, he <b>could call</b> her.", "Если бы он знал ее номер, он мог бы ей позвонить."]
@@ -127,13 +127,13 @@ ${E([
 ${T(["1 тип: реально", "2 тип: нереально"], [
   ["<i>If I <b>have</b> time, I'<b>ll help</b> you.</i> — Если у меня будет время, я тебе помогу. (возможно, будет время)", "<i>If I <b>had</b> time, I'<b>d help</b> you.</i> — Если бы у меня было время, я бы тебе помог. (времени нет)"]
 ])}
-${N("В таких предложениях глагол <i>be</i> принято ставить в форме <i>were</i> для всех лиц: <i>If I <b>were</b> you</i>, <i>If she <b>were</b> taller</i>. А <i>would</i> ставится только во второй части — в части с <i>if</i> условного предложения его не бывает. Исключение — <i>If only… would</i>, о нем в теме про <i>I wish</i>.")}`,
+${N("В таких предложениях глагол <i>be</i> принято ставить в форме <i>were</i> для всех лиц: <i>If I <b>were</b> you</i>, <i>If she <b>were</b> taller</i>. А <i>would</i> ставится только во второй части — в части с <i>if</i> его не бывает. Исключение — <i>If only… would</i>, о нем в теме про <i>I wish</i>.")}`,
   ex: [
     { type: 'gap', task: 'Поставьте глагол в нужную форму.', items: [
-      ["If I ___ (have) more money, I would buy a house.", "had"], ["If I were you, I ___ (not / do) that.", "would not do|'d not do"],
+      ["If I ___ (have) more money, I would buy a house.", "had"], ["If I were you, I ___ (not / lend) him money.", "would not lend|'d not lend"],
       ["If he ___ (know) her number, he would call her.", "knew"], ["What would you do if you ___ (win) the lottery?", "won"],
       ["If she ___ (be) taller, she could be a model.", "were|was"], ["We ___ (go) to the sea if we had a car.", "would go"],
-      ["If I ___ (can) fly, I would visit every country.", "could"], ["I ___ (help) you if I had time.", "would help"],
+      ["If I ___ (can) fly, I would visit every country.", "could"], ["I ___ (buy) a bigger flat if I earned more.", "would buy"],
       ["If they ___ (live) closer, we would see them more often.", "lived"], ["If it ___ (not / be) so cold, we would go out.", "were not|was not"]
     ]},
     { type: 'choice', task: 'Выберите правильный вариант.', items: [
@@ -163,7 +163,7 @@ ${E([
   ["If we <b>hadn't missed</b> the bus, we <b>wouldn't have been</b> late.", "Если бы мы успели на автобус, мы бы не опоздали."],
   ["She <b>could have won</b> if she <b>had tried</b>.", "Она могла бы победить, если бы постаралась."]
 ])}
-<p>Как и во втором типе, вместо <i>would have</i> можно поставить <i>could have</i> — мог бы — или <i>might have</i> — возможно, …бы. В разговоре <i>had</i> и <i>would</i> часто сокращают до одинакового <i>'d</i>: <i>If I'd known, I'd have come</i>. Различить их легко: после <i>if</i> это <i>had</i>, а перед <i>have</i> — <i>would</i>.</p>
+<p>Как и во втором типе, вместо <i>would have</i> можно поставить <i>could have</i> или <i>might have</i>: <i>could have</i> — мог бы, <i>might have</i> — возможно, …бы. В разговоре <i>had</i> и <i>would</i> часто сокращают до одинакового <i>'d</i>: <i>If I'd known, I'd have come</i>. Различить их легко: <i>'d</i> в части с <i>if</i> — это <i>had</i>, <i>'d</i> перед <i>have</i> — это <i>would</i>.</p>
 <h3>Смешанный тип</h3>
 <p>Иногда условие и результат относятся к разному времени, поэтому формы для них берут из разных типов: для прошлого — из третьего, для настоящего — из второго. Чтобы выбрать форму, задайте себе два вопроса: к какому времени относится условие и к какому — результат.</p>
 ${T(["Условие", "Результат", "Пример"], [
@@ -186,24 +186,24 @@ ${N("По-русски и второй, и третий тип звучат од
     { type: 'translate', task: 'Переведите на английский.', items: [
       ["Если бы ты пришел вчера, ты бы увидел его.", "If you had come yesterday, you would have seen him.|If you'd come yesterday, you'd have seen him."],
       ["Если бы я знал, я бы тебе тогда сказал.", "If I had known, I would have told you.|If I'd known, I'd have told you."],
-      ["Если бы мы не опоздали на поезд, мы бы уже были дома.", "If we hadn't missed the train, we would be at home now.|If we had not missed the train, we would be home now.|If we hadn't missed the train, we'd be home now.|If we hadn't missed the train, we would already be at home.|If we hadn't missed the train, we would already be home.|If we hadn't missed the train, we would be home already."]
+      ["Если бы мы не опоздали на поезд, мы бы уже были дома.", "If we hadn't missed the train, we would be at home now.|If we had not missed the train, we would be home now.|If we hadn't missed the train, we'd be home now.|If we hadn't missed the train, we would already be at home.|If we hadn't missed the train, we would already be home.|If we hadn't missed the train, we would be home already.|If we hadn't missed the train, we would be home by now.|If we hadn't missed the train, we would be at home by now."]
     ]},
     { type: 'listen', at: 2, task: 'Прослушайте предложение и соберите его из слов.', items: [
-      ["If we had left earlier, we wouldn't have missed the train.", "Если бы мы вышли раньше, мы бы не опоздали на поезд."],
-      ["If she had studied harder, she would have passed the exam.", "Если бы она лучше занималась, она бы сдала экзамен."],
-      ["If I had taken your advice, I wouldn't be in trouble now.", "Если бы я тогда послушал твоего совета, у меня сейчас не было бы проблем."]
+      ["If we had taken a taxi, we wouldn't have been so late.", "Если бы мы взяли такси, мы бы так сильно не опоздали."],
+      ["If I had known her address, I would have sent her a card.", "Если бы я знал ее адрес, я бы послал ей открытку."],
+      ["If I had taken your advice, I wouldn't be in trouble now.", "Если бы я тогда послушался твоего совета, у меня сейчас не было бы проблем."]
     ]}
   ]},
 
 { id: 'cond-wish', level: 'B2', title: 'I wish и If only', sub: 'I wish I knew · I wish I had known',
   rule: `
 <p>Конструкция <i>I wish</i> помогает выразить сожаление: «жаль, что…» или «хотел бы я…». Время после <i>wish</i> выбирается так же, как в нереальных условных предложениях.</p>
-${T(["Сожаление о…", "Форма", "Пример"], [
-  ["настоящем", "<i>wish + Past Simple</i>", "<i>I wish I <b>knew</b> the answer.</i> — Жаль, что я не знаю."],
-  ["настоящем (быть)", "<i>wish + were</i>", "<i>I wish I <b>were</b> taller.</i> — Хотел бы я быть выше."],
-  ["прошлом", "<i>wish + Past Perfect</i>", "<i>I wish I <b>hadn't said</b> that.</i> — Жаль, что я это сказал."],
-  ["возможностях", "<i>wish + could</i>", "<i>I wish I <b>could</b> swim.</i> — Жаль, что я не умею плавать."],
-  ["чужом поведении или ситуации", "<i>wish + would</i>", "<i>I wish you <b>would be</b> quiet.</i> — Хоть бы ты помолчал."]
+${T(["О чем сожалеют или чем недовольны", "Форма", "Пример"], [
+  ["о настоящем", "<i>wish + Past Simple</i>", "<i>I wish I <b>knew</b> the answer.</i> — Жаль, что я не знаю."],
+  ["о настоящем (быть)", "<i>wish + were</i>", "<i>I wish I <b>were</b> taller.</i> — Хотел бы я быть выше."],
+  ["о прошлом", "<i>wish + Past Perfect</i>", "<i>I wish I <b>hadn't said</b> that.</i> — Жаль, что я это сказал."],
+  ["о возможностях", "<i>wish + could</i>", "<i>I wish I <b>could</b> swim.</i> — Жаль, что я не умею плавать."],
+  ["чужим поведением или ситуацией", "<i>wish + would</i>", "<i>I wish you <b>would be</b> quiet.</i> — Хоть бы ты помолчал."]
 ])}
 <p>Форма <i>were</i> для всех лиц здесь та же, что в условных предложениях второго типа: <i>I wish I were</i>, <i>I wish she were</i>. В разговоре допустимо и <i>was</i>.</p>
 <h3>Wish + would</h3>

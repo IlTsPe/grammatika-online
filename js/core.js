@@ -3,6 +3,8 @@ const LEVELS = { A1: 'Начальный', A2: 'Элементарный', B1: '
 const CHAPTERS = window.BOOK.slice().sort((a, b) => a.n - b.n);
 const TOPICS = [];
 CHAPTERS.forEach(ch => ch.topics.forEach((t, i) => { t.ch = ch; t.num = `${ch.n}.${i + 1}`; TOPICS.push(t); }));
+/* темы со своим правилом; у контрольных (noStudy: true) правило — только сводка пройденного, отмечать его изученным не нужно */
+const RULE_TOPICS = TOPICS.filter(t => !t.noStudy);
 const topicById = Object.fromEntries(TOPICS.map(t => [t.id, t]));
 const chapById = Object.fromEntries(CHAPTERS.map(c => ['ch-' + c.id, c]));
 
@@ -66,6 +68,7 @@ const exNo = (t, ei) => exOrder(t).indexOf(ei) + 1;
 
 let progress = store.get('gk2-progress', {});
 let studied = store.get('gk2-studied', {});
+const isStudied = t => !t.noStudy && !!studied[t.id];
 let bookmarks = store.get('gk2-bookmarks', {}); /* id темы → время добавления в избранное */
 let notes = store.get('gk2-notes', []); /* «Мои заметки», см. renderNotesPage */
 if (!Array.isArray(notes)) notes = [];
@@ -80,7 +83,7 @@ const pctOf = (s, tot) => !tot ? 0 : s >= tot ? 100 : Math.min(99, Math.round(10
    так что с неизученным правилом ни тема, ни ее раздел или уровень не доходят до 100% */
 function topicStats(t) {
   const p = progress[t.id] || {};
-  let s = studied[t.id] ? 1 : 0, tot = 1, tried = !!studied[t.id];
+  let s = isStudied(t) ? 1 : 0, tot = t.noStudy ? 0 : 1, tried = isStudied(t);
   /* min(): счет, сохраненный до того, как в упражнении убрали пропуск, не должен выталкивать тему за 100% */
   t.ex.forEach((ex, i) => { tot += units(ex); if (p[i]) { s += Math.min(p[i][0], units(ex)); tried = true; } });
   return { s, tot, tried, pct: pctOf(s, tot) };
@@ -96,7 +99,7 @@ function chapterStats(ch, level) {
 function bookProgress() {
   let got = 0, rules = 0, exs = 0;
   TOPICS.forEach(t => {
-    rules++; if (studied[t.id]) got++;
+    if (!t.noStudy) { rules++; if (studied[t.id]) got++; }
     t.ex.forEach((ex, i) => { exs++; const r = progress[t.id] && progress[t.id][i]; if (r) got += r[0] / r[1]; });
   });
   const total = rules + exs;
@@ -115,7 +118,7 @@ function overallBox() {
   const wrong = mistakeCount();
   const book = bookProgress();
   const box = el('div', 'overall');
-  box.innerHTML = `<div class="overall__row"><span>Изучено правил</span><b class="overall__value">${TOPICS.filter(t => studied[t.id]).length} из ${TOPICS.length}</b></div>
+  box.innerHTML = `<div class="overall__row"><span>Изучено правил</span><b class="overall__value">${RULE_TOPICS.filter(isStudied).length} из ${RULE_TOPICS.length}</b></div>
     <div class="overall__row"><span>Выполнено упражнений</span><b class="overall__value">${perfect + wrong} из ${total}</b></div>
     <div class="overall__row"><span>Без ошибок</span><b class="overall__value">${perfect}</b></div>
     <button class="overall__row overall__mistakes" type="button" data-go="mistakes"${route === 'mistakes' ? ' aria-current="page"' : ''}>

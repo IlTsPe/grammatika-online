@@ -4,21 +4,21 @@ topics: [
 
 { id: 'part-forms', level: 'B1', title: 'Participle I и Participle II', sub: 'a running boy · a broken cup',
   rule: `
-<p>У английского глагола две основные формы причастия. Participle I оканчивается на <i>-ing</i> и описывает того, кто сам совершает действие: <i>a smiling girl</i> — улыбающаяся девочка. Participle II — это третья форма глагола, и она описывает того, с кем действие произошло: <i>a lost key</i> — потерянный ключ.</p>
+<p>У английского глагола две основные формы причастия. Participle I оканчивается на <i>-ing</i> и описывает того, кто сам совершает действие: <i>a smiling girl</i> — улыбающаяся девочка. Participle II — это третья форма глагола, и она описывает предмет или человека, над которым совершили действие: <i>a lost key</i> — потерянный ключ.</p>
 ${T(["Форма", "Значение", "Пример", "Перевод"], [
   ["Participle I: <i>V-ing</i>", "активное, процесс", "<i>a <b>sleeping</b> child, the man <b>standing</b> at the door</i>", "спящий ребенок, человек, стоящий у двери"],
   ["Participle II: <i>V3</i>", "пассивное, результат", "<i>a <b>broken</b> cup, a letter <b>written</b> in pencil</i>", "разбитая чашка, письмо, написанное карандашом"],
 ])}
 <h3>-ing или -ed: чувства</h3>
 ${T(["-ing: что вызывает чувство", "-ed: что чувствует человек"], [
-  ["<i>The film was <b>boring</b>.</i> — скучный", "<i>I was <b>bored</b>.</i> — мне было скучно"],
+  ["<i>The film was <b>boring</b>.</i> — Фильм был скучный.", "<i>I was <b>bored</b>.</i> — Мне было скучно."],
   ["<i>The news is <b>surprising</b>.</i> — Новость удивительная.", "<i>We were <b>surprised</b>.</i> — Мы были удивлены."],
   ["<i>an <b>interesting</b> book</i> — интересная книга", "<i>I'm <b>interested</b> in books.</i> — Мне интересны книги."],
   ["<i>a <b>tiring</b> day</i> — утомительный день", "<i>a <b>tired</b> man</i> — усталый человек"]
 ])}
 <h3>Где еще встречаются причастия</h3>
 <p>Эти формы вам уже знакомы: Participle I есть во временах группы Continuous, а Participle II (<i>V3</i>) — во временах группы Perfect и в пассиве.</p>
-${N("Место причастия зависит от того, есть ли при нем другие слова. Одно причастие стоит перед существительным: <i>a <b>crying</b> baby</i>. А если у него есть пояснения, оно идет после: <i>the baby <b>crying</b> in the next room</i>. Подробнее о таких оборотах — в теме 15.2.")}`,
+${N("Место причастия зависит от того, есть ли при нем другие слова. Причастие без пояснительных слов стоит перед существительным: <i>a <b>crying</b> baby</i>. А если у него есть пояснения, оно идет после: <i>the baby <b>crying</b> in the next room</i>. Подробнее о таких оборотах — в теме 15.2.")}`,
   ex: [
     { type: 'choice', task: 'Выберите -ing или -ed.', items: [
       ["The film was very ___.", ["boring", "bored"]], ["I was ___ during the lecture.", ["bored", "boring"]],
@@ -35,8 +35,8 @@ ${N("Место причастия зависит от того, есть ли �
       ["I'd like two ___ (boil) eggs for breakfast.", "boiled"], ["The ___ (fall) leaves covered the path.", "fallen|falling"]
     ]},
     { type: 'translate', task: 'Переведите на английский.', items: [
-      ["Фильм был скучный.", "The film was boring.|The movie was boring."],
-      ["Мне было скучно.", "I was bored."],
+      ["Экскурсия была утомительной.", "The excursion was tiring.|The trip was tiring.|The tour was tiring."],
+      ["Мне интересна история.", "I am interested in history."],
       ["Мальчик, читающий книгу, — мой брат.", "The boy reading a book is my brother.|The boy reading the book is my brother."],
       ["У меня разбитый телефон.", "I have a broken phone.|My phone is broken.|I've got a broken phone."]
     ]},
@@ -69,7 +69,7 @@ ${E([
 ])}
 ${N("Следите, чтобы у оборота и главного предложения было <b>одно подлежащее</b>. Фраза <i>Walking home, the rain started</i> — ошибка: по-английски получается, что домой шел дождь. Правильно: <i>Walking home, <b>I</b> got caught in the rain</i> — по дороге домой я попал под дождь.")}
 <h3>Независимый причастный оборот</h3>
-<p>Иногда у причастного оборота есть свое подлежащее — оно стоит прямо перед причастием: <i><b>The weather</b> being fine, we went out</i>. Такой оборот называют независимым. Он встречается в книжной и официальной речи и отделяется запятой. На русский его обычно переводят придаточным с «так как», «когда» или «после того как»: «Так как погода была хорошая, мы вышли на улицу».</p>
+<p>Иногда у причастного оборота есть свое подлежащее — оно стоит прямо перед причастием: <i><b>The weather</b> being fine, we went out</i>. Такой оборот называют независимым. Он встречается в книжной и официальной речи и отделяется запятой. На русский его обычно переводят придаточным с «так как», «когда» или «после того как».</p>
 ${E([
   ["<b>The weather being</b> fine, we went for a walk.", "Так как погода была хорошая, мы пошли гулять."],
   ["<b>The work having been done</b>, they went home.", "Когда работа была сделана, они пошли домой."],
@@ -77,8 +77,8 @@ ${E([
   ["She sat by the fire, <b>her eyes closed</b>.", "Она сидела у огня, закрыв глаза."],
   ["<b>Weather permitting</b>, we'll start tomorrow.", "Если погода позволит, мы отправимся завтра."]
 ])}
-<p>Обратите внимание на два последних примера. В обороте <i>her eyes closed</i> слово <i>being</i> опущено: полностью было бы <i>her eyes being closed</i>, но <i>being</i> здесь обычно опускают, и остается только третья форма. Такие обороты часто описывают позу или внешний вид человека: <i>She listened, <b>her head bent</b></i> — она слушала, склонив голову. А <i>weather permitting</i> — устойчивое выражение, его запоминают целиком.</p>
-${N("Не путайте это с ошибкой, о которой сказано выше. Здесь подлежащее оборота названо прямо (<i><b>The weather</b> being fine</i>), поэтому у главного предложения вполне может быть другое подлежащее.")}`,
+<p>Обратите внимание на два последних примера. Полностью оборот <i>her eyes closed</i> звучал бы как <i>her eyes being closed</i>, но <i>being</i> здесь обычно опускают, и остается только третья форма. Такие обороты часто описывают позу или внешний вид человека: <i>She listened, <b>her head bent</b></i> — она слушала, склонив голову. А <i>weather permitting</i> — устойчивое выражение, его запоминают целиком.</p>
+${N("Не путайте независимый оборот с ошибкой, о которой сказано выше. Здесь подлежащее оборота названо прямо (<i><b>The weather</b> being fine</i>), поэтому у главного предложения вполне может быть другое подлежащее.")}`,
   ex: [
     { type: 'choice', task: 'Выберите правильную форму причастия.', items: [
       ["___ the letter, she burst into tears.", ["Having read", "Read", "Being read"]], ["___ in 1890, the building is now a museum.", ["Built", "Building", "Having built"]],
@@ -93,10 +93,10 @@ ${N("Не путайте это с ошибкой, о которой сказа�
       ["While ___ (cross) the road, look both ways.", "crossing"], ["The people ___ (invite) to the party were all students.", "invited"]
     ]},
     { type: 'translate', task: 'Переведите на английский, используя причастный оборот.', items: [
-      ["Закончив работу, они пошли домой.", "Having finished the work, they went home.|Having finished work, they went home.|Having finished their work, they went home.|Having finished the job, they went home."],
-      ["Не зная, что сказать, я молчал.", "Not knowing what to say, I kept silent.|Not knowing what to say, I was silent.|Not knowing what to say, I said nothing.|Not knowing what to say, I remained silent.|Not knowing what to say, I stayed silent.|Not knowing what to say, I kept quiet."],
-      ["Построенный в 1890 году, этот дом теперь музей.", "Built in 1890, the house is now a museum.|Built in 1890, this house is now a museum."],
-      ["Дети, играющие в саду, — мои племянники.", "The children playing in the garden are my nephews."]
+      ["Сделав уроки, он пошел гулять.", "Having done his homework, he went for a walk.|Having done his homework, he went out.|Having finished his homework, he went for a walk.|Having finished his homework, he went out."],
+      ["Не зная дороги, мы спросили полицейского.", "Not knowing the way, we asked a policeman.|Not knowing the way, we asked a police officer."],
+      ["Сделанные в Италии, эти туфли очень дорогие.", "Made in Italy, these shoes are very expensive."],
+      ["Девушка, стоящая у двери, — моя сестра.", "The girl standing at the door is my sister.|The girl standing by the door is my sister."]
     ]},
     { type: 'gap', task: 'Замените придаточное независимым причастным оборотом (впишите причастие).', items: [
       ["As the weather was fine, we went out. → The weather ___ fine, we went out.", "being"],

@@ -27,22 +27,22 @@ ${E([
       ["It seems that he knows the answer. → He seems ___ the answer.", "to know"],
       ["It seems that she is sleeping. → She seems ___.", "to be sleeping"],
       ["It seems that they have forgotten. → They seem ___.", "to have forgotten"],
-      ["Probably it will rain. → It is likely ___.", "to rain"],
+      ["It will probably rain. → It is likely ___.", "to rain"],
       ["By chance I met him. → I happened ___ him.", "to meet"],
-      ["Certainly he will come. → He is sure ___.", "to come"],
+      ["He will certainly come. → He is sure ___.", "to come"],
       ["It turned out that the test was easy. → The test turned out ___ easy.", "to be"],
       ["It is unlikely that she will win. → She is unlikely ___.", "to win"]
     ]},
     { type: 'translate', task: 'Переведите на английский, используя конструкцию из темы.', items: [
       ["Он, кажется, болен.", "He seems to be ill.|He seems to be sick.|He seems ill.|He seems sick.|He appears to be ill.|He seems to be unwell."],
       ["Она, кажется, забыла о встрече.", "She seems to have forgotten about the meeting.|She seems to have forgotten the meeting.|She appears to have forgotten about the meeting."],
-      ["Я случайно увидел его вчера.", "I happened to see him yesterday."],
-      ["Он обязательно придет.", "He is sure to come.|He's sure to come.|He is certain to come."],
+      ["Я случайно увидел его вчера.", "I happened to see him yesterday.|Yesterday I happened to see him."],
+      ["Она обязательно позвонит.", "She is sure to call.|She is certain to call.|She is sure to phone.|She is certain to phone."],
       ["Вероятно, пойдет снег.", "It is likely to snow.|It's likely to snow."]
     ]},
     { type: 'listen', at: 2, task: 'Прослушайте предложение и соберите его из слов.', items: [
       ["Your brother seems to know a lot about cars.", "Твой брат, кажется, много знает о машинах."],
-      ["It is likely to rain later in the afternoon.", "Скорее всего, ближе к вечеру пойдет дождь."],
+      ["The match is likely to be cancelled because of the rain.", "Матч, скорее всего, отменят из-за дождя."],
       ["I happened to meet our old teacher at the station.", "Я случайно встретил нашего старого учителя на вокзале."]
     ]}
   ]},
@@ -57,7 +57,7 @@ ${T(["Конструкция", "Пример"], [
   ["<i>… + to have V3</i> (было раньше)", "<i>The thief <b>is believed to have left</b> the city.</i> — Считается, что вор уже уехал из города."]
 ])}
 <h3>Как построить такое предложение</h3>
-<p>Одну и ту же мысль можно выразить двумя способами. Первый проще: начать с <i>It is said that…</i> — говорят, что…, а дальше поставить обычное предложение без изменений. Второй короче и чаще встречается в новостях: того, о ком идет речь, ставят на место подлежащего, затем идет <i>is said</i> (или <i>is believed, is reported</i>), а действие передают инфинитивом. Так, из <i>It is said that he is a genius</i> получается <i>He is said to be a genius</i>. По форме <i>is said, is believed</i> — это пассив.</p>
+<p>Одну и ту же мысль можно выразить двумя способами. Первый проще: начать с <i>It is said that…</i> (говорят, что…) и поставить дальше обычное предложение без изменений. Второй короче и чаще встречается в новостях: того, о ком идет речь, ставят на место подлежащего, затем идет <i>is said</i> (или <i>is believed, is reported</i>), а действие передают инфинитивом. Так, из <i>It is said that he is a genius</i> получается <i>He is said to be a genius</i>. По форме <i>is said, is believed</i> — это пассив.</p>
 <p>Если говорили или думали раньше, в прошлом, <i>be</i> ставят в прошедшее время: <i>He <b>was said to be</b> rich</i> — говорили, что он богат. Форма инфинитива при этом выбирается так же, как в теме 13.3.</p>
 ${E([
   ["People believe the ship sank in 1912. → The ship <b>is believed to have sunk</b> in 1912.", "Считается, что корабль затонул в 1912 году."],
@@ -66,14 +66,14 @@ ${E([
 ${M("Глаголы:", ["say", "believe", "think", "know", "report", "expect", "consider", "suppose"])}`,
   ex: [
     { type: 'gap', task: 'Закончите предложение, используя безличный пассив.', items: [
-      ["People say he is a genius. → He is said ___ a genius.", "to be"],
-      ["People believe the thief left the city. → The thief is believed ___ the city.", "to have left"],
+      ["People say she is a talented singer. → She is said ___ a talented singer.", "to be"],
+      ["People believe the robbers escaped abroad. → The robbers are believed ___ abroad.", "to have escaped"],
       ["They report that the president is visiting China. → The president is reported ___ China.", "to be visiting"],
-      ["It ___ (think) that the painting is a fake.", "is thought"],
-      ["The ship is believed ___ (sink) in 1912.", "to have sunk"],
+      ["It ___ (think) that the old bridge is unsafe.", "is thought"],
+      ["The plane is believed ___ (crash) into the sea.", "to have crashed"],
       ["She is known ___ (be) very generous.", "to be"],
-      ["It ___ (expect) that prices will rise.", "is expected"],
-      ["He is said ___ (work) on a new novel at the moment.", "to be working"]
+      ["It ___ (expect) that the new metro station will open in May.", "is expected"],
+      ["She is said ___ (write) her memoirs at the moment.", "to be writing"]
     ]},
     { type: 'translate', task: 'Переведите на английский, используя конструкцию из темы.', items: [
       ["Говорят, он очень богат.", "He is said to be very rich.|It is said that he is very rich."],

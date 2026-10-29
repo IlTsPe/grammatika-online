@@ -6,21 +6,21 @@ topics: [
   rule: `
 <p>Инфинитив — это начальная форма глагола, и обычно перед ней стоит частица <i>to</i>: <i>I want <b>to go</b></i>. Но в некоторых случаях <i>to</i> не нужна. Их немного, они собраны в таблице, и их стоит запомнить.</p>
 ${T(["Без to", "Пример"], [
-  ["после модальных глаголов (кроме ought to, have to, be to)", "<i>I can <b>swim</b>. You must <b>go</b>.</i> — Я умею плавать. Ты должен идти."],
+  ["после модальных глаголов (кроме <i>ought to, have to, be to</i>)", "<i>I can <b>swim</b>. You must <b>go</b>.</i> — Я умею плавать. Ты должен идти."],
   ["после <i>make</i> и <i>let</i> (заставить, позволить)", "<i>She made me <b>cry</b>. Let him <b>go</b>.</i> — Она довела меня до слез. Отпусти его."],
   ["после <i>had better</i> и <i>would rather</i>", "<i>You'd better <b>stay</b>. I'd rather <b>walk</b>.</i> — Тебе лучше остаться. Я лучше пройдусь пешком."],
   ["после <i>see, hear, watch, feel</i> + дополнение", "<i>I saw him <b>leave</b>.</i> — Я видел, как он ушел."],
   ["после <i>help</i> — можно и так, и так", "<i>Help me (<b>to</b>) <b>carry</b> it.</i> — Помоги мне это донести."]
 ])}
-<p>Оборот <i>would rather</i> — я бы предпочел, «лучше я…» — говорит о собственном выборе: <i>I'd rather stay at home</i> — я лучше останусь дома. Отрицание ставится перед глаголом: <i>I'd rather not say</i> — я лучше промолчу.</p>
+<p>Оборот <i>would rather</i> («я бы предпочел», «лучше я…») говорит о собственном выборе: <i>I'd rather stay at home</i> — я лучше останусь дома. Отрицание ставится перед глаголом: <i>I'd rather not say</i> — я лучше промолчу.</p>
 <p>Сочетание «глагол восприятия + кто-то + действие» называется сложным дополнением; подробно оно разобрано в разделе 17 «Complex Object».</p>
-${T(["С to (самые частые глаголы)", "Пример"], [
-  ["<i>want, would like, decide, hope, plan, agree, refuse, promise, learn, manage, forget, try, offer, need</i>", "<i>She decided <b>to leave</b>.</i> — Она решила уйти."],
+${T(["С to", "Пример"], [
+  ["после глаголов <i>want, would like, decide, hope, plan, agree, refuse, promise, learn, manage, forget, try, offer, need</i>", "<i>She decided <b>to leave</b>.</i> — Она решила уйти."],
   ["после прилагательных", "<i>It's easy <b>to understand</b>. I'm glad <b>to see</b> you.</i> — Это легко понять. Рад тебя видеть."],
   ["после вопросительных слов", "<i>I don't know what <b>to do</b>. Show me how <b>to use</b> it.</i> — Я не знаю, что делать. Покажи мне, как этим пользоваться."],
   ["после <i>the first, the last, the only</i>", "<i>He was the first <b>to come</b>.</i> — Он пришел первым."]
 ])}
-<p>Инфинитив после <i>the first, the last, the only</i> показывает, кто первым, последним или единственным сделал что-то. По-русски его обычно переводят глаголом в прошедшем или настоящем времени: <i>She was the last to leave</i> — она ушла последней, <i>He is the only one to know</i> — только он один знает.</p>
+<p>Инфинитив после <i>the first, the last, the only</i> показывает, кто первым, последним или единственным сделал что-то. По-русски его обычно переводят глаголом в прошедшем или настоящем времени: <i>She was the last to leave</i> — она ушла последней; <i>He is the only one to know</i> — только он один знает.</p>
 ${N("Если предложение с <i>make</i> перевести в пассив, <i>to</i> возвращается: <i>He was made <b>to work</b></i> — его заставили работать.")}
 <h3>Устойчивые обороты с инфинитивом</h3>
 <p>Некоторые обороты с инфинитивом превратились в устойчивые вводные выражения, как русские «по правде говоря» или «мягко говоря». Они показывают отношение говорящего к тому, что он говорит, и обычно отделяются запятой.</p>
@@ -42,7 +42,7 @@ ${T(["Оборот", "Перевод"], [
       ["I don't know what ___.", ["to say", "say"]], ["It's difficult ___ this text.", ["to translate", "translate"]],
       ["He was made ___ the room.", ["to leave", "leave"]], ["I'd rather ___ at home.", ["stay", "to stay"]]
     ]},
-    { type: 'gap', task: 'Впишите to там, где он нужен, или «-», где не нужен.', items: [
+    { type: 'gap', task: 'Впишите to там, где она нужна, или «-», где не нужна.', items: [
       ["I'd like ___ visit London.", "to"], ["You should ___ see a doctor.", "-|0"],
       ["She promised ___ help me.", "to"], ["Let's ___ go to the park.", "-|0"],
       ["I'm glad ___ meet you.", "to"], ["He can't ___ swim.", "-|0"],
@@ -50,7 +50,7 @@ ${T(["Оборот", "Перевод"], [
       ["She was the last ___ arrive.", "to"], ["Tell me how ___ get to the station.", "to"]
     ]},
     { type: 'translate', task: 'Переведите на английский.', items: [
-      ["Я хочу стать врачом.", "I want to become a doctor.|I want to be a doctor."],
+      ["Я хочу научиться плавать.", "I want to learn to swim.|I want to learn how to swim."],
       ["Мама не разрешает мне смотреть телевизор поздно.", "Mum doesn't let me watch TV late.|My mother doesn't let me watch TV late.|My mum doesn't let me watch TV late.|Mum doesn't allow me to watch TV late.|My mum doesn't allow me to watch TV late.|My mother doesn't allow me to watch TV late."],
       ["Я не знаю, что делать.", "I don't know what to do."],
       ["Тебе лучше остаться дома.", "You had better stay at home.|You'd better stay at home.|You'd better stay home.|You had better stay home."]
@@ -61,7 +61,7 @@ ${T(["Оборот", "Перевод"], [
       ["It was raining, and ___, we got lost.", ["to make matters worse", "to begin with", "to put it mildly"]],
       ["He isn't very polite, ___.", ["to put it mildly", "to begin with", "to make matters worse"]],
       ["He speaks French and German, ___ English.", ["to say nothing of", "to tell the truth", "to begin with"]],
-      ["___, he passed the exam although he hadn't studied at all.", ["Strange to say", "To put it mildly", "To say nothing of"]]
+      ["___, he never does his homework, but he always gets top marks.", ["Strange to say", "To put it mildly", "To say nothing of"]]
     ]},
     { type: 'listen', at: 2, task: 'Прослушайте предложение и соберите его из слов.', items: [
       ["My parents made me practise the piano every day.", "Родители заставляли меня каждый день заниматься на пианино."],
@@ -89,14 +89,14 @@ ${T(["Конструкция", "Значение", "Пример"], [
 ${N("Место <i>enough</i> зависит от соседнего слова: оно стоит <b>после</b> прилагательного (<i>big enough</i>), но <b>перед</b> существительным (<i>enough time</i>). И помните: «чтобы» не переводится как <i>for</i> с глаголом — правильно <i>I came <b>to see</b> you</i>, а не <i>for see you</i>.")}`,
   ex: [
     { type: 'gap', task: 'Закончите предложение инфинитивом цели (глагол в скобках).', items: [
-      ["I went to the shop ___ (buy) some bread.", "to buy"], ["She came ___ (help) us.", "to help"],
+      ["I went to the post office ___ (send) a parcel.", "to send"], ["She came ___ (help) us.", "to help"],
       ["He saves money ___ (buy) a car.", "to buy"], ["We got up early ___ (catch) the first train.", "to catch"],
       ["I called him ___ (ask) about the homework.", "to ask"], ["She left early so as ___ (not / be) late.", "not to be"]
     ]},
     { type: 'choice', task: 'Выберите правильный вариант.', items: [
       ["He is ___ to drive a car.", ["too young", "enough young", "young enough not"]], ["She is ___ to go to school alone.", ["old enough", "enough old", "too old"]],
       ["We don't have ___ to finish today.", ["enough time", "enough of time", "too time"]], ["The tea is ___ to drink.", ["too hot", "hot enough not", "enough hot"]],
-      ["The box is too heavy ___ to carry.", ["for me", "to me", "me"]], ["I came here ___ you.", ["to see", "for see", "for seeing"]]
+      ["This bag is too heavy ___ to lift.", ["for her", "to her", "her"]], ["We came here ___ the new museum.", ["to visit", "for visit", "for visiting"]]
     ]},
     { type: 'translate', task: 'Переведите на английский.', items: [
       ["Я пришел, чтобы помочь тебе.", "I came to help you.|I have come to help you."],
@@ -113,7 +113,7 @@ ${N("Место <i>enough</i> зависит от соседнего слова:
 
 { id: 'inf-forms', level: 'B2', title: 'Формы инфинитива', sub: 'to do, to be done, to have done',
   rule: `
-<p>У инфинитива, как и у обычного глагола, есть разные формы. Они показывают две вещи. Во-первых, когда происходит действие — одновременно с главным (<i>to see</i>) или раньше него (<i>to have seen</i>). Во-вторых, кто его выполняет — само подлежащее (<i>to tell</i>) или кто-то другой над ним (<i>to be told</i>).</p>
+<p>У инфинитива, как и у обычного глагола, есть разные формы. Они показывают две вещи. Во-первых, когда происходит действие — одновременно с главным (<i>to see</i>) или раньше него (<i>to have seen</i>). Во-вторых, выполняет ли его само подлежащее (<i>to tell</i>) или действие совершают над подлежащим (<i>to be told</i>).</p>
 ${T(["Форма", "Актив", "Пассив"], [
   ["Simple — одновременно / позже", "<i>to <b>write</b></i>", "<i>to <b>be written</b></i>"],
   ["Continuous — в процессе", "<i>to <b>be writing</b></i>", "—"],
@@ -122,19 +122,19 @@ ${T(["Форма", "Актив", "Пассив"], [
 ])}
 ${E([
   ["I'm glad <b>to see</b> you.", "Рад тебя видеть. (сейчас)"],
-  ["I'm glad <b>to have seen</b> you.", "Рад, что повидал тебя. (уже)"],
+  ["I'm glad <b>to have seen</b> you.", "Рад, что повидал тебя. (раньше)"],
   ["This letter must <b>be answered</b> today.", "На это письмо нужно ответить сегодня. (пассив)"],
   ["She seems <b>to be sleeping</b>.", "Кажется, она спит. (сейчас, процесс)"],
   ["He seems <b>to have forgotten</b> about it.", "Кажется, он об этом забыл. (раньше)"],
   ["They seem <b>to have been waiting</b> for hours.", "Похоже, они ждут уже несколько часов. (длилось до момента речи)"]
 ])}
-<p>Пассивный инфинитив (<i>to be done</i>) нужен, когда подлежащее не выполняет действие, а действие совершается над ним: <i>I want to be invited</i> — я хочу, чтобы меня пригласили. Отрицательная частица <i>not</i> ставится перед любой формой инфинитива: <i>I'm sorry <b>not to have sent</b> it</i> — простите, что не отправил.</p>
-<p>Оборот <i>seem to</i> — кажется, похоже — самый частый спутник разных форм инфинитива, потому что по форме инфинитива видно, о каком времени догадка: <i>seems to be</i> — сейчас, <i>seems to have been</i> — раньше. Такие предложения называются сложным подлежащим; подробно они разобраны в разделе 18 «Complex Subject».</p>
+<p>Пример пассивного инфинитива: <i>I want to be invited</i> — я хочу, чтобы меня пригласили. Отрицательная частица <i>not</i> ставится перед любой формой инфинитива: <i>I'm sorry <b>not to have sent</b> it</i> — простите, что не отправил.</p>
+<p>Оборот <i>seem to</i> (кажется, похоже) — самый частый спутник разных форм инфинитива, потому что по форме инфинитива видно, о каком времени догадка: <i>seems to be</i> — сейчас, <i>seems to have been</i> — раньше. Такие предложения называются сложным подлежащим; подробно они разобраны в разделе 18 «Complex Subject».</p>
 ${N("Чаще всего перфектный инфинитив стоит после <i>seem, be lucky, be sorry, be glad</i>.")}`,
   ex: [
     { type: 'choice', task: 'Выберите нужную форму инфинитива.', items: [
       ["I'm glad ___ you now.", ["to see", "to have seen", "to be seen"]], ["I'm sorry ___ you yesterday.", ["to have disturbed", "to disturb", "to be disturbed"]],
-      ["The work must ___ by Friday.", ["be done", "do", "have done"]], ["She seems ___ at the moment.", ["to be working", "to have worked", "to work at"]],
+      ["The tickets must ___ in advance.", ["be booked", "book", "have booked"]], ["She seems ___ at the moment.", ["to be working", "to have worked", "to work at"]],
       ["He doesn't like ___ what to do.", ["to be told", "to tell", "to have told"]], ["She is lucky ___ the last ticket yesterday.", ["to have got", "to get", "to be got"]],
       ["The children seem ___ for hours. They look tired.", ["to have been playing", "to play", "to be played"]], ["This house seems ___ a hundred years ago.", ["to have been built", "to be built", "to build"]]
     ]},
@@ -144,15 +144,15 @@ ${N("Чаще всего перфектный инфинитив стоит по
       ["They seem ___ (know) each other for years.", "to have known"], ["I'm sorry ___ (not / send) the letter last week.", "not to have sent"]
     ]},
     { type: 'translate', task: 'Переведите на английский.', items: [
-      ["Кажется, он забыл об этом.", "He seems to have forgotten about it.|He seems to have forgotten it."],
-      ["Рад, что повидал тебя.", "I am glad to have seen you.|Glad to have seen you."],
+      ["Кажется, они заблудились.", "They seem to have lost their way.|They seem to have got lost.|They seem to be lost."],
+      ["Я рад, что побывал в Риме.", "I am glad to have been to Rome.|I am glad to have visited Rome."],
       ["Это письмо нужно отправить сегодня.", "This letter must be sent today.|This letter has to be sent today.|This letter needs to be sent today."],
-      ["Кажется, она спит.", "She seems to be sleeping.|She seems to be asleep."]
+      ["Кажется, они нас ждут.", "They seem to be waiting for us."]
     ]},
     { type: 'listen', at: 2, task: 'Прослушайте предложение и соберите его из слов.', items: [
       ["I'm glad to have met your parents at last.", "Я рад, что наконец познакомился с твоими родителями."],
       ["This letter needs to be answered by Friday.", "На это письмо нужно ответить к пятнице."],
-      ["She pretended to be reading when I came in.", "Когда я вошел, она сделала вид, что читает."]
+      ["The road seems to have been repaired recently.", "Дорогу, кажется, недавно отремонтировали."]
     ]}
   ]}
 ]});

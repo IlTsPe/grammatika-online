@@ -164,7 +164,12 @@ button { font: inherit; transition: linear 0.15s; }
 @media (hover: hover) { :root[data-theme="light"]:where(:root:not(.pointer-still)) .theme-toggle:hover .theme-toggle__stars i { opacity: .7; transform: none; } }
 
 /* ---------- Боковое меню ---------- */
-.side { position: sticky; top: env(safe-area-inset-top, 0px); align-self: start; max-height: calc(100vh - 16px); overflow-y: auto; scrollbar-gutter: stable; padding-block: 28px 24px; padding-inline: 5px 11px; } /* более широкий правый отступ не дает полосе прокрутки налезать на рамки */
+/* меню приклеено к окну: top = отступ body 8px, поэтому при прокрутке страницы оно не сдвигается ни на пиксель;
+   overscroll-behavior: прокрутка меню до конца не передается странице */
+.side { position: sticky; top: calc(env(safe-area-inset-top, 0px) + 8px); align-self: start; max-height: calc(100vh - 16px); overflow-y: auto; overscroll-behavior: contain; scrollbar-gutter: stable; padding-block: 28px 24px; padding-inline: 5px 11px; } /* более широкий правый отступ не дает полосе прокрутки налезать на рамки */
+/* на компьютере страница не «пружинит» у верхнего и нижнего края (тачпад в Chrome/Edge/Safari) — иначе вместе с ней прыгает меню;
+   на телефоне не трогаем: там это жест «потянуть для обновления» */
+@media (min-width: 960px) { :root { overscroll-behavior-y: none; } }
 /* место под полосу прокрутки зарезервировано всегда: иначе полоса сужает панель, заголовки переносятся заново и у панели остается ненужная прокрутка */
 .side__head { display: flex; align-items: flex-start; column-gap: 8px; }
 .side__actions { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 8px; margin-top: 16px; }
@@ -814,6 +819,7 @@ button { font: inherit; transition: linear 0.15s; }
 .crumbs__link { padding: 0; border: 0; background: none; color: var(--accent); font: inherit; letter-spacing: inherit; text-transform: inherit; cursor: pointer; }
 @media (hover: hover) { :where(:root:not(.pointer-still)) .crumbs__link:hover { text-decoration: underline; } }
 .crumbs__sep { display: inline-flex; font-size: 14px; opacity: .6; }
+@media (max-width: 538px) { .crumbs { font-size: 10.5px; } } /* узкий телефон: цепочка из трех звеньев помещается в одну-две строки */
 .lvl-tag { display: inline-block; padding: 0 6px; border: 1px solid currentColor; border-radius: 4px; font-family: var(--f-mono); font-size: 11px; letter-spacing: .04em; color: var(--accent); }
 .lvl-tag--sm { font-size: 10px; line-height: 1.5; }
 .lvl-tag--filled { background: var(--accent); border-color: var(--accent); color: var(--on-accent); }
@@ -1055,7 +1061,7 @@ button { font: inherit; transition: linear 0.15s; }
 .examples__item { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); column-gap: 16px; padding: 7px 0; border-bottom: 1px dashed var(--border); }
 .examples__en { font-family: var(--f-en); font-size: 17px; }
 .examples__ru { font-size: 14.5px; color: var(--muted); padding-top: 2px; }
-.note { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 12px; margin: 0 0 16px; padding: 12px 14px; border: 1px dashed var(--bad); border-radius: 6px; background: color-mix(in srgb, var(--bad-soft) 45%, var(--sheet)); font-size: 15px; }
+.note { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 12px; margin: 10px 0 16px; padding: 12px 14px; border: 1px dashed var(--bad); border-radius: 6px; background: color-mix(in srgb, var(--bad-soft) 45%, var(--sheet)); font-size: 15px; }
 @supports not (color: color-mix(in srgb, red, red)) { .note { background: #EFE6E3; } }
 :root[data-theme="dark"] .note { background: color-mix(in srgb, var(--bad-soft) 25%, var(--sheet)); }
 @supports not (color: color-mix(in srgb, red, red)) { :root[data-theme="dark"] .note { background: #211C26; } }

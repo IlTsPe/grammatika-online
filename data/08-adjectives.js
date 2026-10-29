@@ -10,7 +10,7 @@ ${T(["Тип прилагательного", "Сравнительная", "П�
   ["оканчиваются на <i>-e</i>", "<i>nice → nice<b>r</b></i>", "<i><b>the</b> nice<b>st</b></i>"],
   ["односложные: краткий гласный + одна согласная (согласная удваивается)", "<i>big → big<b>ger</b>, hot → hot<b>ter</b></i>", "<i><b>the</b> big<b>gest</b></i>"],
   ["двусложные на <i>-y</i>", "<i>easy → eas<b>ier</b>, happy → happ<b>ier</b></i>", "<i><b>the</b> eas<b>iest</b></i>"],
-  ["двусложные и длиннее", "<i><b>more</b> interesting, <b>more</b> famous</i>", "<i><b>the most</b> interesting</i>"],
+  ["остальные двусложные и длиннее", "<i><b>more</b> interesting, <b>more</b> famous</i>", "<i><b>the most</b> interesting</i>"],
   ["меньшая степень", "<i><b>less</b> expensive</i>", "<i><b>the least</b> expensive</i>"]
 ])}
 <h3>Исключения</h3>
@@ -22,7 +22,7 @@ ${T(["", "Сравнительная", "Превосходная"], [
   ["<i>little</i>", "<i>less</i>", "<i>the least</i>"],
   ["<i>old</i>", "<i>older / elder</i>", "<i>the oldest / eldest</i>"]
 ])}
-${N("Некоторые двусложные прилагательные могут образовывать формы и через <i>-er</i>: <i>clever — cleverer, quiet — quieter, simple — simpler, narrow — narrower</i>. Выбирайте один способ: либо окончание <i>-er / -est</i>, либо <i>more / most</i>. Вместе их не используют, поэтому <i>more bigger</i> и <i>the most best</i> — ошибки. А формы <i>elder</i> и <i>eldest</i> говорят только о членах семьи: <i>my <b>elder</b> brother</i> — мой старший брат.")}
+${N("Некоторые двусложные прилагательные могут образовывать формы и через <i>-er</i>: <i>clever — cleverer, quiet — quieter, simple — simpler, narrow — narrower</i>. Выбирайте один способ: либо окончание <i>-er / -est</i>, либо <i>more / most</i>. Вместе их не используют, поэтому <i>more bigger</i> и <i>the most best</i> — ошибки. А формы <i>elder</i> и <i>eldest</i> употребляют только по отношению к членам семьи и только перед существительным: <i>my <b>elder</b> brother</i> — мой старший брат, но <i>He is <b>older</b> than me</i> — он старше меня (не <i>elder than</i>).")}
 <h3>Farther и further</h3>
 <p>У <i>far</i> («далеко, далекий») две пары форм. Когда речь идет о расстоянии, подходят обе: <i>farther</i> и <i>further</i> — дальше. Например, <i>My house is <b>farther / further</b> from the school than yours</i> — мой дом дальше от школы, чем твой. Но у <i>further</i> есть еще значение «дальнейший, дополнительный», и тогда <i>farther</i> не годится: <i>for <b>further</b> information</i> — для получения дополнительной информации.</p>
 <h3>Good и well, bad и badly</h3>
@@ -46,7 +46,7 @@ ${N("Некоторые двусложные прилагательные мог
     { type: 'translate', task: 'Переведите на английский.', items: [
       ["Мой брат старше меня.", "My brother is older than me.|My brother is older than I am.|My brother is older than I."],
       ["Это был лучший день в моей жизни.", "This was the best day of my life.|It was the best day of my life.|That was the best day of my life.|This was the best day in my life.|It was the best day in my life.|That was the best day in my life."],
-      ["Сегодня холоднее, чем вчера.", "It is colder today than yesterday.|Today is colder than yesterday.|It's colder today than yesterday.|It's colder today than it was yesterday.|It is colder today than it was yesterday."],
+      ["Сегодня холоднее, чем вчера.", "It is colder today than yesterday.|Today is colder than yesterday.|It's colder today than yesterday.|It's colder today than it was yesterday.|It is colder today than it was yesterday.|Today it is colder than yesterday."],
       ["Вчерашняя задача была труднее.", "Yesterday's task was more difficult.|Yesterday's task was harder.|Yesterday's problem was more difficult.|Yesterday's problem was harder."],
       ["Это самое дешевое кафе в городе.", "This is the cheapest cafe in town.|This is the cheapest café in town.|This is the cheapest cafe in the city.|It's the cheapest cafe in town.|This is the cheapest café in the city.|It's the cheapest café in town.|It's the cheapest cafe in the city."]
     ]},
@@ -92,10 +92,10 @@ ${N("Не каждое слово на <i>-ly</i> — наречие. <i>Friendl
     ]},
     { type: 'translate', task: 'Переведите на английский.', items: [
       ["В детстве она хорошо пела.", "She sang well as a child.|She sang well when she was a child.|When she was a child, she sang well.|As a child she sang well.|She used to sing well as a child.|She used to sing well when she was a child."],
-      ["Езжай осторожно!", "Drive carefully!"],
+      ["Он плохо водит машину.", "He drives badly.|He is a bad driver.|He doesn't drive well.|He isn't a good driver."],
       ["Суп пахнет вкусно.", "The soup smells good.|The soup smells delicious.|The soup smells nice."],
       ["Вчера он много работал.", "Yesterday he worked hard.|He worked hard yesterday.|Yesterday he worked a lot.|He worked a lot yesterday."],
-      ["Я его почти не знаю.", "I hardly know him.|I barely know him."]
+      ["Он почти не говорит по-английски.", "He hardly speaks English.|He barely speaks English.|He can hardly speak English.|He can barely speak English.|He speaks hardly any English.|He speaks almost no English."]
     ]},
     { type: 'listen', at: 2, task: 'Прослушайте предложение и соберите его из слов.', items: [
       ["She speaks English very well and quite fast.", "Она говорит по-английски очень хорошо и довольно быстро."],
@@ -118,8 +118,8 @@ ${T(["Конструкция", "Значение", "Пример"], [
   ["<i>the same as / different from</i> (брит. также <i>different to</i>)", "такой же / другой", "<i>My bag is <b>the same as</b> yours.</i> — У меня такая же сумка, как у тебя."]
 ])}
 <h3>Как устроены эти конструкции</h3>
-<p>В конструкции <i>as … as</i> прилагательное стоит в обычной форме, без <i>-er</i> и <i>more</i>, потому что предметы равны: <i>as big as</i>, а не <i>as bigger as</i>. В отрицании она значит, что первый предмет «уступает» второму: <i>It isn't as cold as yesterday</i> — то есть вчера было холоднее. Чтобы сказать «в два, в три раза больше», перед ней ставят <i>twice</i> («вдвое») или <i>three times</i> — втрое.</p>
-<p>В конструкции «чем…, тем…» перед каждой сравнительной степенью стоит <i>the</i>, хотя по-русски никакого артикля не слышно: <i>The sooner, the better</i> — чем раньше, тем лучше. А повтор сравнительной степени через <i>and</i> показывает, что признак постепенно нарастает; обычно его используют с глаголами <i>get</i> и <i>become</i> («становиться»). У длинных прилагательных повторяют только <i>more</i>: <i>more and more interesting</i> — все интереснее и интереснее.</p>
+<p>В конструкции <i>as … as</i> прилагательное стоит в обычной форме, без <i>-er</i> и <i>more</i>, потому что предметы равны: <i>as big as</i>, а не <i>as bigger as</i>. В отрицании она значит, что первый предмет «уступает» второму: <i>This flat isn't as big as our old one</i> — то есть старая квартира была больше. Чтобы сказать «в два, в три раза больше», перед ней ставят <i>twice</i> («вдвое») или <i>three times</i> («втрое»).</p>
+<p>В конструкции «чем…, тем…» перед каждой сравнительной степенью стоит <i>the</i>, хотя в русском такого слова нет: <i>The sooner, the better</i> — чем раньше, тем лучше. А повтор сравнительной степени через <i>and</i> показывает, что признак постепенно нарастает; обычно его используют с глаголами <i>get</i> и <i>become</i> («становиться»). У длинных прилагательных повторяют только <i>more</i>: <i>more and more interesting</i> — все интереснее и интереснее.</p>
 <p>Наконец, после <i>different</i> ставят <i>from</i>, а не <i>than</i>, потому что это не сравнительная степень: <i>Your bag is <b>different from</b> mine</i> — твоя сумка не такая, как моя.</p>
 ${N("<i>Very</i> перед сравнительной степенью не ставят: <i>very better</i> — ошибка.")}`,
   ex: [
@@ -144,7 +144,7 @@ ${N("<i>Very</i> перед сравнительной степенью не с�
       ["В двенадцать лет она была такой же высокой, как ее мама.", "At twelve she was as tall as her mother.|At twelve she was as tall as her mum.|At the age of twelve she was as tall as her mother.|When she was twelve, she was as tall as her mother.|When she was twelve, she was as tall as her mum.|At the age of twelve she was as tall as her mum."],
       ["Сегодня не так холодно, как вчера.", "It isn't as cold today as yesterday.|It isn't so cold today as yesterday.|Today it isn't as cold as yesterday.|It isn't as cold today as it was yesterday.|Today it isn't as cold as it was yesterday.|Today it isn't so cold as yesterday."],
       ["Чем больше ты читаешь, тем больше знаешь.", "The more you read, the more you know."],
-      ["Становится все темнее и темнее.", "It's getting darker and darker.|It is getting darker and darker."],
+      ["Задания становятся все труднее и труднее.", "The tasks are getting harder and harder.|The tasks are getting more and more difficult.|The exercises are getting harder and harder.|The exercises are getting more and more difficult."],
       ["Моя новая машина намного быстрее старой.", "My new car is much faster than my old one.|My new car is far faster than my old one.|My new car is a lot faster than my old one.|My new car is much faster than the old one.|My new car is a lot faster than the old one.|My new car is far faster than the old one."]
     ]},
     { type: 'listen', at: 2, task: 'Прослушайте предложение и соберите его из слов.', items: [

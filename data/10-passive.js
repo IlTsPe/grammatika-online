@@ -6,7 +6,7 @@ topics: [
   rule: `
 <p>Пассив (страдательный залог) используют, когда важно само действие или то, над чем оно совершается, а не тот, кто его выполняет. Обычно так бывает, если исполнитель неизвестен, очевиден или просто неважен: <i>This house was built in 1905</i> — неважно, кто строил. Если исполнителя все же нужно назвать, его вводят через <i>by</i>, а инструмент — через <i>with</i>, как в теме 6.4.</p>
 ${F("<b>be</b> в нужном времени + <b>V3</b>")}
-<p><i>V3</i> — третья форма глагола, как в Present Perfect (тема 2.7).</p>
+<p><i>V3</i> — третья форма глагола, как в Present Perfect (тема 2.8).</p>
 ${T(["Время", "Актив", "Пассив"], [
   ["Present Simple", "<i>They <b>clean</b> the room every day.</i> — Они убирают комнату каждый день.", "<i>The room <b>is cleaned</b> every day.</i> — Комнату убирают каждый день."],
   ["Past Simple", "<i>They <b>built</b> the house in 1905.</i> — Они построили дом в 1905 году.", "<i>The house <b>was built</b> in 1905.</i> — Дом был построен в 1905 году."],
@@ -17,11 +17,11 @@ ${E([
   ["'Hamlet' <b>was written</b> by Shakespeare.", "«Гамлет» был написан Шекспиром."],
   ["Paper <b>is made</b> from wood.", "Бумагу делают из дерева."],
   ["The letter <b>was written</b> with a pencil.", "Письмо было написано карандашом."],
-  ["<b>Was</b> the window <b>broken</b> by the children? — It <b>wasn't broken</b>.", "Окно разбили дети? — Его не разбивали. (вопрос и отрицание — с помощью be)"]
+  ["<b>Was</b> the window <b>broken</b> by the children? — It <b>wasn't broken</b>.", "Окно разбили дети? — Его не разбивали."]
 ])}
 ${N("Русские предложения без указания, кто действует, часто удобно переводить пассивом. Например, «Здесь говорят по-английски» — <i>English <b>is spoken</b> here</i>.")}
 <h3>Пассив с глаголами give, tell, show</h3>
-<p>У некоторых глаголов два дополнения: кому и что. Например, <i>They gave <b>me</b> <b>a book</b></i> — мне дали книгу. Такие предложения можно поставить в пассив двумя способами, но обычно подлежащим делают человека, а не предмет: <i>I was given a book</i> — мне дали книгу. Дословно перевести такую фразу на русский не получится, она звучит странно, зато по-английски очень естественно. Так ведут себя глаголы <i>give, tell, show, send, offer, promise, ask</i>.</p>
+<p>У некоторых глаголов два дополнения: кому и что. Например, <i>They gave <b>me</b> <b>a book</b></i> — они дали мне книгу. Такие предложения можно поставить в пассив двумя способами, но обычно подлежащим делают человека, а не предмет: <i>I was given a book</i> — мне дали книгу. Дословный перевод на русский получится странным («я был дан книгой»), зато по-английски такая фраза звучит очень естественно. Так ведут себя глаголы <i>give, tell, show, send, offer, promise, ask</i>.</p>
 ${E([
   ["I <b>was given</b> a book for my birthday.", "Мне подарили книгу на день рождения."],
   ["We <b>were told</b> to wait.", "Нам велели подождать."],
@@ -37,23 +37,23 @@ ${E([
 ])}`,
   ex: [
     { type: 'gap', task: 'Поставьте глагол в Present, Past или Future Simple Passive.', items: [
-      ["English ___ (speak) all over the world.", "is spoken"], ["This house ___ (build) in 1905.", "was built"],
+      ["English ___ (speak) all over the world.", "is spoken"], ["This castle ___ (build) in the 15th century.", "was built"],
       ["The letters ___ (deliver) every morning.", "are delivered"], ["The results ___ (announce) tomorrow.", "will be announced"],
-      ["'Hamlet' ___ (write) by Shakespeare.", "was written"], ["Bread ___ (bake) here every day.", "is baked"],
+      ["'War and Peace' ___ (write) by Tolstoy.", "was written"], ["Bread ___ (bake) here every day.", "is baked"],
       ["The thief ___ (catch) last night.", "was caught"], ["The new bridge ___ (open) next year.", "will be opened"],
-      ["I ___ (invite) to the party yesterday.", "was invited"], ["These cars ___ (make) in Japan.", "are made"],
-      ["The museum ___ (not / visit) by many tourists.", "is not visited"], ["When ___ America discovered?", "was"]
+      ["I ___ (invite) to the party yesterday.", "was invited"], ["These cars ___ (make) in Japan nowadays.", "are made"],
+      ["The museum ___ (not / visit) by many tourists these days.", "is not visited"], ["When ___ America discovered?", "was"]
     ]},
     { type: 'choice', task: 'Выберите правильный вариант.', items: [
-      ["The window ___ by the children yesterday.", ["was broken", "broke", "has broken"]], ["Paper ___ from wood.", ["is made", "makes", "is making"]],
-      ["The meeting ___ next Monday.", ["will be held", "will hold", "holds"]], ["The cake was cut ___ a knife.", ["with", "by", "from"]],
+      ["The window ___ by the children yesterday.", ["was broken", "broke", "has broken"]], ["Cheese ___ from milk.", ["is made", "makes", "is making"]],
+      ["The meeting ___ next Monday.", ["will be held", "will hold", "holds"]], ["The door was opened ___ a key.", ["with", "by", "from"]],
       ["The picture was painted ___ a famous artist.", ["by", "with", "of"]], ["Where ___ these shoes made?", ["were", "did", "was"]]
     ]},
     { type: 'translate', task: 'Переведите на английский, используя пассив.', items: [
       ["Этот дом был построен в 1990 году.", "This house was built in 1990."],
-      ["Здесь говорят по-английски.", "English is spoken here."],
+      ["Во Франции говорят по-французски.", "French is spoken in France."],
       ["Письмо будет отправлено завтра.", "The letter will be sent tomorrow."],
-      ["Меня пригласили на день рождения.", "I was invited to a birthday party.|I was invited to the birthday party."],
+      ["Меня пригласили на день рождения.", "I was invited to a birthday party.|I was invited to the birthday party.|I have been invited to a birthday party.|I have been invited to the birthday party."],
       ["Эту книгу написал Пушкин.", "This book was written by Pushkin."]
     ]},
     { type: 'gap', task: 'Перепишите предложение в пассиве (впишите сказуемое вместе с предлогом).', items: [
@@ -75,7 +75,7 @@ ${E([
 
 { id: 'pas-all', level: 'B1', title: 'Пассив во всех временах и с модальными', sub: 'is being repaired, has been done, must be done',
   rule: `
-<p>Пассив можно построить почти в любом времени, и делается это просто: меняется только форма глагола <i>be</i>, а смысловой глагол всегда стоит в третьей форме. Например, <i>is built</i>, <i>was built</i>, <i>has been built</i>, <i>is being built</i> — меняется <i>be</i>, а <i>built</i> остается.</p>
+<p>Пассив можно построить почти в любом времени, и делается это просто: меняется только форма глагола <i>be</i>, а смысловой глагол всегда стоит в третьей форме. Например: <i>is built</i>, <i>was built</i>, <i>has been built</i>, <i>is being built</i>.</p>
 ${T(["Время", "Пассив", "Пример"], [
   ["Present Simple", "<i>am / is / are + V3</i>", "<i>The room <b>is cleaned</b>.</i> — Комнату убирают (регулярно)."],
   ["Present Continuous", "<i>am / is / are being + V3</i>", "<i>The room <b>is being cleaned</b>.</i> — Комнату сейчас убирают."],
@@ -86,7 +86,7 @@ ${T(["Время", "Пассив", "Пример"], [
   ["Модальные", "<i>can / must / should be + V3</i>", "<i>The room <b>must be cleaned</b>.</i> — Комнату нужно убрать."]
 ])}
 <p>В строке «Модальные» после модального глагола стоит <i>be</i> без <i>to</i> и третья форма — это пассивный инфинитив. Так строится пассив с любым модальным глаголом: <i>can be done</i> — можно сделать, <i>should be done</i> — следует сделать, <i>must be done</i> — нужно сделать. Формы инфинитива подробно разобраны в разделе 13 «Инфинитив».</p>
-${N("Не все времена удобны в пассиве. Future Continuous и времена Perfect Continuous в пассиве почти не встречаются — звучат слишком громоздко. Вместо них говорят в активном залоге или берут простое время: например, вместо громоздкого <i>The bridge has been being built for two years</i> скажут <i>They have been building the bridge for two years</i> — мост строят уже два года.")}`,
+${N("Не все времена удобны в пассиве. Future Continuous и времена Perfect Continuous в пассиве почти не встречаются — звучат слишком громоздко. Вместо них говорят в активном залоге или берут простое время: например, вместо <i>The bridge has been being built for two years</i> скажут <i>They have been building the bridge for two years</i> — мост строят уже два года.")}`,
   ex: [
     { type: 'gap', task: 'Поставьте глагол в нужную форму пассива.', items: [
       ["The thief ___ (just / arrest).", "has just been arrested"], ["My car ___ (repair) at the moment.", "is being repaired"],
@@ -111,7 +111,7 @@ ${N("Не все времена удобны в пассиве. Future Continuou
     { type: 'translate', task: 'Переведите на английский, используя пассив.', items: [
       ["Мою машину сейчас ремонтируют.", "My car is being repaired now.|My car is being repaired at the moment.|My car is being fixed now.|My car is being fixed at the moment."],
       ["Письмо уже отправлено.", "The letter has already been sent.|The letter has been sent already."],
-      ["Эту работу нужно сделать к пятнице.", "This work must be done by Friday.|This work has to be done by Friday.|This work needs to be done by Friday.|The work must be done by Friday."],
+      ["Эту работу нужно сделать к пятнице.", "This work must be done by Friday.|This work has to be done by Friday.|This work needs to be done by Friday.|The work must be done by Friday.|The work has to be done by Friday.|The work needs to be done by Friday."],
       ["Все билеты уже проданы.", "All the tickets have already been sold.|All the tickets have been sold already.|All tickets have already been sold."]
     ]},
     { type: 'listen', at: 2, task: 'Прослушайте предложение и соберите его из слов.', items: [
@@ -125,7 +125,7 @@ ${N("Не все времена удобны в пассиве. Future Continuou
   rule: `
 <p>Каузатив (<i>have something done</i>) показывает, что действие для нас выполнил <b>кто-то другой</b> — обычно специалист и за плату: <i>I had my hair cut</i> — меня подстригли в парикмахерской. Эта же конструкция говорит о неприятности, которая с нами случилась: <i>He had his wallet stolen</i> — у него украли кошелек.</p>
 ${F("have / get + <b>объект</b> + <b>V3</b>")}
-<p>Глагол <i>have</i> в этой конструкции меняется по временам, как обычный глагол: <i>I had my hair cut</i> (прошлое), <i>We're having our flat painted</i> (сейчас), <i>I'll have my car washed</i> (будущее). Вопрос и отрицание строят с <i>do / does / did</i>: <i>Did you have your hair cut?</i> — ты подстригся? — Вместо <i>have</i> можно сказать <i>get</i> — смысл тот же, но звучит разговорнее.</p>
+<p>Глагол <i>have</i> в этой конструкции меняется по временам, как обычный глагол: <i>I had my hair cut</i> (прошлое), <i>We're having our flat painted</i> (сейчас), <i>I'll have my car washed</i> (будущее). Вопрос и отрицание строят с <i>do / does / did</i>: <i>Did you have your hair cut?</i> — ты подстригся? Вместо <i>have</i> можно сказать <i>get</i> — смысл тот же, но звучит разговорнее.</p>
 ${E([
   ["I <b>had my hair cut</b> yesterday.", "Вчера я подстриглась. (меня подстригли в салоне)"],
   ["We're <b>having our flat painted</b>.", "Нам красят квартиру."],
@@ -139,16 +139,16 @@ ${T(["Конструкция", "Значение", "Пример"], [
   ["<i>get + кто-то + to V</i>", "уговорить", "<i>I'll <b>get</b> my brother <b>to help</b> me.</i> — Я уговорю брата мне помочь."],
   ["<i>make + кто-то + V</i>", "заставить", "<i>The teacher <b>made</b> us <b>rewrite</b> it.</i> — Учитель заставил нас это переписать."]
 ])}
-${N("Сравните: <i>I cut my hair</i> значит «я подстриг себя сам». А если стриг парикмахер, нужно сказать <i>I <b>had</b> my hair <b>cut</b></i>.")}`,
+${N("Сравните: <i>I cut my hair</i> — я подстригся сам; <i>I <b>had</b> my hair <b>cut</b></i> — меня подстриг парикмахер.")}`,
   ex: [
-    { type: 'gap', task: 'Составьте каузатив из слов в скобках.', items: [
-      ["I ___ (have / my hair / cut) yesterday.", "had my hair cut"], ["We are ___ (have / our flat / paint) next week.", "having our flat painted"],
-      ["She ___ (get / her car / repair) last month.", "got her car repaired"], ["He ___ (have / his wallet / steal) on the train.", "had his wallet stolen"],
-      ["You should ___ (have / your eyes / test).", "have your eyes tested"], ["I'll get my brother ___ (help) me.", "to help"],
-      ["The teacher made us ___ (rewrite) the essay.", "rewrite"], ["I'll have the porter ___ (bring) your bags.", "bring"]
+    { type: 'gap', task: 'Составьте каузатив из слов в скобках или поставьте глагол в нужную форму (с to или без to).', items: [
+      ["I ___ (have / my coat / clean) yesterday.", "had my coat cleaned"], ["We are ___ (have / our flat / paint) next week.", "having our flat painted"],
+      ["She ___ (get / her car / repair) last month.", "got her car repaired"], ["She ___ (have / her bag / steal) at the station.", "had her bag stolen"],
+      ["You should ___ (have / your eyes / test).", "have your eyes tested"], ["Can you get your sister ___ (call) me back?", "to call"],
+      ["The coach made us ___ (run) ten laps.", "run"], ["I'll have my secretary ___ (send) you the documents.", "send"]
     ]},
     { type: 'translate', task: 'Переведите на английский.', items: [
-      ["Я постриглась вчера (в парикмахерской).", "I had my hair cut yesterday.|I got my hair cut yesterday."],
+      ["Вчера мне починили часы.", "I had my watch repaired yesterday.|I got my watch repaired yesterday.|Yesterday I had my watch repaired.|Yesterday I got my watch repaired."],
       ["Нам починили телевизор.", "We had our TV repaired.|We had our TV set repaired.|We got our TV repaired.|We had the TV repaired.|Our TV was repaired.|Our TV has been repaired."],
       ["Тебе нужно проверить зрение.", "You need to have your eyes tested.|You should have your eyes tested.|You need to have your eyes checked.|You should have your eyes checked.|You need to get your eyes tested.|You should get your eyes tested.|You need to get your eyes checked.|You should get your eyes checked.|You need to have your eyesight tested.|You should have your eyesight tested.|You need to have your eyesight checked.|You should have your eyesight checked."],
       ["У него украли телефон.", "He had his phone stolen.|His phone was stolen.|His phone has been stolen.|He has had his phone stolen.|He got his phone stolen."]

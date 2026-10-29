@@ -30,7 +30,7 @@ function exportBackup() {
   a.download = `grammar-progress-${now.getFullYear()}-${d(now.getMonth() + 1)}-${d(now.getDate())}-${d(now.getHours())}${d(now.getMinutes())}.json`;
   document.body.append(a); a.click(); a.remove();
   setTimeout(() => URL.revokeObjectURL(a.href), 1000);
-  showFileMsg('ok', `Прогресс по грамматике успешно сохранен в файл «${a.download}». Файл сохранен в папку загрузок.`);
+  showFileMsg('ok', `Прогресс сохранен в файл «${a.download}» в папке загрузок.`);
 }
 /* «Сохранить» нажата больше 3 раз за 2 секунды: каждое нажатие скачивает еще один файл, поэтому кнопка блокируется
    с предупреждением и отсчетом до 0 — 7 секунд первые два раза, 30 секунд потом. Число предупреждений
@@ -94,7 +94,7 @@ function backupSummary(data) {
       if (r[0] < r[1]) wrong++; else perfect++;
     });
   });
-  return { studied: ids(data['gk2-studied']).length, ex, perfect, wrong, bm: ids(data['gk2-bookmarks']).length, notes: Array.isArray(data['gk2-notes']) ? data['gk2-notes'].length : 0 };
+  return { studied: ids(data['gk2-studied']).filter(id => !topicById[id].noStudy).length, ex, perfect, wrong, bm: ids(data['gk2-bookmarks']).length, notes: Array.isArray(data['gk2-notes']) ? data['gk2-notes'].length : 0 };
 }
 const EX_TOTAL = TOPICS.reduce((n, t) => n + t.ex.length, 0);
 /* копия, прочитанная из файла: ее данные и время сохранения или null, если файл не наш */
@@ -121,8 +121,8 @@ function openImport() {
   d.innerHTML = `<div class="modal__body">
     <h2 class="modal__title" id="modalTitle">Загрузить прогресс из файла</h2>
     <div class="modal__warn" id="modalWarn">
-      <p>При импорте все данные о прогрессе, а также содержимое раздела «Избранное» и заметки в этом браузере на текущем устройстве будут <b class="modal__warn-title">перезаписаны</b> данными из файла. Объединить их нельзя — произойдет полная перезапись.</p>
-      <p>Заранее убедитесь, что все необходимые данные сохранены.</p>
+      <p>При загрузке весь прогресс, «Избранное» и заметки в этом браузере на текущем устройстве будут <b class="modal__warn-title">перезаписаны</b> данными из файла. Объединить их нельзя — произойдет полная перезапись.</p>
+      <p>Если текущие данные еще нужны, сначала сохраните их в файл кнопкой «Сохранить».</p>
     </div>
     <div class="modal__drop">
       <div class="modal__file" aria-live="polite"></div>
@@ -155,13 +155,13 @@ function openImport() {
     $('[data-act=ok]', d).disabled = !backup;
     $('[data-act=pick]', d).textContent = 'Выбрать другой файл';
     if (!backup) {
-      showError(`${esc(name)} — это не файл прогресса «Грамматика онлайн».`);
+      showError(`${esc(name)} — это не файл прогресса «Грамматики онлайн».`);
       return;
     }
     const when = backup.saved && !isNaN(new Date(backup.saved)) ? new Date(backup.saved).toLocaleString('ru-RU', { dateStyle: 'long', timeStyle: 'short' }) : '';
     const sum = backupSummary(backup.data);
     box.innerHTML = `<p class="modal__name"><b>${esc(name)}</b>${when ? `<span>сохранен ${esc(when)}</span>` : ''}</p>
-      <div class="modal__stats">${row('Изучено правил', `${sum.studied} из ${TOPICS.length}`)}${row('Выполнено упражнений', `${sum.ex} из ${EX_TOTAL}`)}${sum.ex ? row('Без ошибок', sum.perfect) : ''}${sum.wrong ? row('С ошибками', sum.wrong) : ''}${row('«Избранное»', sum.bm)}${row('Заметки', sum.notes)}</div>`;
+      <div class="modal__stats">${row('Изучено правил', `${sum.studied} из ${RULE_TOPICS.length}`)}${row('Выполнено упражнений', `${sum.ex} из ${EX_TOTAL}`)}${sum.ex ? row('Без ошибок', sum.perfect) : ''}${sum.wrong ? row('С ошибками', sum.wrong) : ''}${row('«Избранное»', sum.bm)}${row('Заметки', sum.notes)}</div>`;
   }
   async function choose(file) { if (file) show(await readBackup(file), file.name); }
   input.addEventListener('change', () => { const f = input.files[0]; input.value = ''; choose(f); });

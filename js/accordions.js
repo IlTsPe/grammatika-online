@@ -102,6 +102,6 @@ function fillProgress(box) {
   }).join('') : '';
   box.innerHTML = `<div class="page-prog__row"><span>${ch ? `Раздел ${ch.n} пройден на` : 'Тренажер пройден на'}</span>${pctLabel(pct, 'page-prog__value')}</div>
     <div class="bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="${pct}">${barFill(pct)}</div>
-    <div class="page-prog__row"><span>Упражнений выполнено</span><b class="page-prog__value">${done} из ${exn}</b></div>` +
+    <div class="page-prog__row"><span>Выполнено упражнений</span><b class="page-prog__value">${done} из ${exn}</b></div>` +
     (rows ? `<div class="page-prog__levels" aria-label="Прогресс по уровням">${rows}</div>` : '');
 }

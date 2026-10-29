@@ -10,7 +10,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, interactive-widget=resizes-content">
 <meta name="color-scheme" content="dark light"> <!-- у сайта свои темная и светлая темы: браузер не должен затемнять страницу сам -->
 <title>Работа без интернета — Грамматика онлайн</title>
-<meta name="description" content="Работа без интернета: Офлайн-режим и записи «На слух».">
+<meta name="description" content="Работа без интернета: офлайн-режим и записи «На слух».">
 <!-- для поисковиков и превью ссылок в мессенджерах; в копиях страниц адрес, заголовок и описание свои (make_pages.py) -->
 <link rel="canonical" href="https://iltspe.github.io/grammatika-online/about/offline">
 <meta property="og:type" content="website">
@@ -18,7 +18,7 @@
 <meta property="og:locale" content="ru_RU">
 <meta property="og:url" content="https://iltspe.github.io/grammatika-online/about/offline">
 <meta property="og:title" content="Работа без интернета — Грамматика онлайн">
-<meta property="og:description" content="Работа без интернета: Офлайн-режим и записи «На слух».">
+<meta property="og:description" content="Работа без интернета: офлайн-режим и записи «На слух».">
 <meta property="og:image" content="https://iltspe.github.io/grammatika-online/favicon/og-image.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -82,7 +82,7 @@
       <div class="toc">
         <div class="toc__section">
           <button class="topic-btn topic-btn--overview toc__contents" id="tocContents" type="button"><span>Содержание тренажера</span><span class="arrow arrow--next topic-btn__arrow" aria-hidden="true"><svg class="arrow__icon" aria-hidden="true"><use href="#i-arrow"/></svg></span></button>
-          <span class="toc__label" id="levelsLabel">Уровни сложности <span class="toc__note">Выберите любой — от легкого A1 до тяжелого C2</span></span>
+          <span class="toc__label" id="levelsLabel">Уровни сложности <span class="toc__note">Выберите любой — от простого A1 до сложного C2</span></span>
           <div class="level-chips" id="levelChips" role="group" aria-labelledby="levelsLabel"></div></div>
         <div class="lvl-prog" id="lvlProg" aria-live="polite"></div>
         <label class="search" for="search"><span class="search__label">Поиск темы</span>
@@ -95,24 +95,24 @@
     </div>
     <div class="drawer-backdrop" id="drawerBackdrop"></div>
   </aside>
-  <main class="sheet app__sheet" id="main"><div class="sheet__inner"><div class="crumbs"><button class="crumbs__link" type="button">Информация</button><span class="crumbs__sep" aria-hidden="true"><svg class="arrow__icon" aria-hidden="true"><use href="#i-arrow"></use></svg></span><span>Работа без интернета</span></div><h1 class="sheet__title">Работа без интернета</h1><div class="rule info">
-      <p>Тренажер можно использовать без подключения к интернету: в метро или самолете. Данные автоматически сохраняются на устройстве, благодаря чему контент остается доступным в офлайн-режиме.</p>
+  <main class="sheet app__sheet" id="main"><div class="sheet__inner"><div class="crumbs"><button class="crumbs__link" type="button">Информация</button><span class="crumbs__sep" aria-hidden="true"><svg class="arrow__icon" aria-hidden="true"><use href="#i-arrow"></use></svg></span><span aria-current="page">Работа без интернета</span></div><h1 class="sheet__title">Работа без интернета</h1><div class="rule info">
+      <p>Тренажер можно использовать без подключения к интернету: в метро или самолете. Файлы сайта автоматически сохраняются на устройстве, поэтому тренажер открывается и без интернета.</p>
       <h3>Что сохраняется</h3>
       <ul>
-        <li><b>Основа сайта</b> (около 1,5 МБ) — правила, упражнения, оформление и шрифты автоматически сохраняются при первом посещении. После этого тренажер будет доступен для работы без подключения к интернету.</li>
-        <li><b>Записи «На слух»</b> — сохраняются, только если нажать кнопку «Скачать записи». Без них упражнения «На слух» без интернета озвучиваются голосом браузера (если он есть на устройстве).</li>
+        <li><b>Основа сайта</b> (около 1,7 МБ) — правила, упражнения, оформление и шрифты автоматически сохраняются при первом посещении. После этого тренажер будет доступен для работы без подключения к интернету.</li>
+        <li><b>Записи «На слух»</b> — сохраняются, только если нажать кнопку «Скачать записи». Без них упражнения «На слух» без интернета не озвучиваются: запись не загрузится, и кнопка прослушивания не сработает.</li>
       </ul>
-      <div class="offline"><p class="offline__row">Офлайн-режим доступен только на сайте: в этом браузере или при открытии файла с диска он не работает.</p></div>
+      <div class="offline"><p class="offline__row">Офлайн-режим недоступен: этот браузер его не поддерживает или тренажер открыт из файла на диске.</p></div>
       <h3>Обновления</h3>
-      <p>При наличии интернета всегда загружается последняя версия тренажера, а сохраненные файлы обновляются автоматически (файл прогресса не в счет). Если интернета нет, открывается версия, которая была сохранена при последнем посещении.</p>
+      <p>При наличии интернета всегда загружается последняя версия тренажера, а сохраненные файлы обновляются автоматически. Прогресс при обновлении не меняется. Если интернета нет, открывается версия, которая была сохранена при последнем посещении.</p>
       <h3>Как освободить место</h3>
       <ul>
-        <li><b>Удалить записи</b> — кнопка выше удаляет ТОЛЬКО записи «На слух».</li>
-        <li>Чтобы удалить все файлы сайта, очистите данные сайта в настройках браузера или удалите приложение с рабочего стола.</li>
+        <li><b>Удалить записи</b> — кнопка выше удаляет <b>только</b> записи «На слух».</li>
+        <li>Чтобы удалить все файлы сайта, очистите данные сайта в настройках браузера. На iPhone и iPad у установленного приложения свои файлы, они удаляются вместе с ним — как это сделать, описано на странице <button class="link-btn" type="button" data-go="about-install">«Как установить приложение»</button>.</li>
       </ul>
       <div class="note"><div>
         <p>При очистке данных сайта вместе с файлами удаляются прогресс, «Избранное» и заметки. Перед этим сделайте резервную копию: «Прогресс» → «Резервная копия» → «Сохранить».</p>
-      </div></div></div><nav class="pager" aria-label="Соседние страницы"><button class="pager__btn pager__btn--prev" type="button"><small class="pager__label"><span class="pager__dir"><span class="arrow arrow--prev" aria-hidden="true"><svg class="arrow__icon" aria-hidden="true"><use href="#i-arrow"></use></svg></span> Предыдущая страница</span></small><span>Как сохранить прогресс</span></button><button class="pager__btn pager__btn--next" type="button"><small class="pager__label"><span class="pager__dir">Следующая страница <span class="arrow arrow--next" aria-hidden="true"><svg class="arrow__icon" aria-hidden="true"><use href="#i-arrow"></use></svg></span></span></small><span>Разделы и темы</span></button></nav></div></main>
+      </div></div></div><nav class="pager" aria-label="Соседние страницы"><button class="pager__btn pager__btn--prev" type="button"><small class="pager__label"><span class="pager__dir"><span class="arrow arrow--prev" aria-hidden="true"><svg class="arrow__icon" aria-hidden="true"><use href="#i-arrow"></use></svg></span> Предыдущая страница</span></small><span>Как сохранить прогресс</span></button><button class="pager__btn pager__btn--next" type="button"><small class="pager__label"><span class="pager__dir">Следующая страница <span class="arrow arrow--next" aria-hidden="true"><svg class="arrow__icon" aria-hidden="true"><use href="#i-arrow"></use></svg></span></span></small><span>Как установить приложение</span></button></nav></div></main>
 </div>
 
 <script charset="utf-8" src="js/helpers.js"></script>

@@ -17,17 +17,17 @@ ${T(["Предлог", "Значение", "Пример"], [
   ["<i>opposite</i>", "напротив", "<i><b>opposite</b> the bank</i>"]
 ])}
 ${E([
-  ["<b>in</b> the street / <b>on</b> the street", "на улице (оба варианта: брит. и амер.)"],
+  ["<b>in</b> the street / <b>on</b> the street", "на улице (in — чаще брит., on — амер. и брит.)"],
   ["<b>on</b> the first floor, <b>on</b> the bus, <b>on</b> the left", "на этаже, в автобусе, слева"],
   ["<b>in</b> the picture, <b>in</b> the sky, <b>in</b> a car", "на картине, в небе, в машине"],
   ["<b>at</b> home, <b>at</b> work, <b>at</b> the cinema, <b>at</b> a party", "дома, на работе, в кино, на вечеринке"]
 ])}
 <h3>Above и over</h3>
-<p>Оба предлога значат «над», и часто их можно поменять местами. Но <i>above</i> просто показывает, что один предмет находится выше другого: <i>The picture hangs <b>above</b> the sofa</i> — картина висит над диваном. А <i>over</i> чаще используют, когда что-то накрывает предмет или движется над ним с одной стороны на другую: <i>She put a blanket <b>over</b> the child</i> — она укрыла ребенка одеялом; <i>The plane flew <b>over</b> the city</i> — самолет пролетел над городом.</p>
+<p>Оба предлога значат «над», и часто их можно заменить друг другом. Но <i>above</i> просто показывает, что один предмет находится выше другого: <i>The picture hangs <b>above</b> the sofa</i> — картина висит над диваном. А <i>over</i> чаще используют, когда что-то накрывает предмет или движется над ним с одной стороны на другую: <i>She put a blanket <b>over</b> the child</i> — она укрыла ребенка одеялом; <i>The plane flew <b>over</b> the city</i> — самолет пролетел над городом.</p>
 ${N("Русское «на» не всегда переводится как <i>on</i>. Например, «на концерте» — <i>at the concert</i>. И осторожнее с этажами: британцы считают их иначе. Наш первый этаж у них — <i>the ground floor</i>, а второй — <i>the first floor</i>. В американском английском счет такой же, как у нас.")}`,
   ex: [
     { type: 'gap', task: 'Впишите in, on или at.', items: [
-      ["The cat slept ___ the box all day.", "in"], ["There were two old pictures ___ the wall.", "on"],
+      ["There are six eggs ___ the box.", "in"], ["There were two old pictures ___ the wall.", "on"],
       ["There was a man ___ the door yesterday evening.", "at"], ["My parents were ___ work all day.", "at"],
       ["We live ___ the third floor.", "on"], ["Look at the birds ___ the sky!", "in"],
       ["Every morning I wait for my friend ___ the bus stop.", "at"], ["Her children lived ___ London for five years.", "in"],
@@ -65,7 +65,7 @@ ${T(["Предлог", "С чем", "Пример"], [
   ["<i>for</i>", "в течение (длительность)", "<i><b>for</b> two hours, <b>for</b> a week</i>"],
   ["<i>since</i>", "с (момента)", "<i><b>since</b> 2015, <b>since</b> Monday</i>"],
   ["<i>during</i>", "во время (события)", "<i><b>during</b> the lesson</i>"],
-  ["<i>till / until, by</i>", "до (продолжается) / к (не позже)", "<i>wait <b>till</b> 6; finish <b>by</b> 6</i>"],
+  ["<i>till / until, by</i>", "до (продолжается) / к (не позже)", "<i>sleep <b>till</b> noon; come back <b>by</b> 10</i>"],
   ["<i>from … to</i>", "с … до", "<i><b>from</b> 9 <b>to</b> 5</i>"]
 ])}
 ${N("Если перед словом времени стоит <i>this, next, last</i> или <i>every</i>, предлог не нужен: говорят <i>next week, last Monday, every day</i>. Вариант <i>on next Monday</i> будет ошибкой.")}
@@ -76,15 +76,15 @@ ${E([
   ["We'll meet again <b>in</b> two weeks.", "Мы снова встретимся через две недели."]
 ])}
 <h3>During</h3>
-<p><i>For</i> и <i>since</i> употребляются так же, как в Present Perfect (тема 2.7). А <i>during</i> отвечает на вопрос «когда?» и ставится перед названием события, а не перед числом часов или дней: <i>during the lesson</i> — во время урока, но <i>for an hour</i> — в течение часа.</p>
+<p><i>For</i> и <i>since</i> употребляются так же, как в Present Perfect (тема 2.8). А <i>during</i> отвечает на вопрос «когда?» и ставится перед названием события, а не перед числом часов или дней: <i>during the lesson</i> — во время урока, но <i>for an hour</i> — в течение часа.</p>
 ${E([
   ["She fell asleep <b>during</b> the film.", "Она уснула во время фильма."]
 ])}
 <h3>Till / until и by</h3>
-<p>Оба предлога переводятся как «до», но смысл у них разный. <i>Till</i> и <i>until</i> (это одно и то же, <i>till</i> разговорнее) говорят, что действие продолжается вплоть до этого момента, а потом прекращается: <i>I'll wait <b>till</b> six</i> — я буду ждать до шести (и все это время буду ждать). А <i>by</i> (как в теме 2.13) говорит, что действие должно закончиться к этому сроку, а не длиться до него: <i>Finish the work <b>by</b> six</i> — закончите работу к шести.</p>
+<p>Оба предлога переводятся как «до», но смысл у них разный. <i>Till</i> и <i>until</i> (это одно и то же, <i>till</i> разговорнее) говорят, что действие продолжается вплоть до этого момента, а потом прекращается: <i>I'll wait <b>till</b> six</i> — я буду ждать до шести (а потом перестану). А <i>by</i> (как в теме 2.14) говорит, что действие должно закончиться к этому сроку, а не длиться до него: <i>Finish the work <b>by</b> six</i> — закончите работу к шести.</p>
 ${E([
-  ["The shop is open <b>until</b> 9 p.m.", "Магазин открыт до девяти вечера."],
-  ["Please send me the report <b>by</b> Friday.", "Пожалуйста, пришлите мне отчет до пятницы (не позже пятницы)."]
+  ["The shop is open <b>until</b> 9 pm.", "Магазин открыт до девяти вечера."],
+  ["Please send me the report <b>by</b> Friday.", "Пожалуйста, пришлите мне отчет к пятнице (не позже пятницы)."]
 ])}`,
   ex: [
     { type: 'gap', task: 'Впишите at, on, in или «-», если предлог не нужен.', items: [
@@ -92,7 +92,7 @@ ${E([
       ["We had a test ___ Monday.", "on"], ["We went skiing ___ winter.", "in"],
       ["What did you do ___ the weekend?", "at|on"], ["My sister's birthday is ___ 15 March.", "on"],
       ["I'm going to read ___ the evening.", "in"], ["I'll see you ___ next week.", "-|0"],
-      ["The shops are closed ___ Christmas Day.", "on"], ["Owls hunt ___ night.", "at"],
+      ["The shops are closed ___ Sundays.", "on"], ["Owls hunt ___ night.", "at"],
       ["I'll be ready ___ five minutes.", "in"], ["We met ___ last Friday.", "-|0"]
     ]},
     { type: 'choice', task: 'Выберите предлог.', items: [
@@ -167,7 +167,7 @@ ${T(["Глагол + предлог", "Прилагательное + предл
   ["<i>look <b>at</b></i> — смотреть на", "<i>interested <b>in</b></i> — интересоваться"],
   ["<i>look <b>for</b></i> — искать", "<i>proud <b>of</b></i> — гордиться"],
   ["<i>wait <b>for</b></i> — ждать", "<i>fond <b>of</b></i> — любить"],
-  ["<i>think <b>of / about</b></i> — думать о", "<i>angry <b>with</b></i> кого-то / <i><b>about</b></i> что-то"],
+  ["<i>think <b>of / about</b></i> — думать о", "<i>angry <b>with</b></i> кого-то / <i><b>about</b></i> что-то — сердиться на кого-то / из-за чего-то"],
   ["<i>agree <b>with</b></i> — соглашаться с", "<i>famous <b>for</b></i> — знаменитый чем"],
   ["<i>pay <b>for</b></i> — платить за", "<i>different <b>from</b></i> — отличный от"],
   ["<i>laugh <b>at</b></i> — смеяться над", "<i>tired <b>of</b></i> — уставший от"],
@@ -175,7 +175,7 @@ ${T(["Глагол + предлог", "Прилагательное + предл
 ])}
 ${N("Бывает и наоборот: в русском предлог есть, а в английском его нет. Например, <i>enter the room</i> — войти <b>в</b> комнату, <i>answer the question</i> — ответить <b>на</b> вопрос. А «обсудить план» — это просто <i>discuss the plan</i>, без <i>about</i>.")}
 <h3>with / by, to / of</h3>
-<p>В английском нет падежей, как в русском, и их роль выполняют предлоги. Например, русский творительный падеж («написал карандашом», «написан Толстым») переводится то через <i>with</i>, то через <i>by</i> — в зависимости от смысла. А дательный падеж («дай сестре») — обычно через <i>to</i>.</p>
+<p>В английском почти нет падежей (кроме притяжательного, тема 4.2), и их роль выполняют предлоги. Например, русский творительный падеж («написал карандашом», «написан Толстым») переводится то через <i>with</i>, то через <i>by</i> — в зависимости от смысла. А дательный падеж («дай сестре») — обычно через <i>to</i>.</p>
 ${T(["Предлог", "Значение", "Пример"], [
   ["<i>with</i>", "инструмент: чем", "<i>write <b>with</b> a pen, cut <b>with</b> a knife</i>"],
   ["<i>by</i>", "исполнитель, способ, транспорт", "<i>a novel <b>by</b> Tolstoy, <b>by</b> bus, <b>by</b> post, <b>by</b> hand</i>"],
@@ -184,7 +184,7 @@ ${T(["Предлог", "Значение", "Пример"], [
 ])}
 <p>Разница между <i>with</i> и <i>by</i> такая: <i>with</i> называет предмет, которым что-то делают (<i>write with a pen</i> — писать ручкой), а <i>by</i> — того, кто это сделал, или способ: <i>a novel by Tolstoy</i> — роман Толстого, то есть написанный Толстым. Чаще всего <i>by</i> в таком значении встречается в страдательном залоге, когда действие совершается над предметом, а исполнителя называют в конце: <i>The book was written <b>by</b> Tolstoy</i> — книга написана Толстым. Страдательный залог подробно разобран в разделе 10.</p>
 <h3>Think of и think about</h3>
-<p>В первой таблице у <i>think</i> два предлога, и смысл у них немного разный. <i>Think about</i> — думать о чем-то долго, обдумывать: <i>I'm thinking <b>about</b> my new job</i> — я думаю о новой работе. <i>Think of</i> — вспомнить, прийти в голову или иметь мнение: <i>I can't think <b>of</b> his name</i> — не могу вспомнить, как его зовут; <i>What do you think <b>of</b> the film?</i> — что ты думаешь о фильме? (как он тебе?). Часто подходят оба предлога, но в выражениях «придумать» и «вспомнить» нужен именно <i>of</i>.</p>`,
+<p>В первой таблице у <i>think</i> два предлога, и смысл у них немного разный. <i>Think about</i> — думать о чем-то долго, обдумывать: <i>I'm thinking <b>about</b> my new job</i> — я думаю о новой работе. <i>Think of</i> — вспомнить, придумать (прийти в голову) или иметь мнение: <i>I can't think <b>of</b> his name</i> — не могу вспомнить, как его зовут; <i>What do you think <b>of</b> the film?</i> — что ты думаешь о фильме? (как он тебе?). В значении «иметь мнение» подходят оба предлога: <i>What do you think <b>of</b> / <b>about</b> his idea?</i> — что ты думаешь о его идее? А в значениях «придумать» и «вспомнить» — только <i>of</i>.</p>`,
   ex: [
     { type: 'gap', task: 'Впишите предлог.', items: [
       ["It depends ___ the weather.", "on"], ["Nobody was listening ___ the teacher.", "to"],
@@ -212,7 +212,7 @@ ${T(["Предлог", "Значение", "Пример"], [
       ["We went to the seaside ___ train.", "by"], ["She cut the cake ___ a big knife.", "with"],
       ["I gave my old books ___ my cousins.", "to"], ["Moscow is the capital ___ Russia.", "of"],
       ["Bring me a cup ___ coffee, please.", "of"], ["The teacher explained the rule ___ us again.", "to"],
-      ["We sent the documents ___ post.", "by"], ["The top ___ the mountain is white ___ snow.", ["of", "with"]]
+      ["We sent the documents ___ post.", "by"], ["Open the door ___ the kitchen ___ this key.", ["of", "with"]]
     ]},
     { type: 'listen', at: 2, task: 'Прослушайте предложение и соберите его из слов.', items: [
       ["My sister was afraid of dogs, but she was fond of cats.", "Моя сестра боялась собак, но любила кошек."],

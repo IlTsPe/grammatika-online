@@ -6,7 +6,7 @@
 const METRIKA_ID = 113790915; /* номер счетчика из metrika.yandex.ru; 0 — счетчик выключен */
 const METRIKA_HOST = 'iltspe.github.io';
 const METRIKA_SITE = METRIKA_ID > 0 && location.hostname === METRIKA_HOST;
-const COOKIE_POLICY = 1; /* версия страницы «Файлы cookie»: изменился состав cookie или их цели — увеличить, согласие спросится заново */
+const COOKIE_POLICY = 2; /* версия страницы «Файлы cookie»: изменился состав cookie или их цели — увеличить, согласие спросится заново */
 const CONSENT_DAYS = 365;
 let metrikaOn = false;
 

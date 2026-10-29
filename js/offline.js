@@ -14,7 +14,7 @@ if (OFFLINE_OK) addEventListener('load', () => navigator.serviceWorker.register(
 /* блок в разметке страницы (ABOUT, id 'offline'): заполняется здесь и перерисовывается при каждом изменении */
 async function mountOffline(box) {
   if (!OFFLINE_OK) {
-    box.innerHTML = '<p class="offline__row">Офлайн-режим доступен только на сайте: в этом браузере или при открытии файла с диска он не работает.</p>';
+    box.innerHTML = '<p class="offline__row">Офлайн-режим недоступен: этот браузер его не поддерживает или тренажер открыт из файла на диске.</p>';
     return;
   }
   const site = await caches.open(SITE_CACHE).then(c => c.keys()).then(k => k.length).catch(() => 0);
@@ -41,7 +41,7 @@ async function mountOffline(box) {
   }
   rows.push(`<div class="offline__row"><span class="offline__name">Записи «На слух»</span><span class="offline__state${have === files.length && have && !audioJob ? ' offline__state--ok' : ''}${audioJob ? ' offline__state--job' : ''}">${state}</span></div>`);
   if (audioJob) rows.push(`<span class="bar offline__bar"><span class="bar__fill" style="width: ${jobPercent()}%"></span></span>`);
-  if (audioFailed && !audioJob) rows.push('<p class="offline__error">Не удалось скачать записи: проверьте подключение к интернету и нажмите «Докачать».</p>');
+  if (audioFailed && !audioJob) rows.push('<p class="offline__error">Не удалось скачать записи: проверьте подключение к интернету и нажмите кнопку еще раз.</p>');
   rows.push(`<div class="offline__tools">${btns}</div>`);
   if (usage) rows.push(`<p class="offline__usage">Сейчас сайт занимает на устройстве ${mb(usage)}.</p>`);
   box.innerHTML = rows.join('');

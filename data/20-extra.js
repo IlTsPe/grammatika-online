@@ -6,10 +6,10 @@ topics: [
   rule: `
 <p>Относительное придаточное — это часть предложения, которая уточняет, о ком или о чем речь, как русское «который»: <i>the woman <b>who</b> lives next door</i> — женщина, которая живет по соседству. Слово, которое его вводит, зависит от того, о чем говорим: о человеке — <i>who</i>, о предмете — <i>which</i>, о месте — <i>where</i>.</p>
 ${T(["Слово", "О чем", "Пример"], [
-  ["<i>who</i>", "люди", "<i>The woman <b>who</b> lives next door…</i> — Женщина, которая живет по соседству…"],
+  ["<i>who</i>", "люди", "<i>The doctor <b>who</b> helped me…</i> — Врач, который мне помог…"],
   ["<i>which</i>", "предметы, животные", "<i>The book <b>which</b> I bought…</i> — Книга, которую я купил…"],
   ["<i>that</i>", "люди и предметы (только в определительных)", "<i>The car <b>that</b> he drives…</i> — Машина, на которой он ездит…"],
-  ["<i>whose</i>", "чей", "<i>The man <b>whose</b> car was stolen…</i> — Человек, у которого угнали машину…"],
+  ["<i>whose</i>", "принадлежность (чей)", "<i>The man <b>whose</b> car was stolen…</i> — Человек, у которого угнали машину…"],
   ["<i>where</i>", "место", "<i>The town <b>where</b> I was born…</i> — Город, где я родился…"],
   ["<i>when</i>", "время", "<i>The day <b>when</b> we met…</i> — День, когда мы познакомились…"]
 ])}
@@ -17,8 +17,8 @@ ${T(["Слово", "О чем", "Пример"], [
 <p>Придаточные бывают двух видов, и от этого зависят запятые и выбор слова. Определительное придаточное нужно, чтобы понять, о ком именно идет речь: если его убрать, смысл потеряется. Например, в <i>The man who called you is my boss</i> без придаточного неясно, какой человек имеется в виду. Такие придаточные запятыми не выделяют, и в них можно использовать <i>that</i>. Описательное придаточное только добавляет сведения о том, кто и так понятен: в <i>My brother, who lives in Kazan, is a teacher</i> ясно, о каком брате речь, а то, что он живет в Казани, — просто дополнительная информация. Такие придаточные выделяют запятыми, и <i>that</i> в них не ставят.</p>
 <p>Кроме того, в определительном придаточном слово <i>who, which</i> или <i>that</i> можно опустить, если оно не подлежащее, а дополнение, то есть если после него идет свое подлежащее: <i>the book (that) <b>you</b> gave me</i>. А в <i>the man who called you</i> слово <i>who</i> — подлежащее (кто позвонил?), поэтому опускать его нельзя.</p>
 ${E([
-  ["The man <b>who called</b> you is my boss.", "Человек, который тебе звонил, — мой начальник. (определительное: без него непонятно, о ком речь; без запятых)"],
-  ["My brother, <b>who lives in Kazan</b>, is a teacher.", "Мой брат, который живет в Казани, — учитель. (описательное: дополнительная информация; с запятыми, that нельзя)"],
+  ["The girl <b>who sits</b> next to me is from Minsk.", "Девочка, которая сидит рядом со мной, из Минска. (определительное: без него непонятно, о ком речь; без запятых)"],
+  ["Our teacher, <b>who is from London</b>, speaks Russian well.", "Наш учитель, который приехал из Лондона, хорошо говорит по-русски. (описательное: дополнительная информация; с запятыми, that нельзя)"],
   ["The book (<b>that</b>) you gave me was great.", "Книга, которую ты мне подарил, была отличная. (that — дополнение, его можно опустить)"]
 ])}`,
   ex: [
@@ -30,13 +30,13 @@ ${E([
       ["Is this the shop ___ you bought your coat?", "where"], ["The girl ___ mother is a singer is in my class.", "whose"]
     ]},
     { type: 'translate', task: 'Переведите на английский.', items: [
-      ["Женщина, которая живет по соседству, — врач.", "The woman who lives next door is a doctor.|The woman that lives next door is a doctor."],
-      ["Это дом, где я родился.", "This is the house where I was born.|This is the house in which I was born.|This is the house I was born in.|This is the house that I was born in.|This is the house which I was born in."],
-      ["Это человек, у которого украли машину.", "This is the man whose car was stolen.|That is the man whose car was stolen."],
-      ["Книга, которую ты мне дал, очень интересная.", "The book you gave me is very interesting.|The book that you gave me is very interesting.|The book which you gave me is very interesting."]
+      ["Мужчина, который нам помог, — мой сосед.", "The man who helped us is my neighbour.|The man that helped us is my neighbour."],
+      ["Это кафе, где мы впервые встретились.", "This is the cafe where we first met.|This is the café where we first met.|This is the cafe where we met for the first time.|This is the café where we met for the first time."],
+      ["Я знаю женщину, чья дочь стала актрисой.", "I know a woman whose daughter became an actress.|I know the woman whose daughter became an actress.|I know a woman whose daughter has become an actress."],
+      ["Платье, которое она купила, очень красивое.", "The dress she bought is very beautiful.|The dress that she bought is very beautiful.|The dress which she bought is very beautiful.|The dress she bought is very pretty.|The dress that she bought is very pretty.|The dress which she bought is very pretty."]
     ]},
     { type: 'listen', at: 2, task: 'Прослушайте предложение и соберите его из слов.', items: [
-      ["The woman who lives next door is a famous singer.", "Женщина, которая живет по соседству, известная певица."],
+      ["The man who repaired our car lives in this street.", "Человек, который починил нашу машину, живет на этой улице."],
       ["This is the town where my grandparents were born.", "Это город, где родились мои бабушка и дедушка."],
       ["I have a friend whose father works at the zoo.", "У меня есть друг, чей отец работает в зоопарке."]
     ]}
@@ -44,17 +44,17 @@ ${E([
 
 { id: 'x-emphatic', level: 'B2', title: 'Эмфатические конструкции', sub: 'I do like it · He did come',
   rule: `
-<p>В обычное утвердительное предложение можно добавить вспомогательный глагол <i>do / does / did</i>, чтобы усилить сказанное: <i>I like it</i> — мне нравится, а <i>I <b>do</b> like it</i> — мне правда нравится. По-русски такое усиление передают словами «правда», «действительно», «все-таки», «же», «обязательно».</p>
+<p>В обычное утвердительное предложение можно добавить вспомогательный глагол <i>do / does / did</i>, чтобы усилить сказанное: <i>I like it</i> — мне нравится, <i>I <b>do</b> like it</i> — мне правда нравится. По-русски такое усиление передают словами «правда», «действительно», «все-таки», «же», «обязательно».</p>
 ${F("<b>do / does / did</b> + V")}
 <p>После <i>do / does / did</i> глагол стоит в начальной форме, как в вопросе: <i>She <b>does</b> know</i>, а не <i>does knows</i>; <i>He <b>did</b> come</i>, а не <i>did came</i>. В устной речи на вспомогательный глагол всегда падает ударение — именно оно и создает усиление.</p>
 ${T(["Когда говорят", "Пример"], [
   ["возражают собеседнику", "<i>— You don't like jazz. — I <b>do</b> like jazz!</i> — Ты не любишь джаз. — Да люблю я джаз!"],
-  ["говорят, что вышло вопреки ожиданию", "<i>I thought he wouldn't come, but he <b>did</b> come.</i> — Я думал, он не придет, но он все-таки пришел."],
+  ["что-то вышло вопреки ожиданию", "<i>I thought he wouldn't come, but he <b>did</b> come.</i> — Я думал, он не придет, но он все-таки пришел."],
   ["противопоставляют", "<i>I don't eat meat, but I <b>do</b> eat fish.</i> — Мясо я не ем, а вот рыбу ем."],
   ["настойчиво и тепло приглашают", "<i><b>Do</b> sit down!</i> — Садитесь же! <i><b>Do</b> come again!</i> — Обязательно приходите еще!"]
 ])}
 <p>Так усиливают только Present Simple и Past Simple. Если в предложении уже есть <i>be</i>, <i>have</i> в перфектном времени или модальный глагол, <i>do</i> не добавляют, а усиливают голосом — ударением на этом глаголе: <i>I <b>am</b> ready!</i> — я правда готов! На письме такое ударение обычно выделяют курсивом. Если же <i>have</i> — смысловой глагол или часть <i>have to</i>, <i>do</i> нужен: <i>I <b>do</b> have time</i>, <i>I <b>do</b> have to go</i>. Исключение — повелительное наклонение: в нем <i>do</i> можно поставить и перед <i>be</i>: <i><b>Do</b> be careful!</i> — будь же осторожен!</p>
-${N("Вспомогательный глагол в таком предложении не переводят отдельным словом: смысл «правда, все-таки» передает ударение на нем.")}`,
+${N("Сам вспомогательный глагол по-русски отдельным словом не переводят: <i>I do like it</i> — это не «я делаю нравится», а «мне правда нравится».")}`,
   ex: [
     { type: 'gap', task: 'Усильте утверждение: впишите do, does или did и глагол из скобок в нужной форме.', items: [
       ["— You don't like my soup. — I ___ (like) it! It's delicious.", "do like"],
@@ -90,7 +90,7 @@ ${N("Вспомогательный глагол в таком предложе�
 
 { id: 'x-inversion', level: 'C1', title: 'Инверсия', sub: 'Never have I seen…',
   rule: `
-<p>Если предложение начинается с отрицательного или ограничивающего слова — <i>never, rarely, hardly, not only</i>, — порядок слов меняется, как в вопросе: сначала идет <b>вспомогательный глагол</b>, потом <b>подлежащее</b>: <i>Never <b>have I</b> seen such a sunset</i>. Так говорят, чтобы подчеркнуть мысль, и это звучит книжно.</p>
+<p>Если предложение начинается с отрицательного или ограничивающего слова — <i>never, rarely, hardly, not only</i>, — порядок слов меняется, как в вопросе: сначала идет <b>вспомогательный глагол</b>, потом <b>подлежащее</b>: <i>Seldom <b>have I</b> heard such music</i> — редко я слышал такую музыку. Так говорят, чтобы подчеркнуть мысль, и это звучит книжно.</p>
 ${T(["Начало", "Значение", "Пример"], [
   ["<i>Never / Rarely / Seldom</i>", "никогда / редко", "<i>Never <b>have I</b> seen such a sunset.</i> — Никогда я не видел такого заката."],
   ["<i>Hardly / Scarcely … when</i>", "едва… как", "<i>Hardly <b>had she</b> sat down when the phone rang.</i> — Едва она села, как зазвонил телефон."],
@@ -104,23 +104,23 @@ ${T(["Начало", "Значение", "Пример"], [
 <h3>Hardly… when и No sooner… than</h3>
 <p>Эти две конструкции значат одно и то же: одно действие произошло сразу после другого — «едва… как», «не успел… как». Первое действие случилось чуть раньше, поэтому в части с инверсией стоит Past Perfect (<i>had she sat down</i>), а во второй части — обычный Past Simple (<i>the phone rang</i>). Запомните пары слов: <i>hardly</i> и <i>scarcely</i> идут вместе с <i>when</i>, а <i>no sooner</i> — с <i>than</i>, потому что <i>sooner</i> — сравнительная степень («раньше»).</p>
 <h3>Little и under no circumstances</h3>
-<p>В начале предложения <i>little</i> значит не «мало», а «совсем не»: <i>Little did they know</i> — они совсем не знали, даже не подозревали. Обычно так говорят, когда человек не догадывается о том, что случится потом. А <i>under no circumstances</i> — ни при каких обстоятельствах — строгий запрет, его часто можно увидеть в инструкциях. Отрицание уже есть в самом выражении, поэтому <i>not</i> после него не ставят.</p>
+<p>В начале предложения <i>little</i> значит не «мало», а «совсем не»: <i>Little did they know</i> — они совсем не знали, даже не подозревали. Обычно так говорят, когда человек не догадывается о том, что случится потом. А <i>under no circumstances</i> (ни при каких обстоятельствах) выражает строгий запрет, его часто можно увидеть в инструкциях. Отрицание уже есть в самом выражении, поэтому <i>not</i> после него не ставят.</p>
 ${N("Если в предложении Present или Past Simple, для инверсии нужен вспомогательный <i>do / does / did</i>: <i>Rarely <b>do</b> we go out</i>. А в конструкциях <i>Only when…</i> и <i>Not until…</i> порядок слов меняется не сразу, а во <b>второй, главной</b> части: <i>Only when I got home <b>did I</b> realise…</i>")}`,
   ex: [
     { type: 'gap', task: 'Впишите пропущенное слово.', items: [
-      ["Never ___ I seen such a beautiful sunset.", "have"], ["No sooner had we arrived ___ it started to rain.", "than"],
-      ["Hardly had she sat down ___ the phone rang.", "when"], ["Not only ___ he late, but he also forgot the tickets.", "was"],
-      ["Only when I got home ___ I realise I had lost my keys.", "did"], ["Little ___ they know what was waiting for them.", "did"],
-      ["Under no circumstances ___ you open this door.", "should|must"], ["Rarely ___ we go out these days.", "do"]
+      ["Never ___ I seen such a beautiful sunset.", "have"], ["No sooner had I opened the door ___ the cat ran out.", "than"],
+      ["Hardly had the lesson begun ___ the fire alarm went off.", "when"], ["Not only ___ she clever, but she is also very kind.", "is"],
+      ["Only when the plane landed ___ I feel safe.", "did"], ["Little ___ we know that we would never see him again.", "did"],
+      ["Under no circumstances ___ you open this door.", "should|must|can|may"], ["Rarely ___ we go out these days.", "do"]
     ]},
     { type: 'choice', task: 'Выберите правильный вариант.', items: [
       ["Not until the next morning ___ the truth.", ["did he learn", "he learned", "he did learn"]], ["Seldom ___ such talent in one so young.", ["have I seen", "I have seen", "I saw"]],
       ["Scarcely ___ the house when it began to snow.", ["had we left", "we had left", "did we leave"]], ["Only after the meeting ___ how serious the problem was.", ["did they understand", "they understood", "understood they"]]
     ]},
     { type: 'listen', at: 2, task: 'Прослушайте предложение и соберите его из слов.', items: [
-      ["Never have I seen such a beautiful sunset.", "Никогда я не видел такого красивого заката."],
+      ["Never have I eaten such delicious pizza.", "Никогда я не ел такой вкусной пиццы."],
       ["Not only did he forget my birthday, but he was also late.", "Он не только забыл о моем дне рождения, но еще и опоздал."],
-      ["Hardly had we sat down when the phone rang.", "Едва мы сели, как зазвонил телефон."]
+      ["No sooner had the film started than the lights went out.", "Не успел начаться фильм, как погас свет."]
     ]}
   ]},
 
@@ -130,14 +130,14 @@ ${N("Если в предложении Present или Past Simple, для ин�
 ${T(["Выражение", "Форма", "Пример"], [
   ["<i>It's (high) time</i>", "<i>+ Past Simple</i>", "<i>It's high time you <b>found</b> a job.</i> — Тебе давно пора найти работу."],
   ["<i>would rather</i> (о себе)", "<i>+ V</i>", "<i>I'd rather <b>take</b> a taxi.</i> — Я бы лучше поехал на такси."],
-  ["<i>would rather</i> (о другом)", "<i>+ Past Simple</i>", "<i>I'd rather you <b>didn't smoke</b> here.</i> — Я бы предпочел, чтобы вы здесь не курили."],
-  ["<i>would rather</i> (о прошлом)", "<i>+ Past Perfect</i>", "<i>I'd rather you <b>had told</b> me.</i> — Лучше бы ты мне сказал."],
+  ["<i>would rather</i> (о другом, о настоящем)", "<i>+ Past Simple</i>", "<i>I'd rather you <b>didn't smoke</b> here.</i> — Я бы предпочел, чтобы вы здесь не курили."],
+  ["<i>would rather</i> (о другом, о прошлом)", "<i>+ Past Perfect</i>", "<i>I'd rather you <b>had told</b> me.</i> — Лучше бы ты мне сказал."],
   ["<i>as if / as though</i>", "<i>+ Past (нереально)</i>", "<i>He talks as if he <b>knew</b> everything.</i> — Он говорит так, как будто все знает."]
 ])}
 <h3>Как понимать эти выражения</h3>
-<p><i>It's time</i> значит «пора», а со словом <i>high</i> — давно пора, то есть с упреком: это уже надо было сделать. Если речь идет о самом себе или вообще, без указания лица, проще сказать <i>It's time to go</i>; если же назван тот, кто должен действовать, после него идет Past Simple: <i>It's time <b>we went</b></i>.</p>
+<p><i>It's time</i> значит «пора», а со словом <i>high</i> — «давно пора», то есть с упреком: это уже надо было сделать. Если речь идет о самом себе или вообще, без указания лица, проще сказать <i>It's time to go</i>; если же назван тот, кто должен действовать, после него идет Past Simple: <i>It's time <b>we went</b></i>.</p>
 <p><i>Would rather</i> (сокращенно <i>'d rather</i>) значит «лучше бы, предпочел бы». Если человек говорит о своем собственном желании, после <i>would rather</i> идет глагол без <i>to</i>, как в теме 13.1. Если он хочет, чтобы что-то сделал другой человек, этого человека называют, а глагол ставят в Past Simple, хотя речь о настоящем. А если жалеют о прошлом, о том, что уже не изменить, нужен Past Perfect. Это та же логика, что в предложениях с <i>I wish</i> (тема 11.5).</p>
-<p><i>As if</i> и <i>as though</i> значат «как будто». Past после них показывает, что сравнение не соответствует действительности: на самом деле он знает не все. В книжной речи после <i>as if</i> часто говорят <i>were</i> для всех лиц: <i>She behaves as if she <b>were</b> the boss</i> — она ведет себя так, будто она здесь начальник.</p>
+<p><i>As if</i> и <i>as though</i> значат «как будто». Past после них показывает, что сравнение не соответствует действительности: в примере <i>He talks as if he knew everything</i> на самом деле он знает не все. В книжной речи после <i>as if</i> часто говорят <i>were</i> для всех лиц: <i>She behaves as if she <b>were</b> the boss</i> — она ведет себя так, будто она здесь начальник.</p>
 <h3>Сослагательное после глаголов требования</h3>
 <p>После глаголов <i>suggest, insist, recommend, demand</i> и выражений <i>it is essential that</i>, <i>it is vital that</i> глагол стоит в начальной форме — без <i>-s</i>, даже с <i>he</i> и <i>she</i>. В британском английском так же часто говорят с <i>should</i>: <i>insisted that he <b>should stay</b></i>. Такую форму называют сослагательным наклонением: она показывает, что речь идет не о факте, а о том, что кто-то требует, советует или считает нужным. Это похоже на русское «чтобы»: «настоял, чтобы он лежал», а не «настоял, что он лежит». Отрицание ставят прямо перед глаголом, без <i>do</i>: <i>He suggested that we <b>not go</b></i> — он предложил, чтобы мы не ходили.</p>
 ${E([
@@ -152,14 +152,14 @@ ${E([
       ["It is essential that every student ___ (attend) the meeting.", "attend|should attend"], ["It's time we ___ (go) home.", "went"]
     ]},
     { type: 'translate', task: 'Переведите на английский.', items: [
-      ["Тебе давно пора найти работу.", "It is high time you found a job.|It is time you found a job.|It is about time you found a job.|It is high time you got a job.|It is about time you got a job."],
-      ["Я бы предпочел, чтобы ты здесь не курил.", "I would rather you didn't smoke here.|I would rather you didn't smoke in here."],
-      ["Он говорит так, будто все знает.", "He talks as if he knew everything.|He speaks as if he knew everything.|He talks as though he knew everything.|He speaks as though he knew everything."]
+      ["Тебе давно пора подстричься.", "It is high time you had your hair cut.|It is high time you got your hair cut.|It is high time you had a haircut.|It is high time you got a haircut.|It is about time you had your hair cut.|It is about time you got your hair cut.|It is time you had your hair cut."],
+      ["Я бы предпочел, чтобы ты пришел завтра.", "I would rather you came tomorrow.|I would prefer you to come tomorrow.|I would prefer it if you came tomorrow."],
+      ["Она разговаривает со мной так, будто я ребенок.", "She talks to me as if I were a child.|She talks to me as if I was a child.|She talks to me as though I were a child.|She talks to me as though I was a child.|She speaks to me as if I were a child.|She speaks to me as if I was a child."]
     ]},
     { type: 'listen', at: 2, task: 'Прослушайте предложение и соберите его из слов.', items: [
-      ["It's time we went home. It's getting dark.", "Нам пора домой: темнеет."],
+      ["It's high time the children went to bed.", "Детям давно пора спать."],
       ["I'd rather you didn't tell anyone about it.", "Я бы предпочел, чтобы ты никому об этом не рассказывал."],
-      ["He talks as if he knew everything about everything.", "Он говорит так, будто знает обо всем на свете."]
+      ["She spends money as if she were a millionaire.", "Она тратит деньги так, будто она миллионерша."]
     ]}
   ]},
 
@@ -175,23 +175,23 @@ ${T(["Конструкция", "Пример", "Что выделяем"], [
 ])}
 <h3>Как строить такие предложения</h3>
 <p>В конструкции <i>It is / was … that / who …</i> то, что хотят выделить, ставят между <i>it was</i> и <i>that</i>, а остальное предложение идет после. Если выделяют человека, можно сказать <i>who</i> или <i>that</i>; если что-то другое — время, место, предмет, — только <i>that</i>: <i>It was <b>in Paris</b> that they met</i> — именно в Париже они познакомились. Время глагола <i>be</i> зависит от того, о каком времени речь: о прошлом — <i>it was</i>, о настоящем — <i>it is</i>.</p>
-<p>В конструкции с <i>What…</i> сначала говорят, о чем пойдет речь, а самое важное оставляют на конец, после <i>is</i> или <i>was</i>. Когда выделяют целое действие, используют <i>What … did was</i>, а затем называют действие начальной формой глагола; частицу <i>to</i> перед ним можно поставить, а можно опустить. Вариант с <i>All … is</i> устроен так же, но значит «единственное, что; всего лишь»: человек хочет только чаю и ничего больше.</p>
+<p>В конструкции с <i>What…</i> сначала говорят, о чем пойдет речь, а самое важное оставляют на конец, после <i>is</i> или <i>was</i>. Когда выделяют целое действие, используют <i>What … did was</i>, а затем называют действие начальной формой глагола; частицу <i>to</i> перед ним можно поставить, а можно опустить. Вариант с <i>All … is</i> устроен так же, но значит «единственное, что; всего лишь»: в <i>All I want is a cup of tea</i> человек хочет только чаю и ничего больше.</p>
 ${N("В конструкции с <i>What…</i> глагол обычно стоит в единственном числе, даже если дальше идет множественное: <i>What we need <b>is</b> more people</i>.")}`,
   ex: [
-    { type: 'gap', task: 'Впишите пропущенное слово или «-», если оно не нужно.', items: [
-      ["It was Tom ___ broke the window, not me.", "who|that"], ["___ I need is a long holiday.", "what"],
+    { type: 'gap', task: 'Впишите пропущенное слово.', items: [
+      ["It was Tom ___ broke the window, not me.", "who|that"], ["___ I need is a long holiday.", "what|all"],
       ["It was in 2010 ___ we first met.", "that"], ["All I want ___ a cup of tea.", "is"],
-      ["What he did ___ to call the police.", "was"], ["The reason ___ I called is to apologise.", "why|that|-|0"],
-      ["It ___ not until midnight that she came home.", "was"], ["What surprised me ___ his reaction.", "was"]
+      ["What he did ___ to call the police.", "was"], ["It was my mother ___ taught me to cook.", "who|that"],
+      ["What I don't understand ___ why he left.", "is"], ["What surprised me ___ his reaction.", "was"]
     ]},
     { type: 'translate', task: 'Переведите на английский.', items: [
-      ["Именно Том разбил окно.", "It was Tom who broke the window.|It was Tom that broke the window."],
-      ["Что мне нужно, так это отпуск.", "What I need is a holiday.|What I need is a vacation."],
-      ["Все, чего я хочу, — это чашка чая.", "All I want is a cup of tea."],
-      ["Мы познакомились именно в 2010 году.", "It was in 2010 that we met.|It was in 2010 that we first met."]
+      ["Именно Анна нашла мой телефон.", "It was Anna who found my phone.|It was Anna that found my phone."],
+      ["Что мне нравится, так это его улыбка.", "What I like is his smile."],
+      ["Все, что тебе нужно, — это немного отдохнуть.", "All you need is some rest.|All you need is a little rest.|All you need is a rest."],
+      ["Именно в Лондоне я выучил английский.", "It was in London that I learnt English.|It was in London that I learned English."]
     ]},
     { type: 'listen', at: 2, task: 'Прослушайте предложение и соберите его из слов.', items: [
-      ["It was my brother who broke the window, not me.", "Это мой брат разбил окно, а не я."],
+      ["It was my sister who told me the news.", "Это сестра рассказала мне новость."],
       ["What I need now is a cup of hot tea.", "Что мне сейчас нужно, так это чашка горячего чая."],
       ["It was in Rome that they first met.", "Именно в Риме они впервые встретились."]
     ]}
@@ -204,24 +204,25 @@ ${T(["Обычная форма", "С инверсией"], [
   ["<i>If I had known…</i>", "<i><b>Had I known</b>, I would have helped.</i> — Если бы я знал, я бы помог."],
   ["<i>If you should need help…</i>", "<i><b>Should you need</b> any help, call me.</i> — Если вдруг понадобится помощь, звоните мне."],
   ["<i>If the government were to raise taxes…</i>", "<i><b>Were the government to</b> raise taxes, there would be protests.</i> — Если бы правительство повысило налоги, начались бы протесты."],
+  ["<i>If I were in your place…</i>", "<i><b>Were I</b> in your place, I would accept.</i> — Будь я на вашем месте, я бы согласился."],
   ["<i>If it were not for…</i>", "<i><b>Were it not for</b> the rain, we could play outside.</i> — Если бы не дождь, мы могли бы поиграть на улице."],
   ["<i>If it had not been for…</i>", "<i><b>Had it not been for</b> your support, I would have given up.</i> — Если бы не твоя поддержка, я бы сдался."]
 ])}
 <h3>Что значат should, were to и were it not for</h3>
-<p>Вариант с <i>had</i> — это обычное условное предложение 3 типа, только без <i>if</i>. А вот три других оборота стоит разобрать отдельно. <i>If you should…</i> — если вдруг… — говорит о том, что событие возможно, но маловероятно; его часто используют в вежливых предложениях помощи и в официальных письмах. <i>If … were to…</i> описывает воображаемую ситуацию в будущем, обычно маловероятную: «если бы вдруг правительство решило…». <i>If it were not for…</i> и <i>if it had not been for…</i> значат «если бы не…»: первый говорит о настоящем, второй — о прошлом. Во всех случаях инверсия делает фразу более официальной, а смысл не меняется.</p>
+<p>Вариант с <i>had</i> — это обычное условное предложение 3 типа, только без <i>if</i>. А вот три других оборота стоит разобрать отдельно. <i>If you should…</i> (если вдруг…) говорит о том, что событие возможно, но маловероятно; его часто используют в вежливых предложениях помощи и в официальных письмах. <i>If … were to…</i> описывает воображаемую ситуацию в будущем, обычно маловероятную: «если бы вдруг правительство решило…». <i>If it were not for…</i> и <i>if it had not been for…</i> значат «если бы не…»: первый говорит о настоящем, второй — о прошлом. Во всех случаях инверсия делает фразу более официальной, а смысл не меняется.</p>
 <h3>Другие слова для условия</h3>
-<p>Условие можно ввести и без <i>if</i> и без инверсии. <i>But for</i> — это короткая замена <i>if it were not for</i> и <i>if it had not been for</i>, то есть тоже «если бы не», и после него идет существительное. <i>As long as</i> и <i>provided (that)</i> значат «при условии, что», то есть ставят обязательное условие. <i>Supposing</i> значит «предположим, что; а что если» и вводит воображаемую ситуацию.</p>
+<p>Условие можно ввести и без <i>if</i>, и без инверсии. <i>But for</i> — это короткая замена <i>if it were not for</i> и <i>if it had not been for</i>, то есть тоже «если бы не», и после него идет существительное. <i>As long as</i> и <i>provided (that)</i> значат «при условии, что», то есть ставят обязательное условие. <i>Supposing</i> значит «предположим, что; а что если» и вводит воображаемую ситуацию.</p>
 ${E([
   ["<b>But for</b> his help, we would have failed.", "Если бы не его помощь, мы бы провалились."],
   ["You can borrow it <b>as long as</b> / <b>provided</b> you're careful.", "Можешь взять его при условии, что будешь аккуратен."],
-  ["<b>Supposing</b> you won, what would you do?", "А что если бы ты выиграл — что бы ты сделал?"]
+  ["<b>Supposing</b> you won, what would you do?", "А что, если бы ты выиграл? Что бы ты сделал?"]
 ])}
 ${N("В таких предложениях отрицание не сокращают: правильно <i>Had it <b>not</b> been for…</i>, а не <i>Hadn't it been for…</i>")}`,
   ex: [
     { type: 'gap', task: 'Впишите пропущенное слово.', items: [
-      ["___ I known about the problem, I would have helped.", "had"], ["___ you need any help, call me.", "should"],
-      ["___ it not been for your support, I would have given up.", "had"], ["___ it not for the rain, we could play outside.", "were"],
-      ["___ the government to raise taxes, there would be protests.", "were"], ["But ___ his help, we would have failed.", "for"],
+      ["___ I known about the problem, I would have helped.", "had"], ["___ you have any questions, please contact us.", "should"],
+      ["___ it not been for the doctor, she would have died.", "had"], ["___ it not for his salary, the family couldn't pay the rent.", "were"],
+      ["___ you to win the lottery, what would you buy?", "were"], ["But ___ the traffic, we would have arrived on time.", "for"],
       ["Had she ___ (study) harder, she would have passed.", "studied"], ["You can borrow my car as ___ as you drive carefully.", "long"]
     ]},
     { type: 'choice', task: 'Выберите правильный вариант.', items: [
@@ -237,18 +238,18 @@ ${N("В таких предложениях отрицание не сокращ
 
 { id: 'x-ellipsis', level: 'C2', title: 'Эллипсис и замещение', sub: 'I hope not · so can I · the red one',
   rule: `
-<p>В живой речи англичане не любят повторяться. Вместо уже названных слов они используют короткие заменители (<i>one, so, do</i>) или просто опускают лишнее: <i>— Is she coming? — I think <b>so</b></i> — думаю, да.</p>
+<p>В живой речи англичане не любят повторяться. Вместо уже названных слов они используют короткие заместители (<i>one, so, do</i>) или просто опускают лишнее: <i>— Is she coming? — I think <b>so</b></i> — думаю, да.</p>
 ${T(["Заместитель", "Пример", "Значение"], [
   ["<i>so / not</i>", "<i>I think <b>so</b>. I hope <b>not</b>. I'm afraid <b>not</b>.</i> — Думаю, да. Надеюсь, что нет. Боюсь, что нет.", "заменяет целое предложение"],
   ["<i>one / ones</i>", "<i>Can I see the red <b>one</b>? Bigger <b>ones</b>?</i> — Можно посмотреть красный? А побольше есть?", "заменяет исчисляемое существительное"],
   ["вспомогательный глагол", "<i>She said she'd call, but she <b>didn't</b>.</i> — Она сказала, что позвонит, но не позвонила.", "заменяет глагольную группу"],
-  ["<i>so / neither + aux + подлежащее</i>", "<i>He can swim, and <b>so can I</b>.</i> — Он умеет плавать, и я тоже.", "«я тоже» (с <i>neither</i> — «я тоже не»)"],
+  ["<i>so / neither + aux + подлежащее</i>", "<i>He can swim, and <b>so can I</b>.</i> — Он умеет плавать, и я тоже.", "«я тоже», как в теме 5.5"],
   ["<i>to</i>", "<i>You don't have to if you don't want <b>to</b>.</i> — Не обязательно, если не хочешь.", "заменяет инфинитив"]
 ])}
 <h3>Как работают заместители</h3>
-<p>Слова <i>so</i> и <i>not</i> заменяют целое предложение после глаголов мнения и чувства: <i>think, hope, suppose, expect, be afraid</i>. Например, на вопрос <i>Will it rain?</i> — будет дождь? — отвечают <i>I'm afraid so</i> — боюсь, что да, или <i>I hope not</i> — надеюсь, что нет, и не повторяют <i>it will rain</i>.</p>
-<p>Во множественном числе вместо <i>one</i> говорят <i>ones</i>. С неисчисляемыми существительными (<i>water, money</i>) так не делают.</p>
-${N("Отрицательный короткий ответ строят по-разному. После <i>hope</i> говорят <i>I hope <b>not</b></i> — надеюсь, что нет. А после <i>think</i> — <i>I <b>don't think so</b></i> — думаю, что нет.")}`,
+<p>Слова <i>so</i> и <i>not</i> заменяют целое предложение после глаголов мнения и чувства: <i>think, hope, suppose, expect, be afraid</i>. Например, на вопрос <i>Will it rain?</i> отвечают коротко, не повторяя <i>it will rain</i>: <i>I'm afraid so</i> — боюсь, что да; <i>I hope not</i> — надеюсь, что нет.</p>
+<p>Во множественном числе вместо <i>one</i> говорят <i>ones</i>. С неисчисляемыми существительными (<i>water, money</i>) <i>one</i> и <i>ones</i> не используют.</p>
+${N("После <i>think</i> отрицательный ответ строят иначе, чем после <i>hope</i>: <i>I <b>don't think so</b></i> — думаю, что нет.")}`,
   ex: [
     { type: 'gap', task: 'Впишите одно слово.', items: [
       ["— Will it rain tomorrow? — I hope ___.", "not"], ["— Is she coming? — I think ___.", "so"],
@@ -259,9 +260,9 @@ ${N("Отрицательный короткий ответ строят по-р
     ]},
     { type: 'translate', task: 'Переведите на английский.', items: [
       ["Надеюсь, что нет.", "I hope not."],
-      ["— Я устал. — Я тоже.", "I am tired. — So am I.|I am tired. — Me too."],
+      ["— Я не умею плавать. — Я тоже.", "I can't swim. — Neither can I.|I can't swim. — Nor can I.|I can't swim. — Me neither."],
       ["Мне не нравится эта сумка. Покажите красную.", "I don't like this bag. Show me the red one.|I don't like this bag. Can I see the red one?|I don't like this bag. Could you show me the red one?|I don't like this bag. Can you show me the red one?"],
-      ["Она обещала позвонить, но не позвонила.", "She promised to call, but she didn't.|She promised to phone, but she didn't.|She promised to ring, but she didn't."]
+      ["Он сказал, что придет, но не пришел.", "He said he would come, but he didn't.|He said that he would come, but he didn't."]
     ]},
     { type: 'listen', at: 2, task: 'Прослушайте предложение и соберите его из слов.', items: [
       ["Is the shop still open? I'm afraid not.", "Магазин еще открыт? Боюсь, что нет."],

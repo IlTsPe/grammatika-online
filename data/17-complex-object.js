@@ -1,5 +1,5 @@
 BOOK.push({ n: 17, id: 'complex-object', title: 'Сложное дополнение (Complex Object)',
-intro: 'Конструкция «дополнение + инфинитив»: <i>I want <b>you to come</b></i>. В русском ее обычно переводят придаточным со словами «чтобы», «как», «что».',
+intro: 'Конструкция «дополнение + инфинитив»: <i>I want <b>you to come</b></i>. На русский ее обычно переводят придаточным со словами «чтобы», «как», «что».',
 topics: [
 
 { id: 'co-want', level: 'B1', title: 'Want / expect + кто-то + to V', sub: 'I want you to help me',
@@ -20,11 +20,11 @@ ${E([
 ])}
 ${N("Дословный перевод «хочу, чтобы» через <i>that</i> — ошибка: <i>I want that you help me</i> так не говорят. И обратите внимание на форму местоимения: после <i>want</i> оно стоит в объектной форме — <i>me, him, her, us, them</i>: <i>I want <b>him</b> to come</i>.")}`,
   ex: [
-    { type: 'gap', task: 'Закончите предложение, используя Complex Object (местоимение + инфинитив).', items: [
+    { type: 'gap', task: 'Закончите предложение, используя Complex Object (кто-то + инфинитив).', items: [
       ["Help me with these heavy bags, please. → I want you ___ me with these heavy bags.", "to help"], ["“Come at six,” he said to us. → He wanted ___ at six.", "us to come"],
       ["My mother says: “Be a doctor!” → My mother wants ___ a doctor.", "me to be|me to become"],
-      ["I didn't think he would come. → I didn't expect ___.", "him to come"], ["“Don't be late,” the teacher said to them. → The teacher told ___ late.", "them not to be"],
-      ["Please call me tomorrow. → I'd like ___ me tomorrow.", "you to call"], ["“Tom, buy some bread on your way home, please,” she said. → She wants ___ some bread on his way home.", "Tom to buy"],
+      ["I didn't think he would come. → I didn't expect ___.", "him to come"], ["“Don't forget your umbrella,” she said to him. → She told ___ his umbrella.", "him not to forget"],
+      ["Please call me tomorrow. → I'd like ___ me tomorrow.", "you to call"], ["“Tom, buy some bread on your way home, please,” she said. → She wanted ___ some bread on his way home.", "Tom to buy"],
       ["The doctor said I should rest. → The doctor advised ___.", "me to rest"]
     ]},
     { type: 'choice', task: 'Выберите правильный вариант.', items: [
@@ -34,7 +34,7 @@ ${N("Дословный перевод «хочу, чтобы» через <i>th
     ]},
     { type: 'translate', task: 'Переведите на английский.', items: [
       ["Я хочу, чтобы ты пришел на мой день рождения в субботу.", "I want you to come to my birthday party on Saturday.|I want you to come to my birthday on Saturday.|I would like you to come to my birthday party on Saturday.|I'd like you to come to my birthday party on Saturday.|I would like you to come to my birthday on Saturday.|I'd like you to come to my birthday on Saturday."],
-      ["Мама хочет, чтобы я стал врачом.", "Mum wants me to become a doctor.|My mother wants me to become a doctor.|My mum wants me to become a doctor.|Mother wants me to become a doctor.|My mother wants me to be a doctor.|Mum wants me to be a doctor.|My mum wants me to be a doctor."],
+      ["Папа хочет, чтобы я выучил английский.", "Dad wants me to learn English.|My dad wants me to learn English.|My father wants me to learn English."],
       ["Я не ожидал, что он позвонит.", "I didn't expect him to call.|I didn't expect him to phone.|I didn't expect him to ring."],
       ["Учитель попросил нас закрыть окна.", "The teacher asked us to close the windows.|The teacher asked us to shut the windows."],
       ["Я бы хотел, чтобы вы мне помогли.", "I would like you to help me.|I'd like you to help me."]
@@ -48,13 +48,13 @@ ${N("Дословный перевод «хочу, чтобы» через <i>th
 
 { id: 'co-make-let', level: 'B1', title: 'Make / let + кто-то + V', sub: 'She made me laugh · Let me go',
   rule: `
-<p>После глаголов <i>make</i> («заставлять») и <i>let</i> («позволять») тоже ставят того, кто действует, а затем инфинитив — но уже <b>без</b> частицы <i>to</i>: <i>The film made me <b>cry</b></i> — фильм заставил меня плакать; <i>Let me <b>help</b> you</i> — позволь мне помочь.</p>
+<p>После глаголов <i>make</i> («заставлять») и <i>let</i> («позволять») тоже ставят того, кто действует, а затем инфинитив — но уже <b>без</b> частицы <i>to</i>, как в теме 13.1: <i>The film made me <b>cry</b></i> — фильм заставил меня плакать; <i>Let me <b>help</b> you</i> — позволь мне помочь.</p>
 ${T(["Глагол", "Значение", "Пример"], [
   ["<i>make + кто-то + V</i>", "заставить", "<i>She <b>made</b> me <b>laugh</b>. The teacher made us <b>rewrite</b> it.</i> — Она меня рассмешила. Учитель заставил нас это переписать."],
   ["<i>let + кто-то + V</i>", "позволить, разрешить", "<i>My parents <b>let</b> me <b>go</b> to the party.</i> — Родители отпустили меня на вечеринку."],
   ["<i>allow / force + кто-то + to V</i>", "разрешить / вынудить (с to!)", "<i>They <b>allowed</b> us <b>to stay</b>.</i> — Они разрешили нам остаться."]
 ])}
-<p>Глаголы <i>allow</i> и <i>force</i> близки по смыслу к <i>let</i> и <i>make</i>, но строятся иначе — с частицей <i>to</i>, как <i>want</i> из темы 17.1. <i>Allow</i> значит «разрешить», и звучит он официальнее, чем <i>let</i>. <i>Force</i> значит «вынудить, принудить», то есть заставить силой или обстоятельствами, против воли. Почему в этой паре <i>to</i> опускают после <i>make</i> и <i>let</i>, но не после <i>allow</i> и <i>force</i>, объяснить нельзя — это нужно просто запомнить.</p>
+<p>Глаголы <i>allow</i> и <i>force</i> близки по смыслу к <i>let</i> и <i>make</i>, но строятся иначе — с частицей <i>to</i>, как <i>want</i> из темы 17.1. <i>Allow</i> значит «разрешить», и звучит он официальнее, чем <i>let</i>. <i>Force</i> значит «вынудить, принудить», то есть заставить силой или обстоятельствами, против воли. Почему в этих парах <i>to</i> опускают после <i>make</i> и <i>let</i>, но не после <i>allow</i> и <i>force</i>, объяснить нельзя — это нужно просто запомнить.</p>
 ${E([
   ["The rain <b>forced</b> us <b>to stay</b> at home.", "Дождь вынудил нас остаться дома."],
   ["Our school doesn't <b>allow</b> students <b>to use</b> phones in class.", "В нашей школе ученикам не разрешают пользоваться телефонами на уроках."]
@@ -62,15 +62,15 @@ ${E([
 ${N("Глагол <i>let</i> в пассиве не используют — вместо него говорят <i>be allowed to</i>: <i>I <b>was allowed to</b> go</i> — мне разрешили пойти.")}`,
   ex: [
     { type: 'gap', task: 'Впишите глагол в нужной форме (с to или без to).', items: [
-      ["The film made me ___ (cry).", "cry"], ["My parents let me ___ (stay) up late.", "stay"],
+      ["Cutting onions always makes me ___ (cry).", "cry"], ["My parents let me ___ (stay) up late.", "stay"],
       ["They allowed us ___ (use) the pool.", "to use"], ["The teacher made us ___ (write) the test again.", "write"],
       ["Don't make me ___ (laugh)!", "laugh"], ["Let me ___ (introduce) myself.", "introduce"],
       ["We were made ___ (wait) for an hour.", "to wait"], ["Mum didn't let us ___ (watch) TV.", "watch"]
     ]},
     { type: 'translate', task: 'Переведите на английский.', items: [
       ["Мама заставила меня убрать комнату.", "Mum made me clean the room.|My mother made me clean the room.|My mum made me clean my room.|Mother made me clean my room.|Mum made me tidy my room.|My mother made me tidy the room.|Mum made me clean my room.|My mum made me clean the room.|My mother made me clean my room.|Mum made me tidy the room.|My mum made me tidy the room.|My mum made me tidy my room.|My mother made me tidy my room.|Mum made me tidy up my room."],
-      ["Позволь мне помочь тебе.", "Let me help you."],
-      ["Родители не разрешают мне гулять поздно.", "My parents don't let me go out late.|My parents don't let me walk late.|My parents don't let me stay out late.|My parents don't allow me to go out late.|My parents don't allow me to stay out late."],
+      ["Позволь мне объяснить.", "Let me explain."],
+      ["Родители не разрешают мне гулять поздно.", "My parents don't let me go out late.|My parents don't let me stay out late.|My parents don't allow me to go out late.|My parents don't allow me to stay out late."],
       ["Этот фильм заставил меня задуматься.", "This film made me think.|This movie made me think.|The film made me think."]
     ]},
     { type: 'listen', at: 2, task: 'Прослушайте предложение и соберите его из слов.', items: [
@@ -89,12 +89,12 @@ ${T(["Форма", "Значение", "Пример"], [
   ["<i>+ V-ing</i>", "видел часть процесса", "<i>I saw him <b>crossing</b> the street.</i> — Я видел, как он переходил улицу."]
 ])}
 ${E([
-  ["We heard her <b>sing</b>.", "Мы слышали, как она спела (песню целиком)."],
+  ["We heard her <b>sing</b>.", "Мы слышали, как она спела. (песню целиком)"],
   ["I felt something <b>touching</b> my leg.", "Я почувствовал, как что-то касается моей ноги."],
   ["Nobody noticed him <b>leave</b>.", "Никто не заметил, как он ушел."]
 ])}
 <h3>Когда see и hear значат «понимать» и «узнавать»</h3>
-<p>Глаголы <i>see</i> и <i>hear</i> не всегда говорят о том, что человек видел или слышал своими глазами и ушами. <i>See</i> часто значит «понимать», а <i>hear</i> — узнавать, слышать от других. Например, <i>I see</i> — это «понятно», а не «я вижу». В таком значении после них ставят не сложное дополнение, а придаточное предложение со словом <i>that</i> (его можно опустить). Сравните: <i>I heard him <b>sing</b></i> — я слышал, как он спел (сам слышал пение), и <i>I heard <b>that</b> he sings</i> — я слышал (узнал от других), что он поет.</p>
+<p>Глаголы <i>see</i> и <i>hear</i> не всегда говорят о том, что человек видел или слышал своими глазами и ушами. <i>See</i> часто значит «понимать», а <i>hear</i> — «узнавать, слышать от других». Например, <i>I see</i> — это «понятно», а не «я вижу». В таком значении после них ставят не сложное дополнение, а придаточное предложение со словом <i>that</i> (его можно опустить). Сравните: <i>I heard him <b>sing</b></i> — я слышал, как он спел (сам слышал пение), и <i>I heard <b>that</b> he sings</i> — я слышал (узнал от других), что он поет.</p>
 ${E([
   ["I <b>see that</b> you are tired.", "Я вижу (понимаю), что ты устал."],
   ["I <b>heard that</b> he had moved to Moscow.", "Я слышал (мне рассказали), что он переехал в Москву."]
@@ -106,13 +106,13 @@ ${E([
       ["Did you notice her ___ in?", ["come", "to come", "came"]], ["I felt the ground ___ under my feet.", ["shaking", "to shake", "shaken"]],
       ["She watched the children ___ in the park.", ["playing", "to play", "played"]], ["He was seen ___ the bank.", ["to enter", "enter", "entered"]]
     ]},
-    { type: 'gap', task: 'Закончите предложение, используя Complex Object с глаголом восприятия.', items: [
-      ["He crossed the street. I saw it. → I saw him ___ the street.", "cross|crossing"],
-      ["She was singing. I heard it. → I heard her ___.", "singing|sing"],
-      ["The door opened. We heard it. → We heard the door ___.", "open|opening"],
-      ["They were playing football. We watched them. → We watched them ___ football.", "playing|play"],
-      ["Somebody touched my arm. I felt it. → I felt somebody ___ my arm.", "touch|touching"],
-      ["The car stopped. Did you see it? → Did you see the car ___?", "stop|stopping"]
+    { type: 'gap', task: 'Закончите предложение, используя Complex Object с глаголом восприятия: V — если действие в первом предложении завершено, V-ing — если оно было в процессе.', items: [
+      ["He crossed the street. I saw it. → I saw him ___ the street.", "cross"],
+      ["She was singing. I heard it. → I heard her ___.", "singing"],
+      ["The door opened. We heard it. → We heard the door ___.", "open"],
+      ["They were playing football. We watched them. → We watched them ___ football.", "playing"],
+      ["Somebody touched my arm. I felt it. → I felt somebody ___ my arm.", "touch"],
+      ["The car stopped. Did you see it? → Did you see the car ___?", "stop"]
     ]},
     { type: 'translate', task: 'Переведите на английский.', items: [
       ["Я видел, как он вошел в дом.", "I saw him enter the house.|I saw him come into the house.|I saw him go into the house.|I saw him walk into the house."],
