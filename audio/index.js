@@ -178,7 +178,7 @@ window.AUDIO = {
  "Ann told me that her children were afraid of the dark.": "rep-statements-2",
  "The guide said that the castle had been built in the twelfth century.": "rep-statements-3",
  "There will be a big crowd at the concert tonight.": "t-future-1",
- "I'm going to give them my old bike. I don't need it.": "t-future-2",
+ "I think you will like this book about the sea.": "t-future-2",
  "Don't worry, I'll take care of your cat.": "t-future-3",
  "At eight o'clock tomorrow I will be working in the garden.": "t-future-continuous-1",
  "Will you be using your bike this weekend?": "t-future-continuous-2",
@@ -189,6 +189,9 @@ window.AUDIO = {
  "By next summer we will have been living in this house for ten years.": "t-future-perfect-continuous-1",
  "She will be tired because she will have been working all night.": "t-future-perfect-continuous-2",
  "How long will you have been studying English by the end of the year?": "t-future-perfect-continuous-3",
+ "I'm going to give them my old bike. I don't need it.": "t-going-to-1",
+ "My sister is going to start a new job in May.": "t-going-to-2",
+ "We are going to visit our grandparents next weekend.": "t-going-to-3",
  "I was reading a book when my friend knocked at the door.": "t-past-continuous-1",
  "While we were walking through the park, it started to rain.": "t-past-continuous-2",
  "When I saw them, Tom's parents were sitting in the garden.": "t-past-continuous-3",
@@ -256,4 +259,4 @@ window.AUDIO = {
  "I'd rather you didn't tell anyone about it.": "x-unreal-past-2",
  "She spends money as if she were a millionaire.": "x-unreal-past-3"
 };
-window.AUDIO_BYTES = 4337568;
+window.AUDIO_BYTES = 4386528;

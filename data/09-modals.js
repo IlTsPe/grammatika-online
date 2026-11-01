@@ -254,7 +254,7 @@ ${N("Если нужно сказать «не может быть, чтобы�
       ["He ___ stolen the money — he was with me all evening.", ["can't have", "must have", "should have"]], ["You ___ booked the tickets earlier! Now there are none left.", ["should have", "must have", "can't have"]],
       ["She didn't answer the phone. She ___ been asleep.", ["might have", "should have", "can have"]], ["I ___ left my bag on the bus. It's not here.", ["must have", "can't have", "should have"]]
     ]},
-    { type: 'gap', task: 'Закончите предложение: must have, can\'t have, might have или should have + V3.', items: [
+    { type: 'gap', task: 'Закончите предложение: must have, can\'t have, might have или should have + V3. Если в скобках несколько слов через косую черту, используйте в ответе их все — в нужной форме и порядке.', items: [
       ["The windows are broken. Somebody ___ (break) them.", "must have broken"],
       ["She ___ (see) me — she didn't say hello. (возможно, не видела)", "might not have seen|may not have seen"],
       ["He ___ (write) this letter — he can't write!", "cannot have written|could not have written"],

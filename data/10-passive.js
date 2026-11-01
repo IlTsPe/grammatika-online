@@ -6,7 +6,7 @@ topics: [
   rule: `
 <p>Пассив (страдательный залог) используют, когда важно само действие или то, над чем оно совершается, а не тот, кто его выполняет. Обычно так бывает, если исполнитель неизвестен, очевиден или просто неважен: <i>This house was built in 1905</i> — неважно, кто строил. Если исполнителя все же нужно назвать, его вводят через <i>by</i>, а инструмент — через <i>with</i>, как в теме 6.4.</p>
 ${F("<b>be</b> в нужном времени + <b>V3</b>")}
-<p><i>V3</i> — третья форма глагола, как в Present Perfect (тема 2.8).</p>
+<p><i>V3</i> — третья форма глагола, как в Present Perfect (тема 2.9).</p>
 ${T(["Время", "Актив", "Пассив"], [
   ["Present Simple", "<i>They <b>clean</b> the room every day.</i> — Они убирают комнату каждый день.", "<i>The room <b>is cleaned</b> every day.</i> — Комнату убирают каждый день."],
   ["Past Simple", "<i>They <b>built</b> the house in 1905.</i> — Они построили дом в 1905 году.", "<i>The house <b>was built</b> in 1905.</i> — Дом был построен в 1905 году."],
@@ -36,7 +36,7 @@ ${E([
   ["This film <b>is</b> much <b>spoken about</b>.", "Об этом фильме много говорят."]
 ])}`,
   ex: [
-    { type: 'gap', task: 'Поставьте глагол в Present, Past или Future Simple Passive.', items: [
+    { type: 'gap', task: 'Поставьте глагол в Present, Past или Future Simple Passive. Если в скобках несколько слов через косую черту, используйте в ответе их все — в нужной форме и порядке.', items: [
       ["English ___ (speak) all over the world.", "is spoken"], ["This castle ___ (build) in the 15th century.", "was built"],
       ["The letters ___ (deliver) every morning.", "are delivered"], ["The results ___ (announce) tomorrow.", "will be announced"],
       ["'War and Peace' ___ (write) by Tolstoy.", "was written"], ["Bread ___ (bake) here every day.", "is baked"],
@@ -88,7 +88,7 @@ ${T(["Время", "Пассив", "Пример"], [
 <p>В строке «Модальные» после модального глагола стоит <i>be</i> без <i>to</i> и третья форма — это пассивный инфинитив. Так строится пассив с любым модальным глаголом: <i>can be done</i> — можно сделать, <i>should be done</i> — следует сделать, <i>must be done</i> — нужно сделать. Формы инфинитива подробно разобраны в разделе 13 «Инфинитив».</p>
 ${N("Не все времена удобны в пассиве. Future Continuous и времена Perfect Continuous в пассиве почти не встречаются — звучат слишком громоздко. Вместо них говорят в активном залоге или берут простое время: например, вместо <i>The bridge has been being built for two years</i> скажут <i>They have been building the bridge for two years</i> — мост строят уже два года.")}`,
   ex: [
-    { type: 'gap', task: 'Поставьте глагол в нужную форму пассива.', items: [
+    { type: 'gap', task: 'Поставьте глагол в нужную форму пассива. Если в скобках несколько слов через косую черту, используйте в ответе их все — в нужной форме и порядке.', items: [
       ["The thief ___ (just / arrest).", "has just been arrested"], ["My car ___ (repair) at the moment.", "is being repaired"],
       ["This work must ___ (do) by Friday.", "be done"], ["When I came, the room ___ (clean). (как раз в тот момент)", "was being cleaned"],
       ["The letter ___ (already / send).", "has already been sent"], ["All the tickets ___ (already / sell).", "have already been sold"],
@@ -141,7 +141,7 @@ ${T(["Конструкция", "Значение", "Пример"], [
 ])}
 ${N("Сравните: <i>I cut my hair</i> — я подстригся сам; <i>I <b>had</b> my hair <b>cut</b></i> — меня подстриг парикмахер.")}`,
   ex: [
-    { type: 'gap', task: 'Составьте каузатив из слов в скобках или поставьте глагол в нужную форму (с to или без to).', items: [
+    { type: 'gap', task: 'Составьте каузатив из слов в скобках или поставьте глагол в нужную форму (с to или без to). Если в скобках несколько слов через косую черту, используйте в ответе их все — в нужной форме и порядке.', items: [
       ["I ___ (have / my coat / clean) yesterday.", "had my coat cleaned"], ["We are ___ (have / our flat / paint) next week.", "having our flat painted"],
       ["She ___ (get / her car / repair) last month.", "got her car repaired"], ["She ___ (have / her bag / steal) at the station.", "had her bag stolen"],
       ["You should ___ (have / your eyes / test).", "have your eyes tested"], ["Can you get your sister ___ (call) me back?", "to call"],

@@ -17,7 +17,7 @@ ${E([
 ])}
 ${N("Сдвигать время не нужно, если во второй части — общеизвестный факт, который верен всегда: <i>The teacher said that the Earth <b>goes</b> round the Sun.</i>")}`,
   ex: [
-    { type: 'gap', task: 'Поставьте глагол в скобках в нужную форму по правилу согласования времен.', items: [
+    { type: 'gap', task: 'Поставьте глагол в скобках в нужную форму по правилу согласования времен. Если в скобках несколько слов через косую черту, используйте в ответе их все — в нужной форме и порядке.', items: [
       ["I knew that she ___ (be) at home.", "was"], ["She said that she ___ (live) in Kazan.", "lived"],
       ["We didn't know that they ___ (already / leave).", "had already left"], ["He hoped that he ___ (win) the race.", "would win|had won"],
       ["I thought you ___ (sleep). Why are you up?", "were sleeping"], ["She told me that she ___ (lose) her key the day before.", "had lost"],

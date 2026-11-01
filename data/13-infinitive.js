@@ -88,7 +88,7 @@ ${T(["Конструкция", "Значение", "Пример"], [
 <p>Конструкция с <i>for</i> нужна, когда действие инфинитива выполняет не подлежащее, а кто-то другой. В предложении <i>The box is too heavy for me to carry</i> тяжелая — коробка, а нести ее должен «я». Этого человека называют после <i>for</i>, а уже потом ставят инфинитив: <i>for me to carry</i> — чтобы я мог нести. Так же говорят и с <i>enough</i>: <i>The text is easy enough for children to read</i> — текст достаточно простой, чтобы его могли прочитать дети.</p>
 ${N("Место <i>enough</i> зависит от соседнего слова: оно стоит <b>после</b> прилагательного (<i>big enough</i>), но <b>перед</b> существительным (<i>enough time</i>). И помните: «чтобы» не переводится как <i>for</i> с глаголом — правильно <i>I came <b>to see</b> you</i>, а не <i>for see you</i>.")}`,
   ex: [
-    { type: 'gap', task: 'Закончите предложение инфинитивом цели (глагол в скобках).', items: [
+    { type: 'gap', task: 'Закончите предложение инфинитивом цели (глагол в скобках). Если в скобках несколько слов через косую черту, используйте в ответе их все — в нужной форме и порядке.', items: [
       ["I went to the post office ___ (send) a parcel.", "to send"], ["She came ___ (help) us.", "to help"],
       ["He saves money ___ (buy) a car.", "to buy"], ["We got up early ___ (catch) the first train.", "to catch"],
       ["I called him ___ (ask) about the homework.", "to ask"], ["She left early so as ___ (not / be) late.", "not to be"]
@@ -138,7 +138,7 @@ ${N("Чаще всего перфектный инфинитив стоит по
       ["He doesn't like ___ what to do.", ["to be told", "to tell", "to have told"]], ["She is lucky ___ the last ticket yesterday.", ["to have got", "to get", "to be got"]],
       ["The children seem ___ for hours. They look tired.", ["to have been playing", "to play", "to be played"]], ["This house seems ___ a hundred years ago.", ["to have been built", "to be built", "to build"]]
     ]},
-    { type: 'gap', task: 'Поставьте инфинитив в нужную форму.', items: [
+    { type: 'gap', task: 'Поставьте инфинитив в нужную форму. Если в скобках несколько слов через косую черту, используйте в ответе их все — в нужной форме и порядке.', items: [
       ["I want ___ (invite) to the party.", "to be invited"], ["She is happy ___ (pass) the exam yesterday.", "to have passed"],
       ["He pretended ___ (read) when I came in.", "to be reading"], ["This problem must ___ (solve) today.", "be solved"],
       ["They seem ___ (know) each other for years.", "to have known"], ["I'm sorry ___ (not / send) the letter last week.", "not to have sent"]

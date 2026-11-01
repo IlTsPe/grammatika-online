@@ -50,7 +50,7 @@ ${T(["Подсказка в предложении", "Время"], [
   ["исполнитель неважен, «был сделан»", "пассив: be + V3"]
 ])}`,
   ex: [
-    { type: 'gap', task: 'Поставьте глагол в нужное время и залог.', items: [
+    { type: 'gap', task: 'Поставьте глагол в нужное время и залог. Если в скобках несколько слов через косую черту, используйте в ответе их все — в нужной форме и порядке.', items: [
       ["My brother is a nurse. He ___ (work) in a hospital.", "works"], ["Look! The children ___ (dance).", "are dancing"],
       ["We ___ (move) to this town in 2018.", "moved"], ["I ___ (just / finish) my homework.", "have just finished"],
       ["While I ___ (cook), the phone rang.", "was cooking"], ["She ___ (learn) English for three years.", "has been learning|has learned|has learnt"],
@@ -58,7 +58,7 @@ ${T(["Подсказка в предложении", "Время"], [
       ["I ___ (call) you tomorrow.", "will call|am going to call"], ["The road ___ (repair) now.", "is being repaired"],
       ["She ___ (live) here since she was born.", "has lived|has been living"], ["The room ___ (already / clean).", "has already been cleaned"]
     ]},
-    { type: 'text', task: 'Поставьте глаголы из скобок в нужное время.', text: "Tom ___ (be) a student. He ___ (study) at Moscow University. Last year he ___ (go) to London for a month. While he ___ (live) there, he ___ (meet) many interesting people. He ___ (like) London very much. Now he ___ (write) a book about his experience. He ___ (already / write) three chapters. Next summer he ___ (go) to New York.",
+    { type: 'text', task: 'Поставьте глаголы из скобок в нужное время. Если в скобках несколько слов через косую черту, используйте в ответе их все — в нужной форме и порядке.', text: "Tom ___ (be) a student. He ___ (study) at Moscow University. Last year he ___ (go) to London for a month. While he ___ (live) there, he ___ (meet) many interesting people. He ___ (like) London very much. Now he ___ (write) a book about his experience. He ___ (already / write) three chapters. Next summer he ___ (go) to New York.",
       answers: ["is", "studies|is studying", "went", "was living|lived", "met", "liked", "is writing", "has already written", "is going|is going to go|will go"] },
     { type: 'translate', task: 'Переведите на английский.', items: [
       ["Я уже прочитал эту книгу.", "I have already read this book.|I have read this book already."],
@@ -91,7 +91,7 @@ ${T(["Тема", "Проверьте себя"], [
       ["I wish I ___ more free time.", ["had", "have", "will have"]], ["They made us ___ for an hour.", ["wait", "to wait", "waiting"]],
       ["He seems ___ a lot of money last year.", ["to have earned", "to earn", "earning"]], ["You ___ come if you don't want to.", ["don't have to", "mustn't", "can't"]]
     ]},
-    { type: 'gap', task: 'Поставьте глагол в нужную форму.', items: [
+    { type: 'gap', task: 'Поставьте глагол в нужную форму. Если в скобках несколько слов через косую черту, используйте в ответе их все — в нужной форме и порядке.', items: [
       ["He said he ___ (be) busy the next day.", "would be"], ["I heard her ___ (sing) in the next room.", "singing|sing"],
       ["If the weather ___ (be) bad on Sunday, we'll stay at home.", "is"], ["I wish I ___ (not / eat) so much yesterday.", "had not eaten"],
       ["Stop ___ (talk), please!", "talking"], ["She seems ___ (know) the answer.", "to know"],

@@ -13,7 +13,7 @@ ${E([
 <p>Если часть с <i>if</i> или <i>when</i> стоит первой, после нее ставят запятую: <i>If you heat ice, it melts</i>. Если второй — запятая не нужна: <i>Ice melts if you heat it</i>.</p>
 ${N("Будущее время здесь не нужно: речь о том, что происходит всегда. Фраза <i>If you heat ice, it will melt</i> тоже правильная, но звучит уже как прогноз об одном конкретном случае — это первый тип (тема 11.2).")}`,
   ex: [
-    { type: 'gap', task: 'Поставьте глагол в нужную форму.', items: [
+    { type: 'gap', task: 'Поставьте глагол в нужную форму. Если в скобках несколько слов через косую черту, используйте в ответе их все — в нужной форме и порядке.', items: [
       ["If you leave milk in the sun, it ___ (go) bad.", "goes"],
       ["If you mix black and white, you ___ (get) grey.", "get"],
       ["When I ___ (be) hungry, I eat an apple.", "am"],
@@ -71,7 +71,7 @@ ${T(["Союз", "Перевод", "Пример"], [
 <p>После <i>until</i> глагол стоит в утвердительной форме, хотя по-русски говорят «пока не», — так же, как после <i>unless</i>: <i>until the rain <b>stops</b></i>, а не <i>until the rain doesn't stop</i>.</p>
 ${N("По-русски «если пойдет дождь» и «когда приеду» — будущее время, поэтому так и хочется сказать <i>If it will rain</i> или <i>when I will arrive</i>. По-английски — <i>If it <b>rains</b></i>, <i>when I <b>arrive</b></i>.")}`,
   ex: [
-    { type: 'gap', task: 'Поставьте глагол в нужную форму.', items: [
+    { type: 'gap', task: 'Поставьте глагол в нужную форму. Если в скобках несколько слов через косую черту, используйте в ответе их все — в нужной форме и порядке.', items: [
       ["If you leave now, you ___ (catch) the bus.", "will catch"], ["If it ___ (snow) tonight, the roads will be dangerous.", "snows"],
       ["She will be angry if you ___ (be) late.", "are"], ["Unless you hurry, you ___ (miss) the train.", "will miss"],
       ["If you ___ (study) hard, you will pass the exam.", "study"], ["I ___ (buy) some bread if I go to the shop.", "will buy"],
@@ -129,7 +129,7 @@ ${T(["1 тип: реально", "2 тип: нереально"], [
 ])}
 ${N("В таких предложениях глагол <i>be</i> принято ставить в форме <i>were</i> для всех лиц: <i>If I <b>were</b> you</i>, <i>If she <b>were</b> taller</i>. А <i>would</i> ставится только во второй части — в части с <i>if</i> его не бывает. Исключение — <i>If only… would</i>, о нем в теме про <i>I wish</i>.")}`,
   ex: [
-    { type: 'gap', task: 'Поставьте глагол в нужную форму.', items: [
+    { type: 'gap', task: 'Поставьте глагол в нужную форму. Если в скобках несколько слов через косую черту, используйте в ответе их все — в нужной форме и порядке.', items: [
       ["If I ___ (have) more money, I would buy a house.", "had"], ["If I were you, I ___ (not / lend) him money.", "would not lend|'d not lend"],
       ["If he ___ (know) her number, he would call her.", "knew"], ["What would you do if you ___ (win) the lottery?", "won"],
       ["If she ___ (be) taller, she could be a model.", "were|was"], ["We ___ (go) to the sea if we had a car.", "would go"],
@@ -172,7 +172,7 @@ ${T(["Условие", "Результат", "Пример"], [
 ])}
 ${N("По-русски и второй, и третий тип звучат одинаково — «если бы…». Поэтому выбирайте тип по смыслу: если речь о настоящем, нужен второй тип, а если о том, что уже было в прошлом, — третий.")}`,
   ex: [
-    { type: 'gap', task: 'Поставьте глагол в нужную форму.', items: [
+    { type: 'gap', task: 'Поставьте глагол в нужную форму. Если в скобках несколько слов через косую черту, используйте в ответе их все — в нужной форме и порядке.', items: [
       ["If you ___ (study) harder, you would have passed the exam.", "had studied|'d studied"], ["If we had left earlier, we ___ (not / miss) the train.", "would not have missed"],
       ["If I had taken the job, I ___ (live) in London now.", "would live|would be living|'d live|'d be living"], ["She would have come if you ___ (invite) her.", "had invited|'d invited"],
       ["If it ___ (not / rain), we would have gone to the beach.", "had not rained"], ["If I had known about the party, I ___ (come).", "would have come"],
@@ -210,7 +210,7 @@ ${T(["О чем сожалеют или чем недовольны", "Форм�
 <p>Сочетание <i>wish + would</i> выражает не сожаление, а недовольство или нетерпение: говорящему не нравится, как кто-то себя ведет или что происходит, и он хочет, чтобы это изменилось. Например, <i>I wish you would stop talking</i> — хоть бы ты замолчал. Так можно сказать и о погоде или ситуации: <i>I wish it would stop raining</i> — хоть бы дождь кончился. А вот о себе так не говорят: вместо <i>I wish I would</i> используют <i>I wish I could</i>, потому что свое поведение мы можем изменить сами.</p>
 ${N("Будьте внимательны при переводе: утверждение после <i>wish</i> становится в русском отрицанием, и наоборот. <i>I wish I <b>had</b> a car</i> — жаль, что у меня <b>нет</b> машины. Конструкция <i>If only…</i> значит то же самое, только звучит эмоциональнее: <i>If only I had more time!</i> — если бы только у меня было больше времени!")}`,
   ex: [
-    { type: 'gap', task: 'Поставьте глагол в нужную форму после wish / if only.', items: [
+    { type: 'gap', task: 'Поставьте глагол в нужную форму после wish / if only. Если в скобках несколько слов через косую черту, используйте в ответе их все — в нужной форме и порядке.', items: [
       ["I wish I ___ (know) the answer. (сейчас)", "knew"], ["I wish I ___ (not / say) that yesterday.", "had not said"],
       ["I wish you ___ (listen) to me!", "would listen"], ["I wish I ___ (be) taller.", "were|was"],
       ["If only I ___ (have) more time now!", "had"], ["I wish I ___ (can) play the guitar.", "could"],

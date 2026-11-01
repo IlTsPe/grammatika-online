@@ -44,6 +44,7 @@ const CORE = [
   'js/exercises.js',
   'js/head.js',
   'js/helpers.js',
+  'js/irregular.js',
   'js/listen.js',
   'js/menu.js',
   'js/metrika.js',

@@ -101,11 +101,16 @@
   </aside>
   <main class="sheet app__sheet" id="main"><div class="sheet__inner"><div class="crumbs"><button class="crumbs__link" type="button">Информация</button><span class="crumbs__sep" aria-hidden="true"><svg class="arrow__icon" aria-hidden="true"><use href="#i-arrow"></use></svg></span><span aria-current="page">Упражнения и проверка</span></div><h1 class="sheet__title">Упражнения и проверка</h1><div class="rule info">
       <h3>Проверка</h3>
-      <p>Кнопка «Проверить» активируется, как только вы введете хотя бы один ответ. После проверки она блокируется, пока вы не измените хотя бы один ответ. Неверные ответы и незаполненные поля выделяются красным цветом.</p>
+      <p>Кнопка «Проверить» активируется, как только вы введете хотя бы один ответ. После проверки она блокируется, пока вы не измените хотя бы один ответ. Неверные ответы и незаполненные поля выделяются красным цветом. Если первой ошибки не видно на экране, страница сама прокручивается к ней.</p>
       <ul>
         <li>Регистр букв и знаки препинания не учитываются.</li>
         <li>Сокращения засчитываются наравне с полными формами: <i>I'm</i> и <i>I am</i>, <i>don't</i> и <i>do not</i>, <i>it's</i> и <i>it is</i>.</li>
         <li>В заданиях на перевод ваш ответ сравнивается с эталонным и допустимыми вариантами. Мысль можно выразить по-разному, поэтому после проверки под неверно засчитанным переводом появляется кнопка «Мой вариант тоже верен» — нажмите ее, если уверены, что перевод правильный.</li>
+      </ul>
+      <h3>Подсказки в скобках</h3>
+      <ul>
+        <li><b>Одно слово</b> — глагол, который нужно поставить в нужную форму: <i>She ___ (play) tennis</i> → <i>plays</i>.</li>
+        <li><b>Несколько слов через косую черту</b> — все они входят в ответ, в нужной форме и порядке: <i>He ___ (not / play) tennis</i> → <i>does not play</i> или <i>doesn't play</i>.</li>
       </ul>
       <h3>Ответы и повтор</h3>
       <ul>
@@ -142,6 +147,7 @@
 <script charset="utf-8" src="js/backup.js"></script>
 <script charset="utf-8" src="js/accordions.js"></script>
 <script charset="utf-8" src="js/pages.js"></script>
+<script charset="utf-8" src="js/irregular.js"></script>
 <script charset="utf-8" src="js/listen.js"></script>
 <script charset="utf-8" src="js/offline.js"></script>
 <script charset="utf-8" src="js/exercises.js"></script>

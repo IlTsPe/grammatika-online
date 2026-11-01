@@ -1057,6 +1057,11 @@ button { font: inherit; transition: linear 0.15s; }
 .rule-table__row:last-child .rule-table__cell { border-bottom: 0; }
 .rule-table__cell + .rule-table__cell { border-left: 1px solid var(--border); }
 .rule-table__th + .rule-table__th { border-left: 1px solid var(--border); }
+/* «Неправильные глаголы»: поиск над таблицей */
+.irregular__search { display: grid; row-gap: 6px; max-width: 420px; margin: 18px 0 14px; }
+.irregular__search-label { font-family: var(--f-mono); font-size: 11.5px; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); }
+.irregular__input { padding: 9px 12px; font-size: 15px; }
+.irregular__none { color: var(--muted); }
 .examples { list-style: none; margin: 0 0 16px; padding: 0; }
 .examples__item { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); column-gap: 16px; padding: 7px 0; border-bottom: 1px dashed var(--border); }
 .examples__en { font-family: var(--f-en); font-size: 17px; }
@@ -1254,10 +1259,11 @@ button { font: inherit; transition: linear 0.15s; }
 .ex__redo-text .lvl-tag { padding: 0 4px; font-size: 9px; line-height: 1.45; }
 
 /* ---------- Навигация по страницам ---------- */
-.pager-current { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 6px 8px; margin-top: 20px;
+.pager-current { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: center; gap: 6px 8px; margin-top: 20px;
   font-family: var(--f-mono); font-size: 11.5px; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); text-align: center; }
 /* название открытой страницы шрифтом текста, чтобы читалось как название, а не подпись */
-.pager-current__levels { display: inline-flex; align-items: center; column-gap: 8px; white-space: nowrap; }
+/* по базовой линии: подписи моноширинным шрифтом, название и метка уровня стоят на одной строке текста, а не по центрам блоков */
+.pager-current__levels { display: inline-flex; align-items: baseline; column-gap: 8px; white-space: nowrap; }
 .pager-current__levels .lvl-tag { font-size: 10px; }
 .pager-current__title { font-family: var(--f-body); font-size: 14px; font-weight: 600; letter-spacing: 0; text-transform: none; color: var(--ink); }
 .pager { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; margin-top: 20px; }
@@ -1442,6 +1448,20 @@ button { font: inherit; transition: linear 0.15s; }
   .rule-table__cell { padding: 6px 12px; border: 0; }
   .rule-table__cell + .rule-table__cell { border-left: 0; border-top: 1px dashed var(--border); }
   .rule-table__cell[data-label]::before { content: attr(data-label); display: block; margin-bottom: 1px; font-size: 11px; font-weight: 700; letter-spacing: .05em; text-transform: uppercase; color: var(--muted); }
+  /* «Неправильные глаголы»: таблица остается таблицей — 142 карточки по четыре строки читать неудобно */
+  .irregular .rule-table { overflow-x: auto; border: 1px solid var(--accent); border-top-width: 4px; border-radius: 10px; background: var(--sheet); }
+  .irregular .rule-table__table { display: table; table-layout: fixed; font-size: 12.5px; } /* ширины колонок заданы — таблица ровно по экрану */
+  .irregular .rule-table__th:nth-child(-n+3) { width: 23%; }
+  .irregular .rule-table__head { display: table-header-group; }
+  .irregular .rule-table__body { display: table-row-group; }
+  .irregular .rule-table__row { display: table-row; margin: 0; border: 0; border-radius: 0; }
+  .irregular .rule-table__row[hidden] { display: none; }
+  .irregular .rule-table__cell { display: table-cell; padding: 5px 6px; border-bottom: 1px solid var(--border); hyphens: auto; overflow-wrap: anywhere; } /* длинное слово переносится, а не раздвигает таблицу */
+  .irregular .rule-table__cell:first-child { background: none; }
+  .irregular .rule-table__cell + .rule-table__cell { border-top: 0; border-left: 1px solid var(--border); }
+  .irregular .rule-table__cell[data-label]::before { content: none; }
+  .irregular .rule-table__th { padding: 6px; font-size: 9.5px; white-space: normal; overflow-wrap: anywhere; }
+  .irregular__input { font-size: 16px; } /* от 16px iOS не увеличивает масштаб при фокусе */
 }
 @media (prefers-reduced-motion: reduce) {
   * { transition: none !important; }

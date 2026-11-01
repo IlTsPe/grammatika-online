@@ -1,6 +1,6 @@
 /* ---------- Маршрутизация ---------- */
 /* syncToc = false при загрузке страницы: аккордеон сохраняет свое сохраненное состояние, а не следует за маршрутом */
-const PAGES = ['contents', 'mistakes', 'notes', 'about',...ABOUT.map(p => 'about-' + p.id)];
+const PAGES = ['contents', 'mistakes', 'notes', 'irregular-verbs', 'about',...ABOUT.map(p => 'about-' + p.id)];
 /* адреса страниц: на сайте (http/https) у каждой страницы свой путь от корня тренажера — …/articles/, …/articles/art-a-an,
    …/about/bookmarks, …/notes; файлы по этим путям создает make_pages.py из папки tools рядом с сайтом (копии index.html). Корень — <base href>
    страницы: в каждой копии он указывает на папку тренажера. index.html, открытый с диска (file://), живет на адресах #id */
@@ -31,10 +31,10 @@ const plainText = html => html.replace(/<[^>]+>/g, '').replace(/&nbsp;/g, ' ').r
 function pageMeta(id) {
   const t = topicById[id], ch = chapById[id], p = aboutPage(id);
   const title = t ? `${t.num} ${t.title}` : ch ? `${ch.n}. ${ch.title}` : p ? p.title
-    : { mistakes: 'Работа над ошибками', notes: 'Мои заметки', about: 'Информация', [NOT_FOUND]: 'Страница не найдена' }[id];
+    : { mistakes: 'Работа над ошибками', notes: 'Мои заметки', 'irregular-verbs': 'Неправильные глаголы', about: 'Информация', [NOT_FOUND]: 'Страница не найдена' }[id];
   const description = t ? `${plainText(t.title)} (${plainText(t.sub)}): правило и упражнения с проверкой. Уровень ${t.level}.`
     : ch ? plainText(ch.intro) : p ? `${p.title}: ${p.sub[0].toLowerCase()}${p.sub.slice(1)}.`
-    : { mistakes: 'Упражнения, в которых были ошибки, — чтобы к ним вернуться.', notes: 'Личные заметки по грамматике.', about: 'Как устроен тренажер: разделы, упражнения, прогресс, данные.' }[id]
+    : { mistakes: 'Упражнения, в которых были ошибки, — чтобы к ним вернуться.', notes: 'Личные заметки по грамматике.', 'irregular-verbs': 'Таблица неправильных глаголов английского языка: три формы (V1, V2, V3) и перевод.', about: 'Как устроен тренажер: разделы, упражнения, прогресс, данные.' }[id]
     || 'Тренажер грамматики английского языка A1–C2: правила простым языком и упражнения с проверкой.';
   return { title: title ? `${plainText(title)} — ${SITE_TITLE}` : SITE_TITLE, description };
 }
@@ -59,6 +59,7 @@ function go(id, scroll = true, syncToc = true, fromBookmarks = false) {
   else if (chapById[id]) renderChapter(chapById[id], wrap);
   else if (id === 'mistakes') renderMistakesPage(wrap);
   else if (id === 'notes') renderNotesPage(wrap);
+  else if (id === 'irregular-verbs') renderIrregularPage(wrap);
   else if (id === 'about') renderAboutPage(wrap);
   else if (aboutPage(id)) renderAboutTopic(aboutPage(id), wrap);
   else if (id === NOT_FOUND) renderNotFound(wrap);
@@ -161,6 +162,45 @@ function setDrawer(open, focus) {
 $('#menuBtn').addEventListener('click', () => setDrawer(true, true));
 $('#drawerClose').addEventListener('click', () => setDrawer(false, true));
 $('#drawerBackdrop').addEventListener('click', () => setDrawer(false));
+/* свайп влево закрывает меню: панель едет за пальцем, подложка гаснет; отпустили дальше трети ширины
+   или быстрым движением — меню закрывается, иначе возвращается на место. Вертикальная прокрутка меню не мешает:
+   направление жеста определяется по первым 10px движения */
+(function () {
+  const drawer = $('#drawer'), backdrop = $('#drawerBackdrop');
+  let x0 = 0, y0 = 0, t0 = 0, dx = 0, mode = null; /* mode: null — еще не ясно, 'swipe' — тянем меню, 'scroll' — прокрутка */
+  const reset = () => { drawer.style.transform = drawer.style.transition = backdrop.style.opacity = backdrop.style.transition = ''; };
+  const start = e => {
+    if (!drawer.classList.contains('drawer--open') || e.touches.length !== 1) return;
+    x0 = e.touches[0].clientX; y0 = e.touches[0].clientY; t0 = Date.now(); dx = 0; mode = null;
+  };
+  const move = e => {
+    if (!drawer.classList.contains('drawer--open') || mode === 'scroll' || e.touches.length !== 1) return;
+    const x = e.touches[0].clientX - x0, y = e.touches[0].clientY - y0;
+    if (!mode) {
+      if (Math.abs(x) < 10 && Math.abs(y) < 10) return;
+      mode = Math.abs(x) > Math.abs(y) && x < 0 ? 'swipe' : 'scroll';
+      if (mode === 'scroll') return;
+      drawer.style.transition = backdrop.style.transition = 'none';
+    }
+    e.preventDefault(); /* пока тянем меню, страница и список не прокручиваются */
+    dx = Math.min(0, x);
+    drawer.style.transform = `translateX(${dx}px)`;
+    backdrop.style.opacity = String(Math.max(0, 1 + dx / drawer.offsetWidth));
+  };
+  const end = () => {
+    if (mode !== 'swipe') { mode = null; return; }
+    mode = null;
+    const fast = dx < -40 && Date.now() - t0 < 250;
+    reset();
+    if (fast || dx < -drawer.offsetWidth / 3) setDrawer(false);
+  };
+  [drawer, backdrop].forEach(n => {
+    n.addEventListener('touchstart', start, { passive: true });
+    n.addEventListener('touchmove', move, { passive: false });
+    n.addEventListener('touchend', end);
+    n.addEventListener('touchcancel', end);
+  });
+})();
 addEventListener('keydown', e => {
   if (e.key !== 'Escape') return;
   if ($('#drawer').classList.contains('drawer--open')) setDrawer(false, true);

@@ -145,7 +145,7 @@ ${E([
   ["It is essential that every student <b>attend</b>.", "Важно, чтобы присутствовал каждый."]
 ])}`,
   ex: [
-    { type: 'gap', task: 'Поставьте глагол в нужную форму.', items: [
+    { type: 'gap', task: 'Поставьте глагол в нужную форму. Если в скобках несколько слов через косую черту, используйте в ответе их все — в нужной форме и порядке.', items: [
       ["It's high time you ___ (find) a job.", "found"], ["I'd rather you ___ (not / smoke) in here.", "did not smoke"],
       ["I'd rather ___ (stay) at home tonight.", "stay"], ["He talks as if he ___ (know) everything.", "knew"],
       ["I'd rather you ___ (tell) me the truth yesterday.", "had told|'d told"], ["The doctor insisted that he ___ (stay) in bed.", "stay|should stay"],

@@ -275,7 +275,19 @@ function renderEx(t, ex, ei) {
     });
   });
 
-  bCheck.addEventListener('click', () => check());
+  /* после проверки — к первой ошибке или пустому ответу, если его не видно на экране: в длинном упражнении
+     ошибка может оказаться выше или ниже кнопки «Проверить» */
+  function scrollToFirstMistake() {
+    const bad = ex.type === 'text'
+      ? rows.flatMap(r => r.inputs).find(i => i.matches('.ex__field--bad, .ex__field--miss'))
+      : rows.map(r => r.li).find(li => li.matches('.ex__item--bad, .ex__item--miss'));
+    if (!bad) return;
+    const r = bad.getBoundingClientRect(), head = $('.side')?.getBoundingClientRect();
+    const top = head && getComputedStyle($('.side')).position === 'sticky' && head.top <= 0 ? head.bottom : 0; /* мобильная шапка закрывает верх */
+    if (r.top >= top && r.bottom <= innerHeight) return;
+    bad.scrollIntoView({ block: 'center', behavior: reducedMotion() ? 'auto' : 'smooth' });
+  }
+  bCheck.addEventListener('click', () => { check(); scrollToFirstMistake(); });
   /* «Показать ответы» переключается; пока включено, ввод сохраняет подсказки на месте, а выбор варианта обновляет его строку ответа */
   function setKeysShown(on) {
     keysShown = on;
