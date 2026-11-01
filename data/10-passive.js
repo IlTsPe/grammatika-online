@@ -21,14 +21,14 @@ ${E([
 ])}
 ${N("Русские предложения без указания, кто действует, часто удобно переводить пассивом. Например, «Здесь говорят по-английски» — <i>English <b>is spoken</b> here</i>.")}
 <h3>Пассив с глаголами give, tell, show</h3>
-<p>У некоторых глаголов два дополнения: кому и что. Например, <i>They gave <b>me</b> <b>a book</b></i> — они дали мне книгу. Такие предложения можно поставить в пассив двумя способами, но обычно подлежащим делают человека, а не предмет: <i>I was given a book</i> — мне дали книгу. Дословный перевод на русский получится странным («я был дан книгой»), зато по-английски такая фраза звучит очень естественно. Так ведут себя глаголы <i>give, tell, show, send, offer, promise, ask</i>.</p>
+<p>У некоторых глаголов два дополнения: кому и что. Например, <i>They gave <b>me</b> <b>a book</b></i> — они дали мне книгу. Такие предложения можно поставить в пассив двумя способами: подлежащим делают либо человека, либо предмет. <i>I was given a book</i> — мне дали книгу (подлежащее — человек); <i>A book was given to me</i> — книгу дали мне (подлежащее — предмет). Обычно выбирают первый способ. Дословно по-русски получится «я был дан книгу» — так не говорят, зато по-английски такая фраза звучит очень естественно. Так ведут себя глаголы <i>give, tell, show, send, offer, promise, ask</i>.</p>
 ${E([
   ["I <b>was given</b> a book for my birthday.", "Мне подарили книгу на день рождения."],
   ["We <b>were told</b> to wait.", "Нам велели подождать."],
   ["She <b>was offered</b> a new job.", "Ей предложили новую работу."]
 ])}
 <h3>Глагол с предлогом</h3>
-<p>Некоторые глаголы всегда употребляются с предлогом: <i>look after, laugh at, send for, listen to</i>. Когда такое предложение переводят в пассив, предлог никуда не исчезает — он остается сразу после глагола, даже если оказывается в самом конце: <i>The doctor was sent for</i> — за врачом послали.</p>
+<p>Некоторые глаголы всегда употребляются с предлогом: <i>look after, laugh at, send for, listen to</i>. Когда такое предложение ставят в пассив, предлог никуда не исчезает — он остается сразу после глагола, даже если оказывается в самом конце: <i>The doctor was sent for</i> — за врачом послали.</p>
 ${E([
   ["They <b>sent for</b> the doctor. → The doctor <b>was sent for</b>.", "За врачом послали."],
   ["Everybody <b>laughed at</b> him. → He <b>was laughed at</b>.", "Над ним смеялись."],
@@ -58,7 +58,7 @@ ${E([
     ]},
     { type: 'gap', task: 'Перепишите предложение в пассиве (впишите сказуемое вместе с предлогом).', items: [
       ["They sent for the doctor. → The doctor ___.", "was sent for"],
-      ["Everybody laughed at his joke. → His joke ___.", "was laughed at"],
+      ["Everybody laughed at the new boy. → The new boy ___.", "was laughed at"],
       ["Granny looks after the children. → The children ___ by Granny.", "are looked after"],
       ["We will speak about this problem tomorrow. → This problem ___ tomorrow.", "will be spoken about|will be talked about"],
       ["Nobody listened to him. → He ___.", "was not listened to"],
@@ -82,6 +82,7 @@ ${T(["Время", "Пассив", "Пример"], [
   ["Past Simple", "<i>was / were + V3</i>", "<i>The room <b>was cleaned</b>.</i> — Комнату убрали."],
   ["Past Continuous", "<i>was / were being + V3</i>", "<i>The room <b>was being cleaned</b>.</i> — Комнату в тот момент убирали."],
   ["Present Perfect", "<i>have / has been + V3</i>", "<i>The room <b>has been cleaned</b>.</i> — Комнату (уже) убрали."],
+  ["Past Perfect", "<i>had been + V3</i>", "<i>The room <b>had been cleaned</b> before we came.</i> — Комнату убрали до нашего прихода."],
   ["Future Simple", "<i>will be + V3</i>", "<i>The room <b>will be cleaned</b>.</i> — Комнату уберут."],
   ["Модальные", "<i>can / must / should be + V3</i>", "<i>The room <b>must be cleaned</b>.</i> — Комнату нужно убрать."]
 ])}
@@ -123,14 +124,14 @@ ${N("Не все времена удобны в пассиве. Future Continuou
 
 { id: 'pas-causative', level: 'C1', title: 'Каузатив: have something done', sub: 'I had my hair cut',
   rule: `
-<p>Каузатив (<i>have something done</i>) показывает, что действие для нас выполнил <b>кто-то другой</b> — обычно специалист и за плату: <i>I had my hair cut</i> — меня подстригли в парикмахерской. Эта же конструкция говорит о неприятности, которая с нами случилась: <i>He had his wallet stolen</i> — у него украли кошелек.</p>
+<p>Действие в этой конструкции выполняем не мы, а <b>кто-то другой</b> — обычно специалист и за плату: <i>I had my car washed</i> — мне помыли машину (на мойке). Еще она говорит о неприятности, которая с нами случилась: <i>He had his wallet stolen</i> — у него украли кошелек.</p>
 ${F("have / get + <b>объект</b> + <b>V3</b>")}
-<p>Глагол <i>have</i> в этой конструкции меняется по временам, как обычный глагол: <i>I had my hair cut</i> (прошлое), <i>We're having our flat painted</i> (сейчас), <i>I'll have my car washed</i> (будущее). Вопрос и отрицание строят с <i>do / does / did</i>: <i>Did you have your hair cut?</i> — ты подстригся? Вместо <i>have</i> можно сказать <i>get</i> — смысл тот же, но звучит разговорнее.</p>
+<p>Глагол <i>have</i> в этой конструкции меняется по временам, как обычный глагол: <i>I had my eyes tested</i> (прошлое), <i>We're having our flat painted</i> (сейчас), <i>I'll have my car washed</i> (будущее). Вопрос и отрицание строят с <i>do / does / did</i>: <i>Did you have your bike repaired?</i> — тебе починили велосипед? Вместо <i>have</i> можно сказать <i>get</i> — смысл тот же, но звучит разговорнее.</p>
 ${E([
-  ["I <b>had my hair cut</b> yesterday.", "Вчера я подстриглась. (меня подстригли в салоне)"],
+  ["I <b>had my nails done</b> yesterday.", "Вчера мне сделали маникюр. (в салоне)"],
   ["We're <b>having our flat painted</b>.", "Нам красят квартиру."],
   ["She <b>got her car repaired</b>.", "Ей починили машину. (get — разговорнее)"],
-  ["He <b>had his wallet stolen</b>.", "У него украли кошелек. (неприятное событие)"]
+  ["They <b>had their house broken into</b>.", "Их дом ограбили. (неприятное событие)"]
 ])}
 <h3>Поручить, уговорить, заставить</h3>
 <p>Рядом с каузативом стоят похожие конструкции, в которых мы называем не предмет, а <b>человека</b>, который выполняет действие по нашей воле. Тогда после него идет не третья форма, а начальная форма глагола, потому что действие совершает он сам. С <i>have</i> это значит «поручить кому-то», с <i>get</i> — уговорить, добиться, чтобы кто-то сделал, а с <i>make</i> — заставить. Обратите внимание на частицу <i>to</i>: после <i>have</i> и <i>make</i> ее нет, а после <i>get</i> она нужна. Подробнее об инфинитиве без <i>to</i> рассказано в разделе 13 «Инфинитив», а о конструкции «глагол + кто-то + действие» — в разделе 17 «Complex Object».</p>
