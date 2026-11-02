@@ -77,7 +77,7 @@ ${N("Фраза <i>I want a coffee</i> в кафе звучит резко, по
     ]},
     { type: 'gap', task: 'Впишите недостающие слова: would, would like, would not или to + глагол из скобок.', items: [
       ["I ___ a glass of water, please. (хотел бы)", "would like"],
-      ["___ you like some tea? (хочешь)", "would"],
+      ["___ you like some orange juice? (хочешь)", "would"],
       ["She would like ___ (visit) Paris one day.", "to visit"],
       ["We ___ like to live in a big city. (не хотели бы)", "would not"],
       ["What ___ you like for dessert? (хочешь)", "would"],
@@ -162,7 +162,7 @@ ${E([
 ])}`,
   ex: [
     { type: 'choice', task: 'Выберите правильный вариант.', items: [
-      ["You ___ smoke here. It's forbidden.", ["mustn't", "don't have to"]], ["Tomorrow is Saturday, so I ___ get up early.", ["don't have to", "mustn't"]],
+      ["You ___ cross the road here. It's dangerous.", ["mustn't", "don't have to"]], ["Tomorrow is Saturday, so I ___ get up early.", ["don't have to", "mustn't"]],
       ["In Britain people ___ drive on the left.", ["have to", "can", "mustn't"]], ["I ___ remember to call Mum — it's her birthday!", ["must", "can", "could"]],
       ["Yesterday I ___ stay at work till nine.", ["had to", "must", "have to"]], ["You ___ tell anybody. It's a secret!", ["mustn't", "don't have to", "not must"]],
       ["Did she ___ wear glasses as a child?", ["have to", "must", "has to"]], ["We ___ meet Tom at the airport at noon — that was the plan.", ["were to", "must", "are to"]]
@@ -198,7 +198,7 @@ ${T(["Форма", "Значение", "Пример"], [
   ["<i>had better</i>", "лучше (а то хуже будет)", "<i>You'<b>d better</b> hurry.</i> — Тебе лучше поторопиться."]
 ])}
 <h3>Need: модальный и обычный глагол</h3>
-<p>Глагол <i>need</i> («нужно») может вести себя двумя способами. Чаще всего это обычный глагол: после него стоит <i>to</i>, вопрос и отрицание строятся с <i>do / does / did</i>, а в третьем лице единственного числа появляется окончание <i>-s</i>. Например, <i>She <b>needs to</b> rest</i> — ей нужно отдохнуть, <i>You <b>don't need to</b> come early</i> — тебе не нужно приходить рано. Но в отрицании и в вопросе <i>need</i> может стать модальным: тогда частица <i>to</i> не нужна, <i>do</i> не используется, и окончания <i>-s</i> нет. В вопросе так говорят редко, это звучит книжно: <i><b>Need</b> I come early?</i> — мне нужно прийти рано? Так, <i>You <b>needn't</b> come early</i> значит то же самое, что <i>You don't need to come early</i>, только звучит чуть книжнее. В утвердительных предложениях модального <i>need</i> не бывает, поэтому «мне нужно идти» — это только <i>I need to go</i>.</p>
+<p>Глагол <i>need</i> («нужно») может вести себя двумя способами. Чаще всего это обычный глагол: после него стоит <i>to</i>, вопрос и отрицание строятся с <i>do / does / did</i>, а в третьем лице единственного числа появляется окончание <i>-s</i>. Например, <i>She <b>needs to</b> rest</i> — ей нужно отдохнуть, <i>You <b>don't need to</b> come early</i> — тебе не нужно приходить рано. Но в отрицании и в вопросе <i>need</i> может стать модальным: тогда частица <i>to</i> не нужна, <i>do</i> не используется, и окончания <i>-s</i> нет. Так, <i>You <b>needn't</b> come early</i> значит то же самое, что <i>You don't need to come early</i>, только звучит чуть книжнее. В вопросе модальное <i>need</i> встречается еще реже и звучит совсем книжно: <i><b>Need</b> I come early?</i> — мне нужно прийти рано? В утвердительных предложениях модального <i>need</i> не бывает, поэтому «мне нужно идти» — это только <i>I need to go</i>.</p>
 <h3>Had better — «лучше бы»</h3>
 <p>Оборот <i>had better</i> дает настойчивый совет, за которым слышится предупреждение: «лучше сделай так, а то будет плохо». Хотя в нем есть <i>had</i>, речь идет о настоящем или будущем, а не о прошлом. В речи его почти всегда сокращают до <i>'d better</i>. После него ставится глагол без <i>to</i>, а отрицание образуют с помощью <i>not</i> после <i>better</i>: <i>had better not</i>. Совет с <i>had better</i> сильнее и конкретнее, чем с <i>should</i>, поэтому его дают для определенной ситуации, а не как общее правило.</p>
 ${E([
@@ -208,9 +208,9 @@ ${E([
 ${N("В отличие от <i>should</i> и других модальных глаголов, после <i>ought</i> частица <i>to</i> нужна всегда: <i>You ought <b>to</b> go</i>, а не <i>You ought go</i>.")}`,
   ex: [
     { type: 'choice', task: 'Выберите правильный вариант.', items: [
-      ["You look tired. You ___ go to bed.", ["should", "ought", "have"]], ["You ___ eat so many sweets. It's bad for your teeth.", ["shouldn't", "needn't", "don't have"]],
+      ["You have a temperature. You ___ stay at home.", ["should", "ought", "have"]], ["You ___ eat so many sweets. It's bad for your teeth.", ["shouldn't", "needn't", "don't have"]],
       ["You ___ worry. Everything is fine.", ["needn't", "needn't to", "shouldn't to"]], ["You've broken two cups today. You ought ___ be more careful.", ["to", "—", "for"]],
-      ["I ___ to buy some milk.", ["need", "needn't", "must"]], ["It's late. You'd ___ go home now.", ["better", "rather", "should"]]
+      ["I ___ to buy some milk.", ["need", "needn't", "must"]], ["It's late. You'd ___ go home now.", ["better", "must", "should"]]
     ]},
     { type: 'gap', task: 'Впишите should, shouldn\'t, ought, needn\'t или need.', items: [
       ["Your tooth has been hurting for a week. You ___ see a dentist.", "should|ought to"], ["You ___ come tomorrow: we have already finished the work.", "need not|do not need to|do not have to"],
@@ -256,7 +256,7 @@ ${N("Если нужно сказать «не может быть, чтобы�
     ]},
     { type: 'gap', task: 'Закончите предложение: must have, can\'t have, might have или should have + V3. Если в скобках несколько слов через косую черту, используйте в ответе их все — в нужной форме и порядке.', items: [
       ["The windows are broken. Somebody ___ (break) them.", "must have broken"],
-      ["She ___ (see) me — she didn't say hello. (возможно, не видела)", "might not have seen|may not have seen"],
+      ["She ___ (not / see) me — she didn't say hello. (возможно, не видела)", "might not have seen|may not have seen"],
       ["He ___ (write) this letter — he can't write!", "cannot have written|could not have written"],
       ["You failed the test. You ___ (study) more.", "should have studied|ought to have studied"],
       ["They're very late. They ___ (miss) the train.", "must have missed|might have missed|may have missed"],
@@ -269,7 +269,7 @@ ${N("Если нужно сказать «не может быть, чтобы�
       ["Возможно, он забыл о встрече.", "He may have forgotten about the meeting.|He might have forgotten about the meeting.|He may have forgotten the meeting.|He might have forgotten the meeting."]
     ]},
     { type: 'listen', at: 2, task: 'Прослушайте предложение и соберите его из слов.', items: [
-      ["The streets are wet. It must have rained in the night.", "Улицы мокрые. Наверное, ночью шел дождь."],
+      ["The lights are off. They must have gone to bed.", "Свет не горит. Наверное, они уже легли спать."],
       ["She can't have forgotten about the meeting.", "Не может быть, чтобы она забыла о встрече."],
       ["You should have told me about it earlier.", "Тебе следовало сказать мне об этом раньше."]
     ]}
@@ -284,7 +284,7 @@ ${T(["Форма", "Значение", "Пример"], [
   ["<i>was to have + V3</i>", "планировалось, но не состоялось", "<i>The meeting <b>was to have taken</b> place on Monday.</i> — Встреча должна была состояться в понедельник (но не состоялась)."],
   ["<i>won't / wouldn't</i>", "отказ, упрямство (в том числе о вещах)", "<i>The car <b>won't</b> start. He <b>wouldn't</b> listen.</i> — Машина никак не заводится. Он никак не хотел слушать."],
   ["<i>be bound to</i>", "непременно, наверняка", "<i>It's <b>bound to</b> rain.</i> — Дождь непременно пойдет."],
-  ["<i>might as well</i>", "можно с тем же успехом, почему бы и нет", "<i>We <b>might as well</b> walk.</i> — Можно и пешком пройтись."]
+  ["<i>might as well</i>", "можно с тем же успехом, почему бы и нет", "<i>It's late — we <b>might as well</b> stay.</i> — Уже поздно, можно и остаться."]
 ])}
 <h3>Needn't have или didn't need to</h3>
 <p>Обе формы говорят о том, что в прошлом в каком-то действии не было необходимости, но рассказывают разные истории. <i>Needn't have + V3</i> значит, что человек действие <b>совершил</b>, а потом оказалось, что зря: например, <i>I needn't have cooked so much</i> — я наготовил много еды, а гостей пришло мало. <i>Didn't need to + V</i> просто сообщает, что необходимости не было, и обычно человек поэтому ничего и не делал: <i>Tom gave us a lift, so we didn't need to take a taxi</i> — Том нас подвез, так что брать такси не понадобилось.</p>
@@ -307,10 +307,10 @@ ${E([
       ["Don't worry about the exam. You're ___ to pass.", ["bound", "must", "certain of"]], ["You ___ have bought me a present, but thank you!", ["needn't", "mustn't", "can't"]]
     ]},
     { type: 'translate', task: 'Переведите на английский.', items: [
-      ["Тебе не нужно было покупать мне подарок.", "You needn't have bought me a present.|You didn't have to buy me a present.|You didn't need to buy me a present."],
+      ["Зря ты так рано встал: сегодня суббота.", "You needn't have got up so early: it's Saturday today.|You needn't have got up so early: it is Saturday.|You needn't have got up so early: today is Saturday."],
       ["Машина не заводится.", "The car won't start."],
       ["Наверняка пойдет дождь.", "It is bound to rain.|It is sure to rain.|It will definitely rain.|It is definitely going to rain."],
-      ["Мы можем с тем же успехом пойти пешком.", "We might as well walk.|We may as well walk.|We might as well go on foot."]
+      ["Магазин уже закрыт, так что можно и домой пойти.", "The shop is already closed, so we might as well go home.|The shop is already closed, so we may as well go home.|The shop has already closed, so we might as well go home.|The shop has already closed, so we may as well go home.|The shop is closed already, so we might as well go home."]
     ]},
     { type: 'listen', at: 2, task: 'Прослушайте предложение и соберите его из слов.', items: [
       ["We needn't have taken so much money. Everything was cheap.", "Зря мы взяли столько денег: все было дешево."],

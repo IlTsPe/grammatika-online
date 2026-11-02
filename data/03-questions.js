@@ -64,7 +64,7 @@ ${N("Когда спрашивают о точном времени по час�
       ["___ were you sad yesterday? — Because I lost my bag.", "why"], ["___ do you go to school? — By bus.", "how"],
       ["___ bag is this? — It's my sister's.", "whose"], ["___ one do you want: the red one or the blue one?", "which"],
       ["___ time does the film start? — At seven.", "what"], ["___ old is your brother? — He is ten.", "how"],
-      ["___ did you see at the party? — Tom and Kate.", "who"], ["___ often do you play tennis? — Twice a week.", "how"]
+      ["___ did you see at the party? — Tom and Kate.", "who|whom"], ["___ often do you play tennis? — Twice a week.", "how"]
     ]},
     { type: 'gap', task: 'Впишите do, does, did, is, are, was или were.', items: [
       ["Where ___ your parents work?", "do"], ["What ___ your sister do?", "does"],
@@ -122,12 +122,12 @@ ${T(["В утверждении", "Хвостик", "Пример"], [
   ["Continuous", "<i>isn't / aren't / wasn't / weren't</i>", "<i>You <b>are</b> joking, <b>aren't you</b>?</i> — Ты ведь шутишь?"],
   ["<i>used to</i>", "<i>didn't</i>", "<i>You <b>used to</b> live here, <b>didn't you</b>?</i> — Ты ведь раньше жил здесь?"]
 ])}
-<p>Будьте внимательны с сокращением <i>'s</i>: оно может означать и <i>is</i>, и <i>has</i>. Подсказку дает следующее слово: <i>He's been to London</i> = <i>he <b>has</b> been</i> → <i>hasn't he?</i>, а <i>He's tired</i> = <i>he <b>is</b> tired</i> → <i>isn't he?</i></p>
+<p>Будьте внимательны с сокращением <i>'s</i>: оно может означать и <i>is</i>, и <i>has</i>. Подсказку дает следующее слово: <i>He's been to London</i> = <i>he <b>has</b> been</i> → <i>hasn't he?</i>; <i>He's tired</i> = <i>he <b>is</b> tired</i> → <i>isn't he?</i></p>
 <p>Так же строится «хвостик» с модальными глаголами (они разобраны в разделе 9): <i>She <b>can</b> swim, <b>can't she</b>?</i> — она ведь умеет плавать? А если утверждение начинается с <i>there is / there are</i>, в «хвостике» тоже остается <i>there</i>: <i>There is a bank near here, <b>isn't there</b>?</i> — здесь рядом есть банк, правда?</p>
 <h3>Особые случаи</h3>
 <p>Несколько «хвостиков» нужно просто запомнить. После <i>I am</i> по правилу должно было бы получиться <i>am I not</i>, но так говорят только в очень книжной речи, а в обычной — <i>aren't I</i>. Оборот <i>Let's</i> (сокращение от <i>let us</i>) значит «давай(те)», им предлагают сделать что-то вместе; к нему добавляют <i>shall we?</i> — давай?, хорошо? Здесь <i>shall</i> выражает предложение, а подробно этот глагол разобран в разделе 9 «Модальные глаголы». Если же предложение — это просьба или приказ без подлежащего (<i>Close the door</i> — закрой дверь), в «хвостике» ставят <i>will you?</i>, а еще вежливее — <i>would you?</i> или <i>could you?</i>: это смягчает приказ до просьбы. И наконец, слова <i>never</i> («никогда»), <i>nobody</i>, <i>nothing</i> сами делают утверждение отрицательным, хотя <i>not</i> в нем нет, поэтому «хвостик» будет положительным.</p>
 ${E([
-  ["I'm late, <b>aren't I</b>?", "Я опоздал, да? (после I am; am not I — ошибка)"],
+  ["I'm late, <b>aren't I</b>?", "Я опоздал, да? (после I am; am I not — очень книжно, am not I — ошибка)"],
   ["Let's go, <b>shall we</b>?", "Пойдем, ладно? (после Let's)"],
   ["Close the door, <b>will you</b>?", "Закрой дверь, хорошо? (просьба)"],
   ["You <b>never</b> eat meat, <b>do</b> you?", "Ты ведь никогда не ешь мясо? (never)"]

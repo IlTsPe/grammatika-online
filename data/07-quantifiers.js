@@ -41,7 +41,7 @@ ${N("В обычных утвердительных предложениях <i>
     ]},
     { type: 'listen', at: 2, task: 'Прослушайте предложение и соберите его из слов.', items: [
       ["How many people came to the party last night?", "Сколько человек пришло на вечеринку вчера вечером?"],
-      ["We haven't got much time. Let's hurry.", "У нас мало времени. Давай поторопимся."],
+      ["We haven't got much time. Let's hurry.", "У нас не так много времени. Давай поторопимся."],
       ["We met a lot of interesting people on our trip.", "Во время поездки мы познакомились со многими интересными людьми."]
     ]}
   ]},
@@ -69,7 +69,7 @@ ${N("Не путайте два разных <i>little</i>. Перед исчи�
       ["My brother lent me ___ money last week.", "a little"], ["There were ___ people at the concert; the hall was almost empty.", "few"],
       ["I learnt ___ French at school — enough to order food.", "a little"], ["We waited ___ minutes, and then the bus came.", "a few"],
       ["She drinks very ___ water. It's bad for her.", "little"], ["Only ___ students passed the exam. Most failed.", "a few"],
-      ["Let's drink ___ water. We are very tired after the long walk.", "a little"], ["I have ___ questions about yesterday's lesson.", "a few"]
+      ["Let's have ___ water. We are very thirsty after the long walk.", "a little"], ["I have ___ questions about yesterday's lesson.", "a few"]
     ]},
     { type: 'choice', task: 'Выберите правильный вариант.', items: [
       ["There is ___ milk left, enough for one cup.", ["a little", "a few", "few"]], ["The town has ___ hotels, so book early.", ["few", "little", "a little"]],
@@ -77,7 +77,7 @@ ${N("Не путайте два разных <i>little</i>. Перед исчи�
       ["We have ___ hope now. It's almost impossible.", ["little", "a little", "few"]], ["Quite ___ people came — almost a hundred!", ["a few", "few", "a little"]]
     ]},
     { type: 'translate', task: 'Переведите на английский.', items: [
-      ["У меня осталось немного денег.", "I have a little money left.|I have got a little money left."],
+      ["У меня осталось немного денег.", "I have a little money left.|I have got a little money left.|I have some money left.|I have got some money left."],
       ["У него мало друзей.", "He has few friends.|He has very few friends.|He has got few friends.|He doesn't have many friends.|He hasn't got many friends.|He has got very few friends."],
       ["Мы подождали несколько минут.", "We waited a few minutes.|We waited for a few minutes."],
       ["У нас мало времени.", "We have little time.|We have very little time.|We don't have much time.|We haven't got much time."],

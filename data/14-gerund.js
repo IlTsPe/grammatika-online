@@ -32,14 +32,14 @@ ${E([
   ex: [
     { type: 'gap', task: 'Поставьте глагол в форму герундия.', items: [
       ["When I was a child, I enjoyed ___ (read) detective stories.", "reading"], ["Would you mind ___ (close) the door?", "closing"],
-      ["She has always been good at ___ (draw).", "drawing"], ["Thank you for ___ (help) me.", "helping"],
+      ["My dad is very good at ___ (fix) things.", "fixing"], ["I'm interested in ___ (learn) Spanish.", "learning"],
       ["He left without ___ (say) goodbye.", "saying"], ["I'm looking forward to ___ (see) you.", "seeing"],
       ["Have you finished ___ (write) the essay?", "writing"], ["___ (swim) in the sea is much more pleasant than swimming in a pool.", "swimming"],
       ["She gave up ___ (smoke) last year.", "smoking"], ["It's no use ___ (call) her — she isn't at home.", "calling"],
       ["The film we saw yesterday is worth ___ (watch).", "watching"], ["I'm tired of ___ (wait).", "waiting"]
     ]},
     { type: 'choice', task: 'Выберите правильный вариант.', items: [
-      ["He suggested ___ to the cinema.", ["going", "to go", "go"]], ["I can't stand ___ in queues.", ["waiting", "to wait", "wait"]],
+      ["He suggested ___ to the cinema.", ["going", "to go", "go"]], ["I can't help ___ when I hear this song.", ["smiling", "to smile", "smile"]],
       ["As a child, she was afraid of ___ alone at night.", ["being", "to be", "be"]], ["After ___ dinner, we went for a walk.", ["having", "to have", "have"]],
       ["Keep ___! You're doing well.", ["trying", "to try", "try"]], ["Instead of ___, you should help me!", ["complaining", "to complain", "complain"]]
     ]},
@@ -69,7 +69,7 @@ ${E([
 
 { id: 'ger-vs-inf', level: 'B2', title: 'Герундий или инфинитив', sub: 'stop smoking / stop to smoke',
   rule: `
-<p>Одни глаголы требуют после себя герундий (<i>enjoy reading</i>), другие — инфинитив (<i>decide to go</i>), а после третьих возможны оба варианта. Причем у некоторых из них смысл зависит от того, какая форма идет после глагола. Такие глаголы лучше запоминать вместе с формой, которая после них идет.</p>
+<p>Одни глаголы требуют после себя герундий (<i>enjoy reading</i>), другие — инфинитив (<i>decide to go</i>), а после третьих возможны оба варианта. Причем у некоторых из них смысл зависит от того, какая форма идет после глагола. Такие глаголы лучше запоминать сразу вместе с нужной формой.</p>
 ${T(["Только -ing", "Только to V", "Оба, смысл тот же"], [
   ["<i>enjoy, finish, mind, avoid, suggest, keep, miss, practise</i>", "<i>want, decide, hope, plan, agree, refuse, promise, manage, afford</i>", "<i>begin, start, continue, like, love, hate, prefer</i>"]
 ])}

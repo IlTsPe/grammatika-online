@@ -58,7 +58,7 @@ ${T(["Форма", "Значение", "Пример"], [
   ["<i>When / while + V-ing</i>", "уточнение времени", "<i><b>While crossing</b> the street, be careful.</i> — Переходя улицу, будьте осторожны."]
 ])}
 <h3>Как выбрать форму причастия</h3>
-<p>Разница между <i>V-ing</i> и <i>having + V3</i> такая же, как между русскими деепричастиями «делая» и «сделав». А <i>V3</i> берут, когда действие совершили над подлежащим: дом не строил сам себя, его построили.</p>
+<p><i>V-ing</i> — как русское деепричастие «делая», <i>having + V3</i> — как «сделав». А <i>V3</i> берут, когда действие совершили над подлежащим: дом не строил сам себя, его построили.</p>
 <p>Слова <i>when</i> и <i>while</i> перед причастием добавляют, чтобы прямо показать время: «когда», «в то время как». Без них оборот тоже понятен, но с ними смысл точнее. Отрицание <i>not</i> всегда ставят перед причастием, а не после него.</p>
 <p>Если действие совершили над подлежащим, да еще раньше главного, получается длинная форма <i>having been + V3</i>. Она встречается редко и звучит книжно: <i><b>Having been told</b> the news, she phoned her mother</i> — после того как ей сообщили новость, она позвонила маме.</p>
 <h3>Вместо относительного придаточного</h3>
@@ -81,7 +81,7 @@ ${E([
 ${N("Не путайте независимый оборот с ошибкой, о которой сказано выше. Здесь подлежащее оборота названо прямо (<i><b>The weather</b> being fine</i>), поэтому у главного предложения вполне может быть другое подлежащее.")}`,
   ex: [
     { type: 'choice', task: 'Выберите правильную форму причастия.', items: [
-      ["___ the letter, she burst into tears.", ["Having read", "Read", "Being read"]], ["___ in 1890, the building is now a museum.", ["Built", "Building", "Having built"]],
+      ["___ the letter, she burst into tears.", ["Having read", "Read", "Being read"]], ["___ by a famous architect, the theatre attracts many tourists.", ["Designed", "Designing", "Having designed"]],
       ["___ what to say, I kept silent.", ["Not knowing", "Not known", "Knowing not"]], ["___ along the street, I met an old friend.", ["Walking", "Walked", "Having been walked"]],
       ["The man ___ to the manager is my uncle.", ["talking", "talked", "having talk"]], ["___ by the news, he couldn't sleep.", ["Shocked", "Shocking", "Having shocking"]],
       ["___ all his money, he had to borrow from friends.", ["Having spent", "Spent", "Being spent"]], ["___ the door, she went to bed.", ["Having locked", "Locked", "Being locked"]]

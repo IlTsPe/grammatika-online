@@ -154,7 +154,7 @@ ${N("Как и в теме 1.3, двух отрицаний сразу не бы
 
 { id: 'pron-compounds', level: 'A2', title: 'Производные: somebody, anything, nowhere', sub: 'someone, nothing, everywhere',
   rule: `
-<p>Если к <i>some, any, no, every</i> добавить <i>-body</i>, <i>-thing</i> или <i>-where</i>, получатся слова «кто-то», «что-то», «где-то» и похожие: <i>somebody, anything, nowhere, everywhere</i>. Выбирать между ними нужно по тем же правилам, что и между <i>some, any, no</i>: в утверждении — <i>some-</i>, в вопросе и отрицании — <i>any-</i>.</p>
+<p>Если к <i>some, any, no, every</i> добавить <i>-body</i>, <i>-thing</i> или <i>-where</i>, получатся слова «кто-то», «что-то», «где-то» и похожие: <i>somebody, anything, nowhere, everywhere</i>. Выбирать между ними нужно по тем же правилам, что и между <i>some, any, no</i>: в утверждении — <i>some-</i>, в вопросе и в отрицании с <i>not</i> — <i>any-</i>, в отрицании без <i>not</i> — <i>no-</i>.</p>
 ${T(["", "+ body / one (люди)", "+ thing (вещи)", "+ where (место)"], [
   ["<i>some</i>", "<i>somebody / someone</i> — кто-то", "<i>something</i> — что-то", "<i>somewhere</i> — где-то"],
   ["<i>any</i>", "<i>anybody / anyone</i> — кто-нибудь; любой", "<i>anything</i> — что-нибудь; что угодно", "<i>anywhere</i> — где-нибудь; где угодно"],
@@ -204,7 +204,7 @@ ${N("Хотя <i>everyone</i> значит «все», глагол после �
 ${T(["Слово", "Значение", "Пример"], [
   ["<i>every</i>", "каждый (все вместе, 3 и больше), + ед. ч.", "<i><b>Every</b> student has a book.</i> — У каждого студента есть книга."],
   ["<i>each</i>", "каждый в отдельности, в том числе из двух", "<i>She had a bag in <b>each</b> hand. <b>Each</b> student got a mark.</i> — В каждой руке у нее было по сумке. Каждый студент получил оценку."],
-  ["<i>all</i>", "все, весь, + мн. ч. или неисчисляемое", "<i><b>All</b> students, <b>all</b> the money, <b>all</b> day</i>"],
+  ["<i>all</i>", "все, весь, + мн. ч. или неисчисляемое", "<i><b>All</b> students, <b>all</b> the money, <b>all</b> day</i> — все студенты, все деньги, весь день"],
   ["<i>both</i>", "оба (из двух)", "<i><b>Both</b> my parents are doctors.</i> — Оба моих родителя врачи."],
   ["<i>either</i>", "любой из двух; в отрицании — ни один", "<i>Take <b>either</b> road.</i> — Поезжай по любой из двух дорог."],
   ["<i>neither</i>", "ни тот, ни другой", "<i><b>Neither</b> answer is correct.</i> — Ни один из двух ответов не верен."]

@@ -94,7 +94,7 @@ ${N("Место <i>enough</i> зависит от соседнего слова:
       ["I called him ___ (ask) about the homework.", "to ask"], ["She left early so as ___ (not / be) late.", "not to be"]
     ]},
     { type: 'choice', task: 'Выберите правильный вариант.', items: [
-      ["He is ___ to drive a car.", ["too young", "enough young", "young enough not"]], ["She is ___ to go to school alone.", ["old enough", "enough old", "too old"]],
+      ["Our dog is ___ to jump over the fence.", ["too old", "enough old", "old enough not"]], ["She is ___ to go to school alone.", ["old enough", "enough old", "too old"]],
       ["We don't have ___ to finish today.", ["enough time", "enough of time", "too time"]], ["The tea is ___ to drink.", ["too hot", "hot enough not", "enough hot"]],
       ["This bag is too heavy ___ to lift.", ["for her", "to her", "her"]], ["We came here ___ the new museum.", ["to visit", "for visit", "for visiting"]]
     ]},
@@ -113,7 +113,7 @@ ${N("Место <i>enough</i> зависит от соседнего слова:
 
 { id: 'inf-forms', level: 'B2', title: 'Формы инфинитива', sub: 'to do, to be done, to have done',
   rule: `
-<p>У инфинитива, как и у обычного глагола, есть разные формы. Они показывают две вещи. Во-первых, когда происходит действие — одновременно с главным (<i>to see</i>) или раньше него (<i>to have seen</i>). Во-вторых, выполняет ли его само подлежащее (<i>to tell</i>) или действие совершают над подлежащим (<i>to be told</i>).</p>
+<p>У инфинитива, как и у обычного глагола, есть разные формы. Они показывают две вещи. Во-первых, когда происходит действие — одновременно с главным или позже него (<i>to see</i>) или раньше него (<i>to have seen</i>). Во-вторых, выполняет ли его само подлежащее (<i>to tell</i>) или действие совершают над подлежащим (<i>to be told</i>).</p>
 ${T(["Форма", "Актив", "Пассив"], [
   ["Simple — одновременно / позже", "<i>to <b>write</b></i>", "<i>to <b>be written</b></i>"],
   ["Continuous — в процессе", "<i>to <b>be writing</b></i>", "—"],
@@ -129,7 +129,7 @@ ${E([
   ["They seem <b>to have been waiting</b> for hours.", "Похоже, они ждут уже несколько часов. (длилось до момента речи)"]
 ])}
 <p>Пример пассивного инфинитива: <i>I want to be invited</i> — я хочу, чтобы меня пригласили. Отрицательная частица <i>not</i> ставится перед любой формой инфинитива: <i>I'm sorry <b>not to have sent</b> it</i> — простите, что не отправил.</p>
-<p>Оборот <i>seem to</i> (кажется, похоже) — самый частый спутник разных форм инфинитива, потому что по форме инфинитива видно, о каком времени догадка: <i>seems to be</i> — сейчас, <i>seems to have been</i> — раньше. Такие предложения называются сложным подлежащим; подробно они разобраны в разделе 18 «Complex Subject».</p>
+<p>Оборот <i>seem to</i> («кажется», «похоже») — самый частый спутник разных форм инфинитива, потому что по форме инфинитива видно, о каком времени догадка: <i>seems to be</i> — сейчас, <i>seems to have been</i> — раньше. Такие предложения называются сложным подлежащим; подробно они разобраны в разделе 18 «Complex Subject».</p>
 ${N("Чаще всего перфектный инфинитив стоит после <i>seem, be lucky, be sorry, be glad</i>.")}`,
   ex: [
     { type: 'choice', task: 'Выберите нужную форму инфинитива.', items: [

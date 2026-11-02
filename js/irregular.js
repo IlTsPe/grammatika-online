@@ -68,7 +68,7 @@ const IRREGULAR = [
   ['lead', 'led', 'led', 'вести'],
   ['lean', 'leant / leaned', 'leant / leaned', 'наклоняться; опираться'],
   ['leap', 'leapt / leaped', 'leapt / leaped', 'прыгать'],
-  ['learn', 'learnt / learned', 'learnt / learned', 'учить, узнавать'],
+  ['learn', 'learnt / learned', 'learnt / learned', 'учить (самому), изучать; узнавать'],
   ['leave', 'left', 'left', 'уходить; оставлять'],
   ['lend', 'lent', 'lent', 'давать взаймы'],
   ['let', 'let', 'let', 'позволять'],
@@ -78,17 +78,17 @@ const IRREGULAR = [
   ['make', 'made', 'made', 'делать, создавать'],
   ['mean', 'meant', 'meant', 'значить; иметь в виду'],
   ['meet', 'met', 'met', 'встречать'],
-  ['mistake', 'mistook', 'mistaken', 'ошибаться; принимать за другого'],
+  ['mistake', 'mistook', 'mistaken', 'неправильно понять; принимать за другого'],
   ['overcome', 'overcame', 'overcome', 'преодолевать'],
   ['pay', 'paid', 'paid', 'платить'],
   ['put', 'put', 'put', 'класть, ставить'],
   ['quit', 'quit', 'quit', 'бросать (занятие)'],
   ['read', 'read', 'read', 'читать'],
-  ['ride', 'rode', 'ridden', 'ездить верхом, на велосипеде'],
+  ['ride', 'rode', 'ridden', 'ездить (верхом, на велосипеде)'],
   ['ring', 'rang', 'rung', 'звонить'],
   ['rise', 'rose', 'risen', 'подниматься'],
   ['run', 'ran', 'run', 'бежать'],
-  ['say', 'said', 'said', 'сказать'],
+  ['say', 'said', 'said', 'говорить, сказать'],
   ['see', 'saw', 'seen', 'видеть'],
   ['seek', 'sought', 'sought', 'искать'],
   ['sell', 'sold', 'sold', 'продавать'],
@@ -129,7 +129,7 @@ const IRREGULAR = [
   ['swim', 'swam', 'swum', 'плавать'],
   ['swing', 'swung', 'swung', 'качаться'],
   ['take', 'took', 'taken', 'брать'],
-  ['teach', 'taught', 'taught', 'учить, преподавать'],
+  ['teach', 'taught', 'taught', 'учить (кого-то), преподавать'],
   ['tear', 'tore', 'torn', 'рвать'],
   ['tell', 'told', 'told', 'рассказывать'],
   ['think', 'thought', 'thought', 'думать'],
@@ -149,7 +149,7 @@ function renderIrregularPage(wrap) {
   wrap.append(crumbs([{ label: 'Содержание', to: 'contents' }, 'Неправильные глаголы']));
   wrap.append(el('h1', 'sheet__title', 'Неправильные глаголы'));
   const intro = el('p', 'sheet__intro');
-  intro.innerHTML = `Прошедшее время (Past Simple, V2) и третью форму (Past Participle, V3) эти глаголы образуют не по правилу с <i>-ed</i>, их нужно запомнить. Всего в таблице ${IRREGULAR.length} ${plural(IRREGULAR.length, 'глагол', 'глагола', 'глаголов')}. Как ими пользоваться, рассказано в темах <button class="link-btn" type="button" data-go="t-past-simple">2.3 Past Simple</button> и <button class="link-btn" type="button" data-go="t-present-perfect">2.9 Present Perfect</button>.`;
+  intro.innerHTML = `Прошедшее время (Past Simple, V2) и третью форму (Past Participle, V3) эти глаголы образуют не по правилу с <i>-ed</i>, их нужно запомнить. Всего в таблице ${IRREGULAR.length} ${plural(IRREGULAR.length, 'глагол', 'глагола', 'глаголов')}. Как пользоваться этими формами, рассказано в темах <button class="link-btn" type="button" data-go="t-past-simple">2.3 Past Simple</button> и <button class="link-btn" type="button" data-go="t-present-perfect">2.9 Present Perfect</button>.`;
   wrap.append(intro);
   /* поиск по любой форме и по переводу: строки, где нет совпадения, скрываются */
   const label = el('label', 'irregular__search');

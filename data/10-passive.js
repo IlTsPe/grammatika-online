@@ -4,7 +4,7 @@ topics: [
 
 { id: 'pas-simple', level: 'B1', title: 'Пассив в Simple', sub: 'is made, was built, will be done',
   rule: `
-<p>Пассив (страдательный залог) используют, когда важно само действие или то, над чем оно совершается, а не тот, кто его выполняет. Обычно так бывает, если исполнитель неизвестен, очевиден или просто неважен: <i>This house was built in 1905</i> — неважно, кто строил. Если исполнителя все же нужно назвать, его вводят через <i>by</i>, а инструмент — через <i>with</i>, как в теме 6.4.</p>
+<p>Пассив (страдательный залог) используют, когда важно само действие или то, над чем оно совершается, а не тот, кто его выполняет. Обычно так бывает, если исполнитель неизвестен, очевиден или просто неважен: <i>My bike was stolen</i> — мой велосипед украли (кто украл, неизвестно). Если исполнителя все же нужно назвать, его вводят через <i>by</i>, а инструмент — через <i>with</i>, как в теме 6.4.</p>
 ${F("<b>be</b> в нужном времени + <b>V3</b>")}
 <p><i>V3</i> — третья форма глагола, как в Present Perfect (тема 2.9).</p>
 ${T(["Время", "Актив", "Пассив"], [
@@ -21,7 +21,7 @@ ${E([
 ])}
 ${N("Русские предложения без указания, кто действует, часто удобно переводить пассивом. Например, «Здесь говорят по-английски» — <i>English <b>is spoken</b> here</i>.")}
 <h3>Пассив с глаголами give, tell, show</h3>
-<p>У некоторых глаголов два дополнения: кому и что. Например, <i>They gave <b>me</b> <b>a book</b></i> — они дали мне книгу. Такие предложения можно поставить в пассив двумя способами: подлежащим делают либо человека, либо предмет. <i>I was given a book</i> — мне дали книгу (подлежащее — человек); <i>A book was given to me</i> — книгу дали мне (подлежащее — предмет). Обычно выбирают первый способ. Дословно по-русски получится «я был дан книгу» — так не говорят, зато по-английски такая фраза звучит очень естественно. Так ведут себя глаголы <i>give, tell, show, send, offer, promise, ask</i>.</p>
+<p>У некоторых глаголов два дополнения: кому и что. Например, <i>They gave <b>me</b> <b>a book</b></i> — они дали мне книгу. Такие предложения можно поставить в пассив двумя способами: подлежащим делают либо человека, либо предмет. <i>I was given a book</i> — мне дали книгу (подлежащее — человек); <i>A book was given to me</i> — книгу дали мне (подлежащее — предмет). Обычно выбирают первый способ. Дословно <i>I was given a book</i> по-русски звучит как «я был дан книгу» — так не говорят, зато по-английски такая фраза звучит очень естественно. Так ведут себя глаголы <i>give, tell, show, send, offer, promise, ask</i>.</p>
 ${E([
   ["I <b>was given</b> a book for my birthday.", "Мне подарили книгу на день рождения."],
   ["We <b>were told</b> to wait.", "Нам велели подождать."],
@@ -42,7 +42,7 @@ ${E([
       ["'War and Peace' ___ (write) by Tolstoy.", "was written"], ["Bread ___ (bake) here every day.", "is baked"],
       ["The thief ___ (catch) last night.", "was caught"], ["The new bridge ___ (open) next year.", "will be opened"],
       ["I ___ (invite) to the party yesterday.", "was invited"], ["These cars ___ (make) in Japan nowadays.", "are made"],
-      ["The museum ___ (not / visit) by many tourists these days.", "is not visited"], ["When ___ America discovered?", "was"]
+      ["The museum ___ (not / visit) by many tourists these days.", "is not visited"], ["When ___ America ___ (discover)?", ["was", "discovered"]]
     ]},
     { type: 'choice', task: 'Выберите правильный вариант.', items: [
       ["The window ___ by the children yesterday.", ["was broken", "broke", "has broken"]], ["Cheese ___ from milk.", ["is made", "makes", "is making"]],
@@ -110,10 +110,10 @@ ${N("Не все времена удобны в пассиве. Future Continuou
       ["People grow rice in China. → Rice ___ in China.", "is grown"]
     ]},
     { type: 'translate', task: 'Переведите на английский, используя пассив.', items: [
-      ["Мою машину сейчас ремонтируют.", "My car is being repaired now.|My car is being repaired at the moment.|My car is being fixed now.|My car is being fixed at the moment."],
-      ["Письмо уже отправлено.", "The letter has already been sent.|The letter has been sent already."],
-      ["Эту работу нужно сделать к пятнице.", "This work must be done by Friday.|This work has to be done by Friday.|This work needs to be done by Friday.|The work must be done by Friday.|The work has to be done by Friday.|The work needs to be done by Friday."],
-      ["Все билеты уже проданы.", "All the tickets have already been sold.|All the tickets have been sold already.|All tickets have already been sold."]
+      ["Нашу улицу сейчас ремонтируют.", "Our street is being repaired now.|Our street is being repaired at the moment."],
+      ["Окна уже вымыты.", "The windows have already been washed.|The windows have been washed already.|The windows have already been cleaned.|The windows have been cleaned already."],
+      ["Собаку нужно кормить два раза в день.", "The dog must be fed twice a day.|The dog has to be fed twice a day.|The dog needs to be fed twice a day."],
+      ["Когда мы пришли, все билеты уже были проданы.", "When we arrived, all the tickets had already been sold.|When we came, all the tickets had already been sold.|When we got there, all the tickets had already been sold.|When we arrived, all the tickets had been sold.|When we came, all the tickets had been sold.|When we got there, all the tickets had been sold."]
     ]},
     { type: 'listen', at: 2, task: 'Прослушайте предложение и соберите его из слов.', items: [
       ["Our kitchen is being painted, so we're eating in the living room.", "Нашу кухню красят, поэтому мы едим в гостиной."],
@@ -126,7 +126,7 @@ ${N("Не все времена удобны в пассиве. Future Continuou
   rule: `
 <p>Действие в этой конструкции выполняем не мы, а <b>кто-то другой</b> — обычно специалист и за плату: <i>I had my car washed</i> — мне помыли машину (на мойке). Еще она говорит о неприятности, которая с нами случилась: <i>He had his wallet stolen</i> — у него украли кошелек.</p>
 ${F("have / get + <b>объект</b> + <b>V3</b>")}
-<p>Глагол <i>have</i> в этой конструкции меняется по временам, как обычный глагол: <i>I had my eyes tested</i> (прошлое), <i>We're having our flat painted</i> (сейчас), <i>I'll have my car washed</i> (будущее). Вопрос и отрицание строят с <i>do / does / did</i>: <i>Did you have your bike repaired?</i> — тебе починили велосипед? Вместо <i>have</i> можно сказать <i>get</i> — смысл тот же, но звучит разговорнее.</p>
+<p>Глагол <i>have</i> в этой конструкции меняется по временам, как обычный глагол: <i>I had my eyes tested</i> (прошлое), <i>We're having our windows replaced</i> (сейчас), <i>I'll have my car washed</i> (будущее). В простых временах вопрос и отрицание строят с <i>do / does / did</i>, как у обычного глагола: <i>Did you have your bike repaired?</i> — тебе починили велосипед? Вместо <i>have</i> можно сказать <i>get</i> — смысл тот же, но звучит разговорнее.</p>
 ${E([
   ["I <b>had my nails done</b> yesterday.", "Вчера мне сделали маникюр. (в салоне)"],
   ["We're <b>having our flat painted</b>.", "Нам красят квартиру."],
@@ -134,7 +134,7 @@ ${E([
   ["They <b>had their house broken into</b>.", "Их дом ограбили. (неприятное событие)"]
 ])}
 <h3>Поручить, уговорить, заставить</h3>
-<p>Рядом с каузативом стоят похожие конструкции, в которых мы называем не предмет, а <b>человека</b>, который выполняет действие по нашей воле. Тогда после него идет не третья форма, а начальная форма глагола, потому что действие совершает он сам. С <i>have</i> это значит «поручить кому-то», с <i>get</i> — уговорить, добиться, чтобы кто-то сделал, а с <i>make</i> — заставить. Обратите внимание на частицу <i>to</i>: после <i>have</i> и <i>make</i> ее нет, а после <i>get</i> она нужна. Подробнее об инфинитиве без <i>to</i> рассказано в разделе 13 «Инфинитив», а о конструкции «глагол + кто-то + действие» — в разделе 17 «Complex Object».</p>
+<p>Рядом с каузативом стоят похожие конструкции, в которых мы называем не предмет, а <b>человека</b>, который выполняет действие по нашей воле. Тогда после этого человека идет не третья форма, а начальная форма глагола, потому что действие совершает он сам. С <i>have</i> это значит «поручить кому-то», с <i>get</i> — уговорить, добиться, чтобы кто-то сделал, а с <i>make</i> — заставить. Обратите внимание на частицу <i>to</i>: после <i>have</i> и <i>make</i> ее нет, а после <i>get</i> она нужна. Подробнее об инфинитиве без <i>to</i> рассказано в разделе 13 «Инфинитив», а о конструкции «глагол + кто-то + действие» — в разделе 17 «Complex Object».</p>
 ${T(["Конструкция", "Значение", "Пример"], [
   ["<i>have + кто-то + V</i>", "поручить", "<i>I'll <b>have</b> the porter <b>bring</b> your bags.</i> — Я попрошу носильщика принести ваши сумки."],
   ["<i>get + кто-то + to V</i>", "уговорить", "<i>I'll <b>get</b> my brother <b>to help</b> me.</i> — Я уговорю брата мне помочь."],
@@ -143,9 +143,9 @@ ${T(["Конструкция", "Значение", "Пример"], [
 ${N("Сравните: <i>I cut my hair</i> — я подстригся сам; <i>I <b>had</b> my hair <b>cut</b></i> — меня подстриг парикмахер.")}`,
   ex: [
     { type: 'gap', task: 'Составьте каузатив из слов в скобках или поставьте глагол в нужную форму (с to или без to). Если в скобках несколько слов через косую черту, используйте в ответе их все — в нужной форме и порядке.', items: [
-      ["I ___ (have / my coat / clean) yesterday.", "had my coat cleaned"], ["We are ___ (have / our flat / paint) next week.", "having our flat painted"],
+      ["I ___ (have / my coat / clean) yesterday.", "had my coat cleaned"], ["We are ___ (have / our roof / repair) next week.", "having our roof repaired"],
       ["She ___ (get / her car / repair) last month.", "got her car repaired"], ["She ___ (have / her bag / steal) at the station.", "had her bag stolen"],
-      ["You should ___ (have / your eyes / test).", "have your eyes tested"], ["Can you get your sister ___ (call) me back?", "to call"],
+      ["You should ___ (have / your teeth / check).", "have your teeth checked"], ["Can you get your sister ___ (call) me back?", "to call"],
       ["The coach made us ___ (run) ten laps.", "run"], ["I'll have my secretary ___ (send) you the documents.", "send"]
     ]},
     { type: 'translate', task: 'Переведите на английский.', items: [

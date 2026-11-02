@@ -26,7 +26,7 @@ ${N("Некоторые двусложные прилагательные мог
 <h3>Farther и further</h3>
 <p>У <i>far</i> («далеко, далекий») две пары форм. Когда речь идет о расстоянии, подходят обе: <i>farther</i> и <i>further</i> — дальше. Например, <i>My house is <b>farther / further</b> from the school than yours</i> — мой дом дальше от школы, чем твой. Но у <i>further</i> есть еще значение «дальнейший, дополнительный», и тогда <i>farther</i> не годится: <i>for <b>further</b> information</i> — для получения дополнительной информации.</p>
 <h3>Good и well, bad и badly</h3>
-<p>В таблице исключений рядом стоят прилагательное и наречие: <i>good</i> («хороший») и <i>well</i> («хорошо»), <i>bad</i> («плохой») и <i>badly</i> («плохо»). Степени сравнения у них общие: <i>She sings <b>better</b> than me</i> — она поет лучше меня. Чем прилагательное отличается от наречия, рассказано в следующей теме этого раздела.</p>`,
+<p>В таблице исключений рядом стоят прилагательное и наречие: <i>good</i> («хороший») и <i>well</i> («хорошо»), <i>bad</i> («плохой») и <i>badly</i> («плохо»). У каждой пары степени сравнения общие: <i>She sings <b>better</b> than me</i> — она поет лучше меня. Чем прилагательное отличается от наречия, рассказано в следующей теме этого раздела.</p>`,
   ex: [
     { type: 'gap', task: 'Поставьте прилагательное в сравнительную степень.', items: [
       ["Moscow is ___ (big) than Tver.", "bigger"], ["Yesterday was ___ (hot) than today.", "hotter"],
@@ -109,7 +109,7 @@ ${N("Не каждое слово на <i>-ly</i> — наречие. <i>Friendl
 <p>Кроме сравнения с <i>than</i>, есть устойчивые схемы — их удобно выучить целиком.</p>
 ${T(["Конструкция", "Значение", "Пример"], [
   ["<i>as + прил. + as</i>", "такой же, как", "<i>She is <b>as tall as</b> her mother.</i> — Она такого же роста, как ее мама."],
-  ["<i>not as / not so + прил. + as</i>", "не такой, как", "<i>It is<b>n't as cold as</b> yesterday.</i> — Сегодня не так холодно, как вчера."],
+  ["<i>not as / not so + прил. + as</i>", "не такой, как", "<i>It is<b>n't as cold</b> today <b>as</b> yesterday.</i> — Сегодня не так холодно, как вчера."],
   ["<i>the + сравн., the + сравн.</i>", "чем…, тем…", "<i><b>The more</b> you read, <b>the more</b> you know.</i> — Чем больше читаешь, тем больше знаешь."],
   ["<i>сравн. + and + сравн.</i>", "все более и более", "<i>It's getting <b>colder and colder</b>.</i> — Становится все холоднее и холоднее."],
   ["<i>much / far / a lot + сравн.</i>", "гораздо, намного", "<i>This car is <b>much faster</b>.</i> — Эта машина гораздо быстрее."],
@@ -118,14 +118,14 @@ ${T(["Конструкция", "Значение", "Пример"], [
   ["<i>the same as / different from</i> (брит. также <i>different to</i>)", "такой же / другой", "<i>My bag is <b>the same as</b> yours.</i> — У меня такая же сумка, как у тебя."]
 ])}
 <h3>Как устроены эти конструкции</h3>
-<p>В конструкции <i>as … as</i> прилагательное стоит в обычной форме, без <i>-er</i> и <i>more</i>, потому что предметы равны: <i>as big as</i>, а не <i>as bigger as</i>. В отрицании она значит, что первый предмет «уступает» второму: <i>This flat isn't as big as our old one</i> — то есть старая квартира была больше. Чтобы сказать «в два, в три раза больше», перед ней ставят <i>twice</i> («вдвое») или <i>three times</i> («втрое»).</p>
+<p>В конструкции <i>as … as</i> прилагательное стоит в обычной форме, без <i>-er</i> и <i>more</i>, потому что предметы равны: <i>as big as</i>, а не <i>as bigger as</i>. В отрицании она значит, что первый предмет «уступает» второму: <i>This flat isn't as big as our old one</i> — эта квартира не такая большая, как наша старая, то есть старая была больше. Чтобы сказать «в два, в три раза больше», перед ней ставят <i>twice</i> («вдвое») или <i>three times</i> («втрое»).</p>
 <p>В конструкции «чем…, тем…» перед каждой сравнительной степенью стоит <i>the</i>, хотя в русском такого слова нет: <i>The sooner, the better</i> — чем раньше, тем лучше. А повтор сравнительной степени через <i>and</i> показывает, что признак постепенно нарастает; обычно его используют с глаголами <i>get</i> и <i>become</i> («становиться»). У длинных прилагательных повторяют только <i>more</i>: <i>more and more interesting</i> — все интереснее и интереснее.</p>
 <p>Наконец, после <i>different</i> ставят <i>from</i>, а не <i>than</i>, потому что это не сравнительная степень: <i>Your bag is <b>different from</b> mine</i> — твоя сумка не такая, как моя.</p>
 ${N("<i>Very</i> перед сравнительной степенью не ставят: <i>very better</i> — ошибка.")}`,
   ex: [
     { type: 'choice', task: 'Выберите правильный вариант.', items: [
       ["This is ___ restaurant I have ever been to.", ["the best", "the better", "the most good"]], ["He ran ___ than me in the race yesterday.", ["faster", "more fast", "fastest"]],
-      ["The more you practise, ___ you get.", ["the better", "better", "the best"]], ["My room in the old flat was not as ___ as yours.", ["big", "bigger", "biggest"]],
+      ["The older he gets, ___ he becomes.", ["the wiser", "wiser", "the wisest"]], ["My room in the old flat was not as ___ as yours.", ["big", "bigger", "biggest"]],
       ["Which river is ___, the Volga or the Thames?", ["longer", "longest", "more long"]], ["This flat is ___ bigger than our old one.", ["much", "very", "more"]],
       ["It's getting ___.", ["darker and darker", "dark and darker", "more and more dark"]], ["His new car is ___ mine. He bought the same model.", ["the same as", "the same like", "same as"]],
       ["Their new house is three times ___ our old one.", ["as big as", "bigger as", "as bigger than"]], ["I was ill last week, but I feel ___ today.", ["a bit better", "very better", "a bit more good"]]

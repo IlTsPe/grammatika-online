@@ -8,25 +8,25 @@ topics: [
 ${T(["Слово", "О чем", "Пример"], [
   ["<i>who</i>", "люди", "<i>The doctor <b>who</b> helped me…</i> — Врач, который мне помог…"],
   ["<i>which</i>", "предметы, животные", "<i>The book <b>which</b> I bought…</i> — Книга, которую я купил…"],
-  ["<i>that</i>", "люди и предметы (только в определительных)", "<i>The car <b>that</b> he drives…</i> — Машина, на которой он ездит…"],
+  ["<i>that</i>", "люди и предметы (только в определительных придаточных, о них ниже)", "<i>The car <b>that</b> he drives…</i> — Машина, на которой он ездит…"],
   ["<i>whose</i>", "принадлежность (чей)", "<i>The man <b>whose</b> car was stolen…</i> — Человек, у которого угнали машину…"],
   ["<i>where</i>", "место", "<i>The town <b>where</b> I was born…</i> — Город, где я родился…"],
   ["<i>when</i>", "время", "<i>The day <b>when</b> we met…</i> — День, когда мы познакомились…"]
 ])}
 <h3>Определительные и описательные придаточные</h3>
-<p>Придаточные бывают двух видов, и от этого зависят запятые и выбор слова. Определительное придаточное нужно, чтобы понять, о ком именно идет речь: если его убрать, смысл потеряется. Например, в <i>The man who called you is my boss</i> без придаточного неясно, какой человек имеется в виду. Такие придаточные запятыми не выделяют, и в них можно использовать <i>that</i>. Описательное придаточное только добавляет сведения о том, кто и так понятен: в <i>My brother, who lives in Kazan, is a teacher</i> ясно, о каком брате речь, а то, что он живет в Казани, — просто дополнительная информация. Такие придаточные выделяют запятыми, и <i>that</i> в них не ставят.</p>
+<p>Придаточные бывают двух видов, и от этого зависят запятые и выбор слова. Определительное придаточное нужно, чтобы понять, о ком именно идет речь: если его убрать, смысл потеряется. Например, <i>The man who called you is my boss</i> — человек, который тебе звонил, мой начальник. Без придаточного неясно, какой человек имеется в виду. Такие придаточные запятыми не выделяют, и в них можно использовать <i>that</i>. Описательное придаточное только добавляет сведения о том, кто и так понятен: <i>My brother, who lives in Kazan, is a teacher</i> — мой брат, который живет в Казани, учитель. Здесь ясно, о каком брате речь, а то, что он живет в Казани, — просто дополнительная информация. Такие придаточные выделяют запятыми, и <i>that</i> в них не ставят.</p>
 <p>Кроме того, в определительном придаточном слово <i>who, which</i> или <i>that</i> можно опустить, если оно не подлежащее, а дополнение, то есть если после него идет свое подлежащее: <i>the book (that) <b>you</b> gave me</i>. А в <i>the man who called you</i> слово <i>who</i> — подлежащее (кто позвонил?), поэтому опускать его нельзя.</p>
 ${E([
   ["The girl <b>who sits</b> next to me is from Minsk.", "Девочка, которая сидит рядом со мной, из Минска. (определительное: без него непонятно, о ком речь; без запятых)"],
-  ["Our teacher, <b>who is from London</b>, speaks Russian well.", "Наш учитель, который приехал из Лондона, хорошо говорит по-русски. (описательное: дополнительная информация; с запятыми, that нельзя)"],
+  ["Our teacher, <b>who is from London</b>, speaks Russian well.", "Наш учитель, который родом из Лондона, хорошо говорит по-русски. (описательное: дополнительная информация; с запятыми, that нельзя)"],
   ["The book (<b>that</b>) you gave me was great.", "Книга, которую ты мне подарил, была отличная. (that — дополнение, его можно опустить)"]
 ])}`,
   ex: [
     { type: 'gap', task: 'Впишите who, which, that, whose, where или when. Если слово можно опустить, допустим и «-».', items: [
       ["The woman ___ lives next door is a doctor.", "who|that"], ["This is the house ___ I was born.", "where"],
-      ["The book ___ you gave me was great.", "which|that|-|0"], ["That's the man ___ car was stolen.", "whose"],
+      ["The cake ___ my granny made was delicious.", "which|that|-|0"], ["That's the man ___ car was stolen.", "whose"],
       ["Moscow, ___ is the capital of Russia, is huge.", "which"], ["I remember the day ___ we first met.", "when|that|-|0"],
-      ["My brother, ___ lives in Kazan, is a teacher.", "who"], ["The film ___ we saw yesterday was boring.", "which|that|-|0"],
+      ["My aunt, ___ works in a hospital, is coming to stay with us.", "who"], ["The film ___ we saw yesterday was boring.", "which|that|-|0"],
       ["Is this the shop ___ you bought your coat?", "where"], ["The girl ___ mother is a singer is in my class.", "whose"]
     ]},
     { type: 'translate', task: 'Переведите на английский.', items: [
@@ -53,7 +53,7 @@ ${T(["Когда говорят", "Пример"], [
   ["противопоставляют", "<i>I don't eat meat, but I <b>do</b> eat fish.</i> — Мясо я не ем, а вот рыбу ем."],
   ["настойчиво и тепло приглашают", "<i><b>Do</b> sit down!</i> — Садитесь же! <i><b>Do</b> come again!</i> — Обязательно приходите еще!"]
 ])}
-<p>Так усиливают только Present Simple и Past Simple. Если в предложении уже есть <i>be</i>, <i>have</i> в перфектном времени или модальный глагол, <i>do</i> не добавляют, а усиливают голосом — ударением на этом глаголе: <i>I <b>am</b> ready!</i> — я правда готов! На письме такое ударение обычно выделяют курсивом. Если же <i>have</i> — смысловой глагол или часть <i>have to</i>, <i>do</i> нужен: <i>I <b>do</b> have time</i>, <i>I <b>do</b> have to go</i>. Исключение — повелительное наклонение: в нем <i>do</i> можно поставить и перед <i>be</i>: <i><b>Do</b> be careful!</i> — будь же осторожен!</p>
+<p>Так усиливают только Present Simple и Past Simple. Если в предложении уже есть <i>be</i>, <i>have</i> в перфектном времени или модальный глагол, <i>do</i> не добавляют, а усиливают голосом — ударением на этом глаголе: <i>I <b>am</b> ready!</i> — я правда готов! На письме такое ударение обычно выделяют курсивом. Если же <i>have</i> — смысловой глагол или часть <i>have to</i>, <i>do</i> нужен: <i>I <b>do</b> have time</i> — время у меня правда есть, <i>I <b>do</b> have to go</i> — мне правда нужно идти. Исключение — повелительное наклонение: в нем <i>do</i> можно поставить и перед <i>be</i>: <i><b>Do</b> be careful!</i> — будь же осторожен!</p>
 ${N("Сам вспомогательный глагол по-русски отдельным словом не переводят: <i>I do like it</i> — это не «я делаю нравится», а «мне правда нравится».")}`,
   ex: [
     { type: 'gap', task: 'Усильте утверждение: впишите do, does или did и глагол из скобок в нужной форме.', items: [
@@ -72,7 +72,7 @@ ${N("Сам вспомогательный глагол по-русски отд
       ["— Tom never helps at home. — That's not true! He ___ the dishes every day.", ["does wash", "does washes", "is wash"]],
       ["___ come to our party next week! (тепло приглашаем)", ["Do", "Does", "Did"]],
       ["— You aren't ready! — I ___ ready! Let's go.", ["am", "do be", "did be"]],
-      ["I don't like coffee, but I ___ like tea.", ["do", "does", "did"]]
+      ["I don't watch TV, but I ___ listen to the radio.", ["do", "does", "did"]]
     ]},
     { type: 'translate', task: 'Переведите на английский, усилив утверждение с помощью do, does или did.', items: [
       ["Мне правда нравится твоя новая прическа.", "I do like your new haircut.|I do like your new hairstyle.|I really do like your new haircut.|I really do like your new hairstyle.|I do like your new hair.|I really do like your new hair."],
@@ -105,7 +105,7 @@ ${T(["Начало", "Значение", "Пример"], [
 <p>Эти две конструкции значат одно и то же: одно действие произошло сразу после другого — «едва… как», «не успел… как». Первое действие случилось чуть раньше, поэтому в части с инверсией стоит Past Perfect (<i>had she sat down</i>), а во второй части — обычный Past Simple (<i>the phone rang</i>). Запомните пары слов: <i>hardly</i> и <i>scarcely</i> идут вместе с <i>when</i>, а <i>no sooner</i> — с <i>than</i>, потому что <i>sooner</i> — сравнительная степень («раньше»).</p>
 <h3>Little и under no circumstances</h3>
 <p>В начале предложения <i>little</i> значит не «мало», а «совсем не»: <i>Little did they know</i> — они совсем не знали, даже не подозревали. Обычно так говорят, когда человек не догадывается о том, что случится потом. А <i>under no circumstances</i> (ни при каких обстоятельствах) выражает строгий запрет, его часто можно увидеть в инструкциях. Отрицание уже есть в самом выражении, поэтому <i>not</i> после него не ставят.</p>
-${N("Если в предложении Present или Past Simple, для инверсии нужен вспомогательный <i>do / does / did</i>: <i>Rarely <b>do</b> we go out</i>. А в конструкциях <i>Only when…</i> и <i>Not until…</i> порядок слов меняется не сразу, а во <b>второй, главной</b> части: <i>Only when I got home <b>did I</b> realise…</i>")}`,
+${N("Если в предложении Present или Past Simple, для инверсии нужен вспомогательный <i>do / does / did</i>: <i>Rarely <b>do</b> we go out</i> — мы редко куда-то выходим. А в конструкциях <i>Only when…</i> и <i>Not until…</i> порядок слов меняется не сразу, а во <b>второй, главной</b> части: <i>Only when I got home <b>did I</b> realise…</i>")}`,
   ex: [
     { type: 'gap', task: 'Впишите пропущенное слово.', items: [
       ["Never ___ I seen such a beautiful sunset.", "have"], ["No sooner had I opened the door ___ the cat ran out.", "than"],
@@ -135,11 +135,11 @@ ${T(["Выражение", "Форма", "Пример"], [
   ["<i>as if / as though</i>", "<i>+ Past (нереально)</i>", "<i>He talks as if he <b>knew</b> everything.</i> — Он говорит так, как будто все знает."]
 ])}
 <h3>Как понимать эти выражения</h3>
-<p><i>It's time</i> значит «пора», а со словом <i>high</i> — «давно пора», то есть с упреком: это уже надо было сделать. Если речь идет о самом себе или вообще, без указания лица, проще сказать <i>It's time to go</i>; если же назван тот, кто должен действовать, после него идет Past Simple: <i>It's time <b>we went</b></i>.</p>
+<p><i>It's time</i> значит «пора», а со словом <i>high</i> — «давно пора», то есть с упреком: это уже надо было сделать. Если речь идет о самом себе или вообще, без указания лица, проще сказать <i>It's time to go</i> — пора идти; если же назван тот, кто должен действовать, после него идет Past Simple: <i>It's time <b>we went</b></i> — нам пора.</p>
 <p><i>Would rather</i> (сокращенно <i>'d rather</i>) значит «лучше бы, предпочел бы». Если человек говорит о своем собственном желании, после <i>would rather</i> идет глагол без <i>to</i>, как в теме 13.1. Если он хочет, чтобы что-то сделал другой человек, этого человека называют, а глагол ставят в Past Simple, хотя речь о настоящем. А если жалеют о прошлом, о том, что уже не изменить, нужен Past Perfect. Это та же логика, что в предложениях с <i>I wish</i> (тема 11.5).</p>
 <p><i>As if</i> и <i>as though</i> значат «как будто». Past после них показывает, что сравнение не соответствует действительности: в примере <i>He talks as if he knew everything</i> на самом деле он знает не все. В книжной речи после <i>as if</i> часто говорят <i>were</i> для всех лиц: <i>She behaves as if she <b>were</b> the boss</i> — она ведет себя так, будто она здесь начальник.</p>
 <h3>Сослагательное после глаголов требования</h3>
-<p>После глаголов <i>suggest, insist, recommend, demand</i> и выражений <i>it is essential that</i>, <i>it is vital that</i> глагол стоит в начальной форме — без <i>-s</i>, даже с <i>he</i> и <i>she</i>. В британском английском так же часто говорят с <i>should</i>: <i>insisted that he <b>should stay</b></i>. Такую форму называют сослагательным наклонением: она показывает, что речь идет не о факте, а о том, что кто-то требует, советует или считает нужным. Это похоже на русское «чтобы»: «настоял, чтобы он лежал», а не «настоял, что он лежит». Отрицание ставят прямо перед глаголом, без <i>do</i>: <i>He suggested that we <b>not go</b></i> — он предложил, чтобы мы не ходили.</p>
+<p>После глаголов <i>suggest, insist, recommend, demand</i> и выражений <i>it is essential that</i>, <i>it is vital that</i> глагол в придаточном с <i>that</i> стоит в начальной форме — без <i>-s</i>, даже с <i>he</i> и <i>she</i>. В британском английском так же часто говорят с <i>should</i>: <i>insisted that he <b>should stay</b></i>. Такую форму называют сослагательным наклонением: она показывает, что речь идет не о факте, а о том, что кто-то требует, советует или считает нужным. Это похоже на русское «чтобы»: «настоял, чтобы он лежал», а не «настоял, что он лежит». Отрицание ставят прямо перед глаголом, без <i>do</i>: <i>He suggested that we <b>not go</b></i> — он предложил, чтобы мы не ходили.</p>
 ${E([
   ["The doctor insisted that he <b>stay</b> in bed.", "Врач настоял, чтобы он лежал."],
   ["It is essential that every student <b>attend</b>.", "Важно, чтобы присутствовал каждый."]
@@ -176,7 +176,7 @@ ${T(["Конструкция", "Пример", "Что выделяем"], [
 <h3>Как строить такие предложения</h3>
 <p>В конструкции <i>It is / was … that / who …</i> то, что хотят выделить, ставят между <i>it was</i> и <i>that</i>, а остальное предложение идет после. Если выделяют человека, можно сказать <i>who</i> или <i>that</i>; если что-то другое — время, место, предмет, — только <i>that</i>: <i>It was <b>in Paris</b> that they met</i> — именно в Париже они познакомились. Время глагола <i>be</i> зависит от того, о каком времени речь: о прошлом — <i>it was</i>, о настоящем — <i>it is</i>.</p>
 <p>В конструкции с <i>What…</i> сначала говорят, о чем пойдет речь, а самое важное оставляют на конец, после <i>is</i> или <i>was</i>. Когда выделяют целое действие, используют <i>What … did was</i>, а затем называют действие начальной формой глагола; частицу <i>to</i> перед ним можно поставить, а можно опустить. Вариант с <i>All … is</i> устроен так же, но значит «единственное, что; всего лишь»: в <i>All I want is a cup of tea</i> человек хочет только чаю и ничего больше.</p>
-${N("В конструкции с <i>What…</i> глагол обычно стоит в единственном числе, даже если дальше идет множественное: <i>What we need <b>is</b> more people</i>.")}`,
+${N("В конструкции с <i>What…</i> глагол <i>is / was</i> после части с <i>What…</i> обычно стоит в единственном числе, даже если дальше идет множественное: <i>What we need <b>is</b> more people</i> — нам нужно больше людей.")}`,
   ex: [
     { type: 'gap', task: 'Впишите пропущенное слово.', items: [
       ["It was Tom ___ broke the window, not me.", "who|that"], ["___ I need is a long holiday.", "what|all"],
@@ -253,13 +253,13 @@ ${N("После <i>think</i> отрицательный ответ строят 
   ex: [
     { type: 'gap', task: 'Впишите одно слово.', items: [
       ["— Will it rain tomorrow? — I hope ___.", "not"], ["— Is she coming? — I think ___.", "so"],
-      ["I don't like this dress. Can I see the red ___?", "one"], ["He can play the piano, and so ___ his sister.", "can"],
-      ["— I'm not hungry. — Neither ___ I.", "am"], ["You don't have to come if you don't want ___.", "to"],
+      ["My pen doesn't work. Can you lend me ___?", "one"], ["He can play the piano, and so ___ his sister.", "can"],
+      ["— I'm not hungry. — Neither ___ I.", "am"], ["I'll help you if you want me ___.", "to"],
       ["These shoes are too small. Have you got any bigger ___?", "ones"], ["— Did you lock the door? — I'm afraid ___. Sorry!", "not"],
       ["She promised to call, but she ___ (не позвонила).", "did not"], ["— I love jazz. — So ___ I.", "do"]
     ]},
     { type: 'translate', task: 'Переведите на английский.', items: [
-      ["Надеюсь, что нет.", "I hope not."],
+      ["— Ты опоздаешь? — Боюсь, что да.", "Will you be late? — I'm afraid so.|Are you going to be late? — I'm afraid so."],
       ["— Я не умею плавать. — Я тоже.", "I can't swim. — Neither can I.|I can't swim. — Nor can I.|I can't swim. — Me neither."],
       ["Мне не нравится эта сумка. Покажите красную.", "I don't like this bag. Show me the red one.|I don't like this bag. Can I see the red one?|I don't like this bag. Could you show me the red one?|I don't like this bag. Can you show me the red one?"],
       ["Он сказал, что придет, но не пришел.", "He said he would come, but he didn't.|He said that he would come, but he didn't."]

@@ -15,7 +15,7 @@ ${E([
   ["He says he <b>is</b> busy. → He said he <b>was</b> busy.", "Он говорит, что занят. → Он сказал, что занят. (если главный глагол в настоящем, сдвига нет; если в прошедшем — время сдвигается)"],
   ["She hoped she <b>would pass</b> the exam.", "Она надеялась, что сдаст экзамен. (будущее в прошедшем)"]
 ])}
-${N("Сдвигать время не нужно, если во второй части — общеизвестный факт, который верен всегда: <i>The teacher said that the Earth <b>goes</b> round the Sun.</i>")}`,
+${N("Сдвигать время не нужно, если во второй части — общеизвестный факт, который верен всегда: <i>The teacher said that the Earth <b>goes</b> round the Sun</i> — учитель сказал, что Земля вращается вокруг Солнца.")}`,
   ex: [
     { type: 'gap', task: 'Поставьте глагол в скобках в нужную форму по правилу согласования времен. Если в скобках несколько слов через косую черту, используйте в ответе их все — в нужной форме и порядке.', items: [
       ["I knew that she ___ (be) at home.", "was"], ["She said that she ___ (live) in Kazan.", "lived"],
@@ -77,7 +77,7 @@ ${N("После <i>tell</i> обязательно нужно сказать, к
     ]},
     { type: 'choice', task: 'Выберите правильный вариант.', items: [
       ["Tom ___ me he was busy.", ["told", "said", "asked"]], ["She ___ that she was hungry.", ["said", "told", "asked"]],
-      ["He said he ___ the next day.", ["would come", "will come", "comes"]], ["She said she had visited Paris two years ___.", ["before", "ago", "last"]],
+      ["She said she ___ us a postcard from Rome.", ["would send", "will send", "sends"]], ["She said she had visited Paris two years ___.", ["before", "ago", "last"]],
       ["They told us they ___ moving.", ["were", "will", "have"]], ["He said, “I ___ it.” → He said he had done it.", ["did", "had", "would do"]]
     ]},
     { type: 'translate', task: 'Переведите на английский.', items: [
@@ -104,7 +104,7 @@ ${T(["Прямая речь", "Косвенная речь"], [
   ["<i>“You should rest.”</i> — «Вам следует отдохнуть».", "<i>The doctor <b>advised</b> me <b>to rest</b>.</i> — Врач посоветовал мне отдохнуть."],
   ["<i>“Let's go to the cinema.”</i> — «Давай сходим в кино».", "<i>He <b>suggested going</b> to the cinema.</i> — Он предложил сходить в кино."]
 ])}
-${N("Если просьба с отрицанием («не опаздывайте»), <i>not</i> ставится перед <i>to</i>: <i>told us <b>not to</b> be late</i>, а не <i>to not be</i>.")}
+${N("Если просьба с отрицанием («не жди меня»), <i>not</i> ставится перед <i>to</i>: <i>She asked me <b>not to</b> wait</i>, а не <i>to not wait</i>.")}
 <h3>Suggest — «предложить сделать вместе»</h3>
 <p>Фразу с <i>Let's…</i> («давай…») обычно пересказывают глаголом <i>suggest</i>. После него идет не инфинитив, а форма на <i>-ing</i> — герундий: <i>She suggested having a break</i> — она предложила сделать перерыв. Подробно герундий разобран в разделе 14 «Герундий». Есть и второй способ: после <i>suggest</i> поставить целое придаточное с <i>that</i>, а в нем — подлежащее и глагол в начальной форме или с <i>should</i>. Например, <i>Tom suggested (that) we go home</i> или <i>Tom suggested that we should go home</i> — Том предложил пойти домой. А вот сказать <i>suggested us to go</i> нельзя.</p>`,
   ex: [
@@ -125,7 +125,7 @@ ${N("Если просьба с отрицанием («не опаздывай�
     { type: 'translate', task: 'Переведите на английский.', items: [
       ["Тренер велел нам не разговаривать.", "The coach told us not to talk.|The coach told us not to speak."],
       ["Мама попросила меня не опаздывать.", "Mum asked me not to be late.|Mother asked me not to be late.|My mother asked me not to be late.|My mum asked me not to be late."],
-      ["Врач посоветовал мне остаться в постели.", "The doctor advised me to stay in bed."],
+      ["Мама велела мне вымыть руки.", "Mum told me to wash my hands.|My mum told me to wash my hands.|Mother told me to wash my hands.|My mother told me to wash my hands."],
       ["Он велел мне не трогать его вещи.", "He told me not to touch his things."]
     ]},
     { type: 'listen', at: 2, task: 'Прослушайте предложение и соберите его из слов.', items: [

@@ -23,7 +23,7 @@ ${E([
   ["<b>at</b> home, <b>at</b> work, <b>at</b> the cinema, <b>at</b> a party", "дома, на работе, в кино, на вечеринке"]
 ])}
 <h3>Почему on the bus, но in a car</h3>
-<p>Русское «в» и «на» здесь не помогает: в английском свои привычки, и у части из них есть логика. С транспортом правило такое: в большой общественный транспорт, по которому можно встать и пройти, англичане словно «заходят на площадку», поэтому говорят <i>on</i>: <i><b>on</b> the bus</i> — в автобусе, <i><b>on</b> the train</i> — в поезде, <i><b>on</b> the plane</i> — в самолете. А в маленьком транспорте можно только сидеть внутри, как в коробке, поэтому — <i>in</i>: <i><b>in</b> a car</i> — в машине, <i><b>in</b> a taxi</i> — в такси. На велосипеде и мотоцикле сидят сверху, поэтому тоже <i>on</i>: <i><b>on</b> a bike</i> — на велосипеде.</p>
+<p>Русские «в» и «на» здесь не помогают: в английском свои привычки, и у части из них есть логика. С транспортом правило такое: в большом общественном транспорте можно стоять и ходить по салону, как по полу, поэтому англичане говорят <i>on</i> — словно человек стоит на площадке: <i><b>on</b> the bus</i> — в автобусе, <i><b>on</b> the train</i> — в поезде, <i><b>on</b> the plane</i> — в самолете. А в маленьком транспорте можно только сидеть внутри, как в коробке, поэтому — <i>in</i>: <i><b>in</b> a car</i> — в машине, <i><b>in</b> a taxi</i> — в такси. На велосипеде и мотоцикле сидят сверху, поэтому тоже <i>on</i>: <i><b>on</b> a bike</i> — на велосипеде.</p>
 <p>Логика есть и у других примеров выше: этаж — это поверхность, на которой стоишь (<i>on the first floor</i>), а картина и небо — пространство, внутри которого что-то видно (<i>in the picture</i>, <i>in the sky</i>). Но такие выражения, как <i>at home</i> или <i>at work</i>, объяснить правилом трудно — их проще запомнить готовыми.</p>
 <h3>Above и over</h3>
 <p>Оба предлога значат «над», и часто их можно заменить друг другом. Но <i>above</i> просто показывает, что один предмет находится выше другого: <i>The picture hangs <b>above</b> the sofa</i> — картина висит над диваном. А <i>over</i> чаще используют, когда что-то накрывает предмет или движется над ним с одной стороны на другую: <i>She put a blanket <b>over</b> the child</i> — она укрыла ребенка одеялом; <i>The plane flew <b>over</b> the city</i> — самолет пролетел над городом.</p>
@@ -95,7 +95,7 @@ ${E([
       ["We had a test ___ Monday.", "on"], ["We went skiing ___ winter.", "in"],
       ["What did you do ___ the weekend?", "at|on"], ["My sister's birthday is ___ 15 March.", "on"],
       ["I'm going to read ___ the evening.", "in"], ["I'll see you ___ next week.", "-|0"],
-      ["The shops are closed ___ Sundays.", "on"], ["Owls hunt ___ night.", "at"],
+      ["The shops are closed ___ Sundays.", "on"], ["My father often works ___ night.", "at"],
       ["I'll be ready ___ five minutes.", "in"], ["We met ___ last Friday.", "-|0"]
     ]},
     { type: 'choice', task: 'Выберите предлог.', items: [
@@ -113,7 +113,7 @@ ${E([
     ]},
     { type: 'listen', at: 2, task: 'Прослушайте предложение и соберите его из слов.', items: [
       ["On Monday the lesson started at nine o'clock.", "В понедельник урок начался в девять часов."],
-      ["I have lived here since 2015.", "Я живу здесь с 2015 года."],
+      ["My grandparents have lived in this village since 1990.", "Мои бабушка и дедушка живут в этой деревне с 1990 года."],
       ["We are going to the sea in July for two weeks.", "В июле мы едем на море на две недели."]
     ]}
   ]},
@@ -136,7 +136,7 @@ ${T(["Предлог", "Значение", "Пример"], [
 ${N("Два частых исключения. Со словом <i>home</i> предлог <i>to</i> не ставят: <i>go <b>home</b>, come home</i>. А после <i>arrive</i> («прибывать») используют не <i>to</i>, а <i>in</i> — для городов и стран (<i>arrive <b>in</b> Moscow</i>) или <i>at</i> — для зданий и мест (<i>arrive <b>at</b> the station</i>).")}`,
   ex: [
     { type: 'gap', task: 'Впишите предлог: to, into, out of, across, through, along, past, off или from.', items: [
-      ["She took a pen ___ her bag.", "out of|from"], ["We walked ___ the forest.", "through"],
+      ["She took a pen ___ her bag.", "out of|from"], ["The train went ___ a long tunnel.", "through"],
       ["He fell ___ his bike and hurt his knee.", "off"], ["They swam ___ the river.", "across"],
       ["Let's go ___ the cinema tonight.", "to"], ["The cat jumped ___ the box and fell asleep in it.", "into"],
       ["We walked ___ the river bank.", "along"], ["I got a letter ___ my grandmother.", "from"],
@@ -172,7 +172,7 @@ ${T(["Глагол + предлог", "Прилагательное + предл
   ["<i>wait <b>for</b></i> — ждать", "<i>fond <b>of</b></i> — любить"],
   ["<i>think <b>of / about</b></i> — думать о", "<i>angry <b>with</b></i> кого-то / <i><b>about</b></i> что-то — сердиться на кого-то / из-за чего-то"],
   ["<i>agree <b>with</b></i> — соглашаться с", "<i>famous <b>for</b></i> — знаменитый чем"],
-  ["<i>pay <b>for</b></i> — платить за", "<i>different <b>from</b></i> — отличный от"],
+  ["<i>pay <b>for</b></i> — платить за", "<i>different <b>from</b></i> — отличающийся от"],
   ["<i>laugh <b>at</b></i> — смеяться над", "<i>tired <b>of</b></i> — уставший от"],
   ["<i>belong <b>to</b></i> — принадлежать", "<i>married <b>to</b></i> — женат на, замужем за"]
 ])}
@@ -215,11 +215,11 @@ ${T(["Предлог", "Значение", "Пример"], [
       ["We went to the seaside ___ train.", "by"], ["She cut the cake ___ a big knife.", "with"],
       ["I gave my old books ___ my cousins.", "to"], ["Moscow is the capital ___ Russia.", "of"],
       ["Bring me a cup ___ coffee, please.", "of"], ["The teacher explained the rule ___ us again.", "to"],
-      ["We sent the documents ___ post.", "by"], ["Open the door ___ the kitchen ___ this key.", ["of", "with"]]
+      ["We sent the documents ___ post.", "by"], ["Open the door ___ the kitchen ___ this key.", ["of|to", "with"]]
     ]},
     { type: 'listen', at: 2, task: 'Прослушайте предложение и соберите его из слов.', items: [
       ["My sister was afraid of dogs, but she was fond of cats.", "Моя сестра боялась собак, но любила кошек."],
-      ["It depends on tomorrow's weather.", "Это зависит от завтрашней погоды."],
+      ["The price depends on the size of the room.", "Цена зависит от размера комнаты."],
       ["Are you interested in music or art?", "Тебе интересна музыка или искусство?"]
     ]}
   ]}

@@ -14,7 +14,7 @@ ${T(["Пример", "Кто действует + что делает"], [
   ["<i>I'd like <b>you to come</b>.</i> — Мне бы хотелось, <b>чтобы вы пришли</b>.", "<i>you + to come</i>"]
 ])}
 <h3>Просьбы, советы и приказы</h3>
-<p>По той же схеме строятся предложения с глаголами <i>ask, tell, advise, order, allow</i> — вы уже встречали их в косвенной речи (тема 12.3).</p>
+<p>По той же схеме строятся предложения с глаголами <i>ask, tell, advise, order</i> (вы уже встречали их в косвенной речи, тема 12.3), а также <i>allow</i>.</p>
 ${E([
   ["The officer <b>ordered the soldiers to stop</b>.", "Офицер приказал солдатам остановиться."]
 ])}
@@ -104,7 +104,7 @@ ${E([
     { type: 'choice', task: 'Выберите правильный вариант.', items: [
       ["I saw him ___ the house.", ["leave", "to leave", "left"]], ["We heard the baby ___ in the next room.", ["crying", "to cry", "cried"]],
       ["Did you notice her ___ in?", ["come", "to come", "came"]], ["I felt the ground ___ under my feet.", ["shaking", "to shake", "shaken"]],
-      ["She watched the children ___ in the park.", ["playing", "to play", "played"]], ["He was seen ___ the bank.", ["to enter", "enter", "entered"]]
+      ["She watched the birds ___ around the garden.", ["flying", "to fly", "flown"]], ["He was seen ___ the bank.", ["to enter", "enter", "entered"]]
     ]},
     { type: 'gap', task: 'Закончите предложение, используя Complex Object с глаголом восприятия: V — если действие в первом предложении завершено, V-ing — если оно было в процессе.', items: [
       ["He crossed the street. I saw it. → I saw him ___ the street.", "cross"],
@@ -117,7 +117,7 @@ ${E([
     { type: 'translate', task: 'Переведите на английский.', items: [
       ["Я видел, как он вошел в дом.", "I saw him enter the house.|I saw him come into the house.|I saw him go into the house.|I saw him walk into the house."],
       ["Мы слышали, как она поет.", "We heard her singing.|We heard her sing."],
-      ["Я почувствовал, как кто-то коснулся моей руки.", "I felt somebody touch my hand.|I felt someone touch my hand.|I felt somebody touch my arm.|I felt someone touch my arm."]
+      ["Я видел, как она улыбнулась.", "I saw her smile."]
     ]},
     { type: 'listen', at: 2, task: 'Прослушайте предложение и соберите его из слов.', items: [
       ["I saw a little boy cross the road at a red light.", "Я видел, как маленький мальчик перешел дорогу на красный свет."],

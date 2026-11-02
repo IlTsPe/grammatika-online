@@ -13,7 +13,7 @@ ${T(["Лицо", "Настоящее", "Прошедшее", "Будущее"], 
 <p>В скобках показаны сокращенные формы. В разговоре и в неофициальных текстах местоимение и глагол сливаются в одно слово, а пропущенная буква заменяется апострофом: <i>I am</i> → <i>I'm</i>, <i>he is</i> → <i>he's</i>, <i>we are</i> → <i>we're</i>. Так же сокращается и <i>will</i>: <i>I will be</i> → <i>I'll be</i>. Значение от этого не меняется.</p>
 <h3>Отрицание и вопрос</h3>
 <p>Чтобы построить отрицание, после глагола <i>to be</i> ставят частицу <i>not</i>. Ее тоже часто сокращают: <i>is not</i> → <i>isn't</i>, <i>are not</i> → <i>aren't</i>, <i>was not</i> → <i>wasn't</i>, <i>were not</i> → <i>weren't</i>; только <i>am not</i> так не сокращают: с местоимением сливается <i>am</i>, а <i>not</i> остается отдельным словом — <i>I'm not</i>. Чтобы задать вопрос, глагол переносят на первое место, перед подлежащим: <i>You are ready</i> → <i><b>Are</b> you ready?</i> — ты готов?</p>
-<p>На такой вопрос обычно отвечают коротко: <i>yes</i> или <i>no</i>, местоимение и тот же глагол — например, <i>Yes, I am</i> или <i>No, I'm not</i>. Это называется кратким ответом; по-русски ему соответствует просто «Да» или «Нет». Если же в начале вопроса стоит вопросительное слово (<i>where, when, why</i>), такой вопрос называют специальным: он спрашивает не «да или нет?», а о подробностях. Порядок слов в нем такой же, только впереди стоит вопросительное слово. Подробно все виды вопросов разобраны в разделе 3 «Вопросы».</p>
+<p>На такой вопрос обычно отвечают коротко: <i>yes</i> или <i>no</i>, местоимение и тот же глагол — например, <i>Yes, I am</i> или <i>No, I'm not</i>. Это называется кратким ответом; по-русски ему соответствует просто «Да» или «Нет». Если же в начале вопроса стоит вопросительное слово (<i>where, when, why</i>), такой вопрос называют специальным: он спрашивает не «да или нет?», а о подробностях. Порядок слов в нем такой же, как в вопросе с ответом «да / нет» (глагол перед подлежащим), только впереди стоит вопросительное слово. Подробно все виды вопросов разобраны в разделе 3 «Вопросы».</p>
 ${E([
   ["I <b>am not</b> tired. She <b>isn't</b> here. They <b>weren't</b> at home.", "Я не устал. Ее здесь нет. Их не было дома. (not ставится после глагола)"],
   ["<b>Are</b> you ready? — Yes, I <b>am</b>. / No, I'm not.", "Ты готов? — Да. / Нет. (в вопросе глагол перед подлежащим)"],
@@ -36,7 +36,7 @@ ${N("Когда мы говорим о возрасте, погоде, врем�
     { type: 'choice', task: 'Выберите правильный вариант.', items: [
       ["___ you ready?", ["Are", "Is", "Am"]], ["She ___ at school today. She is ill.", ["isn't", "aren't", "am not"]],
       ["— Is he your friend? — Yes, he ___.", ["is", "does", "'s"]], ["I ___ twelve years old.", ["am", "have", "is"]],
-      ["Tomorrow it ___ sunny.", ["will be", "is be", "will"]], ["There ___ ten people in the shop yesterday.", ["were", "was", "are"]]
+      ["Tomorrow it ___ sunny.", ["will be", "is be", "will"]], ["My grandparents ___ teachers when they were young.", ["were", "was", "are"]]
     ]},
     { type: 'translate', task: 'Переведите на английский.', items: [
       ["Мой брат — врач.", "My brother is a doctor."], ["Где ты был вчера?", "Where were you yesterday?"],
@@ -154,12 +154,12 @@ ${N("После <i>did</i> смысловой глагол возвращает�
 
 { id: 't-future', level: 'A1', title: 'Future Simple', sub: "I'll help · Will you…? · I won't",
   rule: `
-<p>Будущее время с <i>will</i> подходит, когда решение принимается прямо в момент речи, когда что-то обещают или предлагают, а также когда говорят, что, по мнению говорящего, случится. Основные случаи — в таблице.</p>
+<p>Будущее время с <i>will</i> подходит, когда решение принимается прямо в момент речи, когда что-то обещают или предлагают, а также когда говорящий предсказывает, что, по его мнению, случится. Основные случаи — в таблице.</p>
 ${F("will + <b>V</b>")}
 ${T(["Когда", "Пример"], [
   ["решение в момент речи", "<i>There's a man at the door. — I'<b>ll</b> open it.</i> — У двери стоит мужчина. — Я открою."],
   ["обещание, предложение, просьба", "<i>I <b>will</b> call you tonight, I promise.</i> — Я позвоню тебе вечером, обещаю."],
-  ["прогноз-мнение (I think, probably)", "<i>I think it <b>will</b> be a good film.</i> — Думаю, это будет хороший фильм."],
+  ["прогноз по мнению говорящего (<i>I think, probably</i>)", "<i>I think it <b>will</b> be a good film.</i> — Думаю, это будет хороший фильм."],
   ["факт о будущем", "<i>I <b>will</b> be 15 next year.</i> — В следующем году мне будет 15."]
 ])}
 <h3>Как строятся формы</h3>
@@ -180,9 +180,9 @@ ${T(["Когда", "Пример"], [
     ]},
     { type: 'translate', task: 'Переведите на английский.', items: [
       ["Я помогу тебе.", "I will help you."],
-      ["Я позвоню тебе вечером.", "I will call you in the evening.|I will call you this evening.|I will phone you in the evening.|I'll phone you this evening.|I will call you tonight.|I will phone you tonight."],
-      ["Обещаю, я не опоздаю.", "I promise I will not be late."],
-      ["Ты поможешь мне?", "Will you help me?"],
+      ["Я позвоню тебе вечером.", "I will call you in the evening.|I will call you this evening.|I will phone you in the evening.|I'll phone you this evening.|I will call you tonight.|I will phone you tonight.|I will ring you in the evening.|I will ring you this evening.|I will ring you tonight."],
+      ["Обещаю, я не опоздаю.", "I promise I will not be late.|I promise that I will not be late."],
+      ["Ты придешь завтра?", "Will you come tomorrow?"],
       ["Думаю, ему понравится подарок.", "I think he will like the present.|I think he will like the gift."]
     ]},
     { type: 'listen', at: 2, task: 'Прослушайте предложение и соберите его из слов.', items: [
@@ -202,14 +202,14 @@ ${T(["Когда", "Пример"], [
 ])}
 <p>Глагол <i>be</i> в обороте меняется по лицам, как обычно: <i>I <b>am</b> going to, he <b>is</b> going to, they <b>are</b> going to</i>. Отрицание и вопрос тоже строятся через <i>be</i>: <i>I'm <b>not</b> going to buy it</i> — я не собираюсь это покупать, <i><b>Are</b> you going to buy it?</i> — ты собираешься это купить?</p>
 <h3>Will или going to</h3>
-<p>Все решает момент, когда принято решение, и то, на чем основан прогноз:</p>
+<p>Выбор зависит от того, когда принято решение и на чем основан прогноз:</p>
 ${E([
   ["— I'm hungry. — I'<b>ll</b> make a sandwich.", "— Я голоден. — Сейчас сделаю бутерброд. (решил прямо сейчас)"],
   ["I'<b>m going to</b> make a cake for her birthday.", "Я собираюсь испечь торт к ее дню рождения. (решил заранее)"],
   ["I think it <b>will</b> rain tomorrow.", "Думаю, завтра будет дождь. (просто мнение)"],
   ["Hurry up! The bus <b>is going to</b> leave.", "Скорее! Автобус сейчас уйдет. (видно, что двери закрываются)"]
 ])}
-${N("<i>Going to</i> в этом обороте не значит «идти»: <i>I'm going to sleep</i> — я собираюсь спать.")}`,
+${N("<i>Going to</i> в этом обороте не значит «идти»: <i>I'm going to stay at home</i> — я собираюсь остаться дома.")}`,
   ex: [
     { type: 'choice', task: 'Выберите will или going to.', items: [
       ["— There's a man at the door. — OK, I ___ open it.", ["will", "am going to"]], ["Look at those black clouds! It ___ rain.", ["is going to", "will"]],
@@ -221,11 +221,11 @@ ${N("<i>Going to</i> в этом обороте не значит «идти»: 
       ["Look at the sky! It ___ (snow).", "is going to snow|'s going to snow"], ["We made a decision. We ___ (sell) our old car.", "are going to sell"],
       ["He bought some paint yesterday. He ___ (paint) his room.", "is going to paint|'s going to paint"], ["I ___ (not / watch) this film. It looks boring.", "am not going to watch"],
       ["___ you ___ (visit) your grandmother this weekend?", ["are", "going to visit"]], ["Be careful! You ___ (fall)!", "are going to fall"],
-      ["They ___ (get) married in June. They told us yesterday.", "are going to get"], ["She ___ (study) medicine next year. She decided it last summer.", "is going to study|'s going to study"]
+      ["They ___ (get) married in June. They told us yesterday.", "are going to get"], ["She ___ (study) medicine next year. She decided last summer.", "is going to study|'s going to study"]
     ]},
     { type: 'translate', task: 'Переведите на английский.', items: [
       ["Мы собираемся поехать в Сочи летом.", "We are going to go to Sochi in summer.|We are going to Sochi in summer.|We are going to go to Sochi in the summer.|We're going to go to Sochi this summer.|We are going to Sochi this summer.|We are going to Sochi in the summer."],
-      ["Посмотри на часы — мы сейчас опоздаем!", "Look at the clock! We are going to be late."],
+      ["Посмотри на часы — мы сейчас опоздаем!", "Look at the clock! We are going to be late.|Look at the time! We are going to be late.|Look at your watch! We are going to be late."],
       ["Я не собираюсь это покупать.", "I am not going to buy it.|I am not going to buy this.|I am not going to buy that."],
       ["Что ты собираешься делать вечером?", "What are you going to do in the evening?|What are you going to do this evening?|What are you going to do tonight?"]
     ]},
@@ -249,11 +249,11 @@ ${M("Часто встречается со словами:", ["now", "right now
 <h3>Написание -ing</h3>
 ${E([
   ["make → mak<b>ing</b>, write → writ<b>ing</b>", "немое -e отпадает"],
-  ["swim → swim<b>ming</b>, sit → sit<b>ting</b>, run → run<b>ning</b>", "краткий ударный слог: согласная удваивается"],
+  ["swim → swim<b>ming</b>, sit → sit<b>ting</b>, run → run<b>ning</b>", "одна гласная + одна согласная в конце ударного слога: согласная удваивается, как с -ed (тема 2.3)"],
   ["lie → l<b>ying</b>, die → d<b>ying</b>", "ie → y"]
 ])}
 <h3>Другие значения</h3>
-<p>Кроме действия в момент речи, Present Continuous передает еще два значения. Во-первых, договоренность на ближайшее будущее: если встреча уже назначена, о ней говорят в Present Continuous, хотя она еще не наступила. Во-вторых, со словом <i>always</i> («всегда, вечно») это время выражает раздражение или упрек: говорящий жалуется, что что-то повторяется слишком часто. Обычное <i>He always loses his keys</i> просто сообщает факт, а вариант с <i>is always losing</i> звучит как жалоба.</p>
+<p>Кроме действия в момент речи, Present Continuous передает еще два значения. Во-первых, договоренность на ближайшее будущее: если встреча уже назначена, о ней говорят в Present Continuous, хотя она еще не наступила. Во-вторых, со словом <i>always</i> («всегда, вечно») это время выражает раздражение или упрек: говорящий жалуется, что что-то повторяется слишком часто. Сравните: <i>He always loses his keys</i> — просто факт; <i>He is always losing his keys</i> — жалоба.</p>
 ${E([
   ["We <b>are meeting</b> Sarah tomorrow.", "Завтра мы встречаемся с Сарой. (договоренность на будущее)"],
   ["He <b>is always losing</b> his keys!", "Он вечно теряет ключи! (always + Continuous — раздражение)"]
@@ -465,7 +465,7 @@ ${N("Вопрос <i>When…?</i> («когда?») о прошлом сам с�
 <p>Present Perfect Continuous подчеркивает, <b>как долго</b> длится действие. Оно началось в прошлом и продолжается до сих пор — или только что закончилось, но его след еще виден.</p>
 ${F("have / has been + <b>V-ing</b>")}
 ${E([
-  ["I <b>have been waiting</b> for you for an hour!", "Я жду тебя уже час (и все еще жду)."],
+  ["I <b>have been waiting</b> for you for an hour!", "Я жду тебя уже час. (и все еще жду)"],
   ["She <b>has been learning</b> Spanish since September.", "Она учит испанский с сентября. (начала в сентябре и продолжает)"],
   ["I'm out of breath — I<b>'ve been running</b>.", "Я запыхался — я бегал. (только что закончил, виден результат)"]
 ])}
@@ -482,7 +482,7 @@ ${N("Глаголы состояния (<i>know, like, want</i> и другие)
     { type: 'gap', task: 'Present Perfect Continuous или Present Perfect Simple?', items: [
       ["I ___ (wait) for you for an hour!", "have been waiting"], ["She ___ (learn) Spanish since September.", "has been learning|'s been learning"],
       ["How long ___ you been working here?", "have"], ["Your eyes are red. ___ you been crying?", "have"],
-      ["They ___ (know) each other for ten years.", "have known"], ["I ___ (write) three emails this morning.", "have written"],
+      ["I ___ (know) my best friend since we were five.", "have known"], ["I ___ (write) three emails this morning.", "have written"],
       ["It ___ (rain) all day.", "has been raining|'s been raining"], ["He ___ (play) computer games since breakfast.", "has been playing|'s been playing"],
       ["We ___ (live) in this flat for five years.", "have been living|have lived"], ["She ___ (read) four books this month.", "has read|'s read"]
     ]},
@@ -498,9 +498,9 @@ ${N("Глаголы состояния (<i>know, like, want</i> и другие)
       ["Она работает здесь с 2019 года.", "She has been working here since 2019.|She's been working here since 2019.|She has worked here since 2019.|She's worked here since 2019."]
     ]},
     { type: 'listen', at: 2, task: 'Прослушайте предложение и соберите его из слов.', items: [
-      ["I have been waiting for you at the bus stop for an hour.", "Я жду тебя на остановке уже час."],
+      ["My brother has been playing the guitar since lunch.", "Мой брат играет на гитаре с обеда."],
       ["She has been working hard all day, so she's very tired.", "Она весь день много работала, поэтому очень устала."],
-      ["How long have you been learning English?", "Как долго ты учишь английский?"]
+      ["How long have you been living in this flat?", "Сколько ты уже живешь в этой квартире?"]
     ]}
   ]},
 
@@ -576,7 +576,7 @@ ${N("Если порядок событий и так понятен из сло
       ["До той поездки я никогда не видел такого красивого города.", "I had never seen such a beautiful city before that trip.|I'd never seen such a beautiful city before that trip.|Before that trip I had never seen such a beautiful city."]
     ]},
     { type: 'listen', at: 2, task: 'Прослушайте предложение и соберите его из слов.', items: [
-      ["When we arrived at the station, the train had already left.", "Когда мы приехали на вокзал, поезд уже ушел."],
+      ["When we got to the party, most of the guests had already gone home.", "Когда мы пришли на вечеринку, большинство гостей уже ушли домой."],
       ["She had never seen the Pacific Ocean before that trip.", "До той поездки она никогда не видела Тихий океан."],
       ["There was no cake left because the guests had eaten it.", "Торта не осталось: гости его съели."]
     ]}
@@ -598,7 +598,7 @@ ${E([
   ["At eight tomorrow I <b>will be working</b>.", "Завтра в восемь я буду работать. (Future Continuous)"]
 ])}
 <h3>Вежливый вопрос о планах</h3>
-<p>Вопрос в Future Continuous звучит мягче обычного: он спрашивает о планах, которые у человека уже есть, и не давит на него. Например, <i>Will you use the car tonight?</i> — ты возьмешь машину сегодня вечером? — может прозвучать как просьба или даже требование, а <i>Will you <b>be using</b> the car tonight?</i> — это просто вопрос о планах. Так обычно спрашивают перед тем, как о чем-то попросить: если машина не нужна, можно ее одолжить.</p>
+<p>Вопрос в Future Continuous звучит мягче обычного: он спрашивает о планах, которые у человека уже есть, и не давит на него. Например, <i>Will you use the car tonight?</i> — ты возьмешь машину сегодня вечером? (может прозвучать как просьба или даже требование); <i>Will you <b>be using</b> the car tonight?</i> — ты будешь брать машину сегодня вечером? (просто вопрос о планах). Так обычно спрашивают перед тем, как о чем-то попросить: если машина не нужна, ее можно попросить на вечер.</p>
 ${N("В части с <i>when</i> ставят Present Simple, а не <i>will</i>, хотя речь о будущем: <i>When you <b>arrive</b>, I'll be waiting for you</i>, а не <i>When you will arrive</i>.")}`,
   ex: [
     { type: 'gap', task: 'Поставьте глагол в Future Continuous. Если в скобках несколько слов через косую черту, используйте в ответе их все — в нужной форме и порядке.', items: [
@@ -634,7 +634,7 @@ ${T(["", "Пример"], [
   ["Отрицание", "<i>I <b>won't have finished</b> by six.</i> — К шести я еще не закончу."],
   ["Вопрос", "<i><b>Will</b> you <b>have read</b> the book by Monday?</i> — Ты прочитаешь книгу к понедельнику?"]
 ])}
-<p>Слово <i>by</i> со временем значит «к, не позже»: <i>by Friday</i> — к пятнице, <i>by then</i> — к тому времени. С Future Perfect оно встречается особенно часто, потому что это время как раз говорит о том, что будет сделано к какому-то сроку.</p>
+<p>Слово <i>by</i> перед указанием времени значит «к, не позже»: <i>by Friday</i> — к пятнице, <i>by then</i> — к тому времени. С Future Perfect оно встречается особенно часто, потому что это время как раз говорит о том, что будет сделано к какому-то сроку.</p>
 ${M("Часто встречается со словами:", ["by Friday", "by the time", "by then", "by the end of"])}
 ${N("После <i>by the time</i> (к тому времени, как) будущее время не ставят, вместо него используют Present Simple: <i>By the time you <b>arrive</b>, I'll have finished</i>, а не <i>By the time you will arrive</i>.")}`,
   ex: [
@@ -655,9 +655,9 @@ ${N("После <i>by the time</i> (к тому времени, как) буду
       ["К лету мы уже переедем в новую квартиру.", "By the summer we will have moved to a new flat.|By summer we will have moved to a new flat.|We will have moved to a new flat by the summer.|By the summer we will have moved into a new flat.|By the summer we will have moved to a new apartment.|We will have moved into a new flat by the summer.|We will have moved to a new flat by summer.|We will have moved into a new flat by summer.|By summer we will have moved into a new flat."]
     ]},
     { type: 'listen', at: 2, task: 'Прослушайте предложение и соберите его из слов.', items: [
-      ["This time tomorrow I will be lying on the beach.", "Завтра в это время я буду лежать на пляже."],
+      ["This time tomorrow I will be swimming in the sea.", "Завтра в это время я буду плавать в море."],
       ["By the end of the year we will have built two new schools.", "К концу года мы построим две новые школы."],
-      ["Don't call at eight. We will be having dinner.", "Не звони в восемь: мы будем ужинать."]
+      ["By the time you wake up, I will have left for work.", "Когда ты проснешься, я уже уйду на работу."]
     ]}
   ]},
 
@@ -667,7 +667,7 @@ ${N("После <i>by the time</i> (к тому времени, как) буду
 ${F("<b>will have been</b> + V-ing")}
 ${T(["", "Форма", "Пример"], [
   ["Утверждение", "<i>will have been + V-ing</i>", "<i>By six she <b>will have been studying</b> for three hours.</i> — К шести она будет заниматься уже три часа."],
-  ["Отрицание", "<i>won't have been + V-ing</i>", "<i>By then he <b>won't have been waiting</b> long.</i> — К тому времени он будет ждать еще недолго."],
+  ["Отрицание", "<i>won't have been + V-ing</i>", "<i>By then he <b>won't have been waiting</b> long.</i> — К тому времени он будет ждать совсем недолго."],
   ["Вопрос", "<i>will … have been + V-ing?</i>", "<i>How long <b>will</b> you <b>have been living</b> here by May?</i> — Сколько времени ты к маю уже будешь жить здесь?"]
 ])}
 <p>Форма для всех лиц одна и та же: <i>will</i> не меняется, а <i>have</i> после него всегда остается <i>have</i>, даже с <i>he</i> и <i>she</i>. Сокращенно говорят <i>I'll have been working</i>, а в отрицании — <i>won't have been</i>.</p>
