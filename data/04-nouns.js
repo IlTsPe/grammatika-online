@@ -16,11 +16,11 @@ ${T(["Правило", "Пример"], [
 ${T(["Единственное", "Множественное"], [
   ["<i>man, woman</i>", "<i>men, women</i>"],
   ["<i>child</i>", "<i>children</i>"],
-  ["<i>foot, tooth, goose</i>", "<i>feet, teeth, geese</i>"],
+  ["<i>foot, tooth, goose</i> (нога, зуб, гусь)", "<i>feet, teeth, geese</i>"],
   ["<i>mouse</i>", "<i>mice</i>"],
-  ["<i>ox</i>", "<i>oxen</i>"],
+  ["<i>ox</i> (бык)", "<i>oxen</i>"],
   ["<i>person</i>", "<i>people</i>"],
-  ["<i>sheep, fish, deer, aircraft</i>", "не меняются"]
+  ["<i>sheep, fish, deer, aircraft</i> (овца, рыба, олень, самолет)", "не меняются"]
 ])}
 ${N("Если слово заканчивается на <i>man</i> или <i>woman</i>, во множественном числе меняется именно эта часть: <i>policeman → policemen</i>, <i>Englishwoman → Englishwomen</i>. А в словах через дефис окончание получает главное по смыслу слово: <i>passer-by → passers-by</i> (прохожий — прохожие).")}
 <h3>Род существительных</h3>
@@ -86,7 +86,7 @@ ${T(["Случай", "Как образуется", "Пример"], [
   ["предметы", "<i>of</i>", "<i>the roof <b>of the house</b>, the end <b>of the film</b></i>"]
 ])}
 ${E([
-  ["I'm going to <b>the dentist's</b>.", "Я иду к зубному (в кабинет зубного)."],
+  ["I was at <b>the dentist's</b> yesterday.", "Вчера я был у зубного. (в кабинете зубного)"],
   ["We had dinner at <b>my aunt's</b>.", "Мы ужинали у тети (дома у тети)."]
 ])}
 <h3>Притяжательный падеж без существительного</h3>
@@ -125,7 +125,7 @@ ${N("Обратите внимание на место апострофа — о
 
 { id: 'noun-countable', level: 'A2', title: 'Исчисляемые и неисчисляемые', sub: 'an apple, some bread, a piece of advice',
   rule: `
-<p><b>Исчисляемые</b> существительные — это то, что можно посчитать по штукам: <i>an apple, two apples</i>. <b>Неисчисляемые</b> обозначают вещества (<i>water, milk</i>), собирательные понятия (<i>furniture, money</i>) и отвлеченные понятия (<i>advice, information</i>). Их нельзя посчитать напрямую, поэтому у них нет множественного числа и перед ними не ставят <i>a / an</i>. Будьте внимательны: некоторые слова исчисляемые в русском, но неисчисляемые в английском — например, <i>advice</i> (совет) и <i>news</i> (новости).</p>
+<p><b>Исчисляемые</b> существительные — это то, что можно посчитать по штукам: <i>an apple, two apples</i>. <b>Неисчисляемые</b> обозначают вещества (<i>water, milk</i>), обобщающие названия (<i>furniture</i> — мебель вообще, <i>money</i>) и отвлеченные понятия (<i>advice, information</i>). Их нельзя посчитать напрямую, поэтому у них нет множественного числа и перед ними не ставят <i>a / an</i>. Будьте внимательны: некоторые слова исчисляемые в русском, но неисчисляемые в английском — например, <i>advice</i> (совет) и <i>news</i> (новости).</p>
 ${T(["Неисчисляемые", "Как посчитать"], [
   ["<i>water, milk, tea, juice</i>", "<i>a glass of water, a cup of tea, a bottle of milk</i>"],
   ["<i>bread, cheese, meat, butter, chocolate</i>", "<i>a loaf of bread, a piece of cheese, a kilo of meat, a bar of chocolate</i>"],

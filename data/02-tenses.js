@@ -194,7 +194,7 @@ ${T(["Когда", "Пример"], [
 
 { id: 't-going-to', level: 'A1', title: 'Be going to', sub: "I'm going to buy · It's going to rain",
   rule: `
-<p>Оборот <i>be going to</i> — собираться — говорит о будущем, которое уже «видно» сейчас: о том, что человек решил заранее, или о том, что вот-вот случится по видимым признакам.</p>
+<p>Оборот <i>be going to</i> — собираться — говорит о будущем, которое уже «видно» сейчас.</p>
 ${F("am / is / are + going to + <b>V</b>")}
 ${T(["Когда", "Пример"], [
   ["намерение, решено заранее", "<i>We <b>are going to</b> buy a car.</i> — Мы собираемся купить машину."],
@@ -226,7 +226,7 @@ ${N("<i>Going to</i> в этом обороте не значит «идти»: 
     { type: 'translate', task: 'Переведите на английский.', items: [
       ["Мы собираемся поехать в Сочи летом.", "We are going to go to Sochi in summer.|We are going to Sochi in summer.|We are going to go to Sochi in the summer.|We're going to go to Sochi this summer.|We are going to Sochi this summer.|We are going to Sochi in the summer."],
       ["Посмотри на часы — мы сейчас опоздаем!", "Look at the clock! We are going to be late.|Look at the time! We are going to be late.|Look at your watch! We are going to be late."],
-      ["Я не собираюсь это покупать.", "I am not going to buy it.|I am not going to buy this.|I am not going to buy that."],
+      ["Она не собирается продавать свою машину.", "She is not going to sell her car.|She is not going to sell the car."],
       ["Что ты собираешься делать вечером?", "What are you going to do in the evening?|What are you going to do this evening?|What are you going to do tonight?"]
     ]},
     { type: 'listen', at: 2, task: 'Прослушайте предложение и соберите его из слов.', items: [
@@ -260,9 +260,9 @@ ${E([
 ])}`,
   ex: [
     { type: 'gap', task: 'Поставьте глагол в Present Continuous. Если в скобках несколько слов через косую черту, используйте в ответе их все — в нужной форме и порядке.', items: [
-      ["Look! It ___ (rain).", "is raining|'s raining"], ["I ___ (read) a great book these days.", "am reading"],
+      ["Look! It ___ (rain).", "is raining|'s raining"], ["My dad ___ (work) from home this week.", "is working|'s working"],
       ["Be quiet! The baby ___ (sleep).", "is sleeping|'s sleeping"], ["They ___ (not / work) today.", "are not working"],
-      ["We ___ (meet) Sarah tomorrow evening.", "are meeting"], ["What ___ you doing?", "are"],
+      ["I ___ (see) the dentist on Friday.", "am seeing"], ["What ___ you doing?", "are"],
       ["The children ___ (swim) in the river.", "are swimming"], ["She ___ (write) a letter now.", "is writing|'s writing"],
       ["Listen! My sister ___ (sing).", "is singing|'s singing"], ["I ___ (not / watch) TV at the moment.", "am not watching"],
       ["Why ___ you laughing?", "are"], ["He ___ (lie) on the sofa.", "is lying|'s lying"]
@@ -383,7 +383,7 @@ ${T(["Значение", "Пример"], [
   ["опыт в жизни", "<i>She <b>has never been</b> to Japan. <b>Have</b> you ever <b>eaten</b> sushi?</i> — Она никогда не была в Японии. Ты когда-нибудь ел суши?"],
   ["незаконченный период", "<i>I <b>have drunk</b> three coffees today.</i> — Сегодня я выпил три чашки кофе."],
   ["длится до сих пор (for, since)", "<i>We <b>have lived</b> here since 2015 / for ten years.</i> — Мы живем здесь с 2015 года / десять лет."],
-  ["только что (just)", "<i>He <b>has just come</b>.</i> — Он только что пришел."]
+  ["только что (just)", "<i>He <b>has just come</b> home.</i> — Он только что пришел домой."]
 ])}
 <p>Вспомогательный глагол здесь — <i>have</i>, а после <i>he / she / it</i> — <i>has</i>. В отрицании к нему добавляется <i>not</i>: <i>haven't, hasn't</i>; в вопросе он встает перед подлежащим: <i><b>Have</b> you seen it?</i> В речи его часто сокращают: <i>I've, she's</i> (<i>she's</i> здесь значит <i>she has</i>).</p>
 <h3>For или since</h3>
@@ -397,7 +397,7 @@ ${E([
 ${N("Не путайте <i>been</i> и <i>gone</i>. <i>He has <b>been</b> to London</i> — он побывал в Лондоне (и вернулся); <i>He has <b>gone</b> to London</i> — он уехал в Лондон (и сейчас там).")}`,
   ex: [
     { type: 'gap', task: 'Поставьте глагол в Present Perfect. Если в скобках несколько слов через косую черту, используйте в ответе их все — в нужной форме и порядке.', items: [
-      ["I ___ (lose) my keys. Now I am locked out.", "have lost"], ["She ___ (never / be) to Japan.", "has never been|'s never been"],
+      ["I ___ (lose) my keys. They aren't in my bag.", "have lost"], ["She ___ (never / be) to Japan.", "has never been|'s never been"],
       ["We ___ (live) here since 2015.", "have lived"], ["Have you ever ___ (eat) sushi?", "eaten"],
       ["They ___ (just / arrive).", "have just arrived"], ["She hasn't called me ___. (еще)", "yet"],
       ["He ___ (already / do) his homework.", "has already done|'s already done"], ["I ___ (not / see) this film.", "have not seen"],
@@ -559,7 +559,7 @@ ${N("Если порядок событий и так понятен из сло
   ex: [
     { type: 'gap', task: 'Поставьте глагол в Past Perfect. Если в скобках несколько слов через косую черту, используйте в ответе их все — в нужной форме и порядке.', items: [
       ["When we arrived at the station, the train ___ (already / leave).", "had already left|had left already|'d already left"],
-      ["She ___ (never / see) the sea before she moved to Sochi.", "had never seen|'d never seen"],
+      ["He ___ (never / fly) before his trip to Spain last year.", "had never flown|'d never flown"],
       ["After he ___ (finish) his work, he went home.", "had finished|finished"], ["I didn't recognise him because he ___ (grow) a beard.", "had grown"],
       ["By the time the police came, the thieves ___ (escape).", "had escaped"], ["They ___ (not / eat) all day, so they were starving.", "had not eaten"],
       ["I was sure I ___ (see) her before.", "had seen"], ["By 2010 he ___ (write) five books.", "had written"]

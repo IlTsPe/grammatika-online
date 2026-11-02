@@ -102,7 +102,7 @@ ${N("Русское «это» не меняется, а по-английски
       ["Это мои ключи.", "These are my keys.|Those are my keys."]
     ]},
     { type: 'listen', at: 2, task: 'Прослушайте предложение и соберите его из слов.', items: [
-      ["This bag is mine, and that bag is my sister's.", "Эта сумка моя, а та — моей сестры."],
+      ["This bag is mine, and that bag is my sister's.", "Эта сумка моя, а та принадлежит моей сестре."],
       ["These apples are sweet, but those are sour.", "Эти яблоки сладкие, а те кислые."],
       ["Who are those people at the bus stop?", "Кто те люди на остановке?"]
     ]}

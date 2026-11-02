@@ -26,7 +26,7 @@ ${N("Сдвигать время не нужно, если во второй ч�
     ]},
     { type: 'choice', task: 'Выберите правильный вариант.', items: [
       ["I knew she ___ in Moscow.", ["lived", "lives", "will live"]], ["He said he ___ me the next day.", ["would call", "will call", "calls"]],
-      ["She didn't know where I ___.", ["had been", "have been", "am"]], ["I thought you ___ coming.", ["weren't", "aren't", "won't"]],
+      ["She didn't know that I ___ there before.", ["had been", "have been", "am"]], ["I thought you ___ coming.", ["weren't", "aren't", "won't"]],
       ["He told us the Moon ___ round the Earth.", ["goes", "is going", "had gone"]], ["We were sure they ___ the match.", ["would win", "will win", "win"]]
     ]},
     { type: 'translate', task: 'Переведите на английский.', items: [

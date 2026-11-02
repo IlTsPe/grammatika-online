@@ -34,7 +34,7 @@ ${E([
       ["When I was a child, I enjoyed ___ (read) detective stories.", "reading"], ["Would you mind ___ (close) the door?", "closing"],
       ["My dad is very good at ___ (fix) things.", "fixing"], ["I'm interested in ___ (learn) Spanish.", "learning"],
       ["He left without ___ (say) goodbye.", "saying"], ["I'm looking forward to ___ (see) you.", "seeing"],
-      ["Have you finished ___ (write) the essay?", "writing"], ["___ (swim) in the sea is much more pleasant than swimming in a pool.", "swimming"],
+      ["Have you finished ___ (write) the essay?", "writing"], ["___ (swim) in the sea is much more pleasant than in a pool.", "swimming"],
       ["She gave up ___ (smoke) last year.", "smoking"], ["It's no use ___ (call) her — she isn't at home.", "calling"],
       ["The film we saw yesterday is worth ___ (watch).", "watching"], ["I'm tired of ___ (wait).", "waiting"]
     ]},

@@ -95,7 +95,7 @@ ${N("Не путайте независимый оборот с ошибкой, 
     { type: 'translate', task: 'Переведите на английский, используя причастный оборот.', items: [
       ["Сделав уроки, он пошел гулять.", "Having done his homework, he went for a walk.|Having done his homework, he went out.|Having finished his homework, he went for a walk.|Having finished his homework, he went out."],
       ["Не зная дороги, мы спросили полицейского.", "Not knowing the way, we asked a policeman.|Not knowing the way, we asked a police officer."],
-      ["Сделанные в Италии, эти туфли очень дорогие.", "Made in Italy, these shoes are very expensive."],
+      ["Эти туфли, сделанные в Италии, очень дорогие.", "These shoes, made in Italy, are very expensive.|Made in Italy, these shoes are very expensive."],
       ["Девушка, стоящая у двери, — моя сестра.", "The girl standing at the door is my sister.|The girl standing by the door is my sister."]
     ]},
     { type: 'gap', task: 'Замените придаточное независимым причастным оборотом (впишите причастие).', items: [

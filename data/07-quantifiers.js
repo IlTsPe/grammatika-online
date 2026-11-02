@@ -60,7 +60,7 @@ ${E([
   ["There's <b>little</b> time left. Hurry up!", "Времени осталось мало. Поторопись! (почти нет)"]
 ])}
 <p>В последних двух примерах встречается оборот <i>there's … left</i> — осталось: <i>There's some milk left</i> — молока еще немного осталось. А <i>quite a few</i>, хотя в нем есть <i>a few</i>, значит «довольно много»: <i>quite a few people</i> — довольно много людей.</p>
-${M("Удобно запомнить:", ["very few", "very little", "quite a few", "only a few", "only a little"])}
+${M("Удобно запомнить:", ["very few — очень мало (штук)", "very little — очень мало (вещества)", "quite a few — довольно много", "only a few — всего несколько", "only a little — совсем немного"])}
 ${N("Не путайте два разных <i>little</i>. Перед исчисляемым существительным это прилагательное «маленький», перед неисчисляемым — «немного»: <i>a little girl</i> — маленькая девочка, <i>a little sugar</i> — немного сахара.")}`,
   ex: [
     { type: 'gap', task: 'Впишите a few, few, a little или little.', items: [

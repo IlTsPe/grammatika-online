@@ -113,7 +113,7 @@ ${N("Место <i>enough</i> зависит от соседнего слова:
 
 { id: 'inf-forms', level: 'B2', title: 'Формы инфинитива', sub: 'to do, to be done, to have done',
   rule: `
-<p>У инфинитива, как и у обычного глагола, есть разные формы. Они показывают две вещи. Во-первых, когда происходит действие — одновременно с главным или позже него (<i>to see</i>) или раньше него (<i>to have seen</i>). Во-вторых, выполняет ли его само подлежащее (<i>to tell</i>) или действие совершают над подлежащим (<i>to be told</i>).</p>
+<p>Формы инфинитива, как и формы обычного глагола, показывают две вещи. Во-первых, когда происходит действие — одновременно с главным или позже него (<i>to see</i>) или раньше него (<i>to have seen</i>). Во-вторых, выполняет ли его само подлежащее (<i>to tell</i>) или действие совершают над подлежащим (<i>to be told</i>).</p>
 ${T(["Форма", "Актив", "Пассив"], [
   ["Simple — одновременно / позже", "<i>to <b>write</b></i>", "<i>to <b>be written</b></i>"],
   ["Continuous — в процессе", "<i>to <b>be writing</b></i>", "—"],
@@ -144,10 +144,10 @@ ${N("Чаще всего перфектный инфинитив стоит по
       ["They seem ___ (know) each other for years.", "to have known"], ["I'm sorry ___ (not / send) the letter last week.", "not to have sent"]
     ]},
     { type: 'translate', task: 'Переведите на английский.', items: [
-      ["Кажется, они заблудились.", "They seem to have lost their way.|They seem to have got lost.|They seem to be lost."],
-      ["Я рад, что побывал в Риме.", "I am glad to have been to Rome.|I am glad to have visited Rome."],
+      ["Кажется, они заблудились.", "They seem to have lost their way.|They seem to have got lost.|They seem to be lost.|It seems that they have got lost.|It seems they have got lost.|It seems that they are lost.|It seems they are lost."],
+      ["Я рад, что побывал в Риме.", "I am glad to have been to Rome.|I am glad to have visited Rome.|I am glad that I have been to Rome.|I am glad I have been to Rome.|I am glad I visited Rome.|I am glad that I visited Rome."],
       ["Это письмо нужно отправить сегодня.", "This letter must be sent today.|This letter has to be sent today.|This letter needs to be sent today."],
-      ["Кажется, они нас ждут.", "They seem to be waiting for us."]
+      ["Кажется, они нас ждут.", "They seem to be waiting for us.|It seems that they are waiting for us.|It seems they are waiting for us."]
     ]},
     { type: 'listen', at: 2, task: 'Прослушайте предложение и соберите его из слов.', items: [
       ["I'm glad to have met your parents at last.", "Я рад, что наконец познакомился с твоими родителями."],

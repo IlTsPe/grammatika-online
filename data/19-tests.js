@@ -2,7 +2,7 @@ BOOK.push({ n: 19, id: 'tests', title: 'Контрольные упражнен�
 intro: 'Смешанные задания на материал всех разделов. Делайте их после того, как пройдете основные темы: здесь нет подсказки, какое правило нужно.',
 topics: [
 
-{ id: 'test-1', level: 'A2', noStudy: true, title: 'Контрольная 1: артикли, местоимения, количество', sub: 'разделы 1, 4–8',
+{ id: 'test-1', level: 'A2', noStudy: true, title: 'Контрольная 1: артикли, существительные, местоимения, предлоги, количество, сравнение', sub: 'разделы 1, 4–8',
   rule: `
 <p>Перед началом пробегитесь по таблице.</p>
 ${T(["Тема", "Главное правило"], [
@@ -36,15 +36,15 @@ ${T(["Тема", "Главное правило"], [
     ]}
   ]},
 
-{ id: 'test-2', level: 'B1', noStudy: true, title: 'Контрольная 2: времена и пассив', sub: 'разделы 2 и 10',
+{ id: 'test-2', level: 'B1', noStudy: true, title: 'Контрольная 2: времена и пассив', sub: 'разделы 2 и 10, темы до уровня B1',
   rule: `
 <p>Таблица ниже подскажет, по каким словам в предложении можно узнать нужное время.</p>
 ${T(["Подсказка в предложении", "Время"], [
   ["<i>every day, usually, often, never</i>", "Present Simple"],
   ["<i>now, at the moment, Look!</i> — сейчас, в данный момент, «Смотри!»", "Present Continuous"],
   ["<i>yesterday, ago, last…, in 2010</i>", "Past Simple"],
-  ["<i>at 5 yesterday, when he came, while</i>", "Past Continuous"],
-  ["<i>just, already, yet, ever, since, for</i>", "Present Perfect"],
+  ["<i>at 5 yesterday, while</i>; <i>(I was cooking) when he came</i>", "Past Continuous"],
+  ["<i>just, already, yet, ever</i>; <i>since, for</i> — с глаголами состояния и когда важен результат", "Present Perfect"],
   ["<i>for an hour, since…</i> — действие-процесс длится до сих пор", "Present Perfect Continuous"],
   ["<i>tomorrow, next…, I think, I promise</i>", "will / going to"],
   ["исполнитель неважен, «был сделан»", "пассив: be + V3"]
@@ -59,7 +59,7 @@ ${T(["Подсказка в предложении", "Время"], [
       ["She ___ (live) here since she was born.", "has lived|has been living"], ["The room ___ (already / clean).", "has already been cleaned"]
     ]},
     { type: 'text', task: 'Поставьте глаголы из скобок в нужное время. Если в скобках несколько слов через косую черту, используйте в ответе их все — в нужной форме и порядке.', text: "Tom ___ (be) a student. He ___ (study) at Moscow University. Last year he ___ (go) to London for a month. While he ___ (live) there, he ___ (meet) many interesting people. He ___ (like) London very much. Now he ___ (write) a book about his experience. He ___ (already / write) three chapters. Next summer he ___ (go) to New York.",
-      answers: ["is", "studies|is studying", "went", "was living|lived", "met", "liked", "is writing", "has already written", "is going|is going to go|will go"] },
+      answers: ["is", "studies|is studying", "went", "was living|lived", "met", "liked|likes", "is writing", "has already written", "is going|is going to go|will go"] },
     { type: 'translate', task: 'Переведите на английский.', items: [
       ["Я уже прочитал эту книгу.", "I have already read this book.|I have read this book already."],
       ["Когда я вошел, они смотрели телевизор.", "When I came in, they were watching TV.|When I entered, they were watching TV.|They were watching TV when I came in.|When I came in, they were watching television.|When I walked in, they were watching TV."],
@@ -73,7 +73,7 @@ ${T(["Подсказка в предложении", "Время"], [
     ]}
   ]},
 
-{ id: 'test-3', level: 'B2', noStudy: true, title: 'Контрольная 3: модальные, условные, косвенная речь, неличные формы', sub: 'разделы 9, 11–18',
+{ id: 'test-3', level: 'B2', noStudy: true, title: 'Контрольная 3: модальные, условные, косвенная речь, неличные формы', sub: 'разделы 9, 11–18, темы до уровня B2',
   rule: `
 <p>Если в каком-то упражнении получилось больше трех ошибок, стоит вернуться к соответствующему разделу и повторить правило.</p>
 ${T(["Тема", "Проверьте себя"], [

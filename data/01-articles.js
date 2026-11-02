@@ -4,7 +4,7 @@ topics: [
 
 { id: 'art-a-an', level: 'A1', title: 'Неопределенный артикль a / an', sub: 'a book, an apple',
   rule: `
-<p>Неопределенный артикль <i>a / an</i> произошел от числительного <i>one</i> («один»), и это значение у него сохранилось: он указывает на «один, какой-то, любой» предмет. Поэтому он ставится только перед <b>исчисляемым существительным в единственном числе</b>: <i>a book</i>, <i>an apple</i>. Перед словами во множественном числе и неисчисляемыми его не бывает.</p>
+<p>Неопределенный артикль <i>a / an</i> произошел от числительного <i>one</i> («один»), и это значение у него сохранилось: он указывает на «один, какой-то, любой» предмет. Поэтому он ставится только перед <b>исчисляемым существительным в единственном числе</b>: <i>a book</i>, <i>an apple</i>. Перед словами во множественном числе и неисчисляемыми его обычно не ставят (единственное исключение разобрано в теме 1.6).</p>
 ${T(["Когда", "Пример"], [
   ["предмет упоминается впервые", "<i>I have <b>a</b> dog.</i> — У меня есть собака."],
   ["один из многих, любой", "<i>Give me <b>a</b> pen, please.</i> — Дай мне ручку, пожалуйста (какую-нибудь)."],
@@ -163,13 +163,13 @@ ${N("Если вы перечисляете несколько предмето�
   rule: `
 <p>Во многих частых выражениях артикль ставится не по общим правилам, и их проще запомнить целиком. В одних артикля нет совсем (<i>at home, by bus</i>), в других он обязателен (<i>in the morning, go to the cinema</i>).</p>
 ${T(["Без артикля", "С артиклем"], [
-  ["<i>at home, at work, at school</i>", "<i>in <b>the</b> morning / afternoon / evening</i>"],
-  ["<i>go to school, go to work, go to bed</i>", "<i>go to <b>the</b> cinema / theatre / shop</i>"],
-  ["<i>at night, at noon, at midnight</i>", "<i>in <b>the</b> country, in <b>the</b> street</i>"],
-  ["<i>by bus, by car, by train, on foot</i>", "<i>on <b>the</b> left / right, in <b>the</b> middle</i>"],
-  ["<i>have breakfast / lunch / dinner</i>", "<i>at <b>the</b> weekend</i> (брит.; в американском английском — <i>on the weekend</i>)"],
-  ["<i>go to hospital / prison / church</i> (по назначению)", "<i>tell <b>the</b> truth</i>"],
-  ["<i>from morning till night, day and night</i>", "<i>What's <b>the</b> time?</i> — Который час?"]
+  ["<i>at home, at work, at school</i> — дома, на работе, в школе", "<i>in <b>the</b> morning / afternoon / evening</i> — утром / днем / вечером"],
+  ["<i>go to school, go to work, go to bed</i> — ходить в школу, на работу, ложиться спать", "<i>go to <b>the</b> cinema / theatre / shop</i> — в кино / в театр / в магазин"],
+  ["<i>at night, at noon, at midnight</i> — ночью, в полдень, в полночь", "<i>in <b>the</b> country, in <b>the</b> street</i> — за городом, на улице"],
+  ["<i>by bus, by car, by train, on foot</i> — на автобусе, на машине, на поезде, пешком", "<i>on <b>the</b> left / right, in <b>the</b> middle</i> — слева / справа, посередине"],
+  ["<i>have breakfast / lunch / dinner</i> — завтракать / обедать / ужинать", "<i>at <b>the</b> weekend</i> — в выходные (брит.; в американском английском — <i>on the weekend</i>)"],
+  ["<i>go to hospital / prison / church</i> (по назначению) — лечь в больницу, попасть в тюрьму, ходить в церковь", "<i>tell <b>the</b> truth</i> — говорить правду"],
+  ["<i>from morning till night, day and night</i> — с утра до ночи, днем и ночью", "<i>What's <b>the</b> time?</i> — который час?"]
 ])}
 ${E([
   ["She goes to <b>school</b> by <b>bus</b>.", "Она ездит в школу на автобусе."]

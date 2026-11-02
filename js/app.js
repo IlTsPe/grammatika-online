@@ -32,7 +32,7 @@ function pageMeta(id) {
   const t = topicById[id], ch = chapById[id], p = aboutPage(id);
   const title = t ? `${t.num} ${t.title}` : ch ? `${ch.n}. ${ch.title}` : p ? p.title
     : { mistakes: 'Работа над ошибками', notes: 'Мои заметки', 'irregular-verbs': 'Неправильные глаголы', about: 'Информация', [NOT_FOUND]: 'Страница не найдена' }[id];
-  const description = t ? `${plainText(t.title)} (${plainText(t.sub)}): правило и упражнения с проверкой. Уровень ${t.level}.`
+  const description = t ? `${plainText(t.title)} (${plainText(t.sub)}): ${t.noStudy ? 'упражнения с проверкой' : 'правило и упражнения с проверкой'}. Уровень ${t.level}.`
     : ch ? plainText(ch.intro) : p ? `${p.title}: ${p.sub[0].toLowerCase()}${p.sub.slice(1)}.`
     : { mistakes: 'Упражнения, в которых были ошибки, — чтобы к ним вернуться.', notes: 'Личные заметки по грамматике.', 'irregular-verbs': 'Таблица неправильных глаголов английского языка: три формы (V1, V2, V3) и перевод.', about: 'Как устроен тренажер: разделы, упражнения, прогресс, данные.' }[id]
     || 'Тренажер грамматики английского языка A1–C2: правила простым языком и упражнения с проверкой.';
