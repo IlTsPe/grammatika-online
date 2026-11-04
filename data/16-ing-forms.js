@@ -18,6 +18,23 @@ ${E([
   ["<b>The crossing of</b> the river took two days.", "Переправа через реку заняла два дня. (существительное: артикль + of)"]
 ])}
 ${N("Быстрая проверка: если слово на <i>-ing</i> можно заменить местоимением «это» (то есть оно подлежащее или дополнение), а артикля и <i>of</i> при нем нет, перед вами герундий.")}`,
+  /* перевод слов в упражнениях: по наведению или касанию (gloss.js); ключи — в нижнем регистре, как слово стоит в тексте */
+  gloss: {
+    'relaxing': 'отдыхать', 'walking': 'ходьба',
+    'park': 'парк',
+    'week': 'неделя', 'man': 'мужчина', 'beautiful': 'красивый', 'has': 'имеет; вспомогательный глагол', 'i': 'я', 'he': 'он',
+    'she': 'она', 'my': 'мой, моя, мое', 'is': 'есть, является (форма to be)', 'the': 'определенный артикль',
+    'at': 'в (о времени); у, на (о месте)', 'in': 'в', 'look at': 'посмотри на', 'a': 'неопределенный артикль', 'new': 'новый',
+    'this': 'этот, эта, это', 'on': 'на; в (о днях)', 'monday': 'понедельник', 'of': 'предлог родительного падежа', 'family': 'семья',
+    'for': 'для; в течение', 'her': 'ее, ей', 'to': 'в, на (куда); частица перед глаголом', 'cold': 'холодный; холодно',
+    'your': 'твой, ваш', 'look': 'смотреть; смотри', 'school': 'школа', 'evening': 'вечер', 'father': 'отец', 'me': 'меня, мне',
+    'like': 'нравиться, любить', 'books': 'книги', 'health': 'здоровье', 'years': 'годы, лет', 'dinner': 'ужин', 'up': 'woke me up — разбудил',
+    'water': 'вода', 'children': 'дети', 'reading': 'от read — читать', 'swimming': 'от swim — плавать', 'birds': 'птицы',
+    'left': 'ушел (от leave); оставшийся; левый', 'singing': 'поют (от sing)', 'took': 'взял; занял (от take)', 'was': 'был (форма to be)',
+    'three': 'три', 'woke': 'разбудил (от wake)', 'cooking': 'готовлю (от cook)', 'bridge': 'мост', 'without': 'без', 'bad': 'плохой',
+    'enjoy': 'наслаждаться, нравиться', 'goodbye': 'до свидания', 'healthy': 'здоровый', 'hobby': 'хобби', 'looked': 'выглядел; посмотрел',
+    'opening': 'открывать', 'poem': 'стихотворение', 'smoking': 'курение'
+  },
   ex: [
     { type: 'choice', task: 'Определите, чем является слово на -ing в скобках (оно стоит вместо пропуска).', items: [
       ["___ is my hobby. (Swimming)", ["герундий", "причастие", "отглагольное существительное"]],
@@ -32,12 +49,12 @@ ${N("Быстрая проверка: если слово на <i>-ing</i> мо�
     { type: 'gap', task: 'Впишите the или of, если они нужны (иначе «-»), чтобы получилось правильное предложение.', items: [
       ["___ reading of this poem was beautiful.", "the"], ["The singing ___ birds woke me up.", "of|of the"],
       ["___ smoking is bad for your health.", "-|0"], ["I enjoy ___ cooking dinner for my family.", "-|0"],
-      ["The opening ___ the new school was on Monday.", "of"], ["___ swimming in cold water is healthy.", "-|0"]
+      ["The opening ___ the new school was on Monday.", "of"], ["___ walking in the park is relaxing.", "-|0"]
     ]},
     { type: 'listen', at: 2, task: 'Прослушайте предложение и соберите его из слов.', items: [
       ["Swimming in the sea is good for your health.", "Плавать в море полезно для здоровья."],
       ["Don't wake the sleeping baby in the next room.", "Не разбуди спящего малыша в соседней комнате."],
-      ["The opening of the new museum took place in May.", "Открытие нового музея состоялось в мае."]
+      ["The painting of the house took the whole summer.", "Покраска дома заняла все лето."]
     ]}
   ]}
 ]});

@@ -28,7 +28,7 @@ ${T(["Сочетание", "Перевод", "Пример"], [
   ["<i><b>how long</b></i>", "какой длины, сколько длится", "<i><b>How long</b> is the lesson?</i> — Сколько длится урок?"]
 ])}
 <h3>Как построить вопрос</h3>
-<p>В английском вопросе порядок слов меняется: перед подлежащим встает вспомогательный глагол. Вопросительное слово ставится перед вспомогательным глаголом, в самом начале. В отрицательном вопросе к <i>do / does / did</i> добавляется <i>n't</i>: <i>Why <b>didn't</b> you come?</i> — почему ты не пришел?</p>
+<p>Порядок слов такой же, как в вопросах из тем 2.1 и 2.2: вспомогательный глагол стоит перед подлежащим, а вопросительное слово — перед вспомогательным глаголом. В отрицательном вопросе к <i>do / does / did</i> добавляется <i>n't</i>: <i>Why <b>didn't</b> you come?</i> — почему ты не пришел?</p>
 ${F("Вопросительное слово + <b>do / does / did</b> + подлежащее + глагол")}
 ${F("Вопросительное слово + <b>am / is / are / was / were</b> + подлежащее")}
 ${E([
@@ -57,13 +57,42 @@ ${E([
   ["What is the book <b>about</b>?", "О чем эта книга?"]
 ])}
 ${N("Когда спрашивают о точном времени по часам, чаще говорят <i><b>What time</b> does the train leave?</i> — во сколько отправляется поезд?, а <i>when</i> оставляют для более общего вопроса — в какой день, месяц или год.")}`,
+  /* перевод слов в упражнениях: по наведению или касанию (gloss.js); ключи — в нижнем регистре, как слово стоит в тексте */
+  gloss: {
+    'sport': 'спорт',
+    'bank': 'банк', 'cake': 'торт', 'cat': 'кошка', 'chocolate': 'шоколад', 'concert': 'концерт', 'favourite': 'любимый', 'friday': 'пятница', 'helped': 'помог', 'her': 'ее, ей', 'horse': 'лошадь', 'leaves': 'уходит, уезжает; листья', 'lemon': 'лимон', 'mum': 'мама', 'nine': 'девять', 'shop': 'магазин', 'three': 'три',
+    'brother': 'брат', 'old': 'старый', 'how old': 'сколько лет', 'lesson': 'урок', 'sister': 'сестра', 'film': 'фильм', 'twice': 'дважды', 'week': 'неделя',
+    'man': 'мужчина', 'umbrella': 'зонт', 'bag': 'сумка', 'blue': 'синий, голубой', 'uncle': 'дядя', 'is that': 'это (вон то)?',
+    "it's": 'это (= it is)', 'i': 'я', 'he': 'он', 'she': 'она', 'it': 'это; он, она (о предмете)', 'they': 'они', 'my': 'мой, моя, мое',
+    'is': 'есть, является (форма to be)', 'are': 'есть (форма to be)', 'go': 'идти, ехать', 'the': 'определенный артикль',
+    'at': 'в (о времени); у, на (о месте)', 'in': 'в', 'what': 'что, какой', 'that': 'тот, та, то; что (союз)', 'london': 'Лондон',
+    'go to': 'ходить в, идти в', 'a': 'неопределенный артикль', 'dog': 'собака', 'very': 'очень', 'red': 'красный',
+    'this': 'этот, эта, это', 'aunt': 'тетя', 'moscow': 'Москва', 'on': 'на; в (о днях)', 'day': 'день',
+    'of': 'предлог родительного падежа', 'girl': 'девочка, девушка', 'live': 'жить', 'who': 'кто', 'boy': 'мальчик', 'and': 'и',
+    'two': 'два', 'every': 'каждый', 'year': 'год', 'birthday': 'день рождения', 'buy': 'купить', 'for': 'для; в течение',
+    'see': 'увидеть', 'mother': 'мама', 'to': 'в, на (куда); частица перед глаголом', 'there': 'там, туда', 'table': 'стол',
+    'why': 'почему', 'cold': 'холодный; холодно', 'your': 'твой, ваш', 'where': 'где, куда', 'ten': 'десять', 'yesterday': 'вчера',
+    'by': 'на (о транспорте); к (о сроке)', 'by bus': 'на автобусе', 'seven': 'семь', 'school': 'школа', 'bus': 'автобус',
+    'home': 'дом; домой', 'often': 'часто', 'father': 'отец', 'now': 'сейчас', 'with': 'с', 'me': 'меня, мне',
+    'do': 'делать; вспомогательный глагол', 'from': 'из, от', 'want': 'хотеть', 'come': 'приходить', 'you': 'ты, вы',
+    'parents': 'родители', 'yours': 'твой, ваш', 'how': 'как', 'kazan': 'Казань', 'last': 'прошлый', 'late': 'поздно',
+    'party': 'вечеринка', 'saturday': 'суббота', 'twelve': 'двенадцать', 'were': 'были (форма to be)', 'when': 'когда',
+    'every day': 'каждый день', 'time': 'время', 'did': 'вспомогательный глагол прошедшего времени', 'eight': 'восемь', 'keys': 'ключи',
+    'work': 'работа; работать', 'here': 'здесь, сюда', "i'm": 'я (= I am)', 'one': 'один', 'close': 'закрыть; близко', 'grandmother': 'бабушка',
+    'may': 'май', 'or': 'или', 'hi': 'привет', 'away': 'прочь; five minutes away — в пяти минутах (отсюда)', 'night': 'ночь', 'was': 'был (форма to be)', "aren't": 'не (= are not)',
+    'called': 'позвонил (от call)', 'five': 'пять', 'because': 'потому что', 'play': 'играть', 'last year': 'в прошлом году',
+    'got': 'получил; добрался (от get)', 'get': 'добраться; получить', 'over': 'более, свыше', 'over there': 'вон там', 'minutes': 'минуты', 'about': 'о; около',
+    'bags': 'сумки', 'does': 'делает; вспомогательный глагол', 'job': 'работа', 'just': 'только что; просто', 'little': 'маленький; мало',
+    'lost': 'потерял; потерянный', 'market': 'рынок', 'minsk': 'Минск', 'name': 'имя', 'sad': 'грустный', "sister's": 'сестры (чей?)',
+    'start': 'начинать', 'starts': 'начинается', 'tennis': 'теннис', 'these': 'эти'
+  },
   ex: [
     { type: 'gap', task: 'Впишите вопросительное слово: what, who, where, when, why, how, which или whose.', items: [
-      ["___ is your name? — Anna.", "what"], ["___ do you live? — In Kazan.", "where"],
-      ["___ is your birthday? — In May.", "when"], ["___ is that man? — He is my uncle.", "who"],
+      ["___ is your favourite sport? — Tennis.", "what"], ["___ does your aunt work? — In a bank.", "where"],
+      ["___ is the concert? — On Friday.", "when"], ["___ is that man? — He is my uncle.", "who"],
       ["___ were you sad yesterday? — Because I lost my bag.", "why"], ["___ do you go to school? — By bus.", "how"],
-      ["___ bag is this? — It's my sister's.", "whose"], ["___ one do you want: the red one or the blue one?", "which"],
-      ["___ time does the film start? — At seven.", "what"], ["___ old is your brother? — He is ten.", "how"],
+      ["___ bag is this? — It's my sister's.", "whose"], ["___ cake do you want: the chocolate one or the lemon one?", "which"],
+      ["___ time does the shop close? — At nine.", "what"], ["___ old is your cat? — She is three.", "how"],
       ["___ did you see at the party? — Tom and Kate.", "who|whom"], ["___ often do you play tennis? — Twice a week.", "how"]
     ]},
     { type: 'gap', task: 'Впишите do, does, did, is, are, was или were.', items: [
@@ -74,25 +103,25 @@ ${N("Когда спрашивают о точном времени по час�
       ["Where ___ you last night?", "were"], ["How old ___ your grandmother?", "is"]
     ]},
     { type: 'choice', task: 'Выберите правильно построенный вопрос.', items: [
-      ["___? — In London.", ["Where do you live", "Where you live", "Where do you lives"]],
-      ["___? — Tom called me.", ["Who called you", "Who did call you", "Who did you call"]],
-      ["___? — I called my sister.", ["Who did you call", "Who called you", "Who you called"]],
-      ["___? — It starts at eight.", ["What time does the film start", "What time the film starts", "What time does the film starts"]],
+      ["___? — In London.", ["Where does your sister work", "Where your sister works", "Where does your sister works"]],
+      ["___? — Kate helped me.", ["Who helped you", "Who did help you", "Who did you help"]],
+      ["___? — I helped my mum.", ["Who did you help", "Who helped you", "Who you helped"]],
+      ["___? — It leaves at eight.", ["What time does the bus leave", "What time the bus leaves", "What time does the bus leaves"]],
       ["___? — Because it was cold.", ["Why did you close the window", "Why you closed the window", "Why did you closed the window"]],
-      ["___? — It's about a dog and a little boy.", ["What is the book about", "About what is the book", "What the book is about"]],
+      ["___? — It's about a girl and her horse.", ["What is the film about", "About what is the film", "What the film is about"]],
       ["___ of these two bags is yours?", ["Which", "What", "Who"]],
-      ["___? — It's Kate's.", ["Whose phone is this", "Who phone is this", "Whose is phone this"]]
+      ["___? — It's Kate's.", ["Whose umbrella is this", "Who umbrella is this", "Whose is umbrella this"]],
     ]},
     { type: 'text', task: 'Впишите в диалог вопросительные слова.', text: "— Hi! ___ is your name? — I'm Max. — ___ are you from? — I'm from Minsk. — ___ old are you? — I'm twelve. — ___ do you live now? — In Moscow, with my aunt. — ___ did you come to Moscow? — Last year. — ___ did you come here? — Because my mother got a job here. — ___ is your school? — Very close, just five minutes away.",
       answers: ["what", "where", "how", "where", "when", "why", "where"] },
     { type: 'translate', task: 'Переведите на английский.', items: [
-      ["Где ты живешь?", "Where do you live?"],
-      ["Как тебя зовут?", "What is your name?|What's your name?"],
+      ["Куда ты ходил вчера?", "Where did you go yesterday?"],
+      ["Когда начинаются каникулы?", "When do the holidays start?|When do the holidays begin?"],
       ["Кто живет в этом доме?", "Who lives in this house?"],
-      ["Почему ты не пришел вчера?", "Why didn't you come yesterday?|Why didn't you come over yesterday?|Why didn't you come here yesterday?"],
+      ["Почему ты не позвонил мне?", "Why didn't you call me?|Why didn't you phone me?|Why didn't you ring me?"],
       ["Сколько тебе лет?", "How old are you?"],
       ["Во сколько начинается урок?", "What time does the lesson start?|What time does the lesson begin?"],
-      ["Чья это сумка?", "Whose bag is this?|Whose bag is it?|Whose is this bag?|Whose bag is that?"]
+      ["Чьи это ключи?", "Whose keys are these?|Whose keys are those?|Whose are these keys?"],
     ]},
     { type: 'listen', at: 2, task: 'Прослушайте предложение и соберите его из слов.', items: [
       ["Where did you buy this beautiful scarf?", "Где ты купила этот красивый шарф?"],
@@ -136,30 +165,55 @@ ${E([
 <p>Отвечаем по сути дела, а не «в тон» вопросу: <i>yes</i> всегда идет с положительным ответом (<i>Yes, I am</i>), <i>no</i> — с отрицательным (<i>No, I'm not</i>). Здесь русские часто ошибаются, потому что по-русски на «Ты ведь не голоден?» можно ответить «Да, не голоден». По-английски так нельзя: <i>— You aren't hungry, are you? — <b>No, I'm not</b>.</i> (не голоден) или <i><b>Yes, I am</b>.</i> (голоден).</p>
 ${N("Частая ошибка — ставить <i>isn't it?</i> после любого утверждения, как русское «не так ли?». Правильно подбирать глагол по утверждению: <i>You like tea, <b>don't you</b>?</i>, а не <i>You like tea, isn't it?</i>")}
 <p>Интонация тоже важна. Если голос в конце понижается, говорящий почти уверен и ждет согласия. Если повышается — он действительно сомневается и задает вопрос.</p>`,
+  /* перевод слов в упражнениях: по наведению или касанию (gloss.js); ключи — в нижнем регистре, как слово стоит в тексте */
+  gloss: {
+    'coat': 'пальто', 'cold': 'холодный; холодно', 'help': 'помогать', 'me': 'меня, мне', 'pass': 'передать; сдать', 'rome': 'Рим', 'salt': 'соль', "she's": 'она (= she is / she has)', 'tired': 'уставший', 'us': 'нас, нам', 'warm': 'теплый',
+    'brother': 'брат', 'house': 'дом', 'hour': 'час', 'sister': 'сестра', 'film': 'фильм', 'twice': 'дважды', "it's": 'это (= it is)',
+    'i have': 'у меня есть', 'has': 'имеет; вспомогательный глагол', 'i': 'я', 'she': 'она', 'it': 'это; он, она (о предмете)',
+    'they': 'они', 'is': 'есть, является (форма to be)', 'are': 'есть (форма to be)', 'have': 'иметь; есть (о еде)', 'go': 'идти, ехать',
+    'the': 'определенный артикль', 'at': 'в (о времени); у, на (о месте)', 'london': 'Лондон', 'go to': 'ходить в, идти в',
+    'a': 'неопределенный артикль', 'very': 'очень', 'today': 'сегодня', 'this': 'этот, эта, это', 'door': 'дверь', 'live': 'жить',
+    'and': 'и', 'two': 'два', 'year': 'год', 'buy': 'купить', 'to': 'в, на (куда); частица перед глаголом', 'there': 'в обороте there is / there are: есть, имеется',
+    'park': 'парк', 'near': 'рядом с, около', 'your': 'твой, ваш', 'yesterday': 'вчера', "let's": 'давай(те)', 'morning': 'утро',
+    'home': 'дом; домой', 'cinema': 'кино', 'summer': 'лето', 'now': 'сейчас', 'do': 'делать; вспомогательный глагол',
+    'long': 'долго; длинный', 'works': 'работает', 'you': 'ты, вы', 'parents': 'родители', 'like': 'нравиться, любить', 'lunch': 'обед',
+    'at home': 'дома', 'again': 'снова', 'hungry': 'голодный', 'last': 'прошлый', 'late': 'поздно', 'married': 'женат, замужем',
+    'tomorrow': 'завтра', 'were': 'были (форма to be)', 'when': 'когда', 'car': 'машина', 'coffee': 'кофе', 'hospital': 'больница',
+    'jazz': 'джаз', 'meat': 'мясо', 'tv': 'телевизор', 'ago': 'назад', 'did': 'вспомогательный глагол прошедшего времени',
+    "don't": 'не (= do not)', "i'm": 'я (= I am)', 'call': 'звонить', 'close': 'закрыть', 'rain': 'дождь', 'seaside': 'морское побережье',
+    'an': 'неопределенный артикль', 'raining': 'идет дождь (от rain)', 'went': 'пошел, поехал (от go)', "aren't": 'не (= are not)',
+    'called': 'позвонил (от call)', 'finished': 'закончил (от finish)', "haven't": 'не (= have not)', 'seen': 'видел (3-я форма see)',
+    'been': 'был (3-я форма be)', "didn't": 'не (= did not)', 'last year': 'в прошлом году', 'got married': 'поженились', "i've got": 'у меня есть (= I have got)',
+    'station': 'вокзал, станция', 'going to': 'собирается', 'report': 'отчет', 'will': 'вспомогательный глагол будущего времени',
+    'already': 'уже', 'busy': 'занят, занятый', 'cats': 'кошки', "doesn't": 'не (= does not)', 'drink': 'пить', 'dry': 'сухой',
+    'eat': 'есть (принимать пищу)', 'had': 'имел; вспомогательный глагол', "he's": 'он (= he is / he has)', "i've": 'я (= I have)',
+    "isn't": 'не (= is not)', 'never': 'никогда', 'streets': 'улицы', 'watching': 'смотрит', 'windy': 'ветреный',
+    "you've": 'ты, вы (= you have)'
+  },
   ex: [
     { type: 'gap', task: 'Допишите разделительный вопрос.', items: [
       ["It's windy today, ___?", "isn't it"], ["You live near the station, ___?", "don't you"],
       ["Your sister works at the hospital, ___?", "doesn't she"], ["They went to the seaside last summer, ___?", "didn't they"],
-      ["You aren't busy now, ___?", "are you"], ["Tom has already finished the report, ___?", "hasn't he"],
-      ["It will rain tomorrow, ___?", "won't it"], ["Your parents were at home yesterday, ___?", "weren't they"],
+      ["You aren't tired, ___?", "are you"], ["Tom has already finished the report, ___?", "hasn't he"],
+      ["Your brother will help us, ___?", "won't he"], ["Your parents were at home yesterday, ___?", "weren't they"],
       ["She doesn't eat meat, ___?", "does she"], ["You were watching TV when I called, ___?", "weren't you"],
       ["There is a park near your house, ___?", "isn't there"], ["This film is very long, ___?", "isn't it"]
     ]},
     { type: 'choice', task: 'Выберите правильный «хвостик».', items: [
       ["I'm late again, ___?", ["aren't I", "am not I", "isn't I"]], ["Let's go to the cinema, ___?", ["shall we", "don't we", "won't we"]],
-      ["Close the door, ___?", ["will you", "do you", "don't you"]], ["You never drink coffee, ___?", ["do you", "don't you", "did you"]],
-      ["Kate and Mike got married last year, ___?", ["didn't they", "didn't he", "haven't they"]], ["He's been to London, ___?", ["hasn't he", "isn't he", "wasn't he"]],
+      ["Pass me the salt, ___?", ["will you", "do you", "don't you"]], ["You never drink coffee, ___?", ["do you", "don't you", "did you"]],
+      ["Kate and Mike got married last year, ___?", ["didn't they", "didn't he", "haven't they"]], ["She's been to Rome, ___?", ["hasn't she", "isn't she", "wasn't she"]],
       ["Your brother is going to buy a car, ___?", ["isn't he", "doesn't he", "won't he"]], ["You like jazz, ___?", ["don't you", "isn't it", "aren't you"]]
     ]},
     { type: 'choice', task: 'Выберите ответ, который подходит по смыслу.', items: [
-      ["— You aren't hungry, are you? — ___. I had lunch an hour ago.", ["No, I'm not", "Yes, I'm not", "Yes, I am"]],
+      ["— You aren't cold, are you? — ___. I've got a warm coat.", ["No, I'm not", "Yes, I'm not", "Yes, I am"]],
       ["— You don't like cats, do you? — ___. I have two at home!", ["Yes, I do", "No, I don't", "Yes, I don't"]],
       ["— Ann didn't call, did she? — ___. She called twice this morning.", ["Yes, she did", "No, she didn't", "Yes, she didn't"]],
       ["— It isn't raining, is it? — ___. The streets are dry.", ["No, it isn't", "Yes, it isn't", "Yes, it is"]],
       ["— You've seen this film, haven't you? — ___. I've never seen it.", ["No, I haven't", "Yes, I haven't", "No, I have"]]
     ]},
     { type: 'translate', task: 'Переведите на английский.', items: [
-      ["Сегодня жарко, правда?", "It's hot today, isn't it?|Today it's hot, isn't it?"],
+      ["Фильм был скучный, правда?", "The film was boring, wasn't it?|The movie was boring, wasn't it?"],
       ["Ты ведь не видел мои ключи?", "You haven't seen my keys, have you?|You didn't see my keys, did you?"],
       ["Они живут в Лондоне, да?", "They live in London, don't they?"],
       ["Давай закажем пиццу, хорошо?", "Let's order pizza, shall we?|Let's order a pizza, shall we?"],

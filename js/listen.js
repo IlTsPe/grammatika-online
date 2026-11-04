@@ -27,7 +27,7 @@ const PLAY_ICON = '<svg aria-hidden="true"><use href="#i-play"/></svg>';
 const STOP_ICON = '<svg aria-hidden="true"><use href="#i-stop"/></svg>';
 function makePlayer(text, label) {
   const box = el('div', 'listen__player');
-  const btn = el('button', 'listen__play'); btn.type = 'button';
+  const btn = button('listen__play');
   const track = el('span', 'bar listen__track'); track.setAttribute('aria-hidden', 'true');
   const fill = el('i', 'listen__fill'); track.append(fill);
   /* полоса едет непрерывно: каждый кадр со скоростью, при которой она подойдет к концу как раз к ожидаемому концу звука.

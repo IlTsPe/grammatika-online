@@ -1,8 +1,15 @@
-# Грамматика онлайн
+<p align="center">
+  <a href="https://iltspe.github.io/grammatika-online/"><img src="favicon/og-image.png" alt="Грамматика онлайн — тренажер английской грамматики" width="100%"></a>
+</p>
 
-Сайт: https://iltspe.github.io/grammatika-online/
+<h1 align="center"><a href="https://iltspe.github.io/grammatika-online/">Грамматика онлайн</a></h1>
 
-![Грамматика онлайн](favicon/og-image.png)
+<p align="center">
+  <a href="#об-тренажере">Об тренажере</a> ·
+  <a href="#данные-пользователя">Данные пользователя</a> ·
+  <a href="#о-проекте-и-обратная-связь-с-автором">О проекте и обратная связь</a> ·
+  <a href="#права">Права</a>
+</p>
 
 ## Об тренажере
 Тренажер включает в себя 20 разделов и 86 тем: от базовых (артикли, времена) до сложных конструкций (Complex Object, Complex Subject, инверсия). Материал выстроен последовательно: упражнения в каждой теме используют только уже изученные правила.

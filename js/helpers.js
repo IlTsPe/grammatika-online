@@ -31,7 +31,7 @@ function syncThemeBtn() {
     b.title = action;
     const label = b.querySelector('.theme-toggle__label');
     /* у кнопки мобильной шапки подпись просто «Тема» (data-label), поэтому полное действие она получает еще и как aria-label */
-    if (label) label.textContent = b.dataset.label || (dark ? 'Светлая тема' : 'Темная тема');
-    if (!label || b.dataset.label) b.setAttribute('aria-label', action);
+    label.textContent = b.dataset.label || (dark ? 'Светлая тема' : 'Темная тема');
+    if (b.dataset.label) b.setAttribute('aria-label', action);
   });
 }

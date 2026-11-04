@@ -5,7 +5,7 @@ function crumbs(parts) {
     if (i) { const s = el('span', 'crumbs__sep'); s.innerHTML = ARROW_SVG; s.setAttribute('aria-hidden', 'true'); c.append(s); }
     /* текущая страница — просто текст, не ссылка; последняя в цепочке */
     if (typeof p === 'string') { const cur = el('span', null, p); if (i === parts.length - 1) cur.setAttribute('aria-current', 'page'); c.append(cur); }
-    else { const b = el('button', 'crumbs__link', p.label); b.type = 'button'; b.addEventListener('click', () => go(p.to)); c.append(b); }
+    else { const b = button('crumbs__link', p.label); b.addEventListener('click', () => go(p.to)); c.append(b); }
   });
   return c;
 }
@@ -44,6 +44,7 @@ const ABOUT = [
       <ul>
         <li><b>Темная тема / Светлая тема</b> — переключает оформление интерфейса.</li>
         <li><b>Скрыть меню</b> (на широком экране) — убирает боковую панель, странице становится больше места для контента. Чтобы вернуть меню, нажмите появившуюся кнопку «Показать меню».</li>
+        <li><b>На телефоне</b> меню открывается кнопкой «Меню» в шапке, а закрывается крестиком, нажатием на затемненную часть страницы или свайпом влево.</li>
       </ul>
       <h3>Прогресс</h3>
       <p>На кнопке отображается общий процент прохождения тренажера, а рядом — красный значок с количеством упражнений, в которых при последней проверке были ошибки или незаполненные ответы. Если таких упражнений нет — значка не будет. По нажатию раскрывается блок:</p>
@@ -58,9 +59,9 @@ const ABOUT = [
       <p>На кнопке отображается количество отмеченных тем, а при нажатии открывается их список. Подробнее на странице «Избранное и заметки».</p>
       <h3>Мои заметки</h3>
       <p>На кнопке отображается количество созданных заметок, а при нажатии открывается страница «Мои заметки». Подробнее на странице «Избранное и заметки».</p>
-      <h3>Содержание и уровни сложности</h3>
+      <h3>Содержание, неправильные глаголы и уровни сложности</h3>
       <ul>
-        <li><b>Содержание тренажера</b> — список всех разделов с общим прогрессом.</li>
+        <li><b>Содержание тренажера</b> — список всех разделов с общим прогрессом.</li><li><b>Неправильные глаголы</b> — таблица неправильных глаголов: три формы (V1, V2, V3) и перевод. Над таблицей есть поиск: можно ввести любую форму глагола или перевод.</li>
         <li><b>Уровни сложности</b> — кнопки «Все» и уровни A1–C2 позволяют отфильтровать список разделов. После выбора останутся только темы выбранного уровня сложности. Под кнопками отобразится строка «Уровень … пройден на …%». Подробнее на странице «Уровни сложности».</li>
       </ul>
       <h3>Поиск и список разделов</h3>
@@ -92,7 +93,7 @@ const ABOUT = [
       <p>Тренажер можно использовать без подключения к интернету: в метро или самолете. Файлы сайта автоматически сохраняются на устройстве, поэтому тренажер открывается и без интернета.</p>
       <h3>Что сохраняется</h3>
       <ul>
-        <li><b>Основа сайта</b> (около 1,7 МБ) — правила, упражнения, оформление и шрифты автоматически сохраняются при первом посещении. После этого тренажер будет доступен для работы без подключения к интернету.</li>
+        <li><b>Основа сайта</b> (около 2 МБ) — правила, упражнения, таблица неправильных глаголов, оформление и шрифты автоматически сохраняются при первом посещении. После этого тренажер будет доступен для работы без подключения к интернету.</li>
         <li><b>Записи «На слух»</b> — сохраняются, только если нажать кнопку «Скачать записи». Без них упражнения «На слух» без интернета не озвучиваются: запись не загрузится, и кнопка прослушивания не сработает.</li>
       </ul>
       <div class="offline"></div>
@@ -151,7 +152,7 @@ const ABOUT = [
       <p>В блоке меню «Уровни сложности» выберите «Все» или конкретный уровень. После этого в списке разделов, а также при поиске останутся темы выбранного уровня. Процент прохождения раздела будет рассчитываться только по темам этого уровня.</p>` },
   { id: 'exercises', title: 'Упражнения и проверка', sub: 'Как проверяются ответы', body: () => `
       <h3>Проверка</h3>
-      <p>Кнопка «Проверить» активируется, как только вы введете хотя бы один ответ. После проверки она блокируется, пока вы не измените хотя бы один ответ. Неверные ответы и незаполненные поля выделяются красным цветом. Если первый неверный или незаполненный ответ не виден на экране целиком, страница сама прокручивается к нему.</p>
+      <p>Кнопка «Проверить» активируется, как только вы дадите хотя бы один ответ: введете слово, выберете вариант или нажмете слово в упражнении «На слух». После проверки она блокируется, пока вы не измените хотя бы один ответ. Неверные ответы и незаполненные поля выделяются красным цветом. Если первый неверный или незаполненный ответ не виден на экране целиком, страница сама прокручивается к нему.</p>
       <ul>
         <li>Регистр букв и знаки препинания не учитываются.</li>
         <li>Сокращения засчитываются наравне с полными формами: <i>I'm</i> и <i>I am</i>, <i>don't</i> и <i>do not</i>, <i>it's</i> и <i>it is</i>.</li>
@@ -162,7 +163,7 @@ const ABOUT = [
         <li><b>Одно слово</b> — его нужно поставить в подходящую форму. Чаще всего это глагол: <i>She ___ (play) tennis</i> → <i>plays</i>, но бывают и существительное (<i>child</i> → <i>children</i>), прилагательное (<i>big</i> → <i>bigger</i>), местоимение (<i>I</i> → <i>me</i>). Подсказка на русском (<i>рядом</i>, <i>сейчас</i>) объясняет смысл, а не форму.</li>
         <li><b>Несколько слов через косую черту</b> — все они входят в ответ в нужной форме и в том же порядке, а недостающие слова (например, вспомогательный глагол) нужно добавить самому: <i>He ___ (not / play) tennis</i> → <i>does not play</i> или <i>doesn't play</i>.</li>
       </ul>
-      <h3>Ответы и повтор</h3>
+      <h3>Перевод слов</h3><p>В упражнениях «Впишите пропущенное», «Выберите вариант» и «Текст с пропусками» можно узнать перевод незнакомого слова. Слова с переводом в тексте никак не выделены, поэтому просто проверьте нужное слово:</p><ul><li><b>С мышью</b> — наведите курсор на слово и задержите его на секунду: над словом появится перевод. Когда курсор уйдет со слова, перевод исчезнет.</li><li><b>На телефоне и планшете</b> — нажмите на слово. Чтобы скрыть перевод, нажмите на слово еще раз или в любом другом месте либо прокрутите страницу.</li></ul><p>Перевод есть не у каждого слова, а только у тех, которые могут быть незнакомы на уровне темы. Подсказки в скобках и предложения в заданиях на перевод и «На слух» не переводятся.</p><h3>Ответы и повтор</h3>
       <ul>
         <li><b>Показать ответы</b> — выводит верные ответы или подсвечивает их. Для того чтобы скрыть ответы, нажмите кнопку «Скрыть ответы».</li>
         <li><b>Заново</b> — очищает упражнение и его результат, чтобы решить его с чистого листа.</li>
@@ -278,7 +279,7 @@ function renderAboutPage(wrap) {
   const intro = el('div', 'info-intro');
   const fill = () => {
     const ps = paras.map(para);
-    const more = el('button', 'overall__more-btn', aboutOpen ? 'Скрыть' : 'Показать еще'); more.type = 'button';
+    const more = button('overall__more-btn', aboutOpen ? 'Скрыть' : 'Показать еще');
     more.setAttribute('aria-expanded', String(aboutOpen));
     more.addEventListener('click', () => { aboutOpen = !aboutOpen; fill(); $('.overall__more-btn', intro).focus({ preventScroll: aboutOpen }); });
     if (!aboutNarrow.matches) { intro.replaceChildren(...ps); return; }
@@ -338,7 +339,7 @@ function renderAboutPage(wrap) {
   wrap.append(intro, el('div', 'sheet__section sheet__section--about', 'Как устроен тренажер'));
   const ol = el('ol', 'contents contents--about');
   ABOUT.forEach((p, i) => {
-    const li = el('li', 'contents__item'); const b = el('button', 'contents__row'); b.type = 'button';
+    const li = el('li', 'contents__item'); const b = button('contents__row');
     b.innerHTML = `<span class="contents__num">${i + 1}</span><span class="contents__title">${esc(p.title)}</span><span class="contents__meta">${esc(p.sub)}</span>`;
     b.addEventListener('click', () => go('about-' + p.id));
     li.append(b); ol.append(li);
@@ -355,7 +356,7 @@ function renderAboutTopic(page, wrap) {
   const idx = ABOUT.indexOf(page);
   const nav = el('nav', 'pager'); nav.setAttribute('aria-label', 'Соседние страницы');
   const mk = (p, dir, label) => {
-    const b = el('button', 'pager__btn pager__btn--' + dir); b.type = 'button';
+    const b = button('pager__btn pager__btn--' + dir);
     b.innerHTML = `<small class="pager__label"><span class="pager__dir">${label}</span></small><span>${esc(p.title)}</span>`;
     b.addEventListener('click', () => go('about-' + p.id));
     nav.append(b);
@@ -372,7 +373,7 @@ function renderNotFound(wrap) {
   wrap.append(el('h1', 'sheet__title', 'Страница не найдена'));
   wrap.append(el('p', 'sheet__intro', 'По этому адресу ничего нет: возможно, в нем опечатка или страница переехала. Все разделы и темы собраны в содержании тренажера.'));
   const tools = el('div', 'mistakes__tools');
-  const b = el('button', 'mistakes__start not-found__go'); b.type = 'button';
+  const b = button('mistakes__start not-found__go');
   b.innerHTML = `<span>Содержание тренажера</span>${arrowHtml('next')}`;
   b.addEventListener('click', () => go('contents'));
   tools.append(b);
@@ -385,7 +386,6 @@ function renderMistakesPage(wrap) {
   const all = mistakes();
   const level = mistakesFilter();
   const list = level ? all.filter(m => m.t.level === level) : all;
-  const exCount = ms => ms.reduce((n, m) => n + m.exs.length, 0);
   const count = exCount(list);
   /* с ошибками: только примечание о том, как меняется список; без ошибок — что здесь появится */
   const p = count
@@ -397,20 +397,15 @@ function renderMistakesPage(wrap) {
   /* фильтр уровня: только уровни с ошибками, у каждого число упражнений; при одном уровне не нужен */
   const levels = Object.keys(LEVELS).filter(l => all.some(m => m.t.level === l));
   if (levels.length > 1) {
-    const bar = el('div', 'mistakes__levels'); bar.setAttribute('role', 'group'); bar.setAttribute('aria-label', 'Уровень сложности');
-    [['', 'Все', exCount(all)], ...levels.map(l => [l, l, exCount(all.filter(m => m.t.level === l))])].forEach(([v, label, n]) => {
-      const b = el('button', 'mistakes__level'); b.type = 'button';
-      b.innerHTML = `${label}<span class="mistakes__level-count">${n}</span>`;
-      if (v) b.title = LEVELS[v];
-      b.setAttribute('aria-pressed', String(v === level));
-      b.addEventListener('click', () => { mistakesLevel = v; mistakesPage = 0; store.set('gk2-mistakes-level', v); go('mistakes', false); });
-      bar.append(b);
-    });
-    tools.append(bar);
+    tools.append(levelBar('mistakes__levels', 'mistakes__level', levels, level, {
+      count: l => exCount(l ? all.filter(m => m.t.level === l) : all), countCls: 'mistakes__level-count',
+      title: l => l ? LEVELS[l] : '',
+      pick: l => { mistakesLevel = l; mistakesPage = 0; store.set('gk2-mistakes-level', l); go('mistakes', false); },
+    }));
   }
   /* первое упражнение (отфильтрованного) списка; «Следующее» под каждым упражнением дальше ведет по остальным в пределах того же
      фильтра уровня, поэтому подпись его называет. При одном упражнении идти не по чему: кнопка выключена */
-  const start = el('button', 'mistakes__start'); start.type = 'button';
+  const start = button('mistakes__start');
   start.innerHTML = `Начать по порядку: ${level ? 'уровень ' + level : 'все уровни'} ${arrowHtml('next')}`;
   start.disabled = count < 2;
   start.addEventListener('click', () => openExercise(list[0].t.id, list[0].exs[0][0]));
@@ -428,14 +423,14 @@ function renderMistakesPage(wrap) {
   list.slice(mistakesPage * MISTAKES_PAGE, (mistakesPage + 1) * MISTAKES_PAGE).forEach(({ t, exs }) => {
     const li = el('li', 'mistakes__item');
     const head = el('div', 'mistakes__head');
-    const title = el('button', 'mistakes__title', t.title); title.type = 'button';
-    title.insertAdjacentHTML('beforeend', `<span class="lvl-tag" title="${LEVELS[t.level]}">${t.level}</span>`);
+    const title = button('mistakes__title', t.title);
+    title.insertAdjacentHTML('beforeend', lvlTag(t.level));
     title.addEventListener('click', () => go(t.id));
     head.append(el('span', 'mistakes__num', t.num), title);
     head.insertAdjacentHTML('beforeend', `<span class="mistakes__chapter">Раздел ${t.ch.n} · ${esc(t.ch.title)}</span>`);
     const chips = el('div', 'mistakes__exs');
     exs.forEach(([i, r]) => {
-      const b = el('button', 'mistakes__ex'); b.type = 'button';
+      const b = button('mistakes__ex');
       b.innerHTML = `Упр. ${exNo(t, i)} · ${mistakeSummary(t, i, r)}`;
       b.addEventListener('click', () => openExercise(t.id, i));
       chips.append(b);
@@ -454,7 +449,7 @@ function renderNotesPage(wrap) {
   wrap.append(el('h1', 'sheet__title', 'Мои заметки'));
   wrap.append(el('p', 'sheet__intro', `Записывайте сюда правила, примеры, слова — все, что хочется сохранить. Длина одной заметки — до ${NOTE_MAX} символов.`));
   const tools = el('div', 'notes-tools');
-  const add = el('button', 'mistakes__start notes-tools__add'); add.type = 'button';
+  const add = button('mistakes__start notes-tools__add');
   /* пока какая-то заметка открыта для редактирования (новая или «Редактировать», изменена или нет), начать другую новую нельзя:
      подсказка — в подписи самой кнопки (поиск лежит поверх ряда, поэтому смена ширины ничего не сдвигает) */
   add.innerHTML = `${notesIcon()}<span>Новая заметка</span>`;
@@ -462,13 +457,13 @@ function renderNotesPage(wrap) {
   /* поиск по текстам заметок; виден, только пока заметки есть. Заметка, открытая для редактирования, всегда остается видна.
      Свернут в кнопку с лупой: по нажатию поле выезжает влево поверх ряда и не сдвигает список */
   const searchWrap = el('div', 'notes-search');
-  const searchOpen = el('button', 'notes-search__open'); searchOpen.type = 'button';
+  const searchOpen = button('notes-search__open');
   searchOpen.setAttribute('aria-label', 'Поиск по заметкам'); searchOpen.setAttribute('aria-expanded', 'false'); searchOpen.setAttribute('aria-controls', 'notesSearch');
   searchOpen.innerHTML = searchIcon();
   const searchBox = el('div', 'notes-search__box'); searchBox.id = 'notesSearch';
   const search = el('input', 'notes-tools__search'); search.type = 'search';
   search.placeholder = 'Поиск по заметкам'; search.setAttribute('aria-label', 'Поиск по заметкам'); search.autocomplete = 'off';
-  const searchClose = el('button', 'notes-search__close'); searchClose.type = 'button'; searchClose.setAttribute('aria-label', 'Закрыть поиск');
+  const searchClose = button('notes-search__close'); searchClose.setAttribute('aria-label', 'Закрыть поиск');
   searchClose.innerHTML = '<svg aria-hidden="true"><use href="#i-cross"/></svg>';
   searchBox.append(search, searchClose);
   searchWrap.append(searchOpen, searchBox);
@@ -509,7 +504,7 @@ function renderNotesPage(wrap) {
     searchWrap.hidden = !notes.length;
     if (!notes.length) closeSearch(false);
   };
-  const btn = (text, mod) => { const b = el('button', 'notes-list__btn' + (mod ? ' notes-list__btn--' + mod : ''), text); b.type = 'button'; return b; };
+  const btn = (text, mod) => button('notes-list__btn' + (mod ? ' notes-list__btn--' + mod : ''), text);
   function card(n, editing = false) {
     const li = el('li', 'notes-list__item'); li.note = n;
     const foot = el('div', 'notes-list__foot');
@@ -577,13 +572,13 @@ function renderContents(wrap) {
   wrap.append(p, progressBlock(null));
   const ol = el('ol', 'contents');
   CHAPTERS.forEach(ch => {
-    const li = el('li', 'contents__item'); const b = el('button', 'contents__row'); b.type = 'button';
+    const li = el('li', 'contents__item'); const b = button('contents__row');
     const cs = chapterStats(ch); if (cs.tried) b.classList.add('contents__row--prog');
     /* прогресс раздела (полоска + процент одним блоком) — второй строкой, под названием. span, а не div: внутри button допустимы только строчные элементы */
     b.innerHTML = `<span class="contents__num">${ch.n}</span><span class="contents__title">${esc(ch.title)}</span>
       ${cs.tried ? `<span class="contents__prog"><span class="bar bar--thin contents__bar">${barFill(cs.pct)}</span>${pctLabel(cs.pct, '', 'span')}</span>` : ''}
       <span class="contents__meta"><span>${ch.topics.length} ${plural(ch.topics.length, 'тема', 'темы', 'тем')} · ${ch.topics.reduce((n, t) => n + t.ex.length, 0)} упр.</span>
-      <span class="contents__levels" aria-label="Уровни">${[...new Set(ch.topics.map(t => t.level))].map(l => `<span class="lvl-tag lvl-tag--sm" title="${LEVELS[l]}">${l}</span>`).join('')}</span></span>`;
+      <span class="contents__levels" aria-label="Уровни">${[...new Set(ch.topics.map(t => t.level))].map(l => lvlTag(l, 'lvl-tag--sm')).join('')}</span></span>`;
     b.addEventListener('click', () => go('ch-' + ch.id));
     li.append(b); ol.append(li);
   });
@@ -597,7 +592,7 @@ function renderChapter(ch, wrap) {
   wrap.append(progressBlock(ch));
   const grid = el('div', 'topic-cards');
   ch.topics.forEach(t => {
-    const b = el('button', 'topic-card'); b.type = 'button';
+    const b = button('topic-card');
     const st = topicStats(t);
     b.innerHTML = `<span class="topic-card__num">${t.num} · <span class="lvl-tag">${t.level}</span>${bookmarks[t.id] ? bmIcon() : ''}</span><span class="topic-card__title">${esc(t.title)}</span><span class="topic-card__sub">${esc(t.sub)}</span>
       <span class="topic-card__foot"><span>${t.ex.length} упр.</span><span class="bar topic-card__bar">${barFill(st.tried ? st.pct : 0)}</span>${st.tried ? pctLabel(st.pct, '', 'span') : '<span>—</span>'}</span>
@@ -612,12 +607,12 @@ function renderChapter(ch, wrap) {
 function renderTopic(t, wrap) {
   wrap.append(crumbs([{ label: 'Содержание', to: 'contents' }, { label: `${t.ch.n}. ${t.ch.title}`, to: 'ch-' + t.ch.id }, `Тема ${t.num}`]));
   const h = el('h1', 'sheet__title', t.title); wrap.append(h);
-  const lead = el('p', 'sheet__lead'); lead.innerHTML = `${esc(t.sub)} &nbsp;<span class="lvl-tag" title="${LEVELS[t.level]}">${t.level}</span>`; wrap.append(lead);
+  const lead = el('p', 'sheet__lead'); lead.innerHTML = `${esc(t.sub)} &nbsp;${lvlTag(t.level)}`; wrap.append(lead);
   wrap.append(progressBlock(t.ch, t.level));
   wrap.append(el('div', 'sheet__section', 'Правило'));
   const rule = el('div', 'rule'); rule.innerHTML = t.rule; wrap.append(rule);
   const study = el('div', 'study');
-  const sb = el('button', 'btn study__btn'); sb.type = 'button';
+  const sb = button('btn study__btn');
   const sbLabel = el('span');
   sb.append(sbLabel);
   /* animate = клик: барабан ✓ вращается; при отрисовке он просто стоит */
@@ -631,13 +626,12 @@ function renderTopic(t, wrap) {
   };
   sb.addEventListener('click', () => {
     studied[t.id] = !studied[t.id]; if (!studied[t.id]) delete studied[t.id]; store.set('gk2-studied', studied);
-    sync(true); renderToc(); renderOverall();
     /* правило учитывается в цифрах темы, раздела и уровня */
-    const pp = $('#pageProg'); if (pp) fillProgress(pp);
+    sync(true); refreshProgress();
   });
   sync(); if (!t.noStudy) study.append(sb);
   /* избранное: тема, к которой читатель хочет вернуться и повторить */
-  const bb = el('button', 'btn study__btn study__btn--bookmark'); bb.type = 'button';
+  const bb = button('btn study__btn study__btn--bookmark');
   /* animate = клик, добавляющий в избранное: ленточка качается, вокруг вспыхивают искры (см. .bm-pop) */
   const bmSync = animate => {
     const on = !!bookmarks[t.id];
@@ -667,7 +661,7 @@ function exTabs(t, boxes) {
   const box = el('div', 'ex-tabs'); box.dataset.topic = t.id;
   const bar = el('div', 'ex-tabs__bar'); bar.setAttribute('role', 'tablist'); bar.setAttribute('aria-label', 'Упражнения темы');
   boxes.forEach(ex => {
-    const b = el('button', 'ex-tabs__tab'); b.type = 'button'; b.setAttribute('role', 'tab');
+    const b = button('ex-tabs__tab'); b.setAttribute('role', 'tab');
     b.dataset.ei = ex.dataset.ei;
     b.innerHTML = `<span>Упр. ${exNo(t, +ex.dataset.ei)}</span><span class="ex-tabs__score"></span>`;
     b.addEventListener('click', () => showExTab(ex));
@@ -685,7 +679,7 @@ function exTabs(t, boxes) {
 function showExTab(ex, scroll) {
   const box = ex.closest('.ex-tabs');
   if (!box) return;
-  const t = TOPICS.find(x => x.id === box.dataset.topic);
+  const t = topicById[box.dataset.topic];
   const all = [...box.querySelectorAll(':scope > .ex')], k = all.indexOf(ex);
   exTabPos.set(t.id, +ex.dataset.ei);
   all.forEach(x => x.classList.toggle('ex--current', x === ex));
@@ -701,7 +695,7 @@ function showExTab(ex, scroll) {
   const steps = box.querySelector('.ex-tabs__steps');
   steps.replaceChildren();
   const step = (to, dir) => {
-    const b = el('button', 'btn ex-tabs__step ex-tabs__step--' + dir); b.type = 'button';
+    const b = button('btn ex-tabs__step ex-tabs__step--' + dir);
     const n = `Упр. ${exNo(t, +to.dataset.ei)}`;
     b.innerHTML = dir === 'prev' ? `${arrowHtml('prev')} ${n}` : `${n} ${arrowHtml('next')}`;
     b.addEventListener('click', () => showExTab(to, true));
@@ -715,7 +709,7 @@ function showExTab(ex, scroll) {
 /* счет на вкладках — по прогрессу: зеленый без ошибок, красный с ошибками; до первой проверки «0 из N» — сколько всего ответов */
 function syncExTabs(box = $('#main .ex-tabs')) {
   if (!box) return;
-  const t = TOPICS.find(x => x.id === box.dataset.topic), p = progress[t.id] || {};
+  const t = topicById[box.dataset.topic], p = progress[t.id] || {};
   box.querySelectorAll('.ex-tabs__tab').forEach(b => {
     const r = p[b.dataset.ei];
     b.classList.toggle('ex-tabs__tab--done', !!r && r[0] === r[1]);
@@ -730,8 +724,8 @@ function pager(idx, arr, idOf, titleOf, noun) {
   const curLv = levelsOf(arr[idx]);
   /* уровень, который есть у соседа и нет у текущей страницы, залит */
   const mk = (item, dir, label) => {
-    const b = el('button', 'pager__btn pager__btn--' + dir); b.type = 'button';
-    const tags = levelsOf(item).map(l => `<span class="lvl-tag lvl-tag--sm${curLv.includes(l) ? '' : ' lvl-tag--filled'}" title="${LEVELS[l]}">${l}</span>`).join('');
+    const b = button('pager__btn pager__btn--' + dir);
+    const tags = levelsOf(item).map(l => lvlTag(l, 'lvl-tag--sm' + (curLv.includes(l) ? '' : ' lvl-tag--filled'))).join('');
     /* уровни — с внешней стороны подписи: у «Предыдущей» справа, у «Следующей» слева, стрелки остаются по краям */
     const lbl = `<span class="pager__dir">${label}</span>`, lv = `<span class="pager__levels">${tags}</span>`;
     b.innerHTML = `<small class="pager__label">${dir === 'next' ? lv + lbl : lbl + lv}</small><span>${esc(titleOf(item))}</span>`;
@@ -748,7 +742,7 @@ function pager(idx, arr, idOf, titleOf, noun) {
     `<span class="pager-current__title">${esc(noun === 'тема' ? titleOf(cur) : `${cur.n}. ${cur.title}`)}</span>` +
     /* «· уровень» и метки — одним блоком: при переносе уходят на новую строку вместе */
     `<span class="pager-current__levels"><span>· ${noun === 'тема' ? 'уровень' : 'уровни'}</span>` +
-    curLv.map(l => `<span class="lvl-tag" title="${LEVELS[l]}">${l}</span>`).join('') + '</span>';
+    curLv.map(l => lvlTag(l)).join('') + '</span>';
   const frag = document.createDocumentFragment(); frag.append(here, nav);
   if (noun === 'тема') { const lv = levelPager(idx, arr, idOf, titleOf); if (lv) frag.append(lv); }
   return frag;
@@ -764,9 +758,9 @@ function levelPager(idx, arr, idOf, titleOf) {
   const next = after && after !== arr[idx + 1] ? after : null;
   if (!prev && !next) return null;
   const box = el('nav', 'pager-level'); box.setAttribute('aria-label', `Темы уровня ${level}`);
-  box.innerHTML = `<span class="pager-level__label">Идти только по темам уровня <span class="lvl-tag lvl-tag--sm" title="${LEVELS[level]}">${level}</span></span>`;
+  box.innerHTML = `<span class="pager-level__label">Идти только по темам уровня ${lvlTag(level, 'lvl-tag--sm')}</span>`;
   const link = (item, dir) => {
-    const b = el('button', 'pager-level__link pager-level__link--' + dir); b.type = 'button';
+    const b = button('pager-level__link pager-level__link--' + dir);
     b.innerHTML = `<small class="pager-level__dir">${dir === 'prev' ? arrowHtml('prev') + ' Предыдущая' : 'Следующая ' + arrowHtml('next')}</small><span>${esc(titleOf(item))}</span>`;
     b.addEventListener('click', () => go(idOf(item)));
     box.append(b);

@@ -31,6 +31,31 @@ ${T(["Мужской род", "Женский род"], [
   ["<i>man, boy, father, brother, uncle, king, husband, nephew</i>", "<i>woman, girl, mother, sister, aunt, queen, wife, niece</i>"]
 ])}
 ${N("Сегодня большинство профессий называют одним словом и для мужчин, и для женщин: <i>a doctor, a teacher, a writer</i>. Слова <i>poetess</i> и <i>authoress</i> почти вышли из употребления — говорят просто <i>poet</i> и <i>author</i>. И даже <i>actor</i> все чаще используют, когда говорят об актрисе.")}`,
+  /* перевод слов в упражнениях: по наведению или касанию (gloss.js); ключи — в нижнем регистре, как слово стоит в тексте */
+  gloss: {
+    'old': 'старый', 'house': 'дом', 'good': 'хороший', 'sister': 'сестра', 'man': 'мужчина', 'book': 'книга', 'uncle': 'дядя',
+    'beautiful': 'красивый', 'i have': 'у меня есть', 'has': 'имеет; вспомогательный глагол', 'i': 'я', 'he': 'он', 'we': 'мы',
+    'my': 'мой, моя, мое', 'is': 'есть, является (форма to be)', 'are': 'есть (форма to be)', 'have': 'иметь; есть (о еде)',
+    'the': 'определенный артикль', 'at': 'в (о времени); у, на (о месте)', 'in': 'в', 'that': 'тот, та, то; что (союз)',
+    'london': 'Лондон', 'a': 'неопределенный артикль', 'very': 'очень', 'new': 'новый', 'red': 'красный', 'this': 'этот, эта, это',
+    'on': 'на; в (о днях)', 'of': 'предлог родительного падежа', 'door': 'дверь', 'live': 'жить', 'floor': 'пол', 'boy': 'мальчик',
+    'and': 'и', 'two': 'два', 'child': 'ребенок', 'year': 'год', 'for': 'для; в течение', 'big': 'большой', 'yellow': 'желтый',
+    'to': 'в, на (куда); частица перед глаголом', 'there': 'в обороте there is / there are: есть, имеется', 'bank': 'банк', 'twenty': 'двадцать', 'table': 'стол',
+    'cold': 'холодный; холодно', 'under': 'под', 'our': 'наш', 'ten': 'десять', 'yesterday': 'вчера', 'bus': 'автобус', 'after': 'после',
+    'with': 'с', 'from': 'из, от', 'friend': 'друг', 'doctor': 'врач', 'last': 'прошлый', 'late': 'поздно', 'party': 'вечеринка',
+    'were': 'были (форма to be)', 'cat': 'кошка', 'fish': 'рыба', 'mum': 'мама', 'all': 'весь, все', 'his': 'его', 'one': 'один',
+    'bought': 'купил (от buy)', 'those': 'те', 'us': 'нас, нам', 'quiet': 'тихий; тише', 'an': 'неопределенный артикль', 'husband': 'муж',
+    'met': 'встретил (от meet)', 'night': 'ночь', 'saw': 'увидел (от see)', 'took': 'взял; занял (от take)', 'was': 'был (форма to be)',
+    'five': 'пять', 'lived': 'жил (от live)', 'three': 'три', 'yard': 'двор', 'last year': 'в прошлом году', 'came': 'пришел (от come)',
+    'so': 'поэтому; так', 'sea': 'море', 'too': 'тоже; слишком', 'actor': 'актер', 'autumn': 'осень', 'brought': 'принес (от bring)',
+    'busy': 'занят, занятый', 'castle': 'замок', 'caught': 'поймал (от catch)', 'city': 'город', 'cried': 'плакал', 'cubs': 'детеныши',
+    'doctors': 'врачи', 'emperor': 'император', 'farmer': 'фермер', 'fell': 'упал (от fall)', 'garden': 'сад', 'goose': 'гусь',
+    'hero': 'герой', 'host': 'хозяин', 'hurt': 'болеть; причинить боль', 'king': 'король', 'lay': 'лежал (от lie)', 'leaf': 'лист',
+    'lion': 'лев', 'looked after': 'присматривала (за)', 'looked': 'выглядел; посмотрел', 'lost': 'потерял; потерянный', 'market': 'рынок', 'nephew': 'племянник',
+    'palace': 'дворец', 'played': 'играл', 'potatoes': 'картофель', 'prince': 'принц', 'put': 'положить', 'showed': 'показал',
+    'soup': 'суп', 'stayed': 'остался', 'these': 'эти', 'thirty': 'тридцать', 'tiger': 'тигр', 'tooth': 'зуб', 'tree': 'дерево',
+    'visited': 'посетил', 'waiter': 'официант', 'walk': 'гулять; прогулка', 'york': 'Йорк', 'zoo': 'зоопарк'
+  },
   ex: [
     { type: 'gap', task: 'Поставьте слово в скобках во множественное число.', items: [
       ["There were three ___ (box) on the floor.", "boxes"], ["Two ___ (baby) cried all night.", "babies"],
@@ -54,7 +79,7 @@ ${N("Сегодня большинство профессий называют �
     ]},
     { type: 'translate', task: 'Переведите на английский.', items: [
       ["Эти дети — мои племянники.", "These children are my nephews.|These kids are my nephews."],
-      ["Вчера у меня болели зубы.", "My teeth hurt yesterday.|My teeth ached yesterday.|Yesterday my teeth hurt.|Yesterday my teeth ached.|I had toothache yesterday.|I had a toothache yesterday."],
+      ["Мужчины ждали у двери.", "The men were waiting at the door.|The men waited at the door."],
       ["Вчера на столе лежали три ножа.", "There were three knives on the table yesterday.|Yesterday there were three knives on the table.|There were 3 knives on the table yesterday."],
       ["Эти женщины работали в нашей школе.", "These women worked at our school.|These women worked in our school."],
       ["В поле было семь овец.", "There were seven sheep in the field.|There were 7 sheep in the field.|There were seven sheep in the meadow."]
@@ -87,7 +112,7 @@ ${T(["Случай", "Как образуется", "Пример"], [
 ])}
 ${E([
   ["I was at <b>the dentist's</b> yesterday.", "Вчера я был у зубного. (в кабинете зубного)"],
-  ["We had dinner at <b>my aunt's</b>.", "Мы ужинали у тети (дома у тети)."]
+  ["We had dinner at <b>my aunt's</b>.", "Мы ужинали у тети. (дома у тети)"]
 ])}
 <h3>Притяжательный падеж без существительного</h3>
 <p>В примерах выше после <i>'s</i> нет существительного, и это не ошибка. Слово, которое и так понятно из ситуации, англичане просто пропускают. Так, <i>the dentist's</i> — это сокращение от <i>the dentist's surgery</i> — кабинет зубного врача, а <i>my aunt's</i> — от <i>my aunt's house</i> — дом моей тети. Чаще всего так говорят о доме человека и о местах, где работают люди разных профессий: <i>the doctor's</i> — у врача, <i>the hairdresser's</i> — в парикмахерской, <i>the baker's</i> — в булочной.</p>
@@ -96,6 +121,21 @@ ${E([
   ["I stayed at <b>my friend's</b> last night.", "Вчера я ночевал у друга."]
 ])}
 ${N("Обратите внимание на место апострофа — от него зависит смысл. <i>The boy's toys</i> — игрушки одного мальчика; <i>the boys' toys</i> — игрушки нескольких мальчиков.")}`,
+  /* перевод слов в упражнениях: по наведению или касанию (gloss.js); ключи — в нижнем регистре, как слово стоит в тексте */
+  gloss: {
+    'name': 'имя', 'write': 'писать', 'your': 'твой, ваш',
+    'week': 'неделя', 'beautiful': 'красивый', 'i': 'я', 'we': 'мы', 'my': 'мой, моя, мое', 'is': 'есть, является (форма to be)',
+    'the': 'определенный артикль', 'at': 'в (о времени); у, на (о месте)', 'in': 'в', 'a': 'неопределенный артикль',
+    'this': 'этот, эта, это', 'shop': 'магазин', 'on': 'на; в (о днях)', 'floor': 'пол', 'year': 'год', 'birthday': 'день рождения',
+    'for': 'для; в течение', 'to': 'в, на (куда); частица перед глаголом', 'room': 'комната', 'yesterday': 'вчера', 'after': 'после',
+    'you': 'ты, вы', 'last': 'прошлый', 'paris': 'Париж', 'were': 'были (форма to be)', 'bike': 'велосипед', 'dinner': 'ужин',
+    'all': 'весь, все', 'did': 'вспомогательный глагол прошедшего времени', 'husband': 'муж', 'was': 'был (форма to be)',
+    'went': 'пошел, поехал (от go)', 'read': 'читать; прочитал', 'worked': 'работал (от work)', 'last year': 'в прошлом году',
+    'came': 'пришел (от come)', 'all over': 'по всей (по всему)', 'rest': 'отдых; остальное', 'answers': 'ответы', 'bedroom': 'спальня',
+    'coats': 'пальто (мн. ч.)', 'correct': 'правильный', 'exams': 'экзамены', 'forgot': 'забыл (от forget)', 'friends': 'друзья',
+    'had': 'имел; вспомогательный глагол', 'liked': 'нравился', 'newspaper': 'газета', 'rode': 'ехал, катался (на велосипеде, верхом) (от ride)', 'sells': 'продает',
+    'shoes': 'туфли, обувь', 'stayed': 'остался', 'toys': 'игрушки', 'upstairs': 'наверху', 'wedding': 'свадьба'
+  },
   ex: [
     { type: 'gap', task: 'Образуйте притяжательный падеж слова в скобках.', items: [
       ["I rode ___ (Tom) bike yesterday.", "Tom's"], ["The ___ (girls) bedroom is upstairs.", "girls'"],
@@ -107,19 +147,19 @@ ${N("Обратите внимание на место апострофа — о
     { type: 'choice', task: 'Выберите правильный вариант.', items: [
       ["I forgot ___.", ["the name of this street", "this street's name's", "the street name of"]], ["Yesterday was ___ birthday.", ["my mother's", "my mothers", "of my mother"]],
       ["___ toys were all over the room. (у нескольких детей)", ["The kids'", "The kid's", "The kids's"]], ["We went to ___ yesterday.", ["the doctor's", "the doctors", "doctor's the"]],
-      ["___ wedding was beautiful. (их общая свадьба)", ["Ann and Mike's", "Ann's and Mike's", "Ann and Mike"]], ["I liked ___.", ["the end of the film", "the film's end's", "the end film"]]
+      ["___ wedding was beautiful. (их общая свадьба)", ["Ann and Mike's", "Ann's and Mike's", "Ann and Mike"]], ["Write your name at ___.", ["the top of the page", "the page's top's", "the top page of"]],
     ]},
     { type: 'translate', task: 'Переведите на английский.', items: [
       ["Это машина моего брата.", "This is my brother's car.|It is my brother's car.|It's my brother's car."],
-      ["Комната девочек наверху.", "The girls' room is upstairs."],
-      ["Вчера игрушки детей лежали на полу.", "The children's toys were on the floor yesterday.|Yesterday the children's toys were on the floor.|The kids' toys were on the floor yesterday.|Yesterday the kids' toys were on the floor."],
+      ["Это кабинет учителей.", "This is the teachers' room.|It is the teachers' room.|It's the teachers' room."],
+      ["Моих друзей зовут Том и Майк.", "My friends' names are Tom and Mike."],
       ["Я был у врача.", "I was at the doctor's.|I was at the doctor.|I went to the doctor's.|I went to the doctor.|I have been to the doctor's.|I have been to the doctor."],
       ["Мне понравился конец этой книги.", "I liked the end of this book.|I liked the ending of this book."]
     ]},
     { type: 'listen', at: 2, task: 'Прослушайте предложение и соберите его из слов.', items: [
       ["My sister's husband works at the children's hospital.", "Муж моей сестры работает в детской больнице."],
       ["We spent a week's holiday at my parents' house.", "Мы провели недельный отпуск в доме моих родителей."],
-      ["Tom and Ann's flat is at the end of the street.", "Квартира Тома и Анны в конце улицы."]
+      ["Mum and Dad's car is at the end of the street.", "Машина мамы и папы стоит в конце улицы."],
     ]}
   ]},
 
@@ -144,6 +184,24 @@ ${E([
 <h3>Что ставить перед неисчисляемыми</h3>
 <p>Раз перед неисчисляемым существительным нельзя поставить <i>a / an</i>, вместо него часто ставят <i>some</i> — немного, некоторое количество: <i>some bread</i> — (немного) хлеба, <i>some advice</i> — совет. А чтобы сказать «много» или «мало», с неисчисляемыми берут <i>much</i> и <i>little</i>, а не <i>many</i> и <i>few</i>: <i>much time</i> — много времени. Подробно о <i>some</i> и <i>any</i> рассказано в разделе 5, а о <i>much, many, little, few</i> — в разделе 7. В последней строке таблицы собраны слова, для которых нет привычного способа посчитать «по одному»: их просто употребляют без счета, например <i>The weather is nice</i> — погода хорошая.</p>
 ${N("Некоторые слова бывают и исчисляемыми, и неисчисляемыми, но значат при этом разное. Например: <i>a glass</i> — стакан, <i>glass</i> — стекло; <i>a paper</i> — газета, <i>paper</i> — бумага; <i>a hair</i> — один волосок, <i>hair</i> — волосы.")}`,
+  /* перевод слов в упражнениях: по наведению или касанию (gloss.js); ключи — в нижнем регистре, как слово стоит в тексте */
+  gloss: {
+    'good': 'хороший', 'useful': 'полезный', 'teacher': 'учитель', 'blue': 'синий, голубой', 'i': 'я', 'he': 'он', 'she': 'она',
+    'we': 'мы', 'they': 'они', 'my': 'мой, моя, мое', 'have': 'иметь; есть (о еде)', 'the': 'определенный артикль',
+    'at': 'в (о времени); у, на (о месте)', 'we have': 'у нас есть', 'they have': 'у них есть', 'a': 'неопределенный артикль',
+    'very': 'очень', 'new': 'новый', 'please': 'пожалуйста', 'flat': 'квартира', 'of': 'предлог родительного падежа', 'year': 'год',
+    'for': 'для; в течение', 'her': 'ее, ей', 'to': 'в, на (куда); частица перед глаголом', 'living room': 'гостиная', 'room': 'комната',
+    'bread': 'хлеб', 'where': 'где, куда', 'yesterday': 'вчера', 'after': 'после', 'now': 'сейчас', 'me': 'меня, мне',
+    'long': 'долго; длинный', 'give me': 'дай мне', 'need': 'нуждаться', 'glasses': 'очки', 'last': 'прошлый', 'weather': 'погода',
+    'but': 'но', 'coffee': 'кофе', 'dinner': 'ужин', 'water': 'вода', 'bring': 'принести', 'chocolate': 'шоколад', 'give': 'дать',
+    'heavy': 'тяжелый', "i'm": 'я (= I am)', 'black': 'черный', 'bought': 'купил (от buy)', 'us': 'нас, нам', 'jeans': 'джинсы',
+    'taxi': 'такси', 'took': 'взял; занял (от take)', 'was': 'был (форма to be)', 'grandfather': 'дедушка', 'hair': 'волосы',
+    'last year': 'в прошлом году', 'so': 'поэтому; так', 'going to': 'собираюсь', 'will': 'вспомогательный глагол будущего времени',
+    'news': 'новости', 'them': 'их, им', 'about': 'о; около', 'advice': 'совет', 'ate': 'съел (от eat)', 'bakery': 'пекарня',
+    'course': 'курс', 'drank': 'выпил (от drink)', 'furniture': 'мебель', 'gave': 'дал (от give)', 'just': 'только что; просто',
+    'living': 'живет', 'looking': 'смотрит; ищет', 'make': 'делать', 'ones': 'те (вместо сущ.)', 'opened': 'открыл',
+    'potatoes': 'картофель', 'run': 'пробежка; бегать', 'soup': 'суп', 'terrible': 'ужасный', 'wear': 'носить (одежду)', 'wine': 'вино'
+  },
   ex: [
     { type: 'choice', task: 'Выберите правильный вариант.', items: [
       ["The news ___ very good yesterday.", ["was", "were"]], ["Please give me ___.", ["some advice", "an advice", "advices"]],
@@ -161,12 +219,12 @@ ${N("Некоторые слова бывают и исчисляемыми, и 
     { type: 'translate', task: 'Переведите на английский.', items: [
       ["У меня есть для тебя хорошие новости.", "I have good news for you.|I've got good news for you.|I have some good news for you.|I've got some good news for you."],
       ["Я положил деньги в сумку.", "I put the money in the bag.|I put my money in my bag.|I put my money in the bag.|I put the money into the bag.|I have put the money in the bag.|I put the money in my bag.|I put my money into my bag.|I put my money into the bag.|I put the money into my bag.|I have put my money in my bag.|I have put my money in the bag.|I have put the money in my bag."],
-      ["Дай мне совет.", "Give me some advice.|Give me a piece of advice.|Give me advice."],
+      ["Мне нужна информация о поездах.", "I need some information about trains.|I need information about trains.|I need some information about the trains.|I need information about the trains."],
       ["Я потерял очки.", "I have lost my glasses.|I lost my glasses."],
       ["Купи буханку хлеба, пожалуйста.", "Buy a loaf of bread, please.|Please buy a loaf of bread."]
     ]},
     { type: 'listen', at: 2, task: 'Прослушайте предложение и соберите его из слов.', items: [
-      ["The news is good, but the weather was terrible.", "Новости хорошие, а погода была ужасная."],
+      ["The furniture is old, but my jeans are new.", "Мебель старая, а мои джинсы новые."],
       ["Please give me a piece of advice about the course.", "Пожалуйста, дайте мне совет насчет курса."],
       ["I bought a loaf of bread and two bottles of milk.", "Я купил буханку хлеба и две бутылки молока."]
     ]}
@@ -181,17 +239,36 @@ ${T(["Слова", "Глагол", "Пример"], [
 ])}
 <h3>Группа как целое или ее члены</h3>
 <p>Если мы думаем о группе как об одном целом — одной семье, одной команде, одной компании, — глагол стоит в единственном числе: <i>The team <b>has</b> won its first match</i> — команда выиграла свой первый матч. Если же важны отдельные люди внутри группы, каждый со своими действиями и мнением, в британском английском глагол ставят во множественном числе: <i>The team <b>are</b> arguing about the plan</i> — члены команды спорят о плане. В американском английском в обоих случаях глагол обычно ставят в единственном числе.</p>
-<p>Местоимение после такого слова согласуется с глаголом. С единственным числом говорят <i>it</i> и <i>its</i>, со множественным — <i>they</i> и <i>their</i>: <i>The company <b>has</b> opened <b>its</b> new office</i>, но <i>My family <b>are</b> packing <b>their</b> bags</i>. Смешивать их в одном предложении не стоит.</p>
+<p>Местоимение после такого слова согласуется с глаголом. С единственным числом говорят <i>it</i> и <i>its</i>, со множественным — <i>they</i> и <i>their</i>: <i>The company <b>has</b> opened <b>its</b> new office</i>, но <i>My family <b>are</b> packing <b>their</b> bags</i>. Смешивать единственное и множественное число в одном предложении не стоит.</p>
 <h3>Police и people</h3>
 <p>Одного полицейского словом <i>police</i> назвать нельзя: говорят <i>a police officer</i>. Слово <i>people</i> («люди») — это множественное число от <i>person</i>, поэтому и с ним глагол всегда во множественном числе: <i>People <b>say</b> that…</i> — люди говорят, что… Так же ведет себя <i>cattle</i> — крупный рогатый скот; одно животное — <i>a cow</i>. Об одном человеке из группы говорят <i>a member of staff</i> или <i>a member of the team</i>. А сами слова <i>team, family, class</i> — обычные исчисляемые существительные со множественным числом: <i>two teams, three families</i>.</p>
 ${N("Главная ловушка для русскоязычных — фразы вроде «Полиция задержала вора»: по-русски тут единственное число, а по-английски только множественное: <i>The police <b>have</b> caught the thief</i>.")}`,
+  /* перевод слов в упражнениях: по наведению или касанию (gloss.js); ключи — в нижнем регистре, как слово стоит в тексте */
+  gloss: {
+    'only': 'единственный', 'our': 'наш', 'small': 'маленький', 'ten': 'десять',
+    'good': 'хороший', 'has': 'имеет; вспомогательный глагол', 'they': 'они', 'my': 'мой, моя, мое', 'is': 'есть, является (форма to be)',
+    'are': 'есть (форма to be)', 'have': 'иметь; вспомогательный глагол', 'the': 'определенный артикль', 'in': 'в',
+    'that': 'тот, та, то; что (союз)', 'a': 'неопределенный артикль', 'very': 'очень', 'new': 'новый', 'this': 'этот, эта, это',
+    'on': 'на; в (о днях)', 'of': 'предлог родительного падежа', 'and': 'и', 'child': 'ребенок', 'family': 'семья', 'year': 'год',
+    'for': 'для; в течение', 'to': 'в, на (куда); частица перед глаголом', 'there': 'в обороте there is / there are: есть, имеется', 'near': 'рядом с, около',
+    'class': 'класс', 'shops': 'магазины', 'people': 'люди, человек', 'morning': 'утро', 'river': 'река', 'again': 'снова',
+    'tomorrow': 'завтра', 'twelve': 'двенадцать', 'dinner': 'ужин', 'time': 'время', 'all': 'весь, все', 'holiday': 'отпуск, каникулы',
+    'decision': 'решение', 'made': 'сделали; приняли (решение)', 'us': 'нас, нам', 'children': 'дети', 'police': 'полиция',
+    'finished': 'закончил (от finish)', 'three': 'три', 'thief': 'вор', 'going': 'идет (от go)', 'company': 'компания',
+    'about': 'о; около', 'announced': 'объявил', 'arguing': 'спорить', 'bringing': 'приносит', 'cattle': 'скот', 'closed': 'закрыли (от close); закрыт',
+    'club': 'клуб', 'coach': 'тренер', 'coming': 'приходит, придет', 'committee': 'комитет', 'field': 'поле', 'final': 'окончательный',
+    'government': 'правительство', 'growing': 'растет', 'holidays': 'каникулы, отпуск', 'its': 'его, ее (о предмете)', 'large': 'большой',
+    'leaving': 'уезжает', 'looking': 'смотрит; ищет', 'lost': 'потерял; потерянный', 'opened': 'открыл', 'plan': 'план',
+    'project': 'проект', 'proud': 'гордый', 'restaurant': 'ресторан', 'road': 'дорога', 'stadium': 'стадион', 'staff': 'сотрудники',
+    'team': 'команда', 'their': 'их'
+  },
   ex: [
     { type: 'choice', task: 'Выберите правильную форму глагола.', items: [
       ["The police ___ looking for the thief.", ["are", "is"]],
       ["People ___ that this restaurant is very good.", ["say", "says"]],
       ["The club ___ opened its new stadium.", ["has", "have"]],
       ["The family ___ all coming to dinner, and they are bringing their children.", ["are", "is"]],
-      ["My family ___ very large: there are twelve of us.", ["is", "are"]],
+      ["Our class ___ very small: there are only ten of us.", ["is", "are"]],
       ["The cattle ___ in the field near the river.", ["are", "is"]],
       ["The government ___ announced its new plan.", ["has", "have"]],
       ["The staff ___ arguing about their holidays again.", ["are", "is"]]
@@ -206,7 +283,7 @@ ${N("Главная ловушка для русскоязычных — фра�
     ]},
     { type: 'translate', task: 'Переведите на английский.', items: [
       ["Полиция уже приехала.", "The police have already arrived.|The police have arrived already.|The police have arrived.|The police have already come.|The police have come."],
-      ["Полиция ищет пропавшую собаку.", "The police are looking for the missing dog.|The police are looking for the lost dog.|The police are searching for the missing dog."],
+      ["Полиция стоит у двери.", "The police are at the door.|The police are standing at the door."],
       ["Наша команда выиграла матч.", "Our team won the match.|Our team has won the match.|Our team have won the match.|Our team won the game.|Our team has won the game.|Our team have won the game."],
       ["Вся семья сидела за столом.", "The whole family was sitting at the table.|The whole family were sitting at the table.|All the family were sitting at the table.|All the family was sitting at the table.|The whole family sat at the table.|All the family sat at the table.|The entire family was sitting at the table.|The entire family were sitting at the table.|The entire family sat at the table."],
       ["Правительство приняло новый закон.", "The government has passed a new law.|The government passed a new law.|The government have passed a new law.|The government has adopted a new law.|The government adopted a new law.|The government have adopted a new law."]

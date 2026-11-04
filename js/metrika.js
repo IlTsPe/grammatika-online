@@ -47,6 +47,17 @@ function setConsent(ok) {
   document.querySelectorAll('.cookie-consent').forEach(mountCookieConsent);
 }
 
+/* кнопки «Принять» и «Отклонить»: одинаковые, ни одна не выделена; c — текущий выбор (только на странице «Файлы cookie»,
+   там кнопки получают aria-pressed; null — выбор не сделан, обе не нажаты) */
+function consentButtons(box, cls, c) {
+  [['Принять', true], ['Отклонить', false]].forEach(([label, ok]) => {
+    const b = button(cls, label);
+    if (c !== undefined) b.setAttribute('aria-pressed', String(c === ok));
+    b.addEventListener('click', () => setConsent(ok));
+    box.append(b);
+  });
+}
+
 /* плашка внизу экрана на любой странице, пока нет выбора; «Принять» и «Отклонить» одинаковые — ни одна не навязывается */
 function showCookieNote() {
   const box = el('div', 'cookie-note'); box.setAttribute('role', 'region'); box.setAttribute('aria-label', 'Файлы cookie');
@@ -57,11 +68,7 @@ function showCookieNote() {
   text.innerHTML = 'Сайт использует файлы cookie Яндекс Метрики для анализа посещаемости. Сбор статистики осуществляется только при вашем согласии. '
     + 'Подробнее — на странице <button class="link-btn" type="button" data-go="about-cookies">«Файлы cookie»</button>.';
   const btns = el('div', 'cookie-note__btns');
-  [['Принять', true], ['Отклонить', false]].forEach(([label, ok]) => {
-    const b = el('button', 'btn cookie-note__btn', label); b.type = 'button';
-    b.addEventListener('click', () => setConsent(ok));
-    btns.append(b);
-  });
+  consentButtons(btns, 'btn cookie-note__btn');
   box.append(text, btns); document.body.append(box);
 }
 
@@ -72,12 +79,7 @@ function mountCookieConsent(box) {
   box.innerHTML = `<p class="cookie-consent__state">Сейчас: <b>${state}</b>.</p>`
     + (METRIKA_SITE ? '' : '<p class="cookie-consent__state">На этом адресе статистика не собирается при любом выборе.</p>');
   const btns = el('div', 'cookie-consent__btns');
-  [['Принять', true], ['Отклонить', false]].forEach(([label, ok]) => {
-    const b = el('button', 'btn', label); b.type = 'button';
-    b.setAttribute('aria-pressed', String(c === ok));
-    b.addEventListener('click', () => setConsent(ok));
-    btns.append(b);
-  });
+  consentButtons(btns, 'btn', c);
   box.append(btns);
 }
 

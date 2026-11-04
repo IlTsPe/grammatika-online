@@ -23,18 +23,36 @@ ${E([
 ])}
 <p>Форма <i>have been able to</i> — это тот же оборот <i>be able to</i> во времени Present Perfect. Ее используют, когда говорят о периоде, который еще не закончился: «в последнее время», «на этой неделе», «до сих пор». Например, <i>I haven't been able to call you this week</i> — на этой неделе я не смог тебе позвонить.</p>
 ${N("Если договоренность или возможность есть уже сейчас, <i>can</i> можно употребить и о будущем: <i>I <b>can</b> come tomorrow</i> — завтра я могу прийти. И обратите внимание: отрицание пишется слитно — <i>cannot</i>, или коротко <i>can't</i>.")}`,
+  /* перевод слов в упражнениях: по наведению или касанию (gloss.js); ключи — в нижнем регистре, как слово стоит в тексте */
+  gloss: {
+    'full': 'полный', 'land': 'приземлиться', 'luckily': 'к счастью', 'pilot': 'пилот', 'safely': 'благополучно', 'space': 'космос',
+    'bike': 'велосипед', 'granny': 'бабуля', 'may': 'май', 'park': 'парк', 'pass': 'передать; сдать', 'plane': 'самолет', 'ride': 'ездить (верхом, на велосипеде)', 'salt': 'соль', 'since': 'с (какого-то времени)', 'six': 'шесть', 'visit': 'посещают', 'we': 'мы',
+    'week': 'неделя', 'has': 'имеет; вспомогательный глагол', 'i': 'я', 'she': 'она', 'my': 'мой, моя, мое', 'the': 'определенный артикль',
+    'in': 'в', 'she has': 'у нее есть', 'a': 'неопределенный артикль', 'very': 'очень', 'please': 'пожалуйста', 'this': 'этот, эта, это',
+    'year': 'год', 'to': 'в, на (куда); частица перед глаголом', 'your': 'твой, ваш', 'now': 'сейчас', 'with': 'с',
+    'tell': 'говорить, рассказывать', 'me': 'меня, мне', 'from': 'из, от', 'swim': 'плавать', 'come': 'приходить', 'you': 'ты, вы',
+    'test': 'контрольная', 'party': 'вечеринка', 'tomorrow': 'завтра', 'were': 'были (форма to be)', 'when': 'когда', 'young': 'молодой',
+    'but': 'но', 'car': 'машина', 'speak': 'говорить', 'all': 'весь, все', 'keys': 'ключи', 'way': 'путь, дорога', 'heavy': 'тяжелый',
+    "i'm": 'я (= I am)', 'next': 'следующий', 'call': 'звонить', 'help': 'помогать', 'phone': 'телефон', 'was': 'был (форма to be)',
+    'five': 'пять', "haven't": 'не (= have not)', 'lived': 'жил (от live)', 'three': 'три', 'grandfather': 'дедушка',
+    'use': 'использовать', 'so': 'поэтому; так', 'station': 'вокзал, станция', 'without': 'без', 'boxes': 'коробки',
+    'answer': 'ответ; ответить', 'anywhere': 'где-нибудь; нигде (в отрицании)', 'can': 'мочь, уметь', 'countries': 'страны',
+    'difficult': 'трудный', 'drive': 'водить машину', 'escape': 'спастись, выбраться', 'everybody': 'все', 'fast': 'быстро', 'find': 'найти',
+    'fire': 'пожар; огонь', "i'll": 'я (= I will)', 'languages': 'языки', 'many': 'много', 'questions': 'вопросы', 'run': 'бегать',
+    'sorry': 'извините; жаль', 'stick': 'палка', 'these': 'эти', 'walk': 'ходить (пешком); гулять'
+  },
   ex: [
     { type: 'gap', task: 'Впишите can, can\'t, could, couldn\'t или нужную форму be able to.', items: [
-      ["I ___ swim when I was five.", "could|was able to"], ["___ you help me with these heavy boxes, please?", "could|can"],
+      ["I ___ swim when I was five.", "could|was able to"], ["___ you help me with these heavy boxes, please?", "could|can|would"],
       ["She has lived in many countries, so she ___ speak three languages.", "can|is able to"], ["I'm sorry, I ___ come to your party tomorrow.", "cannot|will not be able to"],
-      ["Next year I ___ drive a car. (смогу)", "will be able to"], ["The test was difficult, but I ___ answer all the questions. (сумел)", "was able to"],
-      ["My grandfather ___ walk without a stick now. (не может)", "cannot|is not able to"], ["I haven't ___ to call you this week. Sorry!", "been able"],
+      ["Next year I ___ drive a car. (смогу)", "will be able to"], ["The car park was full, but I ___ find a space. (сумел)", "was able to"],
+      ["My grandfather ___ walk without a stick now. (не может)", "cannot|is not able to"], ["We haven't ___ to visit Granny since May.", "been able"],
       ["___ I use your phone?", "can|could|may"], ["When I was young I ___ run very fast.", "could|was able to"]
     ]},
     { type: 'choice', task: 'Выберите правильный вариант.', items: [
-      ["She can ___ three languages.", ["speak", "to speak", "speaks"]], ["___ you swim when you were five?", ["Could", "Can", "Were"]],
-      ["I'll ___ to come tomorrow.", ["be able", "can", "could"]], ["Everybody ___ to escape from the fire.", ["was able", "could", "can"]],
-      ["___ you tell me the way to the station?", ["Could", "Do", "Are"]], ["I ___ find my keys anywhere!", ["can't", "don't can", "can't to"]]
+      ["She can ___ three languages.", ["speak", "to speak", "speaks"]], ["___ you ride a bike when you were six?", ["Could", "Can", "Were"]],
+      ["I'll ___ to come tomorrow.", ["be able", "can", "could"]], ["Luckily, the pilot ___ to land the plane safely.", ["was able", "could", "can"]],
+      ["___ you pass me the salt, please?", ["Could", "Do", "Are"]], ["I ___ find my keys anywhere!", ["can't", "don't can", "can't to"]]
     ]},
     { type: 'translate', task: 'Переведите на английский.', items: [
       ["Я умею плавать лучше брата.", "I can swim better than my brother.|I can swim better than my brother can."],
@@ -64,30 +82,46 @@ ${T(["Форма", "Пример"], [
 <h3>Как отвечать на Would you like…?</h3>
 <p>На предложение что-то взять отвечают коротко: <i>Yes, please</i> — да, пожалуйста, или <i>No, thank you</i> — нет, спасибо. А если зовут сделать что-то вместе, с радостью соглашаются так: <i>— Would you like to come to my party? — I'd love to!</i> (— Хочешь прийти ко мне на вечеринку? — С удовольствием!)</p>
 ${N("Фраза <i>I want a coffee</i> в кафе звучит резко, почти как «Дайте мне кофе», поэтому вежливее сказать <i>I'd like a coffee, please</i>.")}`,
+  /* перевод слов в упражнениях: по наведению или касанию (gloss.js); ключи — в нижнем регистре, как слово стоит в тексте */
+  gloss: {
+    'pie': 'пирог',
+    'cheese': 'сыр', 'go': 'ходить, ездить', 'me': 'меня, мне', 'more': 'больше, более', 'sandwich': 'бутерброд', 'soup': 'суп', 'tonight': 'сегодня вечером',
+    'orange': 'апельсин', 'i': 'я', 'she': 'она', 'it': 'это; он, она (о предмете)', 'we': 'мы', 'they': 'они', 'my': 'мой, моя, мое',
+    'the': 'определенный артикль', 'at': 'в (о времени); у, на (о месте)', 'in': 'в', 'what': 'что, какой', 'a': 'неопределенный артикль',
+    'new': 'новый', 'please': 'пожалуйста', 'on': 'на; в (о днях)', 'day': 'день', 'of': 'предлог родительного падежа', 'live': 'жить',
+    'two': 'два', 'every': 'каждый', 'for': 'для; в течение', 'big': 'большой', 'see': 'увидеть',
+    'to': 'в, на (куда); частица перед глаголом', 'near': 'рядом с, около', 'some': 'немного, несколько', 'table': 'стол', 'our': 'наш',
+    'morning': 'утро', 'cinema': 'кино', 'with': 'с', 'do': 'делать; вспомогательный глагол', 'from': 'из, от', 'come': 'приходить',
+    'you': 'ты, вы', 'parents': 'родители', 'like': 'нравиться, любить', 'cup': 'чашка', 'paris': 'Париж', 'party': 'вечеринка',
+    'saturday': 'суббота', 'trip': 'поездка', 'car': 'машина', 'coffee': 'кофе', 'jazz': 'джаз', 'water': 'вода', 'cake': 'торт',
+    'one': 'один', 'us': 'нас, нам', 'hotel': 'гостиница', 'stay': 'оставаться', 'sea': 'море', 'city': 'город', 'dessert': 'десерт',
+    'drink': 'пить', 'glass': 'стакан; стекло', "i'd": 'я бы (= I would / I had)', 'juice': 'сок', 'photos': 'фотографии',
+    'walk': 'гулять; прогулка', 'would': 'бы; вспомогательный глагол'
+  },
   ex: [
     { type: 'choice', task: 'Выберите правильный вариант.', items: [
       ["— What would you like? — ___ a cup of coffee, please.", ["I'd like", "I like", "I like to"]],
       ["I ___ coffee: I drink it every morning.", ["like", "would like", "would like to"]],
       ["Would you like ___ for a walk with us?", ["to go", "go", "going"]],
-      ["— Would you like some cake? — ___", ["Yes, please.", "Yes, I like.", "Yes, I'd like."]],
+      ["— Would you like some more soup? — ___", ["Yes, please.", "Yes, I like.", "Yes, I'd like."]],
       ["___ you like to see the photos from our trip?", ["Would", "Will", "Are"]],
       ["My parents would like ___ a new car.", ["to buy", "buy", "buying"]],
       ["— Do you like jazz? — ___", ["Yes, I do.", "Yes, please.", "Yes, I would."]],
-      ["— Would you like to come to my party on Saturday? — ___", ["I'd love to!", "I'd love!", "I love to!"]]
+      ["— Would you like to go to the cinema with me tonight? — ___", ["I'd love to!", "I'd love!", "I love to!"]]
     ]},
     { type: 'gap', task: 'Впишите недостающие слова: would, would like, would not или to + глагол из скобок.', items: [
-      ["I ___ a glass of water, please. (хотел бы)", "would like"],
+      ["I ___ a cheese sandwich, please. (хотел бы)", "would like"],
       ["___ you like some orange juice? (хочешь)", "would"],
       ["She would like ___ (visit) Paris one day.", "to visit"],
       ["We ___ like to live in a big city. (не хотели бы)", "would not"],
       ["What ___ you like for dessert? (хочешь)", "would"],
       ["I'd like ___ (book) a table for two.", "to book"],
       ["They ___ to stay at a hotel near the sea. (хотели бы)", "would like"],
-      ["Would you like ___ (come) with us to the cinema?", "to come"]
+      ["Would you like ___ (try) some of my pie?", "to try"]
     ]},
     { type: 'translate', task: 'Переведите на английский.', items: [
       ["Я бы хотел чашку кофе.", "I would like a cup of coffee.|I would like a coffee."],
-      ["Хотите чаю?", "Would you like some tea?|Would you like tea?|Would you like a cup of tea?|Do you want some tea?|Do you want tea?|Do you want a cup of tea?"],
+      ["Хотите печенья?", "Would you like some biscuits?|Would you like a biscuit?|Do you want some biscuits?|Do you want a biscuit?"],
       ["Она хотела бы стать врачом.", "She would like to become a doctor.|She would like to be a doctor."],
       ["Я люблю чай, но сейчас я бы выпил кофе.", "I like tea, but now I would like a coffee.|I like tea, but now I would like coffee.|I like tea, but now I would like some coffee.|I like tea, but right now I would like a coffee.|I like tea, but I would like a coffee now.|I like tea, but I would like some coffee now.|I like tea, but right now I would like some coffee.|I like tea, but right now I would like coffee.|I like tea, but I would like coffee now.|I like tea, but I would like a coffee right now.|I like tea, but now I would like to have a coffee.|I like tea, but now I would like to drink some coffee.|I like tea, but now I would like to have some coffee.|I like tea, but right now I would like to have a coffee."],
       ["Вы не хотели бы пойти с нами?", "Would you like to come with us?|Would you like to go with us?|Would you like to join us?|Wouldn't you like to come with us?|Would you like to come along with us?"]
@@ -122,17 +156,31 @@ ${E([
   ["Children <b>are not allowed to</b> swim here without an adult.", "Детям нельзя купаться здесь без взрослых. (запрет по правилам)"]
 ])}
 ${N("Если хочется спросить, возможно ли что-то, вопрос с <i>might</i> звучит неестественно. Вместо <i>Might it rain?</i> лучше спросить <i>Do you think it will rain?</i> — как думаешь, будет дождь?")}`,
+  /* перевод слов в упражнениях: по наведению или касанию (gloss.js); ключи — в нижнем регистре, как слово стоит в тексте */
+  gloss: {
+    'leave': 'уезжать, уходить; оставлять', 'over': 'закончен (be over)', 'room': 'комната', 'test': 'контрольная', 'until': 'до, пока не',
+    'umbrella': 'зонт', 'has': 'имеет; вспомогательный глагол', 'i': 'я', 'she': 'она', 'it': 'это; он, она (о предмете)',
+    'my': 'мой, моя, мое', 'is': 'есть, является (форма to be)', 'go': 'идти, ехать', 'the': 'определенный артикль',
+    'at': 'в (о времени); у, на (о месте)', 'in': 'в', 'go to': 'ходить в, идти в', 'a': 'неопределенный артикль', 'window': 'окно',
+    'her': 'ее, ей', 'to': 'в, на (куда); частица перед глаголом', 'there': 'в обороте there is / there are: есть, имеется', 'your': 'твой, ваш', 'morning': 'утро',
+    'home': 'дом; домой', 'cinema': 'кино', 'with': 'с', 'tonight': 'сегодня вечером', 'come': 'приходить',
+    'you': 'ты, вы', 'animals': 'животные', 'books': 'книги', 'at home': 'дома', 'all': 'весь, все', 'light': 'свет', 'be': 'быть',
+    'decided': 'решили (от decide)', 'rain': 'дождь', 'an': 'неопределенный артикль', "haven't": 'не (= have not)',
+    'yet': 'уже (в вопросе); еще (в отрицании)', 'been': 'был (3-я форма be)', 'later': 'позже',
+    'brought': 'принес (от bring)', 'cloudy': 'облачный', 'feed': 'кормить', 'friends': 'друзья', "i've": 'я (= I have)',
+    'take': 'брать; занимать (о времени)', 'visitors': 'посетители', 'zoo': 'зоопарк'
+  },
   ex: [
     { type: 'choice', task: 'Выберите правильный вариант.', items: [
       ["___ I come in? I've brought your books.", ["May", "Am", "Do"]], ["It has been cloudy all morning. Take an umbrella: it ___ rain later.", ["might", "must", "can't"]],
-      ["You ___ use your phones during the exam.", ["may not", "not may", "may not to"]], ["I haven't decided yet. I ___ go to the cinema with my friends tonight.", ["might", "can't", "mightn't to"]],
+      ["You ___ leave the room until the test is over.", ["may not", "not may", "may not to"]], ["I haven't decided yet. I ___ go to the cinema with my friends tonight.", ["might", "can't", "mightn't to"]],
       ["Visitors ___ to feed the animals in the zoo.", ["are not allowed", "may not", "can not"]], ["She ___ be at home — there is a light in her window.", ["may", "can't", "mustn't"]]
     ]},
     { type: 'translate', task: 'Переведите на английский.', items: [
-      ["Можно мне взять твою ручку?", "May I take your pen?|Can I take your pen?|Could I take your pen?|May I borrow your pen?|Can I borrow your pen?|Could I borrow your pen?"],
+      ["Можно мне взять твой зонт?", "May I take your umbrella?|Can I take your umbrella?|Could I take your umbrella?|May I borrow your umbrella?|Can I borrow your umbrella?|Could I borrow your umbrella?"],
       ["Может быть, вечером пойдет снег.", "It may snow in the evening.|It might snow in the evening.|It may snow tonight.|It might snow tonight.|Maybe it will snow in the evening.|It may snow this evening.|It might snow this evening.|It could snow in the evening.|Maybe it will snow tonight.|Maybe it will snow this evening.|Perhaps it will snow in the evening.|Perhaps it will snow tonight."],
       ["Вы можете идти: урок закончился.", "You may go: the lesson is over.|You may go: the lesson has finished.|You may go: the lesson has ended.|You can go: the lesson is over.|You can go: the lesson has finished.|You can go: the lesson has ended."],
-      ["Нам разрешили остаться.", "We were allowed to stay.|They let us stay.|We were permitted to stay."]
+      ["Нам разрешили взять собаку.", "We were allowed to take the dog.|We were allowed to bring the dog.|They let us take the dog.|They let us bring the dog."]
     ]},
     { type: 'listen', at: 2, task: 'Прослушайте предложение и соберите его из слов.', items: [
       ["May I borrow your dictionary for a few minutes?", "Можно взять твой словарь на несколько минут?"],
@@ -160,6 +208,29 @@ ${E([
   ["The President <b>is to</b> visit China next week.", "На следующей неделе президент должен посетить Китай. (по плану визита)"],
   ["We <b>were to</b> meet at the station at five.", "Мы должны были встретиться на вокзале в пять. (таков был план)"]
 ])}`,
+  /* перевод слов в упражнениях: по наведению или касанию (gloss.js); ключи — в нижнем регистре, как слово стоит в тексте */
+  gloss: {
+    'belt': 'ремень', 'drivers': 'водители', 'law': 'закон',
+    'seat': 'место (сиденье)',
+    "it's": 'это (= it is)', 'has': 'имеет; вспомогательный глагол', 'i': 'я', 'he': 'он', 'she': 'она', 'we': 'мы',
+    'is': 'есть, является (форма to be)', 'go': 'идти, ехать', 'the': 'определенный артикль', 'at': 'в (о времени); у, на (о месте)',
+    'in': 'в', 'that': 'тот, та, то; что (союз)', "it's hot": 'жарко', 'go to': 'ходить в, идти в', 'a': 'неопределенный артикль',
+    'on': 'на; в (о днях)', 'day': 'день', 'of': 'предлог родительного падежа', 'child': 'ребенок', 'every': 'каждый',
+    'birthday': 'день рождения', 'her': 'ее, ей', 'to': 'в, на (куда); частица перед глаголом', 'any': 'какие-нибудь', 'our': 'наш',
+    'people': 'люди, человек', 'yesterday': 'вчера', 'get up': 'вставать', 'seven': 'семь', 'school': 'школа', 'bus': 'автобус',
+    'home': 'дом; домой', 'now': 'сейчас', 'tell': 'говорить, рассказывать', 'cross': 'переходить (улицу)', 'hot': 'жаркий; жарко',
+    'you': 'ты, вы', 'meet': 'встречать, встретить', 'glasses': 'очки', 'late': 'поздно', 'saturday': 'суббота', 'tomorrow': 'завтра',
+    'every day': 'каждый день', 'lot': 'много (a lot)', 'mum': 'мама', 'up': 'вверх', 'did': 'вспомогательный глагол прошедшего времени',
+    'holiday': 'отпуск, каникулы', 'work': 'работа; работать', 'here': 'здесь, сюда', 'secret': 'секрет', 'be': 'быть', 'call': 'звонить',
+    'or': 'или', 'stay': 'оставаться', 'left': 'ушел (от leave); оставшийся; левый', 'was': 'был (форма to be)', 'because': 'потому что',
+    'early': 'рано', 'so': 'поэтому; так', 'get': 'добраться; получить', 'nine': 'девять', 'six': 'шесть', 'noon': 'полдень',
+    'as': 'как; в качестве', 'a lot of': 'много', 'against': 'против', 'airport': 'аэропорт', 'anybody': 'кто-нибудь; никто (в отрицании)',
+    'britain': 'Великобритания', 'dangerous': 'опасный', 'drive': 'водить машину', 'eat': 'есть (принимать пищу)', "i'll": 'я (= I will)',
+    'library': 'библиотека', 'missed': 'опоздал на; пропустил', 'money': 'деньги', 'more': 'больше, более', 'plan': 'план',
+    'pupils': 'ученики', 'remember': 'помнить', 'road': 'дорога', 'rule': 'правило', 'rules': 'правила', 'starts': 'начинается',
+    'stove': 'плита', 'till': 'до (пока не)', 'touch': 'трогать', 'uniform': 'форма', 'walk': 'гулять; прогулка',
+    'wear': 'носить (одежду)', 'won': 'выиграл (от win)'
+  },
   ex: [
     { type: 'choice', task: 'Выберите правильный вариант.', items: [
       ["You ___ cross the road here. It's dangerous.", ["mustn't", "don't have to"]], ["Tomorrow is Saturday, so I ___ get up early.", ["don't have to", "mustn't"]],
@@ -168,13 +239,13 @@ ${E([
       ["Did she ___ wear glasses as a child?", ["have to", "must", "has to"]], ["We ___ meet Tom at the airport at noon — that was the plan.", ["were to", "must", "are to"]]
     ]},
     { type: 'gap', task: 'Впишите must, mustn\'t, have to, has to, had to или don\'t / doesn\'t have to.', items: [
-      ["Pupils ___ wear a uniform at our school. It's the rule.", "have to|must"], ["You ___ eat in the library. It's against the rules.", "must not"],
+      ["Drivers ___ wear a seat belt. It's the law.", "have to|must"], ["You ___ eat in the library. It's against the rules.", "must not"],
       ["It's a holiday tomorrow. We ___ go to school.", "do not have to"], ["I missed the bus, so I ___ walk home.", "had to"],
       ["She ___ get up at six every day because she starts work at seven.", "has to"], ["He has won a lot of money, so he ___ work any more.", "does not have to"],
       ["You ___ touch the stove — it's hot!", "must not"], ["I ___ go now, or I'll be late.", "must|have to"]
     ]},
     { type: 'translate', task: 'Переведите на английский.', items: [
-      ["Здесь нельзя курить.", "You mustn't smoke here.|Smoking is not allowed here.|You can't smoke here.|No smoking here.|You are not allowed to smoke here."],
+      ["Здесь нельзя парковаться.", "You mustn't park here.|You can't park here.|You are not allowed to park here.|Parking is not allowed here.|No parking here."],
       ["Тебе не нужно было приходить так рано.", "You didn't have to come so early.|You didn't need to come so early.|You needn't have come so early."],
       ["Вчера мне пришлось работать до вечера.", "Yesterday I had to work till evening.|I had to work until the evening yesterday.|I had to work till the evening yesterday.|Yesterday I had to work until the evening.|Yesterday I had to work till the evening.|I had to work till evening yesterday.|I had to work until evening yesterday."],
       ["Мне пора идти: мама ждет меня дома.", "I must go: Mum is waiting for me at home.|I must go: my mum is waiting for me at home.|I must go: my mother is waiting for me at home.|I have to go: Mum is waiting for me at home.|I have to go: my mum is waiting for me at home.|I have to go: my mother is waiting for me at home.|I must go: Mum is waiting for me.|I have to go: Mum is waiting for me.|I must go: my mum is waiting for me.|I have to go: my mum is waiting for me.|I have got to go: Mum is waiting for me at home.|I need to go: Mum is waiting for me at home."]
@@ -182,7 +253,7 @@ ${E([
     { type: 'listen', at: 2, task: 'Прослушайте предложение и соберите его из слов.', items: [
       ["You mustn't take photos in the museum.", "В музее нельзя фотографировать."],
       ["We don't have to get up early on Sundays.", "По воскресеньям нам не нужно рано вставать."],
-      ["I had to wait for the bus for half an hour.", "Мне пришлось ждать автобус полчаса."]
+      ["We had to stay at home because of the rain.", "Нам пришлось остаться дома из-за дождя."]
     ]}
   ]},
 
@@ -206,11 +277,30 @@ ${E([
   ["We <b>had better not</b> be late.", "Нам лучше не опаздывать. (иначе будут неприятности)"]
 ])}
 ${N("В отличие от <i>should</i> и других модальных глаголов, после <i>ought</i> частица <i>to</i> нужна всегда: <i>You ought <b>to</b> go</i>, а не <i>You ought go</i>.")}`,
+  /* перевод слов в упражнениях: по наведению или касанию (gloss.js); ключи — в нижнем регистре, как слово стоит в тексте */
+  gloss: {
+    'charge': 'зарядить',
+    'cook': 'готовить', 'dinner': 'ужин', 'going': 'идет (от go)', 'my': 'мой, моя, мое', 'phone': 'телефон', 'restaurant': 'ресторан', "we're": 'мы (= we are)',
+    'week': 'неделя', "it's": 'это (= it is)', 'has': 'имеет; вспомогательный глагол', 'i': 'я', 'we': 'мы',
+    'is': 'есть, является (форма to be)', 'have': 'иметь; есть (о еде)', 'go': 'идти, ехать', 'the': 'определенный артикль',
+    'at': 'в (о времени); у, на (о месте)', 'we have': 'у нас есть', 'a': 'неопределенный артикль', 'today': 'сегодня',
+    'of': 'предлог родительного падежа', 'two': 'два', 'buy': 'купить', 'for': 'для; в течение', 'see': 'увидеть',
+    'to': 'в, на (куда); частица перед глаголом', 'some': 'немного, несколько', 'milk': 'молоко', 'cold': 'холодный; холодно',
+    'your': 'твой, ваш', 'home': 'дом; домой', 'now': 'сейчас', 'broken': 'сломанный', 'come': 'приходить', 'you': 'ты, вы',
+    'at home': 'дома', 'late': 'поздно', 'tomorrow': 'завтра', 'yes': 'да', 'time': 'время', 'tv': 'телевизор', 'work': 'работа; работать',
+    'worry': 'волноваться', 'be': 'быть', 'careful': 'осторожный', 'children': 'дети', 'coat': 'пальто', 'dentist': 'зубной врач',
+    'hurry': 'спешить', 'stay': 'оставаться', 'finished': 'закончил (от finish)', 'been': 'был (3-я форма be)', 'cups': 'чашки',
+    'getting': 'становится; вставать (от get)', 'so': 'поэтому; так', 'too': 'тоже; слишком', 'already': 'уже', 'bad': 'плохой',
+    'eat': 'есть (принимать пищу)', 'everything': 'все (о вещах)', 'fine': 'хорошо, в порядке', 'hurting': 'болит',
+    'leave': 'уезжать, уходить; оставлять', 'many': 'много', 'more': 'больше, более', 'much': 'много', 'ought': 'следует (ought to)',
+    'plenty': 'полно, много', 'sweets': 'сладости', 'take': 'брать; занимать (о времени)', 'teeth': 'зубы', 'temperature': 'температура',
+    'tooth': 'зуб', 'watch': 'смотреть; часы', "you'd": 'ты бы (= you would / you had)', "you've": 'ты, вы (= you have)'
+  },
   ex: [
     { type: 'choice', task: 'Выберите правильный вариант.', items: [
       ["You have a temperature. You ___ stay at home.", ["should", "ought", "have"]], ["You ___ eat so many sweets. It's bad for your teeth.", ["shouldn't", "needn't", "don't have"]],
-      ["You ___ worry. Everything is fine.", ["needn't", "needn't to", "shouldn't to"]], ["You've broken two cups today. You ought ___ be more careful.", ["to", "—", "for"]],
-      ["I ___ to buy some milk.", ["need", "needn't", "must"]], ["It's late. You'd ___ go home now.", ["better", "must", "should"]]
+      ["You ___ cook dinner. We're going to a restaurant.", ["needn't", "needn't to", "shouldn't to"]], ["You've broken two cups today. You ought ___ be more careful.", ["to", "—", "for"]],
+      ["I ___ to charge my phone.", ["need", "needn't", "must"]], ["It's late. You'd ___ go home now.", ["better", "must", "should"]]
     ]},
     { type: 'gap', task: 'Впишите should, shouldn\'t, ought, needn\'t или need.', items: [
       ["Your tooth has been hurting for a week. You ___ see a dentist.", "should|ought to"], ["You ___ come tomorrow: we have already finished the work.", "need not|do not need to|do not have to"],
@@ -219,7 +309,7 @@ ${N("В отличие от <i>should</i> и других модальных г�
     ]},
     { type: 'translate', task: 'Переведите на английский.', items: [
       ["Тебе следует читать больше книг на английском.", "You should read more books in English.|You should read more English books.|You ought to read more books in English.|You ought to read more English books."],
-      ["Не нужно беспокоиться.", "You needn't worry.|You don't need to worry.|There is no need to worry.|No need to worry.|You don't have to worry."],
+      ["Тебе не нужно ему звонить.", "You needn't call him.|You don't need to call him.|You don't have to call him.|You needn't phone him.|You don't need to phone him.|You don't have to phone him."],
       ["Мне нужно позвонить маме.", "I need to call Mum.|I need to call my mum.|I need to call my mother.|I need to phone Mum.|I need to phone my mum.|I need to phone my mother."],
       ["Тебе не следует так много работать.", "You shouldn't work so much.|You shouldn't work so hard.|You ought not to work so much.|You ought not to work so hard."]
     ]},
@@ -247,11 +337,30 @@ ${E([
   ["You <b>could have helped</b> me!", "Мог бы и помочь! (но не помог)"]
 ])}
 ${N("Если нужно сказать «не может быть, чтобы…», используют <i>can't</i>, а не <i>mustn't</i>: <i>He <b>can't have</b> done it</i> — не может быть, чтобы он это сделал. <i>Mustn't</i> означает запрет, а не вывод.")}`,
+  /* перевод слов в упражнениях: по наведению или касанию (gloss.js); ключи — в нижнем регистре, как слово стоит в тексте */
+  gloss: {
+    'running': 'бег', 'vase': 'ваза',
+    'an': 'неопределенный артикль', 'car': 'машина', 'for': 'для', 'home': 'дом; домой', 'hour': 'час', 'sold': 'продан (от sell)', 'thirsty': 'хочется пить', "wasn't": 'не был (= was not)', 'year': 'год',
+    'week': 'неделя', 'bag': 'сумка', "it's": 'это (= it is)', 'i': 'я', 'he': 'он', 'she': 'она', 'it': 'это; он, она (о предмете)',
+    'they': 'они', 'my': 'мой, моя, мое', 'is': 'есть, является (форма to be)', 'are': 'есть (форма to be)', 'the': 'определенный артикль',
+    'at': 'в (о времени); у, на (о месте)', 'in': 'в', 'that': 'тот, та, то; что (союз)', 'very': 'очень', 'this': 'этот, эта, это',
+    'on': 'на; в (о днях)', 'day': 'день', 'there': 'в обороте there is / there are: есть, имеется', 'windows': 'окна', 'where': 'где, куда', 'bus': 'автобус',
+    'evening': 'вечер', 'now': 'сейчас', 'with': 'с', 'broken': 'сломанный', 'me': 'меня, мне', 'you': 'ты, вы', 'test': 'контрольная',
+    'tired': 'уставший', 'last': 'прошлый', 'late': 'поздно', 'not': 'не', 'paris': 'Париж', 'train': 'поезд', 'all': 'весь, все',
+    'letter': 'письмо', 'cake': 'торт', 'here': 'здесь, сюда', "i'm": 'я (= I am)', 'be': 'быть', 'working': 'работает (от work)',
+    'phone': 'телефон', 'left': 'оставил (от leave); оставшийся', 'night': 'ночь', 'was': 'был (форма to be)', 'all day': 'весь день',
+    'been': 'был (3-я форма be)', "didn't": 'не (= did not)', 'so': 'поэтому; так', 'sure': 'уверен', 'them': 'их, им',
+    'tickets': 'билеты', 'answer': 'ответ; ответить', 'asleep': 'спящий', 'booked': 'забронировал', "can't": 'не может (= cannot)',
+    'earlier': 'раньше', 'failed': 'провалил', 'feel': 'чувствовать', 'ground': 'земля', "he's": 'он (= he is / he has)',
+    'hello': 'привет, алло', 'library': 'библиотека', 'money': 'деньги', 'more': 'больше, более', 'much': 'много', 'none': 'ни один',
+    'rained': 'шел дождь', 'say': 'сказать', "she's": 'она (= she is / she has)', 'sick': 'больной', 'somebody': 'кто-то',
+    'stolen': 'украл (3-я форма steal)', "they're": 'они (= they are)', 'wet': 'мокрый', 'write': 'писать'
+  },
   ex: [
     { type: 'choice', task: 'Выберите правильный вариант.', items: [
-      ["He's been working all day. He ___ be tired.", ["must", "can't", "mustn't"]], ["That ___ be Anna — she's in Paris this week.", ["can't", "must", "should"]],
+      ["She's been running for an hour. She ___ be thirsty.", ["must", "can't", "mustn't"]], ["That ___ be Tom's car — he sold it last year.", ["can't", "must", "should"]],
       ["The ground is wet. It ___ rained last night.", ["must have", "can't have", "should have"]], ["I'm not sure where Kate is. She ___ be at the library.", ["might", "must", "can't"]],
-      ["He ___ stolen the money — he was with me all evening.", ["can't have", "must have", "should have"]], ["You ___ booked the tickets earlier! Now there are none left.", ["should have", "must have", "can't have"]],
+      ["He ___ broken the vase — he wasn't at home.", ["can't have", "must have", "should have"]], ["You ___ booked the tickets earlier! Now there are none left.", ["should have", "must have", "can't have"]],
       ["She didn't answer the phone. She ___ been asleep.", ["might have", "should have", "can have"]], ["I ___ left my bag on the bus. It's not here.", ["must have", "can't have", "should have"]]
     ]},
     { type: 'gap', task: 'Закончите предложение: must have, can\'t have, might have или should have + V3. Если в скобках несколько слов через косую черту, используйте в ответе их все — в нужной форме и порядке.', items: [
@@ -263,15 +372,15 @@ ${N("Если нужно сказать «не может быть, чтобы�
       ["You ___ (not / eat) so much cake — now you feel sick.", "should not have eaten|ought not to have eaten"]
     ]},
     { type: 'translate', task: 'Переведите на английский.', items: [
-      ["Должно быть, он уже ушел.", "He must have left already.|He must have already left.|He must have gone already."],
-      ["Не может быть, чтобы она это сказала.", "She can't have said that.|She couldn't have said that.|She can't have said it."],
+      ["Должно быть, она потеряла ключи.", "She must have lost her keys.|She must have lost the keys."],
+      ["Не может быть, чтобы она это сказала.", "She can't have said that.|She couldn't have said that.|She can't have said it.|She couldn't have said it."],
       ["Тебе следовало позвонить мне.", "You should have called me.|You should have phoned me.|You ought to have called me.|You ought to have phoned me.|You should have rung me."],
-      ["Возможно, он забыл о встрече.", "He may have forgotten about the meeting.|He might have forgotten about the meeting.|He may have forgotten the meeting.|He might have forgotten the meeting."]
+      ["Возможно, он оставил телефон дома.", "He may have left his phone at home.|He might have left his phone at home.|He could have left his phone at home."]
     ]},
     { type: 'listen', at: 2, task: 'Прослушайте предложение и соберите его из слов.', items: [
       ["The lights are off. They must have gone to bed.", "Свет не горит. Наверное, они уже легли спать."],
       ["She can't have forgotten about the meeting.", "Не может быть, чтобы она забыла о встрече."],
-      ["You should have told me about it earlier.", "Тебе следовало сказать мне об этом раньше."]
+      ["You shouldn't have spent all your money on clothes.", "Не стоило тратить все деньги на одежду."]
     ]}
   ]},
 
@@ -287,10 +396,10 @@ ${T(["Форма", "Значение", "Пример"], [
   ["<i>might as well</i>", "можно с тем же успехом, почему бы и нет", "<i>It's late — we <b>might as well</b> stay.</i> — Уже поздно, можно и остаться."]
 ])}
 <h3>Needn't have или didn't need to</h3>
-<p>Обе формы говорят о том, что в прошлом в каком-то действии не было необходимости, но рассказывают разные истории. <i>Needn't have + V3</i> значит, что человек действие <b>совершил</b>, а потом оказалось, что зря: например, <i>I needn't have cooked so much</i> — я наготовил много еды, а гостей пришло мало. <i>Didn't need to + V</i> просто сообщает, что необходимости не было, и обычно человек поэтому ничего и не делал: <i>Tom gave us a lift, so we didn't need to take a taxi</i> — Том нас подвез, так что брать такси не понадобилось.</p>
+<p>Обе формы говорят о том, что в прошлом в каком-то действии не было необходимости, но рассказывают разные истории. <i>Needn't have + V3</i> значит, что человек действие <b>совершил</b>, а потом оказалось, что зря: например, <i>I needn't have bought so much bread</i> — я купил много хлеба, а его почти не съели. <i>Didn't need to + V</i> просто сообщает, что необходимости не было, и обычно человек поэтому ничего и не делал: <i>Tom gave us a lift, so we didn't need to take a taxi</i> — Том нас подвез, так что брать такси не понадобилось.</p>
 ${N("Фраза <i>You <b>needn't have</b> bought me a present</i> — это вежливое «не стоило»: подарок уже куплен, и говорящий благодарит, но мягко показывает, что в этом не было необходимости.")}
 <h3>Was to и was to have</h3>
-<p>В прошедшем времени оборот <i>be to</i> из темы 9.4 (<i>was / were to + V</i>) в рассказе часто значит не план, а судьбу: так говорят о том, что произошло позже, глядя из более раннего момента. Например, <i>He left home at seventeen. Later he was to become a famous painter</i> — он ушел из дома в семнадцать лет; позже ему суждено было стать знаменитым художником. Если же после <i>was to</i> поставить <i>have + V3</i>, получится, что событие планировалось, но так и не произошло: <i>The meeting was to have taken place on Monday, but it was cancelled</i> — встреча должна была пройти в понедельник, но ее отменили.</p>
+<p>В прошедшем времени оборот <i>be to</i> из темы 9.4 (<i>was / were to + V</i>) в рассказе часто значит не план, а судьбу: так говорят о том, что произошло позже, глядя из более раннего момента. Например, <i>He left home at seventeen. Later he was to become a famous painter</i> — он ушел из дома в семнадцать лет; позже ему суждено было стать знаменитым художником. Если же после <i>was to</i> поставить <i>have + V3</i>, получится, что событие планировалось, но так и не произошло: <i>Our flight was to have left at six, but it was cancelled</i> — наш рейс должен был вылететь в шесть, но его отменили.</p>
 <h3>Won't и wouldn't — «никак не хочет»</h3>
 <p><i>Won't</i> и <i>wouldn't</i> нужны не только для будущего времени и условных предложений. Они могут выражать упорный отказ: <i>won't</i> — о настоящем, <i>wouldn't</i> — о прошлом. Интересно, что так говорят и о вещах, которые «не слушаются»: машина не заводится, дверь не открывается. По-русски это обычно передают словами «никак не», «ни за что не».</p>
 ${E([
@@ -299,23 +408,42 @@ ${E([
 ])}
 <h3>Be bound to и might as well</h3>
 <p>Оборот <i>be bound to + V</i> значит, что говорящий полностью уверен в будущем событии: «непременно», «обязательно», «наверняка». Глагол <i>be</i> меняется по лицам: <i>I'm bound to</i>, <i>she's bound to</i>. Например, <i>She's bound to notice</i> — она обязательно заметит. А <i>might as well + V</i> (или <i>may as well</i>) говорят, когда лучшего варианта нет: «почему бы и нет», «можно и так». Например, если автобусов больше не будет, говорят <i>We might as well walk</i> — что ж, пойдем пешком.</p>`,
+  /* перевод слов в упражнениях: по наведению или касанию (gloss.js); ключи — в нижнем регистре, как слово стоит в тексте */
+  gloss: {
+    'lovely': 'чудесный',
+    'brought': 'принес (от bring)', 'flowers': 'цветы', "they're": 'они (= they are)',
+    'all': 'весь, все', 'an': 'неопределенный артикль', 'at': 'в (о месте)', "didn't": 'не (= did not)', 'it': 'это; он, она (о предмете)', 'rain': 'дождь', 'umbrella': 'зонт',
+    'good': 'хороший', 'twice': 'дважды', 'i': 'я', 'he': 'он', 'she': 'она', 'we': 'мы', 'have': 'иметь; вспомогательный глагол',
+    'go': 'идти, ехать', 'the': 'определенный артикль', 'in': 'в', 'that': 'тот, та, то; что (союз)', 'go to': 'ходить в, идти в',
+    'a': 'неопределенный артикль', 'small': 'маленький', 'on': 'на; в (о днях)', 'day': 'день', 'buy': 'купить',
+    'present': 'подарок', 'to': 'в, на (куда); частица перед глаголом', 'museum': 'музей', 'ten': 'десять', 'go to bed': 'ложиться спать',
+    'bed': 'кровать', 'me': 'меня, мне', 'you': 'ты, вы', 'ill': 'больной', 'years': 'годы, лет', 'but': 'но', 'tv': 'телевизор',
+    'café': 'кафе', 'him': 'его, ему', "don't": 'не (= do not)', 'worry': 'волноваться', 'bought': 'купил (от buy)', 'june': 'июнь',
+    "there's": 'есть, имеется (= there is)', 'listen': 'слушать', 'singing': 'петь (от sing)',
+    'started': 'начал (от start)', 'was': 'был (форма to be)', 'free': 'бесплатный', 'early': 'рано',
+    'so': 'поэтому; так', 'later': 'позже', 'exam': 'экзамен', 'tickets': 'билеты',
+    'thank you': 'спасибо', 'about': 'о; около', 'asked': 'спросил, попросил', 'become': 'стать', 'concert': 'концерт',
+    'fell': 'упал (от fall)', "i've": 'я (= I have)', 'nothing': 'ничего',
+    'pass': 'передать; сдать', 'place': 'место', 'singer': 'певец', 'star': 'звезда', 'taken': 'взял (3-я форма take)', 'taken place': 'состоялся (take place)',
+    'thank': 'благодарить', 'world': 'мир', "you're": 'ты, вы (= you are)'
+  },
   ex: [
     { type: 'choice', task: 'Выберите правильный вариант.', items: [
-      ["I ___ cooked so much food — only three guests came.", ["needn't have", "didn't need to", "mustn't have"]], ["The museum was free that day, so we ___ buy tickets.", ["didn't need to", "needn't have"]],
+      ["I ___ taken an umbrella — it didn't rain at all.", ["needn't have", "didn't need to", "mustn't have"]], ["The museum was free that day, so we ___ buy tickets.", ["didn't need to", "needn't have"]],
       ["The concert ___ taken place in June, but the singer fell ill.", ["was to have", "must have", "should"]], ["She started singing in a small café. Ten years later she ___ become a world star.", ["was to", "should", "must"]],
       ["I've asked him twice, but he ___ listen!", ["won't", "mustn't", "shan't"]], ["There's nothing good on TV. We ___ go to bed early.", ["might as well", "are bound", "would rather to"]],
-      ["Don't worry about the exam. You're ___ to pass.", ["bound", "must", "certain of"]], ["You ___ have bought me a present, but thank you!", ["needn't", "mustn't", "can't"]]
+      ["Don't worry about the exam. You're ___ to pass.", ["bound", "must", "certain of"]], ["You ___ have brought flowers, but they're lovely!", ["needn't", "mustn't", "can't"]]
     ]},
     { type: 'translate', task: 'Переведите на английский.', items: [
       ["Зря ты так рано встал: сегодня суббота.", "You needn't have got up so early: it's Saturday today.|You needn't have got up so early: it is Saturday.|You needn't have got up so early: today is Saturday."],
-      ["Машина не заводится.", "The car won't start."],
-      ["Наверняка пойдет дождь.", "It is bound to rain.|It is sure to rain.|It will definitely rain.|It is definitely going to rain."],
+      ["Мой компьютер никак не включается.", "My computer won't turn on.|My computer won't switch on.|My computer won't start."],
+      ["Он наверняка опоздает.", "He is bound to be late.|He is sure to be late.|He is certain to be late.|He will definitely be late.|He is definitely going to be late."],
       ["Магазин уже закрыт, так что можно и домой пойти.", "The shop is already closed, so we might as well go home.|The shop is already closed, so we may as well go home.|The shop has already closed, so we might as well go home.|The shop has already closed, so we may as well go home.|The shop is closed already, so we might as well go home."]
     ]},
     { type: 'listen', at: 2, task: 'Прослушайте предложение и соберите его из слов.', items: [
       ["We needn't have taken so much money. Everything was cheap.", "Зря мы взяли столько денег: все было дешево."],
-      ["The old door won't open, however hard I push it.", "Старая дверь никак не открывается, как сильно я ее ни толкаю."],
-      ["The last bus has gone, so we might as well walk.", "Последний автобус ушел, так что можно и пешком."]
+      ["The old window won't close, however hard I push it.", "Старое окно никак не закрывается, как сильно я его ни толкаю."],
+      ["The rain won't stop, so we might as well stay at home.", "Дождь никак не кончается, так что можно и дома остаться."]
     ]}
   ]}
 ]});

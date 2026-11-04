@@ -12,6 +12,22 @@ ${E([
 ])}
 <p>Если часть с <i>if</i> или <i>when</i> стоит первой, после нее ставят запятую: <i>If you heat ice, it melts</i>. Если второй — запятая не нужна: <i>Ice melts if you heat it</i>.</p>
 ${N("Будущее время здесь не нужно: речь о том, что происходит всегда. Фраза <i>If you heat ice, it will melt</i> тоже правильная, но звучит уже как прогноз об одном конкретном случае — это первый тип (тема 11.2).")}`,
+  /* перевод слов в упражнениях: по наведению или касанию (gloss.js); ключи — в нижнем регистре, как слово стоит в тексте */
+  gloss: {
+    'flowers': 'цветы', 'light': 'свет',
+    'apple': 'яблоко', 'lesson': 'урок', 'sister': 'сестра', 'i': 'я', 'she': 'она', 'it': 'это; он, она (о предмете)', 'they': 'они',
+    'my': 'мой, моя, мое', 'the': 'определенный артикль', 'at': 'в (о времени); у, на (о месте)', 'in': 'в', 'a': 'неопределенный артикль',
+    'dog': 'собака', 'sun': 'солнце', 'this': 'этот, эта, это', 'sugar': 'сахар', 'door': 'дверь', 'and': 'и',
+    'to': 'в, на (куда); частица перед глаголом', 'milk': 'молоко', 'cold': 'холодный; холодно', 'people': 'люди, человек',
+    'evening': 'вечер', 'with': 'с', 'sleep': 'спать', 'hot': 'жаркий; жарко', 'you': 'ты, вы', 'tea': 'чай', 'lemon': 'лимон',
+    'well': 'хорошо', 'drinks': 'пьет', 'tired': 'уставший', 'hungry': 'голодный', 'when': 'когда', 'coffee': 'кофе', 'water': 'вода',
+    'black': 'черный', 'children': 'дети', 'an': 'неопределенный артикль', 'play': 'играть', 'into': 'в (внутрь)', 'bad': 'плохой',
+    'bell': 'звонок, колокол', 'below': 'ниже', 'button': 'кнопка', 'die': 'умирать', 'dissolves': 'растворяется', 'drink': 'пить',
+    'eat': 'есть (принимать пищу)', 'ends': 'заканчивается', 'enough': 'достаточно', 'falls': 'падает', 'feel': 'чувствовать',
+    'grey': 'серый', 'heat': 'нагревать', 'if': 'если; ли', 'knocks': 'стучит', 'leave': 'уезжать, уходить; оставлять',
+    'machine': 'машина, аппарат', 'mix': 'смешивать', 'outside': 'на улице, снаружи', 'plants': 'растения', 'someone': 'кто-то',
+    'starts': 'начинается', 'temperature': 'температура', 'white': 'белый', 'zero': 'ноль'
+  },
   ex: [
     { type: 'gap', task: 'Поставьте глагол в нужную форму. Если в скобках несколько слов через косую черту, используйте в ответе их все — в нужной форме и порядке.', items: [
       ["If you leave milk in the sun, it ___ (go) bad.", "goes"],
@@ -26,21 +42,21 @@ ${N("Будущее время здесь не нужно: речь о том, �
     { type: 'choice', task: 'Выберите правильный вариант.', items: [
       ["Water ___ if you heat it to 100 °C.", ["boils", "boil", "boiled"]],
       ["When the bell ___, the lesson ends.", ["rings", "will ring", "rang"]],
-      ["Plants die if they ___ water.", ["don't get", "won't get", "didn't get"]],
+      ["Flowers die if they ___ enough light.", ["don't get", "won't get", "didn't get"]],
       ["If you ___ sugar into hot tea, it dissolves.", ["put", "will put", "putting"]],
       ["My dog ___ when someone knocks at the door.", ["barks", "is barking", "barked"]],
       ["If I drink coffee in the evening, I ___ sleep well.", ["don't", "doesn't", "didn't"]]
     ]},
     { type: 'translate', task: 'Переведите на английский.', items: [
       ["Если положить масло на солнце, оно тает.", "If you put butter in the sun, it melts.|Butter melts if you put it in the sun.|If you leave butter in the sun, it melts.|Butter melts if you leave it in the sun.|When you put butter in the sun, it melts."],
-      ["Если смешать желтый и синий, получится зеленый.", "If you mix yellow and blue, you get green.|If you mix blue and yellow, you get green.|When you mix yellow and blue, you get green.|When you mix blue and yellow, you get green.|If you mix yellow with blue, you get green.|If you mix blue with yellow, you get green.|When you mix yellow with blue, you get green."],
+      ["Когда я опаздываю, мама сердится.", "When I am late, my mum gets angry.|When I am late, Mum gets angry.|When I am late, my mother gets angry.|If I am late, my mum gets angry.|If I am late, Mum gets angry.|My mum gets angry when I am late.|Mum gets angry when I am late.|My mother gets angry when I am late."],
       ["Когда идет дождь, я беру зонт.", "When it rains, I take an umbrella.|If it rains, I take an umbrella.|I take an umbrella when it rains.|I take an umbrella if it rains.|When it rains, I take my umbrella.|I take my umbrella when it rains.|If it rains, I take my umbrella.|I take my umbrella if it rains."],
       ["Растения умирают, если их не поливать.", "Plants die if you don't water them.|Plants die if nobody waters them.|If you don't water plants, they die.|Plants die if they are not watered.|Plants die when you don't water them.|When you don't water plants, they die.|If plants are not watered, they die.|If nobody waters plants, they die."]
     ]},
     { type: 'listen', at: 2, task: 'Прослушайте предложение и соберите его из слов.', items: [
-      ["If you mix red and yellow, you get orange.", "Если смешать красный и желтый, получится оранжевый."],
+      ["If I go to bed late, I feel tired in the morning.", "Если я поздно ложусь, утром я чувствую себя усталым."],
       ["When my cat is hungry, it sits by the fridge.", "Когда моя кошка голодна, она сидит у холодильника."],
-      ["Ice melts if you leave it in the sun.", "Лед тает, если оставить его на солнце."]
+      ["If you drop a glass on the floor, it breaks.", "Если уронить стакан на пол, он разбивается."]
     ]}
   ]},
 
@@ -70,13 +86,35 @@ ${T(["Союз", "Перевод", "Пример"], [
 ])}
 <p>После <i>until</i> глагол стоит в утвердительной форме, хотя по-русски говорят «пока не», — так же, как после <i>unless</i>: <i>until the rain <b>stops</b></i>, а не <i>until the rain doesn't stop</i>.</p>
 ${N("По-русски «если пойдет дождь» и «когда приеду» — будущее время, поэтому так и хочется сказать <i>If it will rain</i> или <i>when I will arrive</i>. По-английски — <i>If it <b>rains</b></i>, <i>when I <b>arrive</b></i>.")}`,
+  /* перевод слов в упражнениях: по наведению или касанию (gloss.js); ключи — в нижнем регистре, как слово стоит в тексте */
+  gloss: {
+    'brush': 'чистить щеткой',
+    'here': 'здесь, сюда', 'lost': 'потерял; потерянный', 'map': 'карта', 'stay': 'оставаться', 'take': 'брать; занимать (о времени)', 'taxi': 'такси', 'teeth': 'зубы',
+    'close': 'закрыть', 'window': 'окно',
+    'university': 'университет', "it's": 'это (= it is)', 'i': 'я', 'he': 'он', 'she': 'она', 'it': 'это; он, она (о предмете)',
+    'we': 'мы', 'my': 'мой, моя, мое', 'go': 'идти, ехать', 'the': 'определенный артикль', 'go to': 'ходить в, идти в',
+    'a': 'неопределенный артикль', 'shop': 'магазин', 'her': 'ее, ей', 'to': 'в, на (куда); частица перед глаголом', 'park': 'парк',
+    'some': 'немного, несколько', 'bread': 'хлеб', 'cold': 'холодный; холодно', 'your': 'твой, ваш',
+    'by': 'на (о транспорте); к (о сроке)', 'school': 'школа', 'bus': 'автобус', 'after': 'после', 'bed': 'кровать', 'now': 'сейчас',
+    'tonight': 'сегодня вечером', 'tell': 'говорить, рассказывать', 'me': 'меня, мне', 'homework': 'домашнее задание', 'you': 'ты, вы',
+    'hungry': 'голодный', 'late': 'поздно', 'sunny': 'солнечный', 'tomorrow': 'завтра', 'when': 'когда', 'time': 'время', 'train': 'поезд',
+    'tv': 'телевизор', 'him': 'его, ему', 'postcard': 'открытка', 'send': 'отправить', 'wait': 'ждать', 'be': 'быть', 'call': 'звонить',
+    'off': 'прочь (switch off — выключить)', 'rain': 'дождь', 'us': 'нас, нам', 'beach': 'пляж', 'hurry': 'спешить',
+    'hard': 'усердно; трудный', 'soon': 'скоро', 'before': 'до, раньше', 'exam': 'экзамен', "we'll": 'мы (= we will)',
+    'will': 'вспомогательный глагол будущего времени', 'without': 'без', 'as soon as': 'как только', 'as': 'как; в качестве',
+    'turn off': 'выключить', 'address': 'адрес', 'angry': 'сердитый', 'closed': 'закрыт', 'dangerous': 'опасный', 'hello': 'привет, алло',
+    "i'll": 'я (= I will)', 'if': 'если; ли', 'leave': 'уезжать, уходить; оставлять', 'match': 'матч', 'more': 'больше, более',
+    'pass': 'передать; сдать', 'results': 'результаты', 'roads': 'дороги', 'sandwich': 'бутерброд', 'say': 'сказать',
+    "she'll": 'она (= she will)', 'start': 'начинать', 'text': 'текст', 'truth': 'правда', 'turn': 'повернуть; очередь',
+    'unless': 'если не', 'until': 'до, пока не', "won't": 'не (= will not)', "you're": 'ты, вы (= you are)'
+  },
   ex: [
     { type: 'gap', task: 'Поставьте глагол в нужную форму. Если в скобках несколько слов через косую черту, используйте в ответе их все — в нужной форме и порядке.', items: [
       ["If you leave now, you ___ (catch) the bus.", "will catch"], ["If it ___ (snow) tonight, the roads will be dangerous.", "snows"],
-      ["She will be angry if you ___ (be) late.", "are"], ["Unless you hurry, you ___ (miss) the train.", "will miss"],
+      ["She will be angry if you ___ (be) late.", "are"], ["Unless you take a map, you ___ (get) lost.", "will get"],
       ["If you ___ (study) hard, you will pass the exam.", "study"], ["I ___ (buy) some bread if I go to the shop.", "will buy"],
       ["If he ___ (not / come), we'll start without him.", "does not come"], ["If you ___ (see) Tom, say hello to him.", "see"],
-      ["If you ___ (need) help, call me.", "need"], ["We ___ (not / go) to the beach tomorrow if it's cold.", "will not go"]
+      ["If you ___ (feel) cold, close the window.", "feel"], ["We ___ (not / go) to the beach tomorrow if it's cold.", "will not go"]
     ]},
     { type: 'choice', task: 'Выберите правильный вариант.', items: [
       ["If you ___ me your address, I'll send you a postcard.", ["give", "will give", "would give"]], ["I'll call you if I ___ time.", ["have", "will have", "would have"]],
@@ -84,10 +122,10 @@ ${N("По-русски «если пойдет дождь» и «когда пр
       ["If it ___ sunny tomorrow, we'll go to the park.", ["is", "will be", "was"]], ["If she ___ the bus, she'll be late.", ["misses", "will miss", "missed"]]
     ]},
     { type: 'translate', task: 'Переведите на английский.', items: [
-      ["Если завтра будет дождь, мы останемся дома.", "If it rains tomorrow, we will stay at home.|If it rains tomorrow, we will stay home.|We will stay at home if it rains tomorrow.|We will stay home if it rains tomorrow.|If it rains tomorrow, we will stay in.|We will stay in if it rains tomorrow."],
+      ["Если завтра будет снег, мы пойдем кататься на лыжах.", "If it snows tomorrow, we will go skiing.|We will go skiing if it snows tomorrow."],
       ["Если будешь в Москве, позвони мне.", "If you are in Moscow, call me.|Call me if you are in Moscow.|If you are in Moscow, phone me.|Phone me if you are in Moscow.|If you come to Moscow, call me.|Call me if you come to Moscow."],
       ["Если я найду твои ключи, я тебе позвоню.", "If I find your keys, I will call you.|I will call you if I find your keys.|If I find your keys, I will phone you.|I will phone you if I find your keys."],
-      ["Если не поторопишься, опоздаешь.", "If you don't hurry, you will be late.|Unless you hurry, you will be late.|If you don't hurry up, you will be late.|Unless you hurry up, you will be late."]
+      ["Если не наденешь шапку, замерзнешь.", "If you don't wear a hat, you will be cold.|Unless you wear a hat, you will be cold.|If you don't put on a hat, you will be cold.|Unless you put on a hat, you will be cold.|If you don't wear a hat, you will get cold.|Unless you wear a hat, you will get cold.|If you don't put on a hat, you will get cold.|Unless you put on a hat, you will get cold.|If you don't wear a hat, you will freeze.|Unless you wear a hat, you will freeze."]
     ]},
     { type: 'listen', at: 2, task: 'Прослушайте предложение и соберите его из слов.', items: [
       ["If the weather is nice tomorrow, we will have a picnic.", "Если завтра будет хорошая погода, мы устроим пикник."],
@@ -96,18 +134,18 @@ ${N("По-русски «если пойдет дождь» и «когда пр
     ]},
     { type: 'gap', task: 'Придаточные времени: поставьте глагол в нужную форму.', items: [
       ["I'll text you when the train ___ (leave).", "leaves"],
-      ["As soon as she ___ (get) her results, she'll tell us.", "gets"],
-      ["Turn off the TV before you ___ (go) to bed.", "go"],
-      ["We'll wait until the rain ___ (stop).", "stops"],
+      ["As soon as she ___ (get) her results, she'll tell us.", "gets|has got"],
+      ["Brush your teeth before you ___ (go) to bed.", "go"],
+      ["We'll stay here until the taxi ___ (arrive).", "arrives"],
       ["After I ___ (finish) my homework, I'll call you.", "finish|have finished"],
       ["When she ___ (finish) school, she will go to university.", "finishes|has finished"],
       ["By the time we ___ (get) to the shop, it will be closed.", "get"],
       ["I won't leave until you ___ (tell) me the truth.", "tell"]
     ]},
     { type: 'translate', task: 'Придаточные времени: переведите на английский.', items: [
-      ["Я напишу тебе, когда закончу работу.", "I will text you when I finish work.|I will write to you when I finish work.|When I finish work, I will text you.|When I finish work, I will write to you.|I will message you when I finish work.|I will text you when I finish my work.|I will write to you when I finish my work."],
-      ["Как только он придет, мы начнем.", "As soon as he comes, we will start.|As soon as he arrives, we will start.|We will start as soon as he comes.|We will start as soon as he arrives.|As soon as he comes, we will begin.|We will begin as soon as he comes.|As soon as he arrives, we will begin.|We will begin as soon as he arrives.|As soon as he gets here, we will start.|We will start as soon as he gets here."],
-      ["Подожди, пока я не вернусь.", "Wait until I come back.|Wait till I come back.|Wait until I get back.|Wait till I get back.|Wait until I return.|Wait till I return.|Wait until I am back.|Wait till I am back."],
+      ["Я напишу тебе, когда закончу работу.", "I will text you when I finish work.|I will write to you when I finish work.|When I finish work, I will text you.|When I finish work, I will write to you.|I will message you when I finish work.|I will text you when I finish my work.|I will write to you when I finish my work.|I will text you when I have finished work.|I will write to you when I have finished work.|When I have finished work, I will text you.|I will text you when I have finished my work."],
+      ["Как только он приедет, мы поужинаем.", "As soon as he comes, we will have dinner.|As soon as he arrives, we will have dinner.|As soon as he gets here, we will have dinner.|We will have dinner as soon as he comes.|We will have dinner as soon as he arrives.|We will have dinner as soon as he gets here."],
+      ["Я буду ждать, пока ты не позвонишь.", "I will wait until you call.|I will wait till you call.|I will wait until you phone.|I will wait till you phone."],
       ["Перед тем как выйти, выключи свет.", "Before you leave, turn off the light.|Before you go out, turn off the light.|Turn off the light before you leave.|Turn off the light before you go out.|Before you leave, switch off the light.|Switch off the light before you leave.|Before you leave, turn off the lights.|Turn off the lights before you leave.|Before you go out, switch off the light.|Switch off the light before you go out.|Before you leave, switch off the lights.|Switch off the lights before you leave.|Before you go out, turn off the lights.|Turn off the lights before you go out.|Turn off the light before leaving."]
     ]}
   ]},
@@ -128,10 +166,27 @@ ${T(["1 тип: реально", "2 тип: нереально"], [
   ["<i>If I <b>have</b> time, I'<b>ll help</b> you.</i> — Если у меня будет время, я тебе помогу. (возможно, будет время)", "<i>If I <b>had</b> time, I'<b>d help</b> you.</i> — Если бы у меня было время, я бы тебе помог. (времени нет)"]
 ])}
 ${N("В таких предложениях глагол <i>be</i> принято ставить в форме <i>were</i> для всех лиц: <i>If I <b>were</b> you</i>, <i>If she <b>were</b> taller</i>. А <i>would</i> ставится только во второй части — в части с <i>if</i> его не бывает. Исключение — <i>If only… would</i>, о нем в теме 11.5.")}`,
+  /* перевод слов в упражнениях: по наведению или касанию (gloss.js); ключи — в нижнем регистре, как слово стоит в тексте */
+  gloss: {
+    'ride': 'ездить (верхом, на велосипеде)', 'show': 'показать',
+    'actor': 'актер', 'bike': 'велосипед', 'famous': 'знаменитый', 'say': 'сказать', 'school': 'школа', 'us': 'нас, нам', 'way': 'путь, дорога',
+    'i': 'я', 'he': 'он', 'she': 'она', 'it': 'это; он, она (о предмете)', 'we': 'мы', 'they': 'они', 'go': 'идти, ехать',
+    'the': 'определенный артикль', 'what': 'что, какой', 'that': 'тот, та, то; что (союз)', 'a': 'неопределенный артикль',
+    'flat': 'квартира', 'live': 'жить', 'every': 'каждый', 'buy': 'купить', 'see': 'увидеть',
+    'to': 'в, на (куда); частица перед глаголом', 'cold': 'холодный; холодно', 'where': 'где, куда', 'often': 'часто',
+    'country': 'страна; загород', 'visit': 'посетить, побывать', 'you': 'ты, вы',
+    'were': 'были (форма to be)', 'car': 'машина', 'him': 'его, ему', 'be': 'быть', 'fly': 'лететь',
+    'out': 'наружу', 'go out': 'выйти (погулять)', 'so': 'поэтому; так', 'get': 'добраться; получить', 'sea': 'море', 'million': 'миллион', 'knew': 'знал (от know)',
+    'them': 'их, им', 'answer': 'ответ; ответить', 'anywhere': 'где-нибудь; нигде (в отрицании)', 'apologise': 'извиниться',
+    'better': 'лучше', 'bigger': 'больше', 'cheaper': 'дешевле', 'closer': 'ближе', 'could': 'мог; мог бы', 'dollars': 'доллары',
+    'earned': 'заработал', 'had': 'имел; вспомогательный глагол', 'harder': 'усерднее', "i'd": 'я бы (= I would / I had)',
+    'if': 'если; ли', 'marks': 'оценки', 'model': 'модель', 'money': 'деньги', 'more': 'больше, более',
+    'taller': 'выше', 'travel': 'путешествовать', 'world': 'мир', 'would': 'бы; вспомогательный глагол'
+  },
   ex: [
     { type: 'gap', task: 'Поставьте глагол в нужную форму. Если в скобках несколько слов через косую черту, используйте в ответе их все — в нужной форме и порядке.', items: [
-      ["If I ___ (have) more money, I would buy a house.", "had"], ["If I were you, I ___ (not / lend) him money.", "would not lend|'d not lend"],
-      ["If he ___ (know) her number, he would call her.", "knew"], ["What would you do if you ___ (win) the lottery?", "won"],
+      ["If I ___ (have) a bike, I would ride it to school.", "had"], ["If I were you, I ___ (not / lend) him money.", "would not lend|'d not lend"],
+      ["If he ___ (know) the way, he would show us.", "knew"], ["What would you say if you ___ (meet) a famous actor?", "met"],
       ["If she ___ (be) taller, she could be a model.", "were|was"], ["We ___ (go) to the sea if we had a car.", "would go"],
       ["If I ___ (can) fly, I would visit every country.", "could"], ["I ___ (buy) a bigger flat if I earned more.", "would buy"],
       ["If they ___ (live) closer, we would see them more often.", "lived"], ["If it ___ (not / be) so cold, we would go out.", "were not|was not"]
@@ -142,15 +197,15 @@ ${N("В таких предложениях глагол <i>be</i> принят�
       ["Where ___ you live if you could live anywhere?", ["would", "will", "did"]], ["If I ___ a million dollars, I'd travel the world.", ["had", "have", "would have"]]
     ]},
     { type: 'translate', task: 'Переведите на английский.', items: [
-      ["Если бы у меня было время, я бы тебе помог.", "If I had time, I would help you.|If I had time, I'd help you.|I would help you if I had time."],
-      ["На твоем месте я бы не стал этого делать.", "If I were you, I wouldn't do that.|If I were you, I wouldn't do it.|If I was you, I wouldn't do that.|I wouldn't do that if I were you.|I wouldn't do it if I were you."],
-      ["Что бы ты сделал, если бы был президентом?", "What would you do if you were president?|What would you do if you were the president?"],
+      ["Если бы у меня было больше денег, я бы купил новый телефон.", "If I had more money, I would buy a new phone.|I would buy a new phone if I had more money."],
+      ["На твоем месте я бы купил эту куртку.", "If I were you, I would buy this jacket.|If I were you, I would buy that jacket.|If I was you, I would buy this jacket.|If I was you, I would buy that jacket.|I would buy this jacket if I were you.|I would buy that jacket if I were you.|I would buy this jacket if I was you.|I would buy that jacket if I was you."],
+      ["Куда бы ты поехал, если бы у тебя был месяц отпуска?", "Where would you go if you had a month's holiday?|Where would you go if you had a month of holiday?|Where would you go if you had a month off?|Where would you travel if you had a month's holiday?"],
       ["Если бы он знал английский, он бы нашел работу.", "If he knew English, he would find a job.|If he knew English, he'd find a job.|If he spoke English, he would find a job.|If he knew English, he could find a job."]
     ]},
     { type: 'listen', at: 2, task: 'Прослушайте предложение и соберите его из слов.', items: [
       ["If I had more free time, I would learn Japanese.", "Будь у меня больше свободного времени, я бы учил японский."],
       ["What would you do if you found a wallet in the street?", "Что бы ты сделал, если бы нашел на улице кошелек?"],
-      ["If I were you, I wouldn't trust anybody.", "На твоем месте я бы никому не доверял."]
+      ["If I lived in the country, I would keep chickens.", "Если бы я жил за городом, я бы держал кур."]
     ]}
   ]},
 
@@ -171,10 +226,25 @@ ${T(["Условие", "Результат", "Пример"], [
   ["настоящее (Past Simple)", "прошлое (would have + V3)", "<i>If I <b>were</b> braver, I <b>would have said</b> no.</i> — Будь я смелее, я бы тогда отказался."]
 ])}
 ${N("По-русски и второй, и третий тип звучат одинаково — «если бы…». Поэтому выбирайте тип по смыслу: если речь о настоящем, нужен второй тип, а если о том, что уже было в прошлом, — третий.")}`,
+  /* перевод слов в упражнениях: по наведению или касанию (gloss.js); ключи — в нижнем регистре, как слово стоит в тексте */
+  gloss: {
+    'afraid': 'боится', 'as': 'как; в качестве', 'child': 'ребенок', 'learnt': 'выучил', 'of': 'предлог родительного падежа', 'swim': 'плавать', 'water': 'вода',
+    'i': 'я', 'he': 'он', 'she': 'она', 'it': 'это; он, она (о предмете)', 'we': 'мы', 'have': 'иметь; вспомогательный глагол',
+    'the': 'определенный артикль', 'a': 'неопределенный артикль', 'her': 'ее, ей',
+    'to': 'в, на (куда); частица перед глаголом', 'yesterday': 'вчера', 'now': 'сейчас', 'tell': 'говорить, рассказывать',
+    'me': 'меня, мне', 'come': 'приходить', 'you': 'ты, вы', 'party': 'вечеринка', 'car': 'машина', 'train': 'поезд',
+    'here': 'здесь, сюда', 'plane': 'самолет', 'told': 'сказал (от tell)', 'beach': 'пляж', 'left': 'ушел (от leave); оставшийся; левый',
+    'seen': 'видел (3-я форма see)', 'accident': 'авария, несчастный случай', 'exam': 'экзамен', 'about': 'о; около',
+    'answer': 'ответ; ответить', 'carefully': 'внимательно, осторожно', 'driven': 'вел машину (3-я форма drive)', 'earlier': 'раньше',
+    'gone': 'ушел, уехал (3-я форма go)', 'had': 'имел; вспомогательный глагол', "hadn't": 'не (= had not)', 'harder': 'усерднее',
+    'helped': 'помог', 'if': 'если; ли', 'known': 'знал (3-я форма know)', 'lost': 'потерял; потерянный',
+    'map': 'карта', 'missed': 'опоздал на; пропустил', 'money': 'деньги', 'more': 'больше, более', 'passed': 'сдал; передал',
+    'saved': 'спас; сэкономил', 'taken': 'взял (3-я форма take)', 'would': 'бы; вспомогательный глагол'
+  },
   ex: [
     { type: 'gap', task: 'Поставьте глагол в нужную форму. Если в скобках несколько слов через косую черту, используйте в ответе их все — в нужной форме и порядке.', items: [
       ["If you ___ (study) harder, you would have passed the exam.", "had studied|'d studied"], ["If we had left earlier, we ___ (not / miss) the train.", "would not have missed"],
-      ["If I had taken the job, I ___ (live) in London now.", "would live|would be living|'d live|'d be living"], ["She would have come if you ___ (invite) her.", "had invited|'d invited"],
+      ["If I had learnt to swim as a child, I ___ (not / be) afraid of water now.", "would not be|'d not be"], ["She would have come if you ___ (invite) her.", "had invited|'d invited"],
       ["If it ___ (not / rain), we would have gone to the beach.", "had not rained"], ["If I had known about the party, I ___ (come).", "would have come"],
       ["He ___ (not / have) the accident if he had driven more carefully.", "would not have had"], ["If you ___ (tell) me, I would have helped you.", "had told|'d told"]
     ]},
@@ -185,11 +255,11 @@ ${N("По-русски и второй, и третий тип звучат од
     ]},
     { type: 'translate', task: 'Переведите на английский.', items: [
       ["Если бы ты пришел вчера, ты бы увидел его.", "If you had come yesterday, you would have seen him.|If you'd come yesterday, you'd have seen him."],
-      ["Если бы я знал, я бы тебе тогда сказал.", "If I had known, I would have told you.|If I'd known, I'd have told you."],
+      ["Если бы ты меня разбудил, я бы не проспал.", "If you had woken me up, I would not have overslept.|If you had woken me, I would not have overslept.|I would not have overslept if you had woken me up.|I would not have overslept if you had woken me."],
       ["Если бы мы не опоздали на поезд, мы бы уже были дома.", "If we hadn't missed the train, we would be at home now.|If we had not missed the train, we would be home now.|If we hadn't missed the train, we'd be home now.|If we hadn't missed the train, we would already be at home.|If we hadn't missed the train, we would already be home.|If we hadn't missed the train, we would be home already.|If we hadn't missed the train, we would be home by now.|If we hadn't missed the train, we would be at home by now."]
     ]},
     { type: 'listen', at: 2, task: 'Прослушайте предложение и соберите его из слов.', items: [
-      ["If we had taken a taxi, we wouldn't have been so late.", "Если бы мы взяли такси, мы бы так сильно не опоздали."],
+      ["If we had taken a taxi, we would have arrived on time.", "Если бы мы взяли такси, мы бы приехали вовремя."],
       ["If I had known her address, I would have sent her a card.", "Если бы я знал ее адрес, я бы послал ей открытку."],
       ["If I had taken your advice, I wouldn't be in trouble now.", "Если бы я тогда послушался твоего совета, у меня сейчас не было бы проблем."]
     ]}
@@ -207,13 +277,22 @@ ${T(["О чем сожалеют или чем недовольны", "Форм�
 ])}
 <p>Форма <i>were</i> для всех лиц здесь та же, что в условных предложениях второго типа: <i>I wish I were</i>, <i>I wish she were</i>. В разговоре допустимо и <i>was</i>.</p>
 <h3>Wish + would</h3>
-<p>Сочетание <i>wish + would</i> выражает не сожаление, а недовольство или нетерпение: говорящему не нравится, как кто-то себя ведет или что происходит, и он хочет, чтобы это изменилось. Например, <i>I wish you would stop talking</i> — хоть бы ты замолчал. Так можно сказать и о погоде или ситуации: <i>I wish it would stop raining</i> — хоть бы дождь кончился. А вот о себе так не говорят: вместо <i>I wish I would</i> используют <i>I wish I could</i>, потому что свое поведение мы можем изменить сами.</p>
-${N("Будьте внимательны при переводе: утверждение после <i>wish</i> становится в русском отрицанием, и наоборот. <i>I wish I <b>had</b> a car</i> — жаль, что у меня <b>нет</b> машины. Конструкция <i>If only…</i> значит то же самое, только звучит эмоциональнее: <i>If only I had more time!</i> — если бы только у меня было больше времени!")}`,
+<p>Сочетание <i>wish + would</i> выражает не сожаление, а недовольство или нетерпение: говорящему не нравится, как кто-то себя ведет или что происходит, и он хочет, чтобы это изменилось. Например, <i>I wish you would stop talking</i> — хоть бы ты замолчал. Так можно сказать и о погоде или ситуации: <i>I wish it would stop raining</i> — хоть бы дождь кончился. А вот о себе так не говорят: если жаль, что сам не можешь что-то сделать или изменить, говорят <i>I wish I could</i>, а не <i>I wish I would</i>.</p>
+${N("Будьте внимательны при переводе со словом «жаль»: утверждение после <i>wish</i> становится в русском отрицанием, и наоборот. <i>I wish I <b>had</b> a car</i> — жаль, что у меня <b>нет</b> машины. Конструкция <i>If only…</i> значит то же самое, только звучит эмоциональнее: <i>If only I had more time!</i> — если бы только у меня было больше времени!")}`,
+  /* перевод слов в упражнениях: по наведению или касанию (gloss.js); ключи — в нижнем регистре, как слово стоит в тексте */
+  gloss: {
+    'a': 'неопределенный артикль', 'bigger': 'больше', 'brother': 'брат', 'flat': 'квартира', 'her': 'ее, ей', 'here': 'здесь, сюда', 'my': 'мой, моя, мое', 'number': 'номер', 'phone': 'телефон',
+    'old': 'старый', 'i': 'я', 'he': 'он', 'she': 'она', 'it': 'это; он, она (о предмете)', 'we': 'мы', 'the': 'определенный артикль',
+    'that': 'тот, та, то; что (союз)', 'only': 'единственный', 'if only': 'если бы только', 'to': 'в, на (куда); частица перед глаголом', 'yesterday': 'вчера',
+    'by': 'у, возле (by the sea — у моря)', 'now': 'сейчас', 'me': 'меня, мне', 'you': 'ты, вы', 'last': 'прошлый', 'party': 'вечеринка',
+    'car': 'машина', 'night': 'ночь', 'play': 'играть', 'sea': 'море', 'guitar': 'гитара',
+    'if': 'если; ли', 'warmer': 'теплее', 'wish': 'жалеть, что не; желать', 'wishes': 'желает'
+  },
   ex: [
     { type: 'gap', task: 'Поставьте глагол в нужную форму после wish / if only. Если в скобках несколько слов через косую черту, используйте в ответе их все — в нужной форме и порядке.', items: [
-      ["I wish I ___ (know) the answer. (сейчас)", "knew"], ["I wish I ___ (not / say) that yesterday.", "had not said"],
-      ["I wish you ___ (listen) to me!", "would listen"], ["I wish I ___ (be) taller.", "were|was"],
-      ["If only I ___ (have) more time now!", "had"], ["I wish I ___ (can) play the guitar.", "could"],
+      ["I wish I ___ (know) her phone number. (сейчас)", "knew"], ["I wish I ___ (not / say) that yesterday.", "had not said"],
+      ["I wish you ___ (listen) to me!", "would listen"], ["I wish my brother ___ (be) here now.", "were|was"],
+      ["If only we ___ (have) a bigger flat!", "had"], ["I wish I ___ (can) play the guitar.", "could"],
       ["She wishes she ___ (go) to the party last night.", "had gone"], ["I wish it ___ (get) warmer.", "would get"],
       ["I wish we ___ (live) by the sea.", "lived"], ["He wishes he ___ (not / buy) that old car.", "had not bought"]
     ]},
@@ -222,12 +301,12 @@ ${N("Будьте внимательны при переводе: утвержд
       ["Жаль, что я не знаю английский.", "I wish I knew English.|I wish I spoke English.|I wish I could speak English."],
       ["Жаль, что я не пошел с тобой.", "I wish I had gone with you.|I wish I'd gone with you."],
       ["Жаль, что сейчас не лето.", "I wish it were summer now.|I wish it was summer now.|I wish it were summer.|I wish it was summer."],
-      ["Хоть бы он замолчал!", "I wish he would be quiet!|If only he would be quiet!|I wish he would stop talking!|I wish he would shut up!|I wish he would keep quiet!"]
+      ["Хоть бы автобус скорее пришел!", "I wish the bus would come!|If only the bus would come!|I wish the bus would come soon!|If only the bus would come soon!|I wish the bus would hurry up!"]
     ]},
     { type: 'listen', at: 2, task: 'Прослушайте предложение и соберите его из слов.', items: [
       ["I wish I could speak Spanish as well as you.", "Жаль, что я не говорю по-испански так же хорошо, как ты."],
       ["If only we had bought the tickets earlier!", "Если бы только мы купили билеты раньше!"],
-      ["She wishes she lived closer to the sea.", "Ей хотелось бы жить ближе к морю."]
+      ["She wishes she lived closer to her office.", "Ей хотелось бы жить поближе к работе."]
     ]}
   ]}
 ]});

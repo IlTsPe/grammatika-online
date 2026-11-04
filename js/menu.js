@@ -4,21 +4,23 @@ function renderLevelProgress() {
   const box = $('#lvlProg');
   box.hidden = !levelFilter;
   if (!levelFilter) return;
-  const topics = TOPICS.filter(t => t.level === levelFilter);
-  let s = 0, tot = 0;
-  topics.forEach(t => { const r = topicStats(t); s += r.s; tot += r.tot; });
-  const pct = pctOf(s, tot);
-  box.innerHTML = `<div class="lvl-prog__row"><span>Уровень <span class="lvl-tag lvl-tag--sm" title="${LEVELS[levelFilter]}">${levelFilter}</span> пройден на</span>${pctLabel(pct, 'lvl-prog__value')}</div>
+  const { pct } = sumStats(TOPICS.filter(t => t.level === levelFilter));
+  box.innerHTML = `<div class="lvl-prog__row"><span>Уровень ${lvlTag(levelFilter, 'lvl-tag--sm')} пройден на</span>${pctLabel(pct, 'lvl-prog__value')}</div>
     <div class="bar bar--thin">${barFill(pct)}</div>`;
 }
 
 function renderLevels() {
   const box = $('#levelChips'); box.innerHTML = '';
   [['', 'Все'], ...Object.keys(LEVELS).map(l => [l, l])].forEach(([v, label]) => {
-    const b = el('button', 'level-chip', label); b.type = 'button';
+    const b = button('level-chip', label);
     b.setAttribute('aria-pressed', String(levelFilter === v));
     b.dataset.level = v;
-    b.addEventListener('click', () => { levelFilter = v; store.set('gk2-level', v); renderLevels(); renderToc(); });
+    /* чипы не пересоздаются: меняется только отметка, поэтому фокус остается на нажатом чипе; заливку обновит renderToc (fillLevelChips) */
+    b.addEventListener('click', () => {
+      levelFilter = v; store.set('gk2-level', v);
+      box.querySelectorAll('.level-chip').forEach(x => x.setAttribute('aria-pressed', String(x === b)));
+      renderToc();
+    });
     box.append(b);
   });
   fillLevelChips();
@@ -29,8 +31,7 @@ function renderLevels() {
 function fillLevelChips() {
   document.querySelectorAll('#levelChips .level-chip').forEach(b => {
     const level = b.dataset.level;
-    let s = 0, tot = 0;
-    TOPICS.filter(t => !level || t.level === level).forEach(t => { const r = topicStats(t); s += r.s; tot += r.tot; });
+    const { s, tot } = sumStats(TOPICS.filter(t => !level || t.level === level));
     const pct = tot ? 100 * s / tot : 0;
     if (level) b.style.setProperty('--lvl', pct + '%'); /* у «Все» жидкости нет */
     b.classList.toggle('level-chip--done', tot > 0 && s === tot);
@@ -54,6 +55,8 @@ const ARROW_SVG = '<svg class="arrow__icon" aria-hidden="true"><use href="#i-arr
 const arrowHtml = (dir, cls = '') => `<span class="arrow arrow--${dir}${cls ? ' ' + cls : ''}" aria-hidden="true">${ARROW_SVG}</span>`;
 /* плашка прогресса: на 100% зеленая обводка, ниже — заливка цветом по диапазону; cls добавляет класс элемента родителя */
 const pill = (pct, cls = '') => `<span class="pill pill--${pct >= 100 ? 'good' : pct > 60 ? 'high' : pct > 30 ? 'mid' : 'low'}${cls ? ' ' + cls : ''}" style="--p:${pct}%">${pct}%</span>`;
+/* метка уровня A1–C2 с полным названием в подсказке; cls — модификаторы и класс места */
+const lvlTag = (l, cls = '') => `<span class="lvl-tag${cls ? ' ' + cls : ''}" title="${LEVELS[l]}">${l}</span>`;
 /* заливка полосы прогресса; на 100% становится зеленой */
 const barFill = pct => `<i class="bar__fill${pct >= 100 ? ' bar__fill--full' : ''}" style="width:${pct}%"></i>`;
 /* процент рядом с полосой; на 100% становится зеленым */
@@ -91,9 +94,10 @@ function renderToc() {
   holdHover();
   const q = $('#search').value.trim().toLowerCase();
   const filtering = !!(q || levelFilter);
-  if (isAbout(route)) $('#infoBtn').setAttribute('aria-current', 'page'); else $('#infoBtn').removeAttribute('aria-current');
-  if (route === 'contents') $('#tocContents').setAttribute('aria-current', 'page'); else $('#tocContents').removeAttribute('aria-current');
-  document.querySelectorAll('.page-link').forEach(b => b.toggleAttribute('aria-current', b.dataset.go === 'about' ? isAbout(route) : route === b.dataset.go));
+  setCurrent($('#infoBtn'), isAbout(route));
+  setCurrent($('#tocContents'), route === 'contents');
+  setCurrent($('#tocIrregular'), route === 'irregular-verbs');
+  document.querySelectorAll('.page-link').forEach(b => setCurrent(b, b.dataset.go === 'about' ? isAbout(route) : route === b.dataset.go));
   renderLevelProgress();
   fillLevelChips();
   const list = $('#tocList'); list.innerHTML = '';
@@ -109,14 +113,14 @@ function renderToc() {
     /* раздел открытой страницы (сам раздел или одна из его тем); тема, открытая из «Избранного», отмечается только в том списке */
     const current = !viaBookmarks && (route === 'ch-' + ch.id || (topicById[route] && topicById[route].ch === ch));
     const box = el('div', current ? 'chap chap--current' : 'chap');
-    const cb = el('button', 'chap__btn'); cb.type = 'button';
+    const cb = button('chap__btn');
     if (current) cb.setAttribute('aria-current', 'location');
     /* плашка считает только выбранный уровень и появляется, когда начата тема этого уровня
        (если начата только на другом уровне, она показывала непонятные 0%) */
     const cs = chapterStats(ch, levelFilter);
     const lv = [...new Set(ch.topics.map(t => t.level))].sort();
     cb.innerHTML = `<span class="chap__num">${ch.n}</span><span>${esc(ch.title)}<small class="chap__meta">${ch.topics.length} ${plural(ch.topics.length, 'тема', 'темы', 'тем')}</small>` +
-      `<span class="chap__levels" aria-label="Уровни">${lv.map(l => `<span class="lvl-tag lvl-tag--sm" title="${LEVELS[l]}">${l}</span>`).join('')}</span></span>` +
+      `<span class="chap__levels" aria-label="Уровни">${lv.map(l => lvlTag(l, 'lvl-tag--sm')).join('')}</span></span>` +
       `<span class="chap__end">${cs.tried ? pill(cs.pct) : ''}` +
       '<span class="chap__arrow" aria-hidden="true"><svg class="chap__arrow-icon" width="12" height="12" aria-hidden="true"><use href="#i-chevron"/></svg></span></span>';
     /* название раздела только раскрывает и сворачивает его; страница раздела открывается из «Обзора всего раздела» внутри */
@@ -142,7 +146,7 @@ function renderToc() {
     const body = el('div', 'chap__body');
     const clip = el('div', 'chap__clip');
     const sub = el('div', 'chap__topics');
-    const ov = el('button', 'topic-btn topic-btn--overview chap__topic'); ov.type = 'button';
+    const ov = button('topic-btn topic-btn--overview chap__topic');
     ov.innerHTML = `<span>Обзор всего раздела</span>${arrowHtml('next', 'topic-btn__arrow')}`;
     if (route === 'ch-' + ch.id) ov.setAttribute('aria-current', 'page');
     ov.addEventListener('click', () => go('ch-' + ch.id));
@@ -168,7 +172,7 @@ function renderToc() {
 const bmIcon = (cls = '') => `<svg class="bm-icon${cls ? ' ' + cls : ''}" aria-hidden="true"><use href="#i-bookmark"/></svg>`;
 
 function topicButton(t, fromBookmarks = false) {
-  const b = el('button', fromBookmarks ? 'topic-btn bookmarks__topic' : 'topic-btn'); b.type = 'button';
+  const b = button(fromBookmarks ? 'topic-btn bookmarks__topic' : 'topic-btn');
   /* открытая тема подсвечивается только в том списке, из которого ее открыли: «Избранное» или список содержания */
   if (t.id === route && fromBookmarks === viaBookmarks) b.setAttribute('aria-current', 'page');
   const st = topicStats(t);
@@ -182,6 +186,20 @@ function topicButton(t, fromBookmarks = false) {
 /* «Избранное»: темы в избранном в порядке книги, независимо от фильтра уровня и поиска меню;
    свои чипы уровней (только уровни, где есть избранное, gk2-bm-level) сужают список. Становится золотым, пока открытая тема пришла из этого списка. */
 let bmLevel = store.get('gk2-bm-level', '');
+/* ряд чипов уровня над списком («Избранное», «Работа над ошибками»): «Все» и уровни levels, нажат current.
+   barCls и cls — классы ряда и чипа; count(l) — число в чипе (в span с классом countCls), title(l) — подсказка, pick(l) — выбор */
+function levelBar(barCls, cls, levels, current, { count, countCls, title, pick }) {
+  const bar = el('div', barCls); bar.setAttribute('role', 'group'); bar.setAttribute('aria-label', 'Уровень сложности');
+  ['', ...levels].forEach(l => {
+    const b = button(cls, l || 'Все');
+    if (count) b.insertAdjacentHTML('beforeend', `<span class="${countCls}">${count(l)}</span>`);
+    const tip = title(l); if (tip) b.title = tip;
+    b.setAttribute('aria-pressed', String(l === current));
+    b.addEventListener('click', () => pick(l));
+    bar.append(b);
+  });
+  return bar;
+}
 function bookmarksBox() {
   const marked = TOPICS.filter(t => bookmarks[t.id]);
   const levels = Object.keys(LEVELS).filter(l => marked.some(t => t.level === l));
@@ -189,16 +207,11 @@ function bookmarksBox() {
   const box = el('section', 'bookmarks' + (viaBookmarks && bookmarks[route] ? ' bookmarks--active' : ''));
   box.setAttribute('aria-label', 'Избранное');
   if (levels.length > 1) {
-    const bar = el('div', 'bookmarks__levels'); bar.setAttribute('role', 'group'); bar.setAttribute('aria-label', 'Уровень сложности');
-    ['', ...levels].forEach(l => {
-      const n = l ? marked.filter(t => t.level === l).length : marked.length;
-      const b = el('button', 'bookmarks__level', l || 'Все'); b.type = 'button';
-      b.title = `${l ? LEVELS[l] : 'Все уровни'} · ${n} ${plural(n, 'тема', 'темы', 'тем')}`;
-      b.setAttribute('aria-pressed', String(l === level));
-      b.addEventListener('click', () => { bmLevel = l; store.set('gk2-bm-level', l); renderFold('bm'); });
-      bar.append(b);
-    });
-    box.append(bar);
+    const count = l => l ? marked.filter(t => t.level === l).length : marked.length;
+    box.append(levelBar('bookmarks__levels', 'bookmarks__level', levels, level, {
+      title: l => `${l ? LEVELS[l] : 'Все уровни'} · ${count(l)} ${plural(count(l), 'тема', 'темы', 'тем')}`,
+      pick: l => { bmLevel = l; store.set('gk2-bm-level', l); renderFold('bm'); },
+    }));
   }
   const list = el('div', 'bookmarks__list');
   marked.filter(t => !level || t.level === level).forEach(t => list.append(topicButton(t, true)));
@@ -226,7 +239,7 @@ function renderNotes() {
   const b = $('#notesBtn');
   b.innerHTML = `${notesIcon()}<span>Мои заметки</span><b class="side__count">${notes.length || ''}</b>` + arrowHtml('next', 'topic-btn__arrow side__go');
   b.setAttribute('aria-label', `Мои заметки: ${notes.length}`);
-  if (route === 'notes') b.setAttribute('aria-current', 'page'); else b.removeAttribute('aria-current');
+  setCurrent(b, route === 'notes');
   document.querySelectorAll('.page-link[data-go="notes"]').forEach(h => {
     h.innerHTML = `${notesIcon('action-btn__icon')}<span>${h.dataset.label}</span><b class="page-link__count">${notes.length || ''}</b>`;
     h.setAttribute('aria-label', `Мои заметки: ${notes.length}`);
@@ -243,7 +256,7 @@ function fillPaging(nav, page, count, pick) {
   nav.hidden = count < 2;
   if (count < 2) return;
   const pageBtn = (k, html, label) => {
-    const b = el('button', 'paging__btn'); b.type = 'button'; b.innerHTML = html;
+    const b = button('paging__btn'); b.innerHTML = html;
     if (label) b.setAttribute('aria-label', label);
     if (k === page && !label) b.setAttribute('aria-current', 'page');
     b.addEventListener('click', () => pick(k));

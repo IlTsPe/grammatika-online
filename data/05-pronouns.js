@@ -24,13 +24,32 @@ ${E([
 <p>Возвратное местоимение (<i>myself, herself, themselves</i>) нужно, когда человек делает что-то сам с собой, то есть подлежащее и дополнение — одно и то же лицо: <i>He cut <b>himself</b></i> — он порезался (порезал себя). Если сказать <i>He cut him</i>, получится, что он порезал кого-то другого. У <i>you</i> две возвратные формы: <i>yourself</i> — когда обращаются к одному человеку, и <i>yourselves</i> — когда к нескольким: <i>Children, help <b>yourselves</b>!</i> — дети, угощайтесь! Выражение <i>Help yourself!</i> — угощайся! — стоит просто запомнить.</p>
 <p>Те же слова работают и как усилительные, со значением «сам, лично»: <i>I did it <b>myself</b></i> — я сделал это сам, без помощи. А с предлогом <i>by</i> они значат «один, в одиночку»: <i>She lives <b>by herself</b></i> — она живет одна. Будьте внимательны: не каждый русский глагол на «-ся» или со словом «себя» требует возвратного местоимения. Например, «мыться» — это просто <i>wash</i>, «одеваться» — <i>get dressed</i>, «чувствовать себя» — <i>feel</i>: <i>I feel fine</i> — я чувствую себя хорошо.</p>
 ${N("Отдельного слова «свой» в английском нет — его переводят тем местоимением, которое подходит по лицу: «Я взял свою книгу» — <i>I took <b>my</b> book</i>, «Она взяла свою книгу» — <i>She took <b>her</b> book</i>. А в коротких ответах в разговоре используют форму <i>me</i>, а не <i>I</i>: <i>— Who's there? — <b>Me</b>.</i> (— Кто там? — Я.)")}`,
+  /* перевод слов в упражнениях: по наведению или касанию (gloss.js); ключи — в нижнем регистре, как слово стоит в тексте */
+  gloss: {
+    'cooked': 'приготовил', 'dinner': 'ужин', 'scarf': 'шарф',
+    'brother': 'брат', 'old': 'старый', 'house': 'дом', 'umbrella': 'зонт', 'bag': 'сумка', 'book': 'книга', 'pen': 'ручка',
+    'blue': 'синий, голубой', 'this is': 'это', "it's": 'это (= it is)', 'i': 'я', 'he': 'он', 'it': 'это; он, она (о предмете)',
+    'we': 'мы', 'my': 'мой, моя, мое', 'is': 'есть, является (форма to be)', 'are': 'есть (форма to be)', 'the': 'определенный артикль',
+    'at': 'в (о времени); у, на (о месте)', 'in': 'в', 'that': 'тот, та, то; что (союз)', 'look at': 'посмотри на',
+    'a': 'неопределенный артикль', 'dog': 'собака', 'new': 'новый', 'please': 'пожалуйста', 'this': 'этот, эта, это', 'flat': 'квартира',
+    'on': 'на; в (о днях)', 'day': 'день', 'and': 'и', 'year': 'год', 'for': 'для; в течение', 'big': 'большой',
+    'to': 'в, на (куда); частица перед глаголом', 'room': 'комната', 'some': 'немного, несколько', 'under': 'под', 'our': 'наш',
+    'yesterday': 'вчера', 'look': 'смотреть; смотри', 'bird': 'птица', 'school': 'школа', 'bed': 'кровать', 'with': 'с',
+    'homework': 'домашнее задание', 'last': 'прошлый', 'not': 'не', 'party': 'вечеринка', 'were': 'были (форма to be)', 'but': 'но',
+    'all': 'весь, все', 'letter': 'письмо', 'together': 'вместе', 'cake': 'торт', 'bought': 'купил (от buy)', 'children': 'дети',
+    'help': 'помогать', 'met': 'встретил (от meet)', 'was': 'был (форма to be)', 'called': 'позвонил (от call)', 'all day': 'весь день',
+    "didn't": 'не (= did not)', 'last year': 'в прошлом году', 'found': 'нашел (от find)', 'cars': 'машины', 'answer': 'ответ; ответить',
+    'brothers': 'братья', 'brought': 'принес (от bring)', 'chair': 'стул', 'desk': 'письменный стол', 'enjoyed': 'получили удовольствие (от enjoy)',
+    'garden': 'сад', 'gave': 'дал (от give)', 'helped': 'помог', 'hurt': 'ушибить, поранить; причинить боль', "isn't": 'не (= is not)', 'mine': 'мой',
+    'painted': 'покрасил; нарисовал', 'postman': 'почтальон', 'slept': 'спал (от sleep)', 'wings': 'крылья'
+  },
   ex: [
     { type: 'gap', task: 'Замените слово в скобках нужной формой местоимения.', items: [
       ["Yesterday my brother helped ___ (I) with my homework.", "me"], ["This is Anna. ___ (she) brothers were at our school.", "her"],
       ["We bought ___ (we) new flat last year.", "our"], ["The dog slept in ___ (it) bed all day.", "its"],
-      ["This bag isn't mine, it's ___ (she).", "hers"], ["Is this pen ___ (you)? I found it under the desk.", "yours"],
+      ["This bag isn't mine, it's ___ (she).", "hers"], ["Is this scarf ___ (you)? I found it under the desk.", "yours"],
       ["I met ___ (they) at Tom's party.", "them"], ["He hurt ___ (he) in the garden.", "himself"],
-      ["We painted the room ___ (we).", "ourselves"], ["I called ___ (he) yesterday, but he didn't answer.", "him"],
+      ["We cooked dinner ___ (we).", "ourselves"], ["I called ___ (he) yesterday, but he didn't answer.", "him"],
       ["The big house was ___ (they), not ___ (we).", ["theirs", "ours"]]
     ]},
     { type: 'choice', task: 'Выберите правильный вариант.', items: [
@@ -42,8 +61,8 @@ ${N("Отдельного слова «свой» в английском нет
     { type: 'translate', task: 'Переведите на английский.', items: [
       ["Это ее сумка, а не моя.", "This is her bag, not mine.|It is her bag, not mine.|It's her bag, not mine."],
       ["Вчера она позвонила мне.", "She called me yesterday.|She phoned me yesterday.|Yesterday she called me.|Yesterday she phoned me.|She rang me yesterday.|Yesterday she rang me."],
-      ["Я сделал это сам.", "I did it myself.|I did it by myself."],
-      ["Они взяли свои книги.", "They took their books."],
+      ["Она сама испекла этот торт.", "She baked this cake herself.|She made this cake herself.|She baked this cake by herself.|She made this cake by herself."],
+      ["Мы забыли свои зонты.", "We forgot our umbrellas.|We have forgotten our umbrellas."],
       ["Мы видели их детей в парке.", "We saw their children in the park.|We saw their kids in the park."]
     ]},
     { type: 'listen', at: 2, task: 'Прослушайте предложение и соберите его из слов.', items: [
@@ -60,7 +79,7 @@ ${T(["", "Рядом", "Далеко"], [
   ["Один предмет", "<i><b>this</b> book</i> — эта книга", "<i><b>that</b> house</i> — тот дом"],
   ["Несколько", "<i><b>these</b> books</i> — эти книги", "<i><b>those</b> houses</i> — те дома"]
 ])}
-<p>Эти слова могут стоять перед существительным, а могут заменять его целиком. Например, <i><b>This</b> bag is new</i> — эта сумка новая, и <i><b>This</b> is my bag</i> — это моя сумка.</p>
+<p>Эти слова могут стоять перед существительным, а могут заменять его целиком. Например, <i><b>This</b> bag is new</i> — эта сумка новая (перед существительным); <i><b>This</b> is my bag</i> — это моя сумка (вместо существительного).</p>
 ${E([
   ["<b>This</b> is my phone.", "Это мой телефон."],
   ["<b>These</b> are my friends.", "Это мои друзья."],
@@ -71,13 +90,29 @@ ${E([
 <p>«Близко» и «далеко» бывает не только в пространстве, но и во времени. То, что происходит сейчас, — это <i>this</i> и <i>these</i>: <i>this week</i> — на этой неделе, <i>these days</i> — в наши дни. То, что уже прошло, — <i>that</i> и <i>those</i>: <i>that day</i> — в тот день, <i>in those days</i> — в те времена. Поэтому о только что закончившемся фильме говорят <i><b>That</b> was a great film!</i> — это был отличный фильм!</p>
 <p>Когда кого-то представляют, говорят <i>this</i>: <i>Mum, <b>this</b> is Anna</i> — мама, это Анна.</p>
 ${N("Русское «это» не меняется, а по-английски его нужно согласовать с тем, о чем идет речь. Если предметов несколько, вместо <i>this is</i> нужно <i>these are</i>: «Это мои книги» — <i><b>These are</b> my books</i>, а не <i>This is my books</i>. В кратком ответе <i>this</i> и <i>that</i> заменяют на <i>it</i>, а <i>these</i> и <i>those</i> — на <i>they</i>: <i>Is this your bag? — Yes, <b>it</b> is.</i> — это твоя сумка? — Да. <i>Are these your keys? — Yes, <b>they</b> are.</i> — это твои ключи? — Да.")}`,
+  /* перевод слов в упражнениях: по наведению или касанию (gloss.js); ключи — в нижнем регистре, как слово стоит в тексте */
+  gloss: {
+    'gloves': 'перчатки',
+    'bike': 'велосипед', 'concert': 'концерт', 'dad': 'папа', 'last': 'прошлый', 'night': 'ночь', 'to': 'чтобы (перед глаголом)', 'went': 'пошел, поехал (от go)', 'wonderful': 'чудесный',
+    'old': 'старый', 'film': 'фильм', 'week': 'неделя', 'man': 'мужчина', 'bag': 'сумка', 'i': 'я', 'we': 'мы', 'my': 'мой, моя, мое',
+    'is': 'есть, является (форма to be)', 'are': 'есть (форма to be)', 'the': 'определенный артикль',
+    'at': 'в (о времени); у, на (о месте)', 'in': 'в', 'what': 'что, какой', 'look at': 'посмотри на', 'a': 'неопределенный артикль',
+    'very': 'очень', 'new': 'новый', 'on': 'на; в (о днях)', 'door': 'дверь', 'who': 'кто', 'there': 'там, туда', 'table': 'стол',
+    'your': 'твой, ваш', 'people': 'люди, человек', 'yesterday': 'вчера', 'look': 'смотреть; смотри', 'bird': 'птица', 'roof': 'крыша',
+    'home': 'дом; домой', 'often': 'часто', 'from': 'из, от', 'like': 'нравиться, любить', 'friend': 'друг', 'mum': 'мама', 'days': 'дни',
+    'keys': 'ключи', 'work': 'работа; работать', "don't": 'не (= do not)', 'children': 'дети', 'great': 'отличный', 'jeans': 'джинсы',
+    'phone': 'телефон', 'song': 'песня', 'hard': 'усердно; трудный', 'saw': 'увидел (от see)', 'was': 'был (форма to be)',
+    'am': 'есть (форма to be с I)', 'life': 'жизнь', 'love': 'любить', 'over there': 'вон там', 'busy': 'занят, занятый', 'hill': 'холм',
+    'houses': 'дома', 'nephews': 'племянники', 'nice': 'приятный', 'oranges': 'апельсины', 'shoes': 'туфли, обувь',
+    'sweet': 'сладкий; милый'
+  },
   ex: [
     { type: 'gap', task: 'Впишите this, that, these или those. В скобках подсказка: рядом или далеко (в пространстве или во времени).', items: [
-      ["___ (рядом) is my new phone.", "this"],
+      ["___ (рядом) is my new bike.", "this"],
       ["___ (далеко) houses on the hill are very old.", "those"],
       ["Look at ___ (далеко) bird on the roof!", "that"],
       ["___ (рядом) oranges are sweet.", "these"],
-      ["Are ___ (рядом) your keys?", "these"],
+      ["Are ___ (рядом) your gloves?", "these"],
       ["Who is ___ (далеко) man at the door?", "that"],
       ["I love ___ (сейчас звучит) song.", "this"],
       ["___ (далеко) children over there are my nephews.", "those"],
@@ -89,17 +124,17 @@ ${N("Русское «это» не меняется, а по-английски
       ["Is ___ your bag over there?", ["that", "those", "these"]],
       ["___ shoes are very nice. (у вас в руках)", ["These", "This", "That"]],
       ["What is ___ on the table over there?", ["that", "those", "these"]],
-      ["Mum, ___ is Anna, my new friend. (она стоит рядом)", ["this", "these", "those"]],
+      ["Dad, ___ is Max, my new friend. (он стоит рядом)", ["this", "these", "those"]],
       ["I don't like ___ jeans. (у вас в руках)", ["these", "this", "that"]],
-      ["We saw a film yesterday. ___ was great!", ["That", "Those", "These"]],
+      ["We went to a concert last night. ___ was wonderful!", ["That", "Those", "These"]],
       ["___ days people often work from home. (в наше время)", ["These", "Those", "This"]]
     ]},
     { type: 'translate', task: 'Переведите на английский.', items: [
       ["Это наш новый учитель.", "This is our new teacher.|That is our new teacher."],
       ["Эти цветы красивые.", "These flowers are beautiful.|These flowers are pretty.|These flowers are lovely.|These flowers are nice."],
       ["Чьи это ботинки?", "Whose shoes are these?|Whose shoes are those?|Whose are these shoes?|Whose are those shoes?|Whose boots are these?|Whose boots are those?"],
-      ["Тот дом на холме очень старый.", "That house on the hill is very old."],
-      ["Это мои ключи.", "These are my keys.|Those are my keys."]
+      ["Та девочка у окна — моя сестра.", "That girl at the window is my sister.|That girl by the window is my sister."],
+      ["Это мои родители.", "These are my parents.|Those are my parents."],
     ]},
     { type: 'listen', at: 2, task: 'Прослушайте предложение и соберите его из слов.', items: [
       ["This bag is mine, and that bag is my sister's.", "Эта сумка моя, а та принадлежит моей сестре."],
@@ -117,17 +152,36 @@ ${T(["Слово", "Где", "Пример"], [
   ["<i>any</i>", "вопросы", "<i>Have you got <b>any</b> brothers?</i> — У тебя есть братья?"],
   ["<i>any</i>", "отрицания (с not)", "<i>I haven't got <b>any</b> money.</i> — У меня нет денег."],
   ["<i>any</i>", "утверждение: «любой»", "<i>Take <b>any</b> book you like.</i> — Бери любую книгу, какая нравится."],
-  ["<i>no</i>", "отрицание без not", "<i>I have <b>no</b> money. = I haven't got any money.</i> — У меня нет денег."]
+  ["<i>no</i>", "отрицание без not", "<i>I have <b>no</b> time. = I haven't got any time.</i> — У меня нет времени."]
 ])}
 <h3>Почему some бывает в вопросах</h3>
 <p>Обычно в вопросе ставят <i>any</i>, потому что спрашивающий не знает ответа: <i>Have you got any brothers?</i> Но когда мы что-то предлагаем или просим, мы ждем ответа «да», и тогда в вопросе остается <i>some</i>. Так, <i>Would you like some tea?</i> — это не вопрос о том, есть ли чай, а вежливое предложение: «Хотите чаю?». Оборот <i>Would you like…?</i> — не хотите ли…? — вежливее, чем <i>Do you want…?</i>, и его удобно запомнить целиком. При этом <i>Do you want…?</i> тоже правильный вопрос, только проще: так спрашивают друзей и близких.</p>
 <h3>Have got — «иметь»</h3>
 <p>В примерах таблицы встречается <i>have got</i>. Это разговорный, особенно британский, вариант глагола <i>have</i> в значении «иметь, у меня есть»: <i>I've got a sister = I have a sister</i> — у меня есть сестра. Главное отличие в том, как строятся вопрос и отрицание. С <i>have got</i> вспомогательный глагол <i>do</i> не нужен: в вопросе <i>have</i> выходит вперед (<i>Have you got a car?</i> — у тебя есть машина?), а в отрицании к нему добавляется <i>not</i> (<i>I haven't got a car</i> — у меня нет машины). С обычным <i>have</i> то же самое звучит так: <i>Do you have a car? I don't have a car.</i> Оба варианта правильные. Используют <i>have got</i> только в настоящем времени и только в значении «иметь»: сказать <i>I've got breakfast</i> вместо <i>I have breakfast</i> (я завтракаю) нельзя.</p>
 ${N("Как и в теме 1.3, двух отрицаний сразу не бывает: <i>I don't have no time</i> — ошибка.")}`,
+  /* перевод слов в упражнениях: по наведению или касанию (gloss.js); ключи — в нижнем регистре, как слово стоит в тексте */
+  gloss: {
+    'stamps': 'марки',
+    'lesson': 'урок', 'i': 'я', 'he': 'он', 'she': 'она', 'it': 'это; он, она (о предмете)', 'we': 'мы', 'my': 'мой, моя, мое',
+    'the': 'определенный артикль', 'at': 'в (о времени); у, на (о месте)', 'in': 'в', 'very': 'очень', 'new': 'новый', 'shop': 'магазин',
+    'on': 'на; в (о днях)', 'day': 'день', 'sugar': 'сахар', 'buy': 'купить', 'for': 'для; в течение', 'her': 'ее, ей', 'see': 'увидеть',
+    'mother': 'мама', 'there': 'в обороте there is / there are: есть, имеется', 'room': 'комната', 'some': 'немного, несколько', 'milk': 'молоко', 'bread': 'хлеб',
+    'kitchen': 'кухня', 'chairs': 'стулья', 'table': 'стол', 'your': 'твой, ваш', 'town': 'город', 'yesterday': 'вчера', 'with': 'с',
+    'me': 'меня, мне', 'do': 'делать; вспомогательный глагол', 'from': 'из, от', 'want': 'хотеть', 'you': 'ты, вы',
+    'like': 'нравиться, любить', 'tea': 'чай', 'animals': 'животные', 'flowers': 'цветы', 'were': 'были (форма to be)', 'coffee': 'кофе',
+    'time': 'время', 'did': 'вспомогательный глагол прошедшего времени', 'his': 'его', "i'm": 'я (= I am)', 'bought': 'купил (от buy)',
+    'call': 'звонить', 'made': 'сделали; приняли (решение)', 'or': 'или', 'help': 'помогать', 'night': 'ночь', 'was': 'был (форма to be)',
+    "haven't": 'не (= have not)', "didn't": 'не (= did not)', 'got': 'have got — иметь, есть (у кого-то)', 'so': 'поэтому; так', 'letters': 'письма',
+    'apples': 'яблоки', 'ask': 'спросить, попросить', 'bags': 'сумки', 'brought': 'принес (от bring)', 'drink': 'пить', 'forest': 'лес',
+    'friends': 'друзья', 'had': 'имел; вспомогательный глагол', 'juice': 'сок', 'lonely': 'одинокий', 'market': 'рынок', 'money': 'деньги',
+    'postman': 'почтальон', 'potatoes': 'картофель', 'questions': 'вопросы', 'sandwiches': 'бутерброды', 'seat': 'место (сиденье)',
+    'sorry': 'извините; жаль', 'take': 'брать; занимать (о времени)', "wasn't": 'не был (= was not)',
+    'would': 'бы; вспомогательный глагол'
+  },
   ex: [
     { type: 'gap', task: 'Впишите some, any или no.', items: [
       ["Yesterday there was ___ bread on the table, so I made sandwiches.", "some"], ["Were there ___ apples in the shop?", "any"],
-      ["I haven't got ___ money.", "any"], ["Do you want ___ coffee?", "some|any"],
+      ["I haven't got ___ stamps.", "any"], ["Do you want ___ coffee?", "some|any"],
       ["There were ___ chairs in the room, so we brought some from the kitchen.", "no"], ["Did you ask ___ questions in the lesson?", "any"],
       ["She bought ___ flowers for her mother.", "some"], ["I'm sorry, there was ___ milk in the shop.", "no"],
       ["Would you like ___ juice?", "some"], ["We didn't see ___ animals in the forest.", "any"],
@@ -142,13 +196,13 @@ ${N("Как и в теме 1.3, двух отрицаний сразу не бы
       ["Вчера я купил немного сыра.", "I bought some cheese yesterday.|Yesterday I bought some cheese."],
       ["У тебя есть вопросы?", "Have you got any questions?|Do you have any questions?"],
       ["Вчера у меня не было времени.", "I had no time yesterday.|I didn't have any time yesterday.|Yesterday I had no time.|Yesterday I didn't have any time."],
-      ["Хотите чаю?", "Do you want some tea?|Would you like some tea?|Do you want tea?|Would you like tea?|Would you like a cup of tea?|Do you want any tea?"],
-      ["Возьми любую книгу.", "Take any book.|Take any book you like.|Take any book you want."]
+      ["Хотите печенья?", "Would you like some biscuits?|Do you want some biscuits?|Would you like any biscuits?|Do you want any biscuits?"],
+      ["Приходи в любой день.", "Come any day.|Come on any day.|Come any day you like."],
     ]},
     { type: 'listen', at: 2, task: 'Прослушайте предложение и соберите его из слов.', items: [
       ["Do you want some milk in your coffee?", "Хочешь молока в кофе?"],
       ["There was no bread, but there were some biscuits in the cupboard.", "Хлеба не было, но в шкафу было печенье."],
-      ["Phone me at any time.", "Звони мне в любое время."]
+      ["Any colour is fine for me.", "Мне подойдет любой цвет."],
     ]}
   ]},
 
@@ -169,6 +223,27 @@ ${E([
 ])}
 <p>В таблице у слов с <i>any-</i> два перевода. В вопросе и отрицании они значат «кто-нибудь, что-нибудь, где-нибудь», а в утвердительном предложении — «кто угодно, что угодно, где угодно», так же как <i>any</i> значит «любой». Например, <i><b>Anybody</b> can do it</i> — это может сделать кто угодно (любой), а <i>You can sit <b>anywhere</b></i> — садитесь где хотите.</p>
 ${N("Хотя <i>everyone</i> значит «все», глагол после него стоит в единственном числе, как после «каждый». То же с <i>nobody</i> и другими такими словами: <i>Everyone <b>knows</b></i> — все знают, <i>Nobody <b>was</b> there</i> — никого не было.")}`,
+  /* перевод слов в упражнениях: по наведению или касанию (gloss.js); ключи — в нижнем регистре, как слово стоит в тексте */
+  gloss: {
+    'pen': 'ручка', 'teacher': 'учитель', "it's": 'это (= it is)', 'has': 'имеет; вспомогательный глагол', 'i': 'я', 'he': 'он',
+    'she': 'она', 'it': 'это; он, она (о предмете)', 'they': 'они', 'my': 'мой, моя, мое', 'is': 'есть, является (форма to be)',
+    'are': 'есть (форма to be)', 'go': 'идти, ехать', 'the': 'определенный артикль', 'in': 'в', 'a': 'неопределенный артикль',
+    'very': 'очень', 'today': 'сегодня', 'new': 'новый', 'this': 'этот, эта, это', 'kind': 'добрый', 'and': 'и', 'buy': 'купить',
+    'present': 'подарок', 'for': 'для; в течение', 'see': 'увидеть', 'to': 'в, на (куда); частица перед глаголом', 'there': 'в обороте there is / there are: есть, имеется',
+    'room': 'комната', 'class': 'класс', 'classroom': 'класс (комната)', 'your': 'твой, ваш', 'street': 'улица', 'our': 'наш',
+    'yesterday': 'вчера', "let's": 'давай(те)', 'summer': 'лето', 'tell': 'говорить, рассказывать', 'me': 'меня, мне',
+    'ski': 'катаются на лыжах', 'alps': 'Альпы', 'you': 'ты, вы', 'glasses': 'очки', 'hungry': 'голодный', 'last': 'прошлый',
+    'party': 'вечеринка', 'trip': 'поездка', 'when': 'когда', 'but': 'но', 'all': 'весь, все',
+    'did': 'вспомогательный глагол прошедшего времени', 'keys': 'ключи', 'way': 'путь, дорога', 'weekend': 'выходные', 'box': 'коробка',
+    "don't": 'не (= do not)', "i'm": 'я (= I am)', 'thirsty': 'хочется пить', 'left': 'ушел (от leave); оставшийся; левый',
+    'was': 'был (форма to be)', "haven't": 'не (= have not)', "didn't": 'не (= did not)', 'came': 'пришел (от come)',
+    'found': 'нашел (от find)', 'so': 'поэтому; так', 'going to': 'собираюсь', 'eaten': 'съел (3-я форма eat)', 'them': 'их, им',
+    'about': 'о; около', 'answer': 'ответ; ответить', 'ask': 'спросить, попросить', 'cafés': 'кафе (мн. ч.)', 'closed': 'закрыт',
+    'difficult': 'трудный', 'drink': 'пить', 'empty': 'пустой', 'everybody': 'все', 'everything': 'все', 'fine': 'хорошо, в порядке',
+    "i've": 'я (= I have)', 'know': 'знать', 'knows': 'знает', 'liked': 'нравился', 'looked': 'выглядел; посмотрел',
+    'looking': 'смотрит; ищет', 'lost': 'потерял; потерянный', 'perfect': 'идеальный', 'question': 'вопрос', 'said': 'сказал (от say)',
+    'say': 'сказать', 'silence': 'тишина', 'taken': 'взят (3-я форма take)', 'warm': 'теплый'
+  },
   ex: [
     { type: 'gap', task: 'Впишите somebody, anybody, nobody, everybody, something, anything, nothing, everything, somewhere, anywhere, nowhere или everywhere.', items: [
       ["There was ___ in the box: a present for me!", "something"], ["Was there ___ in the classroom when you came?", "anybody|anyone"],
@@ -188,13 +263,13 @@ ${N("Хотя <i>everyone</i> значит «все», глагол после �
       ["Кто-то звонит в дверь.", "Somebody is ringing the doorbell.|Someone is ringing the doorbell.|Somebody is ringing at the door.|Someone is ringing at the door."],
       ["Я ничего не купил.", "I didn't buy anything.|I bought nothing.|I haven't bought anything."],
       ["Все уже слышали об этом.", "Everybody has already heard about it.|Everyone has already heard about it.|Everybody has heard about it.|Everyone has heard about it.|Everybody has already heard about this.|Everyone has already heard about this.|Everybody has already heard of it.|Everyone has already heard of it."],
-      ["Дома кто-нибудь есть?", "Is there anybody at home?|Is anybody at home?|Is anyone at home?|Is there anyone at home?|Is anybody home?|Is anyone home?"],
-      ["Я нигде не вижу ключей.", "I don't see my keys anywhere.|I don't see the keys anywhere.|I can't see my keys anywhere.|I can't see the keys anywhere."]
+      ["В саду кто-нибудь есть?", "Is there anybody in the garden?|Is anybody in the garden?|Is there anyone in the garden?|Is anyone in the garden?"],
+      ["Я не хочу никуда идти.", "I don't want to go anywhere."],
     ]},
     { type: 'listen', at: 2, task: 'Прослушайте предложение и соберите его из слов.', items: [
       ["Somebody left a message, but nobody knows who.", "Кто-то оставил сообщение, но никто не знает кто."],
       ["There was nothing interesting on TV last night.", "Вчера вечером по телевизору не было ничего интересного."],
-      ["I looked everywhere, but I didn't find my keys anywhere.", "Я искал везде, но нигде не нашел ключей."]
+      ["Everybody was at the party, but nobody danced.", "На вечеринке были все, но никто не танцевал."],
     ]}
   ]},
 
@@ -216,7 +291,7 @@ ${E([
   ["<b>Each of</b> them has a car. <b>All of</b> us agree.", "У каждого из них есть машина. Мы все согласны."]
 ])}
 <h3>Every и each: в чем разница</h3>
-<p>Оба слова переводятся как «каждый» и требуют существительного в единственном числе. Но <i>every</i> смотрит на группу целиком и близко по смыслу к «все»: <i>Every student has a book</i> — книги есть у всех. А <i>each</i> выделяет каждого по отдельности, одного за другим. Поэтому, когда предметов только два, годится только <i>each</i>: <i>in each hand</i> — в каждой руке, а <i>every hand</i> сказать нельзя.</p>
+<p>Оба слова переводятся как «каждый» и требуют существительного в единственном числе. Но <i>every</i> смотрит на группу целиком и близко по смыслу к «все»: <i>Every house in our street has a garden</i> — сады есть у всех домов нашей улицы. А <i>each</i> выделяет каждого по отдельности, одного за другим. Поэтому, когда предметов только два, годится только <i>each</i>: <i>in each hand</i> — в каждой руке, а <i>every hand</i> сказать нельзя.</p>
 <h3>All, all the и all day</h3>
 <p>Если <i>all</i> стоит прямо перед существительным, речь идет обо всех вообще: <i>All students like holidays</i> — все студенты (на свете) любят каникулы. Если же после <i>all</i> есть <i>the</i>, речь о конкретной группе или конкретной вещи: <i>all the money</i> — все те деньги, о которых идет речь, <i>all the students in our group</i> — все студенты нашей группы. Со словами времени <i>all</i> значит «весь, целый»: <i>all day</i> — весь день, <i>all night</i> — всю ночь, <i>all week</i> — всю неделю; артикль здесь обычно не ставят.</p>
 <h3>Either в отрицании</h3>
@@ -233,8 +308,38 @@ ${E([
   ["— I haven't seen this film. — <b>Neither have I</b>.", "— Я не видел этот фильм. — Я тоже."],
   ["— Tom won't come. — <b>Neither will</b> Ann.", "— Том не придет. — Анна тоже."]
 ])}
-<p>В разговоре вместо этих оборотов часто отвечают совсем коротко: <i>Me too</i> — я тоже — на утверждение и <i>Me neither</i> — я тоже нет — на отрицание. А вместо <i>neither</i> можно сказать <i>nor</i> с тем же порядком слов: <i>Nor do I</i>.</p>
+<p>В разговоре вместо этих оборотов часто отвечают совсем коротко: на утверждение — <i>Me too</i> (я тоже), на отрицание — <i>Me neither</i> (я тоже нет). А вместо <i>neither</i> можно сказать <i>nor</i> с тем же порядком слов: <i>Nor do I</i>.</p>
 ${N("После <i>neither of</i> глагол обычно стоит в единственном числе: <i>Neither of them <b>knows</b></i>, хотя в разговорной речи встречается и <i>Neither of them know</i>.")}`,
+  /* перевод слов в упражнениях: по наведению или касанию (gloss.js); ключи — в нижнем регистре, как слово стоит в тексте */
+  gloss: {
+    'brother': 'брат', 'sister': 'сестра', 'week': 'неделя', 'i have': 'у меня есть', 'has': 'имеет; вспомогательный глагол', 'i': 'я',
+    'he': 'он', 'she': 'она', 'it': 'это; он, она (о предмете)', 'we': 'мы', 'they': 'они', 'my': 'мой, моя, мое',
+    'is': 'есть, является (форма to be)', 'are': 'есть (форма to be)', 'have': 'иметь; вспомогательный глагол', 'the': 'определенный артикль',
+    'at': 'в (о времени); у, на (о месте)', 'in': 'в', 'a': 'неопределенный артикль', 'today': 'сегодня', 'new': 'новый',
+    'plays': 'играет', 'this': 'этот, эта, это', 'moscow': 'Москва', 'on': 'на; в (о днях)', 'monday': 'понедельник', 'day': 'день',
+    'of': 'предлог родительного падежа', 'live': 'жить', 'who': 'кто', 'and': 'и', 'two': 'два', 'child': 'ребенок', 'year': 'год',
+    'buy': 'купить', 'present': 'подарок', 'for': 'для; в течение', 'her': 'ее, ей', 'to': 'в, на (куда); частица перед глаголом',
+    'there': 'там, туда; в обороте there is / there are: есть, имеется', 'room': 'комната', 'class': 'класс', 'shops': 'магазины', 'street': 'улица', 'our': 'наш', 'yesterday': 'вчера',
+    "let's": 'давай(те)', 'school': 'школа', 'bed': 'кровать', 'cinema': 'кино', 'summer': 'лето', 'now': 'сейчас',
+    'tonight': 'сегодня вечером', 'homework': 'домашнее задание', 'come': 'приходить', 'meet': 'встретимся', 'parents': 'родители',
+    'like': 'нравиться, любить', 'books': 'книги', 'last week': 'на прошлой неделе', 'again': 'снова', 'hungry': 'голодный',
+    'last': 'прошлый', 'late': 'поздно', 'married': 'женат, замужем', 'paris': 'Париж', 'party': 'вечеринка', 'tomorrow': 'завтра',
+    'trip': 'поездка', 'were': 'были (форма to be)', 'when': 'когда', 'years': 'годы, лет', 'car': 'машина', 'english': 'английский',
+    'jazz': 'джаз', 'meat': 'мясо', 'sisters': 'сестры', 'his': 'его', 'together': 'вместе', "don't": 'не (= do not)',
+    'forget': 'забывать', "i'm": 'я (= I am)', 'understand': 'понимать', 'be': 'быть', 'bought': 'купил (от buy)', 'or': 'или',
+    'children': 'дети', 'working': 'работает (от work)', 'four': 'четыре', 'husband': 'муж', 'was': 'был (форма to be)',
+    'went': 'пошел, поехал (от go)', 'ever': 'когда-либо', 'finished': 'закончил (от finish)', "haven't": 'не (= have not)',
+    'read': 'читать; прочитал', 'worked': 'работал (от work)', 'been': 'был (3-я форма be)', "didn't": 'не (= did not)', 'early': 'рано',
+    'last year': 'в прошлом году', 'got married': 'вышли замуж, поженились', 'got': 'получил (от get)', 'so': 'поэтому; так', 'going': 'идет (от go)', 'sea': 'море',
+    'will': 'вспомогательный глагол будущего времени', 'neighbours': 'соседи', 'them': 'их, им', 'answers': 'ответы',
+    'anything': 'что-нибудь; ничего (в отрицании)', 'both': 'оба', 'brothers': 'братья', 'cigarettes': 'сигареты', 'closed': 'закрыт',
+    'correct': 'правильный', 'desk': 'письменный стол', "doesn't": 'не (= does not)', 'eat': 'есть (принимать пищу)', 'films': 'фильмы',
+    'fine': 'хорошо, в порядке', 'gone': 'ушел, уехал (3-я форма go)', 'guitar': 'гитара', 'hate': 'ненавидеть',
+    'horror': 'ужасы (о фильме)', "i've": 'я (= I have)', 'money': 'деньги', 'moved': 'переехал', 'neither': 'ни один; тоже не',
+    'own': 'собственный', 'question': 'вопрос', 'side': 'сторона', 'smoked': 'курил', 'spent': 'потратил; провел',
+    'taken': 'взят (3-я форма take)', 'trees': 'деревья', 'tried': 'пытался; попробовал', 'tuesday': 'вторник', 'twin': 'близнец',
+    "wasn't": 'не был (= was not)', "won't": 'не (= will not)'
+  },
   ex: [
     { type: 'choice', task: 'Выберите правильный вариант.', items: [
       ["___ twin has his own room.", ["Each", "Every", "All"]], ["I've read ___ his books.", ["all", "every", "every of"]],
@@ -250,8 +355,8 @@ ${N("После <i>neither of</i> глагол обычно стоит в еди
       ["He spent ___ his money on books.", "all"], ["Let's meet ___ today or tomorrow.", "either"]
     ]},
     { type: 'translate', task: 'Переведите на английский.', items: [
-      ["Оба моих брата стали врачами.", "Both my brothers became doctors.|Both of my brothers became doctors.|My brothers both became doctors."],
-      ["Каждый ученик получил книгу.", "Every student got a book.|Each student got a book.|Every pupil got a book.|Each pupil got a book.|Every student received a book.|Each student received a book."],
+      ["Обе мои сестры живут в Казани.", "Both my sisters live in Kazan.|Both of my sisters live in Kazan.|My sisters both live in Kazan."],
+      ["Каждый гость принес подарок.", "Every guest brought a present.|Each guest brought a present.|Every guest brought a gift.|Each guest brought a gift."],
       ["Ни один из двух моих друзей не пришел.", "Neither of my two friends came.|Neither of my friends came."],
       ["Садись на любой из двух автобусов.", "Take either bus.|Take either of the buses.|Take either of the two buses.|You can take either bus.|You can take either of the buses.|You can take either of the two buses."],
       ["Он работал весь день.", "He worked all day.|He worked all day long.|He was working all day.|He worked the whole day."]
@@ -259,7 +364,7 @@ ${N("После <i>neither of</i> глагол обычно стоит в еди
     { type: 'listen', at: 2, task: 'Прослушайте предложение и соберите его из слов.', items: [
       ["Both of my brothers live in London.", "Оба моих брата живут в Лондоне."],
       ["Each student got a book, and all of them were happy.", "Каждый ученик получил книгу, и все они были довольны."],
-      ["Neither of the answers was correct.", "Ни один из ответов не был верным."]
+      ["Neither of the shops was open.", "Ни один из магазинов не был открыт."],
     ]},
     { type: 'gap', task: 'Ответьте «я тоже»: впишите so или neither, вспомогательный глагол и I.', items: [
       ["— I like jazz. — ___.", "So do I"], ["— I don't eat meat. — ___.", "Neither do I|Nor do I"],

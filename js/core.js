@@ -10,12 +10,37 @@ const chapById = Object.fromEntries(CHAPTERS.map(c => ['ch-' + c.id, c]));
 
 const $ = (s, r = document) => r.querySelector(s);
 const el = (tag, cls, text) => { const e = document.createElement(tag); if (cls) e.className = cls; if (text != null) e.textContent = text; return e; };
+/* кнопка type="button": так ни одна кнопка не отправит форму, где бы ее ни вставили */
+const button = (cls, text) => { const b = el('button', cls, text); b.type = 'button'; return b; };
+/* отметка текущей страницы; пустое aria-current="" по ARIA значит false, поэтому всегда со значением */
+const setCurrent = (node, on, value = 'page') => on ? node.setAttribute('aria-current', value) : node.removeAttribute('aria-current');
 const store = {
   get(k, d) { try { const v = localStorage.getItem(k); return v ? JSON.parse(v) : d; } catch (e) { return d; } },
   set(k, v) { try { localStorage.setItem(k, JSON.stringify(v)); } catch (e) {} }
 };
 const esc = s => String(s).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
-const fmt = s => { const sp = el('span'); sp.innerHTML = esc(s).replace(/\(([^)]+)\)/g, '<span class="ex__hint">($1)</span>'); return sp; };
+/* слова из словаря темы (t.gloss: слово или фраза → перевод) становятся .gloss — по наведению или касанию всплывает перевод (gloss.js).
+   Длинные фразы ищутся раньше коротких, поэтому «go swimming» не разбивается на два слова. Регулярное выражение строится
+   один раз на словарь (ключ WeakMap — сам объект t.gloss): fmt вызывается для каждого куска каждого пункта */
+const glossRes = new WeakMap();
+function glossRe(gloss) {
+  if (!glossRes.has(gloss)) {
+    const keys = Object.keys(gloss).sort((a, b) => b.length - a.length);
+    /* границы слова через \p{L}: обычный \b не видит буквы вроде é, и «café» не находилось */
+    glossRes.set(gloss, keys.length ? new RegExp(`(?<![\\p{L}\\p{N}_])(${keys.map(k => k.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')).join('|')})(?![\\p{L}\\p{N}_])`, 'giu') : null);
+  }
+  return glossRes.get(gloss);
+}
+const glossHtml = (html, gloss) => {
+  const re = gloss && glossRe(gloss);
+  return re ? html.replace(re, m => `<span class="gloss" data-tr="${esc(gloss[m.toLowerCase()])}">${m}</span>`) : html;
+};
+/* текст пункта: подсказки в скобках выделяются, остальное — с переводом слов, если у темы есть словарь */
+const fmt = (s, gloss) => {
+  const sp = el('span');
+  sp.innerHTML = esc(s).split(/(\([^)]+\))/).map((p, i) => i % 2 ? `<span class="ex__hint">${p}</span>` : glossHtml(p, gloss)).join('');
+  return sp;
+};
 
 function hash(s) { let h = 2166136261; for (let i = 0; i < s.length; i++) { h ^= s.charCodeAt(i); h = Math.imul(h, 16777619); } return h >>> 0; }
 function shuffled(arr, seed) { return arr.map((v, i) => ({ v, k: hash(seed + '|' + i + '|' + v) })).sort((a, b) => a.k - b.k).map(o => o.v); }
@@ -73,6 +98,10 @@ let bookmarks = store.get('gk2-bookmarks', {}); /* id темы → время д
 let notes = store.get('gk2-notes', []); /* «Мои заметки», см. renderNotesPage */
 if (!Array.isArray(notes)) notes = [];
 let answers = store.get('gk2-answers', {});
+/* последняя проверка упражнения: [верно, всего] или undefined */
+const resultOf = (t, i) => progress[t.id] && progress[t.id][i];
+/* убрать запись упражнения; опустевшую тему убрать целиком, чтобы в хранилище не копились пустые {} */
+function dropEntry(obj, id, i) { if (!obj[id]) return; delete obj[id][i]; if (!Object.keys(obj[id]).length) delete obj[id]; }
 let levelFilter = store.get('gk2-level', '');
 let route = null;
 let viaBookmarks = false; /* открытая тема пришла из списка «Избранное» */
@@ -88,11 +117,13 @@ function topicStats(t) {
   t.ex.forEach((ex, i) => { tot += units(ex); if (p[i]) { s += Math.min(p[i][0], units(ex)); tried = true; } });
   return { s, tot, tried, pct: pctOf(s, tot) };
 }
-function chapterStats(ch, level) {
+/* баллы списка тем: сумма topicStats */
+function sumStats(topics) {
   let s = 0, tot = 0, tried = false;
-  ch.topics.filter(t => !level || t.level === level).forEach(t => { const r = topicStats(t); s += r.s; tot += r.tot; tried = tried || r.tried; });
+  topics.forEach(t => { const r = topicStats(t); s += r.s; tot += r.tot; tried = tried || r.tried; });
   return { s, tot, tried, pct: pctOf(s, tot) };
 }
+function chapterStats(ch, level) { return sumStats(ch.topics.filter(t => !level || t.level === level)); }
 
 /* Прогресс книги: каждое правило — один балл (если отмечено изученным), каждое упражнение — до одного балла по доле верных ответов
    в последней проверке. 100% только когда все правила изучены и все упражнения решены без ошибок. */
@@ -100,10 +131,10 @@ function bookProgress() {
   let got = 0, rules = 0, exs = 0;
   TOPICS.forEach(t => {
     if (!t.noStudy) { rules++; if (studied[t.id]) got++; }
-    t.ex.forEach((ex, i) => { exs++; const r = progress[t.id] && progress[t.id][i]; if (r) got += r[0] / r[1]; });
+    t.ex.forEach((ex, i) => { exs++; const r = resultOf(t, i); if (r) got += r[0] / r[1]; });
   });
   const total = rules + exs;
-  return { share: 100 * got / total, pct: Math.floor(100 * got / total), full: got === total, rules, exs, total };
+  return { share: 100 * got / total, pct: Math.floor(100 * got / total), full: got === total };
 }
 
 /* блок прогресса, показываемый в раскрывающемся «Прогрессе» */
@@ -111,7 +142,7 @@ function overallBox() {
   let total = 0, perfect = 0;
   TOPICS.forEach(t => t.ex.forEach((ex, i) => {
     total++;
-    const r = progress[t.id] && progress[t.id][i];
+    const r = resultOf(t, i);
     if (r && r[0] === r[1]) perfect++;
   }));
   /* «Выполнено» = «Без ошибок» + «С ошибками»: каждое проверенное упражнение — одно или другое */
@@ -125,7 +156,7 @@ function overallBox() {
       <span>С ошибками</span><span class="overall__mistakes-end"><b class="overall__value">${wrong}</b>${arrowHtml('next')}</span></button>
     <div class="overall__book">
       <div class="overall__row"><span>Прохождение тренажера</span></div>
-      <div class="bar bar--labeled" style="--p:${book.share}%"><i class="bar__fill${book.full ? ' bar__fill--full' : ''}" style="width:${book.share}%"></i><span class="bar__label">${book.pct}%</span><span class="bar__label bar__label--on-fill" aria-hidden="true">${book.pct}%</span></div>
+      <div class="bar bar--labeled" style="--p:${book.share}%">${barFill(book.share)}<span class="bar__label">${book.pct}%</span><span class="bar__label bar__label--on-fill" aria-hidden="true">${book.pct}%</span></div>
       <p class="overall__note">${foldNote('book')}</p>
     </div>
     <div class="overall__file">
@@ -181,12 +212,14 @@ const mistakeOrder = (t, i) => Object.keys(LEVELS).indexOf(t.level) * 1e6 + TOPI
 function mistakes() {
   const out = [];
   TOPICS.forEach(t => {
-    const exs = exOrder(t).map(i => [i, progress[t.id] && progress[t.id][i]]).filter(([, r]) => r && r[0] < r[1]);
+    const exs = exOrder(t).map(i => [i, resultOf(t, i)]).filter(([, r]) => r && r[0] < r[1]);
     if (exs.length) out.push({ t, exs });
   });
   return out.sort((a, b) => mistakeOrder(a.t) - mistakeOrder(b.t));
 }
-const mistakeCount = () => mistakes().reduce((n, m) => n + m.exs.length, 0);
+/* число упражнений в списке mistakes() (или его части) */
+const exCount = ms => ms.reduce((n, m) => n + m.exs.length, 0);
+const mistakeCount = () => exCount(mistakes());
 
 /* фильтр уровня «Работы над ошибками»: свой, не тот, что в меню (тот следует за каждой открытой темой);
    сохраненный уровень, в котором ошибок не осталось, сменяется на «Все» */

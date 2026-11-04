@@ -4,10 +4,10 @@ topics: [
 
 { id: 'art-a-an', level: 'A1', title: 'Неопределенный артикль a / an', sub: 'a book, an apple',
   rule: `
-<p>Неопределенный артикль <i>a / an</i> произошел от числительного <i>one</i> («один»), и это значение у него сохранилось: он указывает на «один, какой-то, любой» предмет. Поэтому он ставится только перед <b>исчисляемым существительным в единственном числе</b>: <i>a book</i>, <i>an apple</i>. Перед словами во множественном числе и неисчисляемыми его обычно не ставят (единственное исключение разобрано в теме 1.6).</p>
+<p>Неопределенный артикль <i>a / an</i> произошел от числительного <i>one</i> («один»), и это значение у него сохранилось: он указывает на «один, какой-то, любой» предмет. Поэтому он ставится только перед <b>исчисляемым существительным в единственном числе</b>: <i>a book</i>, <i>an apple</i>. Перед словами во множественном числе и неисчисляемыми его обычно не ставят (одно из исключений разобрано в теме 1.6).</p>
 ${T(["Когда", "Пример"], [
   ["предмет упоминается впервые", "<i>I have <b>a</b> dog.</i> — У меня есть собака."],
-  ["один из многих, любой", "<i>Give me <b>a</b> pen, please.</i> — Дай мне ручку, пожалуйста (какую-нибудь)."],
+  ["один из многих, любой", "<i>Give me <b>a</b> pen, please.</i> — Дай мне ручку, пожалуйста. (какую-нибудь)"],
   ["профессия, характеристика (кто это? что это?)", "<i>She is <b>a</b> doctor. It is <b>a</b> cat.</i> — Она врач. Это кошка."],
   ["после <i>what</i> в восклицании", "<i>What <b>a</b> nice day!</i> — Какой хороший день!"],
   ["в выражениях «раз в неделю», «час в день» (a = «один»)", "<i>twice <b>a</b> week, <b>an</b> hour <b>a</b> day</i> — дважды в неделю, час в день"]
@@ -16,13 +16,27 @@ ${T(["Когда", "Пример"], [
 <p>Восклицание «Какой…!» по-английски начинается со слова <i>what</i>. Если за ним идет исчисляемое существительное в единственном числе, артикль <i>a / an</i> обязателен, даже если перед существительным стоит прилагательное: <i>What <b>a</b> big house!</i> — какой большой дом! А вот перед множественным числом и неисчисляемыми словами артикля нет, как и везде: <i>What nice flowers!</i> — какие красивые цветы!, <i>What nice weather!</i> — какая хорошая погода!</p>
 <p>В выражениях вроде <i>twice a week</i> артикль сохраняет старое значение «один»: «дважды за одну неделю». По-русски здесь говорят «в» или «за»: <i>three times <b>a</b> day</i> — три раза в день, <i>100 km <b>an</b> hour</i> — 100 км в час.</p>
 <h3>a или an</h3>
-<p>Какую форму выбрать — <i>a</i> или <i>an</i> — зависит от того, с какого <b>звука</b> начинается следующее слово, а не от того, какая там буква. Перед согласным звуком пишут <i>a</i>, перед гласным — <i>an</i>. Поэтому <i>a university</i> (слово начинается со звука [ju]), но <i>an hour</i> (буква <i>h</i> не читается).</p>
+<p>Какую форму выбрать — <i>a</i> или <i>an</i> — зависит от того, с какого <b>звука</b> начинается следующее слово, а не от того, какая там буква. Перед согласным звуком пишут <i>a</i>, перед гласным — <i>an</i>. Поэтому пишут <i>a university</i> (слово начинается со звука [ju]) и <i>an hour</i> (буква <i>h</i> не читается).</p>
 ${E([
   ["<b>a</b> book, <b>a</b> university [ju:], <b>a</b> European", "книга, университет, европеец (перед согласным звуком)"],
   ["<b>an</b> apple, <b>an</b> egg, <b>an</b> hour [aʊə], <b>an</b> honest man", "яблоко, яйцо, час, честный человек (перед гласным звуком)"],
   ["<b>a</b> big apple, <b>an</b> old house", "большое яблоко, старый дом (важен звук слова, которое идет сразу за артиклем)"]
 ])}
 ${N("Если перед существительным уже есть слово, которое показывает, чей это предмет или какой именно (<i>my, his, this, that</i> или <i>'s</i>), артикль не нужен — его место занято: <i>my book</i>, <i>this cat</i>, <i>Tom's car</i>.")}`,
+  /* перевод слов в упражнениях: по наведению или касанию (gloss.js); ключи — в нижнем регистре, как слово стоит в тексте */
+  gloss: {
+    'apple': 'яблоко', 'brother': 'брат', 'old': 'старый', 'house': 'дом', 'engineer': 'инженер', 'good': 'хороший',
+    'pupil': 'ученик', 'lesson': 'урок', 'lasts': 'длится', 'hour': 'час', 'sister': 'сестра', 'studies': 'учится',
+    'university': 'университет', 'interesting': 'интересный', 'film': 'фильм', 'go swimming': 'ходить плавать',
+    'twice': 'дважды', 'week': 'неделя', 'honest': 'честный', 'man': 'мужчина, человек', 'umbrella': 'зонт', 'bag': 'сумка',
+    'useful': 'полезный', 'book': 'книга', 'pen': 'ручка', 'teacher': 'учитель', 'blue': 'голубой, синий', 'eyes': 'глаза',
+    'students': 'студенты', 'orange': 'апельсин', 'uncle': 'дядя', 'beautiful': 'красивый', 'dress': 'платье',
+    'this is': 'это', 'is that': 'это (вон то)?', 'it is': 'это', "it's": 'это (= it is)', 'i have': 'у меня есть', 'has': 'у него (у нее) есть',
+    'i': 'я', 'he': 'он', 'she': 'она', 'it': 'это; он, она (о предмете)', 'we': 'мы', 'they': 'они', 'my': 'мой, моя, мое',
+    'is': 'есть, является (форма to be)', 'are': 'есть, являются (форма to be)', 'have': 'иметь', 'go': 'ходить, ездить',
+    'the': 'определенный артикль', 'at': 'в (о месте)', 'in': 'в', 'what': 'какой (в восклицании)', 'that': 'тот, та, то',
+    'london': 'Лондон'
+  },
   ex: [
     { type: 'gap', task: 'Впишите a или an.', items: [
       ["This is ___ apple.", "an"], ["I have ___ brother.", "a"], ["It is ___ old house.", "an"],
@@ -38,10 +52,10 @@ ${N("Если перед существительным уже есть слов
       ["Tom has ___ uncle in London.", ["an", "a", "—"]], ["What ___ beautiful dress!", ["a", "an", "—"]]
     ]},
     { type: 'translate', task: 'Переведите на английский.', items: [
-      ["Это яблоко.", "This is an apple.|It is an apple.|It's an apple."],
+      ["Это яйцо.", "This is an egg.|It is an egg.|It's an egg."],
       ["Мой папа — инженер.", "My father is an engineer.|My dad is an engineer."],
       ["У меня есть кошка.", "I have a cat.|I have got a cat."],
-      ["Какой интересный фильм!", "What an interesting film!|What an interesting movie!"],
+      ["Какой интересный город!", "What an interesting city!|What an interesting town!"],
       ["Она студентка.", "She is a student."],
       ["Я пью кофе три раза в день.", "I drink coffee three times a day.|I drink coffee 3 times a day."]
     ]},
@@ -78,6 +92,24 @@ ${E([
   ["It's <b>the</b> best day of my life.", "Это лучший день в моей жизни."]
 ])}
 ${N("Сравните два предложения: <i>I want <b>an</b> apple</i> — хочу какое-нибудь яблоко, любое; <i>I want <b>the</b> apple</i> — хочу вот это яблоко, о котором мы говорим. По-русски оба звучат одинаково — «Я хочу яблоко», и разницу подсказывает только контекст; в английском ее показывает артикль.")}`,
+  /* перевод слов в упражнениях: по наведению или касанию (gloss.js); ключи — в нижнем регистре, как слово стоит в тексте */
+  gloss: {
+    'i have': 'у меня есть', 'we have': 'у нас есть', 'they have': 'у них есть', 'she has': 'у нее есть', 'has': 'у него (у нее) есть',
+    "it's hot": 'жарко', 'look at': 'посмотри на', 'pass me': 'передай мне', 'shop assistant': 'продавец', 'go to': 'ходить в, идти в',
+    'a': 'неопределенный артикль', 'the': 'определенный артикль', 'dog': 'собака', 'very': 'очень', 'clever': 'умный', 'sun': 'солнце',
+    'bright': 'яркий', 'today': 'сегодня', 'new': 'новый', 'dress': 'платье', 'red': 'красный', 'open': 'открой', 'window': 'окно',
+    'please': 'пожалуйста', 'my': 'мой, моя, мое', 'brother': 'брат', 'plays': 'играет', 'violin': 'скрипка', 'cakes': 'пирожные',
+    'in': 'в', 'this': 'этот, эта, это', 'shop': 'магазин', 'are': 'есть, являются (форма to be)', 'is': 'есть, является (форма to be)',
+    'good': 'хороший', 'aunt': 'тетя', 'small': 'маленький', 'flat': 'квартира', 'moscow': 'Москва', 'book': 'книга', 'on': 'на',
+    'shelf': 'полка', "father's": 'папин, отца', 'monday': 'понедельник', 'first': 'первый', 'day': 'день', 'of': 'предлог родительного падежа',
+    'week': 'неделя', 'teacher': 'учитель', 'kind': 'добрый', 'moon': 'луна', 'sugar': 'сахар', 'cousin': 'двоюродный брат (сестра)',
+    'girl': 'девочка, девушка', 'at': 'у, возле', 'door': 'дверь', 'we': 'мы', 'live': 'живем, живут', 'third': 'третий', 'floor': 'этаж',
+    'who': 'кто', 'boy': 'мальчик', 'son': 'сын', 'and': 'и', 'two': 'два, две', 'daughters': 'дочери', 'petrovs': 'Петровы',
+    'house': 'дом', 'he': 'он', 'only': 'единственный', 'child': 'ребенок', 'family': 'семья', 'every': 'каждый', 'year': 'год',
+    "mother's": 'мамин, матери', 'birthday': 'день рождения', 'i': 'я', 'buy': 'покупать', 'present': 'подарок', 'for': 'для',
+    'her': 'ее, ей', 'big': 'большой', 'see': 'вижу', 'beautiful': 'красивый', 'scarf': 'шарф', 'umbrella': 'зонт', 'blue': 'синий, голубой',
+    'yellow': 'желтый', 'mother': 'мама', 'loves': 'любит', 'to': 'чтобы (перед глаголом)', 'they': 'они', 'she': 'она', 'it': 'это'
+  },
   ex: [
     { type: 'gap', task: 'Впишите a, an или the.', items: [
       ["I have a dog. ___ dog is very clever.", "the"], ["___ sun is very bright today.", "the"],
@@ -97,7 +129,7 @@ ${N("Сравните два предложения: <i>I want <b>an</b> apple</
       answers: ["a|the", "a", "the", "a", "an", "the", "the", "the", "the"] },
     { type: 'translate', task: 'Переведите на английский.', items: [
       ["Земля круглая.", "The Earth is round."],
-      ["Закрой дверь, пожалуйста.", "Close the door, please.|Please close the door.|Shut the door, please."],
+      ["Выключи свет, пожалуйста.", "Turn off the light, please.|Please turn off the light.|Switch off the light, please.|Please switch off the light.|Turn the light off, please.|Switch the light off, please."],
       ["Моя сестра играет на пианино.", "My sister plays the piano."],
       ["Луна сегодня очень яркая.", "The moon is very bright today.|The moon is very bright tonight.|Today the moon is very bright."],
       ["У меня есть книга. Книга интересная.", "I have a book. The book is interesting.|I have got a book. The book is interesting."]
@@ -120,7 +152,7 @@ ${T(["", "Единственное / неисчисляемое", "Множес�
 ])}
 <h3>Как строятся отрицание, вопрос и прошедшее время</h3>
 <p>В обороте <i>there is</i> работает глагол <i>to be</i>, поэтому все формы строятся так же, как у него (подробно — в разделе 2, тема «Глагол to be»). В отрицании к глаголу добавляется <i>not</i>: <i>is not</i> → <i>isn't</i>, <i>are not</i> → <i>aren't</i>. В вопросе глагол встает перед словом <i>there</i>: <i><b>Is</b> there…?</i>, <i><b>Are</b> there…?</i>. В прошедшем времени <i>is</i> меняется на <i>was</i>, а <i>are</i> — на <i>were</i>.</p>
-<p>Отрицание можно построить двумя способами. Первый — с <i>not</i>: <i>There isn't a cat</i>. Второй — со словом <i>no</i> («никакой, ни одного») перед существительным, тогда глагол остается без <i>not</i>: <i>There is <b>no</b> milk</i> — молока нет совсем. Смысл одинаковый, но вариант с <i>no</i> звучит чуть категоричнее. Два отрицания сразу ставить нельзя: <i>There isn't no milk</i> — ошибка.</p>
+<p>Отрицание можно построить двумя способами. Первый — с <i>not</i>: <i>There isn't a cat</i>. Второй — со словом <i>no</i> («никакой, ни одного») перед существительным, тогда глагол остается без <i>not</i>: <i>There is <b>no</b> bread</i> — хлеба нет совсем. Смысл одинаковый, но вариант с <i>no</i> звучит чуть категоричнее. Два отрицания сразу ставить нельзя: <i>There isn't no milk</i> — ошибка.</p>
 <p>Слово <i>any</i> («сколько-нибудь, какие-нибудь») ставят в вопросах и отрицаниях перед существительным во множественном числе или неисчисляемым, когда количество неважно: <i>Are there <b>any</b> eggs?</i> — есть (хоть какие-нибудь) яйца? В утверждении вместо него обычно стоит <i>some</i>: <i>There are <b>some</b> eggs</i> — есть несколько яиц. Подробно <i>some</i>, <i>any</i> и <i>no</i> разобраны в разделе 5 «Местоимения».</p>
 <h3>there is или it is, where is</h3>
 <p>Оборот <i>there is</i> вводит в разговор что-то новое: сообщает, что предмет где-то есть. Если же предмет уже известен и нужно сказать, где он находится, оборот не нужен — предложение начинается с самого предмета или со слова <i>it</i>.</p>
@@ -130,11 +162,26 @@ ${E([
   ["<b>Where is</b> the book? — <b>It is</b> on the table.", "Где книга? — Она на столе. (вопрос о месте известного предмета)"]
 ])}
 ${N("Если вы перечисляете несколько предметов, форма глагола зависит от <b>первого</b> из них: <i>There <b>is</b> a sofa and two armchairs</i> (первым идет один диван); <i>There <b>are</b> two armchairs and a sofa</i> (первыми идут два кресла).")}`,
+  /* перевод слов в упражнениях: по наведению или касанию (gloss.js); ключи — в нижнем регистре, как слово стоит в тексте */
+  gloss: {
+    'apples': 'яблоки', 'office': 'офис', 'post': 'почта; отправить',
+    'there': 'в обороте there is / there are: есть, имеется', 'living room': 'гостиная', 'near here': 'поблизости, рядом',
+    'a': 'неопределенный артикль', 'the': 'определенный артикль', 'is': 'есть, является (форма to be)', 'park': 'парк', 'near': 'рядом с, около',
+    'my': 'мой, моя, мое', 'house': 'дом', 'two': 'два, две', 'windows': 'окна', 'in': 'в', 'room': 'комната', 'some': 'немного, несколько',
+    'milk': 'молоко', 'fridge': 'холодильник', 'any': 'какие-нибудь', 'eggs': 'яйца', 'sofa': 'диван', 'and': 'и', 'armchairs': 'кресла',
+    'bank': 'банк', 'twenty': 'двадцать', 'students': 'студенты', 'class': 'класс', 'no': 'нет, никакой', 'bread': 'хлеб',
+    'kitchen': 'кухня', 'chairs': 'стулья', 'table': 'стол', 'why': 'почему', 'classroom': 'класс (комната)', 'very': 'очень',
+    'cold': 'холодный; холодно', 'today': 'сегодня', 'shops': 'магазины', 'your': 'твой, ваш', 'street': 'улица', 'where': 'где',
+    'bag': 'сумка', 'under': 'под', 'famous': 'знаменитый', 'museum': 'музей', 'our': 'наш', 'town': 'город', 'ten': 'десять',
+    'people': 'люди, человек', 'at': 'на (о событии)', 'meeting': 'собрание, встреча', 'yesterday': 'вчера', 'lift': 'лифт',
+    'this': 'этот, эта, это', 'building': 'здание', 'look': 'смотри', 'bird': 'птица', 'on': 'на', 'roof': 'крыша', 'book': 'книга',
+    'shelf': 'полка'
+  },
   ex: [
     { type: 'gap', task: 'Впишите is или are.', items: [
       ["There ___ a park near my house.", "is"], ["There ___ two windows in the room.", "are"],
-      ["There ___ some milk in the fridge.", "is"], ["___ there any eggs?", "are"],
-      ["There ___ a sofa and two armchairs in the living room.", "is"], ["___ there a bank near here?", "is"],
+      ["There ___ some milk in the fridge.", "is"], ["___ there any apples in the fridge?", "are"],
+      ["There ___ a sofa and two armchairs in the living room.", "is"], ["___ there a post office near here?", "is"],
       ["There ___ twenty students in the class.", "are"], ["There ___ no bread in the kitchen.", "is"],
       ["There ___ two chairs and a table in the kitchen.", "are"], ["Why ___ there no chairs in the classroom?", "are"]
     ]},
@@ -145,7 +192,7 @@ ${N("Если вы перечисляете несколько предмето�
       ["Look! ___ a bird on the roof.", ["There is", "It is", "There are"]], ["The book? ___ on the shelf.", ["It is", "There is", "There are"]]
     ]},
     { type: 'translate', task: 'Переведите на английский.', items: [
-      ["На столе книга.", "There is a book on the table."],
+      ["На полке ваза.", "There is a vase on the shelf."],
       ["В нашем городе три парка.", "There are three parks in our town.|There are three parks in our city.|Our town has three parks.|Our city has three parks.|There are 3 parks in our town."],
       ["В холодильнике нет молока.", "There is no milk in the fridge.|There isn't any milk in the fridge."],
       ["Здесь есть банкомат?", "Is there a cash machine here?|Is there an ATM here?|Is there a cash machine near here?|Is there an ATM near here?|Is there a cashpoint here?|Is there a cashpoint near here?"],
@@ -175,6 +222,20 @@ ${E([
   ["She goes to <b>school</b> by <b>bus</b>.", "Она ездит в школу на автобусе."]
 ])}
 ${N("Со словами <i>school, hospital, church</i> артикль зависит от цели. Если человек идет туда по прямому назначению — учиться, лечиться, молиться, — артикля нет: <i>go to school</i>. Если же он просто приходит в здание, например навестить кого-то, нужен <i>the</i>: <i>go to the school to see the teacher</i>.")}`,
+  /* перевод слов в упражнениях: по наведению или касанию (gloss.js); ключи — в нижнем регистре, как слово стоит в тексте */
+  gloss: {
+    'by': 'на (о транспорте)', 'go': 'идти, ходить, ездить',
+    'get up': 'вставать', 'go to': 'ходить в, идти в',
+    'do my homework': 'делать уроки', "let's": 'давай(те)', "what's": 'что; какой (= what is)', 'excuse me': 'извините',
+    'a': 'неопределенный артикль', 'the': 'определенный артикль', 'i': 'я', 'at': 'в (о времени)', 'seven': 'семь', 'in': 'в',
+    'morning': 'утро', 'have': 'есть (о еде); иметь', 'breakfast': 'завтрак', 'and': 'и', 'school': 'школа', 'bus': 'автобус',
+    'after': 'после', 'home': 'дом; домой', 'foot': 'нога (ступня)', 'evening': 'вечер', 'ten': 'десять', 'bed': 'кровать',
+    'on': 'по (о днях недели)', 'saturdays': 'субботы', 'we': 'мы', 'often': 'часто', 'cinema': 'кино', 'summer': 'лето',
+    'country': 'деревня, загород; страна', 'my': 'мой', 'father': 'отец', 'is': 'есть, является (форма to be)', 'now': 'сейчас',
+    'usually': 'обычно', 'there': 'туда', 'bank': 'банк', 'he': 'он', 'with': 'с', 'broken': 'сломанный', 'leg': 'нога',
+    'tonight': 'сегодня вечером', 'owls': 'совы', 'sleep': 'спят', 'during': 'в течение', 'day': 'день', 'hunt': 'охотятся',
+    'always': 'всегда', 'tell': 'говорить, рассказывать', 'me': 'меня, мне', 'do': 'делать', 'homework': 'домашнее задание'
+  },
   ex: [
     { type: 'text', task: 'Впишите the или «-», если артикль не нужен.', text: "I get up at seven in ___ morning. I have ___ breakfast and go to ___ school by ___ bus. After school I go ___ home on ___ foot. In ___ evening I do my homework, and at ten I go to ___ bed. On Saturdays we often go to ___ cinema, and in summer we go to ___ country.",
       answers: ["the", "-|0", "-|0", "-|0", "-|0", "-|0", "the", "-|0", "the", "the"] },
@@ -187,9 +248,9 @@ ${N("Со словами <i>school, hospital, church</i> артикль зави
     { type: 'translate', task: 'Переведите на английский.', items: [
       ["Я хожу в школу пешком.", "I go to school on foot.|I walk to school."],
       ["Вечером мы ходим в кино.", "In the evening we go to the cinema.|We go to the cinema in the evening.|In the evening we go to the movies.|We go to the movies in the evening."],
-      ["Мой папа сейчас на работе.", "My father is at work now.|My dad is at work now."],
+      ["Моя мама сейчас дома.", "My mother is at home now.|My mum is at home now."],
       ["Я ложусь спать в одиннадцать.", "I go to bed at eleven.|I go to bed at 11.|I go to bed at eleven o'clock."],
-      ["Она ездит на работу на автобусе.", "She goes to work by bus.|She takes the bus to work.|She goes to work on the bus."]
+      ["Он ездит на работу на поезде.", "He goes to work by train.|He takes the train to work.|He goes to work on the train."],
     ]},
     { type: 'listen', at: 2, task: 'Прослушайте предложение и соберите его из слов.', items: [
       ["In the morning I go to work by bus.", "Утром я езжу на работу на автобусе."],
@@ -219,6 +280,23 @@ ${E([
   ["<b>the</b> Times, <b>the</b> BBC", "газета «Таймс», Би-би-си (газеты и многие организации — с the)"]
 ])}
 ${N("Если слова <i>lake</i> в названии озера нет, встречается и <i>the Baikal</i>, и просто <i>Baikal</i>; надежнее всего сказать <i>Lake Baikal</i>.")}`,
+  /* перевод слов в упражнениях: по наведению или касанию (gloss.js); ключи — в нижнем регистре, как слово стоит в тексте */
+  gloss: {
+    'from': 'из',
+    'atlantic ocean': 'Атлантический океан', 'lake baikal': 'озеро Байкал', 'st petersburg': 'Санкт-Петербург',
+    'oxford street': 'Оксфорд-стрит (улица в Лондоне)', 'all over the world': 'со всего мира', 'comes from': 'родом из',
+    'a': 'неопределенный артикль', 'the': 'определенный артикль', 'volga': 'Волга', 'is': 'есть, является (форма to be)',
+    'are': 'есть, являются (форма to be)', 'very': 'очень', 'long': 'длинный', 'river': 'река', 'she': 'она', 'lives': 'живет',
+    'live': 'жить', 'in': 'в', 'france': 'Франция', 'ships': 'корабли', 'cross': 'пересекают', 'every': 'каждый', 'day': 'день',
+    'elbrus': 'Эльбрус', 'high': 'высокий', 'mountain': 'гора', 'russia': 'Россия', 'they': 'они', 'ski': 'катаются на лыжах',
+    'alps': 'Альпы', 'winter': 'зима', 'my': 'мой', 'uncle': 'дядя', 'works': 'работает', 'usa': 'США', 'deep': 'глубокий',
+    'tourists': 'туристы', 'visit': 'посещают', 'hermitage': 'Эрмитаж', 'africa': 'Африка', 'huge': 'огромный', 'continent': 'континент',
+    'favourite': 'любимый', 'shop': 'магазин', 'sahara': 'Сахара', 'hot': 'жаркий', 'desert': 'пустыня', 'tulips': 'тюльпаны',
+    'popular': 'популярный', 'netherlands': 'Нидерланды', 'i': 'я', 'want': 'хочу', 'to': 'частица перед глаголом', 'see': 'увидеть',
+    'he': 'он', 'we': 'мы', 'swim': 'плаваем', 'summer': 'лето', 'climbers': 'альпинисты', 'come': 'приезжают',
+    'do': 'вспомогательный глагол вопроса', 'you': 'ты, вы', 'moscow': 'Москва', 'of': 'предлог родительного падежа', 'europe': 'Европа',
+    "let's": 'давай(те)', 'meet': 'встретимся', 'parents': 'родители', 'often': 'часто', 'go': 'ездят, ходят'
+  },
   ex: [
     { type: 'gap', task: 'Впишите the или «-».', items: [
       ["___ Volga is a very long river.", "the"], ["She lives in ___ France.", "-|0"],
@@ -236,7 +314,7 @@ ${N("Если слова <i>lake</i> в названии озера нет, вс
     ]},
     { type: 'translate', task: 'Переведите на английский.', items: [
       ["Волга впадает в Каспийское море.", "The Volga flows into the Caspian Sea."],
-      ["Байкал — очень глубокое озеро.", "Lake Baikal is a very deep lake.|Baikal is a very deep lake."],
+      ["Байкал — очень глубокое озеро.", "Lake Baikal is a very deep lake.|Baikal is a very deep lake.|The Baikal is a very deep lake."],
       ["Мой брат живет в США.", "My brother lives in the USA.|My brother lives in the US.|My brother lives in the United States."],
       ["Альпы — красивые горы.", "The Alps are beautiful mountains."],
       ["Эрмитаж находится в Санкт-Петербурге.", "The Hermitage is in St Petersburg.|The Hermitage is in Saint Petersburg.|The Hermitage is situated in St Petersburg.|The Hermitage is located in St Petersburg."]
@@ -267,6 +345,24 @@ ${E([
   ["<b>The dogs</b> next door bark all night.", "Соседские собаки лают всю ночь. (конкретные собаки соседей)"]
 ])}
 ${N("Перед неисчисляемым существительным <i>a / an</i> обычно не ставят, но есть исключение — разговорная просьба о порции напитка: <i>Can I have <b>a</b> coffee?</i> Здесь <i>a coffee</i> значит «одну чашку кофе».")}`,
+  /* перевод слов в упражнениях: по наведению или касанию (gloss.js); ключи — в нижнем регистре, как слово стоит в тексте */
+  gloss: {
+    'cake': 'торт', 'eggs': 'яйца', 'make': 'делать',
+    'page': 'страница',
+    "one o'clock": 'час (о времени)', 'years old': 'лет (о возрасте)', 'pass me': 'передай мне', 'give me': 'дай мне',
+    'good for': 'полезен для', 'a': 'неопределенный артикль', 'the': 'определенный артикль', 'i': 'я',
+    'like': 'люблю, нравится', 'tea': 'чай', 'with': 'с', 'lemon': 'лимон', 'in': 'в', 'this': 'этот, эта, это', 'cup': 'чашка',
+    'is': 'есть, является (форма to be)', 'are': 'есть, являются (форма to be)', 'cold': 'холодный', 'we': 'мы',
+    'have': 'есть (о еде); иметь', 'lunch': 'обед', 'at': 'в (о времени)', 'she': 'она', 'speaks': 'говорит', 'french': 'французский',
+    'very': 'очень', 'well': 'хорошо', 'elephants': 'слоны', 'big': 'большой', 'animals': 'животные', 'elephant': 'слон', 'cage': 'клетка',
+    'twenty': 'двадцать', 'do': 'вспомогательный глагол вопроса', 'you': 'ты, вы', 'football': 'футбол', 'my': 'мой', 'friend': 'друг',
+    'lives': 'живет', 'london': 'Лондон', 'he': 'он', 'drinks': 'пьет', 'milk': 'молоко', 'every': 'каждый', 'morning': 'утро',
+    'please': 'пожалуйста', 'test': 'контрольная', 'on': 'в (о днях недели); на', 'friday': 'пятница', 'open': 'откройте',
+    'your': 'твой, ваш', 'books': 'книги', 'health': 'здоровье', 'want': 'хочу', 'to': 'частица перед глаголом', 'draw': 'нарисовать',
+    'picture': 'картина, рисунок', 'need': 'нужен, нужна', 'and': 'и', 'pencil': 'карандаш', 'table': 'стол', 'yours': 'твой, ваш',
+    'favourite': 'любимый', 'flowers': 'цветы', 'study': 'изучаем', 'school': 'школа', 'has': 'ест (о еде); имеет',
+    'for': 'на (о еде); для', 'breakfast': 'завтрак', 'winter': 'зима', 'covers': 'покрывает', 'fields': 'поля', 'bread': 'хлеб'
+  },
   ex: [
     { type: 'gap', task: 'Впишите артикль a, an, the или «-», если он не нужен.', items: [
       ["I like ___ tea with lemon.", "-|0"], ["___ tea in this cup is cold.", "the"],
@@ -277,13 +373,13 @@ ${N("Перед неисчисляемым существительным <i>a /
       ["We have a test on ___ Friday.", "-|0"], ["Open your books at ___ page 25.", "-|0"]
     ]},
     { type: 'choice', task: 'Выберите правильный вариант.', items: [
-      ["___ is good for your health.", ["Sport", "A sport", "The sports"]], ["I want to draw a picture. I need ___ and a pencil.", ["some paper", "a paper", "the papers"]],
+      ["___ is good for your health.", ["Sport", "A sport", "The sports"]], ["I want to make a cake. I need ___ and eggs.", ["some flour", "a flour", "the flours"]],
       ["___ on the table is yours.", ["The money", "Money", "A money"]], ["___ are my favourite flowers.", ["Roses", "The rose", "A roses"]],
       ["We study ___ at school.", ["history", "the history", "a history"]], ["He has ___ for breakfast.", ["eggs and toast", "an eggs and toast", "the eggs and a toast"]],
       ["In winter ___ covers the fields.", ["snow", "a snow", "snows"]], ["Give me ___ bread, please.", ["some", "a", "an"]]
     ]},
     { type: 'translate', task: 'Переведите на английский.', items: [
-      ["Я люблю музыку.", "I love music.|I like music."],
+      ["Я люблю шоколад.", "I love chocolate.|I like chocolate."],
       ["Собаки — умные животные.", "Dogs are clever animals.|Dogs are smart animals.|Dogs are intelligent animals."],
       ["Мы завтракаем в восемь.", "We have breakfast at eight.|We have breakfast at 8.|We have breakfast at eight o'clock."],
       ["Он говорит по-английски.", "He speaks English."],

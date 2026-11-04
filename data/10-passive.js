@@ -35,6 +35,32 @@ ${E([
   ["The children <b>are</b> well <b>looked after</b>.", "За детьми хорошо присматривают."],
   ["This film <b>is</b> much <b>spoken about</b>.", "Об этом фильме много говорят."]
 ])}`,
+  /* перевод слов в упражнениях: по наведению или касанию (gloss.js); ключи — в нижнем регистре, как слово стоит в тексте */
+  gloss: {
+    'vase': 'ваза',
+    'cat': 'кошка', 'our': 'наш',
+    'plumber': 'сантехник',
+    'peace': 'мир, покой', 'war': 'война',
+    'war and peace': '«Война и мир» (роман Толстого)',
+    'old': 'старый', 'film': 'фильм', 'i': 'я', 'he': 'он', 'we': 'мы', 'they': 'они', 'the': 'определенный артикль',
+    'at': 'в (о времени); у, на (о месте)', 'in': 'в', 'a': 'неопределенный артикль', 'dog': 'собака', 'new': 'новый', 'window': 'окно',
+    'this': 'этот, эта, это', 'monday': 'понедельник', 'day': 'день', 'of': 'предлог родительного падежа', 'door': 'дверь',
+    'boy': 'мальчик', 'and': 'и', 'every': 'каждый', 'year': 'год', 'for': 'для; в течение', 'to': 'в, на (куда); частица перед глаголом',
+    'milk': 'молоко', 'bread': 'хлеб', 'where': 'где, куда', 'famous': 'знаменитый', 'museum': 'музей', 'people': 'люди, человек',
+    'meeting': 'встреча', 'yesterday': 'вчера', 'by': 'кем, чем (о том, кто делает)', 'morning': 'утро', 'after': 'после',
+    'often': 'часто', 'from': 'из, от', 'all over the world': 'со всего мира', 'tourists': 'туристы', 'picture': 'картина, рисунок',
+    'last': 'прошлый', 'party': 'вечеринка', 'tomorrow': 'завтра', 'when': 'когда', 'every day': 'каждый день',
+    'english': 'английский', 'lot': 'много (a lot)', 'speak': 'говорить', 'all': 'весь, все', 'days': 'дни', 'him': 'его, ему',
+    'here': 'здесь, сюда', 'light': 'свет', 'next': 'следующий', 'looks': 'выглядит', 'made': 'сделали; приняли (решение)',
+    'off': 'прочь (switch off — выключить)', 'children': 'дети', 'night': 'ночь', 'took': 'взял; занял (от take)', 'took care of': 'заботились о',
+    'was': 'был (форма to be)', 'japan': 'Япония', 'thief': 'вор', 'over': 'более, свыше', 'bridge': 'мост', 'cars': 'машины',
+    'letters': 'письма', 'will': 'вспомогательный глагол будущего времени', 'switched off': 'выключил', 'about': 'о; около',
+    'america': 'Америка', 'artist': 'художник', 'care': 'забота', 'castle': 'замок', 'century': 'век', 'cheese': 'сыр', 'everybody': 'все',
+    'granny': 'бабуля', 'key': 'ключ', 'laughed': 'засмеялся', 'listened': 'слушал', 'many': 'много', 'nobody': 'никто',
+    'nowadays': 'в наши дни', 'opened': 'открыл', 'painted': 'покрасил; нарисовал', 'problem': 'проблема', 'results': 'результаты',
+    'sent': 'отправил (от send)', 'shoes': 'туфли, обувь', 'somebody': 'кто-то', 'switched': 'переключил', 'talk': 'разговаривать',
+    'these': 'эти', 'world': 'мир'
+  },
   ex: [
     { type: 'gap', task: 'Поставьте глагол в Present, Past или Future Simple Passive. Если в скобках несколько слов через косую черту, используйте в ответе их все — в нужной форме и порядке.', items: [
       ["English ___ (speak) all over the world.", "is spoken"], ["This castle ___ (build) in the 15th century.", "was built"],
@@ -45,19 +71,19 @@ ${E([
       ["The museum ___ (not / visit) by many tourists these days.", "is not visited"], ["When ___ America ___ (discover)?", ["was", "discovered"]]
     ]},
     { type: 'choice', task: 'Выберите правильный вариант.', items: [
-      ["The window ___ by the children yesterday.", ["was broken", "broke", "has broken"]], ["Cheese ___ from milk.", ["is made", "makes", "is making"]],
+      ["The vase ___ by our cat yesterday.", ["was broken", "broke", "has broken"]], ["Cheese ___ from milk.", ["is made", "makes", "is making"]],
       ["The meeting ___ next Monday.", ["will be held", "will hold", "holds"]], ["The door was opened ___ a key.", ["with", "by", "from"]],
       ["The picture was painted ___ a famous artist.", ["by", "with", "of"]], ["Where ___ these shoes made?", ["were", "did", "was"]]
     ]},
     { type: 'translate', task: 'Переведите на английский, используя пассив.', items: [
-      ["Этот дом был построен в 1990 году.", "This house was built in 1990."],
-      ["Во Франции говорят по-французски.", "French is spoken in France."],
+      ["Этот мост был построен сто лет назад.", "This bridge was built a hundred years ago.|This bridge was built one hundred years ago.|The bridge was built a hundred years ago.|The bridge was built one hundred years ago."],
+      ["Во Франции делают много сыра.", "A lot of cheese is made in France.|A lot of cheese is produced in France.|Lots of cheese is made in France."],
       ["Письмо будет отправлено завтра.", "The letter will be sent tomorrow."],
-      ["Меня пригласили на день рождения.", "I was invited to a birthday party.|I was invited to the birthday party.|I have been invited to a birthday party.|I have been invited to the birthday party."],
-      ["Эту книгу написал Пушкин.", "This book was written by Pushkin."]
+      ["Мне показали новый офис.", "I was shown the new office.|The new office was shown to me."],
+      ["Этот торт испекла моя бабушка.", "This cake was baked by my grandmother.|This cake was baked by my granny.|This cake was made by my grandmother.|This cake was made by my granny."]
     ]},
     { type: 'gap', task: 'Перепишите предложение в пассиве (впишите сказуемое вместе с предлогом).', items: [
-      ["They sent for the doctor. → The doctor ___.", "was sent for"],
+      ["They sent for a plumber. → A plumber ___.", "was sent for"],
       ["Everybody laughed at the new boy. → The new boy ___.", "was laughed at"],
       ["Granny looks after the children. → The children ___ by Granny.", "are looked after"],
       ["We will speak about this problem tomorrow. → This problem ___ tomorrow.", "will be spoken about|will be talked about"],
@@ -75,7 +101,7 @@ ${E([
 
 { id: 'pas-all', level: 'B1', title: 'Пассив во всех временах и с модальными', sub: 'is being repaired, has been done, must be done',
   rule: `
-<p>Пассив можно построить почти в любом времени, и делается это просто: меняется только форма глагола <i>be</i>, а смысловой глагол всегда стоит в третьей форме. Например: <i>is built</i>, <i>was built</i>, <i>has been built</i>, <i>is being built</i>.</p>
+<p>Пассив можно построить почти в любом времени, и делается это просто: меняется только форма глагола <i>be</i>, а смысловой глагол всегда стоит в третьей форме.</p>
 ${T(["Время", "Пассив", "Пример"], [
   ["Present Simple", "<i>am / is / are + V3</i>", "<i>The room <b>is cleaned</b>.</i> — Комнату убирают (регулярно)."],
   ["Present Continuous", "<i>am / is / are being + V3</i>", "<i>The room <b>is being cleaned</b>.</i> — Комнату сейчас убирают."],
@@ -88,16 +114,35 @@ ${T(["Время", "Пассив", "Пример"], [
 ])}
 <p>В строке «Модальные» после модального глагола стоит <i>be</i> без <i>to</i> и третья форма — это пассивный инфинитив. Так строится пассив с любым модальным глаголом: <i>can be done</i> — можно сделать, <i>should be done</i> — следует сделать, <i>must be done</i> — нужно сделать. Формы инфинитива подробно разобраны в разделе 13 «Инфинитив».</p>
 ${N("Не все времена удобны в пассиве. Future Continuous и времена Perfect Continuous в пассиве почти не встречаются — звучат слишком громоздко. Вместо них говорят в активном залоге или берут простое время: например, вместо <i>The bridge has been being built for two years</i> скажут <i>They have been building the bridge for two years</i> — мост строят уже два года.")}`,
+  /* перевод слов в упражнениях: по наведению или касанию (gloss.js); ключи — в нижнем регистре, как слово стоит в тексте */
+  gloss: {
+    'seats': 'места',
+    'bridge': 'мост', 'drive': 'водить машину', 'floor': 'этаж', 'round': 'вокруг',
+    'house': 'дом', 'has': 'имеет; вспомогательный глагол', 'i': 'я', 'we': 'мы', 'they': 'они', 'my': 'мой, моя, мое',
+    'are': 'есть (форма to be)', 'have': 'иметь; есть (о еде)', 'the': 'определенный артикль', 'at': 'в (о времени); у, на (о месте)',
+    'in': 'в', 'they have': 'у них есть', 'a': 'неопределенный артикль', 'today': 'сегодня', 'new': 'новый', 'this': 'этот, эта, это',
+    'flat': 'квартира', 'two': 'два', 'to': 'в, на (куда); частица перед глаголом', 'room': 'комната', 'street': 'улица', 'our': 'наш',
+    'town': 'город', 'people': 'люди, человек', 'look': 'смотреть; смотри; выглядеть', 'by': 'на (о транспорте); к (о сроке)', 'school': 'школа',
+    'now': 'сейчас', 'with': 'с', 'parents': 'родители', 'friday': 'пятница', 'tomorrow': 'завтра', 'when': 'когда', 'bike': 'велосипед',
+    'car': 'машина', 'all': 'весь, все', 'letter': 'письмо', 'work': 'работа; работать', 'word': 'слово',
+    'at the moment': 'в данный момент', 'children': 'дети', 'moment': 'момент', 'yet': 'уже (в вопросе); еще (в отрицании)',
+    'came': 'пришел (от come)', 'so': 'поэтому; так', 'so far': 'пока что, к настоящему времени', 'thief': 'вор', 'will': 'вспомогательный глагол будущего времени',
+    'tickets': 'билеты', 'can': 'мочь, уметь', 'china': 'Китай', 'documents': 'документы', 'easily': 'легко', 'far': 'далеко',
+    'fence': 'забор', 'finish': 'закончить', 'grow': 'выращивать', 'hundred': 'сто', 'living': 'живем (от live)', 'living room': 'гостиная', 'must': 'должен', 'painting': 'картина',
+    'parcel': 'посылка', 'problem': 'проблема', 'rice': 'рис', 'should': 'следует, стоит', 'sold': 'продали (от sell)',
+    'somebody': 'кто-то', 'stolen': 'украл (3-я форма steal)', 'truth': 'правда', 'walls': 'стены', 'wash': 'мыть', 'ways': 'способы',
+    "we're": 'мы (= we are)', 'wedding': 'свадьба'
+  },
   ex: [
     { type: 'gap', task: 'Поставьте глагол в нужную форму пассива. Если в скобках несколько слов через косую черту, используйте в ответе их все — в нужной форме и порядке.', items: [
       ["The thief ___ (just / arrest).", "has just been arrested"], ["My car ___ (repair) at the moment.", "is being repaired"],
-      ["This work must ___ (do) by Friday.", "be done"], ["When I came, the room ___ (clean). (как раз в тот момент)", "was being cleaned"],
-      ["The letter ___ (already / send).", "has already been sent"], ["All the tickets ___ (already / sell).", "have already been sold"],
+      ["This work must ___ (do) by Friday.", "be done"], ["When I came, the floor ___ (wash). (как раз в тот момент)", "was being washed"],
+      ["The letter ___ (already / send).", "has already been sent"], ["All the seats ___ (already / take).", "have already been taken"],
       ["This problem can ___ (solve) easily.", "be solved"], ["A new school ___ (build) in our street now.", "is being built"],
       ["The children should ___ (tell) the truth.", "be told"], ["Two hundred people ___ (invite) to the wedding so far.", "have been invited"]
     ]},
     { type: 'choice', task: 'Выберите правильный вариант.', items: [
-      ["A new school ___ in our town at the moment.", ["is being built", "is building", "has built"]], ["The parcel ___ yet.", ["hasn't been delivered", "didn't deliver", "wasn't delivering"]],
+      ["The bridge ___ at the moment, so we have to drive round.", ["is being repaired", "is repairing", "has repaired"]], ["The parcel ___ yet.", ["hasn't been delivered", "didn't deliver", "wasn't delivering"]],
       ["The documents must ___ today.", ["be signed", "sign", "been signed"]], ["Look! The walls ___. They look new.", ["have been painted", "have painted", "were painting"]],
       ["Our flat ___ now, so we're living with my parents.", ["is being decorated", "is decorated", "has decorated"]], ["Can this word ___ in two ways?", ["be translated", "translated", "be translate"]]
     ]},
@@ -124,7 +169,7 @@ ${N("Не все времена удобны в пассиве. Future Continuou
 
 { id: 'pas-causative', level: 'C1', title: 'Каузатив: have something done', sub: 'I had my hair cut',
   rule: `
-<p>Действие в этой конструкции выполняем не мы, а <b>кто-то другой</b> — обычно специалист и за плату: <i>I had my car washed</i> — мне помыли машину (на мойке). Еще она говорит о неприятности, которая с нами случилась: <i>He had his wallet stolen</i> — у него украли кошелек.</p>
+<p>Действие в этой конструкции выполняем не мы, а <b>кто-то другой</b> — обычно специалист и за плату: <i>I had my car washed</i> — мне помыли машину (на мойке). Еще эта конструкция говорит о неприятности, которая с нами случилась: <i>He had his wallet stolen</i> — у него украли кошелек.</p>
 ${F("have / get + <b>что-то</b> + <b>V3</b>")}
 <p>Глагол <i>have</i> в этой конструкции меняется по временам, как обычный глагол: <i>I had my eyes tested</i> (прошлое), <i>We're having our windows replaced</i> (сейчас), <i>I'll have my car washed</i> (будущее). В простых временах вопрос и отрицание строят с <i>do / does / did</i>, как у обычного глагола: <i>Did you have your bike repaired?</i> — тебе починили велосипед? Вместо <i>have</i> можно сказать <i>get</i> — смысл тот же, но звучит разговорнее.</p>
 ${E([
@@ -141,21 +186,30 @@ ${T(["Конструкция", "Значение", "Пример"], [
   ["<i>make + кто-то + V</i>", "заставить", "<i>The teacher <b>made</b> us <b>rewrite</b> it.</i> — Учитель заставил нас это переписать."]
 ])}
 ${N("Сравните: <i>I cut my hair</i> — я подстригся сам; <i>I <b>had</b> my hair <b>cut</b></i> — меня подстриг парикмахер.")}`,
+  /* перевод слов в упражнениях: по наведению или касанию (gloss.js); ключи — в нижнем регистре, как слово стоит в тексте */
+  gloss: {
+    'sister': 'сестра', 'week': 'неделя', 'i': 'я', 'she': 'она', 'we': 'мы', 'my': 'мой, моя, мое', 'are': 'есть (форма to be)',
+    'have': 'поручить, попросить (кого-то)', 'the': 'определенный артикль', 'at': 'в (о времени); у, на (о месте)', 'your': 'твой, ваш',
+    'ten': 'десять', 'yesterday': 'вчера', 'me': 'меня, мне', 'you': 'ты, вы', 'last': 'прошлый', 'month': 'месяц', 'next': 'следующий',
+    'made': 'заставил (от make)', 'us': 'нас, нам', 'back': 'назад, обратно', 'station': 'вокзал, станция',
+    'get': 'уговорить, попросить (кого-то)', 'next week': 'на следующей неделе', 'can': 'мочь, уметь', 'coach': 'тренер', 'documents': 'документы',
+    "i'll": 'я (= I will)', 'laps': 'круги', 'secretary': 'секретарь', 'should': 'следует, стоит'
+  },
   ex: [
     { type: 'gap', task: 'Составьте каузатив из слов в скобках или поставьте глагол в нужную форму (с to или без to). Если в скобках несколько слов через косую черту, используйте в ответе их все — в нужной форме и порядке.', items: [
       ["I ___ (have / my coat / clean) yesterday.", "had my coat cleaned"], ["We are ___ (have / our roof / repair) next week.", "having our roof repaired"],
-      ["She ___ (get / her car / repair) last month.", "got her car repaired"], ["She ___ (have / her bag / steal) at the station.", "had her bag stolen"],
+      ["We ___ (get / our washing machine / fix) last month.", "got our washing machine fixed"], ["She ___ (have / her bag / steal) at the station.", "had her bag stolen"],
       ["You should ___ (have / your teeth / check).", "have your teeth checked"], ["Can you get your sister ___ (call) me back?", "to call"],
       ["The coach made us ___ (run) ten laps.", "run"], ["I'll have my secretary ___ (send) you the documents.", "send"]
     ]},
     { type: 'translate', task: 'Переведите на английский.', items: [
       ["Вчера мне починили часы.", "I had my watch repaired yesterday.|I got my watch repaired yesterday.|Yesterday I had my watch repaired.|Yesterday I got my watch repaired."],
-      ["Нам починили телевизор.", "We had our TV repaired.|We had our TV set repaired.|We got our TV repaired.|We had the TV repaired.|Our TV was repaired.|Our TV has been repaired."],
+      ["Нам покрасили забор.", "We had our fence painted.|We got our fence painted.|We had the fence painted.|We got the fence painted."],
       ["Тебе нужно проверить зрение.", "You need to have your eyes tested.|You should have your eyes tested.|You need to have your eyes checked.|You should have your eyes checked.|You need to get your eyes tested.|You should get your eyes tested.|You need to get your eyes checked.|You should get your eyes checked.|You need to have your eyesight tested.|You should have your eyesight tested.|You need to have your eyesight checked.|You should have your eyesight checked."],
       ["У него украли телефон.", "He had his phone stolen.|His phone was stolen.|His phone has been stolen.|He has had his phone stolen.|He got his phone stolen."]
     ]},
     { type: 'listen', at: 2, task: 'Прослушайте предложение и соберите его из слов.', items: [
-      ["I had my hair cut yesterday, and now it's much shorter.", "Вчера я подстригся, и теперь волосы намного короче."],
+      ["I had my hair dyed yesterday, and now it's much darker.", "Вчера мне покрасили волосы, и теперь они намного темнее."],
       ["We are going to have our windows cleaned next week.", "На следующей неделе нам помоют окна."],
       ["My brother had his bike stolen while he was shopping.", "У брата украли велосипед, пока он ходил по магазинам."]
     ]}

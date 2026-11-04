@@ -1,5 +1,4 @@
 /* ---------- Маршрутизация ---------- */
-/* syncToc = false при загрузке страницы: аккордеон сохраняет свое сохраненное состояние, а не следует за маршрутом */
 const PAGES = ['contents', 'mistakes', 'notes', 'irregular-verbs', 'about',...ABOUT.map(p => 'about-' + p.id)];
 /* адреса страниц: на сайте (http/https) у каждой страницы свой путь от корня тренажера — …/articles/, …/articles/art-a-an,
    …/about/bookmarks, …/notes; файлы по этим путям создает make_pages.py из папки tools рядом с сайтом (копии index.html). Корень — <base href>
@@ -38,6 +37,7 @@ function pageMeta(id) {
     || 'Тренажер грамматики английского языка A1–C2: правила простым языком и упражнения с проверкой.';
   return { title: title ? `${plainText(title)} — ${SITE_TITLE}` : SITE_TITLE, description };
 }
+/* syncToc = false при загрузке страницы: аккордеон сохраняет свое сохраненное состояние, а не следует за маршрутом */
 function go(id, scroll = true, syncToc = true, fromBookmarks = false) {
   if (!(PAGES.includes(id) || topicById[id] || chapById[id] || id === NOT_FOUND)) id = 'contents';
   route = id;
@@ -85,6 +85,7 @@ function go(id, scroll = true, syncToc = true, fromBookmarks = false) {
 }
 
 $('#tocContents').addEventListener('click', () => go('contents'));
+$('#tocIrregular').addEventListener('click', () => go('irregular-verbs'));
 $('#infoBtn').addEventListener('click', () => go('about'));
 $('#notesBtn').addEventListener('click', () => go('notes'));
 $('#brandLink').addEventListener('click', e => { e.preventDefault(); go('contents'); });
@@ -116,7 +117,7 @@ document.querySelectorAll('.theme-toggle').forEach(b => {
   let spin = null;
   const spinStart = () => {
     /* запускают и наведение, и фокус (клик ставит фокус на кнопку под курсором): вторая анимация потеряла бы первую, и та осталась бы крутиться */
-    if (spin || matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    if (spin || reducedMotion()) return;
     sun.style.transition = 'none'; sun.style.transform = '';
     spin = sun.animate([{ transform: 'rotate(0deg)' }, { transform: 'rotate(360deg)' }], { duration: 12000, iterations: Infinity });
   };
@@ -138,7 +139,7 @@ document.querySelectorAll('.theme-toggle').forEach(b => b.addEventListener('clic
   const root = document.documentElement;
   const next = root.dataset.theme === 'light' ? 'dark' : 'light';
   const apply = () => { root.dataset.theme = next; store.set('gk2-theme', next); syncThemeBtn(); };
-  if (document.startViewTransition && !matchMedia('(prefers-reduced-motion: reduce)').matches) { document.startViewTransition(apply); return; }
+  if (document.startViewTransition && !reducedMotion()) { document.startViewTransition(apply); return; }
   root.classList.add('theme-anim');
   apply();
   clearTimeout(themeTimer);
@@ -222,7 +223,6 @@ renderLevels();
 const startId = urlId() || $('meta[name=route]')?.content || '';
 go(startId && (PAGES.includes(startId) || topicById[startId] || chapById[startId] || startId === NOT_FOUND) ? startId : store.get('gk2-last', 'contents'), false, false);
 booted = true;
-renderOverall();
 /* меню после перезагрузки остается на той же прокрутке: позиция хранится в sessionStorage этой вкладки.
    Шрифты догружаются позже и меняют высоту меню — тогда позиция ставится еще раз, если человек сам не успел прокрутить */
 (function () {

@@ -1,15 +1,14 @@
 /* Офлайн-режим: регистрация service worker (sw.js) и блок на странице «Работа без интернета» — состояние основы сайта
-   и записей «На слух»: скачать / докачать / удалить. Записи кладутся в тот же кэш, из которого их отдает sw.js */
+   и записей «На слух»: скачать / докачать / удалить. Записи кладутся в тот же кэш, из которого их отдает sw.js.
+   Корень тренажера — ROOT из app.js: он подключается позже, но ROOT читается только внутри функций и после load */
 const AUDIO_CACHE = 'gk-audio', SITE_CACHE = 'gk-site';
-/* корень тренажера — <base href> (как ROOT в app.js, который подключается позже) */
-const SITE_ROOT = new URL('./', document.baseURI);
 const OFFLINE_OK = location.protocol !== 'file:' && 'serviceWorker' in navigator && 'caches' in window;
-const audioFiles = () => [...new Set(Object.values(window.AUDIO || {}))].map(f => new URL(`audio/${f}.mp3`, SITE_ROOT).href);
+const audioFiles = () => [...new Set(Object.values(window.AUDIO || {}))].map(f => new URL(`audio/${f}.mp3`, ROOT).href);
 const mb = bytes => `${(bytes / 1048576).toFixed(1).replace('.', ',')} МБ`;
 let audioJob = null; /* идет скачивание: { done, total, stop } — переживает уход со страницы и возврат */
 let audioFailed = false; /* последнее скачивание прервала ошибка сети */
 
-if (OFFLINE_OK) addEventListener('load', () => navigator.serviceWorker.register(new URL('sw.js', SITE_ROOT).href).catch(() => {}));
+if (OFFLINE_OK) addEventListener('load', () => navigator.serviceWorker.register(new URL('sw.js', ROOT).href).catch(() => {}));
 
 /* блок в разметке страницы (ABOUT, id 'offline'): заполняется здесь и перерисовывается при каждом изменении */
 async function mountOffline(box) {

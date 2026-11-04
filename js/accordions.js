@@ -82,22 +82,22 @@ function progressBlock(ch, curLevel) {
   fillProgress(box);
   return box;
 }
+/* все, что показывает прогресс вне упражнения: меню, кнопка «Прогресс», блок прогресса страницы */
+function refreshProgress() {
+  renderToc(); renderOverall();
+  const pp = $('#pageProg'); if (pp) fillProgress(pp);
+}
 function fillProgress(box) {
-  const ch = box.dataset.scope ? CHAPTERS.find(c => c.id === box.dataset.scope) : null;
+  const ch = box.dataset.scope ? chapById['ch-' + box.dataset.scope] : null;
   const topics = ch ? ch.topics : TOPICS;
-  let s = 0, tot = 0, done = 0, exn = 0;
-  topics.forEach(t => {
-    const st = topicStats(t); s += st.s; tot += st.tot;
-    t.ex.forEach((e, i) => { exn++; if (progress[t.id] && progress[t.id][i]) done++; });
-  });
+  let done = 0, exn = 0;
+  topics.forEach(t => t.ex.forEach((e, i) => { exn++; if (resultOf(t, i)) done++; }));
   /* вся книга: та же цифра, что в меню; раздел — баллы его тем (включая изученные правила) */
-  const pct = ch ? pctOf(s, tot) : bookProgress().pct;
+  const pct = ch ? sumStats(topics).pct : bookProgress().pct;
   /* разбивка по уровням, если охват больше одного уровня; уровень открытой темы залит */
   const levels = Object.keys(LEVELS).filter(l => topics.some(t => t.level === l));
   const rows = levels.length > 1 ? levels.map(l => {
-    let ls = 0, lt = 0;
-    topics.filter(t => t.level === l).forEach(t => { const st = topicStats(t); ls += st.s; lt += st.tot; });
-    const p = pctOf(ls, lt);
+    const p = sumStats(topics.filter(t => t.level === l)).pct;
     return `<div class="page-prog__level" title="${LEVELS[l]}"><span class="lvl-tag page-prog__tag${l === box.dataset.level ? ' lvl-tag--filled' : ''}">${l}</span><span class="bar bar--thin">${barFill(p)}</span>${pctLabel(p, 'page-prog__value')}</div>`;
   }).join('') : '';
   box.innerHTML = `<div class="page-prog__row"><span>${ch ? `Раздел ${ch.n} пройден на` : 'Тренажер пройден на'}</span>${pctLabel(pct, 'page-prog__value')}</div>

@@ -24,10 +24,29 @@ ${E([
 ])}
 <h3>Почему on the bus, но in a car</h3>
 <p>Русские «в» и «на» здесь не помогают: в английском свои привычки, и у части из них есть логика. С транспортом правило такое: в большом общественном транспорте можно стоять и ходить по салону, как по полу, поэтому англичане говорят <i>on</i> — словно человек стоит на площадке: <i><b>on</b> the bus</i> — в автобусе, <i><b>on</b> the train</i> — в поезде, <i><b>on</b> the plane</i> — в самолете. А в маленьком транспорте можно только сидеть внутри, как в коробке, поэтому — <i>in</i>: <i><b>in</b> a car</i> — в машине, <i><b>in</b> a taxi</i> — в такси. На велосипеде и мотоцикле сидят сверху, поэтому тоже <i>on</i>: <i><b>on</b> a bike</i> — на велосипеде.</p>
-<p>Логика есть и у других примеров выше: этаж — это поверхность, на которой стоишь (<i>on the first floor</i>), а картина и небо — пространство, внутри которого что-то видно (<i>in the picture</i>, <i>in the sky</i>). Но такие выражения, как <i>at home</i> или <i>at work</i>, объяснить правилом трудно — их проще запомнить готовыми.</p>
+<p>Логика есть и у других примеров выше: этаж — это поверхность, на которой стоишь (<i>on the first floor</i>), а картина и небо — пространство, внутри которого что-то видно (<i>in the picture</i>, <i>in the sky</i>). А выражения <i>at home</i> и <i>at work</i> вы уже знаете из темы 1.4.</p>
 <h3>Above и over</h3>
 <p>Оба предлога значат «над», и часто их можно заменить друг другом. Но <i>above</i> просто показывает, что один предмет находится выше другого: <i>The picture hangs <b>above</b> the sofa</i> — картина висит над диваном. А <i>over</i> чаще используют, когда что-то накрывает предмет или движется над ним с одной стороны на другую: <i>She put a blanket <b>over</b> the child</i> — она укрыла ребенка одеялом; <i>The plane flew <b>over</b> the city</i> — самолет пролетел над городом.</p>
 ${N("Русское «на» не всегда переводится как <i>on</i>. Например, «на концерте» — <i>at the concert</i>. И осторожнее с этажами: британцы считают их иначе. Наш первый этаж у них — <i>the ground floor</i>, а второй — <i>the first floor</i>. В американском английском счет такой же, как у нас.")}`,
+  /* перевод слов в упражнениях: по наведению или касанию (gloss.js); ключи — в нижнем регистре, как слово стоит в тексте */
+  gloss: {
+    'old': 'старый', 'house': 'дом', 'man': 'мужчина', 'i': 'я', 'he': 'он', 'it': 'это; он, она (о предмете)', 'we': 'мы',
+    'my': 'мой, моя, мое', 'is': 'есть, является (форма to be)', 'are': 'есть (форма to be)', 'the': 'определенный артикль',
+    'at': 'в (о времени); у, на (о месте)', 'london': 'Лондон', 'look at': 'посмотри на', 'a': 'неопределенный артикль',
+    'please': 'пожалуйста', 'shop': 'магазин', 'day': 'день', 'door': 'дверь', 'live': 'жить', 'third': 'третий', 'floor': 'этаж',
+    'who': 'кто', 'and': 'и', 'two': 'два', 'every': 'каждый', 'for': 'для; в течение', 'her': 'ее, ей', 'big': 'большой',
+    'there': 'в обороте there is / there are: есть, имеется', 'park': 'парк', 'some': 'немного, несколько', 'eggs': 'яйца', 'bank': 'банк', 'kitchen': 'кухня',
+    'table': 'стол', 'our': 'наш', 'yesterday': 'вчера', 'look': 'смотреть; смотри', 'morning': 'утро', 'school': 'школа',
+    'bus': 'автобус', 'home': 'дом; домой', 'evening': 'вечер', 'me': 'меня, мне', 'from': 'из, от', 'parents': 'родители',
+    'friend': 'друг', 'picture': 'картина, рисунок', 'party': 'вечеринка', 'were': 'были (форма to be)', 'years': 'годы, лет',
+    'all': 'весь, все', 'café': 'кафе', 'keys': 'ключи', 'letter': 'письмо', 'way': 'путь, дорога', 'work': 'работа; работать',
+    'box': 'коробка', 'wait': 'ждать', 'sky': 'небо', 'children': 'дети', 'birds': 'птицы', 'left': 'оставил; ушел (от leave); левый',
+    'met': 'встретил (от meet)', 'was': 'был (форма to be)', 'five': 'пять', 'lived': 'жил (от live)', 'all day': 'весь день',
+    'found': 'нашел (от find)', 'six': 'шесть', 'cars': 'машины', 'ball': 'мяч', 'ceiling': 'потолок', 'chair': 'стул',
+    "children's": 'детский', 'garden': 'сад', "grandmother's": 'бабушкин', 'hangs': 'висит', 'lamp': 'лампа', 'office': 'офис',
+    'papers': 'бумаги', 'pictures': 'картины, фотографии', 'post': 'почта; отправить', 'post office': 'почта', 'sit': 'сидеть', 'slept': 'спал (от sleep)',
+    'stop': 'остановить(ся), перестать', 'bus stop': 'автобусная остановка', 'wall': 'стена'
+  },
   ex: [
     { type: 'gap', task: 'Впишите in, on или at.', items: [
       ["There are six eggs ___ the box.", "in"], ["There were two old pictures ___ the wall.", "on"],
@@ -45,7 +64,7 @@ ${N("Русское «на» не всегда переводится как <i>
     ]},
     { type: 'translate', task: 'Переведите на английский.', items: [
       ["Мои книги были на столе.", "My books were on the table."],
-      ["Вчера кошка спала под кроватью.", "Yesterday the cat slept under the bed.|The cat slept under the bed yesterday."],
+      ["Собака спит под деревом.", "The dog is sleeping under the tree.|The dog is sleeping under a tree."],
       ["Мы живем на втором этаже.", "We live on the first floor.|We live on the second floor."],
       ["Я видел его на остановке.", "I saw him at the bus stop."],
       ["Магазин находится напротив школы.", "The shop is opposite the school.|The shop is across from the school."]
@@ -87,8 +106,30 @@ ${E([
 <p>Оба предлога переводятся как «до», но смысл у них разный. <i>Till</i> и <i>until</i> (это одно и то же, <i>till</i> разговорнее) говорят, что действие продолжается вплоть до этого момента, а потом прекращается: <i>I'll wait <b>till</b> six</i> — я буду ждать до шести (а потом перестану). А <i>by</i> (как в теме 2.15) говорит, что действие должно закончиться к этому сроку, а не длиться до него: <i>Finish the work <b>by</b> six</i> — закончите работу к шести.</p>
 ${E([
   ["The shop is open <b>until</b> 9 pm.", "Магазин открыт до девяти вечера."],
-  ["Please send me the report <b>by</b> Friday.", "Пожалуйста, пришлите мне отчет к пятнице (не позже пятницы)."]
+  ["Please send me the report <b>by</b> Friday.", "Пожалуйста, пришлите мне отчет к пятнице. (не позже пятницы)"]
 ])}`,
+  /* перевод слов в упражнениях: по наведению или касанию (gloss.js); ключи — в нижнем регистре, как слово стоит в тексте */
+  gloss: {
+    'been': 'был (3-я форма be)', 'has': 'у него (у нее) есть', 'ill': 'больной', 'she': 'она',
+    'return': 'вернуть; вернуться',
+    'books': 'книги', 'please': 'пожалуйста',
+    'lesson': 'урок', 'film': 'фильм', 'week': 'неделя', 'i': 'я', 'he': 'он', 'we': 'мы', 'my': 'мой, моя, мое',
+    'is': 'есть, является (форма to be)', 'are': 'есть (форма to be)', 'the': 'определенный артикль', 'what': 'что, какой',
+    'a': 'неопределенный артикль', 'open': 'открыт; открыть', 'shop': 'магазин', 'monday': 'понедельник', 'two': 'два',
+    'birthday': 'день рождения', 'her': 'ее, ей', 'see': 'увидеть', 'to': 'в, на (куда); частица перед глаголом', 'shops': 'магазины',
+    'yesterday': 'вчера', 'morning': 'утро', 'evening': 'вечер', 'often': 'часто', 'father': 'отец',
+    'do': 'делать; вспомогательный глагол', 'long': 'долго; длинный', 'winter': 'зима', 'works': 'работает', 'you': 'ты, вы',
+    'test': 'контрольная', 'friday': 'пятница', 'last': 'прошлый', "o'clock": 'часов (ровно)', 'ready': 'готов', 'saturday': 'суббота',
+    'sundays': 'воскресенья', 'time': 'время', 'did': 'вспомогательный глагол прошедшего времени', 'weekend': 'выходные',
+    'here': 'здесь, сюда', "i'm": 'я (= I am)', 'next': 'следующий', 'be': 'быть', 'met': 'встретил (от meet)', 'night': 'ночь',
+    'skiing': 'катался на лыжах', 'started': 'начал (от start)', 'was': 'был (форма to be)', 'went': 'пошел, поехал (от go)',
+    'five': 'пять', "haven't": 'не (= have not)', 'lived': 'жил (от live)', 'read': 'читать; прочитал', 'seen': 'видел (3-я форма see)',
+    'hours': 'часы, часов', 'going to': 'собираюсь', 'next week': 'на следующей неделе', 'report': 'отчет',
+    'will': 'вспомогательный глагол будущего времени', 'minutes': 'минуты', 'born': 'родился (be born)', 'closed': 'закрыт',
+    'finish': 'закончить', 'had': 'имел; вспомогательный глагол', "i'll": 'я (= I will)', "i've": 'я (= I have)', 'march': 'март',
+    'midday': 'полдень', 'nobody': 'никто', "sister's": 'сестры (чей?)', 'slept': 'спал (от sleep)', 'talked': 'разговаривал',
+    'waited': 'ждал'
+  },
   ex: [
     { type: 'gap', task: 'Впишите at, on, in или «-», если предлог не нужен.', items: [
       ["Yesterday the film started ___ 7 o'clock.", "at"], ["I was born ___ 2005.", "in"],
@@ -99,17 +140,17 @@ ${E([
       ["I'll be ready ___ five minutes.", "in"], ["We met ___ last Friday.", "-|0"]
     ]},
     { type: 'choice', task: 'Выберите предлог.', items: [
-      ["I've lived here ___ 2015.", ["since", "for", "from"]], ["We waited ___ two hours.", ["for", "since", "during"]],
-      ["Nobody talked ___ the lesson.", ["during", "for", "while"]], ["I will finish the report ___ Friday.", ["by", "till", "since"]],
+      ["She has been ill ___ Monday.", ["since", "for", "from"]], ["We waited ___ two hours.", ["for", "since", "during"]],
+      ["Nobody talked ___ the lesson.", ["during", "for", "while"]], ["Please return the books ___ Monday.", ["by", "till", "since"]],
       ["Yesterday the shop was open ___ 9 to 6.", ["from", "since", "at"]], ["He slept ___ midday.", ["until", "by", "since"]],
       ["I haven't seen her ___ a long time.", ["for", "since", "during"]], ["See you ___ Saturday morning!", ["on", "in", "at"]]
     ]},
     { type: 'translate', task: 'Переведите на английский.', items: [
-      ["Вчера урок начался в девять часов.", "Yesterday the lesson started at nine o'clock.|The lesson started at nine o'clock yesterday.|Yesterday the lesson began at nine o'clock.|The lesson began at nine o'clock yesterday.|Yesterday the lesson started at nine.|The lesson started at nine yesterday."],
+      ["Концерт начнется в восемь.", "The concert starts at eight.|The concert will start at eight.|The concert starts at 8.|The concert will start at 8.|The concert begins at eight.|The concert will begin at eight."],
       ["Я родился в мае.", "I was born in May."],
       ["Увидимся в понедельник.", "See you on Monday.|I will see you on Monday."],
       ["Я живу здесь с 2010 года.", "I have lived here since 2010.|I have been living here since 2010."],
-      ["Я вернусь через час.", "I will be back in an hour.|I will come back in an hour.|I will return in an hour."]
+      ["Мы поедем в отпуск через месяц.", "We will go on holiday in a month.|We are going on holiday in a month.|We are going to go on holiday in a month."],
     ]},
     { type: 'listen', at: 2, task: 'Прослушайте предложение и соберите его из слов.', items: [
       ["On Monday the lesson started at nine o'clock.", "В понедельник урок начался в девять часов."],
@@ -134,6 +175,20 @@ ${T(["Предлог", "Значение", "Пример"], [
   ["<i>round / around</i>", "вокруг", "<i>travel <b>around</b> the world</i>"]
 ])}
 ${N("Два частых исключения. Со словом <i>home</i> предлог <i>to</i> не ставят: <i>go <b>home</b>, come home</i>. А после <i>arrive</i> («прибывать») используют не <i>to</i>, а <i>in</i> — для городов и стран (<i>arrive <b>in</b> Moscow</i>) или <i>at</i> — для зданий и мест (<i>arrive <b>at</b> the station</i>).")}`,
+  /* перевод слов в упражнениях: по наведению или касанию (gloss.js); ключи — в нижнем регистре, как слово стоит в тексте */
+  gloss: {
+    'house': 'дом', 'bag': 'сумка', 'pen': 'ручка', 'i': 'я', 'he': 'он', 'she': 'она', 'it': 'это; он, она (о предмете)', 'we': 'мы',
+    'they': 'они', 'my': 'мой, моя, мое', 'go': 'идти, ехать', 'the': 'определенный артикль', 'at': 'в (о времени); у, на (о месте)',
+    'in': 'в', 'london': 'Лондон', 'a': 'неопределенный артикль', 'window': 'окно', 'and': 'и', 'her': 'ее, ей', 'room': 'комната',
+    'river bank': 'берег реки', 'bank': 'берег; банк', 'our': 'наш', 'look': 'смотреть; смотри', "let's": 'давай(те)', 'bus': 'автобус', 'cinema': 'кино',
+    'tonight': 'сегодня вечером', 'long': 'долго; длинный', 'river': 'река', 'come': 'приходить', 'bike': 'велосипед', 'cat': 'кошка',
+    'train': 'поезд', 'his': 'его', 'letter': 'письмо', 'box': 'коробка', 'next': 'следующий', 'grandmother': 'бабушка', 'sat down': 'сел',
+    'arrived': 'приехал (от arrive)', 'down': 'вниз', 'midnight': 'полночь', 'sat': 'сел (от sit)', 'took': 'взял; занял (от take)',
+    'went': 'пошел, поехал (от go)', "didn't": 'не (= did not)', 'came': 'пришел (от come)', 'got': 'получил (от get)', 'thief': 'вор',
+    'get': 'добраться; получить', 'asleep': 'спящий', 'climbed': 'забрался', 'drove': 'ехал за рулем (от drive)', 'fell': 'упал (от fall)',
+    'hurt': 'причинить боль; ушибся', 'jumped': 'прыгнул', 'knee': 'колено', 'stop': 'остановка; остановиться',
+    'swam': 'плавал (от swim)', 'travelled': 'путешествовал', 'tunnel': 'туннель', 'walked': 'шел пешком, гулял', 'world': 'мир'
+  },
   ex: [
     { type: 'gap', task: 'Впишите предлог: to, into, out of, across, through, along, past, off или from.', items: [
       ["She took a pen ___ her bag.", "out of|from"], ["The train went ___ a long tunnel.", "through"],
@@ -148,11 +203,11 @@ ${N("Два частых исключения. Со словом <i>home</i> п�
       ["They travelled ___ the world.", ["around", "across of", "through of"]], ["He came ___ the room and sat down.", ["into", "in to", "onto"]]
     ]},
     { type: 'translate', task: 'Переведите на английский.', items: [
-      ["Он вошел в комнату.", "He went into the room.|He came into the room.|He walked into the room.|He entered the room."],
-      ["Мы шли через лес.", "We walked through the forest.|We were walking through the forest.|We went through the forest."],
-      ["Она переплыла реку.", "She swam across the river."],
-      ["Мы приехали в Москву вечером.", "We arrived in Moscow in the evening.|We came to Moscow in the evening.|In the evening we arrived in Moscow."],
-      ["Пойдем домой.", "Let's go home."]
+      ["Мальчик спрыгнул со стула.", "The boy jumped off the chair.|The boy jumped down from the chair."],
+      ["Кошка пробежала через сад.", "The cat ran through the garden.|The cat ran across the garden."],
+      ["Она перешла через улицу.", "She went across the street.|She walked across the street.|She crossed the street.|She went across the road.|She walked across the road.|She crossed the road."],
+      ["Мы прибыли в аэропорт в шесть.", "We arrived at the airport at six.|We got to the airport at six.|We arrived at the airport at 6.|We got to the airport at 6."],
+      ["Я пришел домой поздно.", "I came home late.|I got home late."]
     ]},
     { type: 'listen', at: 2, task: 'Прослушайте предложение и соберите его из слов.', items: [
       ["She ran out of the house and across the road.", "Она выбежала из дома и перебежала через дорогу."],
@@ -188,6 +243,32 @@ ${T(["Предлог", "Значение", "Пример"], [
 <p>Разница между <i>with</i> и <i>by</i> такая: <i>with</i> называет предмет, которым что-то делают (<i>write with a pen</i> — писать ручкой), а <i>by</i> — того, кто это сделал, или способ: <i>a novel by Tolstoy</i> — роман Толстого, то есть написанный Толстым. Чаще всего <i>by</i> в таком значении встречается в страдательном залоге, когда действие совершается над предметом, а исполнителя называют в конце: <i>The book was written <b>by</b> Tolstoy</i> — книга написана Толстым. Страдательный залог подробно разобран в разделе 10.</p>
 <h3>Think of и think about</h3>
 <p>В первой таблице у <i>think</i> два предлога, и смысл у них немного разный. <i>Think about</i> — думать о чем-то долго, обдумывать: <i>I'm thinking <b>about</b> my new job</i> — я думаю о новой работе. <i>Think of</i> — вспомнить, придумать (прийти в голову) или иметь мнение: <i>I can't think <b>of</b> his name</i> — не могу вспомнить, как его зовут; <i>What do you think <b>of</b> the film?</i> — что ты думаешь о фильме? (как он тебе?). В значении «иметь мнение» подходят оба предлога: <i>What do you think <b>of</b> / <b>about</b> his idea?</i> — что ты думаешь о его идее? А в значениях «придумать» и «вспомнить» — только <i>of</i>.</p>`,
+  /* перевод слов в упражнениях: по наведению или касанию (gloss.js); ключи — в нижнем регистре, как слово стоит в тексте */
+  gloss: {
+    'hamlet': '«Гамлет»', 'holiday': 'отпуск, каникулы', 'play': 'играть',
+    'old': 'старый', 'good': 'хороший', 'man': 'мужчина', 'bag': 'сумка', 'teacher': 'учитель', 'i have': 'у меня есть',
+    'has': 'имеет; вспомогательный глагол', 'i': 'я', 'he': 'он', 'she': 'она', 'it': 'это; он, она (о предмете)', 'we': 'мы',
+    'my': 'мой, моя, мое', 'is': 'есть, является (форма to be)', 'are': 'есть (форма to be)', 'have': 'иметь; вспомогательный глагол',
+    'the': 'определенный артикль', 'what': 'что, какой', 'a': 'неопределенный артикль', 'open': 'открыть', 'please': 'пожалуйста',
+    'this': 'этот, эта, это', 'moscow': 'Москва', 'door': 'дверь', 'who': 'кто', 'son': 'сын', 'and': 'и', 'child': 'ребенок',
+    'for': 'для; в течение', 'big': 'большой', 'to': 'в, на (куда); частица перед глаголом', 'room': 'комната', 'twenty': 'двадцать',
+    'kitchen': 'кухня', 'why': 'почему', 'famous': 'знаменитый', 'our': 'наш', 'town': 'город', 'yesterday': 'вчера',
+    'look': 'смотреть; смотри', 'bus': 'автобус', 'always': 'всегда', 'me': 'меня, мне', 'russia': 'Россия', 'you': 'ты, вы',
+    'cup': 'чашка', 'books': 'книги', 'picture': 'картина, рисунок', 'pencil': 'карандаш', 'tired': 'уставший', 'again': 'снова',
+    'doctor': 'врач', 'married': 'женат, замужем', 'weather': 'погода', 'were': 'были (форма to be)', 'when': 'когда', 'coffee': 'кофе',
+    'history': 'история', 'maths': 'математика', 'train': 'поезд', 'him': 'его, ему', 'his': 'его', 'keys': 'ключи', 'letter': 'письмо',
+    'bring': 'принести', 'cake': 'торт', "i'm": 'я (= I am)', 'grandmother': 'бабушка', 'us': 'нас, нам', 'doing': 'делаешь (от do)',
+    'seaside': 'морское побережье', 'was': 'был (форма to be)', 'went': 'пошел, поехал (от go)', 'seen': 'видел (3-я форма see)',
+    'been': 'был (3-я форма be)', "didn't": 'не (= did not)', 'will': 'вспомогательный глагол будущего времени', 'minutes': 'минуты',
+    'them': 'их, им', 'tickets': 'билеты', 'afraid': 'боится', 'agreed': 'согласился', 'angry': 'сердитый', 'answer': 'ответ; ответить',
+    'belonged': 'принадлежал', 'capital': 'столица', 'centuries': 'века', 'churches': 'церкви', 'cousins': 'двоюродные братья и сестры',
+    'cut': 'резать; порезал', 'depends': 'зависит', 'discussed': 'обсудили', 'documents': 'документы', 'dogs': 'собаки',
+    'entered': 'вошел', 'everybody': 'все', 'explained': 'объяснил', 'gave': 'дал (от give)', 'interested': 'заинтересован',
+    'its': 'его, ее (о предмете)', 'joke': 'шутка', 'key': 'ключ', 'knife': 'нож', 'laughed': 'засмеялся', 'listening': 'слушает',
+    'looking': 'смотрит; ищет', 'never': 'никогда', 'nobody': 'никто', 'noise': 'шум', 'novel': 'роман', 'pay': 'платить',
+    'peace': 'мир, покой', 'plan': 'план', 'post': 'почта; отправить', 'proud': 'гордый', 'question': 'вопрос', 'race': 'гонка, забег',
+    'rule': 'правило', 'sent': 'отправил (от send)', 'waited': 'ждал', 'war': 'война', 'won': 'выиграл (от win)', 'wrote': 'написал'
+  },
   ex: [
     { type: 'gap', task: 'Впишите предлог.', items: [
       ["It depends ___ the weather.", "on"], ["Nobody was listening ___ the teacher.", "to"],
@@ -199,8 +280,8 @@ ${T(["Предлог", "Значение", "Пример"], [
       ["We waited ___ the bus for twenty minutes.", "for"], ["I'm tired ___ this noise.", "of"]
     ]},
     { type: 'choice', task: 'Нужен ли предлог? Выберите вариант.', items: [
-      ["He didn't answer ___ my question.", ["—", "on", "to"]], ["We discussed ___ the plan.", ["—", "about", "on"]],
-      ["She entered ___ the room.", ["—", "into", "in"]], ["This bag belonged ___ my grandmother.", ["to", "—", "with"]],
+      ["He didn't answer ___ my question.", ["—", "on", "to"]], ["We discussed ___ our holiday.", ["—", "about", "on"]],
+      ["She entered ___ the kitchen.", ["—", "into", "in"]], ["This bag belonged ___ my grandmother.", ["to", "—", "with"]],
       ["Why were you angry ___ me yesterday?", ["with", "on", "to"]], ["Look ___ this picture! What is the man doing?", ["at", "on", "—"]]
     ]},
     { type: 'translate', task: 'Переведите на английский.', items: [
@@ -208,19 +289,19 @@ ${T(["Предлог", "Значение", "Пример"], [
       ["Она боится темноты.", "She is afraid of the dark.|She's afraid of the dark.|She is afraid of darkness."],
       ["Все зависит от тебя.", "Everything depends on you.|It all depends on you."],
       ["Он хорошо играет в шахматы.", "He is good at chess.|He plays chess well.|He is good at playing chess.|He plays chess very well."],
-      ["Он не ответил на мой вопрос.", "He didn't answer my question.|He hasn't answered my question."]
+      ["Он не ответил на мое письмо.", "He didn't answer my letter.|He hasn't answered my letter."],
     ]},
     { type: 'gap', task: 'Впишите with, by, to или of.', items: [
-      ["He wrote the letter ___ a pencil.", "with"], ["War and Peace is a novel ___ Tolstoy.", "by"],
+      ["He wrote the letter ___ a pencil.", "with"], ["Hamlet is a play ___ Shakespeare.", "by"],
       ["We went to the seaside ___ train.", "by"], ["She cut the cake ___ a big knife.", "with"],
       ["I gave my old books ___ my cousins.", "to"], ["Moscow is the capital ___ Russia.", "of"],
       ["Bring me a cup ___ coffee, please.", "of"], ["The teacher explained the rule ___ us again.", "to"],
       ["We sent the documents ___ post.", "by"], ["Open the door ___ the kitchen ___ this key.", ["of|to", "with"]]
     ]},
     { type: 'listen', at: 2, task: 'Прослушайте предложение и соберите его из слов.', items: [
-      ["My sister was afraid of dogs, but she was fond of cats.", "Моя сестра боялась собак, но любила кошек."],
+      ["My sister was afraid of spiders, but she was fond of snakes.", "Моя сестра боялась пауков, но любила змей."],
       ["The price depends on the size of the room.", "Цена зависит от размера комнаты."],
-      ["Are you interested in music or art?", "Тебе интересна музыка или искусство?"]
+      ["Is your brother interested in football or tennis?", "Твой брат интересуется футболом или теннисом?"],
     ]}
   ]}
 ]});

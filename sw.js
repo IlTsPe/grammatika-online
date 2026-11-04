@@ -1,4 +1,4 @@
-/* Офлайн-режим (service worker; подключает js/app.js, только на сайте — не с диска).
+/* Офлайн-режим (service worker; регистрирует js/offline.js, только на сайте — не с диска).
    Основа сайта (CORE: страница, стили, скрипты, темы и упражнения, шрифты, иконки) сохраняется при первом заходе сама.
    Порядок «сначала сеть»: с интернетом всегда свежая версия (ответ сети заодно обновляет сохраненную копию), без сети или
    при долгом ответе — сохраненная копия. Поэтому после выкладки новой версии ничего обновлять вручную не нужно.
@@ -42,6 +42,7 @@ const CORE = [
   'js/backup.js',
   'js/core.js',
   'js/exercises.js',
+  'js/gloss.js',
   'js/head.js',
   'js/helpers.js',
   'js/irregular.js',
@@ -106,16 +107,19 @@ self.addEventListener('fetch', e => {
   e.respondWith(file(req, url));
 });
 
+/* ответ сети, а если ее нет или она молчит дольше WAIT — сохраненная копия */
+const netOrSaved = (net, saved) => !saved ? net
+  : Promise.race([net.catch(() => saved), new Promise(ok => setTimeout(() => ok(saved), WAIT))]);
+
 /* файл основы: сеть с ожиданием WAIT, затем сохраненная копия. Копии хранятся только у файлов из CORE */
 async function file(req, url) {
   const cache = await caches.open(SITE_CACHE);
   const saved = await cache.match(url);
   const net = fetch(req).then(r => {
-    if (saved && r.ok && r.status === 200) cache.put(url, r.clone());
+    if (saved && r.status === 200) cache.put(url, r.clone());
     return r;
   });
-  if (!saved) return net;
-  return Promise.race([net.catch(() => saved), new Promise(ok => setTimeout(() => ok(saved), WAIT))]);
+  return netOrSaved(net, saved);
 }
 
 /* страница: сеть; без сети — сохраненная главная или оболочка 404.html, которая сама откроет страницу по адресу */
@@ -123,11 +127,10 @@ async function page(req, url) {
   const cache = await caches.open(SITE_CACHE);
   const saved = await cache.match(url) || (url !== ROOT && await cache.match(SHELL));
   const net = fetch(req).then(r => {
-    if (url === ROOT && r.ok && r.status === 200) cache.put(url, r.clone());
+    if (url === ROOT && r.status === 200) cache.put(url, r.clone());
     return r;
   });
-  if (!saved) return net;
-  return Promise.race([net.catch(() => saved), new Promise(ok => setTimeout(() => ok(saved), WAIT))]);
+  return netOrSaved(net, saved);
 }
 
 /* запись «На слух»: скачанная — из сохраненных (с поддержкой Range: плеер просит файл по частям), иначе из сети */

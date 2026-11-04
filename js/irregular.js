@@ -4,7 +4,7 @@ const IRREGULAR = [
   ['arise', 'arose', 'arisen', 'возникать'],
   ['awake', 'awoke', 'awoken', 'просыпаться'],
   ['be', 'was / were', 'been', 'быть'],
-  ['bear', 'bore', 'born / borne', 'рождать; выносить'],
+  ['bear', 'bore', 'born / borne', 'рождать; выносить (born — только в <i>be born</i> «родиться»)'],
   ['beat', 'beat', 'beaten', 'бить; побеждать'],
   ['become', 'became', 'become', 'становиться'],
   ['begin', 'began', 'begun', 'начинать'],
@@ -55,7 +55,7 @@ const IRREGULAR = [
   ['go', 'went', 'gone', 'идти; ехать'],
   ['grind', 'ground', 'ground', 'молоть'],
   ['grow', 'grew', 'grown', 'расти; выращивать'],
-  ['hang', 'hung / hanged', 'hung / hanged', 'вешать; висеть (hanged — только «казнить через повешение»)'],
+  ['hang', 'hung / hanged', 'hung / hanged', 'вешать; висеть (hanged — только в значении «казнить через повешение»)'],
   ['have', 'had', 'had', 'иметь'],
   ['hear', 'heard', 'heard', 'слышать'],
   ['hide', 'hid', 'hidden', 'прятать'],
@@ -69,7 +69,7 @@ const IRREGULAR = [
   ['lead', 'led', 'led', 'вести'],
   ['lean', 'leant / leaned', 'leant / leaned', 'наклоняться; опираться'],
   ['leap', 'leapt / leaped', 'leapt / leaped', 'прыгать'],
-  ['learn', 'learnt / learned', 'learnt / learned', 'учить (самому), изучать; узнавать'],
+  ['learn', 'learnt / learned', 'learnt / learned', 'учиться, изучать; узнавать'],
   ['leave', 'left', 'left', 'уходить; оставлять'],
   ['lend', 'lent', 'lent', 'давать взаймы'],
   ['let', 'let', 'let', 'позволять'],
@@ -79,7 +79,7 @@ const IRREGULAR = [
   ['make', 'made', 'made', 'делать, создавать'],
   ['mean', 'meant', 'meant', 'значить; иметь в виду'],
   ['meet', 'met', 'met', 'встречать'],
-  ['mistake', 'mistook', 'mistaken', 'неправильно понять; принимать за другого'],
+  ['mistake', 'mistook', 'mistaken', 'неправильно понимать; принимать за другого'],
   ['overcome', 'overcame', 'overcome', 'преодолевать'],
   ['overtake', 'overtook', 'overtaken', 'обгонять'],
   ['pay', 'paid', 'paid', 'платить'],
@@ -121,7 +121,7 @@ const IRREGULAR = [
   ['split', 'split', 'split', 'раскалывать, делить'],
   ['spoil', 'spoilt / spoiled', 'spoilt / spoiled', 'портить'],
   ['spread', 'spread', 'spread', 'распространять'],
-  ['spring', 'sprang', 'sprung', 'прыгать'],
+  ['spring', 'sprang', 'sprung', 'вскакивать, прыгать'],
   ['stand', 'stood', 'stood', 'стоять'],
   ['steal', 'stole', 'stolen', 'красть'],
   ['stick', 'stuck', 'stuck', 'приклеивать; застревать'],
@@ -152,16 +152,16 @@ const IRREGULAR = [
 ];
 
 function renderIrregularPage(wrap) {
-  wrap.append(crumbs([{ label: 'Содержание', to: 'contents' }, 'Неправильные глаголы']));
+  wrap.append(crumbs(['Тренажер грамматики · A1–C2'])); /* страница стоит в меню рядом с «Содержанием», крошки как у него */
   wrap.append(el('h1', 'sheet__title', 'Неправильные глаголы'));
   const intro = el('p', 'sheet__intro');
-  intro.innerHTML = `Прошедшее время (Past Simple, V2) и третью форму (Past Participle, V3) эти глаголы образуют не по правилу с <i>-ed</i>, их нужно запомнить. Всего в таблице ${IRREGULAR.length} ${plural(IRREGULAR.length, 'глагол', 'глагола', 'глаголов')}. Как пользоваться этими формами, рассказано в темах <button class="link-btn" type="button" data-go="t-past-simple">2.3 Past Simple</button> и <button class="link-btn" type="button" data-go="t-present-perfect">2.9 Present Perfect</button>.`;
+  intro.innerHTML = `Прошедшее время (Past Simple, V2) и третью форму (Past Participle, V3) эти глаголы образуют не по правилу с <i>-ed</i>, их нужно запомнить. Через косую черту даны два варианта. Чаще всего это британский вариант на <i>-t</i> и американский на <i>-ed</i> (<i>learnt / learned</i>). <i>Was</i> ставится после <i>I, he, she, it</i>, а <i>were</i> — после <i>you, we, they</i>. Разница между <i>born / borne</i> и <i>hung / hanged</i> объяснена в переводе. Всего в таблице ${IRREGULAR.length} ${plural(IRREGULAR.length, 'глагол', 'глагола', 'глаголов')}. Как пользоваться этими формами, рассказано в темах <button class="link-btn" type="button" data-go="t-past-simple">2.3 Past Simple</button> и <button class="link-btn" type="button" data-go="t-present-perfect">2.9 Present Perfect</button>.`;
   wrap.append(intro);
   /* поиск по любой форме и по переводу: строки, где нет совпадения, скрываются */
   const label = el('label', 'irregular__search');
   label.append(el('span', 'irregular__search-label', 'Найти глагол'));
   const input = el('input', 'search__input irregular__input'); input.type = 'search'; input.autocomplete = 'off';
-  input.placeholder = 'Например, «go» или «писать»';
+  input.placeholder = 'Например, «find» или «думать»';
   label.append(input);
   const none = el('p', 'irregular__none', 'Ничего не нашлось. Попробуйте другую форму глагола или перевод.'); none.hidden = true;
   const rule = el('div', 'rule irregular');
