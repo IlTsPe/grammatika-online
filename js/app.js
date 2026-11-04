@@ -26,16 +26,41 @@ function idFromPath() {
 }
 /* заголовок вкладки и описание страницы; те же тексты make_pages.py пишет в файлы страниц (их видят поисковики и превью ссылок) */
 const SITE_TITLE = 'Грамматика онлайн';
+/* заголовки для поиска: в них слова, которые люди вводят в поисковик («английская грамматика онлайн», «упражнения с ответами»,
+   «таблица неправильных глаголов с переводом»); номер темы в заголовок не идет — его не ищут */
+const HOME_TITLE = 'Английская грамматика онлайн — тренажер с упражнениями и ответами';
+/* название раздела для заголовка страницы раздела: как его ищут («артикли в английском языке») */
+const CH_SEO = {
+  articles: 'Артикли в английском языке', tenses: 'Времена в английском языке', questions: 'Вопросы в английском языке',
+  nouns: 'Существительное в английском языке', pronouns: 'Местоимения в английском языке', prepositions: 'Предлоги в английском языке',
+  quantifiers: 'Much, many, little, few в английском языке', adjectives: 'Степени сравнения прилагательных в английском языке',
+  modals: 'Модальные глаголы в английском языке', passive: 'Страдательный залог (Passive Voice) в английском языке',
+  conditionals: 'Условные предложения и I wish в английском языке', reported: 'Косвенная речь и согласование времен в английском языке',
+  infinitive: 'Инфинитив в английском языке', gerund: 'Герундий в английском языке', participle: 'Причастие в английском языке',
+  'ing-forms': 'Причастие, герундий и отглагольное существительное в английском языке',
+  'complex-object': 'Complex Object (сложное дополнение) в английском языке', 'complex-subject': 'Complex Subject (сложное подлежащее) в английском языке',
+  tests: 'Контрольные упражнения по грамматике английского языка', extra: 'Продвинутые конструкции английского языка',
+};
 const plainText = html => html.replace(/<[^>]+>/g, '').replace(/&nbsp;/g, ' ').replace(/\s+/g, ' ').trim();
 function pageMeta(id) {
   const t = topicById[id], ch = chapById[id], p = aboutPage(id);
-  const title = t ? `${t.num} ${t.title}` : ch ? `${ch.n}. ${ch.title}` : p ? p.title
-    : { mistakes: 'Работа над ошибками', notes: 'Мои заметки', 'irregular-verbs': 'Неправильные глаголы', about: 'Информация', [NOT_FOUND]: 'Страница не найдена' }[id];
-  const description = t ? `${plainText(t.title)} (${plainText(t.sub)}): ${t.noStudy ? 'упражнения с проверкой' : 'правило и упражнения с проверкой'}. Уровень ${t.level}.`
-    : ch ? plainText(ch.intro) : p ? `${p.title}: ${p.sub[0].toLowerCase()}${p.sub.slice(1)}.`
-    : { mistakes: 'Упражнения, в которых были ошибки, — чтобы к ним вернуться.', notes: 'Личные заметки по грамматике.', 'irregular-verbs': 'Таблица неправильных глаголов английского языка: три формы (V1, V2, V3) и перевод.', about: 'Как устроен тренажер: разделы, упражнения, прогресс, данные.' }[id]
-    || 'Тренажер грамматики английского языка A1–C2: правила простым языком и упражнения с проверкой.';
-  return { title: title ? `${plainText(title)} — ${SITE_TITLE}` : SITE_TITLE, description };
+  const nEx = TOPICS.reduce((n, x) => n + x.ex.length, 0);
+  if (id === 'contents') return { title: HOME_TITLE,
+    description: `Бесплатный тренажер английской грамматики A1–C2: правила простым языком и ${nEx} упражнений с проверкой ответов. Работает без регистрации.` };
+  if (t) return {
+    title: `${plainText(t.title)} — ${t.noStudy ? 'упражнения с ответами' : 'правило и упражнения с ответами'} | ${SITE_TITLE}`,
+    description: `${plainText(t.title)} (${plainText(t.sub)}): ${t.noStudy ? '' : 'правило простым языком и '}упражнения онлайн с проверкой ответов. Уровень ${t.level}.` };
+  if (ch) return {
+    title: `${CH_SEO[ch.id] || plainText(ch.title)} — ${ch.id === 'tests' ? 'с ответами' : 'правила и упражнения'} | ${SITE_TITLE}`,
+    description: plainText(ch.intro) };
+  if (id === 'irregular-verbs') return { title: `Таблица неправильных глаголов английского языка с переводом | ${SITE_TITLE}`,
+    description: `Таблица неправильных глаголов английского языка с переводом: ${IRREGULAR.length} глаголов, три формы (V1, V2, V3) и поиск по любой форме или переводу.` };
+  const title = p ? p.title
+    : { mistakes: 'Работа над ошибками', notes: 'Мои заметки', about: 'Информация', [NOT_FOUND]: 'Страница не найдена' }[id];
+  const description = p ? `${p.title}: ${p.sub[0].toLowerCase()}${p.sub.slice(1)}.`
+    : { mistakes: 'Упражнения, в которых были ошибки, — чтобы к ним вернуться.', notes: 'Личные заметки по грамматике.', about: 'Как устроен тренажер: разделы, упражнения, прогресс, данные.' }[id]
+    || pageMeta('contents').description;
+  return { title: title ? `${plainText(title)} — ${SITE_TITLE}` : HOME_TITLE, description };
 }
 /* syncToc = false при загрузке страницы: аккордеон сохраняет свое сохраненное состояние, а не следует за маршрутом */
 function go(id, scroll = true, syncToc = true, fromBookmarks = false) {
