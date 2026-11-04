@@ -1,5 +1,5 @@
 <p align="center">
-  <a href="https://iltspe.github.io/grammatika-online/"><img src="favicon/og-image.png" alt="Грамматика онлайн — тренажер английской грамматики" width="100%"></a>
+  <a href="https://iltspe.github.io/grammatika-online/"><img src="favicon/og-image.png?v=2" alt="Грамматика онлайн — тренажер английской грамматики" width="100%"></a>
 </p>
 
 <h1 align="center"><a href="https://iltspe.github.io/grammatika-online/">Грамматика онлайн</a></h1>
